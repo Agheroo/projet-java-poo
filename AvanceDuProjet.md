@@ -10,3 +10,7 @@
 
 ### 16/10/23 : 
 - Création du Game Loop
+
+### 18/10/23 : 
+- Création de l'UML (class : main, entity, tiles)
+- Finalisation du doc : Définition de l’univers et des règles
