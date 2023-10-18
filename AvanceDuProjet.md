@@ -12,5 +12,6 @@
 - Création du Game Loop
 
 ### 18/10/23 : 
-- Création de l'UML (class : main, entity, tiles)
+- Création de l'UML, lien du fichier : https://lucid.app/lucidchart/d732d001-fe42-4d1a-81b0-fa0eecb396ad/edit?invitationId=inv_12128bfc-8225-4790-a92b-9c527f870def&page=0_0#
+  Class crées : main, entity, tiles
 - Finalisation du doc : Définition de l’univers et des règles
