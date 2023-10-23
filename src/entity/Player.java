@@ -13,18 +13,26 @@ public class Player extends Entity{
     GamePanel gp;
     KeyHandler keyH;
 
+    public final int screenX;
+    public final int screenY;
+
     public  Player(GamePanel gp, KeyHandler keyH){
 
         this.gp=gp;
         this.keyH=keyH;
+
+        screenX= gp.screenWidth/2 -(gp.tileSize/2);
+        screenY= gp.screenHeight/2 -(gp.tileSize/2);
+
+        solidArea =new Rectangle(8,16,32,32);
 
         setDefaultValues();
         getPlayerImage();
     }
 
     public  void  setDefaultValues(){
-        x=100;
-        y=100;
+        worldX =gp.tileSize * 23;
+        worldY =gp.tileSize * 21;
         speed=4;
         direction="down";
     }
@@ -45,35 +53,54 @@ public class Player extends Entity{
         }
     }
     public  void  update(){
-        if(keyH.upPressed){
-            direction="up";
-            y-=speed;
-        }
-        else if(keyH.downPressed){
-            direction="down";
-            y+=speed;
-        }
-        else if(keyH.leftPressed){
-            direction="left";
-            x-=speed;
-        }
-        else if(keyH.rightPressed){
-            direction="right";
-            x+=speed;
+        if(keyH.upPressed || keyH.downPressed || keyH.leftPressed || keyH.rightPressed){
+            if(keyH.upPressed){
+                direction="up";
+            }
+            else if(keyH.downPressed){
+                direction="down";
+            }
+            else if(keyH.leftPressed){
+                direction="left";
+            }
+            else {
+                direction="right";
+            }
+
+            collisonOn=false;
+            gp.cChecker.checkTile(this);
+
+            if(!collisonOn){
+                switch (direction){
+                    case "up":
+                        worldY -=speed;
+                        break;
+                    case "down":
+                        worldY +=speed;
+                        break;
+                    case  "left":
+                        worldX -=speed;
+                        break;
+                    case "right":
+                        worldX +=speed;
+                        break;
+                }
+            }
+
+            spriteCounter++;
+            if (spriteCounter>10){
+                if (spriteNum==1) spriteNum=2;
+                else if (spriteNum==2) spriteNum=1;
+                spriteCounter=0;
+            }
         }
 
-        spriteCounter++;
-        if (spriteCounter>10){
-            if (spriteNum==1) spriteNum=2;
-            else if (spriteNum==2) spriteNum=1;
-            spriteCounter=0;
-        }
     }
 
     public  void draw(Graphics2D g2){
 
         //g2.setColor(Color.white);
-        //g2.fillRect(x, y, gp.tileSize,gp.tileSize);
+        //g2.fillRect(worldX, worldY, gp.tileSize,gp.tileSize);
 
         BufferedImage image=null;
 
@@ -96,7 +123,7 @@ public class Player extends Entity{
                 break;
         }
 
-        g2.drawImage(image,x,y,gp.tileSize, gp.tileSize, null);
+        g2.drawImage(image, screenX, screenY,gp.tileSize, gp.tileSize, null);
 
     }
 }
