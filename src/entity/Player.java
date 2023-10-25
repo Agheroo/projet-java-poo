@@ -6,6 +6,7 @@ import main.KeyHandler;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.FileInputStream;
 import java.io.IOException;
 
 public class Player extends Entity{
@@ -39,38 +40,49 @@ public class Player extends Entity{
     public  void  setDefaultValues(){
         worldX =gp.tileSize * 23;
         worldY =gp.tileSize * 21;
-        speed=4;
+        speed = 0;
         direction="down";
     }
 
     public  void getPlayerImage(){
         try {
-            up1= ImageIO.read((getClass().getResourceAsStream("/player/boy_up_1.png")));
-            up2= ImageIO.read((getClass().getResourceAsStream("/player/boy_up_2.png")));
-            down1= ImageIO.read((getClass().getResourceAsStream("/player/boy_down_1.png")));
-            down2= ImageIO.read((getClass().getResourceAsStream("/player/boy_down_2.png")));
-            left1= ImageIO.read((getClass().getResourceAsStream("/player/boy_left_1.png")));
-            left2= ImageIO.read((getClass().getResourceAsStream("/player/boy_left_2.png")));
-            right1= ImageIO.read((getClass().getResourceAsStream("/player/boy_right_1.png")));
-            right2= ImageIO.read((getClass().getResourceAsStream("/player/boy_right_2.png")));
+            up1 = ImageIO.read(new FileInputStream("res/player/boy_up_1.png"));
+            up2= ImageIO.read(new FileInputStream("res/player/boy_up_2.png"));
+            down1= ImageIO.read(new FileInputStream("res/player/boy_down_1.png"));
+            down2= ImageIO.read(new FileInputStream("res/player/boy_down_2.png"));
+            left1= ImageIO.read(new FileInputStream("res/player/boy_left_1.png"));
+            left2= ImageIO.read(new FileInputStream("res/player/boy_left_2.png"));
+            right1= ImageIO.read(new FileInputStream("res/player/boy_right_1.png"));
+            right2= ImageIO.read(new FileInputStream("res/player/boy_right_2.png"));
 
         }catch (IOException e){
             e.printStackTrace();
         }
     }
-    public  void  update(){
+    public  void  update(double dt){
         if(keyH.upPressed || keyH.downPressed || keyH.leftPressed || keyH.rightPressed){
+            if(speed < 30){
+                speed += 20*dt;
+            }
+            if(keyH.leftPressed){
+                worldX -= speed*dt;
+                dirX = -1;
+                dirY = 0;
+            }
+            if(keyH.rightPressed){
+                worldX += speed*dt;
+                dirX = 1;
+                dirY = 0;
+            }
             if(keyH.upPressed){
-                direction="up";
+                worldY -= speed*dt;
+                dirY = -1;
+                dirX = 0;
             }
-            else if(keyH.downPressed){
-                direction="down";
-            }
-            else if(keyH.leftPressed){
-                direction="left";
-            }
-            else {
-                direction="right";
+            if(keyH.downPressed){
+                worldY += speed*dt;
+                dirY = 1;
+                dirX = 0;
             }
 
             collisionOn=false;
@@ -79,24 +91,7 @@ public class Player extends Entity{
             // CHECK OBJECT COLLISION
             int objIndex = gp.cChecker.checkObject(this, true);
             pickUpObject(objIndex);
-
-            if(!collisionOn){
-                switch (direction){
-                    case "up":
-                        worldY -=speed;
-                        break;
-                    case "down":
-                        worldY +=speed;
-                        break;
-                    case  "left":
-                        worldX -=speed;
-                        break;
-                    case "right":
-                        worldX +=speed;
-                        break;
-                }
-            }
-
+           
             spriteCounter++;
             if (spriteCounter>10){
                 if (spriteNum==1) spriteNum=2;
@@ -104,7 +99,25 @@ public class Player extends Entity{
                 spriteCounter=0;
             }
         }
-
+        else{
+            if(speed > 0){
+                speed -= 10*dt;
+            }
+            else{speed = 0;}
+            if(dirX == 1){
+                worldX += speed*dt;
+            }
+            if(dirX == -1){
+                worldX -= speed*dt;
+            }
+            if(dirY == 1){
+                worldY += speed*dt;
+            }
+            if(dirY == -1){
+                worldY -= speed*dt;
+            }
+                
+        }
     }
 
     public void pickUpObject(int i) {
