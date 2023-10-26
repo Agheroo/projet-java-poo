@@ -78,8 +78,8 @@ public class Player extends Entity{
     public  void  update(double dt){
         if(keyH.upPressed || keyH.downPressed || keyH.leftPressed || keyH.rightPressed){
             dirX = dirY=0;
-            if(speed < 20){
-                speed += 20*dt;
+            if(speed < 20){ //Acceleration
+                speed += 10*dt;
             }
             if(keyH.leftPressed){
                 worldX -= speed*dt;
@@ -101,16 +101,8 @@ public class Player extends Entity{
                 dirY = 1;
                 direction = "down";
             }
-
-            collisionOn=false;
-            gp.cChecker.checkTile(this);
-
-            // CHECK OBJECT COLLISION
-            int objIndex = gp.cChecker.checkObject(this, true);
-            pickUpObject(objIndex);
-
         }
-        else{
+        else{       //Deceleration system (use of dirX & dirY instead of direction in case of diagonal movements)
             if(speed > 0){
                 speed -= 10*dt;
             }
@@ -160,11 +152,15 @@ public class Player extends Entity{
                 break;
             }
         }
-    }
+    }  
 
+
+    /***    Drawing the player
+     * 
+     * @param g2
+     */
     public  void draw(Graphics2D g2){
         BufferedImage image=null;
-
 
 
         if(speed == 0){ //PLAYER IDLE ANIMATIONS
@@ -184,7 +180,6 @@ public class Player extends Entity{
                         break;
                 }
             }
-            
         }
         if(speed > 0){  //PLAYER WALKING ANIMATIONS
             for(int i=0;i<4;i++){
@@ -205,8 +200,7 @@ public class Player extends Entity{
             }
         }
         
-
+        //Drawing player on screen
         g2.drawImage(image, screenX, screenY,gp.tileSize, gp.tileSize, null);
-
     }
 }
