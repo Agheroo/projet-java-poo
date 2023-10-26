@@ -59,7 +59,6 @@ public class Player extends Entity{
     public  void getPlayerImage(){
         try {
             for(int i=0; i<4 ;i++){
-                System.out.println("res/player/idle/back"+(i+1)+".png");
                 up_idle[i] = ImageIO.read(new FileInputStream("res/player/idle/up"+(i+1)+".png"));
                 down_idle[i] = ImageIO.read(new FileInputStream("res/player/idle/down"+(i+1)+".png"));
                 left_idle[i] = ImageIO.read(new FileInputStream("res/player/idle/left"+(i+1)+".png"));
@@ -79,7 +78,7 @@ public class Player extends Entity{
     public  void  update(double dt){
         if(keyH.upPressed || keyH.downPressed || keyH.leftPressed || keyH.rightPressed){
             dirX = dirY=0;
-            if(speed < 30){
+            if(speed < 20){
                 speed += 20*dt;
             }
             if(keyH.leftPressed){
@@ -109,10 +108,7 @@ public class Player extends Entity{
             // CHECK OBJECT COLLISION
             int objIndex = gp.cChecker.checkObject(this, true);
             pickUpObject(objIndex);
-           
 
-
-            
         }
         else{
             if(speed > 0){
