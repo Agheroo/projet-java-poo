@@ -60,13 +60,13 @@ public class Player extends Entity{
         try {
             for(int i=0; i<4 ;i++){
                 System.out.println("res/player/idle/back"+(i+1)+".png");
-                up_idle[i] = ImageIO.read(new FileInputStream("res/player/idle/back"+(i+1)+".png"));
-                down_idle[i] = ImageIO.read(new FileInputStream("res/player/idle/front"+(i+1)+".png"));
+                up_idle[i] = ImageIO.read(new FileInputStream("res/player/idle/up"+(i+1)+".png"));
+                down_idle[i] = ImageIO.read(new FileInputStream("res/player/idle/down"+(i+1)+".png"));
                 left_idle[i] = ImageIO.read(new FileInputStream("res/player/idle/left"+(i+1)+".png"));
                 right_idle[i] = ImageIO.read(new FileInputStream("res/player/idle/right"+(i+1)+".png"));
 
-                up_walk[i] = ImageIO.read(new FileInputStream("res/player/walk/back"+(i+1)+".png"));
-                down_walk[i] = ImageIO.read(new FileInputStream("res/player/walk/front"+(i+1)+".png"));
+                up_walk[i] = ImageIO.read(new FileInputStream("res/player/walk/up"+(i+1)+".png"));
+                down_walk[i] = ImageIO.read(new FileInputStream("res/player/walk/down"+(i+1)+".png"));
                 left_walk[i] = ImageIO.read(new FileInputStream("res/player/walk/left"+(i+1)+".png"));
                 right_walk[i] = ImageIO.read(new FileInputStream("res/player/walk/right"+(i+1)+".png"));
             }
@@ -170,7 +170,7 @@ public class Player extends Entity{
         BufferedImage image=null;
 
 
-        
+
         if(speed == 0){ //PLAYER IDLE ANIMATIONS
             for(int i=0;i<4;i++){
                 switch (direction) {
