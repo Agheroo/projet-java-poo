@@ -5,10 +5,10 @@ import main.GamePanel;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 
 public class TilesManager {
 
@@ -21,35 +21,36 @@ public class TilesManager {
         this.gp = gp;
 
         tile= new Tile[10];
-        mapTileNum=new  int[gp.maxWorldCol][gp.maxWorldRow];
+        mapTileNum=new int[gp.maxWorldCol][gp.maxWorldRow];
         getTileImage();
-        loadMap("res/maps/map01.txt");
+        loadMap("res/maps/world01.txt");
     }
 
-    public  void getTileImage(){
-
+    public  void getTileImage(){        //Tiles textures
         try {
-
+            //Grass skin 1
             tile[0]=new Tile();
-            tile[0].image= ImageIO.read(new FileInputStream("res/tiles/grass.png"));
+            tile[0].image= ImageIO.read(new FileInputStream("res/tiles/grass0.png"));
 
+            //Grass skin 2
             tile[1]=new Tile();
-            tile[1].image= ImageIO.read(new FileInputStream("res/tiles/wall.png"));
-            tile[1].collision=true;
+            tile[1].image= ImageIO.read(new FileInputStream("res/tiles/grass1.png"));
 
+            //Grass skin 3
             tile[2]=new Tile();
-            tile[2].image= ImageIO.read(new FileInputStream("res/tiles/water.png"));
-            tile[2].collision=true;
+            tile[2].image= ImageIO.read(new FileInputStream("res/tiles/grass2.png"));
 
-            tile[3]=new Tile();
-            tile[3].image= ImageIO.read(new FileInputStream("res/tiles/earth.png"));
+            //Sand skin 1
+            tile[3] = new Tile();
+            tile[3].image= ImageIO.read(new FileInputStream("res/tiles/sign.png"));
 
+            //Forest tree
             tile[4]=new Tile();
-            tile[4].image= ImageIO.read(new FileInputStream("res/tiles/tree.png"));
-            tile[4].collision=true;
+            tile[4].image= ImageIO.read(new FileInputStream("res/tiles/forest.png"));
 
-            tile[5]=new Tile();
-            tile[5].image= ImageIO.read(new FileInputStream ("res/tiles/sand.png"));
+            //Sand skin 2
+            tile[5] = new Tile();
+            tile[5].image= ImageIO.read(new FileInputStream("res/tiles/sand.png"));
 
         }catch (IOException e){
             e.printStackTrace();
@@ -57,10 +58,10 @@ public class TilesManager {
     }
 
     public void loadMap(String filePath){
-
         try {
-            InputStream is=getClass().getResourceAsStream(filePath);
-            BufferedReader br= new BufferedReader(new InputStreamReader(is));
+            File file =  new File(filePath);
+            FileReader fileReader = new FileReader(file);
+            BufferedReader br= new BufferedReader(fileReader);
 
             int col=0;
             int row=0;
