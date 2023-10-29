@@ -15,3 +15,6 @@
 - Création de l'UML, lien du fichier : https://lucid.app/lucidchart/d732d001-fe42-4d1a-81b0-fa0eecb396ad/edit?viewport_loc=-1159%2C-232%2C2219%2C948%2C0_0&invitationId=inv_12128bfc-8225-4790-a92b-9c527f870def
 - Class crées : main, entity, tiles
 - Finalisation du doc : Définition de l’univers et des règles
+
+### 29/10/23 :
+- Refonte de l'UML et modification régulière de celui-ci.
