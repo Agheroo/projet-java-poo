@@ -1,6 +1,5 @@
 package entity;
 
-import main.GamePanel;
 import main.KeyHandler;
 
 import javax.imageio.ImageIO;
@@ -10,64 +9,29 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 public class Player extends Entity{
-    
-    GamePanel gp;
     KeyHandler keyH;
 
-    public final int screenX;
-    public final int screenY;
     int hasKey = 0;
 
-    public BufferedImage[] up_idle = new BufferedImage[4];
-    public BufferedImage[] down_idle = new BufferedImage[4];
-    public BufferedImage[] left_idle = new BufferedImage[4];
-    public BufferedImage[] right_idle = new BufferedImage[4];
-    public BufferedImage[] right_walk = new BufferedImage[4];
-    public BufferedImage[] up_walk = new BufferedImage[4];
-    public BufferedImage[] down_walk = new BufferedImage[4];
-    public BufferedImage[] left_walk = new BufferedImage[4];
-
-    public  Player(GamePanel gp, KeyHandler keyH){
-
-        this.gp=gp;
+    public Player(KeyHandler keyH, int worldX,int worldY,int dirX,int dirY,int speed,String facing,int spriteCnt,int spriteNum){
+        super(worldX, worldY, dirX, dirY, speed, facing, spriteCnt,spriteNum);  //Calls the parent class as for every entity setup but need to specify keyH for player
         this.keyH=keyH;
 
-        screenX= gp.screenWidth/2 -(gp.tileSize/2);
-        screenY= gp.screenHeight/2 -(gp.tileSize/2);
-
-        solidArea =new Rectangle();
-        solidArea.x=8;
-        solidArea.y=16;
-        solidAreaDefaultX=solidArea.x;
-        solidAreaDefaultY=solidArea.y;
-        solidArea.width=32;
-        solidArea.height=32;
-
-        setDefaultValues();
         getPlayerImage();
-    }
-
-    //Initializing player (spawn & base stats)
-    public  void  setDefaultValues(){
-        worldX =gp.tileSize * 23;
-        worldY =gp.tileSize * 21;
-        dirX = dirY = 0;
-        speed = 0;
-        direction="down";
     }
 
     public  void getPlayerImage(){
         try {
             for(int i=0; i<4 ;i++){
-                up_idle[i] = ImageIO.read(new FileInputStream("res/player/idle/up"+(i+1)+".png"));
-                down_idle[i] = ImageIO.read(new FileInputStream("res/player/idle/down"+(i+1)+".png"));
-                left_idle[i] = ImageIO.read(new FileInputStream("res/player/idle/left"+(i+1)+".png"));
-                right_idle[i] = ImageIO.read(new FileInputStream("res/player/idle/right"+(i+1)+".png"));
+                idle_up[i] = ImageIO.read(new FileInputStream("res/player/idle/up"+(i+1)+".png"));
+                idle_down[i] = ImageIO.read(new FileInputStream("res/player/idle/down"+(i+1)+".png"));
+                idle_left[i] = ImageIO.read(new FileInputStream("res/player/idle/left"+(i+1)+".png"));
+                idle_right[i] = ImageIO.read(new FileInputStream("res/player/idle/right"+(i+1)+".png"));
 
-                up_walk[i] = ImageIO.read(new FileInputStream("res/player/walk/up"+(i+1)+".png"));
-                down_walk[i] = ImageIO.read(new FileInputStream("res/player/walk/down"+(i+1)+".png"));
-                left_walk[i] = ImageIO.read(new FileInputStream("res/player/walk/left"+(i+1)+".png"));
-                right_walk[i] = ImageIO.read(new FileInputStream("res/player/walk/right"+(i+1)+".png"));
+                walk_up[i] = ImageIO.read(new FileInputStream("res/player/walk/up"+(i+1)+".png"));
+                walk_down[i] = ImageIO.read(new FileInputStream("res/player/walk/down"+(i+1)+".png"));
+                walk_left[i] = ImageIO.read(new FileInputStream("res/player/walk/left"+(i+1)+".png"));
+                walk_right[i] = ImageIO.read(new FileInputStream("res/player/walk/right"+(i+1)+".png"));
             }
 
 
@@ -82,125 +46,105 @@ public class Player extends Entity{
                 speed += 10*dt;
             }
             if(keyH.leftPressed){
-                worldX -= speed*dt;
                 dirX = -1;
-                direction = "left";
+                facing = "left";
             }
             if(keyH.rightPressed){
-                worldX += speed*dt;
                 dirX = 1;
-                direction = "right";
+                facing = "right";
             }
             if(keyH.upPressed){
-                worldY -= speed*dt;
                 dirY = -1;
-                direction = "up";
+                facing = "up";
             }
             if(keyH.downPressed){
-                worldY += speed*dt;
                 dirY = 1;
-                direction = "down";
+                facing = "down";
             }
         }
-        else{       //Deceleration system (use of dirX & dirY instead of direction in case of diagonal movements)
+        else{       //Deceleration system (use of dirX & dirY instead of facing in case of diagonal movements)
             if(speed > 0){
-                speed -= 10*dt;
+                speed -= dt;
             }
             else{speed = 0;}
-            if(dirX == 1){
-                worldX += speed*dt;
-            }
-            if(dirX == -1){
-                worldX -= speed*dt;
-            }
-            if(dirY == 1){
-                worldY += speed*dt;
-            }
-            if(dirY == -1){
-                worldY -= speed*dt;
-            }
-                
         }
 
+
+        //Updating player position accurately (at any point in time either pressing keys or not)
+        if(dirX == -1){
+            worldX -= speed*dt;
+        }
+        if(dirX == 1){
+            worldX += speed*dt;
+        }
+        if(dirY == -1){
+            worldY -= speed*dt;
+        }
+        if(dirY == 1){
+            worldY += speed*dt;
+        }
+        
+
         //SPRITES & ANIMATIONS
-        spriteCounter++;
-        if (spriteCounter>20){
+        spriteUpdater++;
+        if (spriteUpdater>20){
 
             spriteNum++;
             if(spriteNum == 4){
                 spriteNum = 0;
             }
-            spriteCounter=0;
+            spriteUpdater=0;
         }
     }
 
-    public void pickUpObject(int i) {
-        if(i != 999) {
-            String objectName = gp.obj[i].name;
-            switch(objectName) {
-            case "Key":
-                hasKey++;
-                gp.obj[i] = null;
-                System.out.println("Key: "+hasKey);
-                break;
-            case "Door":
-                if(hasKey > 0) {
-                    gp.obj[i] = null;
-                    hasKey--;
-                }
-                System.out.println("Key : "+hasKey);
-                break;
-            }
-        }
-    }  
 
 
     /***    Drawing the player
      * 
      * @param g2
      */
-    public  void draw(Graphics2D g2){
+    public  void draw(Graphics2D g2, int screenX, int screenY){
         BufferedImage image=null;
 
 
         if(speed == 0){ //PLAYER IDLE ANIMATIONS
             for(int i=0;i<4;i++){
-                switch (direction) {
+                switch (facing) {
                     case "up":
-                        if (spriteNum == i)image=up_idle[i];
+                        if (spriteNum == i)image=idle_up[i];
                         break;
                     case "down":
-                        if (spriteNum == i)image=down_idle[i];
+                        if (spriteNum == i)image=idle_down[i];
                         break;
                     case "left":
-                        if (spriteNum == i)image=left_idle[i];
+                        if (spriteNum == i)image=idle_left[i];
                         break;
                     case "right":
-                        if (spriteNum == i)image=right_idle[i];
+                        if (spriteNum == i)image=idle_right[i];
                         break;
                 }
             }
         }
         if(speed > 0){  //PLAYER WALKING ANIMATIONS
             for(int i=0;i<4;i++){
-                switch (direction) {
+                switch (facing) {
                     case "up":
-                        if (spriteNum == i)image=up_walk[i];
+                        if (spriteNum == i)image=walk_up[i];
                         break;
                     case "down":
-                        if (spriteNum == i)image=down_walk[i];
+                        if (spriteNum == i)image=walk_down[i];
                         break;
                     case "left":
-                        if (spriteNum == i)image=left_walk[i];
+                        if (spriteNum == i)image=walk_left[i];
                         break;
                     case "right":
-                        if (spriteNum == i)image=right_walk[i];
+                        if (spriteNum == i)image=walk_right[i];
                         break;
                 }
             }
         }
         
         //Drawing player on screen
-        g2.drawImage(image, screenX, screenY,gp.tileSize, gp.tileSize, null);
+        g2.drawImage(image, screenX, screenY,screenSize, screenSize, null);
     }
 }

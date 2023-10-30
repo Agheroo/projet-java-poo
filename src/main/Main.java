@@ -12,15 +12,14 @@ public class Main {
         windows.setResizable(false);
         windows.setTitle("2D Adventure");
 
-        GamePanel gamePanel = new GamePanel();
-        windows.add(gamePanel);
+        Window gameWindow = new Window();
+        windows.add(gameWindow);
 
         windows.pack();
 
         windows.setLocationRelativeTo(null);
         windows.setVisible(true);
 
-        gamePanel.setupGame();
-        gamePanel.startGameThread();
+        gameWindow.startGameThread();
     }
 }
