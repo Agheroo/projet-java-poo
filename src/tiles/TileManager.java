@@ -31,7 +31,7 @@ public class TileManager {
         mapTopNum=new int[world.maxCol][world.maxRow];
         getTileImage();
         loadMap("res/maps/top.txt", world, mapTopNum);
-        loadMap("res/maps/floor.txt",world, mapFloorNum);
+        loadMap("res/maps/tmpfloor.txt",world, mapFloorNum);
     }
 
     public  void getTileImage(){        //Tiles textures
