@@ -1,7 +1,7 @@
 Liste des choses à faire : 
-- Implémentation des diagonales dans les directions du personnage
 - Changement de l'appel des directions ("up", "down", ...) par un enum (moins couteux en espace mémoire)
-- Changer le GamePanel pour un singleton
+- Optimisation de performance pour le rendu des tiles à refaire & revoir (faire un rendu autour du joueur de juste un morceau de la map)
+- Vérifier d'où vient le problème de vitesse dans un sens plutôt que dans l'autre
 
 
 Questions à poser : 
