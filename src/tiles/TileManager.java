@@ -24,61 +24,70 @@ public class TileManager {
     public int mapTopNum[][];
     public int mapFloorNum[][];
 
+    public void loadTextures(){ //Loading all textures for the map
+        //////////////////////////
+        //      FLOOR SKINS     //
+        //////////////////////////
+        //GRASS TEXTURE
+        getTileImage(0,3,"grass",floorTiles);
 
-    public TileManager(World world){
-        floorTiles = new Tile[10];
-        topTiles = new Tile[10];
-        mapFloorNum=new int[world.maxCol][world.maxRow];
-        mapTopNum=new int[world.maxCol][world.maxRow];
-        getTileImage();
-        loadMap("res/maps/top.txt", world, mapTopNum);
-        loadMap("res/maps/tmpfloor.txt",world, mapFloorNum);
+
+        //////////////////////////////
+        //      TOP LAYER SKINS     //
+        //////////////////////////////
+        //VOID TEXTURE (just 16x16 invisible tile)
+        getTileImage(0,1,"void",topTiles);
+
+        //FOREST TEXTURE
+        //Principal forest
+        getTileImage(1,9,"forest",topTiles);
+
+        //TREE TEXTURE
+        getTileImage(10,9,"tree",topTiles);
+
+        //topleft forest
+        getTileImage(19,3,"forest_topleft",topTiles);
+        //topright forest
+        getTileImage(22,2,"forest_topright",topTiles);
+        //bottomleft forest
+        getTileImage(24,2,"forest_bottomleft",topTiles);
+        //bottomright forest
+        getTileImage(26,1,"forest_bottomright",topTiles);
+
+
+        
+
+
+
     }
 
-    public  void getTileImage(){        //Tiles textures
-        try {
-            //////////////////////////
-            //      FLOOR SKINS     //
-            //////////////////////////
-            //Grass skin 1
-            floorTiles[0]=new Tile();
-            floorTiles[0].image= ImageIO.read(new FileInputStream("res/tiles/grass0.png"));
-            //Grass skin 2
-            floorTiles[1]=new Tile();
-            floorTiles[1].image= ImageIO.read(new FileInputStream("res/tiles/grass1.png"));
-            //Grass skin 3
-            floorTiles[2]=new Tile();
-            floorTiles[2].image= ImageIO.read(new FileInputStream("res/tiles/grass2.png"));
-
-            //////////////////////////////
-            //      TOP LAYER SKINS     //
-            //////////////////////////////
-            
-            topTiles[0]=new Tile();
-            topTiles[0].image= ImageIO.read(new FileInputStream("res/tiles/void.png"));
-            topTiles[1]=new Tile();
-            topTiles[1].image= ImageIO.read(new FileInputStream("res/tiles/forest1.png"));
-            topTiles[2]=new Tile();
-            topTiles[2].image= ImageIO.read(new FileInputStream("res/tiles/forest2.png"));
-            topTiles[3]=new Tile();
-            topTiles[3].image= ImageIO.read(new FileInputStream("res/tiles/forest3.png"));
-            topTiles[4]=new Tile();
-            topTiles[4].image= ImageIO.read(new FileInputStream("res/tiles/forest4.png"));
-            topTiles[5]=new Tile();
-            topTiles[5].image= ImageIO.read(new FileInputStream("res/tiles/forest5.png"));
-            topTiles[6]=new Tile();
-            topTiles[6].image= ImageIO.read(new FileInputStream("res/tiles/forest6.png"));
-            topTiles[7]=new Tile();
-            topTiles[7].image= ImageIO.read(new FileInputStream("res/tiles/forest7.png"));
-            topTiles[8]=new Tile();
-            topTiles[8].image= ImageIO.read(new FileInputStream("res/tiles/forest8.png"));
-            topTiles[9]=new Tile();
-            topTiles[9].image= ImageIO.read(new FileInputStream("res/tiles/forest9.png"));
-
-
-        }catch (IOException e){
+    /**
+     * 
+     * @param start //Starting point of the array    
+     * @param size  //How many tiles are there
+     * @param name  //Name of the png file ex:  grass
+     * @param layer //What layer are we writing in
+     */
+    private void getTileImage(int start, int size, String name, Tile[] layer){    //Loading specific tiles texture
+        try{
+            for(int i = start;i<start + size; i++){
+                layer[i] = new Tile();
+                layer[i].image = ImageIO.read(new FileInputStream("res/tiles/"+name+(i-start+1)+".png"));
+            }
+        }
+        catch (IOException e){
             e.printStackTrace();
         }
+    }
+
+    public TileManager(World world){
+        floorTiles = new Tile[3];
+        topTiles = new Tile[28];
+        mapFloorNum=new int[world.maxCol][world.maxRow];
+        mapTopNum=new int[world.maxCol][world.maxRow];
+        loadTextures();
+        loadMap("res/maps/debugfloor.txt", world, mapFloorNum);
+        loadMap("res/maps/debugtop.txt",world, mapTopNum);
     }
 
     public void loadMap(String filePath, World world,int mapTileNum[][]){
@@ -91,7 +100,7 @@ public class TileManager {
                 String line = br.readLine();
                 
                 for(int j =0; j<world.maxCol; j++){
-                    String numbers[]=line.split(" ");
+                    String numbers[]=line.split("\\s+");
                     int num =Integer.parseInt(numbers[j]);
 
                     mapTileNum[j][i]=num;

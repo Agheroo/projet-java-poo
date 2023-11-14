@@ -9,7 +9,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 public class Player extends Entity{
-    KeyHandler keyH;
+    private KeyHandler keyH;
 
     int hasKey = 0;
 

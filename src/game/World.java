@@ -13,14 +13,14 @@ public class World {
     TileManager tileManager = new TileManager(this);
     //World intialization settings
     public double dt = 0;
-    public final int maxCol= 64, maxRow = 64;
+    public final int maxCol= 27, maxRow = 27; //DONT FORGET TO MODIFY WHEN CHANGING THE MAP !!!
     public final int maxWidth = tileManager.tileSize*maxCol;
     public final int maxHeight = tileManager.tileSize*maxRow;
     
     
     //Player settings
     public KeyHandler keyH = new KeyHandler();
-    public Player player = new Player(keyH,5*tileManager.tileSize, 5*tileManager.tileSize,0,0,0,"down",0,1);
+    public Player player = new Player(keyH,15*tileManager.tileSize, 26*tileManager.tileSize,0,0,0,"down",0,1);
     
     //All world instances (ennemies NPC mon cul les coffres et tout)
 
@@ -31,6 +31,6 @@ public class World {
 
     public void update(){
         player.update(dt);
-        //All updates (ennemmies / collisions)
+        //All updates of entities here
     }
 }
