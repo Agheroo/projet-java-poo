@@ -1,7 +1,8 @@
 package tiles;
 
-import main.World;
 import javax.imageio.ImageIO;
+
+import game.World;
 
 import java.awt.Graphics2D;
 import java.io.BufferedReader;
@@ -104,17 +105,18 @@ public class TileManager {
         }
     }
 
-    public void draw(Graphics2D g2,World world){
+
+    public void draw(Graphics2D g2,World world, int screenWidth, int screenHeight){
         int worldCol =0;
         int worldRow =0;
 
-        while (worldCol < world.maxCol && worldRow < world.maxRow){
-
+        while(worldCol < world.maxCol && worldRow < world.maxRow){
             int topNum=mapTopNum[worldCol][worldRow];
             int floorNum=mapFloorNum[worldCol][worldRow];
 
             int worldX=worldCol*tileSize;
             int worldY=worldRow*tileSize;
+
             int screenX=(worldX*scale-world.player.worldX);
             int screenY=(worldY*scale-world.player.worldY);
 

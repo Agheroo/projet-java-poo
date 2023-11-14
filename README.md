@@ -23,3 +23,7 @@ Lien vers le formulaire des règles : https://docs.google.com/document/d/1psWO6b
 
 ### 29/10/23 :
 - Refonte de l'UML et modification régulière de celui-ci.
+
+### 14/11/23 :
+- Finition de l'UML et organisation des tâches pour les contributeurs
+- Création de map de debug et de test

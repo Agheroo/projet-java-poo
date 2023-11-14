@@ -1,6 +1,7 @@
-package main;
+package game;
 
 import javax.swing.JPanel;
+
 import java.awt.*;
 
 /*
@@ -44,7 +45,7 @@ public class Window extends JPanel implements Runnable{
 
             if(world.dt > 0.1){
                 update();           //update() method for window both updates the world and repaints the components of it
-                world.dt-=0.1;
+                world.dt-= 0.1;
             }
         }
     }
@@ -66,8 +67,8 @@ public class Window extends JPanel implements Runnable{
 
         Graphics2D g2= (Graphics2D)g;
 
-        world.tileManager.draw(g2,world);
-        world.player.draw(g2,screenWidth/2 - (world.player.screenSize/2), screenHeight/2 - (world.player.screenSize/2));
+        world.tileManager.draw(g2,world, screenWidth, screenHeight);
+        world.player.draw(g2,screenWidth/2 - (world.player.screenSize/2), screenHeight/2 - (world.player.screenSize/2)); //Player is always centered to screen
 
         g2.dispose();
     }

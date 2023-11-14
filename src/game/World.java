@@ -1,6 +1,7 @@
-package main;
+package game;
 
 import entity.Player;
+import main.KeyHandler;
 import tiles.TileManager;
 
 /*
@@ -21,11 +22,15 @@ public class World {
     public KeyHandler keyH = new KeyHandler();
     public Player player = new Player(keyH,5*tileManager.tileSize, 5*tileManager.tileSize,0,0,0,"down",0,1);
     
+    //All world instances (ennemies NPC mon cul les coffres et tout)
+
+
     public World(){
         
     }
 
     public void update(){
         player.update(dt);
+        //All updates (ennemmies / collisions)
     }
 }

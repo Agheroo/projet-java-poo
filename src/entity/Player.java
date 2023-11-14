@@ -17,10 +17,10 @@ public class Player extends Entity{
         super(worldX, worldY, dirX, dirY, speed, facing, spriteCnt,spriteNum);  //Calls the parent class as for every entity setup but need to specify keyH for player
         this.keyH=keyH;
 
-        getPlayerImage();
+        loadImage();
     }
 
-    public  void getPlayerImage(){
+    public  void loadImage(){
         try {
             for(int i=0; i<4 ;i++){
                 idle_up[i] = ImageIO.read(new FileInputStream("res/player/idle/up"+(i+1)+".png"));
@@ -41,10 +41,12 @@ public class Player extends Entity{
     }
     public  void  update(double dt){
         if(keyH.upPressed || keyH.downPressed || keyH.leftPressed || keyH.rightPressed){
-            dirX = dirY=0;
-            if(speed < 20){ //Acceleration
-                speed += 10*dt;
+            if(speed < 30){ //Acceleration
+                speed += 15*dt;
             }
+            else{ speed = 30;}
+            dirX = dirY=0;
+            
             if(keyH.leftPressed){
                 dirX = -1;
                 facing = "left";
@@ -68,7 +70,7 @@ public class Player extends Entity{
             }
             else{speed = 0;}
         }
-
+        
 
         //Updating player position accurately (at any point in time either pressing keys or not)
         if(dirX == -1){
@@ -85,16 +87,6 @@ public class Player extends Entity{
         }
         
 
-        //SPRITES & ANIMATIONS
-        spriteUpdater++;
-        if (spriteUpdater>20){
-
-            spriteNum++;
-            if(spriteNum == 4){
-                spriteNum = 0;
-            }
-            spriteUpdater=0;
-        }
     }
 
 
@@ -142,6 +134,16 @@ public class Player extends Entity{
                         break;
                 }
             }
+        }
+        //SPRITES & ANIMATIONS
+        spriteUpdater++;
+        if (spriteUpdater>20){
+
+            spriteNum++;
+            if(spriteNum == 4){
+                spriteNum = 0;
+            }
+            spriteUpdater=0;
         }
         
         //Drawing player on screen
