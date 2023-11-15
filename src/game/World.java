@@ -19,7 +19,7 @@ public class World {
     
     
     //Player settings
-    public KeyHandler keyH = new KeyHandler();
+    public KeyHandler keyH = KeyHandler.getInstance();
     public Player player = new Player(keyH,15*tileManager.tileSize, 26*tileManager.tileSize,0,0,0,"down",0,1);
     
     //All world instances (ennemies NPC mon cul les coffres et tout)

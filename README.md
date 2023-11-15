@@ -29,4 +29,4 @@ Lien vers le formulaire des règles : https://docs.google.com/document/d/1psWO6b
 - Création de map de debug et de test
 
 ### 15/11/23 : 
-- Implémentation du patron de conception : singleton (romu part)
+- Implémentation du patron de conception : singleton (romu)
