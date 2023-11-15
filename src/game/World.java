@@ -14,8 +14,8 @@ public class World {
     //World intialization settings
     public double dt = 0;
     public final int maxCol= 27, maxRow = 27; //DONT FORGET TO MODIFY WHEN CHANGING THE MAP !!!
-    public final int maxWidth = tileManager.tileSize*maxCol;
-    public final int maxHeight = tileManager.tileSize*maxRow;
+    // public final int maxWidth = tileManager.tileSize*maxCol;
+    // public final int maxHeight = tileManager.tileSize*maxRow;
     
     
     //Player settings
