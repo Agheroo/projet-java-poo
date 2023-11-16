@@ -49,7 +49,7 @@ public class Tile {
         }
     }
 
-    public void draw(Graphics2D g2, int screenX, int screenY, int topNum){
+    public void draw(Graphics2D g2, int screenX, int screenY){
         BufferedImage render = null;
 
         for(int i=0; i<spriteCntMax; i++){

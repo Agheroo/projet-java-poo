@@ -15,11 +15,23 @@ public class TileManager {
     public final int screenSize = tileSize*scale;
 
     //Tiles for textures
-    public Tile[] floorTiles;
-    public Tile[] topTiles;
+    private Tile[] floorTiles;
+    private Tile[] topTiles;
 
-    public int mapTopNum[][];
-    public int mapFloorNum[][];
+    private int mapTopNum[][];
+    private int mapFloorNum[][];
+
+    public TileManager(World world){
+        floorTiles = new Tile[3];
+        topTiles = new Tile[29];
+        mapFloorNum=new int[world.maxCol][world.maxRow];
+        mapTopNum=new int[world.maxCol][world.maxRow];
+        
+        
+        loadTextures();
+        loadMap("res/maps/debugfloor.txt", world, mapFloorNum);
+        loadMap("res/maps/debugtop.txt",world, mapTopNum);
+    }
 
     public void loadTextures(){ //Loading all textures for the map
         //////////////////////////
@@ -50,16 +62,13 @@ public class TileManager {
         //bottomright forest
         getTileImage(26,1,"forest_bottomright",topTiles, 1, -1);
 
-        getTileImage(27,1,"fire",topTiles, 7, 15);
-        getTileImage(28,1,"fire",topTiles, 7, 20);
-
-
+        getTileImage(27,1,"fire",topTiles, 7, 20);
     }
 
     /**
      * 
      * @param start //Starting point of the array    
-     * @param size  //How many tiles are there
+     * @param size  //How many tiles are there to load
      * @param name  //Name of the png file ex:  grass
      * @param layer //What layer are we writing in
      * @param spriteCntMax //Number of sprites the tile has (if more than 1)
@@ -77,25 +86,15 @@ public class TileManager {
         }
     }
 
-    public TileManager(World world){
-        floorTiles = new Tile[3];
-        topTiles = new Tile[29];
-        mapFloorNum=new int[world.maxCol][world.maxRow];
-        mapTopNum=new int[world.maxCol][world.maxRow];
-        loadTextures();
-        loadMap("res/maps/debugfloor.txt", world, mapFloorNum);
-        loadMap("res/maps/debugtop.txt",world, mapTopNum);
-    }
+    
 
     public void loadMap(String filePath, World world,int mapTileNum[][]){
         try {
             File file =  new File(filePath);
             FileReader fileReader = new FileReader(file);
             BufferedReader br= new BufferedReader(fileReader);
-
             for(int i = 0; i<world.maxRow; i++){
                 String line = br.readLine();
-                
                 for(int j =0; j<world.maxCol; j++){
                     String numbers[]=line.split("\\s+");
                     int num =Integer.parseInt(numbers[j]);
@@ -103,13 +102,13 @@ public class TileManager {
                     mapTileNum[j][i]=num;
                 }
             }
-
             br.close();
 
         }catch (Exception e){
             e.printStackTrace();
         }
     }
+
 
 
     public void draw(Graphics2D g2,World world, int screenWidth, int screenHeight){
@@ -128,8 +127,8 @@ public class TileManager {
 
             //Drawing tiles around the player to optimize the memory
 
-            floorTiles[floorNum].draw(g2,screenX,screenY,floorNum);
-            topTiles[topNum].draw(g2,screenX,screenY, topNum);
+            floorTiles[floorNum].draw(g2,screenX,screenY);
+            topTiles[topNum].draw(g2,screenX,screenY);
 
 
             worldCol++;

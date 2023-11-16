@@ -17,7 +17,7 @@ public class Player extends Entity{
     public  void  update(double dt){
         if(keyH.upPressed || keyH.downPressed || keyH.leftPressed || keyH.rightPressed){
             if(speed < 30){ //Acceleration
-                speed += 15*dt;
+                speed += 20*dt;
             }
             else{ speed = 30;}
             dirX = dirY=0;
