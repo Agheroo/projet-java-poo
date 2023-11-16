@@ -50,7 +50,9 @@ public class TileManager {
         //bottomright forest
         getTileImage(26,1,"forest_bottomright",topTiles, 1, -1);
 
-        getTileImage(27,1,"fire",topTiles, 7, 20);
+        getTileImage(27,1,"fire",topTiles, 7, 15);
+        getTileImage(28,1,"fire",topTiles, 7, 20);
+
 
     }
 
@@ -77,7 +79,7 @@ public class TileManager {
 
     public TileManager(World world){
         floorTiles = new Tile[3];
-        topTiles = new Tile[28];
+        topTiles = new Tile[29];
         mapFloorNum=new int[world.maxCol][world.maxRow];
         mapTopNum=new int[world.maxCol][world.maxRow];
         loadTextures();
