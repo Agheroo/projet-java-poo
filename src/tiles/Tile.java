@@ -13,8 +13,8 @@ public class Tile {
     private final int scale = 3;
     public final int screenSize = tileSize*scale;
 
-    private int spriteCnt=0;        //Variable responsible for the incrementation of the different sprites
-    private int spriteUpdater=0;    //Variable responsible for the incrementation of the speed of the sprites
+    public int spriteCnt=0;        //Variable responsible for the incrementation of the different sprites
+    public int spriteUpdater=0;    //Variable responsible for the incrementation of the speed of the sprites
     private int spriteSpeed;        //How fast are the sprites changing (higher spriteSpeed means slower time to change)
     //spriteSpeed of -1 means it has NO animation
     private int spriteCntMax;       //How many sprite does the entity have
@@ -29,10 +29,10 @@ public class Tile {
         image = new BufferedImage[spriteCntMax];
     }
 
-    public void loadAnimatedTextures(String name, int i){
+    public void loadAnimatedTextures(String name){
         try {
             for(int j=0; j<spriteCntMax ;j++){
-                image[j] = ImageIO.read(new FileInputStream("res/tiles/animated/"+name+(i+1)+".png"));
+                image[j] = ImageIO.read(new FileInputStream("res/tiles/animated/"+name+(j+1)+".png"));
             }
 
         }catch (IOException e){
@@ -49,7 +49,17 @@ public class Tile {
         }
     }
 
-    public void draw(Graphics2D g2, int screenX, int screenY){
+    public void draw(Graphics2D g2, int screenX, int screenY, int topNum){
+        BufferedImage render = null;
+
+        for(int i=0; i<spriteCntMax; i++){
+            if(spriteCnt == i){
+                render = image[i];
+            }
+        }
+
+
+
         if(spriteSpeed > -1){
             spriteUpdater++;
             if (spriteUpdater>spriteSpeed){
@@ -60,8 +70,10 @@ public class Tile {
                 spriteUpdater=0;
             }
         }
+
         
-        g2.drawImage(image[spriteCnt], screenX, screenY,screenSize, screenSize, null);
+        
+        g2.drawImage(render, screenX, screenY,screenSize, screenSize, null);
     }
     
 }

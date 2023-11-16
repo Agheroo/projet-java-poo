@@ -51,10 +51,6 @@ public class TileManager {
         getTileImage(26,1,"forest_bottomright",topTiles, 1, -1);
 
         getTileImage(27,1,"fire",topTiles, 7, 20);
-        System.out.println("updater : " + topTiles[27]);
-        
-
-        
 
     }
 
@@ -71,7 +67,7 @@ public class TileManager {
         for(int i = start;i<start + size; i++){
             layer[i] = new Tile(spriteCntMax, spriteSpeed);
             if(spriteSpeed > -1){       //If the tile is animated, look for the animated folder
-                layer[i].loadAnimatedTextures(name, i-start);
+                layer[i].loadAnimatedTextures(name);
             }
             else{                       //If tile is not animated, look for the static folder
                 layer[i].loadTextures(name,i-start);
@@ -119,8 +115,8 @@ public class TileManager {
         int worldRow =0;
 
         while(worldCol < world.maxCol && worldRow < world.maxRow){
-            int topNum=mapTopNum[worldCol][worldRow];
-            int floorNum=mapFloorNum[worldCol][worldRow];
+            int topNum=mapTopNum[worldCol][worldRow];       //Mapping the floor tiles
+            int floorNum=mapFloorNum[worldCol][worldRow];   //Mapping the top layer tiles
 
             int worldX=worldCol*tileSize;
             int worldY=worldRow*tileSize;
@@ -130,8 +126,9 @@ public class TileManager {
 
             //Drawing tiles around the player to optimize the memory
 
-            floorTiles[floorNum].draw(g2,screenX,screenY);
-            topTiles[topNum].draw(g2,screenX,screenY);
+            floorTiles[floorNum].draw(g2,screenX,screenY,floorNum);
+            topTiles[topNum].draw(g2,screenX,screenY, topNum);
+
 
             worldCol++;
             if(worldCol == world.maxCol){
