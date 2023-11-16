@@ -1,15 +1,12 @@
 package tiles;
 
-import javax.imageio.ImageIO;
 
 import game.World;
 
 import java.awt.Graphics2D;
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileReader;
-import java.io.IOException;
 
 public class TileManager {
     //World world = new World();
@@ -29,35 +26,35 @@ public class TileManager {
         //      FLOOR SKINS     //
         //////////////////////////
         //GRASS TEXTURE
-        getTileImage(0,3,"grass",floorTiles);
-
+        getTileImage(0,3,"grass",floorTiles, 1, -1);
 
         //////////////////////////////
         //      TOP LAYER SKINS     //
         //////////////////////////////
         //VOID TEXTURE (just 16x16 invisible tile)
-        getTileImage(0,1,"void",topTiles);
+        getTileImage(0,1,"void",topTiles, 1, -1);
 
         //FOREST TEXTURE
         //Principal forest
-        getTileImage(1,9,"forest",topTiles);
+        getTileImage(1,9,"forest",topTiles, 1, -1);
 
         //TREE TEXTURE
-        getTileImage(10,9,"tree",topTiles);
+        getTileImage(10,9,"tree",topTiles, 1, -1);
 
         //topleft forest
-        getTileImage(19,3,"forest_topleft",topTiles);
+        getTileImage(19,3,"forest_topleft",topTiles, 1, -1);
         //topright forest
-        getTileImage(22,2,"forest_topright",topTiles);
+        getTileImage(22,2,"forest_topright",topTiles, 1, -1);
         //bottomleft forest
-        getTileImage(24,2,"forest_bottomleft",topTiles);
+        getTileImage(24,2,"forest_bottomleft",topTiles, 1, -1);
         //bottomright forest
-        getTileImage(26,1,"forest_bottomright",topTiles);
+        getTileImage(26,1,"forest_bottomright",topTiles, 1, -1);
 
-
+        getTileImage(27,1,"fire",topTiles, 7, 20);
+        System.out.println("updater : " + topTiles[27]);
         
 
-
+        
 
     }
 
@@ -67,16 +64,18 @@ public class TileManager {
      * @param size  //How many tiles are there
      * @param name  //Name of the png file ex:  grass
      * @param layer //What layer are we writing in
+     * @param spriteCntMax //Number of sprites the tile has (if more than 1)
+     * @param spriteSpeed //Indicates the speed of animation (set to -1 if no animation)
      */
-    private void getTileImage(int start, int size, String name, Tile[] layer){    //Loading specific tiles texture
-        try{
-            for(int i = start;i<start + size; i++){
-                layer[i] = new Tile();
-                layer[i].image = ImageIO.read(new FileInputStream("res/tiles/"+name+(i-start+1)+".png"));
+    private void getTileImage(int start, int size, String name, Tile[] layer, int spriteCntMax, int spriteSpeed){    //Loading specific tiles texture
+        for(int i = start;i<start + size; i++){
+            layer[i] = new Tile(spriteCntMax, spriteSpeed);
+            if(spriteSpeed > -1){       //If the tile is animated, look for the animated folder
+                layer[i].loadAnimatedTextures(name, i-start);
             }
-        }
-        catch (IOException e){
-            e.printStackTrace();
+            else{                       //If tile is not animated, look for the static folder
+                layer[i].loadTextures(name,i-start);
+            }  
         }
     }
 
@@ -131,10 +130,10 @@ public class TileManager {
 
             //Drawing tiles around the player to optimize the memory
 
-            g2.drawImage(floorTiles[floorNum].image, screenX, screenY, screenSize, screenSize, null); //Drawing top layer (trees & props...)
-            g2.drawImage(topTiles[topNum].image, screenX, screenY, screenSize, screenSize, null); //Drawing top layer (trees & props...)
-            worldCol++;
+            floorTiles[floorNum].draw(g2,screenX,screenY);
+            topTiles[topNum].draw(g2,screenX,screenY);
 
+            worldCol++;
             if(worldCol == world.maxCol){
                 worldCol =0;
                 worldRow++;
