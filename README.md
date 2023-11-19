@@ -27,3 +27,8 @@ Lien vers le formulaire des règles : https://docs.google.com/document/d/1psWO6b
 ### 14/11/23 :
 - Finition de l'UML et organisation des tâches pour les contributeurs
 - Création de map de debug et de test
+
+
+### 19/11/23 :
+- Refonte du système de mapping du TileManager
+- Ajout d'animations de plusieurs décors (sans interractions)
