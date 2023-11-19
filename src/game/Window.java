@@ -56,7 +56,7 @@ public class Window extends JPanel implements Runnable{
     }
 
     public  void update(){
-        world.update();     //Updates the whole world's props & animfations 
+        world.update();     //Updates the whole world's props & animations 
         repaint();
     }
 
@@ -67,7 +67,7 @@ public class Window extends JPanel implements Runnable{
 
         Graphics2D g2= (Graphics2D)g;
 
-        world.tileManager.draw(g2,world, screenWidth, screenHeight);
+        world.tileManager.draw(g2, world, screenWidth, screenHeight);
         world.player.draw(g2,screenWidth/2 - (world.player.screenSize/2), screenHeight/2 - (world.player.screenSize/2)); //Player is always centered to screen
 
         g2.dispose();

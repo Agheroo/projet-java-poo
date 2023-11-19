@@ -8,20 +8,22 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 public class Tile {
+
+    public boolean collision=false;
+    public int worldX, worldY;
+
     //Display purpose variables
     private final int tileSize=16;
     private final int scale = 3;
-    public final int screenSize = tileSize*scale;
+    private final int screenSize = tileSize*scale;
 
-    public int spriteCnt=0;        //Variable responsible for the incrementation of the different sprites
-    public int spriteUpdater=0;    //Variable responsible for the incrementation of the speed of the sprites
-    private int spriteSpeed;        //How fast are the sprites changing (higher spriteSpeed means slower time to change)
-    //spriteSpeed of -1 means it has NO animation
-    private int spriteCntMax;       //How many sprite does the entity have
-
+    private int spriteCnt=0;        //Variable responsible for the incrementation of the different sprites
+    private int spriteUpdater=0;    //Variable responsible for the incrementation of the speed of the sprites
+    public int spriteSpeed;        //How fast are the sprites changing (higher spriteSpeed means slower time to change)  //spriteSpeed of 0 means it has NO animation
+    public int spriteCntMax;       //How many sprite does the entity have
 
     public BufferedImage[] image;
-    public boolean collision=false;
+
 
     public Tile(int spriteCntMax, int spriteSpeed){
         this.spriteCntMax = spriteCntMax;
@@ -29,22 +31,28 @@ public class Tile {
         image = new BufferedImage[spriteCntMax];
     }
 
-    public void loadAnimatedTextures(String name){
-        try {
-            for(int j=0; j<spriteCntMax ;j++){
-                image[j] = ImageIO.read(new FileInputStream("res/tiles/animated/"+name+(j+1)+".png"));
-            }
 
-        }catch (IOException e){
-            e.printStackTrace();
-        }
+    public void setTexture(BufferedImage[] newTexture){
+        this.image = newTexture;
     }
 
-    public void loadTextures(String name, int i){
+    public void setSpriteCountAndSpeed(int newSpriteCntMax, int newSpriteSpeed){
+        this.spriteCntMax = newSpriteCntMax;
+        this.spriteSpeed = newSpriteSpeed;
+    }
+
+
+    public void loadTextures(String name, boolean animated, int i){
         try {
-            image[0] = ImageIO.read(new FileInputStream("res/tiles/static/"+name+(i+1)+".png"));
-        }
-        catch (IOException e){
+            if(animated){
+                for(int j=0; j<spriteCntMax ;j++){
+                    image[j] = ImageIO.read(new FileInputStream("res/tiles/animated/"+name+(j+1)+".png"));
+                }
+            }
+            else{
+                image[0] = ImageIO.read(new FileInputStream("res/tiles/static/"+name+(i+1)+".png"));
+            }
+        }catch (IOException e){
             e.printStackTrace();
         }
     }
@@ -58,21 +66,17 @@ public class Tile {
             }
         }
 
-
-
-        if(spriteSpeed > -1){
+        if(spriteSpeed > 0){
             spriteUpdater++;
             if (spriteUpdater>spriteSpeed){
                 spriteCnt++;
                 if(spriteCnt == spriteCntMax){
                     spriteCnt = 0;
                 }
-                spriteUpdater=0;
+                spriteUpdater=1;
             }
         }
-
-        
-        
+ 
         g2.drawImage(render, screenX, screenY,screenSize, screenSize, null);
     }
     
