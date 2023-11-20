@@ -3,9 +3,21 @@ package main;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-public class KeyHandler implements KeyListener {
-
+// Patron de conception singleton pour la classe KeyHandler
+public final class KeyHandler implements KeyListener {
+    public static KeyHandler instance;
     public boolean upPressed,downPressed,leftPressed,rightPressed, interactPressed;
+
+    // Constructeur privée
+    private KeyHandler() {}
+
+    // getInstance() contrôle l'accès à l'instance du singleton
+    public static KeyHandler getInstance() {
+        if(instance == null) {
+            instance = new KeyHandler();
+        }
+        return instance;
+    }
     @Override
     public void keyTyped(KeyEvent e) {
 

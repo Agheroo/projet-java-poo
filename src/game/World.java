@@ -17,12 +17,13 @@ public class World extends Scene{
     //World intialization settings
     
     public final int maxCol= 27, maxRow = 27; //DONT FORGET TO MODIFY WHEN CHANGING THE MAP !!!
-    public final int maxWidth = tileManager.tileSize*maxCol;
-    public final int maxHeight = tileManager.tileSize*maxRow;
+    // public final int maxWidth = tileManager.tileSize*maxCol;
+    // public final int maxHeight = tileManager.tileSize*maxRow;
     
     
     //Player settings
-    public Player player = new Player(keyH,15*tileManager.tileSize, 26*tileManager.tileSize,0,0,0,"down",4,20);
+
+    public Player player = new Player(15*tileManager.tileSize, 26*tileManager.tileSize,0,0,0,"down",4,20);
     
     //All world instances (ennemies NPC mon cul les coffres et tout)
     public static World getWorld(){
