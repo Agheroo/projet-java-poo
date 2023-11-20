@@ -28,5 +28,11 @@ Lien vers le formulaire des règles : https://docs.google.com/document/d/1psWO6b
 - Finition de l'UML et organisation des tâches pour les contributeurs
 - Création de map de debug et de test
 
+
 ### 15/11/23 : 
 - Implémentation du patron de conception : singleton (romu)
+
+### 19/11/23 :
+- Refonte du système de mapping du TileManager
+- Ajout d'animations de plusieurs décors (sans interractions)
+
