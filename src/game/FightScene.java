@@ -17,7 +17,7 @@ public class FightScene extends Scene{
 
     @Override
     public void update(){
-        player.update(dt);
+        //player.update(dt);
     }
 
     @Override
