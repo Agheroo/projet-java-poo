@@ -8,6 +8,7 @@ public final class KeyHandler implements KeyListener {
     public static KeyHandler instance;
     public boolean upPressed,downPressed,leftPressed,rightPressed, interactPressed;
 
+    // Constructeur privée
     private KeyHandler() {}
 
     // getInstance() contrôle l'accès à l'instance du singleton
