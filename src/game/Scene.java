@@ -5,7 +5,7 @@ import main.KeyHandler;
 import java.awt.*;
 
 public abstract class Scene {
-    public KeyHandler keyH=new KeyHandler();
+    public KeyHandler keyH = KeyHandler.getInstance();
     public double dt = 0;
 
     public abstract void update();

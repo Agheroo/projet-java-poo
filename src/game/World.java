@@ -38,7 +38,7 @@ public class World extends Scene{
     }
 
     public void update(){
-        player.update(dt);
+        player.update(instance, dt);
         //All updates of entities here
     }
     
