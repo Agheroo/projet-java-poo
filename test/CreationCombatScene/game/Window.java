@@ -1,7 +1,11 @@
-package game;
+package CreationCombatScene.game;
 
-import javax.swing.JPanel;
+import CreationCombatScene.entity.PlayerTest;
+import entity.Ennemy;
+import game.CreateScene;
+import game.Scene;
 
+import javax.swing.*;
 import java.awt.*;
 
 /*
@@ -23,7 +27,10 @@ public class Window extends JPanel implements Runnable{
 
 
     public Window(){
-        scene=CreateScene.creator();
+        PlayerTest playerTest=new PlayerTest();
+        Ennemy ennemy=new Ennemy();
+
+        scene= CreateScene.creator(playerTest,ennemy);
         this.setPreferredSize(new Dimension(screenWidth,screenHeight));
         this.setBackground(Color.black);
         this.setDoubleBuffered(true);
