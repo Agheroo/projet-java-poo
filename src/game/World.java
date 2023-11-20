@@ -12,7 +12,7 @@ import java.awt.*;
  */
 public class World extends Scene{
 
-    private static World instance;
+    private static World _instance;
     TileManager tileManager = new TileManager(this);
     //World intialization settings
     
@@ -27,10 +27,10 @@ public class World extends Scene{
     
     //All world instances (ennemies NPC mon cul les coffres et tout)
     public static World getWorld(){
-        if (instance==null){
-            instance=new World();
+        if (_instance==null){
+            _instance=new World();
         }
-        return instance;
+        return _instance;
     }
 
     private World(){
@@ -38,7 +38,7 @@ public class World extends Scene{
     }
 
     public void update(){
-        player.update(instance, dt);
+        player.update(_instance, dt);
         //All updates of entities here
     }
     

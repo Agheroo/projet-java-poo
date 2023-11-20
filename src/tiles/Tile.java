@@ -17,8 +17,8 @@ public class Tile {
     private final int scale = 3;
     private final int screenSize = tileSize*scale;
 
-    private int spriteCnt=0;        //Variable responsible for the incrementation of the different sprites
-    private int spriteUpdater=0;    //Variable responsible for the incrementation of the speed of the sprites
+    private int _spriteCnt=0;        //Variable responsible for the incrementation of the different sprites
+    private int _spriteUpdater=0;    //Variable responsible for the incrementation of the speed of the sprites
     public int spriteSpeed;        //How fast are the sprites changing (higher spriteSpeed means slower time to change)  //spriteSpeed of 0 means it has NO animation
     public int spriteCntMax;       //How many sprite does the entity have
 
@@ -61,19 +61,19 @@ public class Tile {
         BufferedImage render = null;
 
         for(int i=0; i<spriteCntMax; i++){
-            if(spriteCnt == i){
+            if(_spriteCnt == i){
                 render = image[i];
             }
         }
 
         if(spriteSpeed > 0){
-            spriteUpdater++;
-            if (spriteUpdater>spriteSpeed){
-                spriteCnt++;
-                if(spriteCnt == spriteCntMax){
-                    spriteCnt = 0;
+            _spriteUpdater++;
+            if (_spriteUpdater>spriteSpeed){
+                _spriteCnt++;
+                if(_spriteCnt == spriteCntMax){
+                    _spriteCnt = 0;
                 }
-                spriteUpdater=1;
+                _spriteUpdater=1;
             }
         }
  

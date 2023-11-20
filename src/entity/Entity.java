@@ -9,9 +9,9 @@ import javax.imageio.ImageIO;
 
 public class Entity {
     //Display purpose variables
-    private final int tileSize=16;
-    private final int scale = 3;
-    public final int screenSize = tileSize*scale;
+    private final int _tileSize=16;
+    private final int _scale = 3;
+    public final int screenSize = _tileSize*_scale;
 
 
     //Position of entity in the world, directions and speed
@@ -30,19 +30,19 @@ public class Entity {
 
 
     //Entity animations
-    private int spriteCnt=0;        //Variable responsible for the incrementation of the different sprites
-    private int spriteUpdater=0;    //Variable responsible for the incrementation of the speed of the sprites
-    private int spriteSpeed;        //How fast are the sprites changing (higher spriteSpeed means slower time to change)
-    private int spriteCntMax;       //How many sprite does the entity have
-    public BufferedImage[] idle_up; public BufferedImage[] idle_down;
-    public BufferedImage[] idle_right; public BufferedImage[] idle_left;
-    public BufferedImage[] walk_up; public BufferedImage[] walk_down;
-    public BufferedImage[] walk_right; public BufferedImage[] walk_left;
+    private int _spriteCnt=0;        //Variable responsible for the incrementation of the different sprites
+    private int _spriteUpdater=0;    //Variable responsible for the incrementation of the speed of the sprites
+    private int _spriteSpeed;        //How fast are the sprites changing (higher spriteSpeed means slower time to change)
+    private int _spriteCntMax;       //How many sprite does the entity have
+    private BufferedImage[] idle_up; public BufferedImage[] idle_down;
+    private BufferedImage[] idle_right; public BufferedImage[] idle_left;
+    private BufferedImage[] walk_up; public BufferedImage[] walk_down;
+    private BufferedImage[] walk_right; public BufferedImage[] walk_left;
 
     
 
 
-    public Entity(int x,int y,int dirX,int dirY,int speed,String facing,int spriteCntMax,int spriteSpeed){
+    public Entity(int x,int y,int dirX,int dirY,int speed,String facing,int _spriteCntMax,int spriteSpeed){
         
         //Hitbox settings to set up later
 
@@ -51,17 +51,17 @@ public class Entity {
         this.dirX = dirX; this.dirY = dirY;
         this.speed = speed;
         this.facing = facing;
-        this.spriteCntMax = spriteCntMax; this.spriteSpeed = spriteSpeed;
+        this._spriteCntMax = _spriteCntMax; this._spriteSpeed = spriteSpeed;
 
-        idle_up = new BufferedImage[spriteCntMax]; idle_down = new BufferedImage[spriteCntMax];
-        idle_right = new BufferedImage[spriteCntMax]; idle_left = new BufferedImage[spriteCntMax];
-        walk_up = new BufferedImage[spriteCntMax]; walk_down = new BufferedImage[spriteCntMax];
-        walk_right = new BufferedImage[spriteCntMax]; walk_left = new BufferedImage[spriteCntMax];
+        idle_up = new BufferedImage[_spriteCntMax]; idle_down = new BufferedImage[_spriteCntMax];
+        idle_right = new BufferedImage[_spriteCntMax]; idle_left = new BufferedImage[_spriteCntMax];
+        walk_up = new BufferedImage[_spriteCntMax]; walk_down = new BufferedImage[_spriteCntMax];
+        walk_right = new BufferedImage[_spriteCntMax]; walk_left = new BufferedImage[_spriteCntMax];
     }
 
     public void loadTextures(String name){
         try {
-            for(int i=0; i<spriteCntMax ;i++){
+            for(int i=0; i<_spriteCntMax ;i++){
                 idle_up[i] = ImageIO.read(new FileInputStream("res/entity/idle/"+name+"/up"+(i+1)+".png"));
                 idle_down[i] = ImageIO.read(new FileInputStream("res/entity/idle/"+name+"/down"+(i+1)+".png"));
                 idle_left[i] = ImageIO.read(new FileInputStream("res/entity/idle/"+name+"/left"+(i+1)+".png"));
@@ -82,50 +82,50 @@ public class Entity {
         BufferedImage image=null;
 
         if(speed == 0){ //IDLE ANIMATIONS
-            for(int i=0;i<spriteCntMax;i++){
+            for(int i=0;i<_spriteCntMax;i++){
                 switch (facing) {
                     case "up":
-                        if (spriteCnt == i)image=idle_up[i];
+                        if (_spriteCnt == i)image=idle_up[i];
                         break;
                     case "down":
-                        if (spriteCnt == i)image=idle_down[i];
+                        if (_spriteCnt == i)image=idle_down[i];
                         break;
                     case "left":
-                        if (spriteCnt == i)image=idle_left[i];
+                        if (_spriteCnt == i)image=idle_left[i];
                         break;
                     case "right":
-                        if (spriteCnt == i)image=idle_right[i];
+                        if (_spriteCnt == i)image=idle_right[i];
                         break;
                 }
             }
         }
         if(speed > 0){  //WALKING ANIMATIONS
-            for(int i=0;i<spriteCntMax;i++){
+            for(int i=0;i<_spriteCntMax;i++){
                 switch (facing) {
                     case "up":
-                        if (spriteCnt == i)image=walk_up[i];
+                        if (_spriteCnt == i)image=walk_up[i];
                         break;
                     case "down":
-                        if (spriteCnt == i)image=walk_down[i];
+                        if (_spriteCnt == i)image=walk_down[i];
                         break;
                     case "left":
-                        if (spriteCnt == i)image=walk_left[i];
+                        if (_spriteCnt == i)image=walk_left[i];
                         break;
                     case "right":
-                        if (spriteCnt == i)image=walk_right[i];
+                        if (_spriteCnt == i)image=walk_right[i];
                         break;
                 }
             }
         }
 
 
-        spriteUpdater++;
-        if (spriteUpdater>spriteSpeed){
-            spriteCnt++;
-            if(spriteCnt == spriteCntMax){
-                spriteCnt = 0;
+        _spriteUpdater++;
+        if (_spriteUpdater>_spriteSpeed){
+            _spriteCnt++;
+            if(_spriteCnt == _spriteCntMax){
+                _spriteCnt = 0;
             }
-            spriteUpdater=0;
+            _spriteUpdater=0;
         }
 
         g2.drawImage(image, screenX, screenY,screenSize, screenSize, null);

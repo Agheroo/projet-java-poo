@@ -17,7 +17,7 @@ public class Window extends JPanel implements Runnable{
 
 
     //Game init
-    final int FPS = 120;
+    private final int _FPS = 120;
     Thread gameThread;
 
 
@@ -35,7 +35,7 @@ public class Window extends JPanel implements Runnable{
 
     @Override
     public void run() {
-        double drawInterval = 10e9/FPS;
+        double drawInterval = 10e9/_FPS;
         long lastTime = System.nanoTime();
         long currentTime;
 

@@ -14,22 +14,22 @@ public class TileManager {
     public final int screenSize = tileSize*scale;
 
     //Tiles for textures
-    private Tile[] floorMapTextures;
-    private Tile[] topMapTextures;
+    private Tile[] _floorMapTextures;
+    private Tile[] _topMapTextures;
 
     private Tile[][] floorMap;
     private Tile[][] topMap;
 
     public TileManager(World world){
-        floorMapTextures = new Tile[3];
-        topMapTextures = new Tile[29];
+        _floorMapTextures = new Tile[3];
+        _topMapTextures = new Tile[29];
         floorMap = new Tile[world.maxCol][world.maxRow];
         topMap = new Tile[world.maxCol][world.maxRow];
         
         
         loadTextures();
-        loadMap("res/maps/debugfloor.txt", world, floorMap, floorMapTextures);
-        loadMap("res/maps/debugtop.txt", world, topMap, topMapTextures);
+        loadMap("res/maps/debugfloor.txt", world, floorMap, _floorMapTextures);
+        loadMap("res/maps/debugtop.txt", world, topMap, _topMapTextures);
     }
 
     /**
@@ -55,18 +55,18 @@ public class TileManager {
      * Loading all tiles' textures of the game for the map in an array
      */
     private void loadTextures(){ 
-        storeTexture("grass",floorMapTextures,0,3,false,1, 0);
+        storeTexture("grass",_floorMapTextures,0,3,false,1, 0);
 
-        storeTexture("void",topMapTextures	,0,1,false,1, 0);
+        storeTexture("void",_topMapTextures	,0,1,false,1, 0);
 
-        storeTexture("forest", topMapTextures, 1,9,false,1, 0);
-        storeTexture("tree", topMapTextures, 10,9,false,1, 0);
+        storeTexture("forest", _topMapTextures, 1,9,false,1, 0);
+        storeTexture("tree", _topMapTextures, 10,9,false,1, 0);
 
-        storeTexture("forest_topleft", topMapTextures,19,3,false,1, 0);
-        storeTexture("forest_topright", topMapTextures,22,2,false,1, 0);
-        storeTexture("forest_bottomleft", topMapTextures,24,2,false,1, 0);
-        storeTexture("forest_bottomright", topMapTextures,26,1,false,1, 0);
-        storeTexture("fire", topMapTextures,27,1,true,7, 15);
+        storeTexture("forest_topleft", _topMapTextures,19,3,false,1, 0);
+        storeTexture("forest_topright", _topMapTextures,22,2,false,1, 0);
+        storeTexture("forest_bottomleft", _topMapTextures,24,2,false,1, 0);
+        storeTexture("forest_bottomright", _topMapTextures,26,1,false,1, 0);
+        storeTexture("fire", _topMapTextures,27,1,true,7, 15);
     }
 
     
