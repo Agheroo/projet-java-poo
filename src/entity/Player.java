@@ -17,7 +17,9 @@ public class Player extends Entity{
             if(speed < 30){ //Acceleration
                 speed += 20*dt;
             }
-            else{ speed = 30;}
+            if(speed>30){
+                speed=30;
+            }
             dirX = dirY=0;
             
             if(scene.keyH.leftPressed){
@@ -58,7 +60,5 @@ public class Player extends Entity{
         if(dirY == 1){
             worldY += speed*dt;
         }
-        
-
     }
 }

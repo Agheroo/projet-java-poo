@@ -8,9 +8,8 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 public class Tile {
-
     public boolean collision=false;
-    public int worldX, worldY;
+    private int _worldX, _worldY;
 
     //Display purpose variables
     private final int tileSize=16;
@@ -34,6 +33,19 @@ public class Tile {
 
     public void setTexture(BufferedImage[] newTexture){
         this.image = newTexture;
+    }
+
+    public void setPos(int x, int y){
+        this._worldX = x;
+        this._worldY = y;
+    }
+
+    public int[] getPos(){
+        int tmp[] = new int[2];
+        tmp[0] = _worldX;
+        tmp[1] = _worldY;
+
+        return tmp;
     }
 
     public void setSpriteCountAndSpeed(int newSpriteCntMax, int newSpriteSpeed){
