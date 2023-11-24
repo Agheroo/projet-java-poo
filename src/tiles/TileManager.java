@@ -84,21 +84,21 @@ public class TileManager {
             BufferedReader br= new BufferedReader(fileReader);
             
 
-            for(int i = 0; i<world.maxRow; i++){
+            for(int j = 0; j<world.maxRow; j++){
                 String line = br.readLine();
                 
-                for(int j =0; j<world.maxCol; j++){
+                for(int i =0; i<world.maxCol; i++){
                     String numbers[]=line.split("\\s+");
-                    int num =Integer.parseInt(numbers[j]);      //Reading the file itself and stocking int read
+                    int num =Integer.parseInt(numbers[i]);      //Reading the file itself and stocking int read
                     
 
                     Tile tileCurrent = new Tile(textures[num].spriteCntMax, textures[num].spriteSpeed);   //Creating new tile to store with the according texture
-                    tileCurrent.worldX = j*tileSize;
-                    tileCurrent.worldY = i*tileSize;
-
-                    mapTile[j][i] = tileCurrent;        //Setting the tile to the actual map
-                    mapTile[j][i].setTexture(textures[num].image);  //Set the current tile texture to what corresponds in the textures array
+                    tileCurrent.setPos(tileSize*i*scale, tileSize*j*scale);
+                    mapTile[i][j] = tileCurrent;        //Setting the tile to the actual map
+                    mapTile[i][j].setTexture(textures[num].image);  //Set the current tile texture to what corresponds in the textures array
+                    System.out.print(mapTile[i][j].getPos()[0] + " ");
                 }
+                System.out.println("");
             }
             br.close();
 
@@ -110,19 +110,28 @@ public class TileManager {
 
 
     public void draw(Graphics2D g2,World world, int screenWidth, int screenHeight){
+        System.out.println(world.player.worldX + " " + world.player.worldY);
+        int playerScreenX = (screenWidth - world.player.screenSize)/2;
+        int playerScreenY = (screenHeight - world.player.screenSize)/2;
 
-        //Need to optimize memory with rendering that's only visible for the player instead of rendering all the map at once
-        for(int i=0; i<world.maxRow; i++){
-            for(int j=0; j<world.maxCol; j++){
-                int worldX=j*tileSize;
-                int worldY=i*tileSize;
+        //Check for everytile of the map if it needs to be drawn
+        for(int j=0;j<world.maxCol;j++){
+            for(int i=0;i<world.maxRow;i++){
+                int worldX = floorMap[i][j].getPos()[0];
+                int worldY = floorMap[i][j].getPos()[1];
 
-                int screenX=(worldX*scale-world.player.worldX);
-                int screenY=(worldY*scale-world.player.worldY);
-
-                floorMap[j][i].draw(g2, screenX, screenY);
-                topMap[j][i].draw(g2, screenX, screenY);
+                //Checks if the player is close enough to the tile to render it to optimize memory and CPU usage
+                if(worldX + tileSize*scale > world.player.worldX - playerScreenX 
+                && worldX - tileSize*scale < world.player.worldX + playerScreenX 
+                && worldY + tileSize*scale > world.player.worldY - playerScreenY 
+                && worldY - tileSize*scale < world.player.worldY + playerScreenY){
+                    int screenX = worldX - world.player.worldX + playerScreenX;
+                    int screenY = worldY - world.player.worldY + playerScreenY;
+                    floorMap[i][j].draw(g2,screenX,screenY);
+                    topMap[i][j].draw(g2,screenX,screenY);
+                }
             }
         }
+    
     }
 }

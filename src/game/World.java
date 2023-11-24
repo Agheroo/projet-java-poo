@@ -40,6 +40,23 @@ public class World extends Scene{
     public void update(){
         player.update(_instance, dt);
         //All updates of entities here
+
+
+
+
+        //Checks if player is touching the edges of the map
+        if(player.worldX < 0){
+            player.worldX=0;
+        }
+        if(player.worldX > (maxCol-1)*tileManager.tileSize*tileManager.scale){
+            player.worldX = (maxCol-1)*tileManager.tileSize*tileManager.scale;
+        }
+        if(player.worldY < 0){
+            player.worldY = 0;
+        }
+        if(player.worldY >= (maxRow-1)*tileManager.tileSize*tileManager.scale){
+            player.worldY = (maxRow-1)*tileManager.tileSize*tileManager.scale;
+        }
     }
     
     public  void draw(Graphics2D g2,int screenWidth,int screenHeight){

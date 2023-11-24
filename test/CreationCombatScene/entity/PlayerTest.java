@@ -6,7 +6,7 @@ public class PlayerTest extends Player {
 
 
     public PlayerTest(){
-        super(null,0,0,0,0,0," ",0,0);
+        super(0,0,0,0,0," ",0,0);
     }
 
     public  void  update(double dt){
