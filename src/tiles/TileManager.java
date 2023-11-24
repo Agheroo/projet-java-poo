@@ -8,28 +8,37 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 
+
 public class TileManager {
     public final int tileSize = 16;
     public final int scale = 3;
     public final int screenSize = tileSize*scale;
 
+
     //Tiles for textures
+    private final int nbFloorTextures = 6;
+    private final int nbTopTextures = 29;
+
     private Tile[] _floorMapTextures;
     private Tile[] _topMapTextures;
 
-    private Tile[][] floorMap;
-    private Tile[][] topMap;
+    private Tile[][] _floorMap;
+    private Tile[][] _topMap;
 
     public TileManager(World world){
-        _floorMapTextures = new Tile[3];
-        _topMapTextures = new Tile[29];
-        floorMap = new Tile[world.maxCol][world.maxRow];
-        topMap = new Tile[world.maxCol][world.maxRow];
+        //Textures
+        _floorMapTextures = new Tile[nbFloorTextures];
+        _topMapTextures = new Tile[nbTopTextures];
+
+        //Map itself
+        _floorMap = new Tile[world.maxRow][world.maxCol];
+        _topMap = new Tile[world.maxRow][world.maxCol];
+        
         
         
         loadTextures();
-        loadMap("res/maps/debugfloor.txt", world, floorMap, _floorMapTextures);
-        loadMap("res/maps/debugtop.txt", world, topMap, _topMapTextures);
+        loadMap("res/maps/debugfloor.txt", world, _floorMap, _floorMapTextures);
+        loadMap("res/maps/debugtop.txt", world, _topMap, _topMapTextures);
     }
 
     /**
@@ -54,9 +63,15 @@ public class TileManager {
     /**
      * Loading all tiles' textures of the game for the map in an array
      */
-    private void loadTextures(){ 
+    private void loadTextures(){
+        //Floor map textures
         storeTexture("grass",_floorMapTextures,0,3,false,1, 0);
+        //Decoration textures (plants and tall grass)
+        storeTexture("grass0",_floorMapTextures,3,1,true,5, 20);
+        storeTexture("grass1",_floorMapTextures,4,1,true,5, 20);
+        storeTexture("flower0",_floorMapTextures,5,1,true,6, 20);
 
+        //Top map textures (trees & forest)
         storeTexture("void",_topMapTextures	,0,1,false,1, 0);
 
         storeTexture("forest", _topMapTextures, 1,9,false,1, 0);
@@ -67,6 +82,10 @@ public class TileManager {
         storeTexture("forest_bottomleft", _topMapTextures,24,2,false,1, 0);
         storeTexture("forest_bottomright", _topMapTextures,26,1,false,1, 0);
         storeTexture("fire", _topMapTextures,27,1,true,7, 15);
+
+
+        
+
     }
 
     
@@ -84,19 +103,20 @@ public class TileManager {
             BufferedReader br= new BufferedReader(fileReader);
             
 
-            for(int j = 0; j<world.maxRow; j++){
+            for(int i =0; i<world.maxRow; i++){
                 String line = br.readLine();
                 
-                for(int i =0; i<world.maxCol; i++){
+                for(int j = 0; j<world.maxCol; j++){
                     String numbers[]=line.split("\\s+");
-                    int num =Integer.parseInt(numbers[i]);      //Reading the file itself and stocking int read
+                    int num =Integer.parseInt(numbers[j]);      //Reading the file itself and stocking int read
                     
 
                     Tile tileCurrent = new Tile(textures[num].spriteCntMax, textures[num].spriteSpeed);   //Creating new tile to store with the according texture
-                    tileCurrent.setPos(tileSize*i*scale, tileSize*j*scale);
+                    tileCurrent.setPos(tileSize*j*scale, tileSize*i*scale);
                     mapTile[i][j] = tileCurrent;        //Setting the tile to the actual map
                     mapTile[i][j].setTexture(textures[num].image);  //Set the current tile texture to what corresponds in the textures array
-                    System.out.print(mapTile[i][j].getPos()[0] + " ");
+
+                    System.out.print(num + " ");
                 }
                 System.out.println("");
             }
@@ -115,10 +135,10 @@ public class TileManager {
         int playerScreenY = (screenHeight - world.player.screenSize)/2;
 
         //Check for everytile of the map if it needs to be drawn
-        for(int j=0;j<world.maxCol;j++){
-            for(int i=0;i<world.maxRow;i++){
-                int worldX = floorMap[i][j].getPos()[0];
-                int worldY = floorMap[i][j].getPos()[1];
+        for(int i=0;i<world.maxRow;i++){
+            for(int j=0;j<world.maxCol;j++){
+                int worldX = _floorMap[i][j].getPos()[0];
+                int worldY = _floorMap[i][j].getPos()[1];
 
                 //Checks if the player is close enough to the tile to render it to optimize memory and CPU usage
                 if(worldX + tileSize*scale > world.player.worldX - playerScreenX 
@@ -127,8 +147,8 @@ public class TileManager {
                 && worldY - tileSize*scale < world.player.worldY + playerScreenY){
                     int screenX = worldX - world.player.worldX + playerScreenX;
                     int screenY = worldY - world.player.worldY + playerScreenY;
-                    floorMap[i][j].draw(g2,screenX,screenY);
-                    topMap[i][j].draw(g2,screenX,screenY);
+                    _floorMap[i][j].draw(g2,screenX,screenY);
+                    _topMap[i][j].draw(g2,screenX,screenY);
                 }
             }
         }
