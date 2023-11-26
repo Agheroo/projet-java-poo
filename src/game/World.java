@@ -45,17 +45,17 @@ public class World extends Scene{
 
 
         //Checks if player is touching the edges of the map
-        if(player.worldX < 0){
-            player.worldX=0;
+        if(player.worldX + player.hitbox.width < 0){
+            player.worldX = -player.hitbox.width;
         }
-        if(player.worldX > (maxCol-1)*tileManager.tileSize*tileManager.scale){
-            player.worldX = (maxCol-1)*tileManager.tileSize*tileManager.scale;
+        if(player.worldX > (maxCol-1)*tileManager.tileSize*tileManager.scale + player.hitbox.width ){
+            player.worldX = (maxCol-1)*tileManager.tileSize*tileManager.scale + player.hitbox.width;
         }
-        if(player.worldY < 0){
-            player.worldY = 0;
+        if(player.worldY + player.hitbox.height < 0){
+            player.worldY = -player.hitbox.height;
         }
-        if(player.worldY >= (maxRow-1)*tileManager.tileSize*tileManager.scale){
-            player.worldY = (maxRow-1)*tileManager.tileSize*tileManager.scale;
+        if(player.worldY >= (maxRow-1)*tileManager.tileSize*tileManager.scale + player.hitbox.height){
+            player.worldY = (maxRow-1)*tileManager.tileSize*tileManager.scale + player.hitbox.height;
         }
     }
     

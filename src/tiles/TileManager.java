@@ -51,9 +51,9 @@ public class TileManager {
      * @param spriteCntMax  Number of sprites if the texture is animated (if not then put 1)
      * @param spriteSpeed   Sprite speed if the texture is animated (if not then put 0)
      */
-    private void storeTexture(String name, Tile[] tiles, int start, int size, boolean animated, int spriteCntMax, int spriteSpeed){
+    private void storeTexture(String name, Tile[] tiles, int start, int size, boolean animated, int spriteCntMax, int spriteSpeed, boolean isBlocking){
         for(int i=start; i<size+start; i++){
-            Tile tile = new Tile(spriteCntMax, spriteSpeed);
+            Tile tile = new Tile(spriteCntMax, spriteSpeed,isBlocking);
             tiles[i] = tile;
             tiles[i].loadTextures(name, animated, i-start);
         }
@@ -65,23 +65,23 @@ public class TileManager {
      */
     private void loadTextures(){
         //Floor map textures
-        storeTexture("grass",_floorMapTextures,0,3,false,1, 0);
+        storeTexture("grass",_floorMapTextures,0,3,false,1, 0, false);
         //Decoration textures (plants and tall grass)
-        storeTexture("grass0",_floorMapTextures,3,1,true,5, 20);
-        storeTexture("grass1",_floorMapTextures,4,1,true,5, 20);
-        storeTexture("flower0",_floorMapTextures,5,1,true,6, 20);
+        storeTexture("grass0",_floorMapTextures,3,1,true,5, 20, false);
+        storeTexture("grass1",_floorMapTextures,4,1,true,5, 20, false);
+        storeTexture("flower0",_floorMapTextures,5,1,true,6, 20, false);
 
         //Top map textures (trees & forest)
-        storeTexture("void",_topMapTextures	,0,1,false,1, 0);
+        storeTexture("void",_topMapTextures	,0,1,false,1, 0, false);
 
-        storeTexture("forest", _topMapTextures, 1,9,false,1, 0);
-        storeTexture("tree", _topMapTextures, 10,9,false,1, 0);
+        storeTexture("forest", _topMapTextures, 1,9,false,1, 0, true);
+        storeTexture("tree", _topMapTextures, 10,9,false,1, 0, true);
 
-        storeTexture("forest_topleft", _topMapTextures,19,3,false,1, 0);
-        storeTexture("forest_topright", _topMapTextures,22,2,false,1, 0);
-        storeTexture("forest_bottomleft", _topMapTextures,24,2,false,1, 0);
-        storeTexture("forest_bottomright", _topMapTextures,26,1,false,1, 0);
-        storeTexture("fire", _topMapTextures,27,1,true,7, 15);
+        storeTexture("forest_topleft", _topMapTextures,19,3,false,1, 0, true);
+        storeTexture("forest_topright", _topMapTextures,22,2,false,1, 0, true);
+        storeTexture("forest_bottomleft", _topMapTextures,24,2,false,1, 0, true);
+        storeTexture("forest_bottomright", _topMapTextures,26,1,false,1, 0, true);
+        storeTexture("fire", _topMapTextures,27,1,true,7, 15, true);
 
 
         
@@ -111,14 +111,14 @@ public class TileManager {
                     int num =Integer.parseInt(numbers[j]);      //Reading the file itself and stocking int read
                     
 
-                    Tile tileCurrent = new Tile(textures[num].spriteCntMax, textures[num].spriteSpeed);   //Creating new tile to store with the according texture
+                    Tile tileCurrent = new Tile(textures[num].spriteCntMax, textures[num].spriteSpeed, textures[num].isBlocking);   //Creating new tile to store with the according texture
                     tileCurrent.setPos(tileSize*j*scale, tileSize*i*scale);
                     mapTile[i][j] = tileCurrent;        //Setting the tile to the actual map
                     mapTile[i][j].setTexture(textures[num].image);  //Set the current tile texture to what corresponds in the textures array
 
-                    System.out.print(num + " ");
+                    //System.out.print(num + " ");
                 }
-                System.out.println("");
+                //System.out.println("");
             }
             br.close();
 
@@ -130,7 +130,6 @@ public class TileManager {
 
 
     public void draw(Graphics2D g2,World world, int screenWidth, int screenHeight){
-        System.out.println(world.player.worldX + " " + world.player.worldY);
         int playerScreenX = (screenWidth - world.player.screenSize)/2;
         int playerScreenY = (screenHeight - world.player.screenSize)/2;
 

@@ -1,6 +1,7 @@
 package tiles;
 
 import java.awt.Graphics2D;
+import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -8,8 +9,9 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 public class Tile {
-    public boolean collision=false;
+    public boolean isBlocking=false;
     private int _worldX, _worldY;
+    public Rectangle hitbox;
 
     //Display purpose variables
     private final int tileSize=16;
@@ -24,9 +26,10 @@ public class Tile {
     public BufferedImage[] image;
 
 
-    public Tile(int spriteCntMax, int spriteSpeed){
+    public Tile(int spriteCntMax, int spriteSpeed, boolean isBlocking){
         this.spriteCntMax = spriteCntMax;
         this.spriteSpeed = spriteSpeed;
+        this.isBlocking = isBlocking;
         image = new BufferedImage[spriteCntMax];
     }
 

@@ -10,7 +10,7 @@ import javax.imageio.ImageIO;
 public class Entity {
     //Display purpose variables
     private final int _tileSize=16;
-    private final int _scale = 3;
+    protected final int _scale = 3;
     public final int screenSize = _tileSize*_scale;
 
 
@@ -20,8 +20,7 @@ public class Entity {
     public int speed;
     
     //Hitbox of entity
-    public Rectangle hitbox;    
-    public boolean collisionOn = false;
+    public Rectangle hitbox;
 
     //Which direction is the entity facing (if directions are available) for animation
     public String facing;
@@ -43,9 +42,10 @@ public class Entity {
 
 
     public Entity(int x,int y,int dirX,int dirY,int speed,String facing,int _spriteCntMax,int spriteSpeed){
-        
+        hitbox = new Rectangle();
         //Hitbox settings to set up later
-
+        hitbox.x = x; hitbox.y = y;
+        hitbox.width = screenSize/2; hitbox.height = screenSize/2;
 
         this.worldX = x; this.worldY = y;
         this.dirX = dirX; this.dirY = dirY;
@@ -80,7 +80,7 @@ public class Entity {
 
     public void draw(Graphics2D g2, int screenX, int screenY){
         BufferedImage image=null;
-
+        System.out.println(worldX + " " + worldY);
         if(speed == 0){ //IDLE ANIMATIONS
             for(int i=0;i<_spriteCntMax;i++){
                 switch (facing) {
@@ -129,5 +129,6 @@ public class Entity {
         }
 
         g2.drawImage(image, screenX, screenY,screenSize, screenSize, null);
+        g2.drawRect(screenX + screenSize/4, screenY + screenSize/4, hitbox.width, hitbox.height); //Center the hitbox to the entity
     }
 }

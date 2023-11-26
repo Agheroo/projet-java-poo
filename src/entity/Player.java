@@ -13,6 +13,8 @@ public class Player extends Entity{
     }
 
     public  void  update(Scene scene, double dt){
+        hitbox.x = worldX;
+        hitbox.y = worldY;
         if(scene.keyH.upPressed || scene.keyH.downPressed || scene.keyH.leftPressed || scene.keyH.rightPressed){
             if(speed < 30){ //Acceleration
                 speed += 20*dt;
