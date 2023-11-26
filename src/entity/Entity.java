@@ -80,7 +80,6 @@ public class Entity {
 
     public void draw(Graphics2D g2, int screenX, int screenY){
         BufferedImage image=null;
-        System.out.println(worldX + " " + worldY);
         if(speed == 0){ //IDLE ANIMATIONS
             for(int i=0;i<_spriteCntMax;i++){
                 switch (facing) {
