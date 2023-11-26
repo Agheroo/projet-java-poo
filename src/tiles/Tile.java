@@ -1,7 +1,6 @@
 package tiles;
 
 import java.awt.Graphics2D;
-import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -11,7 +10,6 @@ import javax.imageio.ImageIO;
 public class Tile {
     public boolean isBlocking=false;
     private int _worldX, _worldY;
-    public Rectangle hitbox;
 
     //Display purpose variables
     private final int tileSize=16;
