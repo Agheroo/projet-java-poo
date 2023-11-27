@@ -17,11 +17,15 @@ public class FightScene extends Scene{
 
     @Override
     public void update(){
+        checkSceneChange();
+        if(state == State.FIGHT){
+            
+        }
         //player.update(dt);
     }
 
     @Override
     public void draw(Graphics2D g2, int screenWidth, int screenHeight){
-        player.draw(g2,screenWidth/2 - (player.screenSize/2), screenHeight/2 - (player.screenSize/2));
+        player.drawInFight(g2,screenWidth/2 - (player.screenSize/2), screenHeight/2 - (player.screenSize/2));
     }
 }

@@ -70,15 +70,8 @@ public class Tile {
         }
     }
 
-    public void draw(Graphics2D g2, int screenX, int screenY){
-        BufferedImage render = null;
-
-        for(int i=0; i<spriteCntMax; i++){
-            if(_spriteCnt == i){
-                render = image[i];
-            }
-        }
-
+    //Similar functions for the entities
+    public void updateFrames(){
         if(spriteSpeed > 0){
             _spriteUpdater++;
             if (_spriteUpdater>spriteSpeed){
@@ -89,6 +82,18 @@ public class Tile {
                 _spriteUpdater=1;
             }
         }
+    }
+
+    public void draw(Graphics2D g2, int screenX, int screenY){
+        BufferedImage render = null;
+
+        for(int i=0; i<spriteCntMax; i++){
+            if(_spriteCnt == i){
+                render = image[i];
+            }
+        }
+
+        
  
         g2.drawImage(render, screenX, screenY,screenSize, screenSize, null);
     }

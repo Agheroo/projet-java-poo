@@ -2,7 +2,6 @@ package CreationCombatScene.game;
 
 import CreationCombatScene.entity.PlayerTest;
 import entity.Enemy;
-import game.CreateScene;
 import game.Scene;
 
 import javax.swing.*;
@@ -65,7 +64,7 @@ public class Window extends JPanel implements Runnable{
     }
 
     public void update(){
-        scene.update();     //Updates the whole world's props & animations
+        scene.update();         //Updating abstract class scene which means either world or fightscene
         repaint();
     }
 

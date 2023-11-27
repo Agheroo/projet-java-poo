@@ -78,7 +78,21 @@ public class Entity {
         }
     }
 
-    public void draw(Graphics2D g2, int screenX, int screenY){
+    protected void updateFrames(){
+        _spriteUpdater++;
+        if (_spriteUpdater>_spriteSpeed){
+            _spriteCnt++;
+            if(_spriteCnt == _spriteCntMax){
+                _spriteCnt = 0;
+            }
+            _spriteUpdater=0;
+        }
+    }
+
+    public void drawInFight(Graphics2D g2, int screenX, int screenY){
+        // Other function to draw in fightscene
+    }
+    public void drawInWorld(Graphics2D g2, int screenX, int screenY){
         BufferedImage image=null;
         //System.out.println(worldX + " " + worldY);
         if(speed == 0){ //IDLE ANIMATIONS
@@ -119,14 +133,7 @@ public class Entity {
         }
 
 
-        _spriteUpdater++;
-        if (_spriteUpdater>_spriteSpeed){
-            _spriteCnt++;
-            if(_spriteCnt == _spriteCntMax){
-                _spriteCnt = 0;
-            }
-            _spriteUpdater=0;
-        }
+        
 
         g2.drawImage(image, screenX, screenY,screenSize, screenSize, null);
         g2.drawRect(screenX + screenSize/4, screenY + screenSize/4, hitbox.width, hitbox.height); //Center the hitbox to the entity

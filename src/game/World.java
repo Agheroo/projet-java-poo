@@ -11,7 +11,6 @@ import java.awt.*;
  * 
  */
 public class World extends Scene{
-
     private static World _instance;
     TileManager tileManager = new TileManager(this);
     //World intialization settings
@@ -22,21 +21,24 @@ public class World extends Scene{
     //Player settings
 
     public Player player = new Player(15*tileManager.tileSize*tileManager.scale, 15*tileManager.tileSize*tileManager.scale,0,0,0,"down",4,20);
-    
+    public HUD pauseHud = new HUD();
     //All world instances (ennemies NPC mon cul les coffres et tout)
 
 
-    
+
     public static World getWorld(){
         if (_instance==null){
             _instance=new World();
+            _instance.state = State.WORLD;
         }
         return _instance;
     }
 
     public void update(){
+        checkSceneChange();
         if(state == State.WORLD){
             player.update(_instance, dt);
+            tileManager.update(this, 800, 600);
             //All updates of entities here
 
 
@@ -60,7 +62,16 @@ public class World extends Scene{
     }
     
     public  void draw(Graphics2D g2,int screenWidth,int screenHeight){
-        tileManager.draw(g2, this, screenWidth, screenHeight);
-        player.draw(g2,screenWidth/2 - (player.screenSize/2), screenHeight/2 - (player.screenSize/2)); //Player is always centered to screen
+        if(state == State.WORLD){
+            tileManager.draw(g2, this, screenWidth, screenHeight);
+            player.drawInWorld(g2,screenWidth/2 - (player.screenSize/2), screenHeight/2 - (player.screenSize/2)); //Player is always centered to screen
+        }
+        if(state == State.PAUSE){
+            tileManager.draw(g2, this, screenWidth, screenHeight);
+            player.drawInWorld(g2,screenWidth/2 - (player.screenSize/2), screenHeight/2 - (player.screenSize/2)); //Player is always centered to screen
+            
+            pauseHud.draw(g2,(800 - pauseHud.screenSizeWidth)/2 ,(600-pauseHud.screenSizeHeight)/2);
+            System.out.println("GAME PAUSED");
+        }
     }
 }

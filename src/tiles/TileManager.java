@@ -50,6 +50,7 @@ public class TileManager {
      * @param animated  Boolean if the textures are supposed to be animated (different folder if animated or not)
      * @param spriteCntMax  Number of sprites if the texture is animated (if not then put 1)
      * @param spriteSpeed   Sprite speed if the texture is animated (if not then put 0)
+     * @param isBlocking    Boolean to make the player collide with the tile or not
      */
     private void storeTexture(String name, Tile[] tiles, int start, int size, boolean animated, int spriteCntMax, int spriteSpeed, boolean isBlocking){
         for(int i=start; i<size+start; i++){
@@ -128,6 +129,26 @@ public class TileManager {
     }
 
 
+    public void update(World world, int screenWidth, int screenHeight){
+        int playerScreenX = (screenWidth - world.player.screenSize)/2;
+        int playerScreenY = (screenHeight - world.player.screenSize)/2;
+
+        for(int i=0;i<world.maxRow;i++){
+            for(int j=0;j<world.maxCol;j++){
+                int worldX = _floorMap[i][j].getPos()[0];
+                int worldY = _floorMap[i][j].getPos()[1];
+
+                //Checks if the player is close enough to the tile to render it to optimize memory and CPU usage
+                if(worldX + tileSize*scale > world.player.worldX - playerScreenX 
+                && worldX - tileSize*scale < world.player.worldX + playerScreenX 
+                && worldY + tileSize*scale > world.player.worldY - playerScreenY 
+                && worldY - tileSize*scale < world.player.worldY + playerScreenY){
+                    _floorMap[i][j].updateFrames();
+                    _topMap[i][j].updateFrames();
+                }
+            }
+        }
+    }
 
     public void draw(Graphics2D g2,World world, int screenWidth, int screenHeight){
         int playerScreenX = (screenWidth - world.player.screenSize)/2;

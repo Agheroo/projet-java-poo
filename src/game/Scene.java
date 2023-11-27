@@ -8,10 +8,10 @@ import entity.Enemy;
 import entity.Player;
 
 public abstract class Scene {
-    enum State {WORLD,FIGHT,PAUSE,MENU}
+    public enum State {WORLD,FIGHT,PAUSE,MENU}
     public KeyHandler keyH = KeyHandler.getInstance();
     public double dt = 0;
-    State state;
+    public State state;
     
 
     public abstract void update();
@@ -27,10 +27,14 @@ public abstract class Scene {
 
     public void checkSceneChange(){
         if(keyH.changeScenePressed){
+            keyH.changeScenePressed = false;
+            
             if(state == State.WORLD || state == State.FIGHT){
+                System.out.println("CHANGING SCENE TO : PAUSE");
                 state = State.PAUSE;
             }
-            if(state == State.PAUSE){
+            else{
+                System.out.println("CHANGING SCENE TO : WORLD");
                 state = State.WORLD;
             }
         }

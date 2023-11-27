@@ -1,6 +1,8 @@
 package entity;
 
+
 import game.Scene;
+import game.Scene.State;
 
 public class Player extends Entity{
     int hasKey = 0;
@@ -12,55 +14,69 @@ public class Player extends Entity{
         loadTextures("player");
     }
 
-    public  void  update(Scene scene, double dt){
-        hitbox.x = worldX;
-        hitbox.y = worldY;
-        if(scene.keyH.upPressed || scene.keyH.downPressed || scene.keyH.leftPressed || scene.keyH.rightPressed){
-            if(speed < 30){ //Acceleration
-                speed += 20*dt;
+    public void update(Scene scene, double dt){
+
+        //World updates
+        if(scene.state == State.WORLD){
+            updateFrames();
+            hitbox.x = worldX;
+            hitbox.y = worldY;
+            if(scene.keyH.upPressed || scene.keyH.downPressed || scene.keyH.leftPressed || scene.keyH.rightPressed){
+                if(speed < 30){ //Acceleration
+                    speed += 20*dt;
+                }
+                if(speed>30){
+                    speed=30;
+                }
+                dirX = dirY=0;
+                
+                if(scene.keyH.leftPressed){
+                    dirX = -1;
+                    facing = "left";
+                }
+                if(scene.keyH.rightPressed){
+                    dirX = 1;
+                    facing = "right";
+                }
+                if(scene.keyH.upPressed){
+                    dirY = -1;
+                    facing = "up";
+                }
+                if(scene.keyH.downPressed){
+                    dirY = 1;
+                    facing = "down";
+                }
             }
-            if(speed>30){
-                speed=30;
+            else{       //Deceleration system (use of dirX & dirY instead of facing in case of diagonal movements)
+                if(speed > 0){
+                    speed -= dt;
+                }
+                else{speed = 0;}
             }
-            dirX = dirY=0;
             
-            if(scene.keyH.leftPressed){
-                dirX = -1;
-                facing = "left";
+
+            //Updating player position accurately (at any point in time either pressing keys or not)
+            if(dirX == -1){
+                worldX -= speed*dt;
             }
-            if(scene.keyH.rightPressed){
-                dirX = 1;
-                facing = "right";
+            if(dirX == 1){
+                worldX += speed*dt;
             }
-            if(scene.keyH.upPressed){
-                dirY = -1;
-                facing = "up";
+            if(dirY == -1){
+                worldY -= speed*dt;
             }
-            if(scene.keyH.downPressed){
-                dirY = 1;
-                facing = "down";
+            if(dirY == 1){
+                worldY += speed*dt;
             }
         }
-        else{       //Deceleration system (use of dirX & dirY instead of facing in case of diagonal movements)
-            if(speed > 0){
-                speed -= dt;
-            }
-            else{speed = 0;}
+
+        //Fightscene updates
+        if(scene.state == State.FIGHT){
+
         }
+    
         
 
-        //Updating player position accurately (at any point in time either pressing keys or not)
-        if(dirX == -1){
-            worldX -= speed*dt;
-        }
-        if(dirX == 1){
-            worldX += speed*dt;
-        }
-        if(dirY == -1){
-            worldY -= speed*dt;
-        }
-        if(dirY == 1){
-            worldY += speed*dt;
-        }
+
     }
 }
