@@ -17,8 +17,6 @@ public class World extends Scene{
     //World intialization settings
     
     public final int maxRow= 27, maxCol = 27; //DONT FORGET TO MODIFY WHEN CHANGING THE MAP !!!
-    // public final int maxWidth = tileManager.tileSize*maxCol;
-    // public final int maxHeight = tileManager.tileSize*maxRow;
     
     
     //Player settings
@@ -26,6 +24,9 @@ public class World extends Scene{
     public Player player = new Player(15*tileManager.tileSize*tileManager.scale, 15*tileManager.tileSize*tileManager.scale,0,0,0,"down",4,20);
     
     //All world instances (ennemies NPC mon cul les coffres et tout)
+
+
+    
     public static World getWorld(){
         if (_instance==null){
             _instance=new World();
@@ -33,30 +34,29 @@ public class World extends Scene{
         return _instance;
     }
 
-    private World(){
-
-    }
-
     public void update(){
-        player.update(_instance, dt);
-        //All updates of entities here
+        if(state == State.WORLD){
+            player.update(_instance, dt);
+            //All updates of entities here
 
 
 
 
-        //Checks if player is touching the edges of the map
-        if(player.worldX + player.hitbox.width < 0){
-            player.worldX = -player.hitbox.width;
+            //Checks if player is touching the edges of the map
+            if(player.worldX + player.hitbox.width < 0){
+                player.worldX = -player.hitbox.width;
+            }
+            if(player.worldX > (maxCol-1)*tileManager.tileSize*tileManager.scale + player.hitbox.width ){
+                player.worldX = (maxCol-1)*tileManager.tileSize*tileManager.scale + player.hitbox.width;
+            }
+            if(player.worldY + player.hitbox.height < 0){
+                player.worldY = -player.hitbox.height;
+            }
+            if(player.worldY >= (maxRow-1)*tileManager.tileSize*tileManager.scale + player.hitbox.height){
+                player.worldY = (maxRow-1)*tileManager.tileSize*tileManager.scale + player.hitbox.height;
+            }
         }
-        if(player.worldX > (maxCol-1)*tileManager.tileSize*tileManager.scale + player.hitbox.width ){
-            player.worldX = (maxCol-1)*tileManager.tileSize*tileManager.scale + player.hitbox.width;
-        }
-        if(player.worldY + player.hitbox.height < 0){
-            player.worldY = -player.hitbox.height;
-        }
-        if(player.worldY >= (maxRow-1)*tileManager.tileSize*tileManager.scale + player.hitbox.height){
-            player.worldY = (maxRow-1)*tileManager.tileSize*tileManager.scale + player.hitbox.height;
-        }
+        
     }
     
     public  void draw(Graphics2D g2,int screenWidth,int screenHeight){

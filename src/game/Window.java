@@ -23,7 +23,8 @@ public class Window extends JPanel implements Runnable{
 
 
     public Window(){
-        scene=CreateScene.creator();
+        //scene=CreateScene.creator();
+        scene = World.getWorld();
         this.setPreferredSize(new Dimension(screenWidth,screenHeight));
         this.setBackground(Color.black);
         this.setDoubleBuffered(true);

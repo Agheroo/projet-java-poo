@@ -1,18 +1,18 @@
 package game;
 
-import entity.Ennemy;
+import entity.Enemy;
 import entity.Player;
 
 import java.awt.*;
 
 public class FightScene extends Scene{
-    Player player;
-    Ennemy ennemy;
+    public Player player;
+    public Enemy enemy;
 
-    public FightScene(Player _player, Ennemy _ennemy){
+    public FightScene(Player player, Enemy enemy){
         System.out.println("Je suis en combat");
-        player=_player;
-        ennemy=_ennemy;
+        this.player = player;
+        this.enemy = enemy;
     }
 
     @Override

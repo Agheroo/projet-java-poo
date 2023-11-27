@@ -1,7 +1,7 @@
 package CreationCombatScene.game;
 
 import CreationCombatScene.entity.PlayerTest;
-import entity.Ennemy;
+import entity.Enemy;
 import game.CreateScene;
 import game.Scene;
 
@@ -28,9 +28,9 @@ public class Window extends JPanel implements Runnable{
 
     public Window(){
         PlayerTest playerTest=new PlayerTest();
-        Ennemy ennemy=new Ennemy();
+        Enemy ennemy=new Enemy();
 
-        scene= CreateScene.creator(playerTest,ennemy);
+        scene = scene.fightScene(playerTest,ennemy);
         this.setPreferredSize(new Dimension(screenWidth,screenHeight));
         this.setBackground(Color.black);
         this.setDoubleBuffered(true);

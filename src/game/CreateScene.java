@@ -1,7 +1,7 @@
 package game;
 
 import entity.Player;
-import entity.Ennemy;
+import entity.Enemy;
 
 public class CreateScene {
 
@@ -11,7 +11,7 @@ public class CreateScene {
 
     }
 
-    public static Scene creator(Player player,Ennemy ennemy){
+    public static Scene creator(Player player,Enemy ennemy){
 
         return new FightScene(player,ennemy);
     }
