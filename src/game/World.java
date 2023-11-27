@@ -1,6 +1,8 @@
 package game;
 
 import entity.Player;
+import entity.Props;
+import entity.EntitySetter;
 import tiles.TileManager;
 
 import java.awt.*;
@@ -22,9 +24,9 @@ public class World extends Scene{
     
     
     //Player settings
-
+    public EntitySetter aSetter = new EntitySetter(this); // Instance de l'EntitySetter
     public Player player = new Player(15*tileManager.tileSize*tileManager.scale, 15*tileManager.tileSize*tileManager.scale,0,0,0,"down",4,20);
-    
+    public Props[] obj = new Props[10]; // Le tableau qui ressence tous les objets
     //All world instances (ennemies NPC mon cul les coffres et tout)
     public static World getWorld(){
         if (_instance==null){
@@ -36,7 +38,9 @@ public class World extends Scene{
     private World(){
 
     }
-
+    public void setupGame() {
+        aSetter.setObject();
+    }
     public void update(){
         player.update(_instance, dt);
         //All updates of entities here
@@ -60,7 +64,15 @@ public class World extends Scene{
     }
     
     public  void draw(Graphics2D g2,int screenWidth,int screenHeight){
+        // TILE
         tileManager.draw(g2, this, screenWidth, screenHeight);
+        // OBJECT
+        for (Props props : obj) {
+            if (props != null) {
+                props.draw(g2, this);
+            }
+        }
+        // PLAYER
         player.draw(g2,screenWidth/2 - (player.screenSize/2), screenHeight/2 - (player.screenSize/2)); //Player is always centered to screen
     }
 }
