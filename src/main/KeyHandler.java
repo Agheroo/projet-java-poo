@@ -45,7 +45,7 @@ public final class KeyHandler implements KeyListener {
         if(code == KeyEvent.VK_SPACE){
             interactPressed = true;
         }
-        if(code == KeyEvent.VK_P){
+        if(code == KeyEvent.VK_ESCAPE){
             changeScenePressed = true;
         }
     }
@@ -69,7 +69,7 @@ public final class KeyHandler implements KeyListener {
         if(code == KeyEvent.VK_SPACE){
             interactPressed = false;
         }
-        if(code == KeyEvent.VK_P){
+        if(code == KeyEvent.VK_ESCAPE){
             changeScenePressed = false;
         }
     }
