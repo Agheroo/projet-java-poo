@@ -2,6 +2,7 @@
   <configuration default="false" name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
     <option name="MAIN_CLASS_NAME" value="main.Main" />
     <module name="projet-java-poo" />
+    <option name="PROGRAM_PARAMETERS" value="-Xlint:all -Werror" />
     <method v="2">
       <option name="Make" enabled="true" />
     </method>
