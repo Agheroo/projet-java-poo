@@ -35,7 +35,7 @@ public class HUD {
 
         _buttons = new ChoiceButton[_nbButtons];
         for(int i =0; i<_nbButtons ; i++){
-            _buttons[i] = new ChoiceButton(80*4,40*4, "Titre "+i, "Arial",Color.black);
+            _buttons[i] = new ChoiceButton(80*4,40*4, "TITRE "+i, "Arial",Color.black);
             
         }
     }

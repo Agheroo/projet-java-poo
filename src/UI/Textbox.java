@@ -2,7 +2,10 @@ package UI;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.FontFormatException;
 import java.awt.Graphics2D;
+import java.io.IOException;
+import java.io.InputStream;
 
 import javax.swing.JLabel;
 public class Textbox extends JLabel{
@@ -42,13 +45,13 @@ public class Textbox extends JLabel{
 
     //TODO: CHANGE THE PATH TO MAKE IT WORK PLEASE :C
 
-    
+
     /*
     private void loadFont(String fontName){
 
         
 
-        /*
+        
         try {
             System.out.println(fontName);
             InputStream is = getClass().getResourceAsStream("/font/"+fontName+".ttf");
@@ -65,8 +68,10 @@ public class Textbox extends JLabel{
 
     public void draw(Graphics2D g2,int x, int y){
         g2.setFont(_font);
+        g2.setColor(Color.red);
+        g2.drawRect(x,y,_width,_height);
         g2.setColor(_color);
-        g2.drawString(_text,x,y+_fontSizeToUse);
+        g2.drawString(_text, x + _width/2 - _fontSizeToUse, y + (_height +_fontSizeToUse)/2);
     }
 
 }

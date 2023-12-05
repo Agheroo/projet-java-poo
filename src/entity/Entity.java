@@ -39,7 +39,9 @@ public class Entity {
     private BufferedImage[] walk_right; public BufferedImage[] walk_left;
 
     
-
+    public Entity(){
+        //
+    }
 
     public Entity(int x,int y,int dirX,int dirY,int speed,String facing,int _spriteCntMax,int spriteSpeed){
         hitbox = new Rectangle();

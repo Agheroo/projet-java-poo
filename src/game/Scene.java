@@ -4,14 +4,20 @@ import main.KeyHandler;
 
 import java.awt.*;
 
+import UI.HUD;
+import UI.HUD.MenuType;
 import entity.Enemy;
 import entity.Player;
 
 public abstract class Scene {
     public enum State {WORLD,FIGHT,PAUSE,MENU}
+    private State _lastState;
+
+
     public KeyHandler keyH = KeyHandler.getInstance();
     public double dt = 0;
     public State state;
+    public HUD menu;
     
 
     public abstract void update();
@@ -26,16 +32,19 @@ public abstract class Scene {
     }
 
     public void checkSceneChange(){
-        if(keyH.changeScenePressed){
-            keyH.changeScenePressed = false;
+        if(keyH.pausePressed){
+            keyH.pausePressed = false;
             
-            if(state == State.WORLD || state == State.FIGHT){
+            if(state != State.PAUSE){
                 System.out.println("CHANGING SCENE TO : PAUSE");
+                _lastState = state;
                 state = State.PAUSE;
+                menu = new HUD(MenuType.PAUSE);
             }
             else{
                 System.out.println("CHANGING SCENE TO : WORLD");
-                state = State.WORLD;
+                state = _lastState;
+                menu = null;
             }
         }
     }

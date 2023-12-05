@@ -21,7 +21,6 @@ public class World extends Scene{
     //Player settings
 
     public Player player = new Player(15*tileManager.tileSize*tileManager.scale, 15*tileManager.tileSize*tileManager.scale,0,0,0,"down",4,20);
-    public HUD pauseHud = new HUD();
     //All world instances (ennemies NPC mon cul les coffres et tout)
 
 
@@ -66,12 +65,12 @@ public class World extends Scene{
             tileManager.draw(g2, this, screenWidth, screenHeight);
             player.drawInWorld(g2,screenWidth/2 - (player.screenSize/2), screenHeight/2 - (player.screenSize/2)); //Player is always centered to screen
         }
+
         if(state == State.PAUSE){
             tileManager.draw(g2, this, screenWidth, screenHeight);
             player.drawInWorld(g2,screenWidth/2 - (player.screenSize/2), screenHeight/2 - (player.screenSize/2)); //Player is always centered to screen
             
-            pauseHud.draw(g2,(800 - pauseHud.screenSizeWidth)/2 ,(600-pauseHud.screenSizeHeight)/2);
-            System.out.println("GAME PAUSED");
+            //System.out.println("GAME PAUSED");
         }
     }
 }
