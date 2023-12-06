@@ -9,12 +9,13 @@ public class HUD {
     private int _nbButtons;
     private ChoiceButton[] _buttons;
     private MenuType _type;
+    private int _titleWidth, _titleHeight;
     //private KeyHandler keyH = KeyHandler.getInstance();
     //private Cursor _cursor;
 
 
-    public final int screenSizeWidth = 125*3;
-    public final int screenSizeHeight = 65*3;
+    public final int screenSizeWidth = 600;
+    public final int screenSizeHeight = 500;
 
     public HUD(MenuType type){
         _type = type;
@@ -34,18 +35,22 @@ public class HUD {
         }
 
         _buttons = new ChoiceButton[_nbButtons];
+
+        //To replace with the current names that we want depending on the MenuType
         for(int i =0; i<_nbButtons ; i++){
-            _buttons[i] = new ChoiceButton(80*4,40*4, "TITRE "+i, "Arial",Color.black);
-            
+            _buttons[i] = new ChoiceButton(80*3,20*3, "BUTTON " +i, "Arial",Color.black);
         }
     }
 
 
     public void draw(Graphics2D g2, int screenWidth, int screenHeight){
-        //g2.drawImage(_image, (800 - screenSizeWidth)/2,(600 - screenSizeHeight)/2,screenSizeWidth, screenSizeHeight, null);
+        //g2.drawImage(_bgTexture, (800 - screenSizeWidth)/2,(600 - screenSizeHeight)/2,screenSizeWidth, screenSizeHeight, null);
+        g2.setColor(new Color(0,0,0,20));
+        g2.fillRect((screenWidth - screenSizeWidth)/2, (screenHeight - screenSizeHeight)/2,screenSizeWidth,screenSizeHeight);
 
+        int gap = (screenSizeHeight - _nbButtons*_buttons[0].height)/(_nbButtons+1)+_titleHeight;    //Small gap to add to make the buttons centered on the screen and spaced
         for(int i=0;i < _nbButtons; i++){
-            _buttons[i].draw(g2,(screenWidth - _buttons[i].width)/2, (screenHeight - _buttons[i].height)/2 );
+            _buttons[i].draw(g2,(screenWidth - _buttons[i].width)/2, (gap*(i+1) + _buttons[i].height*i + (screenHeight - screenSizeHeight)/2));
         }
     }
 

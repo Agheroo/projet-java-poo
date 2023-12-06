@@ -39,14 +39,14 @@ public class Textbox extends JLabel{
 
         // Set the label's font size to the newly determined size.
         _font = new Font(fontName, Font.PLAIN, _fontSizeToUse);
+
+
+
         //loadFont("rainyhearts");
     }
 
 
     //TODO: CHANGE THE PATH TO MAKE IT WORK PLEASE :C
-
-
-    /*
     private void loadFont(String fontName){
 
         
@@ -64,14 +64,14 @@ public class Textbox extends JLabel{
         catch (IOException e) {
             e.printStackTrace();
         }
-    }*/
+    }
 
     public void draw(Graphics2D g2,int x, int y){
         g2.setFont(_font);
-        g2.setColor(Color.red);
+        g2.setColor(Color.black);
         g2.drawRect(x,y,_width,_height);
         g2.setColor(_color);
-        g2.drawString(_text, x + _width/2 - _fontSizeToUse, y + (_height +_fontSizeToUse)/2);
+        g2.drawString(_text, x + _fontSizeToUse, y + (_height +_fontSizeToUse)/2);
     }
 
 }
