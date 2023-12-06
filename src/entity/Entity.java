@@ -7,6 +7,9 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
+import game.Scene;
+import game.Scene.State;
+
 public class Entity {
     //Display purpose variables
     private final int _tileSize=16;
@@ -60,6 +63,55 @@ public class Entity {
         walk_up = new BufferedImage[_spriteCntMax]; walk_down = new BufferedImage[_spriteCntMax];
         walk_right = new BufferedImage[_spriteCntMax]; walk_left = new BufferedImage[_spriteCntMax];
     }
+
+
+    public void update(Scene scene, double dt){
+        //Updating entity position accurately (at any point in time either pressing keys or not)
+        if(scene.state == State.WORLD){
+            updateFrames();
+            hitbox.x = worldX;
+            hitbox.y = worldY;
+            
+
+        }
+    }
+
+    protected void move(int speed, double dt){
+        if((dirX == 0 && dirY != 0) || (dirY == 0 && dirX != 0)){
+            if(dirX == 1){
+                worldX += speed*dt;
+            }
+            if(dirX == -1){
+                worldX -= speed*dt;
+            }
+            if(dirY == 1){
+                worldY += speed*dt;
+            }
+            if(dirY == -1){
+                worldY -= speed*dt;
+            }
+        }
+        if(dirX != 0 && dirY != 0){
+            double normSum = Math.sqrt(dirX*dirX + dirY*dirY);
+            worldX += (dirX/normSum)*speed*dt;
+            worldY += (dirY/normSum)*speed*dt;
+        }
+    }
+    
+    protected void accelerate(double dt){
+        if(speed < 30){
+            speed += 20*dt;
+        }
+        if(speed>30){
+            speed=30;
+        }
+    }
+
+    protected void decelerate(double dt){
+        speed -= dt;
+    }
+
+    //GRAPHICS
 
     public void loadTextures(String name){
         try {
@@ -135,9 +187,9 @@ public class Entity {
         }
 
 
-        
-
         g2.drawImage(image, screenX, screenY,screenSize, screenSize, null);
         g2.drawRect(screenX + screenSize/4, screenY + screenSize/4, hitbox.width, hitbox.height); //Center the hitbox to the entity
     }
+
+   
 }
