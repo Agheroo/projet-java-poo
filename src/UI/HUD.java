@@ -8,14 +8,15 @@ public class HUD {
 
     private int _nbButtons;
     private ChoiceButton[] _buttons;
+    private ChoiceButton _title;
     private MenuType _type;
     private int _titleWidth, _titleHeight;
     //private KeyHandler keyH = KeyHandler.getInstance();
     //private Cursor _cursor;
 
 
-    public final int screenSizeWidth = 600;
-    public final int screenSizeHeight = 500;
+    public final int HUDWidth = 600;
+    public final int HUDHeight = 550;
 
     public HUD(MenuType type){
         _type = type;
@@ -25,6 +26,8 @@ public class HUD {
                 break;
             case PAUSE:
                 _nbButtons = 3;
+                _titleWidth = 300;
+                _titleHeight = 80;
                 break;
             case FIGHT:
                 _nbButtons = 6;
@@ -37,6 +40,7 @@ public class HUD {
         _buttons = new ChoiceButton[_nbButtons];
 
         //To replace with the current names that we want depending on the MenuType
+        _title = new ChoiceButton(_titleWidth,_titleHeight,"PAUSE","Calibri",new Color(0x834317));
         for(int i =0; i<_nbButtons ; i++){
             _buttons[i] = new ChoiceButton(80*3,20*3, "BUTTON " +i, "Arial",Color.black);
         }
@@ -44,13 +48,17 @@ public class HUD {
 
 
     public void draw(Graphics2D g2, int screenWidth, int screenHeight){
-        //g2.drawImage(_bgTexture, (800 - screenSizeWidth)/2,(600 - screenSizeHeight)/2,screenSizeWidth, screenSizeHeight, null);
+        //g2.drawImage(_bgTexture, (800 - HUDWidth)/2,(600 - HUDHeight)/2,HUDWidth, HUDHeight, null);
         g2.setColor(new Color(0,0,0,20));
-        g2.fillRect((screenWidth - screenSizeWidth)/2, (screenHeight - screenSizeHeight)/2,screenSizeWidth,screenSizeHeight);
+        g2.fillRect((screenWidth - HUDWidth)/2, (screenHeight - HUDHeight)/2,HUDWidth,HUDHeight);   //"Drawing" HUD with soft background color
 
-        int gap = (screenSizeHeight - _nbButtons*_buttons[0].height)/(_nbButtons+1)+_titleHeight;    //Small gap to add to make the buttons centered on the screen and spaced
+
+
+
+        int gap = (HUDHeight - _nbButtons*_buttons[0].height)/(_nbButtons+1);    //Small gap to space the buttons and keep them centered on screen
+        _title.draw(g2,(screenWidth - _titleWidth)/2, screenHeight - HUDHeight);
         for(int i=0;i < _nbButtons; i++){
-            _buttons[i].draw(g2,(screenWidth - _buttons[i].width)/2, (gap*(i+1) + _buttons[i].height*i + (screenHeight - screenSizeHeight)/2));
+            _buttons[i].draw(g2,(screenWidth - _buttons[i].width)/2, (gap+gap*(i+1)/2 + _buttons[i].height*i + (screenHeight - HUDHeight)/2));
         }
     }
 
