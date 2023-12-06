@@ -71,8 +71,6 @@ public class Entity {
             updateFrames();
             hitbox.x = worldX;
             hitbox.y = worldY;
-            
-
         }
     }
 
