@@ -7,7 +7,8 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-public class Entity {
+public abstract
+class Entity {
     //Display purpose variables
     private final int _tileSize=16;
     private final int _scale = 3;

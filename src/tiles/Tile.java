@@ -8,7 +8,7 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 public class Tile {
-    public boolean collision=false;
+    private boolean collision=false;
     private int _worldX, _worldY;
 
     //Display purpose variables
@@ -20,6 +20,7 @@ public class Tile {
     private int _spriteUpdater=0;    //Variable responsible for the incrementation of the speed of the sprites
     public int spriteSpeed;        //How fast are the sprites changing (higher spriteSpeed means slower time to change)  //spriteSpeed of 0 means it has NO animation
     public int spriteCntMax;       //How many sprite does the entity have
+    
 
     public BufferedImage[] image;
 
@@ -91,5 +92,12 @@ public class Tile {
  
         g2.drawImage(render, screenX, screenY,screenSize, screenSize, null);
     }
-    
+
+    public void setCollision(boolean _collision){
+        collision=_collision;
+    }
+
+    public boolean getCollision(){
+        return collision;
+    }
 }
