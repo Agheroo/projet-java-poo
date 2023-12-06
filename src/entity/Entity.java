@@ -7,10 +7,13 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
+import game.Scene;
+import game.Scene.State;
+
 public class Entity {
     //Display purpose variables
     private final int _tileSize=16;
-    private final int _scale = 3;
+    protected final int _scale = 3;
     public final int screenSize = _tileSize*_scale;
 
 
@@ -20,8 +23,7 @@ public class Entity {
     public int speed;
     
     //Hitbox of entity
-    public Rectangle hitbox;    
-    public boolean collisionOn = false;
+    public Rectangle hitbox;
 
     //Which direction is the entity facing (if directions are available) for animation
     public String facing;
@@ -40,12 +42,15 @@ public class Entity {
     private BufferedImage[] walk_right; public BufferedImage[] walk_left;
 
     
-
+    public Entity(){
+        //
+    }
 
     public Entity(int x,int y,int dirX,int dirY,int speed,String facing,int _spriteCntMax,int spriteSpeed){
-        
+        hitbox = new Rectangle();
         //Hitbox settings to set up later
-
+        hitbox.x = x; hitbox.y = y;
+        hitbox.width = screenSize/2; hitbox.height = screenSize/2;
 
         this.worldX = x; this.worldY = y;
         this.dirX = dirX; this.dirY = dirY;
@@ -58,6 +63,53 @@ public class Entity {
         walk_up = new BufferedImage[_spriteCntMax]; walk_down = new BufferedImage[_spriteCntMax];
         walk_right = new BufferedImage[_spriteCntMax]; walk_left = new BufferedImage[_spriteCntMax];
     }
+
+
+    public void update(Scene scene, double dt){
+        //Updating entity position accurately (at any point in time either pressing keys or not)
+        if(scene.state == State.WORLD){
+            updateFrames();
+            hitbox.x = worldX;
+            hitbox.y = worldY;
+        }
+    }
+
+    protected void move(int speed, double dt){
+        if((dirX == 0 && dirY != 0) || (dirY == 0 && dirX != 0)){
+            if(dirX == 1){
+                worldX += speed*dt;
+            }
+            if(dirX == -1){
+                worldX -= speed*dt;
+            }
+            if(dirY == 1){
+                worldY += speed*dt;
+            }
+            if(dirY == -1){
+                worldY -= speed*dt;
+            }
+        }
+        if(dirX != 0 && dirY != 0){
+            double normSum = Math.sqrt(dirX*dirX + dirY*dirY);
+            worldX += (dirX/normSum)*speed*dt;
+            worldY += (dirY/normSum)*speed*dt;
+        }
+    }
+    
+    protected void accelerate(int maxSpeed, double dt){
+        if(speed < maxSpeed){
+            speed += 20*dt;
+        }
+        if(speed>maxSpeed){
+            speed=maxSpeed;
+        }
+    }
+
+    protected void decelerate(double dt){
+        speed -= dt;
+    }
+
+    //GRAPHICS
 
     public void loadTextures(String name){
         try {
@@ -78,9 +130,23 @@ public class Entity {
         }
     }
 
-    public void draw(Graphics2D g2, int screenX, int screenY){
-        BufferedImage image=null;
+    protected void updateFrames(){
+        _spriteUpdater++;
+        if (_spriteUpdater>_spriteSpeed){
+            _spriteCnt++;
+            if(_spriteCnt == _spriteCntMax){
+                _spriteCnt = 0;
+            }
+            _spriteUpdater=0;
+        }
+    }
 
+    public void drawInFight(Graphics2D g2, int screenX, int screenY){
+        // Other function to draw in fightscene
+    }
+    public void drawInWorld(Graphics2D g2, int screenX, int screenY){
+        BufferedImage image=null;
+        //System.out.println(worldX + " " + worldY);
         if(speed == 0){ //IDLE ANIMATIONS
             for(int i=0;i<_spriteCntMax;i++){
                 switch (facing) {
@@ -119,15 +185,9 @@ public class Entity {
         }
 
 
-        _spriteUpdater++;
-        if (_spriteUpdater>_spriteSpeed){
-            _spriteCnt++;
-            if(_spriteCnt == _spriteCntMax){
-                _spriteCnt = 0;
-            }
-            _spriteUpdater=0;
-        }
-
         g2.drawImage(image, screenX, screenY,screenSize, screenSize, null);
+        g2.drawRect(screenX + screenSize/4, screenY + screenSize/4, hitbox.width, hitbox.height); //Center the hitbox to the entity
     }
+
+   
 }

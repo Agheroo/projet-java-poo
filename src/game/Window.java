@@ -2,6 +2,8 @@ package game;
 
 import javax.swing.JPanel;
 
+import game.Scene.State;
+
 import java.awt.*;
 
 /*
@@ -23,7 +25,8 @@ public class Window extends JPanel implements Runnable{
 
 
     public Window(){
-        scene=CreateScene.creator();
+        //scene=CreateScene.creator();
+        scene = World.getWorld();
         this.setPreferredSize(new Dimension(screenWidth,screenHeight));
         this.setBackground(Color.black);
         this.setDoubleBuffered(true);
@@ -68,8 +71,16 @@ public class Window extends JPanel implements Runnable{
         super.paintComponent(g);
 
         Graphics2D g2= (Graphics2D)g;
+        
 
         scene.draw(g2,screenWidth,screenHeight);
+
+        //Darkens the scene on the background to let the menu on top
+        if(scene.state == State.PAUSE){
+            g2.setColor(new Color(0,0,0,180));
+            g2.fillRect(0, 0, screenWidth, screenHeight);
+            scene.menu.draw(g2,screenWidth,screenHeight);
+        }
 
         g2.dispose();
     }
