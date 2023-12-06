@@ -33,7 +33,7 @@ public class ChoiceButton {
     }
 
     public void draw(Graphics2D g2, int x, int y){
-        g2.drawImage(_bgTexture,x,y,80*4,40*4,null);
+        g2.drawImage(_bgTexture,x,y,80*3,20*3,null);
         _textBox.draw(g2,x,y);
     }
 }
