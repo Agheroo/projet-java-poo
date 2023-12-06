@@ -96,12 +96,12 @@ public class Entity {
         }
     }
     
-    protected void accelerate(double dt){
-        if(speed < 30){
+    protected void accelerate(int maxSpeed, double dt){
+        if(speed < maxSpeed){
             speed += 20*dt;
         }
-        if(speed>30){
-            speed=30;
+        if(speed>maxSpeed){
+            speed=maxSpeed;
         }
     }
 

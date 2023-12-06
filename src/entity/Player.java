@@ -36,7 +36,7 @@ public class Player extends Entity{
                 dirY = 1;
                 facing = "down";
             }
-            accelerate(dt);
+            accelerate(30,dt);
         }
         else{
             if(speed >0){
