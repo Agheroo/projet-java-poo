@@ -1,6 +1,8 @@
 package entity;
 
+
 import game.Scene;
+import game.Scene.State;
 
 public class Player extends Entity{
     int hasKey = 0;
@@ -12,22 +14,18 @@ public class Player extends Entity{
         loadTextures("player");
     }
 
-    public  void  update(Scene scene, double dt){
+    public void update(Scene scene, double dt){
+        super.update(scene,dt);
+        //World updates
         if(scene.keyH.upPressed || scene.keyH.downPressed || scene.keyH.leftPressed || scene.keyH.rightPressed){
-            if(speed < 30){ //Acceleration
-                speed += 20*dt;
-            }
-            if(speed>30){
-                speed=30;
-            }
-            dirX = dirY=0;
-            
+            dirX = 0;
+            dirY = 0;
             if(scene.keyH.leftPressed){
                 dirX = -1;
                 facing = "left";
             }
             if(scene.keyH.rightPressed){
-                dirX = 1;
+                dirX = 1;   
                 facing = "right";
             }
             if(scene.keyH.upPressed){
@@ -38,27 +36,25 @@ public class Player extends Entity{
                 dirY = 1;
                 facing = "down";
             }
+            accelerate(30,dt);
         }
-        else{       //Deceleration system (use of dirX & dirY instead of facing in case of diagonal movements)
-            if(speed > 0){
-                speed -= dt;
+        else{
+            if(speed >0){
+                decelerate(dt);
             }
-            else{speed = 0;}
+            
         }
+        move(speed,dt);
+
+
+
+        //Fightscene updates
+        if(scene.state == State.FIGHT){
+
+        }
+    
         
 
-        //Updating player position accurately (at any point in time either pressing keys or not)
-        if(dirX == -1){
-            worldX -= speed*dt;
-        }
-        if(dirX == 1){
-            worldX += speed*dt;
-        }
-        if(dirY == -1){
-            worldY -= speed*dt;
-        }
-        if(dirY == 1){
-            worldY += speed*dt;
-        }
+
     }
 }

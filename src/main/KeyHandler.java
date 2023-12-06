@@ -7,7 +7,7 @@ import java.awt.event.KeyListener;
 public final class KeyHandler implements KeyListener {
     public static KeyHandler instance;
     public boolean upPressed,downPressed,leftPressed,rightPressed, interactPressed;
-
+    public boolean pausePressed;
     // Constructeur privée
     private KeyHandler() {}
 
@@ -18,9 +18,11 @@ public final class KeyHandler implements KeyListener {
         }
         return instance;
     }
+
+
     @Override
     public void keyTyped(KeyEvent e) {
-
+        //
     }
 
     @Override
@@ -43,6 +45,9 @@ public final class KeyHandler implements KeyListener {
         if(code == KeyEvent.VK_SPACE){
             interactPressed = true;
         }
+        if(code == KeyEvent.VK_ESCAPE){
+            pausePressed = true;
+        }
     }
 
     @Override
@@ -62,7 +67,10 @@ public final class KeyHandler implements KeyListener {
             rightPressed=false;
         }
         if(code == KeyEvent.VK_SPACE){
-            interactPressed = true;
+            interactPressed = false;
+        }
+        if(code == KeyEvent.VK_ESCAPE){
+            pausePressed = false;
         }
     }
 }
