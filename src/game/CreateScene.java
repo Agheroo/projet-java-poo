@@ -1,21 +1,30 @@
 package game;
 
-import entity.Player;
-import entity.Ennemy;
+        import entity.Player;
+        import entity.Ennemy;
 
+/**
+ * The CreateScene class provides methods to create different scenes in the game.
+ */
 public class CreateScene {
 
-    public static Scene creator(){
-
+    /**
+     * Creates a world scene.
+     *
+     * @return The created world scene.
+     */
+    public static Scene creator() {
         return World.getWorld();
-
     }
 
-    public static Scene creator(Player player,Ennemy ennemy){
-
-        return new FightScene(player,ennemy);
+    /**
+     * Creates a fight scene with a player and an enemy.
+     *
+     * @param player The player for the fight scene.
+     * @param ennemy  The enemy for the fight scene.
+     * @return The created fight scene.
+     */
+    public static Scene creator(Player player, Ennemy ennemy) {
+        return new FightScene(player, ennemy);
     }
-
-
-
 }
