@@ -5,9 +5,6 @@
 
 package entity;
 
-import javax.imageio.ImageIO;
-import java.io.IOException;
-import java.util.Objects;
 
 /**
  * @class OBJ_Key
@@ -24,12 +21,6 @@ public class OBJ_Key extends Props {
         // Set the name of the key
         name = "Key";
 
-        try {
-            // Load the image of the key from the specified file path
-            image = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/object/key.png")));
-        } catch (IOException e) {
-            // Print the stack trace in case of an IOException during image loading
-            e.printStackTrace();
-        }
+        loadTextures("key");
     }
 }

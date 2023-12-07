@@ -6,7 +6,6 @@
 package entity;
 
 import game.Scene;
-import game.World;
 import game.Scene.State;
 
 /**

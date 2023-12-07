@@ -5,9 +5,6 @@
 
 package entity;
 
-import javax.imageio.ImageIO;
-import java.io.IOException;
-import java.util.Objects;
 
 /**
  * @class OBJ_Door
@@ -24,12 +21,6 @@ public class OBJ_Door extends Props {
         // Set the name of the door
         name = "Door";
 
-        try {
-            // Load the image of the door from the resource file
-            image = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/object/door.png")));
-        } catch (IOException e) {
-            // Print stack trace in case of an IOException during image loading
-            e.printStackTrace();
-        }
+        loadTextures("door");
     }
 }

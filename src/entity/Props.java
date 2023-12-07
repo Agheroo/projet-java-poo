@@ -9,6 +9,10 @@ import game.World;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.FileInputStream;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
 
 /**
  * @class Props
@@ -21,6 +25,17 @@ public class Props extends Entity {
 
     public final int screenWidth = 800; // Screen width of the game window
     public final int screenHeight = 600; // Screen height of the game window
+
+    protected void loadTextures(String name){
+        try {
+            // Load the image of the key from the specified file path
+            //image = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("res/object/key.png")));
+            image = ImageIO.read(new FileInputStream("res/object/"+name+".png"));
+        } catch (IOException e) {
+            // Print the stack trace in case of an IOException during image loading
+            e.printStackTrace();
+        }
+    }
 
     /**
      * @brief Draw the prop on the screen based on its position relative to the player's position.
