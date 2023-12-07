@@ -1,3 +1,8 @@
+/**
+ * @file OBJ_Chest.java
+ * @brief This file contains the implementation of the OBJ_Chest class, which represents a chest object extending the Props class.
+ */
+
 package entity;
 
 import javax.imageio.ImageIO;
@@ -5,13 +10,15 @@ import java.io.IOException;
 import java.util.Objects;
 
 /**
- * The OBJ_Chest class represents a chest object that extends the Props class.
+ * @class OBJ_Chest
+ * @extends Props
+ * @brief Represents a chest object.
  */
 public class OBJ_Chest extends Props {
 
     /**
-     * Constructor for the OBJ_Chest class.
-     * Initializes the name and loads the image for the chest.
+     * @brief Constructor for the OBJ_Chest class.
+     * @details Initializes the name and loads the image for the chest.
      */
     public OBJ_Chest() {
         // Set the name of the chest object

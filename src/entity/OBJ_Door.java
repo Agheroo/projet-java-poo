@@ -1,3 +1,8 @@
+/**
+ * @file OBJ_Door.java
+ * @brief This file contains the implementation of the OBJ_Door class, representing a door object extending the Props class.
+ */
+
 package entity;
 
 import javax.imageio.ImageIO;
@@ -5,13 +10,15 @@ import java.io.IOException;
 import java.util.Objects;
 
 /**
- * The OBJ_Door class represents a specific type of game object, a door, extending the Props class.
+ * @class OBJ_Door
+ * @extends Props
+ * @brief Represents a door object in the game.
  */
 public class OBJ_Door extends Props {
 
     /**
-     * Constructor for the OBJ_Door class.
-     * Initializes the name of the door and loads its image from a resource file.
+     * @brief Constructor for the OBJ_Door class.
+     * @details Initializes the name of the door and loads its image from a resource file.
      */
     public OBJ_Door() {
         // Set the name of the door

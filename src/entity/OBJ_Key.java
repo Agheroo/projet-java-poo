@@ -1,3 +1,8 @@
+/**
+ * @file OBJ_Key.java
+ * @brief This file contains the implementation of the OBJ_Key class, representing a key object extending the Props class.
+ */
+
 package entity;
 
 import javax.imageio.ImageIO;
@@ -5,14 +10,15 @@ import java.io.IOException;
 import java.util.Objects;
 
 /**
- * The OBJ_Key class represents a key object that extends the Props class.
- * It initializes the key's name and loads its image from a file.
+ * @class OBJ_Key
+ * @extends Props
+ * @brief Represents a key object in the game.
  */
 public class OBJ_Key extends Props {
 
     /**
-     * Constructor for the OBJ_Key class.
-     * Initializes the name of the key and loads its image from a file.
+     * @brief Constructor for the OBJ_Key class.
+     * @details Initializes the name of the key and loads its image from a file.
      */
     public OBJ_Key() {
         // Set the name of the key
