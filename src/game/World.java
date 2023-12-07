@@ -13,7 +13,7 @@ import java.awt.*;
 public class World extends Scene{
 
     private static World _instance;
-    TileManager tileManager = new TileManager(this);
+    public TileManager tileManager = new TileManager(this);
     //World intialization settings
     
     public final int maxRow= 27, maxCol = 27; //DONT FORGET TO MODIFY WHEN CHANGING THE MAP !!!
@@ -41,8 +41,20 @@ public class World extends Scene{
     public void update(){
         checkSceneChange();
         if(state == State.WORLD){
-            player.update(this, dt);
-            tileManager.update(this, 800, 600);
+            int playerScreenX = (800 - player.screenSize)/2;
+            int playerScreenY = (600 - player.screenSize)/2;
+
+            if(player.worldX + tileManager.tileScreenSize > player.worldX - playerScreenX       //Do all the world updates if they are actually visible on the screen (or near)
+            && player.worldX - tileManager.tileScreenSize < player.worldX + playerScreenX 
+            && player.worldY + tileManager.tileScreenSize > player.worldY - playerScreenY 
+            && player.worldY - tileManager.tileScreenSize < player.worldY + playerScreenY){
+                
+                player.update(this, dt);
+                tileManager.update(this, 800, 600);
+
+                //otherentity.update(this,dt);
+            }
+            
 
 
 

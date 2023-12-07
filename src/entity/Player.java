@@ -2,9 +2,10 @@ package entity;
 
 
 import game.Scene;
+import game.World;
 import game.Scene.State;
 
-public class Player extends Entity{
+public class Player extends Character{
     int hasKey = 0;
 
     public Player(int worldX,int worldY,int dirX,int dirY,int speed,String facing, int spriteCntMax, int spriteSpeed){
@@ -17,34 +18,35 @@ public class Player extends Entity{
     public void update(Scene scene, double dt){
         super.update(scene,dt);
         //World updates
-        if(scene.keyH.upPressed || scene.keyH.downPressed || scene.keyH.leftPressed || scene.keyH.rightPressed){
-            dirX = 0;
-            dirY = 0;
-            if(scene.keyH.leftPressed){
-                dirX = -1;
-                facing = "left";
+        if(scene.state == State.WORLD){
+            if(scene.keyH.upPressed || scene.keyH.downPressed || scene.keyH.leftPressed || scene.keyH.rightPressed){
+                dirX = 0;
+                dirY = 0;
+                if(scene.keyH.leftPressed){
+                    dirX = -1;
+                    facing = "left";
+                }
+                if(scene.keyH.rightPressed){
+                    dirX = 1;   
+                    facing = "right";
+                }
+                if(scene.keyH.upPressed){
+                    dirY = -1;
+                    facing = "up";
+                }
+                if(scene.keyH.downPressed){
+                    dirY = 1;
+                    facing = "down";
+                }
+                accelerate(30,dt);
             }
-            if(scene.keyH.rightPressed){
-                dirX = 1;   
-                facing = "right";
+            else{
+                if(speed >0){
+                    decelerate(dt);
+                }
             }
-            if(scene.keyH.upPressed){
-                dirY = -1;
-                facing = "up";
-            }
-            if(scene.keyH.downPressed){
-                dirY = 1;
-                facing = "down";
-            }
-            accelerate(30,dt);
         }
-        else{
-            if(speed >0){
-                decelerate(dt);
-            }
-            
-        }
-        move(speed,dt);
+        
 
 
 

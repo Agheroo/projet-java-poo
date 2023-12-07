@@ -8,8 +8,9 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 public class Tile {
-    public boolean isBlocking=false;
+    private boolean _isBlocking=false;
     private int _worldX, _worldY;
+    public int indexName;
 
     //Display purpose variables
     private final int tileSize=16;
@@ -24,29 +25,37 @@ public class Tile {
     public BufferedImage[] image;
 
 
-    public Tile(int spriteCntMax, int spriteSpeed, boolean isBlocking){
+    public Tile(int spriteCntMax, int spriteSpeed, boolean isBlocking, int ind){
         this.spriteCntMax = spriteCntMax;
         this.spriteSpeed = spriteSpeed;
-        this.isBlocking = isBlocking;
+        this._isBlocking = isBlocking;
+        this.indexName = ind;
         image = new BufferedImage[spriteCntMax];
     }
 
-
+    //Setters
+    public void setCollision(boolean collision){
+        _isBlocking= collision;
+    }
     public void setTexture(BufferedImage[] newTexture){
         this.image = newTexture;
     }
-
     public void setPos(int x, int y){
         this._worldX = x;
         this._worldY = y;
     }
 
+    //Getters
     public int[] getPos(){
         int tmp[] = new int[2];
         tmp[0] = _worldX;
         tmp[1] = _worldY;
 
         return tmp;
+    }
+
+    public boolean getCollision(){
+        return _isBlocking;
     }
 
     public void setSpriteCountAndSpeed(int newSpriteCntMax, int newSpriteSpeed){

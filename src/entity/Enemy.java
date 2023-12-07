@@ -1,14 +1,19 @@
 package entity;
 
-public class Enemy extends Entity{
+import game.Scene;
 
-    public Enemy(int x, int y, int dirX, int dirY, int speed, String facing, int _spriteCntMax, int spriteSpeed) {
-        super(x, y, dirX, dirY, speed, facing, _spriteCntMax, spriteSpeed);
-        //TODO Auto-generated constructor stub
+public class Enemy extends Character{
+
+    private int xpRate;
+
+    public Enemy(int worldX,int worldY,int dirX,int dirY,int speed,String facing, int spriteCntMax, int spriteSpeed){
+        super(worldX, worldY, dirX, dirY, speed, facing, spriteCntMax, spriteSpeed);  //Calls the parent class as for every entity setup but need to specify scene.keyH for player
+
+        loadTextures("enemy");
     }
 
-    public Enemy(){
-
+    @Override
+    public void update(Scene scene, double dt) {
+        super.update(scene,dt);
     }
-    
 }

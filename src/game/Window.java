@@ -16,7 +16,7 @@ public class Window extends JPanel implements Runnable{
     //Game screen
     public final int screenWidth=800;
     public final int screenHeight=600;
-    World world = World.getWorld();
+
 
     //Game init
     private final int _FPS = 120;
