@@ -29,6 +29,7 @@ public class World extends Scene{
     public static World getWorld(){
         if (_instance==null){
             _instance=new World();
+            _instance.state = State.WORLD;
         }
         return _instance;
     }
@@ -38,25 +39,32 @@ public class World extends Scene{
     }
 
     public void update(){
-        player.update(_instance, dt);
-        //All updates of entities here
+        checkSceneChange();
+
+        if(state == State.WORLD){
+            player.update(_instance, dt);
+            tileManager.update(_instance,800,600);
+            //All updates of entities here
 
 
 
+            //Checks if player is touching the edges of the map
+            //TODO: collision checker in entity class of Akim's branch
+            if(player.worldX + player.hitbox.width/2 < 0){
+                player.worldX = 0 - player.hitbox.width/2;
+            }
+            if(player.worldX - player.hitbox.width/2 >= (maxCol-1)*tileManager.tileSize*tileManager.scale){
+                player.worldX = (maxCol-1)*tileManager.tileSize*tileManager.scale + player.hitbox.width/2;
+            }
+            if(player.worldY + player.hitbox.height/2< 0){
+                player.worldY = 0 - player.hitbox.height/2;
+            }
+            if(player.worldY - player.hitbox.height/2 >= (maxRow-1)*tileManager.tileSize*tileManager.scale){
+                player.worldY = (maxRow-1)*tileManager.tileSize*tileManager.scale + player.hitbox.height/2;
+            }
+        }
+        
 
-        //Checks if player is touching the edges of the map
-        if(player.worldX < 0){
-            player.worldX=0;
-        }
-        if(player.worldX > (maxCol-1)*tileManager.tileSize*tileManager.scale){
-            player.worldX = (maxCol-1)*tileManager.tileSize*tileManager.scale;
-        }
-        if(player.worldY < 0){
-            player.worldY = 0;
-        }
-        if(player.worldY >= (maxRow-1)*tileManager.tileSize*tileManager.scale){
-            player.worldY = (maxRow-1)*tileManager.tileSize*tileManager.scale;
-        }
     }
     
     public  void draw(Graphics2D g2,int screenWidth,int screenHeight){

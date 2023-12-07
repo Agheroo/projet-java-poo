@@ -1,7 +1,5 @@
 package game;
 
-import tiles.TileManager;
-
 import javax.swing.JPanel;
 
 import game.Scene.State;
@@ -27,7 +25,6 @@ public class Window extends JPanel implements Runnable{
 
 
     public Window(){
-        //scene=CreateScene.creator();
         scene = World.getWorld();
         this.setPreferredSize(new Dimension(screenWidth,screenHeight));
         this.setBackground(Color.black);

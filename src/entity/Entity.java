@@ -69,8 +69,8 @@ public class Entity {
         //Updating entity position accurately (at any point in time either pressing keys or not)
         if(scene.state == State.WORLD){
             updateFrames();
-            hitbox.x = worldX;
-            hitbox.y = worldY;
+            hitbox.x = worldX + hitbox.width/2;
+            hitbox.y = worldY + hitbox.height/2;
         }
     }
 
@@ -186,7 +186,7 @@ public class Entity {
 
 
         g2.drawImage(image, screenX, screenY,screenSize, screenSize, null);
-        g2.drawRect(screenX + screenSize/4, screenY + screenSize/4, hitbox.width, hitbox.height); //Center the hitbox to the entity
+        g2.drawRect(screenX + hitbox.width/2, screenY + hitbox.height/2, hitbox.width, hitbox.height); //Center the hitbox to the entity
     }
 
    
