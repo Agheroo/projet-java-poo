@@ -6,7 +6,7 @@ import game.Scene;
 
 public abstract class Entity {
     //Display purpose variables
-    private final int _tileSize=16;
+    protected final int _tileSize=16;
     protected final int _scale = 3;
     public final int screenSize = _tileSize*_scale;
 

@@ -2,7 +2,8 @@ package game;
 
 import entity.Player;
 import tiles.TileManager;
-
+import entity.EntitySetter;
+import entity.Props;
 import java.awt.*;
 
 /*
@@ -19,10 +20,10 @@ public class World extends Scene{
     public final int maxRow= 27, maxCol = 27; //DONT FORGET TO MODIFY WHEN CHANGING THE MAP !!!
     // public final int maxWidth = tileManager.tileSize*maxCol;
     // public final int maxHeight = tileManager.tileSize*maxRow;
-    
-    
-    //Player settings
 
+    public EntitySetter aSetter = new EntitySetter(this); // Instance of EntitySetter
+    //Player settings
+    public Props[] obj = new Props[10]; // The array that lists all objects
     public Player player = new Player(15*tileManager.tileSize*tileManager.scale, 15*tileManager.tileSize*tileManager.scale,0,0,0,"down",4,20);
     
     //All world instances (ennemies NPC mon cul les coffres et tout)
@@ -36,6 +37,12 @@ public class World extends Scene{
 
     private World(){
 
+    }
+    /**
+     * Set up the initial state of the game.
+     */
+    public void setupGame() {
+        aSetter.setObject();
     }
 
     public void update(){
@@ -79,7 +86,15 @@ public class World extends Scene{
     }
     
     public  void draw(Graphics2D g2,int screenWidth,int screenHeight){
+        // TILE
         tileManager.draw(g2, this, screenWidth, screenHeight);
+        // OBJECT
+        for (Props props : obj) {
+            if (props != null) {
+                props.draw(g2, this);
+            }
+        }
+        // PLAYER
         player.drawInWorld(g2,screenWidth/2 - (player.screenSize/2), screenHeight/2 - (player.screenSize/2)); //Player is always centered to screen
     }
 }
