@@ -1,6 +1,8 @@
 package game;
 
 import entity.Player;
+import entity.Props;
+import entity.EntitySetter;
 import tiles.TileManager;
 
 import java.awt.*;
@@ -14,21 +16,21 @@ public class World extends Scene{
 
     private static World _instance;
     TileManager tileManager = new TileManager(this);
-    //World intialization settings
-    
-    public final int maxRow= 27, maxCol = 27; //DONT FORGET TO MODIFY WHEN CHANGING THE MAP !!!
-    // public final int maxWidth = tileManager.tileSize*maxCol;
-    // public final int maxHeight = tileManager.tileSize*maxRow;
-    
-    
-    //Player settings
+    // World initialization settings
 
-    public Player player = new Player(15*tileManager.tileSize*tileManager.scale, 15*tileManager.tileSize*tileManager.scale,0,0,0,"down",4,20);
-    
-    //All world instances (ennemies NPC mon cul les coffres et tout)
-    public static World getWorld(){
-        if (_instance==null){
-            _instance=new World();
+    public final int maxRow = 27, maxCol = 27; // DON'T FORGET TO MODIFY WHEN CHANGING THE MAP !!!
+    // public final int maxWidth = tileManager.tileSize * maxCol;
+    // public final int maxHeight = tileManager.tileSize * maxRow;
+
+
+    // Player settings
+    public EntitySetter aSetter = new EntitySetter(this); // Instance of EntitySetter
+    public Player player = new Player(15 * tileManager.tileSize * tileManager.scale, 15 * tileManager.tileSize * tileManager.scale, 0, 0, 0, "down", 4, 20);
+    public Props[] obj = new Props[10]; // The array that lists all objects
+    // All world instances (enemies NPC my ass chests and everything)
+    public static World getWorld() {
+        if (_instance == null) {
+            _instance = new World();
         }
         return _instance;
     }
@@ -37,9 +39,19 @@ public class World extends Scene{
 
     }
 
-    public void update(){
-        player.update(this,dt);
-        //All updates of entities here
+    /**
+     * Set up the initial state of the game.
+     */
+    public void setupGame() {
+        aSetter.setObject();
+    }
+
+    /**
+     * Update the game state.
+     */
+    public void update() {
+        player.update(_instance, dt);
+        // All updates of entities here
 
 
 
@@ -58,10 +70,25 @@ public class World extends Scene{
             player.worldY = (maxRow-1)*tileManager.tileSize*tileManager.scale;
         }
     }
-    
-    public  void draw(Graphics2D g2,int screenWidth,int screenHeight){
+
+    /**
+     * Draw the game elements on the screen.
+     *
+     * @param g2           Graphics2D object for drawing
+     * @param screenWidth  Screen width
+     * @param screenHeight Screen height
+     */
+    public void draw(Graphics2D g2, int screenWidth, int screenHeight) {
+        // TILE
         tileManager.draw(g2, this, screenWidth, screenHeight);
-        player.draw(g2,screenWidth/2 - (player.screenSize/2), screenHeight/2 - (player.screenSize/2)); //Player is always centered to screen
+        // OBJECT
+        for (Props props : obj) {
+            if (props != null) {
+                props.draw(g2, this);
+            }
+        }
+        // PLAYER
+        player.draw(g2, screenWidth / 2 - (player.screenSize / 2), screenHeight / 2 - (player.screenSize / 2)); // Player is always centered on the screen
     }
 
     public TileManager getMap(){

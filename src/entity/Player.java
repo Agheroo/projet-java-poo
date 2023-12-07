@@ -5,17 +5,38 @@ import game.World;
 import main.KeyHandler;
 
 import java.awt.*;
+/**
+ * The Player class represents a player entity that extends the Entity class.
+ * It includes additional functionality specific to the player, such as key handling and movement updates.
+ */
+public class Player extends Character {
+    int hasKey = 0; // Indicates whether the player has a key
 
-public class Player extends Character{
-    int hasKey = 0;
-
-    public Player(int worldX,int worldY,int dirX,int dirY,int speed,String facing, int spriteCntMax, int spriteSpeed){
-        super(worldX, worldY, dirX, dirY, speed, facing, spriteCntMax, spriteSpeed);  //Calls the parent class as for every entity setup but need to specify scene.keyH for player
+    /**
+     * Constructor for the Player class.
+     *
+     * @param worldX        Initial X coordinate in the world
+     * @param worldY        Initial Y coordinate in the world
+     * @param dirX          Initial X direction
+     * @param dirY          Initial Y direction
+     * @param speed         Speed of the player
+     * @param facing        Initial facing direction for animation
+     * @param spriteCntMax  Maximum number of sprites for animations
+     * @param spriteSpeed   Speed of sprite animations
+     */
+    public Player(int worldX, int worldY, int dirX, int dirY, int speed, String facing, int spriteCntMax, int spriteSpeed) {
+        super(worldX, worldY, dirX, dirY, speed, facing, spriteCntMax, spriteSpeed);  // Calls the parent class for entity setup
 
         hitbox= new Rectangle(16,16,32,32);
         loadTextures("player");
     }
 
+    /**
+     * Update method for the Player class.
+     *
+     * @param world The current game world
+     * @param dt    Time elapsed since the last update
+     */
     public  void  update(World world, double dt){
         int tmp;
         KeyHandler keyH=KeyHandler.getInstance();
@@ -44,14 +65,13 @@ public class Player extends Character{
                 dirY = 1;
                 facing = "down";
             }
-        }
-        else{       //Deceleration system (use of dirX & dirY instead of facing in case of diagonal movements)
-            if(speed > 0){
+        } else { // Deceleration system (use of dirX & dirY instead of facing in case of diagonal movements)
+            if (speed > 0) {
                 speed -= dt;
+            } else {
+                speed = 0;
             }
-            else{speed = 0;}
         }
-        
 
         //Updating player position accurately (at any point in time either pressing keys or not)
         if(dirX == -1){
