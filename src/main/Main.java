@@ -1,3 +1,8 @@
+/**
+ * @file Main.java
+ * @brief This file contains the implementation of the Main class, which contains the main method to start the 2D Adventure game.
+ */
+
 package main;
 
 import javax.swing.*;
@@ -5,7 +10,8 @@ import javax.swing.*;
 import game.Window;
 
 /**
- * The Main class contains the main method to start the 2D Adventure game.
+ * @class Main
+ * @brief Contains the main method to start the 2D Adventure game.
  */
 public class Main {
     /**
