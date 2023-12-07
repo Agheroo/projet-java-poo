@@ -56,7 +56,7 @@ public class Window extends JPanel implements Runnable{
     }
 
     public void startGameThread(){
-        world.setupGame(); // Création de l'instance du setter
+        //world.setupGame(); // Création de l'instance du setter
         gameThread = new Thread(this);
         gameThread.start();
     }

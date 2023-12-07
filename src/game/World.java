@@ -61,6 +61,6 @@ public class World extends Scene{
     
     public  void draw(Graphics2D g2,int screenWidth,int screenHeight){
         tileManager.draw(g2, this, screenWidth, screenHeight);
-        player.draw(g2,screenWidth/2 - (player.screenSize/2), screenHeight/2 - (player.screenSize/2)); //Player is always centered to screen
+        player.drawInWorld(g2,screenWidth/2 - (player.screenSize/2), screenHeight/2 - (player.screenSize/2)); //Player is always centered to screen
     }
 }
