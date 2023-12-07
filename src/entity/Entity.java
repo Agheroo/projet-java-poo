@@ -1,5 +1,7 @@
 package entity;
 
+import java.awt.Rectangle;
+
 import game.Scene;
 
 public abstract class Entity {
@@ -11,8 +13,9 @@ public abstract class Entity {
 
     //Position of entity in the world, directions and speed
     public int worldX, worldY;
-    public int dirX,dirY;
-
+    
+    //Hitbox of entity
+    public Rectangle hitbox;
 
     //Entity animations
     protected int _spriteCnt=0;        //Variable responsible for the incrementation of the different sprites

@@ -21,9 +21,8 @@ public abstract class Character extends Entity{
     int initiative;
 
     public int speed;
-    
-    //Hitbox of entity
-    public Rectangle hitbox;
+    public int dirX,dirY;
+
 
     //Which direction is the entity facing (if directions are available) for animation
     public String facing;
@@ -58,27 +57,27 @@ public abstract class Character extends Entity{
     public void update(Scene scene, double dt){
         if(scene.state == State.WORLD){
             World currWorld = World.getWorld();
-            
-            checkNearTiles(currWorld.tileManager);
+
             hitbox.x = worldX + hitbox.width/2;
             hitbox.y = worldY + hitbox.height/2;
+
+            move(World.getWorld(), speed,dt);
+            checkNearTiles(currWorld.tileManager);
+            
+            
             updateFrames();
         }
     }
 
     private void checkNearTiles(TileManager tileManager){
-        if(isBlocked(tileManager.getTile(worldX - hitbox.width + tileManager.tileScreenSize, worldY))){     //Tile on the right
-            worldX = tileManager.getTile(worldX - hitbox.width + tileManager.tileScreenSize, worldY).getPos()[0] - hitbox.width;
-        }
-        if(isBlocked(tileManager.getTile(worldX+hitbox.width, worldY))){                                    //Tile on the left
-            worldX = tileManager.getTile(worldX+hitbox.width, worldY).getPos()[0] + hitbox.width;
-        }
-        if(isBlocked(tileManager.getTile(worldX, worldY - hitbox.height  + tileManager.tileScreenSize))){   //Tile on the bottom
-            System.out.println(tileManager.getTile(worldX, worldY - hitbox.height + tileManager.tileScreenSize).indexName);
-        }
-        if(isBlocked(tileManager.getTile(worldX, worldY + hitbox.height - tileManager.tileScreenSize))){    //Tile on the top
+        //Checking tiles with hitbox
+        if(isBlocked(tileManager.getTile(worldX + hitbox.width,worldY+hitbox.height))){
+            worldX = hitbox.x - hitbox.width/2;
+            worldY = hitbox.y - hitbox.height/2;
 
+            //TODO: try to add some statements to make the player move diagonally if he tries instead of getting fully stucked
         }
+
     }
 
     public boolean isBlocked(Tile tile){

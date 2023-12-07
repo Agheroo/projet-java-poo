@@ -45,7 +45,6 @@ public class Player extends Character{
                     decelerate(dt);
                 }
             }
-            move(World.getWorld(), speed,dt);
         }
         
 
