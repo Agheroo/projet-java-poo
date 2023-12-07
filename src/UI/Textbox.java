@@ -42,18 +42,13 @@ public class Textbox extends JLabel{
 
 
 
-        //loadFont("rainyhearts");
+        loadFont("rainyhearts");
     }
 
 
     //TODO: CHANGE THE PATH TO MAKE IT WORK PLEASE :C
     private void loadFont(String fontName){
-
-        
-
-        
         try {
-            System.out.println(fontName);
             InputStream is = getClass().getResourceAsStream("/font/"+fontName+".ttf");
             _font = Font.createFont(Font.TRUETYPE_FONT, is);
             

@@ -12,7 +12,7 @@ import java.io.FileReader;
 public class TileManager {
     public final int tileSize = 16;
     public final int scale = 3;
-    public final int screenSize = tileSize*scale;
+    public final int tileScreenSize = tileSize*scale;
 
 
     //Tiles for textures
@@ -42,6 +42,21 @@ public class TileManager {
     }
 
     /**
+     * Gets the tile of the tilemap top map with it's x,y coordinates
+     * @param x X coordinate of the tile
+     * @param y Y coordinate of the tile
+     * @return the corresponding tile of the top map
+     */
+    public Tile getTile(int x, int y){
+        int param=tileScreenSize;
+        int i=x/param;
+        int j=y/param;
+
+        return _topMap[j][i];
+    }
+
+
+    /**
      * Stores in a Tile array (from "start" to "start + size") the textures that are loaded for the game
      * @param name      Name of the texture
      * @param tiles     Array in which to store the textures
@@ -54,7 +69,7 @@ public class TileManager {
      */
     private void storeTexture(String name, Tile[] tiles, int start, int size, boolean animated, int spriteCntMax, int spriteSpeed, boolean isBlocking){
         for(int i=start; i<size+start; i++){
-            Tile tile = new Tile(spriteCntMax, spriteSpeed,isBlocking);
+            Tile tile = new Tile(spriteCntMax, spriteSpeed,isBlocking,i);
             tiles[i] = tile;
             tiles[i].loadTextures(name, animated, i-start);
         }
@@ -112,10 +127,12 @@ public class TileManager {
                     int num =Integer.parseInt(numbers[j]);      //Reading the file itself and stocking int read
                     
 
-                    Tile tileCurrent = new Tile(textures[num].spriteCntMax, textures[num].spriteSpeed, textures[num].isBlocking);   //Creating new tile to store with the according texture
+                    Tile tileCurrent = new Tile(textures[num].spriteCntMax, textures[num].spriteSpeed, textures[num].getCollision(),num);   //Creating new tile to store with the according texture
                     tileCurrent.setPos(tileSize*j*scale, tileSize*i*scale);
+                    
                     mapTile[i][j] = tileCurrent;        //Setting the tile to the actual map
                     mapTile[i][j].setTexture(textures[num].image);  //Set the current tile texture to what corresponds in the textures array
+                    mapTile[i][j].setCollision(textures[num].getCollision());   //Set the collision factor to the tile
 
                     //System.out.print(num + " ");
                 }
