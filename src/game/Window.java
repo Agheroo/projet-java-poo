@@ -1,5 +1,7 @@
 package game;
 
+import tiles.TileManager;
+
 import javax.swing.JPanel;
 
 import game.Scene.State;
@@ -16,7 +18,7 @@ public class Window extends JPanel implements Runnable{
     //Game screen
     public final int screenWidth=800;
     public final int screenHeight=600;
-
+    World world = World.getWorld();
 
     //Game init
     private final int _FPS = 120;
@@ -32,8 +34,6 @@ public class Window extends JPanel implements Runnable{
         this.setDoubleBuffered(true);
         this.addKeyListener(scene.keyH);
         this.setFocusable(true);
-
-
     }
 
     @Override
@@ -56,6 +56,7 @@ public class Window extends JPanel implements Runnable{
     }
 
     public void startGameThread(){
+        //world.setupGame(); // Création de l'instance du setter
         gameThread = new Thread(this);
         gameThread.start();
     }
