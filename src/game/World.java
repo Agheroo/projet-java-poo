@@ -40,11 +40,10 @@ public class World extends Scene{
 
     public void update(){
         checkSceneChange();
-
         if(state == State.WORLD){
-            player.update(_instance, dt);
-            tileManager.update(_instance,800,600);
-            //All updates of entities here
+            player.update(this, dt);
+            tileManager.update(this, 800, 600);
+
 
 
 
