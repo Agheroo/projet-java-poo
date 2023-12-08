@@ -1,33 +1,85 @@
+/**
+ * @file Scene.java
+ * @brief This file contains the implementation of the abstract Scene class, representing a scene in the game.
+ */
+
 package game;
 
 import main.KeyHandler;
 
 import java.awt.*;
 
+import UI.HUD;
+import UI.HUD.MenuType;
+import entity.Enemy;
+import entity.Player;
+
 /**
- * The abstract Scene class serves as a template for different scenes in the game.
- * It includes key handling and methods for updating and drawing scenes.
+ * @class Scene
+ * @brief Represents an abstract scene in the game.
  */
 public abstract class Scene {
-    // Key handler instance for handling user input
-    public KeyHandler keyH = KeyHandler.getInstance();
+    /**
+     * @enum State
+     * @brief Represents the possible states of a scene (WORLD, FIGHT, PAUSE, MENU).
+     */
+    public enum State {WORLD, FIGHT, PAUSE, MENU}
 
-    // Delta time for time-based updates (initialized to 0)
+    private State _lastState;
+
+    public KeyHandler keyH = KeyHandler.getInstance();
     public double dt = 0;
+    public State state;
+    public HUD menu;
 
     /**
-     * Abstract method to be implemented by subclasses.
-     * Used for updating the scene's logic and state.
+     * @brief Updates the scene.
      */
     public abstract void update();
 
     /**
-     * Abstract method to be implemented by subclasses.
-     * Used for rendering/drawing the scene on the screen.
-     *
-     * @param g2            Graphics2D object for drawing
-     * @param screenWidth   Width of the screen
-     * @param screenHeight  Height of the screen
+     * @brief Draws the scene.
+     * @param g2 The Graphics2D object for drawing.
+     * @param screenWidth The width of the screen.
+     * @param screenHeight The height of the screen.
      */
     public abstract void draw(Graphics2D g2, int screenWidth, int screenHeight);
+
+    /**
+     * @brief Gets the World scene.
+     * @return The World scene.
+     */
+    public Scene worldScene() {
+        return World.getWorld();
+    }
+
+    /**
+     * @brief Creates and returns a new FightScene.
+     * @param player The player entity in the fight.
+     * @param enemy The enemy entity in the fight.
+     * @return The new FightScene.
+     */
+    public Scene fightScene(Player player, Enemy enemy) {
+        return new FightScene(player, enemy);
+    }
+
+    /**
+     * @brief Checks for a change in the scene state based on user input.
+     */
+    public void checkSceneChange() {
+        if (keyH.pausePressed) {
+            keyH.pausePressed = false;
+
+            if (state != State.PAUSE) {
+                System.out.println("CHANGING SCENE TO: PAUSE");
+                _lastState = state;
+                state = State.PAUSE;
+                menu = new HUD(MenuType.PAUSE);
+            } else {
+                System.out.println("CHANGING SCENE TO: WORLD");
+                state = _lastState;
+                menu = null;
+            }
+        }
+    }
 }

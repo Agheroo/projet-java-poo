@@ -1,152 +1,80 @@
+/**
+ * @file Entity.java
+ * @brief This file contains the implementation of the Entity class, representing an abstract entity with position, hitbox, and animations.
+ */
+
 package entity;
 
-import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.io.FileInputStream;
-import java.io.IOException;
+import java.awt.Rectangle;
 
-import javax.imageio.ImageIO;
+import game.Scene;
 
 /**
- * The Entity class represents a game entity with position, direction, speed, hitbox, and animations.
+ * @class Entity
+ * @brief Represents an abstract entity with position, hitbox, and animations.
  */
-public abstract
-class Entity {
-    //Display purpose variables
-    private final int _tileSize=16;
-    private final int _scale = 3;
+public abstract class Entity {
+    // Display purpose variables
+    protected final int _tileSize = 16;
+    protected final int _scale = 3;
     public final int screenSize = _tileSize * _scale;
 
     // Position of the entity in the world, directions, and speed
     public int worldX, worldY;
-    public int dirX, dirY;
-    public int speed;
 
     // Hitbox of the entity
     public Rectangle hitbox;
-    public boolean collisionOn = false;
-
-    //Which direction is the entity facing (if directions are available) for animation
-    public String facing;
 
     // Entity animations
-    private int _spriteCnt = 0;        // Variable responsible for the incrementation of the different sprites
-    private int _spriteUpdater = 0;    // Variable responsible for the incrementation of the speed of the sprites
-    private int _spriteSpeed;          // How fast the sprites change (higher spriteSpeed means slower time to change)
-    private int _spriteCntMax;         // How many sprites the entity has
-    private BufferedImage[] idle_up;
-    public BufferedImage[] idle_down;
-    private BufferedImage[] idle_right;
-    public BufferedImage[] idle_left;
-    private BufferedImage[] walk_up;
-    public BufferedImage[] walk_down;
-    private BufferedImage[] walk_right;
-    public BufferedImage[] walk_left;
+    protected int _spriteCnt = 0; // Variable responsible for the incrementation of the different sprites
+    protected int _spriteUpdater = 0; // Variable responsible for the incrementation of the speed of the sprites
+    protected int _spriteSpeed; // How fast the sprites are changing (higher spriteSpeed means slower time to change)
+    protected int _spriteCntMax; // How many sprites does the entity have
 
     /**
-     * Constructor for the Entity class.
-     *
-     * @param x            Initial X coordinate in the world
-     * @param y            Initial Y coordinate in the world
-     * @param dirX         Initial X direction
-     * @param dirY         Initial Y direction
-     * @param speed        Speed of the entity
-     * @param facing       Initial facing direction for animation
-     * @param _spriteCntMax Maximum number of sprites for animations
-     * @param spriteSpeed  Speed of sprite animations
+     * @brief Default constructor for the Entity class.
      */
-    public Entity(int x, int y, int dirX, int dirY, int speed, String facing, int _spriteCntMax, int spriteSpeed) {
-        // Hitbox settings to set up later
+    public Entity() {
+        // Default constructor
+    }
 
+    /**
+     * @brief Constructor for the Entity class with specified initial position and animation parameters.
+     * @param x The initial X-coordinate of the entity in the world.
+     * @param y The initial Y-coordinate of the entity in the world.
+     * @param _spriteCntMax The maximum number of sprites for animation.
+     * @param spriteSpeed The speed of sprite animation.
+     */
+    public Entity(int x, int y, int _spriteCntMax, int spriteSpeed) {
         this.worldX = x;
         this.worldY = y;
-        this.dirX = dirX;
-        this.dirY = dirY;
-        this.speed = speed;
-        this.facing = facing;
         this._spriteCntMax = _spriteCntMax;
         this._spriteSpeed = spriteSpeed;
-
-        idle_up = new BufferedImage[_spriteCntMax];
-        idle_down = new BufferedImage[_spriteCntMax];
-        idle_right = new BufferedImage[_spriteCntMax];
-        idle_left = new BufferedImage[_spriteCntMax];
-        walk_up = new BufferedImage[_spriteCntMax];
-        walk_down = new BufferedImage[_spriteCntMax];
-        walk_right = new BufferedImage[_spriteCntMax];
-        walk_left = new BufferedImage[_spriteCntMax];
     }
 
     /**
-     * Load textures for animations.
-     *
-     * @param name Name of the entity for locating textures
+     * @brief Updates the entity's position based on the current scene and time elapsed.
+     * @param scene The current game scene.
+     * @param dt The time elapsed since the last update.
      */
-    public void loadTextures(String name) {
-        try {
-            for (int i = 0; i < _spriteCntMax; i++) {
-                idle_up[i] = ImageIO.read(new FileInputStream("res/entity/idle/" + name + "/up" + (i + 1) + ".png"));
-                idle_down[i] = ImageIO.read(new FileInputStream("res/entity/idle/" + name + "/down" + (i + 1) + ".png"));
-                idle_left[i] = ImageIO.read(new FileInputStream("res/entity/idle/" + name + "/left" + (i + 1) + ".png"));
-                idle_right[i] = ImageIO.read(new FileInputStream("res/entity/idle/" + name + "/right" + (i + 1) + ".png"));
+    public void update(Scene scene, double dt) {
+        // Updating entity position accurately (at any point in time either pressing keys or not)
+    }
 
-                walk_up[i] = ImageIO.read(new FileInputStream("res/entity/walk/" + name + "/up" + (i + 1) + ".png"));
-                walk_down[i] = ImageIO.read(new FileInputStream("res/entity/walk/" + name + "/down" + (i + 1) + ".png"));
-                walk_left[i] = ImageIO.read(new FileInputStream("res/entity/walk/" + name + "/left" + (i + 1) + ".png"));
-                walk_right[i] = ImageIO.read(new FileInputStream("res/entity/walk/" + name + "/right" + (i + 1) + ".png"));
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    // GRAPHICS
+
+    /**
+     * @brief Loads textures for the entity based on its name.
+     * @param name The name used to determine the textures to load.
+     */
+    private void loadTextures(String name) {
+        // TODO: Different texture loading from characters
     }
 
     /**
-     * Draw the entity on the screen with animations.
-     *
-     * @param g2      Graphics2D object for drawing
-     * @param screenX Screen X coordinate for drawing
-     * @param screenY Screen Y coordinate for drawing
+     * @brief Updates the frames of the entity's animation.
      */
-    public void draw(Graphics2D g2, int screenX, int screenY) {
-        BufferedImage image = null;
-
-        if (speed == 0) { // IDLE ANIMATIONS
-            for (int i = 0; i < _spriteCntMax; i++) {
-                switch (facing) {
-                    case "up":
-                        if (_spriteCnt == i) image = idle_up[i];
-                        break;
-                    case "down":
-                        if (_spriteCnt == i) image = idle_down[i];
-                        break;
-                    case "left":
-                        if (_spriteCnt == i) image = idle_left[i];
-                        break;
-                    case "right":
-                        if (_spriteCnt == i) image = idle_right[i];
-                        break;
-                }
-            }
-        }
-        if (speed > 0) {  // WALKING ANIMATIONS
-            for (int i = 0; i < _spriteCntMax; i++) {
-                switch (facing) {
-                    case "up":
-                        if (_spriteCnt == i) image = walk_up[i];
-                        break;
-                    case "down":
-                        if (_spriteCnt == i) image = walk_down[i];
-                        break;
-                    case "left":
-                        if (_spriteCnt == i) image = walk_left[i];
-                        break;
-                    case "right":
-                        if (_spriteCnt == i) image = walk_right[i];
-                        break;
-                }
-            }
-        }
-
+    protected void updateFrames() {
         _spriteUpdater++;
         if (_spriteUpdater > _spriteSpeed) {
             _spriteCnt++;
@@ -156,6 +84,6 @@ class Entity {
             _spriteUpdater = 0;
         }
 
-        g2.drawImage(image, screenX, screenY, screenSize, screenSize, null);
+        g2.drawImage(image, screenX, screenY,screenSize, screenSize, null);
     }
 }

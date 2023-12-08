@@ -1,16 +1,21 @@
+/**
+ * @file EntitySetter.java
+ * @brief This file contains the implementation of the EntitySetter class, responsible for initializing and setting up objects (entities) in the game world.
+ */
+
 package entity;
 
 import game.World;
 
 /**
- * The EntitySetter class is responsible for initializing and setting up objects (entities) in the game world.
+ * @class EntitySetter
+ * @brief Responsible for initializing and setting up objects (entities) in the game world.
  */
 public class EntitySetter {
     World gp;
 
     /**
-     * Constructor for the EntitySetter class.
-     *
+     * @brief Constructor for the EntitySetter class.
      * @param gp The World object representing the game world.
      */
     public EntitySetter(World gp) {
@@ -18,7 +23,7 @@ public class EntitySetter {
     }
 
     /**
-     * Method to set up objects in the game world, such as keys, doors, and chests.
+     * @brief Method to set up objects in the game world, such as keys, doors, and chests.
      */
     public void setObject() {
         // Create and set up a Key object at a specific location in the world

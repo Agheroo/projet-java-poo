@@ -1,8 +1,7 @@
 package CreationCombatScene.game;
 
 import CreationCombatScene.entity.PlayerTest;
-import entity.Ennemy;
-import game.CreateScene;
+import entity.Enemy;
 import game.Scene;
 
 import javax.swing.*;
@@ -28,9 +27,9 @@ public class Window extends JPanel implements Runnable{
 
     public Window(){
         PlayerTest playerTest=new PlayerTest();
-        Ennemy ennemy=new Ennemy(0,0,0,0,0,"0",0,0);
+        Enemy ennemy=new Enemy();
 
-        scene= CreateScene.creator(playerTest,ennemy);
+        scene = scene.fightScene(playerTest,ennemy);
         this.setPreferredSize(new Dimension(screenWidth,screenHeight));
         this.setBackground(Color.black);
         this.setDoubleBuffered(true);
@@ -65,7 +64,7 @@ public class Window extends JPanel implements Runnable{
     }
 
     public void update(){
-        scene.update();     //Updates the whole world's props & animations
+        scene.update();         //Updating abstract class scene which means either world or fightscene
         repaint();
     }
 

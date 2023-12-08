@@ -1,42 +1,49 @@
+/**
+ * @file World.java
+ * @brief This file contains the implementation of the World class, responsible for managing the game world.
+ */
+
 package game;
 
 import entity.Player;
-import entity.Props;
-import entity.EntitySetter;
 import tiles.TileManager;
-
+import entity.EntitySetter;
+import entity.Props;
 import java.awt.*;
 
-/*
- * This class's purpose is to set and to keep track of everything in the game despite its display on the screen 
- * 
- * 
+/**
+ * @class World
+ * @extends Scene
+ * @brief Represents the game world and manages its entities.
  */
-public class World extends Scene{
+public class World extends Scene {
 
     private static World _instance;
-    TileManager tileManager = new TileManager(this);
+    public TileManager tileManager = new TileManager(this);
+
     // World initialization settings
+    public final int maxRow = 27, maxCol = 27; // DONT FORGET TO MODIFY WHEN CHANGING THE MAP !!!
 
-    public final int maxRow = 27, maxCol = 27; // DON'T FORGET TO MODIFY WHEN CHANGING THE MAP !!!
-    // public final int maxWidth = tileManager.tileSize * maxCol;
-    // public final int maxHeight = tileManager.tileSize * maxRow;
-
-
-    // Player settings
     public EntitySetter aSetter = new EntitySetter(this); // Instance of EntitySetter
-    public Player player = new Player(15 * tileManager.tileSize * tileManager.scale, 15 * tileManager.tileSize * tileManager.scale, 0, 0, 0, "down", 4, 20);
+    // Player settings
     public Props[] obj = new Props[10]; // The array that lists all objects
-    // All world instances (enemies NPC my ass chests and everything)
+    public Player player = new Player(15 * tileManager.tileSize * tileManager.scale,
+            15 * tileManager.tileSize * tileManager.scale, 0, 0, 0, "down", 4, 20);
+
+    /**
+     * Gets the instance of the World.
+     *
+     * @return The World instance.
+     */
     public static World getWorld() {
         if (_instance == null) {
             _instance = new World();
+            _instance.state = State.WORLD;
         }
         return _instance;
     }
 
-    private World(){
-
+    private World() {
     }
 
     /**
@@ -47,36 +54,48 @@ public class World extends Scene{
     }
 
     /**
-     * Update the game state.
+     * Updates the game world based on the scene state.
      */
     public void update() {
-        player.update(_instance, dt);
-        // All updates of entities here
+        checkSceneChange();
+        if (state == State.WORLD) {
+            int playerScreenX = (800 - player.screenSize) / 2;
+            int playerScreenY = (600 - player.screenSize) / 2;
 
+            if (player.worldX + tileManager.tileScreenSize > player.worldX - playerScreenX // Do all the world updates if they are actually visible on the screen (or near)
+                    && player.worldX - tileManager.tileScreenSize < player.worldX + playerScreenX
+                    && player.worldY + tileManager.tileScreenSize > player.worldY - playerScreenY
+                    && player.worldY - tileManager.tileScreenSize < player.worldY + playerScreenY) {
 
+                player.update(this, dt);
+                tileManager.update(this, 800, 600);
 
+                // otherentity.update(this,dt);
+            }
 
-        //Checks if player is touching the edges of the map
-        if(player.worldX < 0){
-            player.worldX=0;
-        }
-        if(player.worldX > (maxCol-1)*tileManager.tileSize*tileManager.scale){
-            player.worldX = (maxCol-1)*tileManager.tileSize*tileManager.scale;
-        }
-        if(player.worldY < 0){
-            player.worldY = 0;
-        }
-        if(player.worldY >= (maxRow-1)*tileManager.tileSize*tileManager.scale){
-            player.worldY = (maxRow-1)*tileManager.tileSize*tileManager.scale;
+            // Checks if player is touching the edges of the map
+            // TODO: collision checker in entity class of Akim's branch
+            if (player.worldX + player.hitbox.width / 2 < 0) {
+                player.worldX = 0 - player.hitbox.width / 2;
+            }
+            if (player.worldX - player.hitbox.width / 2 >= (maxCol - 1) * tileManager.tileSize * tileManager.scale) {
+                player.worldX = (maxCol - 1) * tileManager.tileSize * tileManager.scale + player.hitbox.width / 2;
+            }
+            if (player.worldY + player.hitbox.height / 2 < 0) {
+                player.worldY = 0 - player.hitbox.height / 2;
+            }
+            if (player.worldY - player.hitbox.height / 2 >= (maxRow - 1) * tileManager.tileSize * tileManager.scale) {
+                player.worldY = (maxRow - 1) * tileManager.tileSize * tileManager.scale + player.hitbox.height / 2;
+            }
         }
     }
 
     /**
-     * Draw the game elements on the screen.
+     * Draws the game world and its entities.
      *
-     * @param g2           Graphics2D object for drawing
-     * @param screenWidth  Screen width
-     * @param screenHeight Screen height
+     * @param g2           The Graphics2D object for drawing.
+     * @param screenWidth  The width of the screen.
+     * @param screenHeight The height of the screen.
      */
     public void draw(Graphics2D g2, int screenWidth, int screenHeight) {
         // TILE
@@ -88,10 +107,7 @@ public class World extends Scene{
             }
         }
         // PLAYER
-        player.draw(g2, screenWidth / 2 - (player.screenSize / 2), screenHeight / 2 - (player.screenSize / 2)); // Player is always centered on the screen
-    }
-
-    public TileManager getMap(){
-        return tileManager;
+        player.drawInWorld(g2, screenWidth / 2 - (player.screenSize / 2),
+                screenHeight / 2 - (player.screenSize / 2)); // Player is always centered to screen
     }
 }

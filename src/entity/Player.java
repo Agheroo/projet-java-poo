@@ -1,99 +1,78 @@
+/**
+ * @file Player.java
+ * @brief This file contains the implementation of the Player class, representing a player entity extending the Character class.
+ */
+
 package entity;
 
 import game.Scene;
-import game.World;
-import main.KeyHandler;
+import game.Scene.State;
 
-import java.awt.*;
 /**
- * The Player class represents a player entity that extends the Entity class.
- * It includes additional functionality specific to the player, such as key handling and movement updates.
+ * @class Player
+ * @extends Character
+ * @brief Represents the player entity in the game.
  */
 public class Player extends Character {
-    int hasKey = 0; // Indicates whether the player has a key
+    int hasKey = 0;
 
     /**
-     * Constructor for the Player class.
-     *
-     * @param worldX        Initial X coordinate in the world
-     * @param worldY        Initial Y coordinate in the world
-     * @param dirX          Initial X direction
-     * @param dirY          Initial Y direction
-     * @param speed         Speed of the player
-     * @param facing        Initial facing direction for animation
-     * @param spriteCntMax  Maximum number of sprites for animations
-     * @param spriteSpeed   Speed of sprite animations
+     * @brief Constructor for the Player class.
+     * @param worldX The X-coordinate of the player in the world.
+     * @param worldY The Y-coordinate of the player in the world.
+     * @param dirX The X-direction of the player.
+     * @param dirY The Y-direction of the player.
+     * @param speed The speed of the player's movement.
+     * @param facing The direction the player is facing (up, down, left, right).
+     * @param spriteCntMax The maximum number of sprites for animation.
+     * @param spriteSpeed The speed of sprite animation.
      */
     public Player(int worldX, int worldY, int dirX, int dirY, int speed, String facing, int spriteCntMax, int spriteSpeed) {
-        super(worldX, worldY, dirX, dirY, speed, facing, spriteCntMax, spriteSpeed);  // Calls the parent class for entity setup
+        super(worldX, worldY, dirX, dirY, speed, facing, spriteCntMax, spriteSpeed);  // Calls the parent class for entity setup, specifying scene.keyH for player
 
-        hitbox= new Rectangle(16,16,32,32);
         loadTextures("player");
     }
 
     /**
-     * Update method for the Player class.
-     *
-     * @param world The current game world
-     * @param dt    Time elapsed since the last update
+     * @brief Updates the player entity based on the current scene and time elapsed.
+     * @param scene The current game scene.
+     * @param dt The time elapsed since the last update.
      */
-    public  void  update(World world, double dt){
-        int tmp;
-        KeyHandler keyH=KeyHandler.getInstance();
-        if(keyH.upPressed || keyH.downPressed || keyH.leftPressed || keyH.rightPressed){
-            if(speed < 30){ //Acceleration
-                speed += 20*dt;
-            }
-            if(speed>30){
-                speed=30;
-            }
-            dirX = dirY=0;
-            
-            if(keyH.leftPressed){
-                dirX = -1;
-                facing = "left";
-            }
-            if(keyH.rightPressed){
-                dirX = 1;
-                facing = "right";
-            }
-            if(keyH.upPressed){
-                dirY = -1;
-                facing = "up";
-            }
-            if(keyH.downPressed){
-                dirY = 1;
-                facing = "down";
-            }
-        } else { // Deceleration system (use of dirX & dirY instead of facing in case of diagonal movements)
-            if (speed > 0) {
-                speed -= dt;
+    public void update(Scene scene, double dt) {
+        super.update(scene, dt);  // Calls the parent class update method
+
+        // World updates
+        if (scene.state == State.WORLD) {
+            if (scene.keyH.upPressed || scene.keyH.downPressed || scene.keyH.leftPressed || scene.keyH.rightPressed) {
+                dirX = 0;
+                dirY = 0;
+                if (scene.keyH.leftPressed) {
+                    dirX = -1;
+                    facing = "left";
+                }
+                if (scene.keyH.rightPressed) {
+                    dirX = 1;
+                    facing = "right";
+                }
+                if (scene.keyH.upPressed) {
+                    dirY = -1;
+                    facing = "up";
+                }
+                if (scene.keyH.downPressed) {
+                    dirY = 1;
+                    facing = "down";
+                }
+                accelerate(30, dt);
             } else {
-                speed = 0;
+                if (speed > 0) {
+                    decelerate(dt);
+                }
             }
         }
 
-        //Updating player position accurately (at any point in time either pressing keys or not)
-        if(dirX == -1){
-            tmp=worldX;
-            worldX -= speed*dt;
-            if (checkCollision(world.getMap()))worldX = tmp;
-
-        }
-        if(dirX == 1){
-            tmp=worldX;
-            worldX += speed*dt;
-            if (checkCollision(world.getMap()))worldX = tmp;
-        }
-        if(dirY == -1){
-            tmp=worldY;
-            worldY -= speed*dt;
-            if (checkCollision(world.getMap()))worldY = tmp;
-        }
-        if(dirY == 1){
-            tmp=worldY;
-            worldY += speed*dt;
-            if (checkCollision(world.getMap()))worldY = tmp;
+        // Fightscene updates
+        if (scene.state == State.FIGHT) {
+            // To be implemented
         }
     }
 }

@@ -1,3 +1,8 @@
+/**
+ * @file TileManager.java
+ * @brief This file contains the implementation of the TileManager class, which manages tiles in the game world.
+ */
+
 package tiles;
 
 import game.World;
@@ -8,12 +13,13 @@ import java.io.File;
 import java.io.FileReader;
 
 /**
- * The TileManager class manages tiles for the game, including loading textures and rendering the map.
+ * @class TileManager
+ * @brief Manages tiles in the game world.
  */
 public class TileManager {
     public final int tileSize = 16;
     public final int scale = 3;
-    public final int screenSize = tileSize * scale;
+    public final int tileScreenSize = tileSize * scale;
 
     // Tiles for textures
     private final int nbFloorTextures = 6;
@@ -26,15 +32,16 @@ public class TileManager {
     private Tile[][] _topMap;
 
     /**
-     * Constructor for TileManager, initializes textures and loads the map.
+     * Constructor for the TileManager class.
      *
-     * @param world The World object for obtaining the map size.
+     * @param world The world for which tiles are managed.
      */
     public TileManager(World world) {
+        // Textures
         _floorMapTextures = new Tile[nbFloorTextures];
         _topMapTextures = new Tile[nbTopTextures];
 
-        //Map itself
+        // Map itself
         _floorMap = new Tile[world.maxRow][world.maxCol];
         _topMap = new Tile[world.maxRow][world.maxCol];
 
@@ -44,51 +51,63 @@ public class TileManager {
     }
 
     /**
-     * Stores textures in a Tile array.
+     * Gets the tile of the top map with its x, y coordinates.
      *
-     * @param name         Name of the texture.
-     * @param tiles        Array to store the textures.
-     * @param start        Starting point for loading textures for the array.
-     * @param size         Number of textures to load.
-     * @param animated     Boolean indicating if the textures are animated.
-     * @param spriteCntMax Number of sprites if the texture is animated.
-     * @param spriteSpeed  Sprite speed if the texture is animated.
+     * @param x X-coordinate of the tile.
+     * @param y Y-coordinate of the tile.
+     * @return The corresponding tile of the top map.
      */
-    private void storeTexture(String name, Tile[] tiles, int start, int size, boolean animated, int spriteCntMax, int spriteSpeed,boolean collision) {
+    public Tile getTile(int x, int y) {
+        int param = tileScreenSize;
+        int i = x / param;
+        int j = y / param;
+
+        return _topMap[j][i];
+    }
+
+    /**
+     * Stores in a Tile array (from "start" to "start + size") the textures that are loaded for the game.
+     *
+     * @param name       Name of the texture.
+     * @param tiles      Array in which to store the textures.
+     * @param start      Starting point of loading textures for the array.
+     * @param size       If there are multiple textures with the same name but with variations (ex : grass1, grass2...).
+     * @param animated   Boolean if the textures are supposed to be animated (different folder if animated or not).
+     * @param spriteCntMax Number of sprites if the texture is animated (if not, then put 1).
+     * @param spriteSpeed   Sprite speed if the texture is animated (if not, then put 0).
+     * @param isBlocking    Boolean to make the player collide with the tile or not.
+     */
+    private void storeTexture(String name, Tile[] tiles, int start, int size, boolean animated, int spriteCntMax,
+                              int spriteSpeed, boolean isBlocking) {
         for (int i = start; i < size + start; i++) {
-            Tile tile = new Tile(spriteCntMax, spriteSpeed);
+            Tile tile = new Tile(spriteCntMax, spriteSpeed, isBlocking, i);
             tiles[i] = tile;
-            tiles[i].setCollision(collision);
-            tiles[i].loadTextures(name, animated, i-start);
+            tiles[i].loadTextures(name, animated, i - start);
         }
     }
 
     /**
-     * Loads all tiles' textures for the map in an array.
+     * Loading all tiles' textures of the game for the map in an array.
      */
-    private void loadTextures(){
-        //Floor map textures
-        storeTexture("grass",_floorMapTextures,0,3,false,1, 0,false);
-        //Decoration textures (plants and tall grass)
-        storeTexture("grass0",_floorMapTextures,3,1,true,5, 20,false);
-        storeTexture("grass1",_floorMapTextures,4,1,true,5, 20,false);
-        storeTexture("flower0",_floorMapTextures,5,1,true,6, 20,false);
+    private void loadTextures() {
+        // Floor map textures
+        storeTexture("grass", _floorMapTextures, 0, 3, false, 1, 0, false);
+        // Decoration textures (plants and tall grass)
+        storeTexture("grass0", _floorMapTextures, 3, 1, true, 5, 20, false);
+        storeTexture("grass1", _floorMapTextures, 4, 1, true, 5, 20, false);
+        storeTexture("flower0", _floorMapTextures, 5, 1, true, 6, 20, false);
 
-        //Top map textures (trees & forest)
-        storeTexture("void",_topMapTextures	,0,1,false,1, 0,false);
+        // Top map textures (trees & forest)
+        storeTexture("void", _topMapTextures, 0, 1, false, 1, 0, false);
 
-        storeTexture("forest", _topMapTextures, 1,9,false,1, 0,true);
-        storeTexture("tree", _topMapTextures, 10,9,false,1, 0,true);
+        storeTexture("forest", _topMapTextures, 1, 9, false, 1, 0, true);
+        storeTexture("tree", _topMapTextures, 10, 9, false, 1, 0, true);
 
-        storeTexture("forest_topleft", _topMapTextures,19,3,false,1, 0,true);
-        storeTexture("forest_topright", _topMapTextures,22,2,false,1, 0,true);
-        storeTexture("forest_bottomleft", _topMapTextures,24,2,false,1, 0,true);
-        storeTexture("forest_bottomright", _topMapTextures,26,1,false,1, 0,true);
-        storeTexture("fire", _topMapTextures,27,1,true,7, 15,true);
-
-
-        
-
+        storeTexture("forest_topleft", _topMapTextures, 19, 3, false, 1, 0, true);
+        storeTexture("forest_topright", _topMapTextures, 22, 2, false, 1, 0, true);
+        storeTexture("forest_bottomleft", _topMapTextures, 24, 2, false, 1, 0, true);
+        storeTexture("forest_bottomright", _topMapTextures, 26, 1, false, 1, 0, true);
+        storeTexture("fire", _topMapTextures, 27, 1, true, 7, 15, true);
     }
 
     /**
@@ -96,7 +115,7 @@ public class TileManager {
      *
      * @param filePath Path of the txt map.
      * @param world    World to get the size.
-     * @param mapTile  The map in which to store the read tiles on the txt.
+     * @param mapTile  The map in which we store the read tiles on the txt.
      * @param textures The textures tile array where we read the textures from.
      */
     private void loadMap(String filePath, World world, Tile[][] mapTile, Tile[] textures) {
@@ -112,15 +131,18 @@ public class TileManager {
                     String numbers[] = line.split("\\s+");
                     int num = Integer.parseInt(numbers[j]); // Reading the file itself and stocking int read
 
-                    Tile tileCurrent = new Tile(textures[num].spriteCntMax, textures[num].spriteSpeed);   //Creating new tile to store with the according texture
-                    tileCurrent.setPos(tileSize*j*scale, tileSize*i*scale);
-                    mapTile[i][j] = tileCurrent;        //Setting the tile to the actual map
-                    mapTile[i][j].setCollision(textures[num].getCollision());
-                    mapTile[i][j].setTexture(textures[num].image);  //Set the current tile texture to what corresponds in the textures array
+                    Tile tileCurrent = new Tile(textures[num].spriteCntMax, textures[num].spriteSpeed,
+                            textures[num].getCollision(), num); // Creating new tile to store with the according texture
+                    tileCurrent.setPos(tileSize * j * scale, tileSize * i * scale);
 
-                    //System.out.print(num + " ");
+                    mapTile[i][j] = tileCurrent; // Setting the tile to the actual map
+                    mapTile[i][j].setTexture(textures[num].image); // Set the current tile texture to what corresponds
+                    // in the textures array
+                    mapTile[i][j].setCollision(textures[num].getCollision()); // Set the collision factor to the tile
+
+                    // System.out.print(num + " ");
                 }
-                //System.out.println("");
+                // System.out.println("");
             }
             br.close();
 
@@ -130,12 +152,40 @@ public class TileManager {
     }
 
     /**
-     * Draws tiles on the screen based on the player's position.
+     * Updates the tile frames based on the player's position.
      *
-     * @param g2            Graphics2D object for drawing.
-     * @param world         World object to get player information.
-     * @param screenWidth   Screen width.
-     * @param screenHeight  Screen height.
+     * @param world        The world object.
+     * @param screenWidth  The screen width.
+     * @param screenHeight The screen height.
+     */
+    public void update(World world, int screenWidth, int screenHeight) {
+        int playerScreenX = (screenWidth - world.player.screenSize) / 2;
+        int playerScreenY = (screenHeight - world.player.screenSize) / 2;
+
+        for (int i = 0; i < world.maxRow; i++) {
+            for (int j = 0; j < world.maxCol; j++) {
+                int worldX = _floorMap[i][j].getPos()[0];
+                int worldY = _floorMap[i][j].getPos()[1];
+
+                // Checks if the player is close enough to the tile to render it to optimize memory and CPU usage
+                if (worldX + tileSize * scale > world.player.worldX - playerScreenX
+                        && worldX - tileSize * scale < world.player.worldX + playerScreenX
+                        && worldY + tileSize * scale > world.player.worldY - playerScreenY
+                        && worldY - tileSize * scale < world.player.worldY + playerScreenY) {
+                    _floorMap[i][j].updateFrames();
+                    _topMap[i][j].updateFrames();
+                }
+            }
+        }
+    }
+
+    /**
+     * Draws the tiles in the game world.
+     *
+     * @param g2           The graphics context.
+     * @param world        The world object.
+     * @param screenWidth  The screen width.
+     * @param screenHeight The screen height.
      */
     public void draw(Graphics2D g2, World world, int screenWidth, int screenHeight) {
         int playerScreenX = (screenWidth - world.player.screenSize) / 2;
@@ -147,7 +197,7 @@ public class TileManager {
                 int worldX = _floorMap[i][j].getPos()[0];
                 int worldY = _floorMap[i][j].getPos()[1];
 
-                // Checks if the player is close enough to the tile to render it for optimization
+                // Checks if the player is close enough to the tile to render it to optimize memory and CPU usage
                 if (worldX + tileSize * scale > world.player.worldX - playerScreenX
                         && worldX - tileSize * scale < world.player.worldX + playerScreenX
                         && worldY + tileSize * scale > world.player.worldY - playerScreenY
@@ -159,14 +209,5 @@ public class TileManager {
                 }
             }
         }
-
-    }
-
-    public Tile getTile(int x,int y){
-        int param=tileSize*scale;
-        int i=x/param;
-        int j=y/param;
-
-        return _topMap[j][i];
     }
 }

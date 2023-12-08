@@ -1,22 +1,30 @@
+/**
+ * @file KeyHandler.java
+ * @brief This file contains the implementation of the KeyHandler class, following the singleton pattern.
+ */
+
 package main;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 /**
- * Singleton design pattern for the KeyHandler class to handle keyboard input.
+ * @class KeyHandler
+ * @implements KeyListener
+ * @brief Handles keyboard input using the singleton pattern.
  */
 public final class KeyHandler implements KeyListener {
     public static KeyHandler instance;
     public boolean upPressed, downPressed, leftPressed, rightPressed, interactPressed;
+    public boolean pausePressed;
 
-    // Private constructor to prevent external instantiation
+    // Private constructor to prevent instantiation from outside the class
     private KeyHandler() {}
 
     /**
-     * Controls access to the singleton instance of KeyHandler.
+     * Gets the instance of the KeyHandler using the singleton pattern.
      *
-     * @return The singleton instance of KeyHandler.
+     * @return The KeyHandler instance.
      */
     public static KeyHandler getInstance() {
         if (instance == null) {
@@ -25,26 +33,15 @@ public final class KeyHandler implements KeyListener {
         return instance;
     }
 
-    /**
-     * Invoked when a key is typed.
-     *
-     * @param e The KeyEvent object.
-     */
     @Override
     public void keyTyped(KeyEvent e) {
-        // Not used in this implementation
+        // Not used
     }
 
-    /**
-     * Invoked when a key is pressed.
-     *
-     * @param e The KeyEvent object.
-     */
     @Override
     public void keyPressed(KeyEvent e) {
         int code = e.getKeyCode();
 
-        // Check which key is pressed and set the corresponding boolean flag
         if (code == KeyEvent.VK_Z) {
             upPressed = true;
         }
@@ -60,18 +57,15 @@ public final class KeyHandler implements KeyListener {
         if (code == KeyEvent.VK_SPACE) {
             interactPressed = true;
         }
+        if (code == KeyEvent.VK_ESCAPE) {
+            pausePressed = true;
+        }
     }
 
-    /**
-     * Invoked when a key is released.
-     *
-     * @param e The KeyEvent object.
-     */
     @Override
     public void keyReleased(KeyEvent e) {
         int code = e.getKeyCode();
 
-        // Check which key is released and set the corresponding boolean flag
         if (code == KeyEvent.VK_Z) {
             upPressed = false;
         }
@@ -86,6 +80,9 @@ public final class KeyHandler implements KeyListener {
         }
         if (code == KeyEvent.VK_SPACE) {
             interactPressed = false;
+        }
+        if (code == KeyEvent.VK_ESCAPE) {
+            pausePressed = false;
         }
     }
 }

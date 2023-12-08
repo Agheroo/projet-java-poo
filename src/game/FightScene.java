@@ -1,47 +1,55 @@
+/**
+ * @file FightScene.java
+ * @brief This file contains the implementation of the FightScene class, representing the scene during a fight between a player and an enemy.
+ */
+
 package game;
 
-import entity.Ennemy;  // Corrected typo in class name
+import entity.Enemy;
 import entity.Player;
 
 import java.awt.*;
 
 /**
- * The FightScene class represents a scene for handling combat between a player and an enemy.
+ * @class FightScene
+ * @extends Scene
+ * @brief Represents the scene during a fight between a player and an enemy.
  */
 public class FightScene extends Scene {
-    Player player;
-    Ennemy ennemy;  // Corrected typo in class name
+    public Player player;
+    public Enemy enemy;
 
     /**
-     * Constructor for the FightScene class.
-     *
-     * @param _player The player object in the combat scene
-     * @param _ennemy The enemy object in the combat scene
+     * @brief Constructor for the FightScene class.
+     * @param player The player entity in the fight.
+     * @param enemy The enemy entity in the fight.
      */
-    public FightScene(Player _player, Ennemy _ennemy) {
-        System.out.println("Je suis en combat");  // French: "I am in combat"
-        player = _player;
-        ennemy = _ennemy;
+    public FightScene(Player player, Enemy enemy) {
+        System.out.println("Entering combat");
+        this.player = player;
+        this.enemy = enemy;
     }
 
     /**
-     * Update method for the FightScene.
-     * Currently commented out to prevent unnecessary updates.
+     * @brief Updates the fight scene.
      */
     @Override
     public void update() {
+        checkSceneChange();
+        if (state == State.FIGHT) {
+            // Additional logic for the fight scene update
+        }
         // player.update(dt);
     }
 
     /**
-     * Draw method for the FightScene.
-     *
-     * @param g2           Graphics2D object for drawing
-     * @param screenWidth  Screen width for positioning the player
-     * @param screenHeight Screen height for positioning the player
+     * @brief Draws the fight scene.
+     * @param g2 The Graphics2D object for drawing.
+     * @param screenWidth The width of the screen.
+     * @param screenHeight The height of the screen.
      */
     @Override
     public void draw(Graphics2D g2, int screenWidth, int screenHeight) {
-        player.draw(g2, screenWidth / 2 - (player.screenSize / 2), screenHeight / 2 - (player.screenSize / 2));
+        player.drawInFight(g2, screenWidth / 2 - (player.screenSize / 2), screenHeight / 2 - (player.screenSize / 2));
     }
 }

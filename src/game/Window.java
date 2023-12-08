@@ -1,42 +1,68 @@
+/**
+ * @file Window.java
+ * @brief This file contains the implementation of the Window class, responsible for displaying the game based on the backend (World.java).
+ */
+
 package game;
 
-import tiles.TileManager;
-
 import javax.swing.JPanel;
+
+import game.Scene.State;
 
 import java.awt.*;
 
 /**
- * The Window class manages the display of the game, based on the backend (World.java).
+ * @class Window
+ * @extends JPanel
+ * @implements Runnable
+ * @brief Represents the window that displays the game.
  */
 public class Window extends JPanel implements Runnable {
-    // Game world
+    /**
+     * The game scene.
+     */
     public Scene scene;
 
-    // Game screen dimensions
+    /**
+     * The width of the game screen.
+     */
     public final int screenWidth = 800;
+
+    /**
+     * The height of the game screen.
+     */
     public final int screenHeight = 600;
+
+    /**
+     * The game world.
+     */
     World world = World.getWorld();
 
-    // Game initialization
+    /**
+     * The frames per second for the game.
+     */
     private final int _FPS = 120;
+
+    /**
+     * The game thread.
+     */
     Thread gameThread;
 
     /**
-     * Constructor for the Window class.
+     * @brief Constructor for the Window class.
      */
     public Window() {
-        scene = CreateScene.creator();
+        scene = World.getWorld();
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));
         this.setBackground(Color.black);
         this.setDoubleBuffered(true);
         this.addKeyListener(scene.keyH);
         this.setFocusable(true);
+        world.setupGame(); // Création de l'instance du setter
     }
 
     /**
-     * Implementation of the run method for the Runnable interface.
-     * Manages the game loop and updates the scene at a specific frame rate.
+     * @brief Runs the game loop.
      */
     @Override
     public void run() {
@@ -51,33 +77,31 @@ public class Window extends JPanel implements Runnable {
             lastTime = currentTime;
 
             if (scene.dt > 0.1) {
-                update();           // update() method for the window both updates the world and repaints its components
+                update(); // update() method for window both updates the world and repaints the components of it
                 scene.dt -= 0.1;
             }
         }
     }
 
     /**
-     * Starts the game thread.
+     * @brief Starts the game thread.
      */
     public void startGameThread() {
-        world.setupGame(); // Création de l'instance du setter
         gameThread = new Thread(this);
         gameThread.start();
     }
 
     /**
-     * Updates the scene, including the world's properties and animations.
+     * @brief Updates the game scene.
      */
     public void update() {
-        scene.update();     // Updates the whole world's props & animations
+        scene.update(); // Updates the whole world's props & animations
         repaint();
     }
 
     /**
-     * Overrides the paintComponent method to draw the scene on the JPanel.
-     *
-     * @param g Graphics object for painting
+     * @brief Paints the components of the game window.
+     * @param g The Graphics object for drawing.
      */
     @Override
     public void paintComponent(Graphics g) {
@@ -86,6 +110,13 @@ public class Window extends JPanel implements Runnable {
         Graphics2D g2 = (Graphics2D) g;
 
         scene.draw(g2, screenWidth, screenHeight);
+
+        // Darkens the scene on the background to let the menu on top
+        if (scene.state == State.PAUSE) {
+            g2.setColor(new Color(0, 0, 0, 180));
+            g2.fillRect(0, 0, screenWidth, screenHeight);
+            scene.menu.draw(g2, screenWidth, screenHeight);
+        }
 
         g2.dispose();
     }
