@@ -46,7 +46,6 @@ public class Textbox extends JLabel{
     }
 
 
-    //TODO: CHANGE THE PATH TO MAKE IT WORK PLEASE :C
     private void loadFont(String fontName){
         try {
             GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
