@@ -7,8 +7,11 @@ package game;
 
 import entity.Enemy;
 import entity.Player;
+import game.Scene.State;
 
 import java.awt.*;
+import java.util.Vector;
+
 
 /**
  * @class FightScene
@@ -16,8 +19,11 @@ import java.awt.*;
  * @brief Represents the scene during a fight between a player and an enemy.
  */
 public class FightScene {
+    public enum FightState {FIGHTING, WON , LOST};
+    //private double dt = Scene.getdt();
     public Player player;
     public Enemy enemy;
+    public FightState state;
 
     /**
      * @brief Constructor for the FightScene class.
@@ -28,17 +34,32 @@ public class FightScene {
         System.out.println("Entering combat");
         this.player = player;
         this.enemy = enemy;
+        state = FightState.FIGHTING;
     }
 
     /**
      * @brief Updates the fight scene.
      */
-    public void update() {
+    public void update(Scene scene) {
 
         // Additional logic for the fight scene update
         System.out.println("Le joueur est en combat avec "+ enemy.name);
-
+        if(scene.keyH.interactPressed){
+            player.worldX = 15*player.screenSize;
+            player.worldY = 15*player.screenSize;
+            state = FightState.WON;
+            scene.state = State.WORLD;
+            player.speed = 0;
+            killEnemy(World.enemies);
+            
+            scene.keyH.interactPressed = false;
+        }
     }
+
+    public void killEnemy(Vector<Enemy> enemies){
+        enemies.remove(enemy);
+    }
+
 
     /**
      * @brief Draws the fight scene.

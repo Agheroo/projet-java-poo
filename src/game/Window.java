@@ -73,12 +73,12 @@ public class Window extends JPanel implements Runnable {
         while (gameThread != null) {
             currentTime = System.nanoTime();
 
-            scene.dt += (currentTime - lastTime) / drawInterval;
+            Scene.dt += (currentTime - lastTime) / drawInterval;
             lastTime = currentTime;
 
-            if (scene.dt > 0.1) {
+            if (Scene.dt > 0.1) {
                 update(); // update() method for window both updates the world and repaints the components of it
-                scene.dt -= 0.05;
+                Scene.dt -= 0.05;
             }
         }
     }

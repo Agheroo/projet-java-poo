@@ -11,8 +11,6 @@ import java.awt.*;
 
 import UI.HUD;
 import UI.HUD.MenuType;
-import entity.Enemy;
-import entity.Player;
 
 /**
  * @class Scene
@@ -28,7 +26,7 @@ public abstract class Scene {
     private State _lastState;
 
     public KeyHandler keyH = KeyHandler.getInstance();
-    public double dt = 0;
+    protected static double dt = 0;
     public State state;
     public HUD menu;
 
@@ -46,7 +44,9 @@ public abstract class Scene {
     public abstract void draw(Graphics2D g2, int screenWidth, int screenHeight);
     
 
-
+    public static double getdt(){
+        return dt;
+    }
     
     /**
      * @brief Gets the World scene.
@@ -91,4 +91,5 @@ public abstract class Scene {
         System.out.println("CHANGING SCENE TO: " + newState);
         this.state = newState;
     }
+
 }

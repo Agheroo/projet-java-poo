@@ -73,6 +73,8 @@ public class Player extends Character {
         // Fightscene updates
         if (scene.state == State.FIGHT) {
             // To be implemented
+            
+
         }
     }
 }
