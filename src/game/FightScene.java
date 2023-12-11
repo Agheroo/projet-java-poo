@@ -15,7 +15,7 @@ import java.awt.*;
  * @extends Scene
  * @brief Represents the scene during a fight between a player and an enemy.
  */
-public class FightScene extends Scene {
+public class FightScene {
     public Player player;
     public Enemy enemy;
 
@@ -33,13 +33,11 @@ public class FightScene extends Scene {
     /**
      * @brief Updates the fight scene.
      */
-    @Override
     public void update() {
-        checkSceneChange();
-        if (state == State.FIGHT) {
-            // Additional logic for the fight scene update
-        }
-        // player.update(dt);
+
+        // Additional logic for the fight scene update
+        System.out.println("Le joueur est en combat avec "+ enemy.name);
+
     }
 
     /**
@@ -48,8 +46,9 @@ public class FightScene extends Scene {
      * @param screenWidth The width of the screen.
      * @param screenHeight The height of the screen.
      */
-    @Override
     public void draw(Graphics2D g2, int screenWidth, int screenHeight) {
+        g2.setColor( new Color(0xFF2265));
+        g2.fillRect(100,200,50,150);
         player.drawInFight(g2, screenWidth / 2 - (player.screenSize / 2), screenHeight / 2 - (player.screenSize / 2));
     }
 }

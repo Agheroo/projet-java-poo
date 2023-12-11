@@ -27,10 +27,10 @@ public class Player extends Character {
      * @param spriteCntMax The maximum number of sprites for animation.
      * @param spriteSpeed The speed of sprite animation.
      */
-    public Player(int worldX, int worldY, int dirX, int dirY, int speed, String facing, int spriteCntMax, int spriteSpeed) {
-        super(worldX, worldY, dirX, dirY, speed, facing, spriteCntMax, spriteSpeed);  // Calls the parent class for entity setup, specifying scene.keyH for player
+    public Player(String entityName, int worldX, int worldY, int dirX, int dirY, int speed, String facing, int spriteCntMax, int spriteSpeed) {
+        super(entityName, worldX, worldY, dirX, dirY, speed, facing, spriteCntMax, spriteSpeed);  // Calls the parent class for entity setup, specifying scene.keyH for player
 
-        loadTextures("player");
+        loadTextures(entityName);
     }
 
     /**
@@ -62,10 +62,10 @@ public class Player extends Character {
                     dirY = 1;
                     facing = "down";
                 }
-                accelerate(30, dt);
+                accelerate(30,20, dt);
             } else {
                 if (speed > 0) {
-                    decelerate(dt);
+                    decelerate(1,dt);
                 }
             }
         }

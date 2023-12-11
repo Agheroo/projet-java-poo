@@ -44,14 +44,17 @@ public abstract class Scene {
      * @param screenHeight The height of the screen.
      */
     public abstract void draw(Graphics2D g2, int screenWidth, int screenHeight);
+    
 
+
+    
     /**
      * @brief Gets the World scene.
      * @return The World scene.
      */
-    public Scene worldScene() {
+    /*public Scene worldScene() {
         return World.getWorld();
-    }
+    }*/
 
     /**
      * @brief Creates and returns a new FightScene.
@@ -59,14 +62,15 @@ public abstract class Scene {
      * @param enemy The enemy entity in the fight.
      * @return The new FightScene.
      */
-    public Scene fightScene(Player player, Enemy enemy) {
+    /*public Scene fightScene(Player player, Enemy enemy) {
         return new FightScene(player, enemy);
-    }
+    }*/
+
 
     /**
      * @brief Checks for a change in the scene state based on user input.
      */
-    public void checkSceneChange() {
+    public void checkPauseScene() {
         if (keyH.pausePressed) {
             keyH.pausePressed = false;
 
@@ -76,10 +80,15 @@ public abstract class Scene {
                 state = State.PAUSE;
                 menu = new HUD(MenuType.PAUSE);
             } else {
-                System.out.println("CHANGING SCENE TO: WORLD");
+                System.out.println("CHANGING SCENE TO: "+_lastState);
                 state = _lastState;
                 menu = null;
             }
         }
+    }
+
+    public void changeScene(State newState){
+        System.out.println("CHANGING SCENE TO: " + newState);
+        this.state = newState;
     }
 }
