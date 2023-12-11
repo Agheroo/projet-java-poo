@@ -40,13 +40,10 @@ public class Textbox extends JLabel{
 
         // Set the label's font size to the newly determined size.
         _font = new Font(fontName, Font.PLAIN, _fontSizeToUse);
-
-
-        loadFont(fontName);
     }
 
 
-    private void loadFont(String fontName){
+    public static void loadFont(String fontName){
         try {
             GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
             ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File("res/hud/font/rainyhearts.ttf")));

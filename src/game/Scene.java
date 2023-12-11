@@ -17,6 +17,7 @@ import UI.HUD.MenuType;
  * @brief Represents an abstract scene in the game.
  */
 public abstract class Scene {
+    
     /**
      * @enum State
      * @brief Represents the possible states of a scene (WORLD, FIGHT, PAUSE, MENU).

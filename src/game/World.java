@@ -15,6 +15,8 @@ import game.FightScene.FightState;
 import java.awt.*;
 import java.util.Vector;
 
+import UI.Textbox;
+
 /**
  * @class World
  * @extends Scene
@@ -43,6 +45,7 @@ public class World extends Scene {
      * @return The World instance.
      */
     public static World getWorld() {
+        Textbox.loadFont("rainyhearts");
         if (_instance == null) {
             _instance = new World();
             _instance.state = State.WORLD;
@@ -74,7 +77,6 @@ public class World extends Scene {
      * Updates the game world based on the scene state.
      */
     public void update() {
-        System.out.println(enemies);
         checkPauseScene();
         if (state == State.WORLD) {
             int playerScreenX = (800 - player.screenSize) / 2;
