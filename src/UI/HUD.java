@@ -40,7 +40,7 @@ public class HUD {
         _buttons = new ChoiceButton[_nbButtons];
 
         //To replace with the current names that we want depending on the MenuType
-        _title = new ChoiceButton(_titleWidth,_titleHeight,"PAUSE","Calibri",new Color(0x834317));
+        _title = new ChoiceButton(_titleWidth,_titleHeight,"PAUSE","rainyhearts",new Color(0x834317));
         for(int i =0; i<_nbButtons ; i++){
             _buttons[i] = new ChoiceButton(80*3,20*3, "BUTTON " +i, "rainyhearts",Color.black);
         }

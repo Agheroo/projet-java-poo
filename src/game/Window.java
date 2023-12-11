@@ -41,7 +41,7 @@ public class Window extends JPanel implements Runnable {
     /**
      * The frames per second for the game.
      */
-    private final int _FPS = 120;
+    private final int _FPS = 60;
 
     /**
      * The game thread.
@@ -78,7 +78,7 @@ public class Window extends JPanel implements Runnable {
 
             if (scene.dt > 0.1) {
                 update(); // update() method for window both updates the world and repaints the components of it
-                scene.dt -= 0.1;
+                scene.dt -= 0.05;
             }
         }
     }
