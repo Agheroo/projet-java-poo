@@ -12,6 +12,9 @@ import game.Scene.State;
 import java.awt.*;
 import java.util.Vector;
 
+import UI.HUD;
+import UI.HUD.MenuType;
+
 
 /**
  * @class FightScene
@@ -24,6 +27,7 @@ public class FightScene {
     public Player player;
     public Enemy enemy;
     public FightState state;
+    private HUD menu;
 
     /**
      * @brief Constructor for the FightScene class.
@@ -35,6 +39,7 @@ public class FightScene {
         this.player = player;
         this.enemy = enemy;
         state = FightState.FIGHTING;
+        menu = new HUD(MenuType.FIGHT);
     }
 
     /**
@@ -69,7 +74,8 @@ public class FightScene {
      */
     public void draw(Graphics2D g2, int screenWidth, int screenHeight) {
         g2.setColor( new Color(0xFF2265));
-        g2.fillRect(100,200,50,150);
+        g2.fillRect(100,200,400,150);
         player.drawInFight(g2, screenWidth / 2 - (player.screenSize / 2), screenHeight / 2 - (player.screenSize / 2));
+        menu.draw(g2, screenWidth, screenHeight);
     }
 }

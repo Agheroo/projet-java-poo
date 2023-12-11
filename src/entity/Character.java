@@ -110,11 +110,11 @@ public abstract class Character extends Entity {
      */
     private void checkNearTiles(TileManager tileManager) {
         // Checking tiles with hitbox
-        if (isBlocked(tileManager.getTile(worldX + hitbox.width, worldY + hitbox.height))) {
+        if (isBlocking(tileManager.getTile(worldX + hitbox.width, worldY + hitbox.height))) {
             worldX = hitbox.x - hitbox.width / 2;
             worldY = hitbox.y - hitbox.height / 2;
 
-            // TODO: try to add some statements to make the player move diagonally if he tries instead of getting fully stucked
+
         }
     }
 
@@ -123,7 +123,7 @@ public abstract class Character extends Entity {
      * @param tile The Tile to check.
      * @return True if the tile is blocking, false otherwise.
      */
-    public boolean isBlocked(Tile tile) {
+    public boolean isBlocking(Tile tile) {
         return tile.getCollision();
     }
 

@@ -19,12 +19,11 @@ import javax.imageio.ImageIO;
 public class Tile {
     private boolean _isBlocking = false;
     private int _worldX, _worldY;
-    public int indexName;
 
     // Display purpose variables
     private final int tileSize = 16;
     private final int scale = 3;
-    private final int screenSize = tileSize * scale;
+    public final int screenSize = tileSize * scale;
 
     private int _spriteCnt = 0; // Variable responsible for the incrementation of the different sprites
     private int _spriteUpdater = 0; // Variable responsible for the incrementation of the speed of the sprites
@@ -46,7 +45,6 @@ public class Tile {
         this.spriteCntMax = spriteCntMax;
         this.spriteSpeed = spriteSpeed;
         this._isBlocking = isBlocking;
-        this.indexName = ind;
         image = new BufferedImage[spriteCntMax];
     }
 
