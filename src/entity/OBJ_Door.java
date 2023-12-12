@@ -24,7 +24,7 @@ public class OBJ_Door extends Props {
         loadTextures("door");
         collision = true;
     }
-    public void interagitAvec(Player p, World gp,int i) {
+    public void interagitAvec(Player p) {
         System.out.println("Door Interaction");
 
     }
