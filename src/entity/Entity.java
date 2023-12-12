@@ -31,6 +31,8 @@ public abstract class Entity {
     protected int _spriteSpeed; // How fast the sprites are changing (higher spriteSpeed means slower time to change)
     protected int _spriteCntMax; // How many sprites does the entity have
 
+    public String name; //Name of the current entity
+
     /**
      * @brief Default constructor for the Entity class.
      */
@@ -45,11 +47,12 @@ public abstract class Entity {
      * @param _spriteCntMax The maximum number of sprites for animation.
      * @param spriteSpeed The speed of sprite animation.
      */
-    public Entity(int x, int y, int _spriteCntMax, int spriteSpeed) {
+    public Entity(String entityName, int x, int y, int _spriteCntMax, int spriteSpeed) {
         this.worldX = x;
         this.worldY = y;
         this._spriteCntMax = _spriteCntMax;
         this._spriteSpeed = spriteSpeed;
+        this.name = entityName;
     }
 
     /**
@@ -67,7 +70,7 @@ public abstract class Entity {
      * @brief Loads textures for the entity based on its name.
      * @param name The name used to determine the textures to load.
      */
-    private void loadTextures(String name) {
+    private void loadTextures() {
         // TODO: Different texture loading from characters
     }
 

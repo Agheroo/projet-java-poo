@@ -12,14 +12,14 @@ import game.World;
  * @brief Responsible for initializing and setting up objects (entities) in the game world.
  */
 public class EntitySetter {
-    World gp;
+    World world;
 
     /**
      * @brief Constructor for the EntitySetter class.
      * @param gp The World object representing the game world.
      */
-    public EntitySetter(World gp) {
-        this.gp = gp;
+    public EntitySetter(World world) {
+        this.world = world;
     }
 
     /**
@@ -27,20 +27,20 @@ public class EntitySetter {
      */
     public void setObject() {
         // Create and set up a Key object at a specific location in the world
-        gp.obj[0] = new OBJ_Key();
+        world.obj[0] = new OBJ_Key();
         int tileSize = 16;
         int scale = 3;
-        gp.obj[0].worldX = 13 * tileSize * scale;
-        gp.obj[0].worldY = 13 * tileSize * scale;
+        world.obj[0].worldX = 13 * tileSize * scale;
+        world.obj[0].worldY = 13 * tileSize * scale;
 
         // Create and set up a Door object at a specific location in the world
-        gp.obj[1] = new OBJ_Door();
-        gp.obj[1].worldX = 14 * tileSize * scale;
-        gp.obj[1].worldY = 13 * tileSize * scale;
+        world.obj[1] = new OBJ_Door();
+        world.obj[1].worldX = 14 * tileSize * scale;
+        world.obj[1].worldY = 13 * tileSize * scale;
 
         // Create and set up a Chest object at a specific location in the world
-        gp.obj[2] = new OBJ_Chest();
-        gp.obj[2].worldX = 15 * tileSize * scale;
-        gp.obj[2].worldY = 13 * tileSize * scale;
+        world.obj[2] = new OBJ_Chest();
+        world.obj[2].worldX = 15 * tileSize * scale;
+        world.obj[2].worldY = 13 * tileSize * scale;
     }
 }
