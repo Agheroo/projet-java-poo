@@ -158,23 +158,9 @@ public class Player extends Character {
 
     public void pickUpObject(World gp, int i) {
         if(i != 999) {
-            String objectName = gp.obj[i].name;
+            Entity objectName = gp.obj[i];
 
-            switch(objectName) {
-                case "Key":
-                    interagitAvec(entity);
-                    hasKey++;
-                    gp.obj[i] = null;
-                    System.out.println("Key:"+hasKey);
-                    break;
-                case "Door":
-                    if(hasKey > 0 ) {
-                        gp.obj[i] = null;
-                        hasKey--;
-                    }
-                    System.out.println("Key:"+hasKey);
-                    break;
-            }
+            objectName.interagitAvec(this);
         }
     }
 }

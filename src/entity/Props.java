@@ -19,7 +19,7 @@ import javax.imageio.ImageIO;
  * @extends Entity
  * @brief Represents in-game props with properties such as image, name, and position.
  */
-public class Props extends Entity {
+public abstract class Props extends Entity {
     public BufferedImage image; // Image representing the prop
     public String name; // Name of the prop
 

@@ -88,5 +88,5 @@ public abstract class Entity {
         }
     }
 
-    protected void interagitAvec(Player player) {}
+    protected abstract void interagitAvec(Player player);
 }
