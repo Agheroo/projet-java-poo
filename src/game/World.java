@@ -27,6 +27,7 @@ public class World extends Scene {
     public EntitySetter aSetter = new EntitySetter(this); // Instance of EntitySetter
     // Player settings
     public Props[] obj = new Props[10]; // The array that lists all objects
+    // TODO : https://www.geeksforgeeks.org/java-util-dictionary-class-java/
     public Player player = new Player(15 * tileManager.tileSize * tileManager.scale,
             15 * tileManager.tileSize * tileManager.scale, 0, 0, 0, "down", 4, 20);
 

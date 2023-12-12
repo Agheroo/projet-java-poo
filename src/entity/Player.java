@@ -7,6 +7,7 @@ package entity;
 
 import game.Scene;
 import game.Scene.State;
+import game.World;
 
 /**
  * @class Player
@@ -14,7 +15,7 @@ import game.Scene.State;
  * @brief Represents the player entity in the game.
  */
 public class Player extends Character {
-    int hasKey = 0;
+
 
     /**
      * @brief Constructor for the Player class.
@@ -32,7 +33,9 @@ public class Player extends Character {
 
         loadTextures("player");
     }
-
+    public void interagitAvec(Entity b) {
+        b.interagitAvec(this);
+    }
     /**
      * @brief Updates the player entity based on the current scene and time elapsed.
      * @param scene The current game scene.

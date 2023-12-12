@@ -30,9 +30,9 @@ public abstract class Character extends Entity {
     int strength;
     int defense;
     int initiative;
-
     public int speed;
     public int dirX, dirY;
+    int hasKey = 0; //normalement dans player
 
     // Which direction is the entity facing (if directions are available) for animation
     public String facing;
@@ -67,7 +67,8 @@ public abstract class Character extends Entity {
         hitbox.y = y;
         hitbox.width = screenSize / 2;
         hitbox.height = screenSize / 2;
-
+        hitboxDefaultX = hitbox.x;
+        hitboxDefaultY = hitbox.y;
         this.dirX = dirX;
         this.dirY = dirY;
         this.speed = speed;
@@ -97,7 +98,12 @@ public abstract class Character extends Entity {
             hitbox.y = worldY + hitbox.height / 2;
 
             move(World.getWorld(), speed, dt);
+            // CHECK THE COLLISION
             checkNearTiles(currWorld.tileManager);
+            collisionOn = false;
+            //CHECK OBJECT COLLISION
+            int objIndex = checkObject(this, currWorld, true);
+            pickUpObject(currWorld, objIndex);
 
             updateFrames();
         }
@@ -114,6 +120,96 @@ public abstract class Character extends Entity {
             worldY = hitbox.y - hitbox.height / 2;
 
             // TODO: try to add some statements to make the player move diagonally if he tries instead of getting fully stucked
+        }
+    }
+    public int checkObject (Entity entity, World gp, boolean player) {
+        int index = 999;
+        for(int i = 0; i < gp.obj.length; i++) {
+            if(gp.obj[i] != null) {
+                // Get entity's hitbox position
+                entity.hitbox.x = (entity.worldX + entity.hitbox.x)/2;
+                entity.hitbox.y = (entity.worldY + entity.hitbox.y)/2;
+
+                // Get the object's solid area position
+                gp.obj[i].hitbox.x = gp.obj[i].worldX + gp.obj[i].hitbox.x;
+                gp.obj[i].hitbox.y = gp.obj[i].worldY + gp.obj[i].hitbox.y;
+                switch(facing) {
+                case "up":
+                    entity.hitbox.y -= entity._spriteSpeed;
+                    if(entity.hitbox.intersects(gp.obj[i].hitbox)) {
+                        if(gp.obj[i].collision == true) {
+                            entity.collision = true;
+                        }
+                        if(player == true) {
+                            index = i;
+                        }
+                        //System.out.println("up collision!");
+                    }
+                    break;
+                case "down":
+                    entity.hitbox.y += entity._spriteSpeed;
+                    if(entity.hitbox.intersects(gp.obj[i].hitbox)) {
+                        //System.out.println("down collision!");
+                        if(gp.obj[i].collision == true) {
+                            entity.collision = true;
+                        }
+                        if(player == true) {
+                            index = i;
+                        }
+                    }
+                    break;
+                case "left":
+                    entity.hitbox.x -= entity._spriteSpeed;
+                    if(entity.hitbox.intersects(gp.obj[i].hitbox)) {
+                        //System.out.println("left collision!");
+                        if(gp.obj[i].collision == true) {
+                            entity.collision = true;
+                        }
+                        if(player == true) {
+                            index = i;
+                        }
+                    }
+                    break;
+                case "right":
+                    entity.hitbox.x += entity._spriteSpeed;
+                    if(entity.hitbox.intersects(gp.obj[i].hitbox)) {
+                        //System.out.println("right collision!");
+                        if(gp.obj[i].collision == true) {
+                            entity.collision = true;
+                        }
+                        if(player == true) {
+                            index = i;
+                        }
+                    break;
+                    }
+                }
+                entity.hitbox.x = entity.hitboxDefaultX;
+                entity.hitbox.y = entity.hitboxDefaultY;
+                gp.obj[i].hitbox.x = gp.obj[i].hitboxDefaultX;
+                gp.obj[i].hitbox.y = gp.obj[i].hitboxDefaultY;
+            }
+        }
+        return index;
+    }
+
+    public void pickUpObject(World gp, int i) {
+        if(i != 999) {
+            String objectName = gp.obj[i].name;
+
+            switch(objectName) {
+                case "Key":
+                    hasKey++;
+                    gp.obj[i] = null;
+                    System.out.println("Key:"+hasKey);
+                    break;
+                case "Door":
+                    if(hasKey > 0 ) {
+                        gp.obj[i] = null;
+                        hasKey--;
+                    }
+                    System.out.println("Key:"+hasKey);
+                    break;
+            }
         }
     }
 

@@ -23,4 +23,7 @@ public class OBJ_Key extends Props {
 
         loadTextures("key");
     }
+    public void interagitAvec(Player p) {
+        System.out.println("Key");
+    }
 }
