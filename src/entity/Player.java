@@ -90,7 +90,7 @@ public class Player extends Character {
      * @param entity The entity to check collision for.
      * @param gp     The current game world.
      * @param player Indicates if the entity is a player.
-     * @return The index of the collided object or 999 if no collision.
+     * @return The coordinates of the collided object or null if no collision.
      */
     public Point checkObject(Entity entity, World gp, boolean player) {
         Point index = null;
@@ -104,80 +104,28 @@ public class Player extends Character {
                 // Get the object's solid area position
                 obj.hitbox.x = obj.worldX + obj.hitbox.x;
                 obj.hitbox.y = obj.worldY + obj.hitbox.y;
-                switch (facing) {
-                    case "up":
-                        entity.hitbox.y -= entity._spriteSpeed;
-                        if (entity.hitbox.intersects(obj.hitbox)) {
-                            if (obj.collision) {
-                                entity.collision = true;
-                            }
-                            if (player) {
-                                for (Map.Entry<Point, Props> entry : gp.objMap.entrySet()) {
-                                    if (Objects.equals(obj, entry.getValue())) {
-                                        index = entry.getKey();
-                                        break;
-                                    }
-                                }
-                            }
-                        }
+
+                // Check collision based on coordinates
+                if (entity.hitbox.intersects(obj.hitbox)) {
+                    if (obj.collision) {
+                        entity.collision = true;
+                    }
+                    if (player) {
+                        index = new Point((int) obj.worldX, (int) obj.worldY);
                         break;
-                    case "down":
-                        entity.hitbox.y += entity._spriteSpeed;
-                        if (entity.hitbox.intersects(obj.hitbox)) {
-                            if (obj.collision) {
-                                entity.collision = true;
-                            }
-                            if (player) {
-                                for (Map.Entry<Point, Props> entry : gp.objMap.entrySet()) {
-                                    if (Objects.equals(obj, entry.getValue())) {
-                                        index = entry.getKey();
-                                        break;
-                                    }
-                                }
-                            }
-                        }
-                        break;
-                    case "left":
-                        entity.hitbox.x -= entity._spriteSpeed;
-                        if (entity.hitbox.intersects(obj.hitbox)) {
-                            if (obj.collision) {
-                                entity.collision = true;
-                            }
-                            if (player) {
-                                for (Map.Entry<Point, Props> entry : gp.objMap.entrySet()) {
-                                    if (Objects.equals(obj, entry.getValue())) {
-                                        index = entry.getKey();
-                                        break;
-                                    }
-                                }
-                            }
-                        }
-                        break;
-                    case "right":
-                        entity.hitbox.x += entity._spriteSpeed;
-                        if (entity.hitbox.intersects(obj.hitbox)) {
-                            if (obj.collision) {
-                                entity.collision = true;
-                            }
-                            if (player) {
-                                for (Map.Entry<Point, Props> entry : gp.objMap.entrySet()) {
-                                    if (Objects.equals(obj, entry.getValue())) {
-                                        index = entry.getKey();
-                                        break;
-                                    }
-                                }
-                            }
-                            break;
-                        }
+                    }
                 }
+
                 entity.hitbox.x = entity.hitboxDefaultX;
                 entity.hitbox.y = entity.hitboxDefaultY;
                 obj.hitbox.x = obj.hitboxDefaultX;
                 obj.hitbox.y = obj.hitboxDefaultY;
             }
         }
+
         return index;
     }
+
 
     public void pickUpObject(World gp, Point index) {
         if (index != null) {
