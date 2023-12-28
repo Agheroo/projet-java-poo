@@ -25,7 +25,11 @@ public class OBJ_Door extends Props {
         collision = true;
     }
     public void interagitAvec(Player p) {
-        System.out.println("Door Interaction");
+        if(p.hasKey > 0 ) {
+            // TODO : enlever la porte de la map
+            p.hasKey--;
+        }
+        System.out.println("Key:"+p.hasKey);
 
     }
 

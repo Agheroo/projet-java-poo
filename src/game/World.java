@@ -10,6 +10,7 @@ import tiles.TileManager;
 import entity.EntitySetter;
 import entity.Props;
 import java.awt.*;
+import java.util.HashMap;
 
 /**
  * @class World
@@ -26,7 +27,7 @@ public class World extends Scene {
 
     public EntitySetter aSetter = new EntitySetter(this); // Instance of EntitySetter
     // Player settings
-    public Props[] obj = new Props[10]; // The array that lists all objects
+    public HashMap<Point, Props> objMap = new HashMap<>(); // HashMap to store objects with coordinates
     // TODO : https://www.geeksforgeeks.org/java-util-dictionary-class-java/
     public Player player = new Player(15 * tileManager.tileSize * tileManager.scale,
             15 * tileManager.tileSize * tileManager.scale, 0, 0, 0, "down", 4, 20);
@@ -52,6 +53,16 @@ public class World extends Scene {
      */
     public void setupGame() {
         aSetter.setObject();
+    }
+
+    /**
+     * Adds an object to the HashMap with the specified coordinates.
+     *
+     * @param coordinates The coordinates of the object.
+     * @param object      The object to be added.
+     */
+    public void addObject(Point coordinates, Props object) {
+        objMap.put(coordinates, object);
     }
 
     /**
@@ -101,14 +112,15 @@ public class World extends Scene {
     public void draw(Graphics2D g2, int screenWidth, int screenHeight) {
         // TILE
         tileManager.draw(g2, this, screenWidth, screenHeight);
+
         // OBJECT
-        for (Props props : obj) {
-            if (props != null) {
-                props.draw(g2, this);
-            }
+        for (Props props : objMap.values()) {
+            props.draw(g2, this);
         }
+
         // PLAYER
         player.drawInWorld(g2, screenWidth / 2 - (player.screenSize / 2),
                 screenHeight / 2 - (player.screenSize / 2)); // Player is always centered to screen
     }
+
 }

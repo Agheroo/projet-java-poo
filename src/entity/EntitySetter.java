@@ -7,6 +7,8 @@ package entity;
 
 import game.World;
 
+import java.awt.*;
+
 /**
  * @class EntitySetter
  * @brief Responsible for initializing and setting up objects (entities) in the game world.
@@ -27,20 +29,23 @@ public class EntitySetter {
      */
     public void setObject() {
         // Create and set up a Key object at a specific location in the world
-        gp.obj[0] = new OBJ_Key();
+        Props key = new OBJ_Key();
         int tileSize = 16;
         int scale = 3;
-        gp.obj[0].worldX = 13 * tileSize * scale;
-        gp.obj[0].worldY = 13 * tileSize * scale;
+        key.worldX = 13 * tileSize * scale;
+        key.worldY = 13 * tileSize * scale;
+        gp.addObject(new Point((int) key.worldX, (int) key.worldY), key);
 
         // Create and set up a Door object at a specific location in the world
-        gp.obj[1] = new OBJ_Door();
-        gp.obj[1].worldX = 14 * tileSize * scale;
-        gp.obj[1].worldY = 13 * tileSize * scale;
+        Props door = new OBJ_Door();
+        door.worldX = 14 * tileSize * scale;
+        door.worldY = 13 * tileSize * scale;
+        gp.addObject(new Point((int) door.worldX, (int) door.worldY), door);
 
         // Create and set up a Chest object at a specific location in the world
-        gp.obj[2] = new OBJ_Chest();
-        gp.obj[2].worldX = 15 * tileSize * scale;
-        gp.obj[2].worldY = 13 * tileSize * scale;
+        Props chest = new OBJ_Chest();
+        chest.worldX = 15 * tileSize * scale;
+        chest.worldY = 13 * tileSize * scale;
+        gp.addObject(new Point((int) chest.worldX, (int) chest.worldY), chest);
     }
 }
