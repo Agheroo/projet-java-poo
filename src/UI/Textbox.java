@@ -4,8 +4,9 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.FontFormatException;
 import java.awt.Graphics2D;
+import java.awt.GraphicsEnvironment;
+import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 
 import javax.swing.JLabel;
 public class Textbox extends JLabel{
@@ -39,19 +40,13 @@ public class Textbox extends JLabel{
 
         // Set the label's font size to the newly determined size.
         _font = new Font(fontName, Font.PLAIN, _fontSizeToUse);
-
-
-
-        loadFont("rainyhearts");
     }
 
 
-    //TODO: CHANGE THE PATH TO MAKE IT WORK PLEASE :C
-    private void loadFont(String fontName){
+    public static void loadFont(String fontName){
         try {
-            InputStream is = getClass().getResourceAsStream("/font/"+fontName+".ttf");
-            _font = Font.createFont(Font.TRUETYPE_FONT, is);
-            
+            GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File("res/hud/font/rainyhearts.ttf")));
         } 
         catch (FontFormatException e) {
             e.printStackTrace();

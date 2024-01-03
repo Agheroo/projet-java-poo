@@ -58,8 +58,8 @@ public abstract class Character extends Entity {
      * @param _spriteCntMax The maximum number of sprites for animation.
      * @param spriteSpeed The speed of sprite animation.
      */
-    public Character(int x, int y, int dirX, int dirY, int speed, String facing, int _spriteCntMax, int spriteSpeed) {
-        super(x, y, _spriteCntMax, spriteSpeed);
+    public Character(String entityName, int x, int y, int dirX, int dirY, int speed, String facing, int _spriteCntMax, int spriteSpeed) {
+        super(entityName, x, y, _spriteCntMax, spriteSpeed);
 
         hitbox = new Rectangle();
         // Hitbox settings to set up later
@@ -100,7 +100,7 @@ public abstract class Character extends Entity {
             move(World.getWorld(), speed, dt);
             // CHECK THE COLLISION
             checkNearTiles(currWorld.tileManager);
-            collisionOn = false;
+            //collisionOn = false;
 
             updateFrames();
         }
@@ -112,11 +112,11 @@ public abstract class Character extends Entity {
      */
     private void checkNearTiles(TileManager tileManager) {
         // Checking tiles with hitbox
-        if (isBlocked(tileManager.getTile(worldX + hitbox.width, worldY + hitbox.height))) {
+        if (isBlocking(tileManager.getTile(worldX + hitbox.width, worldY + hitbox.height))) {
             worldX = hitbox.x - hitbox.width / 2;
             worldY = hitbox.y - hitbox.height / 2;
 
-            // TODO: try to add some statements to make the player move diagonally if he tries instead of getting fully stucked
+
         }
     }
 
@@ -127,7 +127,7 @@ public abstract class Character extends Entity {
      * @param tile The Tile to check.
      * @return True if the tile is blocking, false otherwise.
      */
-    public boolean isBlocked(Tile tile) {
+    public boolean isBlocking(Tile tile) {
         return tile.getCollision();
     }
 
@@ -164,9 +164,9 @@ public abstract class Character extends Entity {
      * @param maxSpeed The maximum speed to accelerate to.
      * @param dt The time elapsed since the last update.
      */
-    protected void accelerate(int maxSpeed, double dt) {
+    protected void accelerate(int maxSpeed, int factor, double dt) {
         if (speed < maxSpeed) {
-            speed += 20 * dt;
+            speed += factor*dt;
         }
         if (speed > maxSpeed) {
             speed = maxSpeed;
@@ -177,8 +177,8 @@ public abstract class Character extends Entity {
      * @brief Decelerates the character's speed.
      * @param dt The time elapsed since the last update.
      */
-    protected void decelerate(double dt) {
-        speed -= dt;
+    protected void decelerate(int factor,double dt) {
+        speed -= factor*dt;
     }
 
     /**
@@ -204,15 +204,6 @@ public abstract class Character extends Entity {
         }
     }
 
-    /**
-     * @brief Draws the character in the fight scene.
-     * @param g2 The Graphics2D object for drawing.
-     * @param screenX The X-coordinate on the screen.
-     * @param screenY The Y-coordinate on the screen.
-     */
-    public void drawInFight(Graphics2D g2, int screenX, int screenY) {
-        // Other function to draw in fight scene
-    }
 
     /**
      * @brief Draws the character in the world scene.
@@ -264,8 +255,18 @@ public abstract class Character extends Entity {
         g2.drawRect(screenX + hitbox.width / 2, screenY + hitbox.height / 2, hitbox.width, hitbox.height); // Center the hitbox to the entity
     }
 
+
+    /**
+     * @brief Draws the character in the fight scene.
+     * @param g2 The Graphics2D object for drawing.
+     * @param screenX The X-coordinate on the screen.
+     * @param screenY The Y-coordinate on the screen.
+     */
+    public void drawInFight(Graphics2D g2, int screenX, int screenY) {
+        // Other function to draw in fight scene
+    }
+  
     @Override
     protected void interagitAvec(Player player) {
-        
     }
 }

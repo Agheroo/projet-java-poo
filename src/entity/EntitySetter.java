@@ -14,14 +14,14 @@ import java.awt.*;
  * @brief Responsible for initializing and setting up objects (entities) in the game world.
  */
 public class EntitySetter {
-    World gp;
+    World world;
 
     /**
      * @brief Constructor for the EntitySetter class.
      * @param gp The World object representing the game world.
      */
-    public EntitySetter(World gp) {
-        this.gp = gp;
+    public EntitySetter(World world) {
+        this.world = world;
     }
 
     /**
