@@ -10,8 +10,6 @@ import game.Scene.State;
 import game.World;
 
 import java.awt.*;
-import java.util.Map;
-import java.util.Objects;
 
 /**
  * @class Player

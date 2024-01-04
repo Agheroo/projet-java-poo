@@ -38,14 +38,15 @@ public class World extends Scene {
     
   
     // Player settings
-    public Player player = new Player(15 * tileManager.tileSize * tileManager.scale,
+    public Player player = new Player("player",15 * tileManager.tileSize * tileManager.scale,
             15 * tileManager.tileSize * tileManager.scale, 0, 0, 0, "down", 4, 20);
+
 
 
     public static Vector<Enemy> enemies  = new Vector<Enemy>(5);
     //public Enemy[] enemies = new Enemy[10]; // The array of all enemies
 
-    public Player player;
+    //public Player player;
     /**
      * Gets the instance of the World.
      *
