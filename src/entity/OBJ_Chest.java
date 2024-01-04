@@ -22,7 +22,7 @@ public class OBJ_Chest extends Props {
         name = "Chest";
 
         loadTextures("chest");
-        collision = true;
+        collision = true; // Chests are not meant to be collided with by default
     }
     public void interagitAvec(Player p) {
         System.out.println("Chest");

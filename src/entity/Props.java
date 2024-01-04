@@ -22,6 +22,7 @@ import javax.imageio.ImageIO;
 public abstract class Props extends Entity {
     public BufferedImage image; // Image representing the prop
     public String name; // Name of the prop
+    public boolean collision = true;
 
     public int hitboxDefaultX = 0;
     public int hitboxDefaultY = 0;

@@ -130,6 +130,36 @@ public abstract class Character extends Entity {
     public boolean isBlocked(Tile tile) {
         return tile.getCollision();
     }
+    private boolean checkCollisionWithChest(World world, int speed, double dt) {
+        Rectangle playerRect = new Rectangle(world.player.hitbox);
+
+        // Créez un rectangle représentant le coffre (vous pouvez ajuster les dimensions selon vos besoins)
+        Rectangle chestRect = new Rectangle(15 * 16 * 3, 13 * 16 * 3, screenSize / 2, screenSize / 2);
+
+        // Vérifiez la collision entre le joueur et le coffre
+        if (playerRect.intersects(chestRect)) {
+            // Collision détectée, le joueur ne peut pas se déplacer
+
+            // Rétablissez la position du joueur pour éviter la collision
+            if (world.player.worldX + world.player.hitbox.width / 2 < chestRect.x) {
+                world.player.worldX = chestRect.x - world.player.hitbox.width / 2;
+            }
+            if (world.player.worldX - world.player.hitbox.width / 2 >= chestRect.x + chestRect.width) {
+                world.player.worldX = chestRect.x + chestRect.width + world.player.hitbox.width / 2;
+            }
+            if (world.player.worldY + world.player.hitbox.height / 2 < chestRect.y) {
+                world.player.worldY = chestRect.y - world.player.hitbox.height / 2;
+            }
+            if (world.player.worldY - world.player.hitbox.height / 2 >= chestRect.y + chestRect.height) {
+                world.player.worldY = chestRect.y + chestRect.height + world.player.hitbox.height / 2;
+            }
+
+            return true;
+        }
+
+        return false;
+    }
+
 
     /**
      * @brief Moves the character in the world based on its direction, speed, and the elapsed time.
@@ -138,27 +168,29 @@ public abstract class Character extends Entity {
      * @param dt The time elapsed since the last update.
      */
     protected void move(World world, int speed, double dt) {
-        if ((dirX == 0 && dirY != 0) || (dirY == 0 && dirX != 0)) {
-            if (dirX == 1) {
-                worldX += speed * dt;
+        // Vérifiez la collision avec le coffre avant de déplacer le joueur
+        if (!checkCollisionWithChest(world, speed, dt)) {
+            if ((dirX == 0 && dirY != 0) || (dirY == 0 && dirX != 0)) {
+                if (dirX == 1) {
+                    worldX += speed * dt;
+                }
+                if (dirX == -1) {
+                    worldX -= speed * dt;
+                }
+                if (dirY == 1) {
+                    worldY += speed * dt;
+                }
+                if (dirY == -1) {
+                    worldY -= speed * dt;
+                }
             }
-            if (dirX == -1) {
-                worldX -= speed * dt;
+            if (dirX != 0 && dirY != 0) {
+                double normSum = Math.sqrt(dirX * dirX + dirY * dirY);
+                worldX += (dirX / normSum) * speed * dt;
+                worldY += (dirY / normSum) * speed * dt;
             }
-            if (dirY == 1) {
-                worldY += speed * dt;
-            }
-            if (dirY == -1) {
-                worldY -= speed * dt;
-            }
-        }
-        if (dirX != 0 && dirY != 0) {
-            double normSum = Math.sqrt(dirX * dirX + dirY * dirY);
-            worldX += (dirX / normSum) * speed * dt;
-            worldY += (dirY / normSum) * speed * dt;
         }
     }
-
     /**
      * @brief Accelerates the character's speed up to the specified maximum speed.
      * @param maxSpeed The maximum speed to accelerate to.

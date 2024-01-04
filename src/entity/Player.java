@@ -106,10 +106,10 @@ public class Player extends Character {
                 obj.hitbox.y = obj.worldY + obj.hitbox.y;
 
                 // Check collision based on coordinates
-                if (entity.hitbox.intersects(obj.hitbox)) {
-                    if (obj.collision) {
-                        entity.collision = true;
-                    }
+                if (entity.hitbox.intersects(obj.hitbox) && obj.collision) {
+
+                    entity.collision = true;
+
                     if (player) {
                         index = new Point((int) obj.worldX, (int) obj.worldY);
                         break;
