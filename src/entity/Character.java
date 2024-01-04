@@ -30,9 +30,9 @@ public abstract class Character extends Entity {
     int strength;
     int defense;
     int initiative;
-
     public int speed;
     public int dirX, dirY;
+    int hasKey = 0; //normalement dans player
 
     // Which direction is the entity facing (if directions are available) for animation
     public String facing;
@@ -67,7 +67,8 @@ public abstract class Character extends Entity {
         hitbox.y = y;
         hitbox.width = screenSize / 2;
         hitbox.height = screenSize / 2;
-
+        hitboxDefaultX = hitbox.x;
+        hitboxDefaultY = hitbox.y;
         this.dirX = dirX;
         this.dirY = dirY;
         this.speed = speed;
@@ -97,8 +98,9 @@ public abstract class Character extends Entity {
             hitbox.y = worldY + hitbox.height / 2;
 
             move(World.getWorld(), speed, dt);
+            // CHECK THE COLLISION
             checkNearTiles(currWorld.tileManager);
-            
+            //collisionOn = false;
 
             updateFrames();
         }
@@ -117,6 +119,8 @@ public abstract class Character extends Entity {
 
         }
     }
+
+
 
     /**
      * @brief Checks if the given tile is blocking the character's movement.
@@ -260,5 +264,9 @@ public abstract class Character extends Entity {
      */
     public void drawInFight(Graphics2D g2, int screenX, int screenY) {
         // Other function to draw in fight scene
+    }
+  
+    @Override
+    protected void interagitAvec(Player player) {
     }
 }

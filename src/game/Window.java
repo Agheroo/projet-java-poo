@@ -58,7 +58,7 @@ public class Window extends JPanel implements Runnable {
         this.setDoubleBuffered(true);
         this.addKeyListener(scene.keyH);
         this.setFocusable(true);
-        world.setupGame(); // Création de l'instance du setter
+        world.setupGame(); // Creation of instance setter
     }
 
     /**

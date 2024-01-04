@@ -19,10 +19,12 @@ import javax.imageio.ImageIO;
  * @extends Entity
  * @brief Represents in-game props with properties such as image, name, and position.
  */
-public class Props extends Entity {
+public abstract class Props extends Entity {
     public BufferedImage image; // Image representing the prop
     public String name; // Name of the prop
 
+    public int hitboxDefaultX = 0;
+    public int hitboxDefaultY = 0;
     public final int screenWidth = 800; // Screen width of the game window
     public final int screenHeight = 600; // Screen height of the game window
 

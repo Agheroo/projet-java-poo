@@ -11,11 +11,11 @@ import entity.Enemy;
 import entity.EntitySetter;
 import entity.Props;
 import game.FightScene.FightState;
-
 import java.awt.*;
+import java.util.HashMap;
 import java.util.Vector;
-
 import UI.Textbox;
+
 
 /**
  * @class World
@@ -32,8 +32,15 @@ public class World extends Scene {
     public final int maxRow = 27, maxCol = 27; // DONT FORGET TO MODIFY WHEN CHANGING THE MAP !!!
 
     public EntitySetter aSetter = new EntitySetter(this); // Instance of EntitySetter
+    
+    // Doc table de Hashage : https://www.geeksforgeeks.org/java-util-dictionary-class-java/
+    public HashMap<Point, Props> objMap = new HashMap<>(); // HashMap to store objects with coordinates
+    
+  
     // Player settings
-    public Props[] obj = new Props[10]; // The array that lists all objects
+    public Player player = new Player(15 * tileManager.tileSize * tileManager.scale,
+            15 * tileManager.tileSize * tileManager.scale, 0, 0, 0, "down", 4, 20);
+
 
     public static Vector<Enemy> enemies  = new Vector<Enemy>(5);
     //public Enemy[] enemies = new Enemy[10]; // The array of all enemies
@@ -72,6 +79,16 @@ public class World extends Scene {
     }
 
     
+
+    /**
+     * Adds an object to the HashMap with the specified coordinates.
+     *
+     * @param coordinates The coordinates of the object.
+     * @param object      The object to be added.
+     */
+    public void addObject(Point coordinates, Props object) {
+        objMap.put(coordinates, object);
+    }
 
     /**
      * Updates the game world based on the scene state.
@@ -134,10 +151,8 @@ public class World extends Scene {
             // TILE
             tileManager.draw(g2, this, screenWidth, screenHeight);
             // OBJECT
-            for (Props props : obj) {
-                if (props != null) {
-                    props.draw(g2, this);
-                }
+            for (Props props : objMap.values()) {
+                props.draw(g2, this);
             }
             // PLAYER
             player.drawInWorld(g2, screenWidth / 2 - (player.screenSize / 2),
@@ -162,4 +177,5 @@ public class World extends Scene {
         }
         
     }
+
 }

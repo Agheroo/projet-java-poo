@@ -128,7 +128,7 @@ public class TileManager {
                 String line = br.readLine();
 
                 for (int j = 0; j < world.maxCol; j++) {
-                    String numbers[] = line.split("\\s+");
+                    String[] numbers = line.split("\\s+");
                     int num = Integer.parseInt(numbers[j]); // Reading the file itself and stocking int read
 
                     Tile tileCurrent = new Tile(textures[num].spriteCntMax, textures[num].spriteSpeed,

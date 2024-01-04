@@ -23,4 +23,10 @@ public class OBJ_Key extends Props {
 
         loadTextures("key");
     }
+    public void interagitAvec(Player p) {
+
+        p.hasKey++;
+        // TODO : enlever la clé de la map
+        System.out.println("Key:"+p.hasKey);
+    }
 }

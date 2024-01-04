@@ -6,7 +6,7 @@
 package entity;
 
 
-/**
+import game.World; /**
  * @class OBJ_Door
  * @extends Props
  * @brief Represents a door object in the game.
@@ -22,5 +22,15 @@ public class OBJ_Door extends Props {
         name = "Door";
 
         loadTextures("door");
+        collision = true;
     }
+    public void interagitAvec(Player p) {
+        if(p.hasKey > 0 ) {
+            // TODO : enlever la porte de la map
+            p.hasKey--;
+        }
+        System.out.println("Key:"+p.hasKey);
+
+    }
+
 }

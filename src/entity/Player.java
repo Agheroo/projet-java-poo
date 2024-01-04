@@ -7,6 +7,11 @@ package entity;
 
 import game.Scene;
 import game.Scene.State;
+import game.World;
+
+import java.awt.*;
+import java.util.Map;
+import java.util.Objects;
 
 /**
  * @class Player
@@ -14,8 +19,8 @@ import game.Scene.State;
  * @brief Represents the player entity in the game.
  */
 public class Player extends Character {
-    int hasKey = 0;
 
+    int hasKey = 0;
     /**
      * @brief Constructor for the Player class.
      * @param worldX The X-coordinate of the player in the world.
@@ -68,6 +73,10 @@ public class Player extends Character {
                     decelerate(1,dt);
                 }
             }
+
+            // CHECK OBJECT COLLISION
+            Point objIndex = checkObject(this, World.getWorld(), true);
+            pickUpObject(World.getWorld(), objIndex);
         }
 
         // Fightscene updates
@@ -75,6 +84,55 @@ public class Player extends Character {
             // To be implemented
             
 
+        }
+    }
+
+    /**
+     * @brief Checks for collision with nearby objects using the player's hitbox.
+     * @param entity The entity to check collision for.
+     * @param gp     The current game world.
+     * @param player Indicates if the entity is a player.
+     * @return The coordinates of the collided object or null if no collision.
+     */
+    public Point checkObject(Entity entity, World gp, boolean player) {
+        Point index = null;
+
+        for (Props obj : gp.objMap.values()) {
+            if (obj != null) {
+                // Get entity's hitbox position
+                entity.hitbox.x = (entity.worldX + entity.hitbox.x) / 2;
+                entity.hitbox.y = (entity.worldY + entity.hitbox.y) / 2;
+
+                // Get the object's solid area position
+                obj.hitbox.x = obj.worldX + obj.hitbox.x;
+                obj.hitbox.y = obj.worldY + obj.hitbox.y;
+
+                // Check collision based on coordinates
+                if (entity.hitbox.intersects(obj.hitbox)) {
+                    if (obj.collision) {
+                        entity.collision = true;
+                    }
+                    if (player) {
+                        index = new Point((int) obj.worldX, (int) obj.worldY);
+                        break;
+                    }
+                }
+
+                entity.hitbox.x = entity.hitboxDefaultX;
+                entity.hitbox.y = entity.hitboxDefaultY;
+                obj.hitbox.x = obj.hitboxDefaultX;
+                obj.hitbox.y = obj.hitboxDefaultY;
+            }
+        }
+
+        return index;
+    }
+
+
+    public void pickUpObject(World gp, Point index) {
+        if (index != null) {
+            Entity object = gp.objMap.get(index);
+            object.interagitAvec(this);
         }
     }
 }

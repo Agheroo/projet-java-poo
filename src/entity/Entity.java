@@ -18,12 +18,15 @@ public abstract class Entity {
     protected final int _tileSize = 16;
     protected final int _scale = 3;
     public final int screenSize = _tileSize * _scale;
+    public boolean collisionOn = false;
+    public boolean collision = false;
 
     // Position of the entity in the world, directions, and speed
     public int worldX, worldY;
 
     // Hitbox of the entity
-    public Rectangle hitbox;
+    public Rectangle hitbox = new Rectangle(0,0,24,24);
+    public int hitboxDefaultX, hitboxDefaultY;
 
     // Entity animations
     protected int _spriteCnt = 0; // Variable responsible for the incrementation of the different sprites
@@ -87,4 +90,6 @@ public abstract class Entity {
             _spriteUpdater = 0;
         }
     }
+
+    protected abstract void interagitAvec(Player player);
 }
