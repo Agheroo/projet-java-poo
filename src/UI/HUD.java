@@ -12,7 +12,6 @@ public class HUD {
     private MenuType _type;
     private int _titleWidth, _titleHeight;
     //private KeyHandler keyH = KeyHandler.getInstance();
-    //private Cursor _cursor;
 
 
     public final int HUDWidth = 600;

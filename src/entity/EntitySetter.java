@@ -6,7 +6,7 @@
 package entity;
 
 import game.World;
-
+import game.Const;
 import java.awt.*;
 
 /**
@@ -18,7 +18,7 @@ public class EntitySetter {
 
     /**
      * @brief Constructor for the EntitySetter class.
-     * @param gp The World object representing the game world.
+     * @param world The World object representing the game world.
      */
     public EntitySetter(World world) {
         this.world = world;
@@ -30,22 +30,20 @@ public class EntitySetter {
     public void setObject() {
         // Create and set up a Key object at a specific location in the world
         Props key = new OBJ_Key();
-        int tileSize = 16;
-        int scale = 3;
-        key.worldX = 13 * tileSize * scale;
-        key.worldY = 13 * tileSize * scale;
+        key.worldX = 13 * Const.WRLD_entityScreenSize;
+        key.worldY = 13 * Const.WRLD_entityScreenSize;
         world.addObject(new Point((int) key.worldX, (int) key.worldY), key);
 
         // Create and set up a Door object at a specific location in the world
         Props door = new OBJ_Door();
-        door.worldX = 14 * tileSize * scale;
-        door.worldY = 13 * tileSize * scale;
+        door.worldX = 14 * Const.WRLD_entityScreenSize;
+        door.worldY = 13 * Const.WRLD_entityScreenSize;
         world.addObject(new Point((int) door.worldX, (int) door.worldY), door);
 
         // Create and set up a Chest object at a specific location in the world
         Props chest = new OBJ_Chest();
-        chest.worldX = 15 * tileSize * scale;
-        chest.worldY = 13 * tileSize * scale;
+        chest.worldX = 15 * Const.WRLD_entityScreenSize;
+        chest.worldY = 13 * Const.WRLD_entityScreenSize;
         world.addObject(new Point((int) chest.worldX, (int) chest.worldY), chest);
     }
 }
