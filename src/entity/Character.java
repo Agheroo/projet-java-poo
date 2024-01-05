@@ -5,9 +5,9 @@
 
 package entity;
 
+import game.Const;
 import game.Scene;
 import game.World;
-import tiles.Tile;
 import tiles.TileManager;
 import game.Scene.State;
 
@@ -65,8 +65,8 @@ public abstract class Character extends Entity {
         // Hitbox settings to set up later
         hitbox.x = x;
         hitbox.y = y;
-        hitbox.width = screenSize / 2;
-        hitbox.height = screenSize / 2;
+        hitbox.width = Const.WRLD_entityScreenSize / 2;
+        hitbox.height = Const.WRLD_entityScreenSize / 2;
         hitboxDefaultX = hitbox.x;
         hitboxDefaultY = hitbox.y;
         this.dirX = dirX;
@@ -112,7 +112,7 @@ public abstract class Character extends Entity {
      */
     private void checkNearTiles(TileManager tileManager) {
         // Checking tiles with hitbox
-        if (isBlocking(tileManager.getTile(worldX + hitbox.width, worldY + hitbox.height))) {
+        if (tileManager.getTile(worldX + hitbox.width, worldY + hitbox.height).getCollision()) {
             worldX = hitbox.x - hitbox.width / 2;
             worldY = hitbox.y - hitbox.height / 2;
 
@@ -121,15 +121,6 @@ public abstract class Character extends Entity {
     }
 
 
-
-    /**
-     * @brief Checks if the given tile is blocking the character's movement.
-     * @param tile The Tile to check.
-     * @return True if the tile is blocking, false otherwise.
-     */
-    public boolean isBlocking(Tile tile) {
-        return tile.getCollision();
-    }
 
     /**
      * @brief Moves the character in the world based on its direction, speed, and the elapsed time.
@@ -251,7 +242,7 @@ public abstract class Character extends Entity {
             }
         }
 
-        g2.drawImage(image, screenX, screenY, screenSize, screenSize, null);
+        g2.drawImage(image, screenX, screenY, Const.WRLD_entityScreenSize, Const.WRLD_entityScreenSize, null);
         g2.drawRect(screenX + hitbox.width / 2, screenY + hitbox.height / 2, hitbox.width, hitbox.height); // Center the hitbox to the entity
     }
 

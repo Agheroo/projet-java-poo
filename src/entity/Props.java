@@ -5,6 +5,7 @@
 
 package entity;
 
+import game.Const;
 import game.World;
 
 import java.awt.*;
@@ -25,8 +26,6 @@ public abstract class Props extends Entity {
 
     public int hitboxDefaultX = 0;
     public int hitboxDefaultY = 0;
-    public final int screenWidth = 800; // Screen width of the game window
-    public final int screenHeight = 600; // Screen height of the game window
 
     protected void loadTextures(String name){
         try {
@@ -46,20 +45,20 @@ public abstract class Props extends Entity {
      */
     public void draw(Graphics2D g2, World world) {
         // Calculate the screen position of the player
-        int playerScreenX = (screenWidth - world.player.screenSize) / 2;
-        int playerScreenY = (screenHeight - world.player.screenSize) / 2;
+        int playerScreenX = (Const.WDW_width - Const.WRLD_entityScreenSize) / 2;
+        int playerScreenY = (Const.WDW_height - Const.WRLD_entityScreenSize) / 2;
 
         // Calculate the screen position of the prop relative to the player's position
         int screenX = worldX - world.player.worldX + playerScreenX;
         int screenY = worldY - world.player.worldY + playerScreenY;
 
         // Check if the prop is within the visible screen region around the player
-        if (worldX + _tileSize * _scale > world.player.worldX - playerScreenX
-                && worldX - _tileSize * _scale < world.player.worldX + playerScreenX
-                && worldY + _tileSize * _scale > world.player.worldY - playerScreenY
-                && worldY - _tileSize * _scale < world.player.worldY + playerScreenY) {
+        if (worldX + Const.WRLD_tileScreenSize > world.player.worldX - playerScreenX
+                && worldX - Const.WRLD_tileScreenSize < world.player.worldX + playerScreenX
+                && worldY + Const.WRLD_tileScreenSize > world.player.worldY - playerScreenY
+                && worldY - Const.WRLD_tileScreenSize < world.player.worldY + playerScreenY) {
             // Draw the prop on the screen
-            g2.drawImage(image, screenX, screenY, world.player.screenSize, world.player.screenSize, null);
+            g2.drawImage(image, screenX, screenY, Const.WRLD_entityScreenSize, Const.WRLD_entityScreenSize, null);
         }
     }
 }

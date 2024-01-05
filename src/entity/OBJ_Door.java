@@ -6,7 +6,7 @@
 package entity;
 
 
-import game.World; /**
+/**
  * @class OBJ_Door
  * @extends Props
  * @brief Represents a door object in the game.

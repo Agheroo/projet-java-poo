@@ -6,7 +6,6 @@
 package entity;
 
 import java.awt.Rectangle;
-
 import game.Scene;
 
 /**
@@ -15,9 +14,8 @@ import game.Scene;
  */
 public abstract class Entity {
     // Display purpose variables
-    protected final int _tileSize = 16;
-    protected final int _scale = 3;
-    public final int screenSize = _tileSize * _scale;
+    
+
     public boolean collisionOn = false;
     public boolean collision = false;
 

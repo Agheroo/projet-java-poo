@@ -34,15 +34,19 @@ public class Enemy extends Character {
         loadTextures(enemyName);
     }
 
+    /**
+     * @brief Checks if the current enemy is in contact with the player
+     * @param player The player entity
+     */
     public boolean touchingPlayer(Player player){
         if((hitbox.x >= player.hitbox.x + player.hitbox.width)      // trop à droite
 	    || (hitbox.x + hitbox.width <= player.hitbox.x) // trop à gauche
 	    || (hitbox.y >= player.hitbox.y + player.hitbox.height) // trop en bas
 	    || (hitbox.y + hitbox.height <= player.hitbox.y)){// trop en haut
             return false;
-        }  
-        else 
-            return true;
+        }
+
+        return true;
     }
 
 
