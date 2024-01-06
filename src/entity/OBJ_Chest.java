@@ -17,7 +17,9 @@ public class OBJ_Chest extends Props {
      * @brief Constructor for the OBJ_Chest class.
      * @details Initializes the name and loads the image for the chest.
      */
-    public OBJ_Chest() {
+    public OBJ_Chest(int worldX, int worldY){
+        this.worldX = worldX;
+        this.worldY = worldY;
         // Set the name of the chest object
         name = "Chest";
 
@@ -25,6 +27,6 @@ public class OBJ_Chest extends Props {
         collision = true;
     }
     public void interagitAvec(Player p) {
-        System.out.println("Chest");
+        System.out.println("Chest interaction");
     }
 }

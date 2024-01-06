@@ -133,4 +133,6 @@ public class Player extends Character {
             object.interagitAvec(this);
         }
     }
+
+    
 }

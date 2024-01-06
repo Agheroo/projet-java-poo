@@ -17,7 +17,9 @@ public class OBJ_Door extends Props {
      * @brief Constructor for the OBJ_Door class.
      * @details Initializes the name of the door and loads its image from a resource file.
      */
-    public OBJ_Door() {
+    public OBJ_Door(int worldX, int worldY) {
+        this.worldX = worldX;
+        this.worldY = worldY;
         // Set the name of the door
         name = "Door";
 

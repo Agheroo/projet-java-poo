@@ -241,6 +241,8 @@ public abstract class Character extends Entity {
                 }
             }
         }
+        
+
 
         g2.drawImage(image, screenX, screenY, Const.WRLD_entityScreenSize, Const.WRLD_entityScreenSize, null);
         g2.drawRect(screenX + hitbox.width / 2, screenY + hitbox.height / 2, hitbox.width, hitbox.height); // Center the hitbox to the entity

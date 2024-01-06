@@ -10,7 +10,7 @@ import entity.Player;
 import game.Scene.State;
 
 import java.awt.*;
-import java.util.Vector;
+import java.util.HashMap;
 
 import UI.HUD;
 import UI.HUD.MenuType;
@@ -50,19 +50,17 @@ public class FightScene {
         // Additional logic for the fight scene update
         System.out.println("Le joueur est en combat avec "+ enemy.name);
         if(scene.keyH.interactPressed){
-            //player.worldX = 15*player.screenSize;
-            //player.worldY = 15*player.screenSize;
             state = FightState.WON;
             scene.state = State.WORLD;
             player.speed = 0;
-            killEnemy(World.enemies);
+            killEnemy(World.enemies, enemy);
             
             scene.keyH.interactPressed = false;
         }
     }
 
-    public void killEnemy(Vector<Enemy> enemies){
-        enemies.remove(enemy);
+    public void killEnemy(HashMap<Point, Enemy> enemies, Enemy enemy){
+        enemies.remove(new Point(enemy.worldX,enemy.worldY), enemy);
     }
 
 

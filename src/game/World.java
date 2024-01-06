@@ -13,7 +13,6 @@ import entity.Props;
 import game.FightScene.FightState;
 import java.awt.*;
 import java.util.HashMap;
-import java.util.Vector;
 import UI.Textbox;
 
 
@@ -30,20 +29,17 @@ public class World extends Scene {
 
     
 
-    public EntitySetter aSetter = new EntitySetter(this); // Instance of EntitySetter
+    public EntitySetter entitySetter = new EntitySetter(this); // Instance of EntitySetter
     
     // Doc table de Hashage : https://www.geeksforgeeks.org/java-util-dictionary-class-java/
     public HashMap<Point, Props> objMap = new HashMap<>(); // HashMap to store objects with coordinates
+    public static HashMap<Point, Enemy> enemies = new HashMap<>();
     
   
     // Player settings
     public Player player = new Player("player",15 * Const.WRLD_tileScreenSize,
             15 * Const.WRLD_tileScreenSize, 0, 0, 0, "down", 4, 20);
 
-
-
-    public static Vector<Enemy> enemies  = new Vector<Enemy>(5);
-    //public Enemy[] enemies = new Enemy[10]; // The array of all enemies
 
     //public Player player;
     /**
@@ -65,17 +61,12 @@ public class World extends Scene {
      * Set up the initial state of the game.
      */
     public void setupGame() {
-        aSetter.setObject();
+        entitySetter.setObject();
+        entitySetter.setEnemies();
 
         player = new Player("player", 15 * Const.WRLD_tileScreenSize,
             15 * Const.WRLD_tileScreenSize, 0, 0, 0, "down", 4, 20);
-
-        enemies.clear();
-        for(int i=0;i<5;i++){
-            enemies.add(new Enemy("orc", (6 + 2*i )* Const.WRLD_tileScreenSize,
-                10 * Const.WRLD_tileScreenSize, 0, 0, 0, "down", 4, 20)); 
-        }
-        
+    
     }
 
     
@@ -90,37 +81,35 @@ public class World extends Scene {
         objMap.put(coordinates, object);
     }
 
+    public void addEnemy(Point coordinates, Enemy enemy){
+        enemies.put(coordinates,enemy);
+    }
+
     /**
      * Updates the game world based on the scene state.
      */
     public void update() {
         checkPauseScene();
         if (state == State.WORLD) {
-            int playerScreenX = (Const.WDW_width - Const.WRLD_entityScreenSize) / 2;
-            int playerScreenY = (Const.WDW_height - Const.WRLD_entityScreenSize) / 2;
+            Point ptn = new Point((int)13 * Const.WRLD_entityScreenSize, (int) 13 * Const.WRLD_entityScreenSize);
+            System.out.println("("+objMap.get(ptn).name +"," + objMap.get(ptn).worldY + ")  ("+player.worldX +","+player.worldY+")");
+            //int playerScreenX = (Const.WDW_width - Const.WRLD_entityScreenSize) / 2;
+            //int playerScreenY = (Const.WDW_height - Const.WRLD_entityScreenSize) / 2;
 
             player.update(this, dt);
             tileManager.update(this);
 
 
-            
+
             // other entity.update(this,dt);
-            for(int i=0;i<enemies.size();i++){
-                //Update enemies only if he's visible otherwise it's useless
-                if (enemies.get(i).worldX + Const.WRLD_tileScreenSize > player.worldX - playerScreenX
-                && enemies.get(i).worldX - Const.WRLD_tileScreenSize < player.worldX + playerScreenX
-                && enemies.get(i).worldY + Const.WRLD_tileScreenSize > player.worldY - playerScreenY
-                && enemies.get(i).worldY - Const.WRLD_tileScreenSize < player.worldY + playerScreenY){
-                    enemies.get(i).update(this,dt);
-                    if(enemies.get(i).touchingPlayer(player)){
-                        
-                        System.out.println("Enemy is touching player at " +player.worldX+ ", "+ player.worldY);
-                        changeScene(State.FIGHT);
-                        _currfight = new FightScene(player,enemies.get(i));
-                    }
-                }
+            for(Enemy enemy : enemies.values()){
+                enemy.update(this, dt);
             }
         }
+
+            
+            
+
         if (state == State.FIGHT){
             _currfight.update(this);
         }
@@ -159,18 +148,15 @@ public class World extends Scene {
             
 
             //ENEMIES
-            for(int i=0; i<enemies.size();i++){
-                int playerScreenX = (screenWidth - Const.WRLD_entityScreenSize) / 2;
-                int playerScreenY = (screenHeight - Const.WRLD_entityScreenSize) / 2;
-
-                if (enemies.get(i).worldX + Const.WRLD_tileScreenSize > player.worldX - playerScreenX
-                    && enemies.get(i).worldX - Const.WRLD_tileScreenSize < player.worldX + playerScreenX
-                    && enemies.get(i).worldY + Const.WRLD_tileScreenSize > player.worldY - playerScreenY
-                    && enemies.get(i).worldY - Const.WRLD_tileScreenSize < player.worldY + playerScreenY) {
-                        int screenX = enemies.get(i).worldX - player.worldX + playerScreenX;
-                        int screenY = enemies.get(i).worldY - player.worldY + playerScreenY;
-                        enemies.get(i).drawInWorld(g2, screenX, screenY);
-                }
+            for(Enemy enemy : enemies.values()){
+                // Calculate the screen position of the player
+                int playerScreenX = (Const.WDW_width - Const.WRLD_entityScreenSize) / 2;
+                int playerScreenY = (Const.WDW_height - Const.WRLD_entityScreenSize) / 2;
+                
+                // Calculate the screen position of the character relative to the player's position
+                int screenX = enemy.worldX - player.worldX + playerScreenX;
+                int screenY = enemy.worldY - player.worldY + playerScreenY;
+                enemy.drawInWorld(g2, screenX, screenY);
             }
         }
         

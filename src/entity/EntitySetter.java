@@ -29,21 +29,24 @@ public class EntitySetter {
      */
     public void setObject() {
         // Create and set up a Key object at a specific location in the world
-        Props key = new OBJ_Key();
-        key.worldX = 13 * Const.WRLD_entityScreenSize;
-        key.worldY = 13 * Const.WRLD_entityScreenSize;
+        Props key = new OBJ_Key(13 * Const.WRLD_entityScreenSize,13 * Const.WRLD_entityScreenSize);
         world.addObject(new Point((int) key.worldX, (int) key.worldY), key);
 
         // Create and set up a Door object at a specific location in the world
-        Props door = new OBJ_Door();
-        door.worldX = 14 * Const.WRLD_entityScreenSize;
-        door.worldY = 13 * Const.WRLD_entityScreenSize;
+        Props door = new OBJ_Door(14 * Const.WRLD_entityScreenSize,13 * Const.WRLD_entityScreenSize);
         world.addObject(new Point((int) door.worldX, (int) door.worldY), door);
 
         // Create and set up a Chest object at a specific location in the world
-        Props chest = new OBJ_Chest();
-        chest.worldX = 15 * Const.WRLD_entityScreenSize;
-        chest.worldY = 13 * Const.WRLD_entityScreenSize;
+        Props chest = new OBJ_Chest(15 * Const.WRLD_entityScreenSize,13 * Const.WRLD_entityScreenSize);
         world.addObject(new Point((int) chest.worldX, (int) chest.worldY), chest);
+    }
+
+    public void setEnemies(){
+        Enemy enemy1 = new Enemy("orc", 8*Const.WRLD_entityScreenSize, 10*Const.WRLD_entityScreenSize, 0, 0, 0, "down", 4, 20);
+        world.addEnemy(new Point((int) enemy1.worldX, (int) enemy1.worldY), enemy1);
+        
+        Enemy enemy2 = new Enemy("orc", 16*Const.WRLD_entityScreenSize, 10*Const.WRLD_entityScreenSize, 0, 0, 0, "up", 4, 20);
+        world.addEnemy(new Point((int) enemy2.worldX, (int) enemy2.worldY), enemy2);
+        
     }
 }

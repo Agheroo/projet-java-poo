@@ -30,7 +30,6 @@ public abstract class Props extends Entity {
     protected void loadTextures(String name){
         try {
             // Load the image of the key from the specified file path
-            //image = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("res/object/key.png")));
             image = ImageIO.read(new FileInputStream("res/object/"+name+".png"));
         } catch (IOException e) {
             // Print the stack trace in case of an IOException during image loading
