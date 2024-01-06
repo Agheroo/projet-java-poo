@@ -92,7 +92,7 @@ public class World extends Scene {
         checkPauseScene();
         if (state == State.WORLD) {
             Point ptn = new Point((int)13 * Const.WRLD_entityScreenSize, (int) 13 * Const.WRLD_entityScreenSize);
-            System.out.println("("+objMap.get(ptn).name +"," + objMap.get(ptn).worldY + ")  ("+player.worldX +","+player.worldY+")");
+            System.out.println("("+objMap.get(ptn).worldX +"," + objMap.get(ptn).worldY + ")  ("+player.worldX +","+player.worldY+")");
             //int playerScreenX = (Const.WDW_width - Const.WRLD_entityScreenSize) / 2;
             //int playerScreenY = (Const.WDW_height - Const.WRLD_entityScreenSize) / 2;
 
