@@ -15,8 +15,9 @@ import java.awt.event.KeyListener;
  */
 public final class KeyHandler implements KeyListener {
     public static KeyHandler instance;
-    public boolean upPressed, downPressed, leftPressed, rightPressed, interactPressed;
-    public boolean pausePressed;
+    public boolean upPressed, downPressed, leftPressed, rightPressed;
+    public boolean interactPressed;
+    public boolean escPressed;
 
     // Private constructor to prevent instantiation from outside the class
     private KeyHandler() {}
@@ -58,7 +59,7 @@ public final class KeyHandler implements KeyListener {
             interactPressed = true;
         }
         if (code == KeyEvent.VK_ESCAPE) {
-            pausePressed = true;
+            escPressed = true;
         }
     }
 
@@ -82,7 +83,7 @@ public final class KeyHandler implements KeyListener {
             interactPressed = false;
         }
         if (code == KeyEvent.VK_ESCAPE) {
-            pausePressed = false;
+            escPressed = false;
         }
     }
 }

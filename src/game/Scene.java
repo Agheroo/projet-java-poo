@@ -72,8 +72,8 @@ public abstract class Scene {
      * @brief Checks for a change in the scene state based on user input.
      */
     public void checkPauseScene() {
-        if (keyH.pausePressed) {
-            keyH.pausePressed = false;
+        if (keyH.escPressed) {
+            keyH.escPressed = false;
 
             if (state != State.PAUSE) {
                 System.out.println("CHANGING SCENE TO: PAUSE");

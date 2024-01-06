@@ -92,7 +92,7 @@ public class World extends Scene {
         checkPauseScene();
         if (state == State.WORLD) {
             Point ptn = new Point((int)13 * Const.WRLD_entityScreenSize, (int) 13 * Const.WRLD_entityScreenSize);
-            System.out.println("("+objMap.get(ptn).worldX +"," + objMap.get(ptn).worldY + ")  ("+player.worldX +","+player.worldY+")");
+            //System.out.println("("+objMap.get(ptn).worldX +"," + objMap.get(ptn).worldY + ")  ("+player.worldX +","+player.worldY+")");
             //int playerScreenX = (Const.WDW_width - Const.WRLD_entityScreenSize) / 2;
             //int playerScreenY = (Const.WDW_height - Const.WRLD_entityScreenSize) / 2;
 
@@ -100,10 +100,17 @@ public class World extends Scene {
             tileManager.update(this);
 
 
-
-            // other entity.update(this,dt);
             for(Enemy enemy : enemies.values()){
-                enemy.update(this, dt);
+                int playerScreenX = (Const.WDW_width - Const.WRLD_entityScreenSize) / 2;
+                int playerScreenY = (Const.WDW_height - Const.WRLD_entityScreenSize) / 2;
+
+                if (enemy.worldX + 5*Const.WRLD_tileScreenSize > player.worldX - playerScreenX
+                && enemy.worldX - 5*Const.WRLD_tileScreenSize < player.worldX + playerScreenX
+                && enemy.worldY + 5*Const.WRLD_tileScreenSize > player.worldY - playerScreenY
+                && enemy.worldY - 5*Const.WRLD_tileScreenSize < player.worldY + playerScreenY) {  //Update enemy if he's close enough otherwise useless to update
+                    enemy.update(this, dt);
+
+                }
             }
         }
 
@@ -152,11 +159,19 @@ public class World extends Scene {
                 // Calculate the screen position of the player
                 int playerScreenX = (Const.WDW_width - Const.WRLD_entityScreenSize) / 2;
                 int playerScreenY = (Const.WDW_height - Const.WRLD_entityScreenSize) / 2;
-                
-                // Calculate the screen position of the character relative to the player's position
-                int screenX = enemy.worldX - player.worldX + playerScreenX;
-                int screenY = enemy.worldY - player.worldY + playerScreenY;
-                enemy.drawInWorld(g2, screenX, screenY);
+
+
+                //Checking if we need to draw enemy or not
+                if (enemy.worldX + Const.WRLD_tileScreenSize > player.worldX - playerScreenX
+                && enemy.worldX - Const.WRLD_tileScreenSize < player.worldX + playerScreenX
+                && enemy.worldY + Const.WRLD_tileScreenSize > player.worldY - playerScreenY
+                && enemy.worldY - Const.WRLD_tileScreenSize < player.worldY + playerScreenY) {
+                                
+                        // Calculate the screen position of the character relative to the player's position
+                        int screenX = enemy.worldX - player.worldX + playerScreenX;
+                        int screenY = enemy.worldY - player.worldY + playerScreenY;
+                        enemy.drawInWorld(g2, screenX, screenY);
+                }
             }
         }
         

@@ -95,12 +95,13 @@ public abstract class Character extends Entity {
             World currWorld = World.getWorld();
 
             hitbox.x = worldX + hitbox.width / 2;
-            hitbox.y = worldY + hitbox.height / 2;
+            hitbox.y = worldY + hitbox.height;
+
+            // CHECK THE COLLISION
+            checkCollision(currWorld.tileManager);
 
             move(World.getWorld(), speed, dt);
-            // CHECK THE COLLISION
-            checkNearTiles(currWorld.tileManager);
-            //collisionOn = false;
+
 
             updateFrames();
         }
@@ -110,12 +111,13 @@ public abstract class Character extends Entity {
      * @brief Checks for collision with nearby tiles using the character's hitbox.
      * @param tileManager The TileManager containing information about tiles in the world.
      */
-    private void checkNearTiles(TileManager tileManager) {
+    private void checkCollision(TileManager tileManager) {
         // Checking tiles with hitbox
+
+
         if (tileManager.getTile(worldX + hitbox.width, worldY + hitbox.height).getCollision()) {
             worldX = hitbox.x - hitbox.width / 2;
             worldY = hitbox.y - hitbox.height / 2;
-
 
         }
     }
@@ -144,7 +146,7 @@ public abstract class Character extends Entity {
             }
         }
         if (dirX != 0 && dirY != 0) {
-            double normSum = Math.sqrt(dirX * dirX + dirY * dirY);
+            double normSum = Math.sqrt(dirX * dirX + dirY * dirY);      //Normalizing vector
             worldX += (dirX / normSum) * speed * dt;
             worldY += (dirY / normSum) * speed * dt;
         }
@@ -245,7 +247,7 @@ public abstract class Character extends Entity {
 
 
         g2.drawImage(image, screenX, screenY, Const.WRLD_entityScreenSize, Const.WRLD_entityScreenSize, null);
-        g2.drawRect(screenX + hitbox.width / 2, screenY + hitbox.height / 2, hitbox.width, hitbox.height); // Center the hitbox to the entity
+        g2.drawRect(screenX + hitbox.width / 2, screenY + hitbox.height, hitbox.width, hitbox.height); // Center the hitbox to the entity
     }
 
 
