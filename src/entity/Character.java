@@ -10,7 +10,6 @@ import game.Scene;
 import game.World;
 import tiles.TileManager;
 import game.Scene.State;
-
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.FileInputStream;
@@ -98,10 +97,13 @@ public abstract class Character extends Entity {
             hitbox.y = worldY + hitbox.height;
 
             // CHECK THE COLLISION
-            checkCollision(currWorld.tileManager);
+            //checkCollision(currWorld.tileManager);
+
 
             move(World.getWorld(), speed, dt);
-
+            checkTileCollision(currWorld.tileManager);
+            
+            
 
             updateFrames();
         }
@@ -111,14 +113,25 @@ public abstract class Character extends Entity {
      * @brief Checks for collision with nearby tiles using the character's hitbox.
      * @param tileManager The TileManager containing information about tiles in the world.
      */
-    private void checkCollision(TileManager tileManager) {
+    private void checkTileCollision(TileManager tileManager) {
         // Checking tiles with hitbox
-
-
-        if (tileManager.getTile(worldX + hitbox.width, worldY + hitbox.height).getCollision()) {
-            worldX = hitbox.x - hitbox.width / 2;
-            worldY = hitbox.y - hitbox.height / 2;
-
+        
+        
+        if((tileManager.getTile(hitbox.x, hitbox.y - 5).getCollision() //Checks collision with tile on top of the character
+        || tileManager.getTile(hitbox.x + hitbox.width , hitbox.y - 5).getCollision() )&&  dirY == -1) {
+            worldY = tileManager.getTile(hitbox.x,hitbox.y).getPos()[1] - hitbox.height;    //Prevent moving if collidable terrain
+        }
+        if((tileManager.getTile(hitbox.x, hitbox.y + hitbox.height + 5).getCollision() //Checks collision with tile beneath of the character
+        || tileManager.getTile(hitbox.x + hitbox.width, hitbox.y + hitbox.height + 5).getCollision()) && dirY == 1){
+            worldY = tileManager.getTile(hitbox.x,hitbox.y).getPos()[1] -1;        //Prevent moving if collidable terrain
+        }
+        if((tileManager.getTile(hitbox.x - 5, hitbox.y).getCollision() //Checks collision with tile on the left of the character
+        || tileManager.getTile(hitbox.x - 5, hitbox.y + hitbox.height).getCollision()) && dirX == -1) {
+            worldX = tileManager.getTile(hitbox.x,hitbox.y).getPos()[0] - hitbox.width/2 ;    //Prevent moving if collidable terrain
+        }
+        if((tileManager.getTile(hitbox.x + hitbox.width + 5, hitbox.y).getCollision() //Checks collision with tile on the right of the character
+        || tileManager.getTile(hitbox.x + hitbox.width + 5, hitbox.y + hitbox.height).getCollision()) && dirX == 1){
+            worldX = tileManager.getTile(hitbox.x,hitbox.y).getPos()[0] + hitbox.width/2 - 1;        //Prevent moving if collidable terrain
         }
     }
 
