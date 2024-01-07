@@ -165,7 +165,7 @@ public class Tile {
         }
 
         g2.drawImage(render, screenX, screenY, screenSize, screenSize, null);
-        g2.drawRect(screenX,screenY,Const.WRLD_tileScreenSize,Const.WRLD_tileScreenSize);   //Debugging purposes
+        //g2.drawRect(screenX,screenY,Const.WRLD_tileScreenSize,Const.WRLD_tileScreenSize);   //Debugging purposes
     }
 
 }
