@@ -28,7 +28,7 @@ public abstract class Scene {
 
     public KeyHandler keyH = KeyHandler.getInstance();
     protected static double dt = 0;
-    public State state;
+    public static State state;
     public HUD menu;
 
     /**
@@ -90,7 +90,7 @@ public abstract class Scene {
 
     public void changeScene(State newState){
         System.out.println("CHANGING SCENE TO: " + newState);
-        this.state = newState;
+        state = newState;
     }
 
 }

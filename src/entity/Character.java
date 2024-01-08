@@ -88,7 +88,7 @@ public abstract class Character extends Entity {
      */
     @Override
     public void update(Scene scene, double dt) {
-        if (scene.state == State.WORLD) {
+        if (Scene.state == State.WORLD) {
             World currWorld = World.getWorld();
 
             hitbox.x = worldX + hitbox.width / 2;

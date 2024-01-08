@@ -51,7 +51,7 @@ public class FightScene {
         System.out.println("Le joueur est en combat avec "+ enemy.name);
         if(scene.keyH.interactPressed){
             state = FightState.WON;
-            scene.state = State.WORLD;
+            Scene.state = State.WORLD;
             player.speed = 0;
             killEnemy(World.enemies, enemy);
             

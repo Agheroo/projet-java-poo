@@ -5,7 +5,10 @@
 
 package entity;
 
+import game.FightScene;
 import game.Scene;
+import game.World;
+import game.Scene.State;
 
 /**
  * @class Enemy
@@ -15,7 +18,6 @@ import game.Scene;
 public class Enemy extends Character {
 
     private int _xpRate; // Experience points rate for defeating the enemy
-    public String name;
     /**
      * @brief Constructor for the Enemy class.
      * @param worldX The X-coordinate of the enemy in the world.
@@ -60,6 +62,8 @@ public class Enemy extends Character {
     }
 
     public void playerInterraction(Player player){
-        
+        System.out.println("Attention : je pratique le tabassing.");
+        World._currfight = new FightScene(player,this);
+        World.state = State.FIGHT;
     }
 }

@@ -24,7 +24,7 @@ import UI.Textbox;
 public class World extends Scene {
 
     private static World _instance;
-    private FightScene _currfight;
+    public static FightScene _currfight;
     public TileManager tileManager = new TileManager(this);
 
     
@@ -32,7 +32,7 @@ public class World extends Scene {
     public EntitySetter entitySetter = new EntitySetter(this); // Instance of EntitySetter
     
     // Doc table de Hashage : https://www.geeksforgeeks.org/java-util-dictionary-class-java/
-    public HashMap<Point, Props> objMap = new HashMap<>(); // HashMap to store objects with coordinates
+    public static HashMap<Point, Props> objMap = new HashMap<>(); // HashMap to store objects with coordinates
     public static HashMap<Point, Enemy> enemies = new HashMap<>();
     
   
@@ -51,7 +51,7 @@ public class World extends Scene {
         Textbox.loadFont("rainyhearts");
         if (_instance == null) {
             _instance = new World();
-            _instance.state = State.WORLD;
+            state = State.WORLD;
         }
         return _instance;
     }

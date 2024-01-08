@@ -44,7 +44,7 @@ public class Player extends Character {
     public void update(Scene scene, double dt) {
         super.update(scene, dt);  // Calls the parent class update method
         // World updates
-        if (scene.state == State.WORLD) {
+        if (Scene.state == State.WORLD) {
             if (scene.keyH.upPressed || scene.keyH.downPressed || scene.keyH.leftPressed || scene.keyH.rightPressed) {
                 dirX = 0;
                 dirY = 0;
@@ -72,14 +72,15 @@ public class Player extends Character {
             }
 
             // CHECK OBJECT COLLISION
-            Point objIndex = checkObject(this, World.getWorld());
-            pickUpObject(World.getWorld(), objIndex);
+            Point objIndex = checkObject();
+            pickUpObject(objIndex);
 
-            
+            Point enemyInd = checkEnemy();
+            fightEnemy(enemyInd);
         }
 
         // Fightscene updates
-        if (scene.state == State.FIGHT) {
+        if (Scene.state == State.FIGHT) {
             // To be implemented
             
 
@@ -92,16 +93,15 @@ public class Player extends Character {
      * @param world     The current game world.
      * @return The coordinates of the collided object or null if no collision.
      */
-    public Point checkObject(Entity entity, World world) {
-        
+    public Point checkObject() {
         Point index = null;
 
-        for (Props obj : world.objMap.values()) {
+        for (Props obj : World.objMap.values()) {
             if (obj != null) {
-                if (entity.hitbox.intersects(obj.hitbox)) {
+                if (hitbox.intersects(obj.hitbox)) {
                     if (obj.getCollision()) {   //If object has "solid" collision
                         //prevent the player from moving in the hitbox
-            
+                        obj.block(this);
                     }
                     index = new Point((int) obj.worldX, (int) obj.worldY);
                     break;
@@ -112,17 +112,40 @@ public class Player extends Character {
         return index;
     }
 
+    public Point checkEnemy(){
+        Point index = null;
 
+        for (Enemy enemy : World.enemies.values()) {
+            if (enemy != null) {
+                if (hitbox.intersects(enemy.hitbox)) {
+                    
+                    index = new Point((int) enemy.worldX, (int) enemy.worldY);
+                    break;
+                }
+            }
+        }
 
-    public void pickUpObject(World gp, Point index) {
+        return index;
+    }
+    
+    public void fightEnemy(Point ind){
+        if(ind != null){
+            System.out.println("JE TABASSE");
+            Enemy enemy = World.enemies.get(ind);
+            enemy.playerInterraction(this); 
+        }
+        
+    }
+
+    public void pickUpObject(Point index) {
         if (index != null) {
-            Entity object = gp.objMap.get(index);
+            Entity object = World.objMap.get(index);
             object.playerInterraction(this);
         }
     }
 
     public void addItem(Item i){
-        System.out.println("J'ai rajoutée un item");
+        System.out.println("J'ai rajoutée un item");   
     }
 
 }
