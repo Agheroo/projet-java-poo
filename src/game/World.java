@@ -7,9 +7,14 @@ package game;
 
 import entity.Player;
 import tiles.TileManager;
+import entity.Enemy;
 import entity.EntitySetter;
 import entity.Props;
+import game.FightScene.FightState;
 import java.awt.*;
+import java.util.HashMap;
+import UI.Textbox;
+
 
 /**
  * @class World
@@ -19,23 +24,31 @@ import java.awt.*;
 public class World extends Scene {
 
     private static World _instance;
+    private FightScene _currfight;
     public TileManager tileManager = new TileManager(this);
 
-    // World initialization settings
-    public final int maxRow = 27, maxCol = 27; // DONT FORGET TO MODIFY WHEN CHANGING THE MAP !!!
+    
 
-    public EntitySetter aSetter = new EntitySetter(this); // Instance of EntitySetter
+    public EntitySetter entitySetter = new EntitySetter(this); // Instance of EntitySetter
+    
+    // Doc table de Hashage : https://www.geeksforgeeks.org/java-util-dictionary-class-java/
+    public HashMap<Point, Props> objMap = new HashMap<>(); // HashMap to store objects with coordinates
+    public static HashMap<Point, Enemy> enemies = new HashMap<>();
+    
+  
     // Player settings
-    public Props[] obj = new Props[10]; // The array that lists all objects
-    public Player player = new Player(15 * tileManager.tileSize * tileManager.scale,
-            15 * tileManager.tileSize * tileManager.scale, 0, 0, 0, "down", 4, 20);
+    public Player player = new Player("player",15 * Const.WRLD_tileScreenSize,
+            15 * Const.WRLD_tileScreenSize, 0, 0, 0, "down", 4, 20);
 
+
+    //public Player player;
     /**
      * Gets the instance of the World.
      *
      * @return The World instance.
      */
     public static World getWorld() {
+        Textbox.loadFont("rainyhearts");
         if (_instance == null) {
             _instance = new World();
             _instance.state = State.WORLD;
@@ -43,50 +56,69 @@ public class World extends Scene {
         return _instance;
     }
 
-    private World() {
-    }
 
     /**
      * Set up the initial state of the game.
      */
     public void setupGame() {
-        aSetter.setObject();
+        entitySetter.setObject();
+        entitySetter.setEnemies();
+
+        player = new Player("player", 15 * Const.WRLD_tileScreenSize,
+            15 * Const.WRLD_tileScreenSize, 0, 0, 0, "down", 4, 20);
+    
+    }
+
+    
+
+    /**
+     * Adds an object to the HashMap with the specified coordinates.
+     *
+     * @param coordinates The coordinates of the object.
+     * @param object      The object to be added.
+     */
+    public void addObject(Point coordinates, Props object) {
+        objMap.put(coordinates, object);
+    }
+
+    public void addEnemy(Point coordinates, Enemy enemy){
+        enemies.put(coordinates,enemy);
     }
 
     /**
      * Updates the game world based on the scene state.
      */
     public void update() {
-        checkSceneChange();
+        checkPauseScene();
         if (state == State.WORLD) {
-            int playerScreenX = (800 - player.screenSize) / 2;
-            int playerScreenY = (600 - player.screenSize) / 2;
+            Point ptn = new Point((int)13 * Const.WRLD_entityScreenSize, (int) 13 * Const.WRLD_entityScreenSize);
+            //System.out.println("("+objMap.get(ptn).worldX +"," + objMap.get(ptn).worldY + ")  ("+player.worldX +","+player.worldY+")");
+            //int playerScreenX = (Const.WDW_width - Const.WRLD_entityScreenSize) / 2;
+            //int playerScreenY = (Const.WDW_height - Const.WRLD_entityScreenSize) / 2;
 
-            if (player.worldX + tileManager.tileScreenSize > player.worldX - playerScreenX // Do all the world updates if they are actually visible on the screen (or near)
-                    && player.worldX - tileManager.tileScreenSize < player.worldX + playerScreenX
-                    && player.worldY + tileManager.tileScreenSize > player.worldY - playerScreenY
-                    && player.worldY - tileManager.tileScreenSize < player.worldY + playerScreenY) {
+            player.update(this, dt);
+            tileManager.update(this);
 
-                player.update(this, dt);
-                tileManager.update(this, 800, 600);
 
-                // otherentity.update(this,dt);
-            }
+            for(Enemy enemy : enemies.values()){
+                int playerScreenX = (Const.WDW_width - Const.WRLD_entityScreenSize) / 2;
+                int playerScreenY = (Const.WDW_height - Const.WRLD_entityScreenSize) / 2;
 
-            // Checks if player is touching the edges of the map
-            // TODO: collision checker in entity class of Akim's branch
-            if (player.worldX + player.hitbox.width / 2 < 0) {
-                player.worldX = 0 - player.hitbox.width / 2;
+                if (enemy.worldX + 5*Const.WRLD_tileScreenSize > player.worldX - playerScreenX
+                && enemy.worldX - 5*Const.WRLD_tileScreenSize < player.worldX + playerScreenX
+                && enemy.worldY + 5*Const.WRLD_tileScreenSize > player.worldY - playerScreenY
+                && enemy.worldY - 5*Const.WRLD_tileScreenSize < player.worldY + playerScreenY) {  //Update enemy if he's close enough otherwise useless to update
+                    enemy.update(this, dt);
+
+                }
             }
-            if (player.worldX - player.hitbox.width / 2 >= (maxCol - 1) * tileManager.tileSize * tileManager.scale) {
-                player.worldX = (maxCol - 1) * tileManager.tileSize * tileManager.scale + player.hitbox.width / 2;
-            }
-            if (player.worldY + player.hitbox.height / 2 < 0) {
-                player.worldY = 0 - player.hitbox.height / 2;
-            }
-            if (player.worldY - player.hitbox.height / 2 >= (maxRow - 1) * tileManager.tileSize * tileManager.scale) {
-                player.worldY = (maxRow - 1) * tileManager.tileSize * tileManager.scale + player.hitbox.height / 2;
-            }
+        }
+
+            
+            
+
+        if (state == State.FIGHT){
+            _currfight.update(this);
         }
     }
 
@@ -98,16 +130,51 @@ public class World extends Scene {
      * @param screenHeight The height of the screen.
      */
     public void draw(Graphics2D g2, int screenWidth, int screenHeight) {
-        // TILE
-        tileManager.draw(g2, this, screenWidth, screenHeight);
-        // OBJECT
-        for (Props props : obj) {
-            if (props != null) {
-                props.draw(g2, this);
+        
+        //If there is a fight, draw the fight instead of the game world
+        if(_currfight != null){
+            if( _currfight.state == FightState.FIGHTING){
+                _currfight.draw(g2);
+            }
+            if(_currfight.state == FightState.WON){
+                _currfight = null;
             }
         }
-        // PLAYER
-        player.drawInWorld(g2, screenWidth / 2 - (player.screenSize / 2),
-                screenHeight / 2 - (player.screenSize / 2)); // Player is always centered to screen
+        
+        else{
+            // TILE
+            tileManager.draw(g2, this);
+            // OBJECT
+            for (Props props : objMap.values()) {
+                props.draw(g2, this);
+            }
+            // PLAYER
+            player.drawInWorld(g2, screenWidth / 2 - (Const.WRLD_entityScreenSize / 2),
+                    screenHeight / 2 - (Const.WRLD_entityScreenSize / 2)); // Player is always centered to screen
+
+            
+
+            //ENEMIES
+            for(Enemy enemy : enemies.values()){
+                // Calculate the screen position of the player
+                int playerScreenX = (Const.WDW_width - Const.WRLD_entityScreenSize) / 2;
+                int playerScreenY = (Const.WDW_height - Const.WRLD_entityScreenSize) / 2;
+
+
+                //Checking if we need to draw enemy or not
+                if (enemy.worldX + Const.WRLD_tileScreenSize > player.worldX - playerScreenX
+                && enemy.worldX - Const.WRLD_tileScreenSize < player.worldX + playerScreenX
+                && enemy.worldY + Const.WRLD_tileScreenSize > player.worldY - playerScreenY
+                && enemy.worldY - Const.WRLD_tileScreenSize < player.worldY + playerScreenY) {
+                                
+                        // Calculate the screen position of the character relative to the player's position
+                        int screenX = enemy.worldX - player.worldX + playerScreenX;
+                        int screenY = enemy.worldY - player.worldY + playerScreenY;
+                        enemy.drawInWorld(g2, screenX, screenY);
+                }
+            }
+        }
+        
     }
+
 }

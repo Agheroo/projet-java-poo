@@ -11,14 +11,13 @@ import java.awt.*;
 
 import UI.HUD;
 import UI.HUD.MenuType;
-import entity.Enemy;
-import entity.Player;
 
 /**
  * @class Scene
  * @brief Represents an abstract scene in the game.
  */
 public abstract class Scene {
+    
     /**
      * @enum State
      * @brief Represents the possible states of a scene (WORLD, FIGHT, PAUSE, MENU).
@@ -28,7 +27,7 @@ public abstract class Scene {
     private State _lastState;
 
     public KeyHandler keyH = KeyHandler.getInstance();
-    public double dt = 0;
+    protected static double dt = 0;
     public State state;
     public HUD menu;
 
@@ -44,14 +43,19 @@ public abstract class Scene {
      * @param screenHeight The height of the screen.
      */
     public abstract void draw(Graphics2D g2, int screenWidth, int screenHeight);
+    
 
+    public static double getdt(){
+        return dt;
+    }
+    
     /**
      * @brief Gets the World scene.
      * @return The World scene.
      */
-    public Scene worldScene() {
+    /*public Scene worldScene() {
         return World.getWorld();
-    }
+    }*/
 
     /**
      * @brief Creates and returns a new FightScene.
@@ -59,16 +63,17 @@ public abstract class Scene {
      * @param enemy The enemy entity in the fight.
      * @return The new FightScene.
      */
-    public Scene fightScene(Player player, Enemy enemy) {
+    /*public Scene fightScene(Player player, Enemy enemy) {
         return new FightScene(player, enemy);
-    }
+    }*/
+
 
     /**
      * @brief Checks for a change in the scene state based on user input.
      */
-    public void checkSceneChange() {
-        if (keyH.pausePressed) {
-            keyH.pausePressed = false;
+    public void checkPauseScene() {
+        if (keyH.escPressed) {
+            keyH.escPressed = false;
 
             if (state != State.PAUSE) {
                 System.out.println("CHANGING SCENE TO: PAUSE");
@@ -76,10 +81,16 @@ public abstract class Scene {
                 state = State.PAUSE;
                 menu = new HUD(MenuType.PAUSE);
             } else {
-                System.out.println("CHANGING SCENE TO: WORLD");
+                System.out.println("CHANGING SCENE TO: "+_lastState);
                 state = _lastState;
                 menu = null;
             }
         }
     }
+
+    public void changeScene(State newState){
+        System.out.println("CHANGING SCENE TO: " + newState);
+        this.state = newState;
+    }
+
 }

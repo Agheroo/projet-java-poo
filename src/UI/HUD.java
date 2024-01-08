@@ -12,7 +12,6 @@ public class HUD {
     private MenuType _type;
     private int _titleWidth, _titleHeight;
     //private KeyHandler keyH = KeyHandler.getInstance();
-    //private Cursor _cursor;
 
 
     public final int HUDWidth = 600;
@@ -28,9 +27,13 @@ public class HUD {
                 _nbButtons = 3;
                 _titleWidth = 300;
                 _titleHeight = 80;
+                _title = new ChoiceButton(_titleWidth,_titleHeight,"PAUSE","rainyhearts",new Color(0x834317));
                 break;
             case FIGHT:
-                _nbButtons = 6;
+                _titleWidth = 300;
+                _titleHeight = 60;
+                _nbButtons = 4;
+                _title = new ChoiceButton(_titleWidth,_titleHeight,"FIGHT","rainyhearts",new Color(0xF10516));
                 break;
             case SHOP:
                 _nbButtons = 4;
@@ -40,7 +43,7 @@ public class HUD {
         _buttons = new ChoiceButton[_nbButtons];
 
         //To replace with the current names that we want depending on the MenuType
-        _title = new ChoiceButton(_titleWidth,_titleHeight,"PAUSE","Calibri",new Color(0x834317));
+        
         for(int i =0; i<_nbButtons ; i++){
             _buttons[i] = new ChoiceButton(80*3,20*3, "BUTTON " +i, "rainyhearts",Color.black);
         }

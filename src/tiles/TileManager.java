@@ -5,6 +5,7 @@
 
 package tiles;
 
+import game.Const;
 import game.World;
 
 import java.awt.Graphics2D;
@@ -17,13 +18,7 @@ import java.io.FileReader;
  * @brief Manages tiles in the game world.
  */
 public class TileManager {
-    public final int tileSize = 16;
-    public final int scale = 3;
-    public final int tileScreenSize = tileSize * scale;
 
-    // Tiles for textures
-    private final int nbFloorTextures = 6;
-    private final int nbTopTextures = 29;
 
     private Tile[] _floorMapTextures;
     private Tile[] _topMapTextures;
@@ -38,12 +33,12 @@ public class TileManager {
      */
     public TileManager(World world) {
         // Textures
-        _floorMapTextures = new Tile[nbFloorTextures];
-        _topMapTextures = new Tile[nbTopTextures];
+        _floorMapTextures = new Tile[Const.nbFloorTextures];
+        _topMapTextures = new Tile[Const.nbTopTextures];
 
         // Map itself
-        _floorMap = new Tile[world.maxRow][world.maxCol];
-        _topMap = new Tile[world.maxRow][world.maxCol];
+        _floorMap = new Tile[Const.WRLD_maxRow][Const.WRLD_maxCol];
+        _topMap = new Tile[Const.WRLD_maxRow][Const.WRLD_maxCol];
 
         loadTextures();
         loadMap("res/maps/debugfloor.txt", world, _floorMap, _floorMapTextures);
@@ -58,7 +53,7 @@ public class TileManager {
      * @return The corresponding tile of the top map.
      */
     public Tile getTile(int x, int y) {
-        int param = tileScreenSize;
+        int param = Const.WRLD_tileScreenSize;
         int i = x / param;
         int j = y / param;
 
@@ -124,16 +119,16 @@ public class TileManager {
             FileReader fileReader = new FileReader(file);
             BufferedReader br = new BufferedReader(fileReader);
 
-            for (int i = 0; i < world.maxRow; i++) {
+            for (int i = 0; i < Const.WRLD_maxRow; i++) {
                 String line = br.readLine();
 
-                for (int j = 0; j < world.maxCol; j++) {
-                    String numbers[] = line.split("\\s+");
+                for (int j = 0; j < Const.WRLD_maxCol; j++) {
+                    String[] numbers = line.split("\\s+");
                     int num = Integer.parseInt(numbers[j]); // Reading the file itself and stocking int read
 
                     Tile tileCurrent = new Tile(textures[num].spriteCntMax, textures[num].spriteSpeed,
                             textures[num].getCollision(), num); // Creating new tile to store with the according texture
-                    tileCurrent.setPos(tileSize * j * scale, tileSize * i * scale);
+                    tileCurrent.setPos(Const.WRLD_tileScreenSize * j, Const.WRLD_tileScreenSize * i);
 
                     mapTile[i][j] = tileCurrent; // Setting the tile to the actual map
                     mapTile[i][j].setTexture(textures[num].image); // Set the current tile texture to what corresponds
@@ -158,20 +153,20 @@ public class TileManager {
      * @param screenWidth  The screen width.
      * @param screenHeight The screen height.
      */
-    public void update(World world, int screenWidth, int screenHeight) {
-        int playerScreenX = (screenWidth - world.player.screenSize) / 2;
-        int playerScreenY = (screenHeight - world.player.screenSize) / 2;
+    public void update(World world) {
+        int playerScreenX = (Const.WDW_width - Const.WRLD_entityScreenSize) / 2;
+        int playerScreenY = (Const.WDW_height - Const.WRLD_entityScreenSize) / 2;
 
-        for (int i = 0; i < world.maxRow; i++) {
-            for (int j = 0; j < world.maxCol; j++) {
+        for (int i = 0; i < Const.WRLD_maxRow; i++) {
+            for (int j = 0; j < Const.WRLD_maxCol; j++) {
                 int worldX = _floorMap[i][j].getPos()[0];
                 int worldY = _floorMap[i][j].getPos()[1];
 
                 // Checks if the player is close enough to the tile to render it to optimize memory and CPU usage
-                if (worldX + tileSize * scale > world.player.worldX - playerScreenX
-                        && worldX - tileSize * scale < world.player.worldX + playerScreenX
-                        && worldY + tileSize * scale > world.player.worldY - playerScreenY
-                        && worldY - tileSize * scale < world.player.worldY + playerScreenY) {
+                if (worldX + Const.WRLD_tileScreenSize > world.player.worldX - playerScreenX
+                        && worldX - Const.WRLD_tileScreenSize < world.player.worldX + playerScreenX
+                        && worldY + Const.WRLD_tileScreenSize > world.player.worldY - playerScreenY
+                        && worldY - Const.WRLD_tileScreenSize < world.player.worldY + playerScreenY) {
                     _floorMap[i][j].updateFrames();
                     _topMap[i][j].updateFrames();
                 }
@@ -187,21 +182,21 @@ public class TileManager {
      * @param screenWidth  The screen width.
      * @param screenHeight The screen height.
      */
-    public void draw(Graphics2D g2, World world, int screenWidth, int screenHeight) {
-        int playerScreenX = (screenWidth - world.player.screenSize) / 2;
-        int playerScreenY = (screenHeight - world.player.screenSize) / 2;
+    public void draw(Graphics2D g2, World world) {
+        int playerScreenX = (Const.WDW_width - Const.WRLD_entityScreenSize) / 2;
+        int playerScreenY = (Const.WDW_height - Const.WRLD_entityScreenSize) / 2;
 
         // Check for every tile of the map if it needs to be drawn
-        for (int i = 0; i < world.maxRow; i++) {
-            for (int j = 0; j < world.maxCol; j++) {
+        for (int i = 0; i < Const.WRLD_maxRow; i++) {
+            for (int j = 0; j < Const.WRLD_maxCol; j++) {
                 int worldX = _floorMap[i][j].getPos()[0];
                 int worldY = _floorMap[i][j].getPos()[1];
 
                 // Checks if the player is close enough to the tile to render it to optimize memory and CPU usage
-                if (worldX + tileSize * scale > world.player.worldX - playerScreenX
-                        && worldX - tileSize * scale < world.player.worldX + playerScreenX
-                        && worldY + tileSize * scale > world.player.worldY - playerScreenY
-                        && worldY - tileSize * scale < world.player.worldY + playerScreenY) {
+                if (worldX + Const.WRLD_tileScreenSize > world.player.worldX - playerScreenX
+                        && worldX - Const.WRLD_tileScreenSize < world.player.worldX + playerScreenX
+                        && worldY + Const.WRLD_tileScreenSize > world.player.worldY - playerScreenY
+                        && worldY - Const.WRLD_tileScreenSize < world.player.worldY + playerScreenY) {
                     int screenX = worldX - world.player.worldX + playerScreenX;
                     int screenY = worldY - world.player.worldY + playerScreenY;
                     _floorMap[i][j].draw(g2, screenX, screenY);

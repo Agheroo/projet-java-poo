@@ -6,20 +6,22 @@
 package entity;
 
 import game.World;
+import game.Const;
+import java.awt.*;
 
 /**
  * @class EntitySetter
  * @brief Responsible for initializing and setting up objects (entities) in the game world.
  */
 public class EntitySetter {
-    World gp;
+    World world;
 
     /**
      * @brief Constructor for the EntitySetter class.
-     * @param gp The World object representing the game world.
+     * @param world The World object representing the game world.
      */
-    public EntitySetter(World gp) {
-        this.gp = gp;
+    public EntitySetter(World world) {
+        this.world = world;
     }
 
     /**
@@ -27,20 +29,24 @@ public class EntitySetter {
      */
     public void setObject() {
         // Create and set up a Key object at a specific location in the world
-        gp.obj[0] = new OBJ_Key();
-        int tileSize = 16;
-        int scale = 3;
-        gp.obj[0].worldX = 13 * tileSize * scale;
-        gp.obj[0].worldY = 13 * tileSize * scale;
+        Props key = new OBJ_Key(13 * Const.WRLD_entityScreenSize,13 * Const.WRLD_entityScreenSize);
+        world.addObject(new Point((int) key.worldX, (int) key.worldY), key);
 
         // Create and set up a Door object at a specific location in the world
-        gp.obj[1] = new OBJ_Door();
-        gp.obj[1].worldX = 14 * tileSize * scale;
-        gp.obj[1].worldY = 13 * tileSize * scale;
+        Props door = new OBJ_Door(14 * Const.WRLD_entityScreenSize,13 * Const.WRLD_entityScreenSize);
+        world.addObject(new Point((int) door.worldX, (int) door.worldY), door);
 
         // Create and set up a Chest object at a specific location in the world
-        gp.obj[2] = new OBJ_Chest();
-        gp.obj[2].worldX = 15 * tileSize * scale;
-        gp.obj[2].worldY = 13 * tileSize * scale;
+        Props chest = new OBJ_Chest(15 * Const.WRLD_entityScreenSize,13 * Const.WRLD_entityScreenSize);
+        world.addObject(new Point((int) chest.worldX, (int) chest.worldY), chest);
+    }
+
+    public void setEnemies(){
+        Enemy enemy1 = new Enemy("orc", 8*Const.WRLD_entityScreenSize, 10*Const.WRLD_entityScreenSize, 0, 0, 0, "down", 4, 20);
+        world.addEnemy(new Point((int) enemy1.worldX, (int) enemy1.worldY), enemy1);
+        
+        Enemy enemy2 = new Enemy("orc", 16*Const.WRLD_entityScreenSize, 10*Const.WRLD_entityScreenSize, 0, 0, 0, "up", 4, 20);
+        world.addEnemy(new Point((int) enemy2.worldX, (int) enemy2.worldY), enemy2);
+        
     }
 }

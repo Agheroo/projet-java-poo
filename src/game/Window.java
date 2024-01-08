@@ -41,7 +41,7 @@ public class Window extends JPanel implements Runnable {
     /**
      * The frames per second for the game.
      */
-    private final int _FPS = 120;
+    private final int _FPS = 60;
 
     /**
      * The game thread.
@@ -58,7 +58,7 @@ public class Window extends JPanel implements Runnable {
         this.setDoubleBuffered(true);
         this.addKeyListener(scene.keyH);
         this.setFocusable(true);
-        world.setupGame(); // Création de l'instance du setter
+        world.setupGame(); // Creation of instance setter
     }
 
     /**
@@ -73,12 +73,12 @@ public class Window extends JPanel implements Runnable {
         while (gameThread != null) {
             currentTime = System.nanoTime();
 
-            scene.dt += (currentTime - lastTime) / drawInterval;
+            Scene.dt += (currentTime - lastTime) / drawInterval;
             lastTime = currentTime;
 
-            if (scene.dt > 0.1) {
+            if (Scene.dt > 0.1) {
                 update(); // update() method for window both updates the world and repaints the components of it
-                scene.dt -= 0.1;
+                Scene.dt -= 0.05;
             }
         }
     }
