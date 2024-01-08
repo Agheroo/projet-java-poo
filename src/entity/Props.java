@@ -21,11 +21,23 @@ import javax.imageio.ImageIO;
  * @brief Represents in-game props with properties such as image, name, and position.
  */
 public abstract class Props extends Entity {
-    public BufferedImage image; // Image representing the prop
-    public String name; // Name of the prop
+    private BufferedImage image; // Image representing the prop
+    protected boolean collision = false;
 
-    public int hitboxDefaultX = 0;
-    public int hitboxDefaultY = 0;
+    //public int hitboxDefaultX = 0;
+    //public int hitboxDefaultY = 0;
+
+    Props(int x, int y, String name, int spriteCntMax, int spriteSpeed){
+        super(name,x,y,spriteCntMax,spriteSpeed);
+        hitbox.width = 3*Const.WRLD_tileScreenSize/4;  //Slightly smaller than a tile
+        hitbox.height = 3*Const.WRLD_tileScreenSize/4;
+        hitbox.x = worldX + hitbox.width/4;
+        hitbox.y = worldY + hitbox.height/4;
+    }
+
+    boolean getCollision(){
+        return collision;
+    }
 
     protected void loadTextures(String name){
         try {
@@ -36,6 +48,8 @@ public abstract class Props extends Entity {
             e.printStackTrace();
         }
     }
+
+    
 
     /**
      * @brief Draw the prop on the screen based on its position relative to the player's position.
@@ -58,6 +72,7 @@ public abstract class Props extends Entity {
                 && worldY - Const.WRLD_tileScreenSize < world.player.worldY + playerScreenY) {
             // Draw the prop on the screen
             g2.drawImage(image, screenX, screenY, Const.WRLD_entityScreenSize, Const.WRLD_entityScreenSize, null);
+            g2.drawRect(screenX + Const.WRLD_entityScreenSize/8, screenY + Const.WRLD_entityScreenSize/8, this.hitbox.width, this.hitbox.height);
         }
     }
 }

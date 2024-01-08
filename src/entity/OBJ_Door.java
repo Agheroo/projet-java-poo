@@ -18,10 +18,7 @@ public class OBJ_Door extends Props {
      * @details Initializes the name of the door and loads its image from a resource file.
      */
     public OBJ_Door(int worldX, int worldY) {
-        this.worldX = worldX;
-        this.worldY = worldY;
-        // Set the name of the door
-        name = "Door";
+        super(worldX, worldY,"door",1,0);  
 
         loadTextures("door");
         collision = true;

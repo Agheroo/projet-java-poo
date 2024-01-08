@@ -18,10 +18,8 @@ public class OBJ_Chest extends Props {
      * @details Initializes the name and loads the image for the chest.
      */
     public OBJ_Chest(int worldX, int worldY){
-        this.worldX = worldX;
-        this.worldY = worldY;
-        // Set the name of the chest object
-        name = "Chest";
+        super(worldX, worldY,"door",1,0);
+
 
         loadTextures("chest");
         collision = true;

@@ -29,9 +29,6 @@ public class Enemy extends Character {
      */
     public Enemy(String enemyName, int worldX, int worldY, int dirX, int dirY, int speed, String facing, int spriteCntMax, int spriteSpeed) {
         super(enemyName, worldX, worldY, dirX, dirY, speed, facing, spriteCntMax, spriteSpeed);  // Calls the parent class for entity setup, specifying scene.keyH for player
-
-        name = enemyName;
-        loadTextures(enemyName);
     }
 
     /**

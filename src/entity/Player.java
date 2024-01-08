@@ -32,8 +32,6 @@ public class Player extends Character {
      */
     public Player(String entityName, int worldX, int worldY, int dirX, int dirY, int speed, String facing, int spriteCntMax, int spriteSpeed) {
         super(entityName, worldX, worldY, dirX, dirY, speed, facing, spriteCntMax, spriteSpeed);  // Calls the parent class for entity setup, specifying scene.keyH for player
-
-        loadTextures(entityName);
     }
 
     /**
@@ -43,7 +41,6 @@ public class Player extends Character {
      */
     public void update(Scene scene, double dt) {
         super.update(scene, dt);  // Calls the parent class update method
-
         // World updates
         if (scene.state == State.WORLD) {
             if (scene.keyH.upPressed || scene.keyH.downPressed || scene.keyH.leftPressed || scene.keyH.rightPressed) {
@@ -75,6 +72,8 @@ public class Player extends Character {
             // CHECK OBJECT COLLISION
             Point objIndex = checkObject(this, World.getWorld(), true);
             pickUpObject(World.getWorld(), objIndex);
+
+            
         }
 
         // Fightscene updates
@@ -93,33 +92,21 @@ public class Player extends Character {
      * @return The coordinates of the collided object or null if no collision.
      */
     public Point checkObject(Entity entity, World gp, boolean player) {
+        
         Point index = null;
 
         for (Props obj : gp.objMap.values()) {
             if (obj != null) {
-                // Get entity's hitbox position
-                entity.hitbox.x = (entity.worldX + entity.hitbox.x) / 2;
-                entity.hitbox.y = (entity.worldY + entity.hitbox.y) / 2;
-
-                // Get the object's solid area position
-                obj.hitbox.x = obj.worldX + obj.hitbox.x;
-                obj.hitbox.y = obj.worldY + obj.hitbox.y;
-
-                // Check collision based on coordinates
                 if (entity.hitbox.intersects(obj.hitbox)) {
-                    if (obj.collision) {
-                        entity.collision = true;
+                    if (obj.getCollision()) {   //If object has "solid" collision
+                        
+                        //entity.collision = true;
                     }
                     if (player) {
                         index = new Point((int) obj.worldX, (int) obj.worldY);
                         break;
                     }
                 }
-
-                entity.hitbox.x = entity.hitboxDefaultX;
-                entity.hitbox.y = entity.hitboxDefaultY;
-                obj.hitbox.x = obj.hitboxDefaultX;
-                obj.hitbox.y = obj.hitboxDefaultY;
             }
         }
 
