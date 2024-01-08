@@ -214,7 +214,6 @@ public abstract class Character extends Entity {
      */
     public void drawInWorld(Graphics2D g2, int screenX, int screenY) {
         BufferedImage image = null;
-        // System.out.println(worldX + " " + worldY);
         if (speed == 0) { // IDLE ANIMATIONS
             for (int i = 0; i < _spriteCntMax; i++) {
                 switch (facing) {
@@ -253,9 +252,18 @@ public abstract class Character extends Entity {
         }
         
 
+        int playerScreenX = (Const.WDW_width - Const.WRLD_entityScreenSize) / 2;
+        int playerScreenY = (Const.WDW_height - Const.WRLD_entityScreenSize) / 2;
 
-        g2.drawImage(image, screenX, screenY, Const.WRLD_entityScreenSize, Const.WRLD_entityScreenSize, null);
-        g2.drawRect(screenX + hitbox.width / 2, screenY + hitbox.height, hitbox.width, hitbox.height); // Center the hitbox to the entity
+        //Checking if we need to draw enemy or not
+        if (worldX + Const.WRLD_tileScreenSize > worldX - playerScreenX
+        && worldX - Const.WRLD_tileScreenSize < worldX + playerScreenX
+        && worldY + Const.WRLD_tileScreenSize > worldY - playerScreenY
+        && worldY - Const.WRLD_tileScreenSize < worldY + playerScreenY) {
+                        
+            g2.drawImage(image, screenX, screenY, Const.WRLD_entityScreenSize, Const.WRLD_entityScreenSize, null);
+            g2.drawRect(screenX + hitbox.width / 2, screenY + hitbox.height, hitbox.width, hitbox.height); // Center the hitbox to the entity
+        }
     }
 
 
@@ -270,6 +278,6 @@ public abstract class Character extends Entity {
     }
   
     @Override
-    protected void interagitAvec(Player player) {
+    protected void playerInterraction(Player player) {
     }
 }

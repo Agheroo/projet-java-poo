@@ -26,14 +26,14 @@ public class OBJ_Chest extends Props {
         loadTextures("chest");
         collision = true;
     }
-    public void interagitAvec(Player p) {
+    public void playerInterraction(Player p) {
         Item item= Generator.generateItem();
         if(true){
             p.addItem(item);
         }
         System.out.println("Chest interaction");
 
-        destructor();
+        destroySelf();
 
     }
 }

@@ -83,9 +83,7 @@ public abstract class Entity {
             }
             _spriteUpdater = 0;
         }
-
-        //g2.drawImage(image, screenX, screenY,screenSize, screenSize, null);
     }
 
-    protected abstract void interagitAvec(Player player);
+    protected abstract void playerInterraction(Player player);
 }

@@ -74,7 +74,7 @@ public abstract class Props extends Entity {
         }
     }
 
-    public void destructor(){
+    public void destroySelf(){
         Point point=new Point(worldX,worldY);
         World instance=World.getWorld();
         instance.objMap.remove(point,this);

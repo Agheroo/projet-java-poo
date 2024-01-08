@@ -151,32 +151,21 @@ public class World extends Scene {
                 props.draw(g2, this);
             }
             // PLAYER
-            player.drawInWorld(g2, screenWidth / 2 - (Const.WRLD_entityScreenSize / 2),
-                    screenHeight / 2 - (Const.WRLD_entityScreenSize / 2)); // Player is always centered to screen
+            player.drawInWorld(g2, (screenWidth-Const.WRLD_entityScreenSize)/2,
+                                    (screenHeight-Const.WRLD_entityScreenSize)/2); // Player is always centered to screen
 
             
 
             //ENEMIES
             for(Enemy enemy : enemies.values()){
-                // Calculate the screen position of the player
-                int playerScreenX = (Const.WDW_width - Const.WRLD_entityScreenSize) / 2;
-                int playerScreenY = (Const.WDW_height - Const.WRLD_entityScreenSize) / 2;
+                // Calculate the screen position of the character relative to the player's position
+                int screenX = enemy.worldX - player.worldX + (Const.WDW_width - Const.WRLD_entityScreenSize)/2;
+                int screenY = enemy.worldY - player.worldY + (Const.WDW_height - Const.WRLD_entityScreenSize)/2;
 
 
-                //Checking if we need to draw enemy or not
-                if (enemy.worldX + Const.WRLD_tileScreenSize > player.worldX - playerScreenX
-                && enemy.worldX - Const.WRLD_tileScreenSize < player.worldX + playerScreenX
-                && enemy.worldY + Const.WRLD_tileScreenSize > player.worldY - playerScreenY
-                && enemy.worldY - Const.WRLD_tileScreenSize < player.worldY + playerScreenY) {
-                                
-                        // Calculate the screen position of the character relative to the player's position
-                        int screenX = enemy.worldX - player.worldX + playerScreenX;
-                        int screenY = enemy.worldY - player.worldY + playerScreenY;
-                        enemy.drawInWorld(g2, screenX, screenY);
-                }
-            }
-        }
-        
+                
+                enemy.drawInWorld(g2, screenX, screenY);
+            }   
+        }   
     }
-
 }

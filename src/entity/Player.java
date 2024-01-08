@@ -72,7 +72,7 @@ public class Player extends Character {
             }
 
             // CHECK OBJECT COLLISION
-            Point objIndex = checkObject(this, World.getWorld(), true);
+            Point objIndex = checkObject(this, World.getWorld());
             pickUpObject(World.getWorld(), objIndex);
 
             
@@ -89,24 +89,22 @@ public class Player extends Character {
     /**
      * @brief Checks for collision with nearby objects using the player's hitbox.
      * @param entity The entity to check collision for.
-     * @param gp     The current game world.
-     * @param player Indicates if the entity is a player.
+     * @param world     The current game world.
      * @return The coordinates of the collided object or null if no collision.
      */
-    public Point checkObject(Entity entity, World gp, boolean player) {
+    public Point checkObject(Entity entity, World world) {
         
         Point index = null;
 
-        for (Props obj : gp.objMap.values()) {
+        for (Props obj : world.objMap.values()) {
             if (obj != null) {
                 if (entity.hitbox.intersects(obj.hitbox)) {
                     if (obj.getCollision()) {   //If object has "solid" collision
                         //prevent the player from moving in the hitbox
+            
                     }
-                    if (player) {
-                        index = new Point((int) obj.worldX, (int) obj.worldY);
-                        break;
-                    }
+                    index = new Point((int) obj.worldX, (int) obj.worldY);
+                    break;
                 }
             }
         }
@@ -115,14 +113,16 @@ public class Player extends Character {
     }
 
 
+
     public void pickUpObject(World gp, Point index) {
         if (index != null) {
             Entity object = gp.objMap.get(index);
-            object.interagitAvec(this);
+            object.playerInterraction(this);
         }
     }
 
     public void addItem(Item i){
         System.out.println("J'ai rajoutée un item");
     }
+
 }

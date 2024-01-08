@@ -25,12 +25,12 @@ public class OBJ_Door extends Props {
         loadTextures("door");
         collision = true;
     }
-    public void interagitAvec(Player p) {
+    public void playerInterraction(Player p) {
         if(p.hasKey > 0 ) {
             // TODO : Change door collision; it's still here but with different textures and properties
             p.hasKey--;
 
-            destructor();
+            destroySelf();
         }
 
         System.out.println("Key:"+p.hasKey);

@@ -24,11 +24,11 @@ public class OBJ_Key extends Props {
 
         loadTextures("key");
     }
-    public void interagitAvec(Player p) {
+    public void playerInterraction(Player p) {
 
         p.hasKey++;
         System.out.println("Key:"+p.hasKey);
 
-        destructor();
+        destroySelf();
     }
 }

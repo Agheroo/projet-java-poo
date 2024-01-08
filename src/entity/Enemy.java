@@ -58,4 +58,8 @@ public class Enemy extends Character {
         super.update(scene, dt); // Calls the parent class update method
         //TODO : find a method to make the enemy move in predictive patterns
     }
+
+    public void playerInterraction(Player player){
+        
+    }
 }
