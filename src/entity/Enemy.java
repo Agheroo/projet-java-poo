@@ -42,7 +42,6 @@ public class Enemy extends Character {
 	    || (hitbox.y >= player.hitbox.y + player.hitbox.height) // trop en bas
 	    || (hitbox.y + hitbox.height <= player.hitbox.y)){// trop en haut
             return false;
-            
         }
 
         return true;
