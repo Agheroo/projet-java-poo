@@ -24,9 +24,6 @@ public abstract class Props extends Entity {
     private BufferedImage image; // Image representing the prop
     protected boolean collision = false;
 
-    //public int hitboxDefaultX = 0;
-    //public int hitboxDefaultY = 0;
-
     Props(int x, int y, String name, int spriteCntMax, int spriteSpeed){
         super(name,x,y,spriteCntMax,spriteSpeed);
         hitbox.width = 3*Const.WRLD_tileScreenSize/4;  //Slightly smaller than a tile
