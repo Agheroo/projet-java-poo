@@ -3,8 +3,9 @@
  * @brief This file contains the implementation of the Props class, representing in-game props with properties such as image, name, and position.
  */
 
-package entity;
+package entity.props;
 
+import entity.Entity;
 import game.Const;
 import game.World;
 
@@ -22,17 +23,17 @@ import javax.imageio.ImageIO;
  */
 public abstract class Props extends Entity {
     private BufferedImage image; // Image representing the prop
-    protected boolean collision = false;
+    
 
-    Props(int x, int y, String name, int spriteCntMax, int spriteSpeed){
-        super(name,x,y,spriteCntMax,spriteSpeed);
+    Props(int x, int y, String name, int spriteCntMax, int spriteSpeed, boolean collision){
+        super(name,x,y,spriteCntMax,spriteSpeed,collision);
         hitbox.width = 3*Const.WRLD_tileScreenSize/4;  //Slightly smaller than a tile
         hitbox.height = 3*Const.WRLD_tileScreenSize/4;
         hitbox.x = worldX + hitbox.width/4;
         hitbox.y = worldY + hitbox.height/4;
     }
 
-    boolean getCollision(){
+    public boolean getCollision(){
         return collision;
     }
 
@@ -71,5 +72,11 @@ public abstract class Props extends Entity {
             g2.drawImage(image, screenX, screenY, Const.WRLD_entityScreenSize, Const.WRLD_entityScreenSize, null);
             g2.drawRect(screenX + Const.WRLD_entityScreenSize/8, screenY + Const.WRLD_entityScreenSize/8, this.hitbox.width, this.hitbox.height);
         }
+    }
+
+    public void destructor(){
+        Point point=new Point(worldX,worldY);
+        World instance=World.getWorld();
+        instance.objMap.remove(point,this);
     }
 }

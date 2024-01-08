@@ -5,6 +5,7 @@
 
 package entity;
 
+import entity.props.*;
 import game.World;
 import game.Const;
 import java.awt.*;

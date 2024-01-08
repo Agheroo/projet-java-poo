@@ -15,7 +15,7 @@ import game.Scene;
 public abstract class Entity {
     // Position of the entity in the world, directions, and speed
     public int worldX, worldY;
-
+    protected boolean collision;
     // Hitbox of the entity
     public Rectangle hitbox = new Rectangle();
 
@@ -41,7 +41,8 @@ public abstract class Entity {
      * @param _spriteCntMax The maximum number of sprites for animation.
      * @param spriteSpeed The speed of sprite animation.
      */
-    public Entity(String entityName, int x, int y, int _spriteCntMax, int spriteSpeed) {
+    public Entity(String entityName, int x, int y, int _spriteCntMax, int spriteSpeed, boolean collision) {
+        this.collision = collision;
         this.worldX = x;
         this.worldY = y;
         this.hitbox.x = worldX;
@@ -82,6 +83,8 @@ public abstract class Entity {
             }
             _spriteUpdater = 0;
         }
+
+        //g2.drawImage(image, screenX, screenY,screenSize, screenSize, null);
     }
 
     protected abstract void interagitAvec(Player player);

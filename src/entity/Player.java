@@ -5,9 +5,11 @@
 
 package entity;
 
+import entity.props.Props;
 import game.Scene;
 import game.Scene.State;
 import game.World;
+import item.Item;
 
 import java.awt.*;
 
@@ -18,7 +20,7 @@ import java.awt.*;
  */
 public class Player extends Character {
 
-    int hasKey = 0;
+    public int hasKey = 0;
     /**
      * @brief Constructor for the Player class.
      * @param worldX The X-coordinate of the player in the world.
@@ -99,8 +101,7 @@ public class Player extends Character {
             if (obj != null) {
                 if (entity.hitbox.intersects(obj.hitbox)) {
                     if (obj.getCollision()) {   //If object has "solid" collision
-                        
-                        //entity.collision = true;
+                        //prevent the player from moving in the hitbox
                     }
                     if (player) {
                         index = new Point((int) obj.worldX, (int) obj.worldY);
@@ -121,5 +122,7 @@ public class Player extends Character {
         }
     }
 
-    
+    public void addItem(Item i){
+        System.out.println("J'ai rajoutée un item");
+    }
 }

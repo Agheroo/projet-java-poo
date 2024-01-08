@@ -58,7 +58,7 @@ public abstract class Character extends Entity {
      * @param spriteSpeed The speed of sprite animation.
      */
     public Character(String entityName, int x, int y, int dirX, int dirY, int speed, String facing, int _spriteCntMax, int spriteSpeed) {
-        super(entityName, x, y, _spriteCntMax, spriteSpeed);
+        super(entityName, x, y, _spriteCntMax, spriteSpeed,true);
 
 
 
