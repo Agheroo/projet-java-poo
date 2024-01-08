@@ -7,12 +7,8 @@ package entity.props;
 
 
 import entity.Player;
-import entity.props.Props;
-import game.World;
 import item.Generator;
 import item.Item;
-
-import java.awt.*;
 
 /**
  * @class OBJ_Chest
@@ -26,10 +22,7 @@ public class OBJ_Chest extends Props {
      * @details Initializes the name and loads the image for the chest.
      */
     public OBJ_Chest(int worldX, int worldY){
-        super(worldX,worldY);
-        // Set the name of the chest object
-        name = "Chest";
-
+        super(worldX,worldY,"chest",1,0,true);
         loadTextures("chest");
         collision = true;
     }

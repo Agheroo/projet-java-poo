@@ -92,7 +92,8 @@ public class World extends Scene {
         checkPauseScene();
         if (state == State.WORLD) {
             Point ptn = new Point((int)13 * Const.WRLD_entityScreenSize, (int) 13 * Const.WRLD_entityScreenSize);
-            //System.out.println("("+objMap.get(ptn).worldX +"," + objMap.get(ptn).worldY + ")  ("+player.worldX +","+player.worldY+")");
+            Props key = objMap.get(ptn);
+            //System.out.println("("+key.worldX +"," + key.worldY + ")  (" + key.hitbox.x +","+key.hitbox.y+")");
             //int playerScreenX = (Const.WDW_width - Const.WRLD_entityScreenSize) / 2;
             //int playerScreenY = (Const.WDW_height - Const.WRLD_entityScreenSize) / 2;
 
@@ -100,6 +101,7 @@ public class World extends Scene {
             tileManager.update(this);
 
 
+            //Update enemy if he's close enough otherwise useless to update (5 tile radius around the screen)
             for(Enemy enemy : enemies.values()){
                 int playerScreenX = (Const.WDW_width - Const.WRLD_entityScreenSize) / 2;
                 int playerScreenY = (Const.WDW_height - Const.WRLD_entityScreenSize) / 2;
@@ -107,7 +109,7 @@ public class World extends Scene {
                 if (enemy.worldX + 5*Const.WRLD_tileScreenSize > player.worldX - playerScreenX
                 && enemy.worldX - 5*Const.WRLD_tileScreenSize < player.worldX + playerScreenX
                 && enemy.worldY + 5*Const.WRLD_tileScreenSize > player.worldY - playerScreenY
-                && enemy.worldY - 5*Const.WRLD_tileScreenSize < player.worldY + playerScreenY) {  //Update enemy if he's close enough otherwise useless to update
+                && enemy.worldY - 5*Const.WRLD_tileScreenSize < player.worldY + playerScreenY) {  
                     enemy.update(this, dt);
 
                 }

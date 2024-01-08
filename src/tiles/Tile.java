@@ -12,6 +12,8 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
+import game.Const;
+
 /**
  * @class Tile
  * @brief Represents a tile in the game world.

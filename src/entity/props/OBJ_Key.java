@@ -7,7 +7,6 @@ package entity.props;
 
 
 import entity.Player;
-import entity.props.Props;
 
 /**
  * @class OBJ_Key
@@ -21,9 +20,8 @@ public class OBJ_Key extends Props {
      * @details Initializes the name of the key and loads its image from a file.
      */
     public OBJ_Key(int worldX, int worldY) {
-        super(worldX,worldY);
-        // Set the name of the key
-        name = "Key";
+        super(worldX, worldY,"key",1,0,false);
+
         loadTextures("key");
     }
     public void interagitAvec(Player p) {

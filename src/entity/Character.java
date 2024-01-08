@@ -58,16 +58,13 @@ public abstract class Character extends Entity {
      * @param spriteSpeed The speed of sprite animation.
      */
     public Character(String entityName, int x, int y, int dirX, int dirY, int speed, String facing, int _spriteCntMax, int spriteSpeed) {
-        super(entityName, x, y, _spriteCntMax, spriteSpeed);
+        super(entityName, x, y, _spriteCntMax, spriteSpeed,true);
 
-        hitbox = new Rectangle();
-        // Hitbox settings to set up later
-        hitbox.x = x;
-        hitbox.y = y;
-        hitbox.width = Const.WRLD_entityScreenSize / 2;
-        hitbox.height = Const.WRLD_entityScreenSize / 2;
-        //hitboxDefaultX = hitbox.x;
-        //hitboxDefaultY = hitbox.y;
+
+
+        // Hitbox settings (size of the entity)
+        this.hitbox.width = Const.WRLD_entityScreenSize / 2;
+        this.hitbox.height = Const.WRLD_entityScreenSize / 2;
         this.dirX = dirX;
         this.dirY = dirY;
         this.speed = speed;
@@ -81,6 +78,7 @@ public abstract class Character extends Entity {
         _walk_down = new BufferedImage[_spriteCntMax];
         _walk_right = new BufferedImage[_spriteCntMax];
         _walk_left = new BufferedImage[_spriteCntMax];
+        loadTextures(entityName);
     }
 
     /**
@@ -97,9 +95,6 @@ public abstract class Character extends Entity {
             hitbox.y = worldY + hitbox.height;
 
             // CHECK THE COLLISION
-            //checkCollision(currWorld.tileManager);
-
-
             move(World.getWorld(), speed, dt);
             checkTileCollision(currWorld.tileManager);
             

@@ -7,7 +7,6 @@ package entity.props;
 
 
 import entity.Player;
-import entity.props.Props;
 
 /**
  * @class OBJ_Door
@@ -21,16 +20,14 @@ public class OBJ_Door extends Props {
      * @details Initializes the name of the door and loads its image from a resource file.
      */
     public OBJ_Door(int worldX, int worldY) {
-        super(worldX,worldY);
-        // Set the name of the door
-        name = "Door";
+        super(worldX, worldY,"door",1,0, true);
 
         loadTextures("door");
         collision = true;
     }
     public void interagitAvec(Player p) {
         if(p.hasKey > 0 ) {
-            // TODO : enlever la porte de la map
+            // TODO : Change door collision; it's still here but with different textures and properties
             p.hasKey--;
 
             destructor();
