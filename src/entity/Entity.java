@@ -23,8 +23,8 @@ public abstract class Entity {
     public int worldX, worldY;
 
     // Hitbox of the entity
-    public Rectangle hitbox = new Rectangle(0,0,24,24);
-    public int hitboxDefaultX, hitboxDefaultY;
+    public Rectangle hitbox;
+    //public int hitboxDefaultX, hitboxDefaultY;
 
     // Entity animations
     protected int _spriteCnt = 0; // Variable responsible for the incrementation of the different sprites
@@ -88,7 +88,7 @@ public abstract class Entity {
             _spriteUpdater = 0;
         }
 
-        g2.drawImage(image, screenX, screenY,screenSize, screenSize, null);
+        //g2.drawImage(image, screenX, screenY,screenSize, screenSize, null);
     }
 
     protected abstract void interagitAvec(Player player);

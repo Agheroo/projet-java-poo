@@ -66,8 +66,8 @@ public abstract class Character extends Entity {
         hitbox.y = y;
         hitbox.width = Const.WRLD_entityScreenSize / 2;
         hitbox.height = Const.WRLD_entityScreenSize / 2;
-        hitboxDefaultX = hitbox.x;
-        hitboxDefaultY = hitbox.y;
+        //hitboxDefaultX = hitbox.x;
+        //hitboxDefaultY = hitbox.y;
         this.dirX = dirX;
         this.dirY = dirY;
         this.speed = speed;

@@ -3,8 +3,11 @@
  * @brief This file contains the implementation of the OBJ_Door class, representing a door object extending the Props class.
  */
 
-package entity;
+package entity.props;
 
+
+import entity.Player;
+import entity.props.Props;
 
 /**
  * @class OBJ_Door
@@ -18,8 +21,7 @@ public class OBJ_Door extends Props {
      * @details Initializes the name of the door and loads its image from a resource file.
      */
     public OBJ_Door(int worldX, int worldY) {
-        this.worldX = worldX;
-        this.worldY = worldY;
+        super(worldX,worldY);
         // Set the name of the door
         name = "Door";
 
@@ -30,8 +32,14 @@ public class OBJ_Door extends Props {
         if(p.hasKey > 0 ) {
             // TODO : enlever la porte de la map
             p.hasKey--;
+
+            destructor();
         }
+
         System.out.println("Key:"+p.hasKey);
+
+
+
 
     }
 

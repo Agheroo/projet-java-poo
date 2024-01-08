@@ -5,9 +5,11 @@
 
 package entity;
 
+import entity.props.Props;
 import game.Scene;
 import game.Scene.State;
 import game.World;
+import item.Item;
 
 import java.awt.*;
 
@@ -18,7 +20,7 @@ import java.awt.*;
  */
 public class Player extends Character {
 
-    int hasKey = 0;
+    public int hasKey = 0;
     /**
      * @brief Constructor for the Player class.
      * @param worldX The X-coordinate of the player in the world.
@@ -98,12 +100,12 @@ public class Player extends Character {
         for (Props obj : gp.objMap.values()) {
             if (obj != null) {
                 // Get entity's hitbox position
-                entity.hitbox.x = (entity.worldX + entity.hitbox.x) / 2;
-                entity.hitbox.y = (entity.worldY + entity.hitbox.y) / 2;
+                //entity.hitbox.x = (entity.worldX + entity.hitbox.x) / 2;
+                //entity.hitbox.y = (entity.worldY + entity.hitbox.y) / 2;
 
                 // Get the object's solid area position
-                obj.hitbox.x = obj.worldX + obj.hitbox.x;
-                obj.hitbox.y = obj.worldY + obj.hitbox.y;
+                //obj.hitbox.x = obj.worldX + obj.hitbox.x;
+                //obj.hitbox.y = obj.worldY + obj.hitbox.y;
 
                 // Check collision based on coordinates
                 if (entity.hitbox.intersects(obj.hitbox)) {
@@ -116,10 +118,10 @@ public class Player extends Character {
                     }
                 }
 
-                entity.hitbox.x = entity.hitboxDefaultX;
-                entity.hitbox.y = entity.hitboxDefaultY;
-                obj.hitbox.x = obj.hitboxDefaultX;
-                obj.hitbox.y = obj.hitboxDefaultY;
+                //entity.hitbox.x = entity.hitboxDefaultX;
+                //entity.hitbox.y = entity.hitboxDefaultY;
+                //obj.hitbox.x = obj.hitboxDefaultX;
+                //obj.hitbox.y = obj.hitboxDefaultY;
             }
         }
 
@@ -134,5 +136,7 @@ public class Player extends Character {
         }
     }
 
-    
+    public void addItem(Item i){
+        System.out.println("J'ai rajoutée un item");
+    }
 }

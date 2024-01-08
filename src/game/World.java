@@ -9,7 +9,7 @@ import entity.Player;
 import tiles.TileManager;
 import entity.Enemy;
 import entity.EntitySetter;
-import entity.Props;
+import entity.props.Props;
 import game.FightScene.FightState;
 import java.awt.*;
 import java.util.HashMap;
