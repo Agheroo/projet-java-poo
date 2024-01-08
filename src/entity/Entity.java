@@ -6,7 +6,6 @@
 package entity;
 
 import java.awt.Rectangle;
-
 import game.Scene;
 
 /**
@@ -14,19 +13,11 @@ import game.Scene;
  * @brief Represents an abstract entity with position, hitbox, and animations.
  */
 public abstract class Entity {
-    // Display purpose variables
-    protected final int _tileSize = 16;
-    protected final int _scale = 3;
-    public final int screenSize = _tileSize * _scale;
-    public boolean collisionOn = false;
-    public boolean collision = false;
-
     // Position of the entity in the world, directions, and speed
     public int worldX, worldY;
-
+    protected boolean collision;
     // Hitbox of the entity
-    public Rectangle hitbox = new Rectangle(0,0,24,24);
-    public int hitboxDefaultX, hitboxDefaultY;
+    public Rectangle hitbox = new Rectangle();
 
     // Entity animations
     protected int _spriteCnt = 0; // Variable responsible for the incrementation of the different sprites
@@ -50,9 +41,12 @@ public abstract class Entity {
      * @param _spriteCntMax The maximum number of sprites for animation.
      * @param spriteSpeed The speed of sprite animation.
      */
-    public Entity(String entityName, int x, int y, int _spriteCntMax, int spriteSpeed) {
+    public Entity(String entityName, int x, int y, int _spriteCntMax, int spriteSpeed, boolean collision) {
+        this.collision = collision;
         this.worldX = x;
         this.worldY = y;
+        this.hitbox.x = worldX;
+        this.hitbox.y = worldY;
         this._spriteCntMax = _spriteCntMax;
         this._spriteSpeed = spriteSpeed;
         this.name = entityName;
@@ -91,5 +85,5 @@ public abstract class Entity {
         }
     }
 
-    protected abstract void interagitAvec(Player player);
+    protected abstract void playerInterraction(Player player);
 }

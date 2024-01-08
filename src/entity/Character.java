@@ -5,12 +5,11 @@
 
 package entity;
 
+import game.Const;
 import game.Scene;
 import game.World;
-import tiles.Tile;
 import tiles.TileManager;
 import game.Scene.State;
-
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.FileInputStream;
@@ -59,16 +58,13 @@ public abstract class Character extends Entity {
      * @param spriteSpeed The speed of sprite animation.
      */
     public Character(String entityName, int x, int y, int dirX, int dirY, int speed, String facing, int _spriteCntMax, int spriteSpeed) {
-        super(entityName, x, y, _spriteCntMax, spriteSpeed);
+        super(entityName, x, y, _spriteCntMax, spriteSpeed,true);
 
-        hitbox = new Rectangle();
-        // Hitbox settings to set up later
-        hitbox.x = x;
-        hitbox.y = y;
-        hitbox.width = screenSize / 2;
-        hitbox.height = screenSize / 2;
-        hitboxDefaultX = hitbox.x;
-        hitboxDefaultY = hitbox.y;
+
+
+        // Hitbox settings (size of the entity)
+        this.hitbox.width = Const.WRLD_entityScreenSize / 2;
+        this.hitbox.height = Const.WRLD_entityScreenSize / 2;
         this.dirX = dirX;
         this.dirY = dirY;
         this.speed = speed;
@@ -82,6 +78,7 @@ public abstract class Character extends Entity {
         _walk_down = new BufferedImage[_spriteCntMax];
         _walk_right = new BufferedImage[_spriteCntMax];
         _walk_left = new BufferedImage[_spriteCntMax];
+        loadTextures(entityName);
     }
 
     /**
@@ -95,12 +92,13 @@ public abstract class Character extends Entity {
             World currWorld = World.getWorld();
 
             hitbox.x = worldX + hitbox.width / 2;
-            hitbox.y = worldY + hitbox.height / 2;
+            hitbox.y = worldY + hitbox.height;
 
-            move(World.getWorld(), speed, dt);
             // CHECK THE COLLISION
-            checkNearTiles(currWorld.tileManager);
-            //collisionOn = false;
+            move(World.getWorld(), speed, dt);
+            checkTileCollision(currWorld.tileManager);
+            
+            
 
             updateFrames();
         }
@@ -110,55 +108,28 @@ public abstract class Character extends Entity {
      * @brief Checks for collision with nearby tiles using the character's hitbox.
      * @param tileManager The TileManager containing information about tiles in the world.
      */
-    private void checkNearTiles(TileManager tileManager) {
+    private void checkTileCollision(TileManager tileManager) {
         // Checking tiles with hitbox
-        if (isBlocking(tileManager.getTile(worldX + hitbox.width, worldY + hitbox.height))) {
-            worldX = hitbox.x - hitbox.width / 2;
-            worldY = hitbox.y - hitbox.height / 2;
-
-
+        
+        
+        if((tileManager.getTile(hitbox.x, hitbox.y - 5).getCollision() //Checks collision with tile on top of the character
+        || tileManager.getTile(hitbox.x + hitbox.width , hitbox.y - 5).getCollision() )&&  dirY == -1) {
+            worldY = tileManager.getTile(hitbox.x,hitbox.y).getPos()[1] - hitbox.height;    //Prevent moving if collidable terrain
+        }
+        if((tileManager.getTile(hitbox.x, hitbox.y + hitbox.height + 5).getCollision() //Checks collision with tile beneath of the character
+        || tileManager.getTile(hitbox.x + hitbox.width, hitbox.y + hitbox.height + 5).getCollision()) && dirY == 1){
+            worldY = tileManager.getTile(hitbox.x,hitbox.y).getPos()[1] -1;        //Prevent moving if collidable terrain
+        }
+        if((tileManager.getTile(hitbox.x - 5, hitbox.y).getCollision() //Checks collision with tile on the left of the character
+        || tileManager.getTile(hitbox.x - 5, hitbox.y + hitbox.height).getCollision()) && dirX == -1) {
+            worldX = tileManager.getTile(hitbox.x,hitbox.y).getPos()[0] - hitbox.width/2 ;    //Prevent moving if collidable terrain
+        }
+        if((tileManager.getTile(hitbox.x + hitbox.width + 5, hitbox.y).getCollision() //Checks collision with tile on the right of the character
+        || tileManager.getTile(hitbox.x + hitbox.width + 5, hitbox.y + hitbox.height).getCollision()) && dirX == 1){
+            worldX = tileManager.getTile(hitbox.x,hitbox.y).getPos()[0] + hitbox.width/2 - 1;        //Prevent moving if collidable terrain
         }
     }
 
-
-
-    /**
-     * @brief Checks if the given tile is blocking the character's movement.
-     * @param tile The Tile to check.
-     * @return True if the tile is blocking, false otherwise.
-     */
-    public boolean isBlocking(Tile tile) {
-        return tile.getCollision();
-    }
-    private boolean checkCollisionWithChest(World world, int speed, double dt) {
-        Rectangle playerRect = new Rectangle(world.player.hitbox);
-
-        // Créez un rectangle représentant le coffre (vous pouvez ajuster les dimensions selon vos besoins)
-        Rectangle chestRect = new Rectangle(15 * 16 * 3, 13 * 16 * 3, screenSize / 2, screenSize / 2);
-
-        // Vérifiez la collision entre le joueur et le coffre
-        if (playerRect.intersects(chestRect)) {
-            // Collision détectée, le joueur ne peut pas se déplacer
-
-            // Rétablissez la position du joueur pour éviter la collision
-            if (world.player.worldX + world.player.hitbox.width / 2 < chestRect.x) {
-                world.player.worldX = chestRect.x - world.player.hitbox.width / 2;
-            }
-            if (world.player.worldX - world.player.hitbox.width / 2 >= chestRect.x + chestRect.width) {
-                world.player.worldX = chestRect.x + chestRect.width + world.player.hitbox.width / 2;
-            }
-            if (world.player.worldY + world.player.hitbox.height / 2 < chestRect.y) {
-                world.player.worldY = chestRect.y - world.player.hitbox.height / 2;
-            }
-            if (world.player.worldY - world.player.hitbox.height / 2 >= chestRect.y + chestRect.height) {
-                world.player.worldY = chestRect.y + chestRect.height + world.player.hitbox.height / 2;
-            }
-
-            return true;
-        }
-
-        return false;
-    }
 
 
     /**
@@ -168,29 +139,27 @@ public abstract class Character extends Entity {
      * @param dt The time elapsed since the last update.
      */
     protected void move(World world, int speed, double dt) {
-        // Vérifiez la collision avec le coffre avant de déplacer le joueur
-        if (!checkCollisionWithChest(world, speed, dt)) {
-            if ((dirX == 0 && dirY != 0) || (dirY == 0 && dirX != 0)) {
-                if (dirX == 1) {
-                    worldX += speed * dt;
-                }
-                if (dirX == -1) {
-                    worldX -= speed * dt;
-                }
-                if (dirY == 1) {
-                    worldY += speed * dt;
-                }
-                if (dirY == -1) {
-                    worldY -= speed * dt;
-                }
+        if ((dirX == 0 && dirY != 0) || (dirY == 0 && dirX != 0)) {
+            if (dirX == 1) {
+                worldX += speed * dt;
             }
-            if (dirX != 0 && dirY != 0) {
-                double normSum = Math.sqrt(dirX * dirX + dirY * dirY);
-                worldX += (dirX / normSum) * speed * dt;
-                worldY += (dirY / normSum) * speed * dt;
+            if (dirX == -1) {
+                worldX -= speed * dt;
+            }
+            if (dirY == 1) {
+                worldY += speed * dt;
+            }
+            if (dirY == -1) {
+                worldY -= speed * dt;
             }
         }
+        if (dirX != 0 && dirY != 0) {
+            double normSum = Math.sqrt(dirX * dirX + dirY * dirY);      //Normalizing vector
+            worldX += (dirX / normSum) * speed * dt;
+            worldY += (dirY / normSum) * speed * dt;
+        }
     }
+
     /**
      * @brief Accelerates the character's speed up to the specified maximum speed.
      * @param maxSpeed The maximum speed to accelerate to.
@@ -245,7 +214,6 @@ public abstract class Character extends Entity {
      */
     public void drawInWorld(Graphics2D g2, int screenX, int screenY) {
         BufferedImage image = null;
-        // System.out.println(worldX + " " + worldY);
         if (speed == 0) { // IDLE ANIMATIONS
             for (int i = 0; i < _spriteCntMax; i++) {
                 switch (facing) {
@@ -282,9 +250,20 @@ public abstract class Character extends Entity {
                 }
             }
         }
+        
 
-        g2.drawImage(image, screenX, screenY, screenSize, screenSize, null);
-        g2.drawRect(screenX + hitbox.width / 2, screenY + hitbox.height / 2, hitbox.width, hitbox.height); // Center the hitbox to the entity
+        int playerScreenX = (Const.WDW_width - Const.WRLD_entityScreenSize) / 2;
+        int playerScreenY = (Const.WDW_height - Const.WRLD_entityScreenSize) / 2;
+
+        //Checking if we need to draw enemy or not
+        if (worldX + Const.WRLD_tileScreenSize > worldX - playerScreenX
+        && worldX - Const.WRLD_tileScreenSize < worldX + playerScreenX
+        && worldY + Const.WRLD_tileScreenSize > worldY - playerScreenY
+        && worldY - Const.WRLD_tileScreenSize < worldY + playerScreenY) {
+                        
+            g2.drawImage(image, screenX, screenY, Const.WRLD_entityScreenSize, Const.WRLD_entityScreenSize, null);
+            g2.drawRect(screenX + hitbox.width / 2, screenY + hitbox.height, hitbox.width, hitbox.height); // Center the hitbox to the entity
+        }
     }
 
 
@@ -299,6 +278,6 @@ public abstract class Character extends Entity {
     }
   
     @Override
-    protected void interagitAvec(Player player) {
+    protected void playerInterraction(Player player) {
     }
 }

@@ -5,13 +5,13 @@
 
 package entity;
 
+import entity.props.Props;
 import game.Scene;
 import game.Scene.State;
 import game.World;
+import item.Item;
 
 import java.awt.*;
-import java.util.Map;
-import java.util.Objects;
 
 /**
  * @class Player
@@ -20,7 +20,7 @@ import java.util.Objects;
  */
 public class Player extends Character {
 
-    int hasKey = 0;
+    public int hasKey = 0;
     /**
      * @brief Constructor for the Player class.
      * @param worldX The X-coordinate of the player in the world.
@@ -34,8 +34,6 @@ public class Player extends Character {
      */
     public Player(String entityName, int worldX, int worldY, int dirX, int dirY, int speed, String facing, int spriteCntMax, int spriteSpeed) {
         super(entityName, worldX, worldY, dirX, dirY, speed, facing, spriteCntMax, spriteSpeed);  // Calls the parent class for entity setup, specifying scene.keyH for player
-
-        loadTextures(entityName);
     }
 
     /**
@@ -45,7 +43,6 @@ public class Player extends Character {
      */
     public void update(Scene scene, double dt) {
         super.update(scene, dt);  // Calls the parent class update method
-
         // World updates
         if (scene.state == State.WORLD) {
             if (scene.keyH.upPressed || scene.keyH.downPressed || scene.keyH.leftPressed || scene.keyH.rightPressed) {
@@ -75,8 +72,10 @@ public class Player extends Character {
             }
 
             // CHECK OBJECT COLLISION
-            Point objIndex = checkObject(this, World.getWorld(), true);
+            Point objIndex = checkObject(this, World.getWorld());
             pickUpObject(World.getWorld(), objIndex);
+
+            
         }
 
         // Fightscene updates
@@ -90,38 +89,23 @@ public class Player extends Character {
     /**
      * @brief Checks for collision with nearby objects using the player's hitbox.
      * @param entity The entity to check collision for.
-     * @param gp     The current game world.
-     * @param player Indicates if the entity is a player.
+     * @param world     The current game world.
      * @return The coordinates of the collided object or null if no collision.
      */
-    public Point checkObject(Entity entity, World gp, boolean player) {
+    public Point checkObject(Entity entity, World world) {
+        
         Point index = null;
 
-        for (Props obj : gp.objMap.values()) {
+        for (Props obj : world.objMap.values()) {
             if (obj != null) {
-                // Get entity's hitbox position
-                entity.hitbox.x = (entity.worldX + entity.hitbox.x) / 2;
-                entity.hitbox.y = (entity.worldY + entity.hitbox.y) / 2;
-
-                // Get the object's solid area position
-                obj.hitbox.x = obj.worldX + obj.hitbox.x;
-                obj.hitbox.y = obj.worldY + obj.hitbox.y;
-
-                // Check collision based on coordinates
-                if (entity.hitbox.intersects(obj.hitbox) && obj.collision) {
-
-                    entity.collision = true;
-
-                    if (player) {
-                        index = new Point((int) obj.worldX, (int) obj.worldY);
-                        break;
+                if (entity.hitbox.intersects(obj.hitbox)) {
+                    if (obj.getCollision()) {   //If object has "solid" collision
+                        //prevent the player from moving in the hitbox
+            
                     }
+                    index = new Point((int) obj.worldX, (int) obj.worldY);
+                    break;
                 }
-
-                entity.hitbox.x = entity.hitboxDefaultX;
-                entity.hitbox.y = entity.hitboxDefaultY;
-                obj.hitbox.x = obj.hitboxDefaultX;
-                obj.hitbox.y = obj.hitboxDefaultY;
             }
         }
 
@@ -129,10 +113,16 @@ public class Player extends Character {
     }
 
 
+
     public void pickUpObject(World gp, Point index) {
         if (index != null) {
             Entity object = gp.objMap.get(index);
-            object.interagitAvec(this);
+            object.playerInterraction(this);
         }
     }
+
+    public void addItem(Item i){
+        System.out.println("J'ai rajoutée un item");
+    }
+
 }

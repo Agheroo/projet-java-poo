@@ -3,8 +3,10 @@
  * @brief This file contains the implementation of the OBJ_Key class, representing a key object extending the Props class.
  */
 
-package entity;
+package entity.props;
 
+
+import entity.Player;
 
 /**
  * @class OBJ_Key
@@ -17,16 +19,16 @@ public class OBJ_Key extends Props {
      * @brief Constructor for the OBJ_Key class.
      * @details Initializes the name of the key and loads its image from a file.
      */
-    public OBJ_Key() {
-        // Set the name of the key
-        name = "Key";
+    public OBJ_Key(int worldX, int worldY) {
+        super(worldX, worldY,"key",1,0,false);
 
         loadTextures("key");
     }
-    public void interagitAvec(Player p) {
+    public void playerInterraction(Player p) {
 
         p.hasKey++;
-        // TODO : enlever la clé de la map
         System.out.println("Key:"+p.hasKey);
+
+        destroySelf();
     }
 }

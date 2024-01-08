@@ -29,20 +29,22 @@ public class Enemy extends Character {
      */
     public Enemy(String enemyName, int worldX, int worldY, int dirX, int dirY, int speed, String facing, int spriteCntMax, int spriteSpeed) {
         super(enemyName, worldX, worldY, dirX, dirY, speed, facing, spriteCntMax, spriteSpeed);  // Calls the parent class for entity setup, specifying scene.keyH for player
-
-        name = enemyName;
-        loadTextures(enemyName);
     }
 
+    /**
+     * @brief Checks if the current enemy is in contact with the player
+     * @param player The player entity
+     */
     public boolean touchingPlayer(Player player){
+        
         if((hitbox.x >= player.hitbox.x + player.hitbox.width)      // trop à droite
 	    || (hitbox.x + hitbox.width <= player.hitbox.x) // trop à gauche
 	    || (hitbox.y >= player.hitbox.y + player.hitbox.height) // trop en bas
 	    || (hitbox.y + hitbox.height <= player.hitbox.y)){// trop en haut
             return false;
-        }  
-        else 
-            return true;
+        }
+
+        return true;
     }
 
 
@@ -55,5 +57,9 @@ public class Enemy extends Character {
     public void update(Scene scene, double dt) {
         super.update(scene, dt); // Calls the parent class update method
         //TODO : find a method to make the enemy move in predictive patterns
+    }
+
+    public void playerInterraction(Player player){
+        
     }
 }
