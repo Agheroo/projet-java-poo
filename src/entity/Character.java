@@ -276,8 +276,4 @@ public abstract class Character extends Entity {
     public void drawInFight(Graphics2D g2, int screenX, int screenY) {
         // Other function to draw in fight scene
     }
-  
-    @Override
-    protected void playerInterraction(Player player) {
-    }
 }

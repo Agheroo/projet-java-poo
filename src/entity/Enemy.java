@@ -63,7 +63,7 @@ public class Enemy extends Character {
 
     public void playerInterraction(Player player){
         System.out.println("Attention : je pratique le tabassing.");
-        World._currfight = new FightScene(player,this);
+        World.currfight = new FightScene(player,this);
         World.state = State.FIGHT;
     }
 }

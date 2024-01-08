@@ -24,7 +24,7 @@ import UI.Textbox;
 public class World extends Scene {
 
     private static World _instance;
-    public static FightScene _currfight;
+    public static FightScene currfight;
     public TileManager tileManager = new TileManager(this);
 
     
@@ -120,7 +120,7 @@ public class World extends Scene {
             
 
         if (state == State.FIGHT){
-            _currfight.update(this);
+            currfight.update(this);
         }
     }
 
@@ -134,12 +134,12 @@ public class World extends Scene {
     public void draw(Graphics2D g2, int screenWidth, int screenHeight) {
         
         //If there is a fight, draw the fight instead of the game world
-        if(_currfight != null){
-            if( _currfight.state == FightState.FIGHTING){
-                _currfight.draw(g2);
+        if(currfight != null){
+            if( currfight.state == FightState.FIGHTING){
+                currfight.draw(g2);
             }
-            if(_currfight.state == FightState.WON){
-                _currfight = null;
+            if(currfight.state == FightState.WON){
+                currfight = null;
             }
         }
         

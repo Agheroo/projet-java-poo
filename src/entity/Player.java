@@ -148,4 +148,7 @@ public class Player extends Character {
         System.out.println("J'ai rajoutée un item");   
     }
 
+    @Override
+    protected void playerInterraction(Player player) {}
+
 }

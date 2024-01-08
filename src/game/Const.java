@@ -5,6 +5,7 @@ public final class Const {
     //Window parameters
     public final static int WDW_width = 800;
     public final static int WDW_height = 600;
+    public final static int WDW_FPS = 60;
 
     //World parameters
     public final static int WRLD_tileSize = 16;

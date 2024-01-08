@@ -22,26 +22,10 @@ public class Window extends JPanel implements Runnable {
      * The game scene.
      */
     public Scene scene;
-
-    /**
-     * The width of the game screen.
-     */
-    public final int screenWidth = 800;
-
-    /**
-     * The height of the game screen.
-     */
-    public final int screenHeight = 600;
-
     /**
      * The game world.
      */
     World world = World.getWorld();
-
-    /**
-     * The frames per second for the game.
-     */
-    private final int _FPS = 60;
 
     /**
      * The game thread.
@@ -53,7 +37,7 @@ public class Window extends JPanel implements Runnable {
      */
     public Window() {
         scene = World.getWorld();
-        this.setPreferredSize(new Dimension(screenWidth, screenHeight));
+        this.setPreferredSize(new Dimension(Const.WDW_width, Const.WDW_height));
         this.setBackground(Color.black);
         this.setDoubleBuffered(true);
         this.addKeyListener(scene.keyH);
@@ -66,7 +50,7 @@ public class Window extends JPanel implements Runnable {
      */
     @Override
     public void run() {
-        double drawInterval = 10e9 / _FPS;
+        double drawInterval = 10e9 / Const.WDW_FPS;
         long lastTime = System.nanoTime();
         long currentTime;
 
@@ -109,13 +93,13 @@ public class Window extends JPanel implements Runnable {
 
         Graphics2D g2 = (Graphics2D) g;
 
-        scene.draw(g2, screenWidth, screenHeight);
+        scene.draw(g2, Const.WDW_width, Const.WDW_height);
 
         // Darkens the scene on the background to let the menu on top
-        if (scene.state == State.PAUSE) {
+        if (Scene.state == State.PAUSE) {
             g2.setColor(new Color(0, 0, 0, 180));
-            g2.fillRect(0, 0, screenWidth, screenHeight);
-            scene.menu.draw(g2, screenWidth, screenHeight);
+            g2.fillRect(0, 0, Const.WDW_width, Const.WDW_height);
+            scene.menu.draw(g2, Const.WDW_width, Const.WDW_height);
         }
 
         g2.dispose();
