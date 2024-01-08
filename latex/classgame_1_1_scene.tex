@@ -1,0 +1,278 @@
+\hypertarget{classgame_1_1_scene}{}\doxysection{game.\+Scene Class Reference}
+\label{classgame_1_1_scene}\index{game.Scene@{game.Scene}}
+
+
+Represents an abstract scene in the game.  
+
+
+
+
+Inheritance diagram for game.\+Scene\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classgame_1_1_scene__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for game.\+Scene\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgame_1_1_scene__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{enumgame_1_1_scene_1_1_state}{State}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+abstract void \mbox{\hyperlink{classgame_1_1_scene_a6b61e8f2533a2ba76c543bbd00d989a2}{update}} ()
+\begin{DoxyCompactList}\small\item\em Updates the scene. \end{DoxyCompactList}\item 
+abstract void \mbox{\hyperlink{classgame_1_1_scene_aef53d2ecf085388a16020032121e46dc}{draw}} (Graphics2D g2, int screen\+Width, int screen\+Height)
+\begin{DoxyCompactList}\small\item\em Draws the scene. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1_scene_a8836ac66378d274d9935a950e0b83d7a}{check\+Pause\+Scene}} ()
+\begin{DoxyCompactList}\small\item\em Gets the \mbox{\hyperlink{classgame_1_1_world}{World}} scene. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1_scene_a1133bbe7f1bf2b14f648c9a8e70d5886}{change\+Scene}} (\mbox{\hyperlink{enumgame_1_1_scene_1_1_state}{State}} new\+State)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \mbox{\hyperlink{classgame_1_1_scene_a05d509ca7d7adfd12e2e071b5d57f11a}{getdt}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmain_1_1_key_handler}{Key\+Handler}} \mbox{\hyperlink{classgame_1_1_scene_a2bbc8cb5064aaa5cc1ed0ec8950f4a58}{keyH}} = \mbox{\hyperlink{classmain_1_1_key_handler_abdb9d096bf21b6a49847291e9e4e04a9}{Key\+Handler.\+get\+Instance}}()
+\item 
+\mbox{\hyperlink{enumgame_1_1_scene_1_1_state}{State}} \mbox{\hyperlink{classgame_1_1_scene_afa46982ec00ac703190b0642d8a3c4be}{state}}
+\item 
+\mbox{\hyperlink{class_u_i_1_1_h_u_d}{HUD}} \mbox{\hyperlink{classgame_1_1_scene_abfeaf3d13d7ff744014bcad7f4790501}{menu}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static double \mbox{\hyperlink{classgame_1_1_scene_ae2b7be4c9099875e858f88458b7d4a1d}{dt}} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{enumgame_1_1_scene_1_1_state}{State}} \mbox{\hyperlink{classgame_1_1_scene_ab07579f123902402ef95caff79345edc}{\+\_\+last\+State}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an abstract scene in the game. 
+
+Definition at line \mbox{\hyperlink{_scene_8java_source_l00019}{19}} of file \mbox{\hyperlink{_scene_8java_source}{Scene.\+java}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1_scene_a1133bbe7f1bf2b14f648c9a8e70d5886}\label{classgame_1_1_scene_a1133bbe7f1bf2b14f648c9a8e70d5886}} 
+\index{game.Scene@{game.Scene}!changeScene@{changeScene}}
+\index{changeScene@{changeScene}!game.Scene@{game.Scene}}
+\doxysubsubsection{\texorpdfstring{changeScene()}{changeScene()}}
+{\footnotesize\ttfamily void game.\+Scene.\+change\+Scene (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enumgame_1_1_scene_1_1_state}{State}}}]{new\+State }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_scene_8java_source_l00091}{91}} of file \mbox{\hyperlink{_scene_8java_source}{Scene.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00091                                            \{}
+\DoxyCodeLine{00092         System.out.println(\textcolor{stringliteral}{"{}CHANGING SCENE TO: "{}} + newState);}
+\DoxyCodeLine{00093         this.state = newState;}
+\DoxyCodeLine{00094     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classgame_1_1_scene_a8836ac66378d274d9935a950e0b83d7a}\label{classgame_1_1_scene_a8836ac66378d274d9935a950e0b83d7a}} 
+\index{game.Scene@{game.Scene}!checkPauseScene@{checkPauseScene}}
+\index{checkPauseScene@{checkPauseScene}!game.Scene@{game.Scene}}
+\doxysubsubsection{\texorpdfstring{checkPauseScene()}{checkPauseScene()}}
+{\footnotesize\ttfamily void game.\+Scene.\+check\+Pause\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the \mbox{\hyperlink{classgame_1_1_world}{World}} scene. 
+
+\begin{DoxyReturn}{Returns}
+The \mbox{\hyperlink{classgame_1_1_world}{World}} scene.
+\end{DoxyReturn}
+Creates and returns a new \mbox{\hyperlink{classgame_1_1_fight_scene}{Fight\+Scene}}. 
+\begin{DoxyParams}{Parameters}
+{\em player} & The player entity in the fight. \\
+\hline
+{\em enemy} & The enemy entity in the fight. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new \mbox{\hyperlink{classgame_1_1_fight_scene}{Fight\+Scene}}.
+\end{DoxyReturn}
+Checks for a change in the scene state based on user input. 
+
+Definition at line \mbox{\hyperlink{_scene_8java_source_l00074}{74}} of file \mbox{\hyperlink{_scene_8java_source}{Scene.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00074                                   \{}
+\DoxyCodeLine{00075         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classgame_1_1_scene_a2bbc8cb5064aaa5cc1ed0ec8950f4a58}{keyH}}.\mbox{\hyperlink{classmain_1_1_key_handler_a8695999bf8fc25d2928ff04bfa228e48}{escPressed}}) \{}
+\DoxyCodeLine{00076             keyH.escPressed = \textcolor{keyword}{false};}
+\DoxyCodeLine{00077 }
+\DoxyCodeLine{00078             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classgame_1_1_scene_afa46982ec00ac703190b0642d8a3c4be}{state}} != State.\mbox{\hyperlink{enumgame_1_1_scene_1_1_state_a326c78372f2da432b10cdf952e5984e7}{PAUSE}}) \{}
+\DoxyCodeLine{00079                 System.out.println(\textcolor{stringliteral}{"{}CHANGING SCENE TO: PAUSE"{}});}
+\DoxyCodeLine{00080                 \mbox{\hyperlink{classgame_1_1_scene_ab07579f123902402ef95caff79345edc}{\_lastState}} = \mbox{\hyperlink{classgame_1_1_scene_afa46982ec00ac703190b0642d8a3c4be}{state}};}
+\DoxyCodeLine{00081                 \mbox{\hyperlink{classgame_1_1_scene_afa46982ec00ac703190b0642d8a3c4be}{state}} = State.\mbox{\hyperlink{enumgame_1_1_scene_1_1_state_a326c78372f2da432b10cdf952e5984e7}{PAUSE}};}
+\DoxyCodeLine{00082                 \mbox{\hyperlink{classgame_1_1_scene_abfeaf3d13d7ff744014bcad7f4790501}{menu}} = \textcolor{keyword}{new} HUD(MenuType.PAUSE);}
+\DoxyCodeLine{00083             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00084                 System.out.println(\textcolor{stringliteral}{"{}CHANGING SCENE TO: "{}}+\mbox{\hyperlink{classgame_1_1_scene_ab07579f123902402ef95caff79345edc}{\_lastState}});}
+\DoxyCodeLine{00085                 \mbox{\hyperlink{classgame_1_1_scene_afa46982ec00ac703190b0642d8a3c4be}{state}} = \mbox{\hyperlink{classgame_1_1_scene_ab07579f123902402ef95caff79345edc}{\_lastState}};}
+\DoxyCodeLine{00086                 \mbox{\hyperlink{classgame_1_1_scene_abfeaf3d13d7ff744014bcad7f4790501}{menu}} = \textcolor{keyword}{null};}
+\DoxyCodeLine{00087             \}}
+\DoxyCodeLine{00088         \}}
+\DoxyCodeLine{00089     \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgame_1_1_scene_a8836ac66378d274d9935a950e0b83d7a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classgame_1_1_scene_aef53d2ecf085388a16020032121e46dc}\label{classgame_1_1_scene_aef53d2ecf085388a16020032121e46dc}} 
+\index{game.Scene@{game.Scene}!draw@{draw}}
+\index{draw@{draw}!game.Scene@{game.Scene}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily abstract void game.\+Scene.\+draw (\begin{DoxyParamCaption}\item[{Graphics2D}]{g2,  }\item[{int}]{screen\+Width,  }\item[{int}]{screen\+Height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Draws the scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g2} & The Graphics2D object for drawing. \\
+\hline
+{\em screen\+Width} & The width of the screen. \\
+\hline
+{\em screen\+Height} & The height of the screen. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classgame_1_1_world_ac405787ac7b11c4ed39a5cd9250e398f}{game.\+World}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgame_1_1_scene_aef53d2ecf085388a16020032121e46dc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classgame_1_1_scene_a05d509ca7d7adfd12e2e071b5d57f11a}\label{classgame_1_1_scene_a05d509ca7d7adfd12e2e071b5d57f11a}} 
+\index{game.Scene@{game.Scene}!getdt@{getdt}}
+\index{getdt@{getdt}!game.Scene@{game.Scene}}
+\doxysubsubsection{\texorpdfstring{getdt()}{getdt()}}
+{\footnotesize\ttfamily static double game.\+Scene.\+getdt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_scene_8java_source_l00048}{48}} of file \mbox{\hyperlink{_scene_8java_source}{Scene.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00048                                 \{}
+\DoxyCodeLine{00049         \textcolor{keywordflow}{return} \mbox{\hyperlink{classgame_1_1_scene_ae2b7be4c9099875e858f88458b7d4a1d}{dt}};}
+\DoxyCodeLine{00050     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classgame_1_1_scene_a6b61e8f2533a2ba76c543bbd00d989a2}\label{classgame_1_1_scene_a6b61e8f2533a2ba76c543bbd00d989a2}} 
+\index{game.Scene@{game.Scene}!update@{update}}
+\index{update@{update}!game.Scene@{game.Scene}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily abstract void game.\+Scene.\+update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Updates the scene. 
+
+
+
+Reimplemented in \mbox{\hyperlink{classgame_1_1_world_a05a7f2e7a65c2a3449efdaa0a87c49f5}{game.\+World}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgame_1_1_scene_a6b61e8f2533a2ba76c543bbd00d989a2_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1_scene_ab07579f123902402ef95caff79345edc}\label{classgame_1_1_scene_ab07579f123902402ef95caff79345edc}} 
+\index{game.Scene@{game.Scene}!\_lastState@{\_lastState}}
+\index{\_lastState@{\_lastState}!game.Scene@{game.Scene}}
+\doxysubsubsection{\texorpdfstring{\_lastState}{\_lastState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{enumgame_1_1_scene_1_1_state}{State}} game.\+Scene.\+\_\+last\+State\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_scene_8java_source_l00027}{27}} of file \mbox{\hyperlink{_scene_8java_source}{Scene.\+java}}.
+
+\mbox{\Hypertarget{classgame_1_1_scene_ae2b7be4c9099875e858f88458b7d4a1d}\label{classgame_1_1_scene_ae2b7be4c9099875e858f88458b7d4a1d}} 
+\index{game.Scene@{game.Scene}!dt@{dt}}
+\index{dt@{dt}!game.Scene@{game.Scene}}
+\doxysubsubsection{\texorpdfstring{dt}{dt}}
+{\footnotesize\ttfamily double game.\+Scene.\+dt = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_scene_8java_source_l00030}{30}} of file \mbox{\hyperlink{_scene_8java_source}{Scene.\+java}}.
+
+\mbox{\Hypertarget{classgame_1_1_scene_a2bbc8cb5064aaa5cc1ed0ec8950f4a58}\label{classgame_1_1_scene_a2bbc8cb5064aaa5cc1ed0ec8950f4a58}} 
+\index{game.Scene@{game.Scene}!keyH@{keyH}}
+\index{keyH@{keyH}!game.Scene@{game.Scene}}
+\doxysubsubsection{\texorpdfstring{keyH}{keyH}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmain_1_1_key_handler}{Key\+Handler}} game.\+Scene.\+keyH = \mbox{\hyperlink{classmain_1_1_key_handler_abdb9d096bf21b6a49847291e9e4e04a9}{Key\+Handler.\+get\+Instance}}()}
+
+
+
+Definition at line \mbox{\hyperlink{_scene_8java_source_l00029}{29}} of file \mbox{\hyperlink{_scene_8java_source}{Scene.\+java}}.
+
+\mbox{\Hypertarget{classgame_1_1_scene_abfeaf3d13d7ff744014bcad7f4790501}\label{classgame_1_1_scene_abfeaf3d13d7ff744014bcad7f4790501}} 
+\index{game.Scene@{game.Scene}!menu@{menu}}
+\index{menu@{menu}!game.Scene@{game.Scene}}
+\doxysubsubsection{\texorpdfstring{menu}{menu}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_u_i_1_1_h_u_d}{HUD}} game.\+Scene.\+menu}
+
+
+
+Definition at line \mbox{\hyperlink{_scene_8java_source_l00032}{32}} of file \mbox{\hyperlink{_scene_8java_source}{Scene.\+java}}.
+
+\mbox{\Hypertarget{classgame_1_1_scene_afa46982ec00ac703190b0642d8a3c4be}\label{classgame_1_1_scene_afa46982ec00ac703190b0642d8a3c4be}} 
+\index{game.Scene@{game.Scene}!state@{state}}
+\index{state@{state}!game.Scene@{game.Scene}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{enumgame_1_1_scene_1_1_state}{State}} game.\+Scene.\+state}
+
+
+
+Definition at line \mbox{\hyperlink{_scene_8java_source_l00031}{31}} of file \mbox{\hyperlink{_scene_8java_source}{Scene.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/game/\mbox{\hyperlink{_scene_8java}{Scene.\+java}}\end{DoxyCompactItemize}

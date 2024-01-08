@@ -1,0 +1,9 @@
+<map id="entity.Player.update" name="entity.Player.update">
+<area shape="rect" id="node1" title="Updates the player entity based on the current scene and time elapsed." alt="" coords="5,107,156,133"/>
+<area shape="rect" id="node2" href="$classentity_1_1_character.html#a937e8e2ad1ddaccfdf7fbc52c9f532f6" title="Accelerates the character&#39;s speed up to the specified maximum speed." alt="" coords="205,5,401,32"/>
+<area shape="rect" id="node3" href="$classentity_1_1_player.html#ac01d8a2c0231c9b74b44dbb4e79802e8" title="Checks for collision with nearby objects using the player&#39;s hitbox." alt="" coords="209,56,396,83"/>
+<area shape="rect" id="node4" href="$classentity_1_1_character.html#ab41258c00232def146bcb8f5fb17fa75" title="Decelerates the character&#39;s speed." alt="" coords="204,107,401,133"/>
+<area shape="rect" id="node5" href="$classgame_1_1_world.html#a0e40ca86573cf45d858cc8e529865649" title="Gets the instance of the World." alt="" coords="221,157,384,184"/>
+<area shape="rect" id="node7" href="$classentity_1_1_player.html#ae8efbe5149efbe2255ee8de096472197" title=" " alt="" coords="206,208,399,235"/>
+<area shape="rect" id="node6" href="$class_u_i_1_1_textbox.html#ac3a40742547f48f95f29ce1649ac88a0" title=" " alt="" coords="449,157,600,184"/>
+</map>

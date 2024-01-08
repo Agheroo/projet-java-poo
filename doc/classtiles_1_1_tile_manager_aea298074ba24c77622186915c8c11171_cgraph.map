@@ -1,0 +1,9 @@
+<map id="tiles.TileManager.TileManager" name="tiles.TileManager.TileManager">
+<area shape="rect" id="node1" title="Constructor for the TileManager class." alt="" coords="5,107,224,133"/>
+<area shape="rect" id="node2" href="$classtiles_1_1_tile_manager.html#ae75bbeb22c0845db92a543677766e22c" title="Reads the txt map file to store the tileMap accordingly." alt="" coords="285,69,480,96"/>
+<area shape="rect" id="node6" href="$classtiles_1_1_tile_manager.html#aa47a7104f759edbe81420c131cfdab45" title="Loading all tiles&#39; textures of the game for the map in an array." alt="" coords="272,132,493,159"/>
+<area shape="rect" id="node3" href="$classtiles_1_1_tile.html#aa0b0d298e48f2280cbc63d95de07d675" title="Set whether the tile is blocking." alt="" coords="571,5,730,32"/>
+<area shape="rect" id="node4" href="$classtiles_1_1_tile.html#a46f5c3f74e0fcbbdb7de428d0431c6c9" title="Set the position of the tile." alt="" coords="588,56,713,83"/>
+<area shape="rect" id="node5" href="$classtiles_1_1_tile.html#a344a65a84a3f750cbb57f1d1e6c66c3d" title="Set the texture for the tile." alt="" coords="575,107,726,133"/>
+<area shape="rect" id="node7" href="$classtiles_1_1_tile_manager.html#ab21de0db126abd1652c47f993b4a8c06" title="Stores in a Tile array (from &quot;start&quot; to &quot;start + size&quot;) the textures that are loaded for the game." alt="" coords="541,157,760,184"/>
+</map>

@@ -1,0 +1,77 @@
+\hypertarget{_h_u_d_8java_source}{}\doxysection{HUD.\+java}
+\label{_h_u_d_8java_source}\index{src/UI/HUD.java@{src/UI/HUD.java}}
+\mbox{\hyperlink{_h_u_d_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00001}00001 \textcolor{keyword}{package }UI;}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00003}00003 \textcolor{keyword}{import} java.awt.Color;}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00004}00004 \textcolor{keyword}{import} java.awt.Graphics2D;}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00006}\mbox{\hyperlink{class_u_i_1_1_h_u_d}{00006}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_u_i_1_1_h_u_d}{HUD}} \{}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00007}\mbox{\hyperlink{enum_u_i_1_1_h_u_d_1_1_menu_type_a3e45f8ce3609b44b9d1116aed2b9e44d}{00007}}     \textcolor{keyword}{public} \textcolor{keyword}{enum} \mbox{\hyperlink{enum_u_i_1_1_h_u_d_1_1_menu_type}{MenuType}} \{WELCOME, PAUSE, \mbox{\hyperlink{enum_u_i_1_1_h_u_d_1_1_menu_type_a3e45f8ce3609b44b9d1116aed2b9e44d}{FIGHT}}, SHOP\}}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00009}\mbox{\hyperlink{class_u_i_1_1_h_u_d_a2b2c87a34b30ab4ab62d4e58390b1560}{00009}}     \textcolor{keyword}{private} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_u_i_1_1_h_u_d_a2b2c87a34b30ab4ab62d4e58390b1560}{\_nbButtons}};}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00010}\mbox{\hyperlink{class_u_i_1_1_h_u_d_a89e962c43a04bc0bc065a74e6cd52720}{00010}}     \textcolor{keyword}{private} \mbox{\hyperlink{class_u_i_1_1_choice_button}{ChoiceButton}}[] \mbox{\hyperlink{class_u_i_1_1_h_u_d_a89e962c43a04bc0bc065a74e6cd52720}{\_buttons}};}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00011}\mbox{\hyperlink{class_u_i_1_1_h_u_d_a1bc0e7e673fea33efd34f3613d5656e7}{00011}}     \textcolor{keyword}{private} \mbox{\hyperlink{class_u_i_1_1_choice_button}{ChoiceButton}} \mbox{\hyperlink{class_u_i_1_1_h_u_d_a1bc0e7e673fea33efd34f3613d5656e7}{\_title}};}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00012}\mbox{\hyperlink{class_u_i_1_1_h_u_d_a4b4a963ffd455d5cdbda1a31847e1e35}{00012}}     \textcolor{keyword}{private} \mbox{\hyperlink{enum_u_i_1_1_h_u_d_1_1_menu_type}{MenuType}} \mbox{\hyperlink{class_u_i_1_1_h_u_d_a4b4a963ffd455d5cdbda1a31847e1e35}{\_type}};}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00013}\mbox{\hyperlink{class_u_i_1_1_h_u_d_acac7a7226aaf2f1e5219023954455841}{00013}}     \textcolor{keyword}{private} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_u_i_1_1_h_u_d_a9c58dd644fb0192b3edda7dca9807c4c}{\_titleWidth}}, \mbox{\hyperlink{class_u_i_1_1_h_u_d_acac7a7226aaf2f1e5219023954455841}{\_titleHeight}};}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00014}00014     \textcolor{comment}{//private KeyHandler keyH = KeyHandler.getInstance();}}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00017}\mbox{\hyperlink{class_u_i_1_1_h_u_d_a5ce40c660b55fea474d7d72a61b9ea52}{00017}}     \textcolor{keyword}{public} \textcolor{keyword}{final} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_u_i_1_1_h_u_d_a5ce40c660b55fea474d7d72a61b9ea52}{HUDWidth}} = 600;}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00018}\mbox{\hyperlink{class_u_i_1_1_h_u_d_a726457ceeae60078debbf4605357b33b}{00018}}     \textcolor{keyword}{public} \textcolor{keyword}{final} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_u_i_1_1_h_u_d_a726457ceeae60078debbf4605357b33b}{HUDHeight}} = 550;}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00020}\mbox{\hyperlink{class_u_i_1_1_h_u_d_a394b5cad072fa9364ed20f648974d6dd}{00020}}     \textcolor{keyword}{public} \mbox{\hyperlink{class_u_i_1_1_h_u_d_a394b5cad072fa9364ed20f648974d6dd}{HUD}}(\mbox{\hyperlink{enum_u_i_1_1_h_u_d_1_1_menu_type}{MenuType}} type)\{}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00021}00021         \mbox{\hyperlink{class_u_i_1_1_h_u_d_a4b4a963ffd455d5cdbda1a31847e1e35}{\_type}} = type;}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00022}00022         \textcolor{keywordflow}{switch}(\mbox{\hyperlink{class_u_i_1_1_h_u_d_a4b4a963ffd455d5cdbda1a31847e1e35}{\_type}})\{}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00023}00023             \textcolor{keywordflow}{case} WELCOME:}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00024}00024                 \mbox{\hyperlink{class_u_i_1_1_h_u_d_a2b2c87a34b30ab4ab62d4e58390b1560}{\_nbButtons}} = 2;}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00025}00025                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00026}00026             \textcolor{keywordflow}{case} PAUSE:}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00027}00027                 \mbox{\hyperlink{class_u_i_1_1_h_u_d_a2b2c87a34b30ab4ab62d4e58390b1560}{\_nbButtons}} = 3;}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00028}00028                 \mbox{\hyperlink{class_u_i_1_1_h_u_d_a9c58dd644fb0192b3edda7dca9807c4c}{\_titleWidth}} = 300;}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00029}00029                 \mbox{\hyperlink{class_u_i_1_1_h_u_d_acac7a7226aaf2f1e5219023954455841}{\_titleHeight}} = 80;}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00030}00030                 \mbox{\hyperlink{class_u_i_1_1_h_u_d_a1bc0e7e673fea33efd34f3613d5656e7}{\_title}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_u_i_1_1_choice_button}{ChoiceButton}}(\mbox{\hyperlink{class_u_i_1_1_h_u_d_a9c58dd644fb0192b3edda7dca9807c4c}{\_titleWidth}},\mbox{\hyperlink{class_u_i_1_1_h_u_d_acac7a7226aaf2f1e5219023954455841}{\_titleHeight}},\textcolor{stringliteral}{"{}PAUSE"{}},\textcolor{stringliteral}{"{}rainyhearts"{}},\textcolor{keyword}{new} Color(0x834317));}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00031}00031                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00032}00032             \textcolor{keywordflow}{case} FIGHT:}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00033}00033                 \mbox{\hyperlink{class_u_i_1_1_h_u_d_a9c58dd644fb0192b3edda7dca9807c4c}{\_titleWidth}} = 300;}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00034}00034                 \mbox{\hyperlink{class_u_i_1_1_h_u_d_acac7a7226aaf2f1e5219023954455841}{\_titleHeight}} = 60;}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00035}00035                 \mbox{\hyperlink{class_u_i_1_1_h_u_d_a2b2c87a34b30ab4ab62d4e58390b1560}{\_nbButtons}} = 4;}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00036}00036                 \mbox{\hyperlink{class_u_i_1_1_h_u_d_a1bc0e7e673fea33efd34f3613d5656e7}{\_title}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_u_i_1_1_choice_button}{ChoiceButton}}(\mbox{\hyperlink{class_u_i_1_1_h_u_d_a9c58dd644fb0192b3edda7dca9807c4c}{\_titleWidth}},\mbox{\hyperlink{class_u_i_1_1_h_u_d_acac7a7226aaf2f1e5219023954455841}{\_titleHeight}},\textcolor{stringliteral}{"{}FIGHT"{}},\textcolor{stringliteral}{"{}rainyhearts"{}},\textcolor{keyword}{new} Color(0xF10516));}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00037}00037                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00038}00038             \textcolor{keywordflow}{case} SHOP:}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00039}00039                 \mbox{\hyperlink{class_u_i_1_1_h_u_d_a2b2c87a34b30ab4ab62d4e58390b1560}{\_nbButtons}} = 4;}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00040}00040                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00041}00041         \}}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00043}00043         \mbox{\hyperlink{class_u_i_1_1_h_u_d_a89e962c43a04bc0bc065a74e6cd52720}{\_buttons}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_u_i_1_1_choice_button}{ChoiceButton}}[\mbox{\hyperlink{class_u_i_1_1_h_u_d_a2b2c87a34b30ab4ab62d4e58390b1560}{\_nbButtons}}];}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00045}00045         \textcolor{comment}{//To replace with the current names that we want depending on the MenuType}}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00046}00046         }
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00047}00047         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i =0; i<\mbox{\hyperlink{class_u_i_1_1_h_u_d_a2b2c87a34b30ab4ab62d4e58390b1560}{\_nbButtons}} ; i++)\{}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00048}00048             \mbox{\hyperlink{class_u_i_1_1_h_u_d_a89e962c43a04bc0bc065a74e6cd52720}{\_buttons}}[i] = \textcolor{keyword}{new} \mbox{\hyperlink{class_u_i_1_1_choice_button}{ChoiceButton}}(80*3,20*3, \textcolor{stringliteral}{"{}BUTTON "{}} +i, \textcolor{stringliteral}{"{}rainyhearts"{}},Color.black);}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00049}00049         \}}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00050}00050     \}}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00053}\mbox{\hyperlink{class_u_i_1_1_h_u_d_a290720935a1960ce8159eae9e7a535fa}{00053}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_u_i_1_1_h_u_d_a290720935a1960ce8159eae9e7a535fa}{draw}}(Graphics2D g2, \textcolor{keywordtype}{int} screenWidth, \textcolor{keywordtype}{int} screenHeight)\{}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00054}00054         \textcolor{comment}{//g2.drawImage(\_bgTexture, (800 -\/ HUDWidth)/2,(600 -\/ HUDHeight)/2,HUDWidth, HUDHeight, null);}}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00055}00055         g2.setColor(\textcolor{keyword}{new} Color(0,0,0,20));}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00056}00056         g2.fillRect((screenWidth -\/ \mbox{\hyperlink{class_u_i_1_1_h_u_d_a5ce40c660b55fea474d7d72a61b9ea52}{HUDWidth}})/2, (screenHeight -\/ \mbox{\hyperlink{class_u_i_1_1_h_u_d_a726457ceeae60078debbf4605357b33b}{HUDHeight}})/2,\mbox{\hyperlink{class_u_i_1_1_h_u_d_a5ce40c660b55fea474d7d72a61b9ea52}{HUDWidth}},\mbox{\hyperlink{class_u_i_1_1_h_u_d_a726457ceeae60078debbf4605357b33b}{HUDHeight}});   \textcolor{comment}{//"{}Drawing"{} HUD with soft background color}}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00061}00061         \textcolor{keywordtype}{int} gap = (\mbox{\hyperlink{class_u_i_1_1_h_u_d_a726457ceeae60078debbf4605357b33b}{HUDHeight}} -\/ \mbox{\hyperlink{class_u_i_1_1_h_u_d_a2b2c87a34b30ab4ab62d4e58390b1560}{\_nbButtons}}*\mbox{\hyperlink{class_u_i_1_1_h_u_d_a89e962c43a04bc0bc065a74e6cd52720}{\_buttons}}[0].\mbox{\hyperlink{class_u_i_1_1_choice_button_a63b5743b35bdb35e849f314efd401e54}{height}})/(\mbox{\hyperlink{class_u_i_1_1_h_u_d_a2b2c87a34b30ab4ab62d4e58390b1560}{\_nbButtons}}+1);    \textcolor{comment}{//Small gap to space the buttons and keep them centered on screen}}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00062}00062         \mbox{\hyperlink{class_u_i_1_1_h_u_d_a1bc0e7e673fea33efd34f3613d5656e7}{\_title}}.\mbox{\hyperlink{class_u_i_1_1_choice_button_a1000744853168892a77f3aaa14886739}{draw}}(g2,(screenWidth -\/ \mbox{\hyperlink{class_u_i_1_1_h_u_d_a9c58dd644fb0192b3edda7dca9807c4c}{\_titleWidth}})/2, screenHeight -\/ \mbox{\hyperlink{class_u_i_1_1_h_u_d_a726457ceeae60078debbf4605357b33b}{HUDHeight}});}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00063}00063         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i < \mbox{\hyperlink{class_u_i_1_1_h_u_d_a2b2c87a34b30ab4ab62d4e58390b1560}{\_nbButtons}}; i++)\{}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00064}00064             \mbox{\hyperlink{class_u_i_1_1_h_u_d_a89e962c43a04bc0bc065a74e6cd52720}{\_buttons}}[i].\mbox{\hyperlink{class_u_i_1_1_choice_button_a1000744853168892a77f3aaa14886739}{draw}}(g2,(screenWidth -\/ \mbox{\hyperlink{class_u_i_1_1_h_u_d_a89e962c43a04bc0bc065a74e6cd52720}{\_buttons}}[i].width)/2, (gap+gap*(i+1)/2 + \mbox{\hyperlink{class_u_i_1_1_h_u_d_a89e962c43a04bc0bc065a74e6cd52720}{\_buttons}}[i].height*i + (screenHeight -\/ \mbox{\hyperlink{class_u_i_1_1_h_u_d_a726457ceeae60078debbf4605357b33b}{HUDHeight}})/2));}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00065}00065         \}}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00066}00066     \}}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00068}\mbox{\hyperlink{class_u_i_1_1_h_u_d_ad960c142c73e280881c32f452a4e844a}{00068}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_u_i_1_1_h_u_d_ad960c142c73e280881c32f452a4e844a}{update}}(\textcolor{keywordtype}{double} dt)\{}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00069}00069         }
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00070}00070     \}}
+\DoxyCodeLine{\Hypertarget{_h_u_d_8java_source_l00071}00071 \}}
+
+\end{DoxyCode}

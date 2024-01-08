@@ -1,0 +1,42 @@
+\hypertarget{_enemy_8java_source}{}\doxysection{Enemy.\+java}
+\label{_enemy_8java_source}\index{src/entity/Enemy.java@{src/entity/Enemy.java}}
+\mbox{\hyperlink{_enemy_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00006}00006 \textcolor{keyword}{package }entity;}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00008}00008 \textcolor{keyword}{import} \mbox{\hyperlink{namespacegame}{game}}.\mbox{\hyperlink{classgame_1_1_scene}{Scene}};}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00015}\mbox{\hyperlink{classentity_1_1_enemy}{00015}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classentity_1_1_enemy}{Enemy}} \textcolor{keyword}{extends} \mbox{\hyperlink{classentity_1_1_character}{Character}} \{}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00017}\mbox{\hyperlink{classentity_1_1_enemy_a98ff59cf7565dd9fce084cfee4b9cb4b}{00017}}     \textcolor{keyword}{private} \textcolor{keywordtype}{int} \mbox{\hyperlink{classentity_1_1_enemy_a98ff59cf7565dd9fce084cfee4b9cb4b}{\_xpRate}}; \textcolor{comment}{// Experience points rate for defeating the enemy}}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00018}\mbox{\hyperlink{classentity_1_1_enemy_a175fabae6e9cb47ec24f230e048afa91}{00018}}     \textcolor{keyword}{public} String \mbox{\hyperlink{classentity_1_1_enemy_a175fabae6e9cb47ec24f230e048afa91}{name}};}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00030}\mbox{\hyperlink{classentity_1_1_enemy_af51eefe1612d7a7506f3f1f24cfb7268}{00030}}     \textcolor{keyword}{public} \mbox{\hyperlink{classentity_1_1_enemy_af51eefe1612d7a7506f3f1f24cfb7268}{Enemy}}(String enemyName, \textcolor{keywordtype}{int} \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}}, String \mbox{\hyperlink{classentity_1_1_character_a249d5d0b8f600f332b5715e93f83668d}{facing}}, \textcolor{keywordtype}{int} spriteCntMax, \textcolor{keywordtype}{int} spriteSpeed) \{}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00031}00031         super(enemyName, \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}}, \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}}, \mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}}, \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}}, \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}}, \mbox{\hyperlink{classentity_1_1_character_a249d5d0b8f600f332b5715e93f83668d}{facing}}, spriteCntMax, spriteSpeed);  \textcolor{comment}{// Calls the parent class for entity setup, specifying scene.keyH for player}}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00032}00032     \}}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00038}\mbox{\hyperlink{classentity_1_1_enemy_a8f3405c245d6c43ff3b09953eb5b4636}{00038}}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \mbox{\hyperlink{classentity_1_1_enemy_a8f3405c245d6c43ff3b09953eb5b4636}{touchingPlayer}}(\mbox{\hyperlink{classentity_1_1_player}{Player}} player)\{}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00039}00039         }
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00040}00040         \textcolor{keywordflow}{if}((\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x >= player.\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x + player.\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.width)      \textcolor{comment}{// trop à droite}}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00041}00041         || (\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.width <= player.\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x) \textcolor{comment}{// trop à gauche}}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00042}00042         || (\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y >= player.\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y + player.\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.height) \textcolor{comment}{// trop en bas}}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00043}00043         || (\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.height <= player.\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y))\{\textcolor{comment}{// trop en haut}}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00044}00044             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00045}00045         \}}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00047}00047         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00048}00048     \}}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00056}00056     @Override}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00057}\mbox{\hyperlink{classentity_1_1_enemy_ab115ccb1365609753aa1dddbc9df0580}{00057}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classentity_1_1_enemy_ab115ccb1365609753aa1dddbc9df0580}{update}}(\mbox{\hyperlink{classgame_1_1_scene}{Scene}} scene, \textcolor{keywordtype}{double} dt) \{}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00058}00058         super.update(scene, dt); \textcolor{comment}{// Calls the parent class update method}}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00059}00059         \textcolor{comment}{//TODO : find a method to make the enemy move in predictive patterns}}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00060}00060     \}}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00062}\mbox{\hyperlink{classentity_1_1_enemy_a429f4fa6c8b461d4c18802d35d9b5092}{00062}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classentity_1_1_enemy_a429f4fa6c8b461d4c18802d35d9b5092}{playerInterraction}}(\mbox{\hyperlink{classentity_1_1_player}{Player}} player)\{}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00063}00063         }
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00064}00064     \}}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00065}00065 \}}
+
+\end{DoxyCode}

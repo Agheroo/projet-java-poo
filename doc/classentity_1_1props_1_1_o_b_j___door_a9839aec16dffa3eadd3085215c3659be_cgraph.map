@@ -1,0 +1,6 @@
+<map id="entity.props.OBJ_Door.playerInterraction" name="entity.props.OBJ_Door.playerInterraction">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,212,47"/>
+<area shape="rect" id="node2" href="$classentity_1_1props_1_1_props.html#ab837cf0c685323fe8c2cc84d80f6315a" title=" " alt="" coords="260,13,476,39"/>
+<area shape="rect" id="node3" href="$classgame_1_1_world.html#a0e40ca86573cf45d858cc8e529865649" title="Gets the instance of the World." alt="" coords="524,13,687,39"/>
+<area shape="rect" id="node4" href="$class_u_i_1_1_textbox.html#ac3a40742547f48f95f29ce1649ac88a0" title=" " alt="" coords="735,13,885,39"/>
+</map>

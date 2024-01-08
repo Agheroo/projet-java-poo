@@ -1,0 +1,74 @@
+\hypertarget{_textbox_8java_source}{}\doxysection{Textbox.\+java}
+\label{_textbox_8java_source}\index{src/UI/Textbox.java@{src/UI/Textbox.java}}
+\mbox{\hyperlink{_textbox_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00001}00001 \textcolor{keyword}{package }UI;}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00003}00003 \textcolor{keyword}{import} java.awt.Color;}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00004}00004 \textcolor{keyword}{import} java.awt.Font;}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00005}00005 \textcolor{keyword}{import} java.awt.FontFormatException;}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00006}00006 \textcolor{keyword}{import} java.awt.Graphics2D;}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00007}00007 \textcolor{keyword}{import} java.awt.GraphicsEnvironment;}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00008}00008 \textcolor{keyword}{import} java.io.File;}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00009}00009 \textcolor{keyword}{import} java.io.IOException;}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00011}00011 \textcolor{keyword}{import} javax.swing.JLabel;}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00012}\mbox{\hyperlink{class_u_i_1_1_textbox}{00012}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_u_i_1_1_textbox}{Textbox}} \textcolor{keyword}{extends} JLabel\{}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00013}\mbox{\hyperlink{class_u_i_1_1_textbox_a76ab01a7be11595a9a06032f7d248470}{00013}}     \textcolor{keyword}{private} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_u_i_1_1_textbox_abe6a2b59a3f649a7aa35e0cb14a1d66b}{\_width}}, \mbox{\hyperlink{class_u_i_1_1_textbox_a76ab01a7be11595a9a06032f7d248470}{\_height}};}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00014}\mbox{\hyperlink{class_u_i_1_1_textbox_a5c682cf12a37a04fd9276b686618f7d8}{00014}}     \textcolor{keyword}{private} Color \mbox{\hyperlink{class_u_i_1_1_textbox_a5c682cf12a37a04fd9276b686618f7d8}{\_color}};}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00015}\mbox{\hyperlink{class_u_i_1_1_textbox_ab5418e63a4261406606ce6843cb7da57}{00015}}     \textcolor{keyword}{private} String \mbox{\hyperlink{class_u_i_1_1_textbox_ab5418e63a4261406606ce6843cb7da57}{\_text}};}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00016}\mbox{\hyperlink{class_u_i_1_1_textbox_a31b10668babae92bd413efc2f95e2a62}{00016}}     \textcolor{keyword}{private} Font \mbox{\hyperlink{class_u_i_1_1_textbox_a31b10668babae92bd413efc2f95e2a62}{\_font}};}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00017}\mbox{\hyperlink{class_u_i_1_1_textbox_a186137af66f49813dc7aa286c1c75fa0}{00017}}     \textcolor{keyword}{private} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_u_i_1_1_textbox_a186137af66f49813dc7aa286c1c75fa0}{\_fontSizeToUse}};}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00020}\mbox{\hyperlink{class_u_i_1_1_textbox_a11acae0a6446e83c4bcff70bdba42a89}{00020}}     \textcolor{keyword}{public} \mbox{\hyperlink{class_u_i_1_1_textbox_a11acae0a6446e83c4bcff70bdba42a89}{Textbox}}(String text, String fontName, \textcolor{keywordtype}{int} w, \textcolor{keywordtype}{int} h, Color color)\{  }
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00021}00021         \mbox{\hyperlink{class_u_i_1_1_textbox_abe6a2b59a3f649a7aa35e0cb14a1d66b}{\_width}} = w; \mbox{\hyperlink{class_u_i_1_1_textbox_a76ab01a7be11595a9a06032f7d248470}{\_height}} = h;}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00022}00022         \mbox{\hyperlink{class_u_i_1_1_textbox_ab5418e63a4261406606ce6843cb7da57}{\_text}} = text;  }
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00023}00023         \mbox{\hyperlink{class_u_i_1_1_textbox_a5c682cf12a37a04fd9276b686618f7d8}{\_color}} = color;}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00024}00024         }
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00025}00025         \textcolor{comment}{//loadFont(fontName);}}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00026}00026         \mbox{\hyperlink{class_u_i_1_1_textbox_a31b10668babae92bd413efc2f95e2a62}{\_font}} = \textcolor{keyword}{new} Font(fontName, Font.PLAIN, 1);}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00028}00028         }
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00029}00029         \textcolor{keywordtype}{int} stringWidth = this.getFontMetrics(\mbox{\hyperlink{class_u_i_1_1_textbox_a31b10668babae92bd413efc2f95e2a62}{\_font}}).stringWidth(\mbox{\hyperlink{class_u_i_1_1_textbox_ab5418e63a4261406606ce6843cb7da57}{\_text}});}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00030}00030         \textcolor{keywordtype}{int} componentWidth = \mbox{\hyperlink{class_u_i_1_1_textbox_abe6a2b59a3f649a7aa35e0cb14a1d66b}{\_width}};}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00032}00032         \textcolor{comment}{// Find out how much the font can grow in width.}}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00033}00033         \textcolor{keywordtype}{double} widthRatio = (double)componentWidth / (\textcolor{keywordtype}{double})stringWidth;}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00035}00035         \textcolor{keywordtype}{int} newFontSize = (int)(\mbox{\hyperlink{class_u_i_1_1_textbox_a31b10668babae92bd413efc2f95e2a62}{\_font}}.getSize() * widthRatio);}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00036}00036         \textcolor{keywordtype}{int} componentHeight = \mbox{\hyperlink{class_u_i_1_1_textbox_a76ab01a7be11595a9a06032f7d248470}{\_height}};}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00038}00038         \textcolor{comment}{// Pick a new font size so it will not be larger than the height of label.}}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00039}00039         \mbox{\hyperlink{class_u_i_1_1_textbox_a186137af66f49813dc7aa286c1c75fa0}{\_fontSizeToUse}} = Math.min(newFontSize, componentHeight);}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00041}00041         \textcolor{comment}{// Set the label's font size to the newly determined size.}}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00042}00042         \mbox{\hyperlink{class_u_i_1_1_textbox_a31b10668babae92bd413efc2f95e2a62}{\_font}} = \textcolor{keyword}{new} Font(fontName, Font.PLAIN, \mbox{\hyperlink{class_u_i_1_1_textbox_a186137af66f49813dc7aa286c1c75fa0}{\_fontSizeToUse}});}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00043}00043     \}}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00046}\mbox{\hyperlink{class_u_i_1_1_textbox_ac3a40742547f48f95f29ce1649ac88a0}{00046}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_u_i_1_1_textbox_ac3a40742547f48f95f29ce1649ac88a0}{loadFont}}(String fontName)\{}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00047}00047         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00048}00048             GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00049}00049             ge.registerFont(Font.createFont(Font.TRUETYPE\_FONT, \textcolor{keyword}{new} File(\textcolor{stringliteral}{"{}res/hud/font/rainyhearts.ttf"{}})));}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00050}00050         \} }
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00051}00051         \textcolor{keywordflow}{catch} (FontFormatException e) \{}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00052}00052             e.printStackTrace();}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00053}00053         \}}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00054}00054         \textcolor{keywordflow}{catch} (IOException e) \{}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00055}00055             e.printStackTrace();}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00056}00056         \}}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00057}00057     \}}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00059}\mbox{\hyperlink{class_u_i_1_1_textbox_aab675a99675e6ba3e03630cf973f2799}{00059}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_u_i_1_1_textbox_aab675a99675e6ba3e03630cf973f2799}{draw}}(Graphics2D g2,\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y)\{}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00060}00060         \textcolor{comment}{//TODO: find a way to center text on the button}}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00061}00061         g2.setFont(\mbox{\hyperlink{class_u_i_1_1_textbox_a31b10668babae92bd413efc2f95e2a62}{\_font}});}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00062}00062         g2.setColor(Color.black);}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00063}00063         g2.drawRect(x,y,\mbox{\hyperlink{class_u_i_1_1_textbox_abe6a2b59a3f649a7aa35e0cb14a1d66b}{\_width}},\mbox{\hyperlink{class_u_i_1_1_textbox_a76ab01a7be11595a9a06032f7d248470}{\_height}});}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00064}00064         g2.setColor(\mbox{\hyperlink{class_u_i_1_1_textbox_a5c682cf12a37a04fd9276b686618f7d8}{\_color}});}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00065}00065         g2.drawString(\mbox{\hyperlink{class_u_i_1_1_textbox_ab5418e63a4261406606ce6843cb7da57}{\_text}}, x + \mbox{\hyperlink{class_u_i_1_1_textbox_a186137af66f49813dc7aa286c1c75fa0}{\_fontSizeToUse}}, y + (\mbox{\hyperlink{class_u_i_1_1_textbox_a76ab01a7be11595a9a06032f7d248470}{\_height}} +\mbox{\hyperlink{class_u_i_1_1_textbox_a186137af66f49813dc7aa286c1c75fa0}{\_fontSizeToUse}})/2);}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00066}00066     \}}
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{_textbox_8java_source_l00068}00068 \}}
+
+\end{DoxyCode}

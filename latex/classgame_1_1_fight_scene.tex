@@ -1,0 +1,261 @@
+\hypertarget{classgame_1_1_fight_scene}{}\doxysection{game.\+Fight\+Scene Class Reference}
+\label{classgame_1_1_fight_scene}\index{game.FightScene@{game.FightScene}}
+
+
+Represents the scene during a fight between a player and an enemy.  
+
+
+
+
+Collaboration diagram for game.\+Fight\+Scene\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classgame_1_1_fight_scene__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{enumgame_1_1_fight_scene_1_1_fight_state}{Fight\+State}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1_fight_scene_a529a19188f0cb98415d9ec5ec67f151b}{Fight\+Scene}} (\mbox{\hyperlink{classentity_1_1_player}{Player}} \mbox{\hyperlink{classgame_1_1_fight_scene_aec9af8460fd8aa51e0b260f4a48b11ec}{player}}, \mbox{\hyperlink{classentity_1_1_enemy}{Enemy}} \mbox{\hyperlink{classgame_1_1_fight_scene_ac2f268ca7a750704296e941b70efd839}{enemy}})
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classgame_1_1_fight_scene}{Fight\+Scene}} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1_fight_scene_a6f8060e45bcb70f13265bd6d3b2a52d5}{update}} (\mbox{\hyperlink{classgame_1_1_scene}{Scene}} scene)
+\begin{DoxyCompactList}\small\item\em Updates the fight scene. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1_fight_scene_ac5c0c512caf53672fcbc0cb2c9e26012}{kill\+Enemy}} (Hash\+Map$<$ Point, \mbox{\hyperlink{classentity_1_1_enemy}{Enemy}} $>$ enemies, \mbox{\hyperlink{classentity_1_1_enemy}{Enemy}} \mbox{\hyperlink{classgame_1_1_fight_scene_ac2f268ca7a750704296e941b70efd839}{enemy}})
+\item 
+void \mbox{\hyperlink{classgame_1_1_fight_scene_a9525cb3d263680e8d808b3abde00e8d8}{draw}} (Graphics2D g2)
+\begin{DoxyCompactList}\small\item\em Draws the fight scene. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classentity_1_1_player}{Player}} \mbox{\hyperlink{classgame_1_1_fight_scene_aec9af8460fd8aa51e0b260f4a48b11ec}{player}}
+\item 
+\mbox{\hyperlink{classentity_1_1_enemy}{Enemy}} \mbox{\hyperlink{classgame_1_1_fight_scene_ac2f268ca7a750704296e941b70efd839}{enemy}}
+\item 
+\mbox{\hyperlink{enumgame_1_1_fight_scene_1_1_fight_state}{Fight\+State}} \mbox{\hyperlink{classgame_1_1_fight_scene_a1bc4ac9f4832a190bf00012ec26670c5}{state}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_i_1_1_h_u_d}{HUD}} \mbox{\hyperlink{classgame_1_1_fight_scene_a769fd96d2588b4414dce9ac338f63bad}{menu}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the scene during a fight between a player and an enemy. 
+
+Definition at line \mbox{\hyperlink{_fight_scene_8java_source_l00024}{24}} of file \mbox{\hyperlink{_fight_scene_8java_source}{Fight\+Scene.\+java}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1_fight_scene_a529a19188f0cb98415d9ec5ec67f151b}\label{classgame_1_1_fight_scene_a529a19188f0cb98415d9ec5ec67f151b}} 
+\index{game.FightScene@{game.FightScene}!FightScene@{FightScene}}
+\index{FightScene@{FightScene}!game.FightScene@{game.FightScene}}
+\doxysubsubsection{\texorpdfstring{FightScene()}{FightScene()}}
+{\footnotesize\ttfamily game.\+Fight\+Scene.\+Fight\+Scene (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classentity_1_1_player}{Player}}}]{player,  }\item[{\mbox{\hyperlink{classentity_1_1_enemy}{Enemy}}}]{enemy }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \mbox{\hyperlink{classgame_1_1_fight_scene}{Fight\+Scene}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & The player entity in the fight. \\
+\hline
+{\em enemy} & The enemy entity in the fight. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_fight_scene_8java_source_l00037}{37}} of file \mbox{\hyperlink{_fight_scene_8java_source}{Fight\+Scene.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037                                                   \{}
+\DoxyCodeLine{00038         System.out.println(\textcolor{stringliteral}{"{}Entering combat"{}});}
+\DoxyCodeLine{00039         this.player = \mbox{\hyperlink{classgame_1_1_fight_scene_aec9af8460fd8aa51e0b260f4a48b11ec}{player}};}
+\DoxyCodeLine{00040         this.enemy = \mbox{\hyperlink{classgame_1_1_fight_scene_ac2f268ca7a750704296e941b70efd839}{enemy}};}
+\DoxyCodeLine{00041         \mbox{\hyperlink{classgame_1_1_fight_scene_a1bc4ac9f4832a190bf00012ec26670c5}{state}} = FightState.\mbox{\hyperlink{enumgame_1_1_fight_scene_1_1_fight_state_a77b37c857042568e7388cae1af334ebd}{FIGHTING}};}
+\DoxyCodeLine{00042         \mbox{\hyperlink{classgame_1_1_fight_scene_a769fd96d2588b4414dce9ac338f63bad}{menu}} = \textcolor{keyword}{new} HUD(MenuType.FIGHT);}
+\DoxyCodeLine{00043     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1_fight_scene_a9525cb3d263680e8d808b3abde00e8d8}\label{classgame_1_1_fight_scene_a9525cb3d263680e8d808b3abde00e8d8}} 
+\index{game.FightScene@{game.FightScene}!draw@{draw}}
+\index{draw@{draw}!game.FightScene@{game.FightScene}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void game.\+Fight\+Scene.\+draw (\begin{DoxyParamCaption}\item[{Graphics2D}]{g2 }\end{DoxyParamCaption})}
+
+
+
+Draws the fight scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g2} & The Graphics2D object for drawing. \\
+\hline
+{\em screen\+Width} & The width of the screen. \\
+\hline
+{\em screen\+Height} & The height of the screen. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_fight_scene_8java_source_l00073}{73}} of file \mbox{\hyperlink{_fight_scene_8java_source}{Fight\+Scene.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00073                                     \{}
+\DoxyCodeLine{00074         g2.setColor( \textcolor{keyword}{new} Color(0xFF2265));}
+\DoxyCodeLine{00075         g2.fillRect(100,200,400,150);}
+\DoxyCodeLine{00076         \mbox{\hyperlink{classgame_1_1_fight_scene_aec9af8460fd8aa51e0b260f4a48b11ec}{player}}.\mbox{\hyperlink{classentity_1_1_character_a24e991ea21c30b197a36fe5e9c7b0733}{drawInFight}}(g2, Const.WDW\_width / 2 -\/ (Const.FGHT\_entityScreenSize / 2), Const.WDW\_height / 2 -\/ (Const.FGHT\_entityScreenSize / 2));}
+\DoxyCodeLine{00077         \mbox{\hyperlink{classgame_1_1_fight_scene_a769fd96d2588b4414dce9ac338f63bad}{menu}}.\mbox{\hyperlink{class_u_i_1_1_h_u_d_a290720935a1960ce8159eae9e7a535fa}{draw}}(g2, Const.WDW\_width, Const.WDW\_height);}
+\DoxyCodeLine{00078     \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgame_1_1_fight_scene_a9525cb3d263680e8d808b3abde00e8d8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{classgame_1_1_fight_scene_a9525cb3d263680e8d808b3abde00e8d8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classgame_1_1_fight_scene_ac5c0c512caf53672fcbc0cb2c9e26012}\label{classgame_1_1_fight_scene_ac5c0c512caf53672fcbc0cb2c9e26012}} 
+\index{game.FightScene@{game.FightScene}!killEnemy@{killEnemy}}
+\index{killEnemy@{killEnemy}!game.FightScene@{game.FightScene}}
+\doxysubsubsection{\texorpdfstring{killEnemy()}{killEnemy()}}
+{\footnotesize\ttfamily void game.\+Fight\+Scene.\+kill\+Enemy (\begin{DoxyParamCaption}\item[{Hash\+Map$<$ Point, \mbox{\hyperlink{classentity_1_1_enemy}{Enemy}} $>$}]{enemies,  }\item[{\mbox{\hyperlink{classentity_1_1_enemy}{Enemy}}}]{enemy }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_fight_scene_8java_source_l00062}{62}} of file \mbox{\hyperlink{_fight_scene_8java_source}{Fight\+Scene.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00062                                                                      \{}
+\DoxyCodeLine{00063         enemies.remove(\textcolor{keyword}{new} Point(\mbox{\hyperlink{classgame_1_1_fight_scene_ac2f268ca7a750704296e941b70efd839}{enemy}}.\mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}},\mbox{\hyperlink{classgame_1_1_fight_scene_ac2f268ca7a750704296e941b70efd839}{enemy}}.\mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}}), \mbox{\hyperlink{classgame_1_1_fight_scene_ac2f268ca7a750704296e941b70efd839}{enemy}});}
+\DoxyCodeLine{00064     \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgame_1_1_fight_scene_ac5c0c512caf53672fcbc0cb2c9e26012_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classgame_1_1_fight_scene_a6f8060e45bcb70f13265bd6d3b2a52d5}\label{classgame_1_1_fight_scene_a6f8060e45bcb70f13265bd6d3b2a52d5}} 
+\index{game.FightScene@{game.FightScene}!update@{update}}
+\index{update@{update}!game.FightScene@{game.FightScene}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void game.\+Fight\+Scene.\+update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1_scene}{Scene}}}]{scene }\end{DoxyParamCaption})}
+
+
+
+Updates the fight scene. 
+
+
+
+Definition at line \mbox{\hyperlink{_fight_scene_8java_source_l00048}{48}} of file \mbox{\hyperlink{_fight_scene_8java_source}{Fight\+Scene.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00048                                     \{}
+\DoxyCodeLine{00049 }
+\DoxyCodeLine{00050         \textcolor{comment}{// Additional logic for the fight scene update}}
+\DoxyCodeLine{00051         System.out.println(\textcolor{stringliteral}{"{}Le joueur est en combat avec "{}}+ \mbox{\hyperlink{classgame_1_1_fight_scene_ac2f268ca7a750704296e941b70efd839}{enemy}}.\mbox{\hyperlink{classentity_1_1_enemy_a175fabae6e9cb47ec24f230e048afa91}{name}});}
+\DoxyCodeLine{00052         \textcolor{keywordflow}{if}(scene.keyH.interactPressed)\{}
+\DoxyCodeLine{00053             \mbox{\hyperlink{classgame_1_1_fight_scene_a1bc4ac9f4832a190bf00012ec26670c5}{state}} = FightState.\mbox{\hyperlink{enumgame_1_1_fight_scene_1_1_fight_state_a1c4e5cd4ba0f5374190e0be6dc2c8617}{WON}};}
+\DoxyCodeLine{00054             scene.state = State.WORLD;}
+\DoxyCodeLine{00055             player.speed = 0;}
+\DoxyCodeLine{00056             \mbox{\hyperlink{classgame_1_1_fight_scene_ac5c0c512caf53672fcbc0cb2c9e26012}{killEnemy}}(World.enemies, \mbox{\hyperlink{classgame_1_1_fight_scene_ac2f268ca7a750704296e941b70efd839}{enemy}});}
+\DoxyCodeLine{00057             }
+\DoxyCodeLine{00058             scene.keyH.interactPressed = \textcolor{keyword}{false};}
+\DoxyCodeLine{00059         \}}
+\DoxyCodeLine{00060     \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgame_1_1_fight_scene_a6f8060e45bcb70f13265bd6d3b2a52d5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgame_1_1_fight_scene_a6f8060e45bcb70f13265bd6d3b2a52d5_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1_fight_scene_ac2f268ca7a750704296e941b70efd839}\label{classgame_1_1_fight_scene_ac2f268ca7a750704296e941b70efd839}} 
+\index{game.FightScene@{game.FightScene}!enemy@{enemy}}
+\index{enemy@{enemy}!game.FightScene@{game.FightScene}}
+\doxysubsubsection{\texorpdfstring{enemy}{enemy}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classentity_1_1_enemy}{Enemy}} game.\+Fight\+Scene.\+enemy}
+
+
+
+Definition at line \mbox{\hyperlink{_fight_scene_8java_source_l00028}{28}} of file \mbox{\hyperlink{_fight_scene_8java_source}{Fight\+Scene.\+java}}.
+
+\mbox{\Hypertarget{classgame_1_1_fight_scene_a769fd96d2588b4414dce9ac338f63bad}\label{classgame_1_1_fight_scene_a769fd96d2588b4414dce9ac338f63bad}} 
+\index{game.FightScene@{game.FightScene}!menu@{menu}}
+\index{menu@{menu}!game.FightScene@{game.FightScene}}
+\doxysubsubsection{\texorpdfstring{menu}{menu}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_u_i_1_1_h_u_d}{HUD}} game.\+Fight\+Scene.\+menu\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_fight_scene_8java_source_l00030}{30}} of file \mbox{\hyperlink{_fight_scene_8java_source}{Fight\+Scene.\+java}}.
+
+\mbox{\Hypertarget{classgame_1_1_fight_scene_aec9af8460fd8aa51e0b260f4a48b11ec}\label{classgame_1_1_fight_scene_aec9af8460fd8aa51e0b260f4a48b11ec}} 
+\index{game.FightScene@{game.FightScene}!player@{player}}
+\index{player@{player}!game.FightScene@{game.FightScene}}
+\doxysubsubsection{\texorpdfstring{player}{player}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classentity_1_1_player}{Player}} game.\+Fight\+Scene.\+player}
+
+
+
+Definition at line \mbox{\hyperlink{_fight_scene_8java_source_l00027}{27}} of file \mbox{\hyperlink{_fight_scene_8java_source}{Fight\+Scene.\+java}}.
+
+\mbox{\Hypertarget{classgame_1_1_fight_scene_a1bc4ac9f4832a190bf00012ec26670c5}\label{classgame_1_1_fight_scene_a1bc4ac9f4832a190bf00012ec26670c5}} 
+\index{game.FightScene@{game.FightScene}!state@{state}}
+\index{state@{state}!game.FightScene@{game.FightScene}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{enumgame_1_1_fight_scene_1_1_fight_state}{Fight\+State}} game.\+Fight\+Scene.\+state}
+
+
+
+Definition at line \mbox{\hyperlink{_fight_scene_8java_source_l00029}{29}} of file \mbox{\hyperlink{_fight_scene_8java_source}{Fight\+Scene.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/game/\mbox{\hyperlink{_fight_scene_8java}{Fight\+Scene.\+java}}\end{DoxyCompactItemize}

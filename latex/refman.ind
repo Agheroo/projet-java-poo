@@ -1,0 +1,810 @@
+\begin{theindex}
+
+  \item {\_FPS}
+    \subitem {game.Window}, \hyperpage{107}
+  \item {\_bgTexture}
+    \subitem {UI.ChoiceButton}, \hyperpage{31}
+  \item {\_buttons}
+    \subitem {UI.HUD}, \hyperpage{55}
+  \item {\_color}
+    \subitem {UI.Textbox}, \hyperpage{86}
+  \item {\_currfight}
+    \subitem {game.World}, \hyperpage{112}
+  \item {\_floorMap}
+    \subitem {tiles.TileManager}, \hyperpage{100}
+  \item {\_floorMapTextures}
+    \subitem {tiles.TileManager}, \hyperpage{100}
+  \item {\_font}
+    \subitem {UI.Textbox}, \hyperpage{86}
+  \item {\_fontSizeToUse}
+    \subitem {UI.Textbox}, \hyperpage{86}
+  \item {\_height}
+    \subitem {UI.Textbox}, \hyperpage{87}
+  \item {\_idle\_down}
+    \subitem {entity.Character}, \hyperpage{26}
+  \item {\_idle\_left}
+    \subitem {entity.Character}, \hyperpage{26}
+  \item {\_idle\_right}
+    \subitem {entity.Character}, \hyperpage{26}
+  \item {\_idle\_up}
+    \subitem {entity.Character}, \hyperpage{26}
+  \item {\_instance}
+    \subitem {game.World}, \hyperpage{112}
+  \item {\_isBlocking}
+    \subitem {tiles.Tile}, \hyperpage{93}
+  \item {\_lastState}
+    \subitem {game.Scene}, \hyperpage{80}
+  \item {\_nbButtons}
+    \subitem {UI.HUD}, \hyperpage{55}
+  \item {\_spriteCnt}
+    \subitem {entity.Entity}, \hyperpage{42}
+    \subitem {tiles.Tile}, \hyperpage{93}
+  \item {\_spriteCntMax}
+    \subitem {entity.Entity}, \hyperpage{42}
+  \item {\_spriteSpeed}
+    \subitem {entity.Entity}, \hyperpage{42}
+  \item {\_spriteUpdater}
+    \subitem {entity.Entity}, \hyperpage{43}
+    \subitem {tiles.Tile}, \hyperpage{93}
+  \item {\_text}
+    \subitem {UI.Textbox}, \hyperpage{87}
+  \item {\_textBox}
+    \subitem {UI.ChoiceButton}, \hyperpage{31}
+  \item {\_title}
+    \subitem {UI.HUD}, \hyperpage{56}
+  \item {\_titleHeight}
+    \subitem {UI.HUD}, \hyperpage{56}
+  \item {\_titleWidth}
+    \subitem {UI.HUD}, \hyperpage{56}
+  \item {\_topMap}
+    \subitem {tiles.TileManager}, \hyperpage{100}
+  \item {\_topMapTextures}
+    \subitem {tiles.TileManager}, \hyperpage{100}
+  \item {\_type}
+    \subitem {UI.HUD}, \hyperpage{56}
+  \item {\_walk\_down}
+    \subitem {entity.Character}, \hyperpage{27}
+  \item {\_walk\_left}
+    \subitem {entity.Character}, \hyperpage{27}
+  \item {\_walk\_right}
+    \subitem {entity.Character}, \hyperpage{27}
+  \item {\_walk\_up}
+    \subitem {entity.Character}, \hyperpage{27}
+  \item {\_width}
+    \subitem {UI.Textbox}, \hyperpage{87}
+  \item {\_worldX}
+    \subitem {tiles.Tile}, \hyperpage{93}
+  \item {\_worldY}
+    \subitem {tiles.Tile}, \hyperpage{93}
+  \item {\_xpRate}
+    \subitem {entity.Enemy}, \hyperpage{37}
+
+  \indexspace
+
+  \item {accelerate}
+    \subitem {entity.Character}, \hyperpage{21}
+  \item {addEnemy}
+    \subitem {game.World}, \hyperpage{109}
+  \item {addItem}
+    \subitem {entity.Player}, \hyperpage{71}
+  \item {addObject}
+    \subitem {game.World}, \hyperpage{109}
+  \item {aFaire.md}, \hyperpage{115}
+  \item {agility}
+    \subitem {entity.Character}, \hyperpage{27}
+
+  \indexspace
+
+  \item {Body}
+    \subitem {item.armor.Body}, \hyperpage{18}
+  \item {Bow}
+    \subitem {item.weapon.Bow}, \hyperpage{18}
+
+  \indexspace
+
+  \item {changeScene}
+    \subitem {game.Scene}, \hyperpage{78}
+  \item {Character}
+    \subitem {entity.Character}, \hyperpage{20}
+  \item {checkObject}
+    \subitem {entity.Player}, \hyperpage{71}
+  \item {checkPauseScene}
+    \subitem {game.Scene}, \hyperpage{78}
+  \item {checkTileCollision}
+    \subitem {entity.Character}, \hyperpage{21}
+  \item {ChoiceButton}
+    \subitem {UI.ChoiceButton}, \hyperpage{30}
+  \item {collision}
+    \subitem {entity.Entity}, \hyperpage{43}
+  \item {CreationCombatScene}, \hyperpage{13}
+  \item {CreationCombatScene.entity}, \hyperpage{13}
+  \item {CreationCombatScene.entity.PlayerTest}, \hyperpage{73}
+    \subitem {PlayerTest}, \hyperpage{73}
+    \subitem {update}, \hyperpage{74}
+  \item {CreationCombatScene.game}, \hyperpage{13}
+  \item {CreationCombatScene.game.Window}, \hyperpage{101}
+    \subitem {FPS}, \hyperpage{103}
+    \subitem {gameThread}, \hyperpage{103}
+    \subitem {paintComponent}, \hyperpage{102}
+    \subitem {run}, \hyperpage{102}
+    \subitem {scene}, \hyperpage{103}
+    \subitem {screenHeight}, \hyperpage{103}
+    \subitem {screenWidth}, \hyperpage{104}
+    \subitem {startGameThread}, \hyperpage{102}
+    \subitem {update}, \hyperpage{103}
+    \subitem {Window}, \hyperpage{102}
+  \item {CreationCombatScene.Main}, \hyperpage{62}
+
+  \indexspace
+
+  \item {decelerate}
+    \subitem {entity.Character}, \hyperpage{22}
+  \item {defense}
+    \subitem {entity.Character}, \hyperpage{27}
+  \item {destroySelf}
+    \subitem {entity.props.Props}, \hyperpage{76}
+  \item {dirX}
+    \subitem {entity.Character}, \hyperpage{28}
+  \item {dirY}
+    \subitem {entity.Character}, \hyperpage{28}
+  \item {downPressed}
+    \subitem {main.KeyHandler}, \hyperpage{60}
+  \item {draw}
+    \subitem {entity.props.Props}, \hyperpage{76}
+    \subitem {game.FightScene}, \hyperpage{47}
+    \subitem {game.Scene}, \hyperpage{79}
+    \subitem {game.World}, \hyperpage{110}
+    \subitem {tiles.Tile}, \hyperpage{89}
+    \subitem {tiles.TileManager}, \hyperpage{96}
+    \subitem {UI.ChoiceButton}, \hyperpage{30}
+    \subitem {UI.HUD}, \hyperpage{55}
+    \subitem {UI.Textbox}, \hyperpage{85}
+  \item {drawInFight}
+    \subitem {entity.Character}, \hyperpage{22}
+  \item {drawInWorld}
+    \subitem {entity.Character}, \hyperpage{23}
+  \item {dt}
+    \subitem {game.Scene}, \hyperpage{80}
+
+  \indexspace
+
+  \item {enemies}
+    \subitem {game.World}, \hyperpage{112}
+  \item {Enemy}
+    \subitem {entity.Enemy}, \hyperpage{35}
+  \item {enemy}
+    \subitem {game.FightScene}, \hyperpage{48}
+  \item {Entity}
+    \subitem {entity.Entity}, \hyperpage{38}
+  \item {entity}, \hyperpage{13}
+  \item {entity.Character}, \hyperpage{19}
+    \subitem {\_idle\_down}, \hyperpage{26}
+    \subitem {\_idle\_left}, \hyperpage{26}
+    \subitem {\_idle\_right}, \hyperpage{26}
+    \subitem {\_idle\_up}, \hyperpage{26}
+    \subitem {\_walk\_down}, \hyperpage{27}
+    \subitem {\_walk\_left}, \hyperpage{27}
+    \subitem {\_walk\_right}, \hyperpage{27}
+    \subitem {\_walk\_up}, \hyperpage{27}
+    \subitem {accelerate}, \hyperpage{21}
+    \subitem {agility}, \hyperpage{27}
+    \subitem {Character}, \hyperpage{20}
+    \subitem {checkTileCollision}, \hyperpage{21}
+    \subitem {decelerate}, \hyperpage{22}
+    \subitem {defense}, \hyperpage{27}
+    \subitem {dirX}, \hyperpage{28}
+    \subitem {dirY}, \hyperpage{28}
+    \subitem {drawInFight}, \hyperpage{22}
+    \subitem {drawInWorld}, \hyperpage{23}
+    \subitem {facing}, \hyperpage{28}
+    \subitem {hasKey}, \hyperpage{28}
+    \subitem {health}, \hyperpage{28}
+    \subitem {initiative}, \hyperpage{28}
+    \subitem {loadTextures}, \hyperpage{24}
+    \subitem {mana}, \hyperpage{29}
+    \subitem {move}, \hyperpage{24}
+    \subitem {playerInterraction}, \hyperpage{25}
+    \subitem {speed}, \hyperpage{29}
+    \subitem {strength}, \hyperpage{29}
+    \subitem {update}, \hyperpage{25}
+  \item {entity.Enemy}, \hyperpage{34}
+    \subitem {\_xpRate}, \hyperpage{37}
+    \subitem {Enemy}, \hyperpage{35}
+    \subitem {name}, \hyperpage{37}
+    \subitem {playerInterraction}, \hyperpage{35}
+    \subitem {touchingPlayer}, \hyperpage{36}
+    \subitem {update}, \hyperpage{36}
+  \item {entity.Entity}, \hyperpage{37}
+    \subitem {\_spriteCnt}, \hyperpage{42}
+    \subitem {\_spriteCntMax}, \hyperpage{42}
+    \subitem {\_spriteSpeed}, \hyperpage{42}
+    \subitem {\_spriteUpdater}, \hyperpage{43}
+    \subitem {collision}, \hyperpage{43}
+    \subitem {Entity}, \hyperpage{38}
+    \subitem {hitbox}, \hyperpage{43}
+    \subitem {loadTextures}, \hyperpage{40}
+    \subitem {name}, \hyperpage{43}
+    \subitem {playerInterraction}, \hyperpage{40}
+    \subitem {update}, \hyperpage{40}
+    \subitem {updateFrames}, \hyperpage{42}
+    \subitem {worldX}, \hyperpage{43}
+    \subitem {worldY}, \hyperpage{43}
+  \item {entity.EntitySetter}, \hyperpage{44}
+    \subitem {EntitySetter}, \hyperpage{44}
+    \subitem {setEnemies}, \hyperpage{45}
+    \subitem {setObject}, \hyperpage{45}
+    \subitem {world}, \hyperpage{45}
+  \item {entity.Player}, \hyperpage{69}
+    \subitem {addItem}, \hyperpage{71}
+    \subitem {checkObject}, \hyperpage{71}
+    \subitem {hasKey}, \hyperpage{73}
+    \subitem {pickUpObject}, \hyperpage{71}
+    \subitem {Player}, \hyperpage{70}
+    \subitem {update}, \hyperpage{72}
+  \item {entity.props}, \hyperpage{14}
+  \item {entity.props.OBJ\_Chest}, \hyperpage{65}
+    \subitem {OBJ\_Chest}, \hyperpage{65}
+    \subitem {playerInterraction}, \hyperpage{66}
+  \item {entity.props.OBJ\_Door}, \hyperpage{66}
+    \subitem {OBJ\_Door}, \hyperpage{67}
+    \subitem {playerInterraction}, \hyperpage{67}
+  \item {entity.props.OBJ\_Key}, \hyperpage{68}
+    \subitem {OBJ\_Key}, \hyperpage{68}
+    \subitem {playerInterraction}, \hyperpage{69}
+  \item {entity.props.Props}, \hyperpage{74}
+    \subitem {destroySelf}, \hyperpage{76}
+    \subitem {draw}, \hyperpage{76}
+    \subitem {getCollision}, \hyperpage{76}
+    \subitem {image}, \hyperpage{77}
+    \subitem {loadTextures}, \hyperpage{77}
+    \subitem {Props}, \hyperpage{75}
+  \item {EntitySetter}
+    \subitem {entity.EntitySetter}, \hyperpage{44}
+  \item {entitySetter}
+    \subitem {game.World}, \hyperpage{113}
+  \item {escPressed}
+    \subitem {main.KeyHandler}, \hyperpage{60}
+
+  \indexspace
+
+  \item {facing}
+    \subitem {entity.Character}, \hyperpage{28}
+  \item {FGHT\_entityScreenSize}
+    \subitem {game.Const}, \hyperpage{32}
+  \item {FIGHT}
+    \subitem {game.Scene.State}, \hyperpage{83}
+    \subitem {UI.HUD.MenuType}, \hyperpage{64}
+  \item {FIGHTING}
+    \subitem {game.FightScene.FightState}, \hyperpage{49}
+  \item {FightScene}
+    \subitem {game.FightScene}, \hyperpage{46}
+  \item {Foot}
+    \subitem {item.armor.Foot}, \hyperpage{50}
+  \item {FPS}
+    \subitem {CreationCombatScene.game.Window}, \hyperpage{103}
+
+  \indexspace
+
+  \item {game}, \hyperpage{14}
+  \item {game.Const}, \hyperpage{32}
+    \subitem {FGHT\_entityScreenSize}, \hyperpage{32}
+    \subitem {nbFloorTextures}, \hyperpage{32}
+    \subitem {nbTopTextures}, \hyperpage{32}
+    \subitem {WDW\_height}, \hyperpage{32}
+    \subitem {WDW\_width}, \hyperpage{33}
+    \subitem {WRLD\_entityScreenSize}, \hyperpage{33}
+    \subitem {WRLD\_maxCol}, \hyperpage{33}
+    \subitem {WRLD\_maxRow}, \hyperpage{33}
+    \subitem {WRLD\_scale}, \hyperpage{33}
+    \subitem {WRLD\_tileScreenSize}, \hyperpage{33}
+    \subitem {WRLD\_tileSize}, \hyperpage{34}
+  \item {game.FightScene}, \hyperpage{46}
+    \subitem {draw}, \hyperpage{47}
+    \subitem {enemy}, \hyperpage{48}
+    \subitem {FightScene}, \hyperpage{46}
+    \subitem {killEnemy}, \hyperpage{47}
+    \subitem {menu}, \hyperpage{48}
+    \subitem {player}, \hyperpage{48}
+    \subitem {state}, \hyperpage{48}
+    \subitem {update}, \hyperpage{47}
+  \item {game.FightScene.FightState}, \hyperpage{49}
+    \subitem {FIGHTING}, \hyperpage{49}
+    \subitem {LOST}, \hyperpage{49}
+    \subitem {WON}, \hyperpage{49}
+  \item {game.Scene}, \hyperpage{77}
+    \subitem {\_lastState}, \hyperpage{80}
+    \subitem {changeScene}, \hyperpage{78}
+    \subitem {checkPauseScene}, \hyperpage{78}
+    \subitem {draw}, \hyperpage{79}
+    \subitem {dt}, \hyperpage{80}
+    \subitem {getdt}, \hyperpage{80}
+    \subitem {keyH}, \hyperpage{80}
+    \subitem {menu}, \hyperpage{81}
+    \subitem {state}, \hyperpage{81}
+    \subitem {update}, \hyperpage{80}
+  \item {game.Scene.State}, \hyperpage{82}
+    \subitem {FIGHT}, \hyperpage{83}
+    \subitem {MENU}, \hyperpage{83}
+    \subitem {PAUSE}, \hyperpage{83}
+    \subitem {WORLD}, \hyperpage{83}
+  \item {game.Window}, \hyperpage{104}
+    \subitem {\_FPS}, \hyperpage{107}
+    \subitem {gameThread}, \hyperpage{107}
+    \subitem {paintComponent}, \hyperpage{105}
+    \subitem {run}, \hyperpage{106}
+    \subitem {scene}, \hyperpage{107}
+    \subitem {screenHeight}, \hyperpage{107}
+    \subitem {screenWidth}, \hyperpage{108}
+    \subitem {startGameThread}, \hyperpage{106}
+    \subitem {update}, \hyperpage{106}
+    \subitem {Window}, \hyperpage{105}
+    \subitem {world}, \hyperpage{108}
+  \item {game.World}, \hyperpage{108}
+    \subitem {\_currfight}, \hyperpage{112}
+    \subitem {\_instance}, \hyperpage{112}
+    \subitem {addEnemy}, \hyperpage{109}
+    \subitem {addObject}, \hyperpage{109}
+    \subitem {draw}, \hyperpage{110}
+    \subitem {enemies}, \hyperpage{112}
+    \subitem {entitySetter}, \hyperpage{113}
+    \subitem {getWorld}, \hyperpage{111}
+    \subitem {objMap}, \hyperpage{113}
+    \subitem {player}, \hyperpage{113}
+    \subitem {setupGame}, \hyperpage{111}
+    \subitem {tileManager}, \hyperpage{113}
+    \subitem {update}, \hyperpage{111}
+  \item {gameThread}
+    \subitem {CreationCombatScene.game.Window}, \hyperpage{103}
+    \subitem {game.Window}, \hyperpage{107}
+  \item {generateArmor}
+    \subitem {item.Generator}, \hyperpage{51}
+  \item {generateItem}
+    \subitem {item.Generator}, \hyperpage{51}
+  \item {generatePotion}
+    \subitem {item.Generator}, \hyperpage{51}
+  \item {generateWeapon}
+    \subitem {item.Generator}, \hyperpage{51}
+  \item {getCollision}
+    \subitem {entity.props.Props}, \hyperpage{76}
+    \subitem {tiles.Tile}, \hyperpage{90}
+  \item {getdt}
+    \subitem {game.Scene}, \hyperpage{80}
+  \item {getInstance}
+    \subitem {main.KeyHandler}, \hyperpage{58}
+  \item {getPos}
+    \subitem {tiles.Tile}, \hyperpage{90}
+  \item {getTile}
+    \subitem {tiles.TileManager}, \hyperpage{97}
+  \item {getWorld}
+    \subitem {game.World}, \hyperpage{111}
+
+  \indexspace
+
+  \item {hasKey}
+    \subitem {entity.Character}, \hyperpage{28}
+    \subitem {entity.Player}, \hyperpage{73}
+  \item {Head}
+    \subitem {item.armor.Head}, \hyperpage{52}
+  \item {health}
+    \subitem {entity.Character}, \hyperpage{28}
+  \item {HealthPotion}
+    \subitem {item.potion.HealthPotion}, \hyperpage{53}
+  \item {height}
+    \subitem {UI.ChoiceButton}, \hyperpage{31}
+  \item {hitbox}
+    \subitem {entity.Entity}, \hyperpage{43}
+  \item {HUD}
+    \subitem {UI.HUD}, \hyperpage{54}
+  \item {HUDHeight}
+    \subitem {UI.HUD}, \hyperpage{56}
+  \item {HUDWidth}
+    \subitem {UI.HUD}, \hyperpage{56}
+
+  \indexspace
+
+  \item {image}
+    \subitem {entity.props.Props}, \hyperpage{77}
+    \subitem {tiles.Tile}, \hyperpage{94}
+  \item {initiative}
+    \subitem {entity.Character}, \hyperpage{28}
+  \item {instance}
+    \subitem {main.KeyHandler}, \hyperpage{60}
+  \item {interactPressed}
+    \subitem {main.KeyHandler}, \hyperpage{60}
+  \item {item}, \hyperpage{14}
+  \item {item.armor}, \hyperpage{15}
+  \item {item.armor.Armor}, \hyperpage{17}
+  \item {item.armor.Body}, \hyperpage{17}
+    \subitem {Body}, \hyperpage{18}
+  \item {item.armor.Foot}, \hyperpage{50}
+    \subitem {Foot}, \hyperpage{50}
+  \item {item.armor.Head}, \hyperpage{52}
+    \subitem {Head}, \hyperpage{52}
+  \item {item.armor.Legs}, \hyperpage{61}
+    \subitem {Legs}, \hyperpage{62}
+  \item {item.Generator}, \hyperpage{50}
+    \subitem {generateArmor}, \hyperpage{51}
+    \subitem {generateItem}, \hyperpage{51}
+    \subitem {generatePotion}, \hyperpage{51}
+    \subitem {generateWeapon}, \hyperpage{51}
+  \item {item.Item}, \hyperpage{57}
+  \item {item.potion}, \hyperpage{15}
+  \item {item.potion.HealthPotion}, \hyperpage{53}
+    \subitem {HealthPotion}, \hyperpage{53}
+  \item {item.potion.ManaPotion}, \hyperpage{63}
+    \subitem {ManaPotion}, \hyperpage{63}
+  \item {item.potion.Potion}, \hyperpage{74}
+  \item {item.potion.SpeedPotion}, \hyperpage{81}
+    \subitem {SpeedPotion}, \hyperpage{81}
+  \item {item.weapon}, \hyperpage{15}
+  \item {item.weapon.Bow}, \hyperpage{18}
+    \subitem {Bow}, \hyperpage{18}
+  \item {item.weapon.Staff}, \hyperpage{82}
+    \subitem {Staff}, \hyperpage{82}
+  \item {item.weapon.Sword}, \hyperpage{84}
+    \subitem {Sword}, \hyperpage{84}
+  \item {item.weapon.Weapon}, \hyperpage{101}
+
+  \indexspace
+
+  \item {keyH}
+    \subitem {game.Scene}, \hyperpage{80}
+  \item {KeyHandler}
+    \subitem {main.KeyHandler}, \hyperpage{58}
+  \item {keyPressed}
+    \subitem {main.KeyHandler}, \hyperpage{59}
+  \item {keyReleased}
+    \subitem {main.KeyHandler}, \hyperpage{59}
+  \item {keyTyped}
+    \subitem {main.KeyHandler}, \hyperpage{60}
+  \item {killEnemy}
+    \subitem {game.FightScene}, \hyperpage{47}
+
+  \indexspace
+
+  \item {leftPressed}
+    \subitem {main.KeyHandler}, \hyperpage{61}
+  \item {Legs}
+    \subitem {item.armor.Legs}, \hyperpage{62}
+  \item {loadFont}
+    \subitem {UI.Textbox}, \hyperpage{86}
+  \item {loadMap}
+    \subitem {tiles.TileManager}, \hyperpage{97}
+  \item {loadTexture}
+    \subitem {UI.ChoiceButton}, \hyperpage{30}
+  \item {loadTextures}
+    \subitem {entity.Character}, \hyperpage{24}
+    \subitem {entity.Entity}, \hyperpage{40}
+    \subitem {entity.props.Props}, \hyperpage{77}
+    \subitem {tiles.Tile}, \hyperpage{90}
+    \subitem {tiles.TileManager}, \hyperpage{98}
+  \item {LOST}
+    \subitem {game.FightScene.FightState}, \hyperpage{49}
+
+  \indexspace
+
+  \item {main}, \hyperpage{15}
+    \subitem {main.Main}, \hyperpage{62}
+  \item {main.KeyHandler}, \hyperpage{57}
+    \subitem {downPressed}, \hyperpage{60}
+    \subitem {escPressed}, \hyperpage{60}
+    \subitem {getInstance}, \hyperpage{58}
+    \subitem {instance}, \hyperpage{60}
+    \subitem {interactPressed}, \hyperpage{60}
+    \subitem {KeyHandler}, \hyperpage{58}
+    \subitem {keyPressed}, \hyperpage{59}
+    \subitem {keyReleased}, \hyperpage{59}
+    \subitem {keyTyped}, \hyperpage{60}
+    \subitem {leftPressed}, \hyperpage{61}
+    \subitem {rightPressed}, \hyperpage{61}
+    \subitem {upPressed}, \hyperpage{61}
+  \item {main.Main}, \hyperpage{62}
+    \subitem {main}, \hyperpage{62}
+  \item {mana}
+    \subitem {entity.Character}, \hyperpage{29}
+  \item {ManaPotion}
+    \subitem {item.potion.ManaPotion}, \hyperpage{63}
+  \item {MENU}
+    \subitem {game.Scene.State}, \hyperpage{83}
+  \item {menu}
+    \subitem {game.FightScene}, \hyperpage{48}
+    \subitem {game.Scene}, \hyperpage{81}
+  \item {move}
+    \subitem {entity.Character}, \hyperpage{24}
+
+  \indexspace
+
+  \item {name}
+    \subitem {entity.Enemy}, \hyperpage{37}
+    \subitem {entity.Entity}, \hyperpage{43}
+  \item {nbFloorTextures}
+    \subitem {game.Const}, \hyperpage{32}
+  \item {nbTopTextures}
+    \subitem {game.Const}, \hyperpage{32}
+
+  \indexspace
+
+  \item {OBJ\_Chest}
+    \subitem {entity.props.OBJ\_Chest}, \hyperpage{65}
+  \item {OBJ\_Door}
+    \subitem {entity.props.OBJ\_Door}, \hyperpage{67}
+  \item {OBJ\_Key}
+    \subitem {entity.props.OBJ\_Key}, \hyperpage{68}
+  \item {objMap}
+    \subitem {game.World}, \hyperpage{113}
+
+  \indexspace
+
+  \item {paintComponent}
+    \subitem {CreationCombatScene.game.Window}, \hyperpage{102}
+    \subitem {game.Window}, \hyperpage{105}
+  \item {PAUSE}
+    \subitem {game.Scene.State}, \hyperpage{83}
+    \subitem {UI.HUD.MenuType}, \hyperpage{64}
+  \item {pickUpObject}
+    \subitem {entity.Player}, \hyperpage{71}
+  \item {Player}
+    \subitem {entity.Player}, \hyperpage{70}
+  \item {player}
+    \subitem {game.FightScene}, \hyperpage{48}
+    \subitem {game.World}, \hyperpage{113}
+  \item {playerInterraction}
+    \subitem {entity.Character}, \hyperpage{25}
+    \subitem {entity.Enemy}, \hyperpage{35}
+    \subitem {entity.Entity}, \hyperpage{40}
+    \subitem {entity.props.OBJ\_Chest}, \hyperpage{66}
+    \subitem {entity.props.OBJ\_Door}, \hyperpage{67}
+    \subitem {entity.props.OBJ\_Key}, \hyperpage{69}
+  \item {PlayerTest}
+    \subitem {CreationCombatScene.entity.PlayerTest}, \hyperpage{73}
+  \item {Props}
+    \subitem {entity.props.Props}, \hyperpage{75}
+
+  \indexspace
+
+  \item {README.md}, \hyperpage{115}
+  \item {rightPressed}
+    \subitem {main.KeyHandler}, \hyperpage{61}
+  \item {run}
+    \subitem {CreationCombatScene.game.Window}, \hyperpage{102}
+    \subitem {game.Window}, \hyperpage{106}
+
+  \indexspace
+
+  \item {scale}
+    \subitem {tiles.Tile}, \hyperpage{94}
+  \item {scene}
+    \subitem {CreationCombatScene.game.Window}, \hyperpage{103}
+    \subitem {game.Window}, \hyperpage{107}
+  \item {screenHeight}
+    \subitem {CreationCombatScene.game.Window}, \hyperpage{103}
+    \subitem {game.Window}, \hyperpage{107}
+  \item {screenSize}
+    \subitem {tiles.Tile}, \hyperpage{94}
+  \item {screenWidth}
+    \subitem {CreationCombatScene.game.Window}, \hyperpage{104}
+    \subitem {game.Window}, \hyperpage{108}
+  \item {setCollision}
+    \subitem {tiles.Tile}, \hyperpage{91}
+  \item {setEnemies}
+    \subitem {entity.EntitySetter}, \hyperpage{45}
+  \item {setObject}
+    \subitem {entity.EntitySetter}, \hyperpage{45}
+  \item {setPos}
+    \subitem {tiles.Tile}, \hyperpage{91}
+  \item {setSpriteCountAndSpeed}
+    \subitem {tiles.Tile}, \hyperpage{92}
+  \item {setTexture}
+    \subitem {tiles.Tile}, \hyperpage{92}
+  \item {setupGame}
+    \subitem {game.World}, \hyperpage{111}
+  \item {SHOP}
+    \subitem {UI.HUD.MenuType}, \hyperpage{64}
+  \item {speed}
+    \subitem {entity.Character}, \hyperpage{29}
+  \item {SpeedPotion}
+    \subitem {item.potion.SpeedPotion}, \hyperpage{81}
+  \item {spriteCntMax}
+    \subitem {tiles.Tile}, \hyperpage{94}
+  \item {spriteSpeed}
+    \subitem {tiles.Tile}, \hyperpage{94}
+  \item {src/entity/Character.java}, \hyperpage{115, 116}
+  \item {src/entity/Enemy.java}, \hyperpage{118, 119}
+  \item {src/entity/Entity.java}, \hyperpage{119, 120}
+  \item {src/entity/EntitySetter.java}, \hyperpage{121}
+  \item {src/entity/Player.java}, \hyperpage{122}
+  \item {src/entity/props/OBJ\_Chest.java}, \hyperpage{124}
+  \item {src/entity/props/OBJ\_Door.java}, \hyperpage{124, 125}
+  \item {src/entity/props/OBJ\_Key.java}, \hyperpage{125, 126}
+  \item {src/entity/props/Props.java}, \hyperpage{126, 127}
+  \item {src/game/Const.java}, \hyperpage{127, 128}
+  \item {src/game/FightScene.java}, \hyperpage{128, 129}
+  \item {src/game/Scene.java}, \hyperpage{129, 130}
+  \item {src/game/Window.java}, \hyperpage{149, 150}
+  \item {src/game/World.java}, \hyperpage{131}
+  \item {src/item/armor/Armor.java}, \hyperpage{133}
+  \item {src/item/armor/Body.java}, \hyperpage{133}
+  \item {src/item/armor/Foot.java}, \hyperpage{134}
+  \item {src/item/armor/Head.java}, \hyperpage{134}
+  \item {src/item/armor/Legs.java}, \hyperpage{134, 135}
+  \item {src/item/Generator.java}, \hyperpage{135}
+  \item {src/item/Item.java}, \hyperpage{136}
+  \item {src/item/potion/HealthPotion.java}, \hyperpage{136}
+  \item {src/item/potion/ManaPotion.java}, \hyperpage{137}
+  \item {src/item/potion/Potion.java}, \hyperpage{137}
+  \item {src/item/potion/SpeedPotion.java}, \hyperpage{137, 138}
+  \item {src/item/weapon/Bow.java}, \hyperpage{138}
+  \item {src/item/weapon/Staff.java}, \hyperpage{138, 139}
+  \item {src/item/weapon/Sword.java}, \hyperpage{139}
+  \item {src/item/weapon/Weapon.java}, \hyperpage{139}
+  \item {src/main/KeyHandler.java}, \hyperpage{140}
+  \item {src/main/Main.java}, \hyperpage{152, 153}
+  \item {src/tiles/Tile.java}, \hyperpage{141, 142}
+  \item {src/tiles/TileManager.java}, \hyperpage{143, 144}
+  \item {src/UI/ChoiceButton.java}, \hyperpage{145, 146}
+  \item {src/UI/HUD.java}, \hyperpage{146, 147}
+  \item {src/UI/Textbox.java}, \hyperpage{148}
+  \item {Staff}
+    \subitem {item.weapon.Staff}, \hyperpage{82}
+  \item {startGameThread}
+    \subitem {CreationCombatScene.game.Window}, \hyperpage{102}
+    \subitem {game.Window}, \hyperpage{106}
+  \item {state}
+    \subitem {game.FightScene}, \hyperpage{48}
+    \subitem {game.Scene}, \hyperpage{81}
+  \item {storeTexture}
+    \subitem {tiles.TileManager}, \hyperpage{98}
+  \item {strength}
+    \subitem {entity.Character}, \hyperpage{29}
+  \item {Sword}
+    \subitem {item.weapon.Sword}, \hyperpage{84}
+
+  \indexspace
+
+  \item {test/CreationCombatScene/entity/PlayerTest.java}, 
+		\hyperpage{149}
+  \item {test/CreationCombatScene/game/Window.java}, \hyperpage{151}
+  \item {test/CreationCombatScene/Main.java}, \hyperpage{153}
+  \item {Textbox}
+    \subitem {UI.Textbox}, \hyperpage{85}
+  \item {Tile}
+    \subitem {tiles.Tile}, \hyperpage{88}
+  \item {TileManager}
+    \subitem {tiles.TileManager}, \hyperpage{96}
+  \item {tileManager}
+    \subitem {game.World}, \hyperpage{113}
+  \item {tiles}, \hyperpage{16}
+  \item {tiles.Tile}, \hyperpage{87}
+    \subitem {\_isBlocking}, \hyperpage{93}
+    \subitem {\_spriteCnt}, \hyperpage{93}
+    \subitem {\_spriteUpdater}, \hyperpage{93}
+    \subitem {\_worldX}, \hyperpage{93}
+    \subitem {\_worldY}, \hyperpage{93}
+    \subitem {draw}, \hyperpage{89}
+    \subitem {getCollision}, \hyperpage{90}
+    \subitem {getPos}, \hyperpage{90}
+    \subitem {image}, \hyperpage{94}
+    \subitem {loadTextures}, \hyperpage{90}
+    \subitem {scale}, \hyperpage{94}
+    \subitem {screenSize}, \hyperpage{94}
+    \subitem {setCollision}, \hyperpage{91}
+    \subitem {setPos}, \hyperpage{91}
+    \subitem {setSpriteCountAndSpeed}, \hyperpage{92}
+    \subitem {setTexture}, \hyperpage{92}
+    \subitem {spriteCntMax}, \hyperpage{94}
+    \subitem {spriteSpeed}, \hyperpage{94}
+    \subitem {Tile}, \hyperpage{88}
+    \subitem {tileSize}, \hyperpage{94}
+    \subitem {updateFrames}, \hyperpage{92}
+  \item {tiles.TileManager}, \hyperpage{95}
+    \subitem {\_floorMap}, \hyperpage{100}
+    \subitem {\_floorMapTextures}, \hyperpage{100}
+    \subitem {\_topMap}, \hyperpage{100}
+    \subitem {\_topMapTextures}, \hyperpage{100}
+    \subitem {draw}, \hyperpage{96}
+    \subitem {getTile}, \hyperpage{97}
+    \subitem {loadMap}, \hyperpage{97}
+    \subitem {loadTextures}, \hyperpage{98}
+    \subitem {storeTexture}, \hyperpage{98}
+    \subitem {TileManager}, \hyperpage{96}
+    \subitem {update}, \hyperpage{99}
+  \item {tileSize}
+    \subitem {tiles.Tile}, \hyperpage{94}
+  \item {touchingPlayer}
+    \subitem {entity.Enemy}, \hyperpage{36}
+
+  \indexspace
+
+  \item {UI}, \hyperpage{16}
+  \item {UI.ChoiceButton}, \hyperpage{29}
+    \subitem {\_bgTexture}, \hyperpage{31}
+    \subitem {\_textBox}, \hyperpage{31}
+    \subitem {ChoiceButton}, \hyperpage{30}
+    \subitem {draw}, \hyperpage{30}
+    \subitem {height}, \hyperpage{31}
+    \subitem {loadTexture}, \hyperpage{30}
+    \subitem {width}, \hyperpage{31}
+  \item {UI.HUD}, \hyperpage{53}
+    \subitem {\_buttons}, \hyperpage{55}
+    \subitem {\_nbButtons}, \hyperpage{55}
+    \subitem {\_title}, \hyperpage{56}
+    \subitem {\_titleHeight}, \hyperpage{56}
+    \subitem {\_titleWidth}, \hyperpage{56}
+    \subitem {\_type}, \hyperpage{56}
+    \subitem {draw}, \hyperpage{55}
+    \subitem {HUD}, \hyperpage{54}
+    \subitem {HUDHeight}, \hyperpage{56}
+    \subitem {HUDWidth}, \hyperpage{56}
+    \subitem {update}, \hyperpage{55}
+  \item {UI.HUD.MenuType}, \hyperpage{64}
+    \subitem {FIGHT}, \hyperpage{64}
+    \subitem {PAUSE}, \hyperpage{64}
+    \subitem {SHOP}, \hyperpage{64}
+    \subitem {WELCOME}, \hyperpage{65}
+  \item {UI.Textbox}, \hyperpage{84}
+    \subitem {\_color}, \hyperpage{86}
+    \subitem {\_font}, \hyperpage{86}
+    \subitem {\_fontSizeToUse}, \hyperpage{86}
+    \subitem {\_height}, \hyperpage{87}
+    \subitem {\_text}, \hyperpage{87}
+    \subitem {\_width}, \hyperpage{87}
+    \subitem {draw}, \hyperpage{85}
+    \subitem {loadFont}, \hyperpage{86}
+    \subitem {Textbox}, \hyperpage{85}
+  \item {update}
+    \subitem {CreationCombatScene.entity.PlayerTest}, \hyperpage{74}
+    \subitem {CreationCombatScene.game.Window}, \hyperpage{103}
+    \subitem {entity.Character}, \hyperpage{25}
+    \subitem {entity.Enemy}, \hyperpage{36}
+    \subitem {entity.Entity}, \hyperpage{40}
+    \subitem {entity.Player}, \hyperpage{72}
+    \subitem {game.FightScene}, \hyperpage{47}
+    \subitem {game.Scene}, \hyperpage{80}
+    \subitem {game.Window}, \hyperpage{106}
+    \subitem {game.World}, \hyperpage{111}
+    \subitem {tiles.TileManager}, \hyperpage{99}
+    \subitem {UI.HUD}, \hyperpage{55}
+  \item {updateFrames}
+    \subitem {entity.Entity}, \hyperpage{42}
+    \subitem {tiles.Tile}, \hyperpage{92}
+  \item {upPressed}
+    \subitem {main.KeyHandler}, \hyperpage{61}
+
+  \indexspace
+
+  \item {WDW\_height}
+    \subitem {game.Const}, \hyperpage{32}
+  \item {WDW\_width}
+    \subitem {game.Const}, \hyperpage{33}
+  \item {WELCOME}
+    \subitem {UI.HUD.MenuType}, \hyperpage{65}
+  \item {width}
+    \subitem {UI.ChoiceButton}, \hyperpage{31}
+  \item {Window}
+    \subitem {CreationCombatScene.game.Window}, \hyperpage{102}
+    \subitem {game.Window}, \hyperpage{105}
+  \item {WON}
+    \subitem {game.FightScene.FightState}, \hyperpage{49}
+  \item {WORLD}
+    \subitem {game.Scene.State}, \hyperpage{83}
+  \item {world}
+    \subitem {entity.EntitySetter}, \hyperpage{45}
+    \subitem {game.Window}, \hyperpage{108}
+  \item {worldX}
+    \subitem {entity.Entity}, \hyperpage{43}
+  \item {worldY}
+    \subitem {entity.Entity}, \hyperpage{43}
+  \item {WRLD\_entityScreenSize}
+    \subitem {game.Const}, \hyperpage{33}
+  \item {WRLD\_maxCol}
+    \subitem {game.Const}, \hyperpage{33}
+  \item {WRLD\_maxRow}
+    \subitem {game.Const}, \hyperpage{33}
+  \item {WRLD\_scale}
+    \subitem {game.Const}, \hyperpage{33}
+  \item {WRLD\_tileScreenSize}
+    \subitem {game.Const}, \hyperpage{33}
+  \item {WRLD\_tileSize}
+    \subitem {game.Const}, \hyperpage{34}
+
+\end{theindex}

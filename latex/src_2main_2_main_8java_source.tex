@@ -1,0 +1,38 @@
+\hypertarget{src_2main_2_main_8java_source}{}\doxysection{Main.\+java}
+\label{src_2main_2_main_8java_source}\index{src/main/Main.java@{src/main/Main.java}}
+\mbox{\hyperlink{src_2main_2_main_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{src_2main_2_main_8java_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{src_2main_2_main_8java_source_l00006}00006 \textcolor{keyword}{package }main;}
+\DoxyCodeLine{\Hypertarget{src_2main_2_main_8java_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{src_2main_2_main_8java_source_l00008}00008 \textcolor{keyword}{import} javax.swing.*;}
+\DoxyCodeLine{\Hypertarget{src_2main_2_main_8java_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{src_2main_2_main_8java_source_l00010}00010 \textcolor{keyword}{import} \mbox{\hyperlink{namespacegame}{game}}.\mbox{\hyperlink{classgame_1_1_window}{Window}};}
+\DoxyCodeLine{\Hypertarget{src_2main_2_main_8java_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{src_2main_2_main_8java_source_l00016}\mbox{\hyperlink{classmain_1_1_main}{00016}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classmain_1_1_main}{Main}} \{}
+\DoxyCodeLine{\Hypertarget{src_2main_2_main_8java_source_l00022}\mbox{\hyperlink{classmain_1_1_main_a896f71a651b705304693dbfe0cf9ca63}{00022}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classmain_1_1_main_a896f71a651b705304693dbfe0cf9ca63}{main}}(String[] args) \{}
+\DoxyCodeLine{\Hypertarget{src_2main_2_main_8java_source_l00023}00023         \textcolor{comment}{// Create a JFrame (window) for the game}}
+\DoxyCodeLine{\Hypertarget{src_2main_2_main_8java_source_l00024}00024         JFrame windows = \textcolor{keyword}{new} JFrame();}
+\DoxyCodeLine{\Hypertarget{src_2main_2_main_8java_source_l00025}00025         windows.setDefaultCloseOperation(JFrame.EXIT\_ON\_CLOSE);}
+\DoxyCodeLine{\Hypertarget{src_2main_2_main_8java_source_l00026}00026         windows.setResizable(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{src_2main_2_main_8java_source_l00027}00027         windows.setTitle(\textcolor{stringliteral}{"{}2D Adventure"{}});}
+\DoxyCodeLine{\Hypertarget{src_2main_2_main_8java_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{src_2main_2_main_8java_source_l00029}00029         \textcolor{comment}{// Create an instance of the Window class (game window)}}
+\DoxyCodeLine{\Hypertarget{src_2main_2_main_8java_source_l00030}00030         \mbox{\hyperlink{classgame_1_1_window}{Window}} gameWindow = \textcolor{keyword}{new} \mbox{\hyperlink{classgame_1_1_window}{Window}}();}
+\DoxyCodeLine{\Hypertarget{src_2main_2_main_8java_source_l00031}00031         windows.add(gameWindow);}
+\DoxyCodeLine{\Hypertarget{src_2main_2_main_8java_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{src_2main_2_main_8java_source_l00033}00033         \textcolor{comment}{// Pack the components of the window}}
+\DoxyCodeLine{\Hypertarget{src_2main_2_main_8java_source_l00034}00034         windows.pack();}
+\DoxyCodeLine{\Hypertarget{src_2main_2_main_8java_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{src_2main_2_main_8java_source_l00036}00036         \textcolor{comment}{// Set the window to appear at the center of the screen}}
+\DoxyCodeLine{\Hypertarget{src_2main_2_main_8java_source_l00037}00037         windows.setLocationRelativeTo(\textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{src_2main_2_main_8java_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{src_2main_2_main_8java_source_l00039}00039         \textcolor{comment}{// Make the window visible}}
+\DoxyCodeLine{\Hypertarget{src_2main_2_main_8java_source_l00040}00040         windows.setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{src_2main_2_main_8java_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{src_2main_2_main_8java_source_l00042}00042         \textcolor{comment}{// Start the game thread to handle game logic and rendering}}
+\DoxyCodeLine{\Hypertarget{src_2main_2_main_8java_source_l00043}00043         gameWindow.\mbox{\hyperlink{classgame_1_1_window_ad5f928c104ab787fe75f4bf74a5a0c35}{startGameThread}}();}
+\DoxyCodeLine{\Hypertarget{src_2main_2_main_8java_source_l00044}00044     \}}
+\DoxyCodeLine{\Hypertarget{src_2main_2_main_8java_source_l00045}00045 \}}
+
+\end{DoxyCode}

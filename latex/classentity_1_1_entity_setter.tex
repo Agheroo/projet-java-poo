@@ -1,0 +1,173 @@
+\hypertarget{classentity_1_1_entity_setter}{}\doxysection{entity.\+Entity\+Setter Class Reference}
+\label{classentity_1_1_entity_setter}\index{entity.EntitySetter@{entity.EntitySetter}}
+
+
+Responsible for initializing and setting up objects (entities) in the game world.  
+
+
+
+
+Collaboration diagram for entity.\+Entity\+Setter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classentity_1_1_entity_setter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classentity_1_1_entity_setter_a93901281c90174cfd7483ad54164010e}{Entity\+Setter}} (\mbox{\hyperlink{classgame_1_1_world}{World}} \mbox{\hyperlink{classentity_1_1_entity_setter_a434dda9cfe7a6b4a00d4a8d2b186114b}{world}})
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classentity_1_1_entity_setter}{Entity\+Setter}} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classentity_1_1_entity_setter_ac8c3fa3789803b2286d5f5df7a89594e}{set\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Method to set up objects in the game world, such as keys, doors, and chests. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classentity_1_1_entity_setter_a102773a9c4c8ff3b86f7028c568f9746}{set\+Enemies}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Package Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1_world}{World}} \mbox{\hyperlink{classentity_1_1_entity_setter_a434dda9cfe7a6b4a00d4a8d2b186114b}{world}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Responsible for initializing and setting up objects (entities) in the game world. 
+
+Definition at line \mbox{\hyperlink{_entity_setter_8java_source_l00017}{17}} of file \mbox{\hyperlink{_entity_setter_8java_source}{Entity\+Setter.\+java}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classentity_1_1_entity_setter_a93901281c90174cfd7483ad54164010e}\label{classentity_1_1_entity_setter_a93901281c90174cfd7483ad54164010e}} 
+\index{entity.EntitySetter@{entity.EntitySetter}!EntitySetter@{EntitySetter}}
+\index{EntitySetter@{EntitySetter}!entity.EntitySetter@{entity.EntitySetter}}
+\doxysubsubsection{\texorpdfstring{EntitySetter()}{EntitySetter()}}
+{\footnotesize\ttfamily entity.\+Entity\+Setter.\+Entity\+Setter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1_world}{World}}}]{world }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \mbox{\hyperlink{classentity_1_1_entity_setter}{Entity\+Setter}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em world} & The World object representing the game world. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_entity_setter_8java_source_l00024}{24}} of file \mbox{\hyperlink{_entity_setter_8java_source}{Entity\+Setter.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024                                      \{}
+\DoxyCodeLine{00025         this.world = \mbox{\hyperlink{classentity_1_1_entity_setter_a434dda9cfe7a6b4a00d4a8d2b186114b}{world}};}
+\DoxyCodeLine{00026     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classentity_1_1_entity_setter_a102773a9c4c8ff3b86f7028c568f9746}\label{classentity_1_1_entity_setter_a102773a9c4c8ff3b86f7028c568f9746}} 
+\index{entity.EntitySetter@{entity.EntitySetter}!setEnemies@{setEnemies}}
+\index{setEnemies@{setEnemies}!entity.EntitySetter@{entity.EntitySetter}}
+\doxysubsubsection{\texorpdfstring{setEnemies()}{setEnemies()}}
+{\footnotesize\ttfamily void entity.\+Entity\+Setter.\+set\+Enemies (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_entity_setter_8java_source_l00045}{45}} of file \mbox{\hyperlink{_entity_setter_8java_source}{Entity\+Setter.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045                             \{}
+\DoxyCodeLine{00046         Enemy enemy1 = \textcolor{keyword}{new} Enemy(\textcolor{stringliteral}{"{}orc"{}}, 8*\mbox{\hyperlink{classgame_1_1_const}{Const}}.\mbox{\hyperlink{classgame_1_1_const_aa0fc56892a36ffd4a1b39f8fd4fa7b1e}{WRLD\_entityScreenSize}}, 10*\mbox{\hyperlink{classgame_1_1_const}{Const}}.\mbox{\hyperlink{classgame_1_1_const_aa0fc56892a36ffd4a1b39f8fd4fa7b1e}{WRLD\_entityScreenSize}}, 0, 0, 0, \textcolor{stringliteral}{"{}down"{}}, 4, 20);}
+\DoxyCodeLine{00047         \mbox{\hyperlink{classentity_1_1_entity_setter_a434dda9cfe7a6b4a00d4a8d2b186114b}{world}}.\mbox{\hyperlink{classgame_1_1_world_accb9e77e21056039771d52bc5b1cfd31}{addEnemy}}(\textcolor{keyword}{new} Point((\textcolor{keywordtype}{int}) enemy1.worldX, (\textcolor{keywordtype}{int}) enemy1.worldY), enemy1);}
+\DoxyCodeLine{00048         }
+\DoxyCodeLine{00049         Enemy enemy2 = \textcolor{keyword}{new} Enemy(\textcolor{stringliteral}{"{}orc"{}}, 16*\mbox{\hyperlink{classgame_1_1_const}{Const}}.\mbox{\hyperlink{classgame_1_1_const_aa0fc56892a36ffd4a1b39f8fd4fa7b1e}{WRLD\_entityScreenSize}}, 10*\mbox{\hyperlink{classgame_1_1_const}{Const}}.\mbox{\hyperlink{classgame_1_1_const_aa0fc56892a36ffd4a1b39f8fd4fa7b1e}{WRLD\_entityScreenSize}}, 0, 0, 0, \textcolor{stringliteral}{"{}up"{}}, 4, 20);}
+\DoxyCodeLine{00050         \mbox{\hyperlink{classentity_1_1_entity_setter_a434dda9cfe7a6b4a00d4a8d2b186114b}{world}}.\mbox{\hyperlink{classgame_1_1_world_accb9e77e21056039771d52bc5b1cfd31}{addEnemy}}(\textcolor{keyword}{new} Point((\textcolor{keywordtype}{int}) enemy2.worldX, (\textcolor{keywordtype}{int}) enemy2.worldY), enemy2);}
+\DoxyCodeLine{00051         }
+\DoxyCodeLine{00052     \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classentity_1_1_entity_setter_a102773a9c4c8ff3b86f7028c568f9746_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classentity_1_1_entity_setter_a102773a9c4c8ff3b86f7028c568f9746_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classentity_1_1_entity_setter_ac8c3fa3789803b2286d5f5df7a89594e}\label{classentity_1_1_entity_setter_ac8c3fa3789803b2286d5f5df7a89594e}} 
+\index{entity.EntitySetter@{entity.EntitySetter}!setObject@{setObject}}
+\index{setObject@{setObject}!entity.EntitySetter@{entity.EntitySetter}}
+\doxysubsubsection{\texorpdfstring{setObject()}{setObject()}}
+{\footnotesize\ttfamily void entity.\+Entity\+Setter.\+set\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method to set up objects in the game world, such as keys, doors, and chests. 
+
+
+
+Definition at line \mbox{\hyperlink{_entity_setter_8java_source_l00031}{31}} of file \mbox{\hyperlink{_entity_setter_8java_source}{Entity\+Setter.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031                             \{}
+\DoxyCodeLine{00032         \textcolor{comment}{// Create and set up a Key object at a specific location in the world}}
+\DoxyCodeLine{00033         \mbox{\hyperlink{classentity_1_1props_1_1_props}{Props}} key = \textcolor{keyword}{new} \mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___key}{OBJ\_Key}}(13 * \mbox{\hyperlink{classgame_1_1_const}{Const}}.\mbox{\hyperlink{classgame_1_1_const_aa0fc56892a36ffd4a1b39f8fd4fa7b1e}{WRLD\_entityScreenSize}},13 * \mbox{\hyperlink{classgame_1_1_const}{Const}}.\mbox{\hyperlink{classgame_1_1_const_aa0fc56892a36ffd4a1b39f8fd4fa7b1e}{WRLD\_entityScreenSize}});}
+\DoxyCodeLine{00034         \mbox{\hyperlink{classentity_1_1_entity_setter_a434dda9cfe7a6b4a00d4a8d2b186114b}{world}}.\mbox{\hyperlink{classgame_1_1_world_a65d2a74c48359e2f77648d1433f84104}{addObject}}(\textcolor{keyword}{new} Point((\textcolor{keywordtype}{int}) key.\mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}}, (\textcolor{keywordtype}{int}) key.\mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}}), key);}
+\DoxyCodeLine{00035 }
+\DoxyCodeLine{00036         \textcolor{comment}{// Create and set up a Door object at a specific location in the world}}
+\DoxyCodeLine{00037         \mbox{\hyperlink{classentity_1_1props_1_1_props}{Props}} door = \textcolor{keyword}{new} \mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___door}{OBJ\_Door}}(14 * \mbox{\hyperlink{classgame_1_1_const}{Const}}.\mbox{\hyperlink{classgame_1_1_const_aa0fc56892a36ffd4a1b39f8fd4fa7b1e}{WRLD\_entityScreenSize}},13 * \mbox{\hyperlink{classgame_1_1_const}{Const}}.\mbox{\hyperlink{classgame_1_1_const_aa0fc56892a36ffd4a1b39f8fd4fa7b1e}{WRLD\_entityScreenSize}});}
+\DoxyCodeLine{00038         \mbox{\hyperlink{classentity_1_1_entity_setter_a434dda9cfe7a6b4a00d4a8d2b186114b}{world}}.\mbox{\hyperlink{classgame_1_1_world_a65d2a74c48359e2f77648d1433f84104}{addObject}}(\textcolor{keyword}{new} Point((\textcolor{keywordtype}{int}) door.\mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}}, (\textcolor{keywordtype}{int}) door.\mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}}), door);}
+\DoxyCodeLine{00039 }
+\DoxyCodeLine{00040         \textcolor{comment}{// Create and set up a Chest object at a specific location in the world}}
+\DoxyCodeLine{00041         \mbox{\hyperlink{classentity_1_1props_1_1_props}{Props}} chest = \textcolor{keyword}{new} \mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___chest}{OBJ\_Chest}}(15 * \mbox{\hyperlink{classgame_1_1_const}{Const}}.\mbox{\hyperlink{classgame_1_1_const_aa0fc56892a36ffd4a1b39f8fd4fa7b1e}{WRLD\_entityScreenSize}},13 * \mbox{\hyperlink{classgame_1_1_const}{Const}}.\mbox{\hyperlink{classgame_1_1_const_aa0fc56892a36ffd4a1b39f8fd4fa7b1e}{WRLD\_entityScreenSize}});}
+\DoxyCodeLine{00042         \mbox{\hyperlink{classentity_1_1_entity_setter_a434dda9cfe7a6b4a00d4a8d2b186114b}{world}}.\mbox{\hyperlink{classgame_1_1_world_a65d2a74c48359e2f77648d1433f84104}{addObject}}(\textcolor{keyword}{new} Point((\textcolor{keywordtype}{int}) chest.\mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}}, (\textcolor{keywordtype}{int}) chest.\mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}}), chest);}
+\DoxyCodeLine{00043     \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classentity_1_1_entity_setter_ac8c3fa3789803b2286d5f5df7a89594e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classentity_1_1_entity_setter_ac8c3fa3789803b2286d5f5df7a89594e_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classentity_1_1_entity_setter_a434dda9cfe7a6b4a00d4a8d2b186114b}\label{classentity_1_1_entity_setter_a434dda9cfe7a6b4a00d4a8d2b186114b}} 
+\index{entity.EntitySetter@{entity.EntitySetter}!world@{world}}
+\index{world@{world}!entity.EntitySetter@{entity.EntitySetter}}
+\doxysubsubsection{\texorpdfstring{world}{world}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1_world}{World}} entity.\+Entity\+Setter.\+world\hspace{0.3cm}{\ttfamily [package]}}
+
+
+
+Definition at line \mbox{\hyperlink{_entity_setter_8java_source_l00018}{18}} of file \mbox{\hyperlink{_entity_setter_8java_source}{Entity\+Setter.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/entity/\mbox{\hyperlink{_entity_setter_8java}{Entity\+Setter.\+java}}\end{DoxyCompactItemize}

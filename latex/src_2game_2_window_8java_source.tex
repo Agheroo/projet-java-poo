@@ -1,0 +1,85 @@
+\hypertarget{src_2game_2_window_8java_source}{}\doxysection{Window.\+java}
+\label{src_2game_2_window_8java_source}\index{src/game/Window.java@{src/game/Window.java}}
+\mbox{\hyperlink{src_2game_2_window_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00006}00006 \textcolor{keyword}{package }game;}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00008}00008 \textcolor{keyword}{import} javax.swing.JPanel;}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00010}00010 \textcolor{keyword}{import} \mbox{\hyperlink{namespacegame}{game}}.\mbox{\hyperlink{classgame_1_1_scene}{Scene}}.\mbox{\hyperlink{enumgame_1_1_scene_1_1_state}{State}};}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00012}00012 \textcolor{keyword}{import} java.awt.*;}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00020}\mbox{\hyperlink{classgame_1_1_window}{00020}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classgame_1_1_window}{Window}} \textcolor{keyword}{extends} JPanel implements Runnable \{}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00024}\mbox{\hyperlink{classgame_1_1_window_ad1d2c0346ccb63c4bea37fe83afcbf2f}{00024}}     \textcolor{keyword}{public} \mbox{\hyperlink{classgame_1_1_scene}{Scene}} \mbox{\hyperlink{classgame_1_1_window_ad1d2c0346ccb63c4bea37fe83afcbf2f}{scene}};}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00029}\mbox{\hyperlink{classgame_1_1_window_a0e28f232e8a94e6153d99e929116b114}{00029}}     \textcolor{keyword}{public} \textcolor{keyword}{final} \textcolor{keywordtype}{int} \mbox{\hyperlink{classgame_1_1_window_a0e28f232e8a94e6153d99e929116b114}{screenWidth}} = 800;}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00034}\mbox{\hyperlink{classgame_1_1_window_a3213c726d8ce3916135a7131403e4a3d}{00034}}     \textcolor{keyword}{public} \textcolor{keyword}{final} \textcolor{keywordtype}{int} \mbox{\hyperlink{classgame_1_1_window_a3213c726d8ce3916135a7131403e4a3d}{screenHeight}} = 600;}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00039}\mbox{\hyperlink{classgame_1_1_window_abd35f90a80ca8a81cc436752ccfdf4c6}{00039}}     \mbox{\hyperlink{classgame_1_1_world}{World}} \mbox{\hyperlink{classgame_1_1_window_abd35f90a80ca8a81cc436752ccfdf4c6}{world}} = \mbox{\hyperlink{classgame_1_1_world}{World}}.\mbox{\hyperlink{classgame_1_1_world_a0e40ca86573cf45d858cc8e529865649}{getWorld}}();}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00044}\mbox{\hyperlink{classgame_1_1_window_abd14adef078250da89662ead03bb8e5a}{00044}}     \textcolor{keyword}{private} \textcolor{keyword}{final} \textcolor{keywordtype}{int} \mbox{\hyperlink{classgame_1_1_window_abd14adef078250da89662ead03bb8e5a}{\_FPS}} = 60;}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00049}\mbox{\hyperlink{classgame_1_1_window_a7e14c4c91df812b2efff8668ec7e0ba2}{00049}}     Thread \mbox{\hyperlink{classgame_1_1_window_a7e14c4c91df812b2efff8668ec7e0ba2}{gameThread}};}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00054}\mbox{\hyperlink{classgame_1_1_window_a98e156c2148852f07cf8eef903d4b175}{00054}}     \textcolor{keyword}{public} \mbox{\hyperlink{classgame_1_1_window_a98e156c2148852f07cf8eef903d4b175}{Window}}() \{}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00055}00055         \mbox{\hyperlink{classgame_1_1_window_ad1d2c0346ccb63c4bea37fe83afcbf2f}{scene}} = \mbox{\hyperlink{classgame_1_1_world}{World}}.\mbox{\hyperlink{classgame_1_1_world_a0e40ca86573cf45d858cc8e529865649}{getWorld}}();}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00056}00056         this.setPreferredSize(\textcolor{keyword}{new} Dimension(\mbox{\hyperlink{classgame_1_1_window_a0e28f232e8a94e6153d99e929116b114}{screenWidth}}, \mbox{\hyperlink{classgame_1_1_window_a3213c726d8ce3916135a7131403e4a3d}{screenHeight}}));}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00057}00057         this.setBackground(Color.black);}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00058}00058         this.setDoubleBuffered(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00059}00059         this.addKeyListener(\mbox{\hyperlink{classgame_1_1_window_ad1d2c0346ccb63c4bea37fe83afcbf2f}{scene}}.\mbox{\hyperlink{classgame_1_1_scene_a2bbc8cb5064aaa5cc1ed0ec8950f4a58}{keyH}});}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00060}00060         this.setFocusable(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00061}00061         \mbox{\hyperlink{classgame_1_1_window_abd35f90a80ca8a81cc436752ccfdf4c6}{world}}.\mbox{\hyperlink{classgame_1_1_world_acb4aa37dbc10eab1bd90d5c9c24e44db}{setupGame}}(); \textcolor{comment}{// Creation of instance setter}}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00062}00062     \}}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00067}00067     @Override}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00068}\mbox{\hyperlink{classgame_1_1_window_acb08b17fe8fb90e42db6e58164ed5421}{00068}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classgame_1_1_window_acb08b17fe8fb90e42db6e58164ed5421}{run}}() \{}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00069}00069         \textcolor{keywordtype}{double} drawInterval = 10e9 / \mbox{\hyperlink{classgame_1_1_window_abd14adef078250da89662ead03bb8e5a}{\_FPS}};}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00070}00070         \textcolor{keywordtype}{long} lastTime = System.nanoTime();}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00071}00071         \textcolor{keywordtype}{long} currentTime;}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00073}00073         \textcolor{keywordflow}{while} (\mbox{\hyperlink{classgame_1_1_window_a7e14c4c91df812b2efff8668ec7e0ba2}{gameThread}} != \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00074}00074             currentTime = System.nanoTime();}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00075}00075 }
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00076}00076             Scene.dt += (currentTime -\/ lastTime) / drawInterval;}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00077}00077             lastTime = currentTime;}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00079}00079             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classgame_1_1_scene}{Scene}}.\mbox{\hyperlink{classgame_1_1_scene_ae2b7be4c9099875e858f88458b7d4a1d}{dt}} > 0.1) \{}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00080}00080                 \mbox{\hyperlink{classgame_1_1_window_a41cef38f9afc72fa1b4a1dfdc2bf9b92}{update}}(); \textcolor{comment}{// update() method for window both updates the world and repaints the components of it}}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00081}00081                 Scene.dt -\/= 0.05;}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00082}00082             \}}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00083}00083         \}}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00084}00084     \}}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00089}\mbox{\hyperlink{classgame_1_1_window_ad5f928c104ab787fe75f4bf74a5a0c35}{00089}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classgame_1_1_window_ad5f928c104ab787fe75f4bf74a5a0c35}{startGameThread}}() \{}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00090}00090         \mbox{\hyperlink{classgame_1_1_window_a7e14c4c91df812b2efff8668ec7e0ba2}{gameThread}} = \textcolor{keyword}{new} Thread(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00091}00091         \mbox{\hyperlink{classgame_1_1_window_a7e14c4c91df812b2efff8668ec7e0ba2}{gameThread}}.start();}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00092}00092     \}}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00097}\mbox{\hyperlink{classgame_1_1_window_a41cef38f9afc72fa1b4a1dfdc2bf9b92}{00097}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classgame_1_1_window_a41cef38f9afc72fa1b4a1dfdc2bf9b92}{update}}() \{}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00098}00098         \mbox{\hyperlink{classgame_1_1_window_ad1d2c0346ccb63c4bea37fe83afcbf2f}{scene}}.\mbox{\hyperlink{classgame_1_1_scene_a6b61e8f2533a2ba76c543bbd00d989a2}{update}}(); \textcolor{comment}{// Updates the whole world's props \& animations}}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00099}00099         repaint();}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00100}00100     \}}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00101}00101 }
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00106}00106     @Override}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00107}\mbox{\hyperlink{classgame_1_1_window_a5096ae95c1e62bac2005e73621cdb41c}{00107}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classgame_1_1_window_a5096ae95c1e62bac2005e73621cdb41c}{paintComponent}}(Graphics g) \{}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00108}00108         super.paintComponent(g);}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00109}00109 }
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00110}00110         Graphics2D g2 = (Graphics2D) g;}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00111}00111 }
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00112}00112         \mbox{\hyperlink{classgame_1_1_window_ad1d2c0346ccb63c4bea37fe83afcbf2f}{scene}}.\mbox{\hyperlink{classgame_1_1_scene_aef53d2ecf085388a16020032121e46dc}{draw}}(g2, \mbox{\hyperlink{classgame_1_1_window_a0e28f232e8a94e6153d99e929116b114}{screenWidth}}, \mbox{\hyperlink{classgame_1_1_window_a3213c726d8ce3916135a7131403e4a3d}{screenHeight}});}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00113}00113 }
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00114}00114         \textcolor{comment}{// Darkens the scene on the background to let the menu on top}}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00115}00115         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classgame_1_1_window_ad1d2c0346ccb63c4bea37fe83afcbf2f}{scene}}.\mbox{\hyperlink{classgame_1_1_scene_afa46982ec00ac703190b0642d8a3c4be}{state}} == \mbox{\hyperlink{enumgame_1_1_scene_1_1_state}{State}}.\mbox{\hyperlink{enumgame_1_1_scene_1_1_state_a326c78372f2da432b10cdf952e5984e7}{PAUSE}}) \{}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00116}00116             g2.setColor(\textcolor{keyword}{new} Color(0, 0, 0, 180));}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00117}00117             g2.fillRect(0, 0, \mbox{\hyperlink{classgame_1_1_window_a0e28f232e8a94e6153d99e929116b114}{screenWidth}}, \mbox{\hyperlink{classgame_1_1_window_a3213c726d8ce3916135a7131403e4a3d}{screenHeight}});}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00118}00118             \mbox{\hyperlink{classgame_1_1_window_ad1d2c0346ccb63c4bea37fe83afcbf2f}{scene}}.\mbox{\hyperlink{classgame_1_1_scene_abfeaf3d13d7ff744014bcad7f4790501}{menu}}.\mbox{\hyperlink{class_u_i_1_1_h_u_d_a290720935a1960ce8159eae9e7a535fa}{draw}}(g2, \mbox{\hyperlink{classgame_1_1_window_a0e28f232e8a94e6153d99e929116b114}{screenWidth}}, \mbox{\hyperlink{classgame_1_1_window_a3213c726d8ce3916135a7131403e4a3d}{screenHeight}});}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00119}00119         \}}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00120}00120 }
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00121}00121         g2.dispose();}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00122}00122     \}}
+\DoxyCodeLine{\Hypertarget{src_2game_2_window_8java_source_l00123}00123 \}}
+
+\end{DoxyCode}

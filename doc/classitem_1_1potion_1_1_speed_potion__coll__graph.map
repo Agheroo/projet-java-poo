@@ -1,0 +1,5 @@
+<map id="item.potion.SpeedPotion" name="item.potion.SpeedPotion">
+<area shape="rect" id="node1" title=" " alt="" coords="5,256,188,333"/>
+<area shape="rect" id="node2" href="$classitem_1_1potion_1_1_potion.html" title=" " alt="" coords="25,131,168,208"/>
+<area shape="rect" id="node3" href="$classitem_1_1_item.html" title=" " alt="" coords="53,5,140,83"/>
+</map>

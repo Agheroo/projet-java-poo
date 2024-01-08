@@ -1,0 +1,24 @@
+digraph "entity.props.OBJ_Chest.interagitAvec"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="entity.props.OBJ_Chest.interagitAvec",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="entity.Player.addItem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classentity_1_1_player.html#a91613b74f81278a4bd845bef223b0b5f",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="entity.props.Props.destructor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classentity_1_1props_1_1_props.html#af5b4763272001b71fac74759b7ed6c3d",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="game.World.getWorld",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgame_1_1_world.html#a0e40ca86573cf45d858cc8e529865649",tooltip="Gets the instance of the World."];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="UI.Textbox.loadFont",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_u_i_1_1_textbox.html#ac3a40742547f48f95f29ce1649ac88a0",tooltip=" "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="item.Generator.generateItem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classitem_1_1_generator.html#ac17e98c64dc79f381c465bf21b5409a0",tooltip=" "];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="item.Generator.generateArmor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classitem_1_1_generator.html#a851f02e244a9b63f0bb0e508a9a4d40d",tooltip=" "];
+  Node6 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="item.Generator.generatePotion",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classitem_1_1_generator.html#a6dfd2f13dbf175b05ba5a999650a1003",tooltip=" "];
+  Node6 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="item.Generator.generateWeapon",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classitem_1_1_generator.html#a997be8c512cda143c1b157628213ea91",tooltip=" "];
+}

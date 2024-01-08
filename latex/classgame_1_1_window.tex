@@ -1,0 +1,359 @@
+\hypertarget{classgame_1_1_window}{}\doxysection{game.\+Window Class Reference}
+\label{classgame_1_1_window}\index{game.Window@{game.Window}}
+
+
+Represents the window that displays the game.  
+
+
+
+
+Inheritance diagram for game.\+Window\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classgame_1_1_window__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for game.\+Window\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgame_1_1_window__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1_window_a98e156c2148852f07cf8eef903d4b175}{Window}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classgame_1_1_window}{Window}} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1_window_acb08b17fe8fb90e42db6e58164ed5421}{run}} ()
+\begin{DoxyCompactList}\small\item\em Runs the game loop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1_window_ad5f928c104ab787fe75f4bf74a5a0c35}{start\+Game\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em Starts the game thread. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1_window_a41cef38f9afc72fa1b4a1dfdc2bf9b92}{update}} ()
+\begin{DoxyCompactList}\small\item\em Updates the game scene. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgame_1_1_window_a5096ae95c1e62bac2005e73621cdb41c}{paint\+Component}} (Graphics g)
+\begin{DoxyCompactList}\small\item\em Paints the components of the game window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1_scene}{Scene}} \mbox{\hyperlink{classgame_1_1_window_ad1d2c0346ccb63c4bea37fe83afcbf2f}{scene}}
+\begin{DoxyCompactList}\small\item\em The game scene. \end{DoxyCompactList}\item 
+final int \mbox{\hyperlink{classgame_1_1_window_a0e28f232e8a94e6153d99e929116b114}{screen\+Width}} = 800
+\begin{DoxyCompactList}\small\item\em The width of the game screen. \end{DoxyCompactList}\item 
+final int \mbox{\hyperlink{classgame_1_1_window_a3213c726d8ce3916135a7131403e4a3d}{screen\+Height}} = 600
+\begin{DoxyCompactList}\small\item\em The height of the game screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Package Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1_world}{World}} \mbox{\hyperlink{classgame_1_1_window_abd35f90a80ca8a81cc436752ccfdf4c6}{world}} = \mbox{\hyperlink{classgame_1_1_world_a0e40ca86573cf45d858cc8e529865649}{World.\+get\+World}}()
+\begin{DoxyCompactList}\small\item\em The game world. \end{DoxyCompactList}\item 
+Thread \mbox{\hyperlink{classgame_1_1_window_a7e14c4c91df812b2efff8668ec7e0ba2}{game\+Thread}}
+\begin{DoxyCompactList}\small\item\em The game thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+final int \mbox{\hyperlink{classgame_1_1_window_abd14adef078250da89662ead03bb8e5a}{\+\_\+\+FPS}} = 60
+\begin{DoxyCompactList}\small\item\em The frames per second for the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the window that displays the game. 
+
+Definition at line \mbox{\hyperlink{src_2game_2_window_8java_source_l00020}{20}} of file \mbox{\hyperlink{src_2game_2_window_8java_source}{Window.\+java}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1_window_a98e156c2148852f07cf8eef903d4b175}\label{classgame_1_1_window_a98e156c2148852f07cf8eef903d4b175}} 
+\index{game.Window@{game.Window}!Window@{Window}}
+\index{Window@{Window}!game.Window@{game.Window}}
+\doxysubsubsection{\texorpdfstring{Window()}{Window()}}
+{\footnotesize\ttfamily game.\+Window.\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \mbox{\hyperlink{classgame_1_1_window}{Window}} class. 
+
+
+
+Definition at line \mbox{\hyperlink{src_2game_2_window_8java_source_l00054}{54}} of file \mbox{\hyperlink{src_2game_2_window_8java_source}{Window.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00054                     \{}
+\DoxyCodeLine{00055         \mbox{\hyperlink{classgame_1_1_window_ad1d2c0346ccb63c4bea37fe83afcbf2f}{scene}} = World.getWorld();}
+\DoxyCodeLine{00056         this.setPreferredSize(\textcolor{keyword}{new} Dimension(\mbox{\hyperlink{classgame_1_1_window_a0e28f232e8a94e6153d99e929116b114}{screenWidth}}, \mbox{\hyperlink{classgame_1_1_window_a3213c726d8ce3916135a7131403e4a3d}{screenHeight}}));}
+\DoxyCodeLine{00057         this.setBackground(Color.black);}
+\DoxyCodeLine{00058         this.setDoubleBuffered(\textcolor{keyword}{true});}
+\DoxyCodeLine{00059         this.addKeyListener(\mbox{\hyperlink{classgame_1_1_window_ad1d2c0346ccb63c4bea37fe83afcbf2f}{scene}}.\mbox{\hyperlink{classgame_1_1_scene_a2bbc8cb5064aaa5cc1ed0ec8950f4a58}{keyH}});}
+\DoxyCodeLine{00060         this.setFocusable(\textcolor{keyword}{true});}
+\DoxyCodeLine{00061         \mbox{\hyperlink{classgame_1_1_window_abd35f90a80ca8a81cc436752ccfdf4c6}{world}}.\mbox{\hyperlink{classgame_1_1_world_acb4aa37dbc10eab1bd90d5c9c24e44db}{setupGame}}(); \textcolor{comment}{// Creation of instance setter}}
+\DoxyCodeLine{00062     \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgame_1_1_window_a98e156c2148852f07cf8eef903d4b175_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1_window_a5096ae95c1e62bac2005e73621cdb41c}\label{classgame_1_1_window_a5096ae95c1e62bac2005e73621cdb41c}} 
+\index{game.Window@{game.Window}!paintComponent@{paintComponent}}
+\index{paintComponent@{paintComponent}!game.Window@{game.Window}}
+\doxysubsubsection{\texorpdfstring{paintComponent()}{paintComponent()}}
+{\footnotesize\ttfamily void game.\+Window.\+paint\+Component (\begin{DoxyParamCaption}\item[{Graphics}]{g }\end{DoxyParamCaption})}
+
+
+
+Paints the components of the game window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & The Graphics object for drawing. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{src_2game_2_window_8java_source_l00107}{107}} of file \mbox{\hyperlink{src_2game_2_window_8java_source}{Window.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00107                                            \{}
+\DoxyCodeLine{00108         super.paintComponent(g);}
+\DoxyCodeLine{00109 }
+\DoxyCodeLine{00110         Graphics2D g2 = (Graphics2D) g;}
+\DoxyCodeLine{00111 }
+\DoxyCodeLine{00112         \mbox{\hyperlink{classgame_1_1_window_ad1d2c0346ccb63c4bea37fe83afcbf2f}{scene}}.\mbox{\hyperlink{classgame_1_1_scene_aef53d2ecf085388a16020032121e46dc}{draw}}(g2, \mbox{\hyperlink{classgame_1_1_window_a0e28f232e8a94e6153d99e929116b114}{screenWidth}}, \mbox{\hyperlink{classgame_1_1_window_a3213c726d8ce3916135a7131403e4a3d}{screenHeight}});}
+\DoxyCodeLine{00113 }
+\DoxyCodeLine{00114         \textcolor{comment}{// Darkens the scene on the background to let the menu on top}}
+\DoxyCodeLine{00115         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classgame_1_1_window_ad1d2c0346ccb63c4bea37fe83afcbf2f}{scene}}.\mbox{\hyperlink{classgame_1_1_scene_afa46982ec00ac703190b0642d8a3c4be}{state}} == State.\mbox{\hyperlink{enumgame_1_1_scene_1_1_state_a326c78372f2da432b10cdf952e5984e7}{PAUSE}}) \{}
+\DoxyCodeLine{00116             g2.setColor(\textcolor{keyword}{new} Color(0, 0, 0, 180));}
+\DoxyCodeLine{00117             g2.fillRect(0, 0, \mbox{\hyperlink{classgame_1_1_window_a0e28f232e8a94e6153d99e929116b114}{screenWidth}}, \mbox{\hyperlink{classgame_1_1_window_a3213c726d8ce3916135a7131403e4a3d}{screenHeight}});}
+\DoxyCodeLine{00118             \mbox{\hyperlink{classgame_1_1_window_ad1d2c0346ccb63c4bea37fe83afcbf2f}{scene}}.\mbox{\hyperlink{classgame_1_1_scene_abfeaf3d13d7ff744014bcad7f4790501}{menu}}.\mbox{\hyperlink{class_u_i_1_1_h_u_d_a290720935a1960ce8159eae9e7a535fa}{draw}}(g2, \mbox{\hyperlink{classgame_1_1_window_a0e28f232e8a94e6153d99e929116b114}{screenWidth}}, \mbox{\hyperlink{classgame_1_1_window_a3213c726d8ce3916135a7131403e4a3d}{screenHeight}});}
+\DoxyCodeLine{00119         \}}
+\DoxyCodeLine{00120 }
+\DoxyCodeLine{00121         g2.dispose();}
+\DoxyCodeLine{00122     \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgame_1_1_window_a5096ae95c1e62bac2005e73621cdb41c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classgame_1_1_window_acb08b17fe8fb90e42db6e58164ed5421}\label{classgame_1_1_window_acb08b17fe8fb90e42db6e58164ed5421}} 
+\index{game.Window@{game.Window}!run@{run}}
+\index{run@{run}!game.Window@{game.Window}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void game.\+Window.\+run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Runs the game loop. 
+
+
+
+Definition at line \mbox{\hyperlink{src_2game_2_window_8java_source_l00068}{68}} of file \mbox{\hyperlink{src_2game_2_window_8java_source}{Window.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00068                       \{}
+\DoxyCodeLine{00069         \textcolor{keywordtype}{double} drawInterval = 10e9 / \mbox{\hyperlink{classgame_1_1_window_abd14adef078250da89662ead03bb8e5a}{\_FPS}};}
+\DoxyCodeLine{00070         \textcolor{keywordtype}{long} lastTime = System.nanoTime();}
+\DoxyCodeLine{00071         \textcolor{keywordtype}{long} currentTime;}
+\DoxyCodeLine{00072 }
+\DoxyCodeLine{00073         \textcolor{keywordflow}{while} (\mbox{\hyperlink{classgame_1_1_window_a7e14c4c91df812b2efff8668ec7e0ba2}{gameThread}} != \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{00074             currentTime = System.nanoTime();}
+\DoxyCodeLine{00075 }
+\DoxyCodeLine{00076             Scene.dt += (currentTime -\/ lastTime) / drawInterval;}
+\DoxyCodeLine{00077             lastTime = currentTime;}
+\DoxyCodeLine{00078 }
+\DoxyCodeLine{00079             \textcolor{keywordflow}{if} (Scene.dt > 0.1) \{}
+\DoxyCodeLine{00080                 \mbox{\hyperlink{classgame_1_1_window_a41cef38f9afc72fa1b4a1dfdc2bf9b92}{update}}(); \textcolor{comment}{// update() method for window both updates the world and repaints the components of it}}
+\DoxyCodeLine{00081                 Scene.dt -\/= 0.05;}
+\DoxyCodeLine{00082             \}}
+\DoxyCodeLine{00083         \}}
+\DoxyCodeLine{00084     \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgame_1_1_window_acb08b17fe8fb90e42db6e58164ed5421_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classgame_1_1_window_ad5f928c104ab787fe75f4bf74a5a0c35}\label{classgame_1_1_window_ad5f928c104ab787fe75f4bf74a5a0c35}} 
+\index{game.Window@{game.Window}!startGameThread@{startGameThread}}
+\index{startGameThread@{startGameThread}!game.Window@{game.Window}}
+\doxysubsubsection{\texorpdfstring{startGameThread()}{startGameThread()}}
+{\footnotesize\ttfamily void game.\+Window.\+start\+Game\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts the game thread. 
+
+
+
+Definition at line \mbox{\hyperlink{src_2game_2_window_8java_source_l00089}{89}} of file \mbox{\hyperlink{src_2game_2_window_8java_source}{Window.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00089                                   \{}
+\DoxyCodeLine{00090         \mbox{\hyperlink{classgame_1_1_window_a7e14c4c91df812b2efff8668ec7e0ba2}{gameThread}} = \textcolor{keyword}{new} Thread(\textcolor{keyword}{this});}
+\DoxyCodeLine{00091         \mbox{\hyperlink{classgame_1_1_window_a7e14c4c91df812b2efff8668ec7e0ba2}{gameThread}}.start();}
+\DoxyCodeLine{00092     \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgame_1_1_window_ad5f928c104ab787fe75f4bf74a5a0c35_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classgame_1_1_window_a41cef38f9afc72fa1b4a1dfdc2bf9b92}\label{classgame_1_1_window_a41cef38f9afc72fa1b4a1dfdc2bf9b92}} 
+\index{game.Window@{game.Window}!update@{update}}
+\index{update@{update}!game.Window@{game.Window}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void game.\+Window.\+update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the game scene. 
+
+
+
+Definition at line \mbox{\hyperlink{src_2game_2_window_8java_source_l00097}{97}} of file \mbox{\hyperlink{src_2game_2_window_8java_source}{Window.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00097                          \{}
+\DoxyCodeLine{00098         \mbox{\hyperlink{classgame_1_1_window_ad1d2c0346ccb63c4bea37fe83afcbf2f}{scene}}.\mbox{\hyperlink{classgame_1_1_scene_a6b61e8f2533a2ba76c543bbd00d989a2}{update}}(); \textcolor{comment}{// Updates the whole world's props \& animations}}
+\DoxyCodeLine{00099         repaint();}
+\DoxyCodeLine{00100     \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgame_1_1_window_a41cef38f9afc72fa1b4a1dfdc2bf9b92_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{classgame_1_1_window_a41cef38f9afc72fa1b4a1dfdc2bf9b92_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1_window_abd14adef078250da89662ead03bb8e5a}\label{classgame_1_1_window_abd14adef078250da89662ead03bb8e5a}} 
+\index{game.Window@{game.Window}!\_FPS@{\_FPS}}
+\index{\_FPS@{\_FPS}!game.Window@{game.Window}}
+\doxysubsubsection{\texorpdfstring{\_FPS}{\_FPS}}
+{\footnotesize\ttfamily final int game.\+Window.\+\_\+\+FPS = 60\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The frames per second for the game. 
+
+
+
+Definition at line \mbox{\hyperlink{src_2game_2_window_8java_source_l00044}{44}} of file \mbox{\hyperlink{src_2game_2_window_8java_source}{Window.\+java}}.
+
+\mbox{\Hypertarget{classgame_1_1_window_a7e14c4c91df812b2efff8668ec7e0ba2}\label{classgame_1_1_window_a7e14c4c91df812b2efff8668ec7e0ba2}} 
+\index{game.Window@{game.Window}!gameThread@{gameThread}}
+\index{gameThread@{gameThread}!game.Window@{game.Window}}
+\doxysubsubsection{\texorpdfstring{gameThread}{gameThread}}
+{\footnotesize\ttfamily Thread game.\+Window.\+game\+Thread\hspace{0.3cm}{\ttfamily [package]}}
+
+
+
+The game thread. 
+
+
+
+Definition at line \mbox{\hyperlink{src_2game_2_window_8java_source_l00049}{49}} of file \mbox{\hyperlink{src_2game_2_window_8java_source}{Window.\+java}}.
+
+\mbox{\Hypertarget{classgame_1_1_window_ad1d2c0346ccb63c4bea37fe83afcbf2f}\label{classgame_1_1_window_ad1d2c0346ccb63c4bea37fe83afcbf2f}} 
+\index{game.Window@{game.Window}!scene@{scene}}
+\index{scene@{scene}!game.Window@{game.Window}}
+\doxysubsubsection{\texorpdfstring{scene}{scene}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1_scene}{Scene}} game.\+Window.\+scene}
+
+
+
+The game scene. 
+
+
+
+Definition at line \mbox{\hyperlink{src_2game_2_window_8java_source_l00024}{24}} of file \mbox{\hyperlink{src_2game_2_window_8java_source}{Window.\+java}}.
+
+\mbox{\Hypertarget{classgame_1_1_window_a3213c726d8ce3916135a7131403e4a3d}\label{classgame_1_1_window_a3213c726d8ce3916135a7131403e4a3d}} 
+\index{game.Window@{game.Window}!screenHeight@{screenHeight}}
+\index{screenHeight@{screenHeight}!game.Window@{game.Window}}
+\doxysubsubsection{\texorpdfstring{screenHeight}{screenHeight}}
+{\footnotesize\ttfamily final int game.\+Window.\+screen\+Height = 600}
+
+
+
+The height of the game screen. 
+
+
+
+Definition at line \mbox{\hyperlink{src_2game_2_window_8java_source_l00034}{34}} of file \mbox{\hyperlink{src_2game_2_window_8java_source}{Window.\+java}}.
+
+\mbox{\Hypertarget{classgame_1_1_window_a0e28f232e8a94e6153d99e929116b114}\label{classgame_1_1_window_a0e28f232e8a94e6153d99e929116b114}} 
+\index{game.Window@{game.Window}!screenWidth@{screenWidth}}
+\index{screenWidth@{screenWidth}!game.Window@{game.Window}}
+\doxysubsubsection{\texorpdfstring{screenWidth}{screenWidth}}
+{\footnotesize\ttfamily final int game.\+Window.\+screen\+Width = 800}
+
+
+
+The width of the game screen. 
+
+
+
+Definition at line \mbox{\hyperlink{src_2game_2_window_8java_source_l00029}{29}} of file \mbox{\hyperlink{src_2game_2_window_8java_source}{Window.\+java}}.
+
+\mbox{\Hypertarget{classgame_1_1_window_abd35f90a80ca8a81cc436752ccfdf4c6}\label{classgame_1_1_window_abd35f90a80ca8a81cc436752ccfdf4c6}} 
+\index{game.Window@{game.Window}!world@{world}}
+\index{world@{world}!game.Window@{game.Window}}
+\doxysubsubsection{\texorpdfstring{world}{world}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1_world}{World}} game.\+Window.\+world = \mbox{\hyperlink{classgame_1_1_world_a0e40ca86573cf45d858cc8e529865649}{World.\+get\+World}}()\hspace{0.3cm}{\ttfamily [package]}}
+
+
+
+The game world. 
+
+
+
+Definition at line \mbox{\hyperlink{src_2game_2_window_8java_source_l00039}{39}} of file \mbox{\hyperlink{src_2game_2_window_8java_source}{Window.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/game/\mbox{\hyperlink{src_2game_2_window_8java}{Window.\+java}}\end{DoxyCompactItemize}

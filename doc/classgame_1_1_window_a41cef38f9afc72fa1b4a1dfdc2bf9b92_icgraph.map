@@ -1,0 +1,4 @@
+<map id="game.Window.update" name="game.Window.update">
+<area shape="rect" id="node1" title="Updates the game scene." alt="" coords="192,5,355,32"/>
+<area shape="rect" id="node2" href="$classgame_1_1_window.html#acb08b17fe8fb90e42db6e58164ed5421" title="Runs the game loop." alt="" coords="5,5,144,32"/>
+</map>

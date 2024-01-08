@@ -1,0 +1,91 @@
+\hypertarget{classmain_1_1_main}{}\doxysection{main.\+Main Class Reference}
+\label{classmain_1_1_main}\index{main.Main@{main.Main}}
+
+
+Contains the main method to start the 2D Adventure game.  
+
+
+
+
+Collaboration diagram for main.\+Main\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{classmain_1_1_main__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classmain_1_1_main_a896f71a651b705304693dbfe0cf9ca63}{main}} (String\mbox{[}$\,$\mbox{]} args)
+\begin{DoxyCompactList}\small\item\em The main method that initializes the game window and starts the game thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains the main method to start the 2D Adventure game. 
+
+Definition at line \mbox{\hyperlink{src_2main_2_main_8java_source_l00016}{16}} of file \mbox{\hyperlink{src_2main_2_main_8java_source}{Main.\+java}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmain_1_1_main_a896f71a651b705304693dbfe0cf9ca63}\label{classmain_1_1_main_a896f71a651b705304693dbfe0cf9ca63}} 
+\index{main.Main@{main.Main}!main@{main}}
+\index{main@{main}!main.Main@{main.Main}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily static void main.\+Main.\+main (\begin{DoxyParamCaption}\item[{String\mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The main method that initializes the game window and starts the game thread. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & Command-\/line arguments (not used in this application) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{src_2main_2_main_8java_source_l00022}{22}} of file \mbox{\hyperlink{src_2main_2_main_8java_source}{Main.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022                                            \{}
+\DoxyCodeLine{00023         \textcolor{comment}{// Create a JFrame (window) for the game}}
+\DoxyCodeLine{00024         JFrame windows = \textcolor{keyword}{new} JFrame();}
+\DoxyCodeLine{00025         windows.setDefaultCloseOperation(JFrame.EXIT\_ON\_CLOSE);}
+\DoxyCodeLine{00026         windows.setResizable(\textcolor{keyword}{false});}
+\DoxyCodeLine{00027         windows.setTitle(\textcolor{stringliteral}{"{}2D Adventure"{}});}
+\DoxyCodeLine{00028 }
+\DoxyCodeLine{00029         \textcolor{comment}{// Create an instance of the Window class (game window)}}
+\DoxyCodeLine{00030         Window gameWindow = \textcolor{keyword}{new} Window();}
+\DoxyCodeLine{00031         windows.add(gameWindow);}
+\DoxyCodeLine{00032 }
+\DoxyCodeLine{00033         \textcolor{comment}{// Pack the components of the window}}
+\DoxyCodeLine{00034         windows.pack();}
+\DoxyCodeLine{00035 }
+\DoxyCodeLine{00036         \textcolor{comment}{// Set the window to appear at the center of the screen}}
+\DoxyCodeLine{00037         windows.setLocationRelativeTo(\textcolor{keyword}{null});}
+\DoxyCodeLine{00038 }
+\DoxyCodeLine{00039         \textcolor{comment}{// Make the window visible}}
+\DoxyCodeLine{00040         windows.setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{00041 }
+\DoxyCodeLine{00042         \textcolor{comment}{// Start the game thread to handle game logic and rendering}}
+\DoxyCodeLine{00043         gameWindow.startGameThread();}
+\DoxyCodeLine{00044     \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmain_1_1_main_a896f71a651b705304693dbfe0cf9ca63_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/\mbox{\hyperlink{src_2main_2_main_8java}{Main.\+java}}\end{DoxyCompactItemize}

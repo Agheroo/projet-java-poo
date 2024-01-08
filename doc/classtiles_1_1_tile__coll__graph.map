@@ -1,0 +1,4 @@
+<map id="tiles.Tile" name="tiles.Tile">
+<area shape="rect" id="node1" title="Represents a tile in the game world." alt="" coords="5,145,213,487"/>
+<area shape="rect" id="node2" title=" " alt="" coords="50,5,169,83"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="entity.props.OBJ_Door" name="entity.props.OBJ_Door">
+<area shape="rect" id="node1" title="Represents a door object in the game." alt="" coords="5,505,168,597"/>
+<area shape="rect" id="node2" href="$classentity_1_1props_1_1_props.html" title="Represents in&#45;game props with properties such as image, name, and position." alt="" coords="17,321,156,457"/>
+<area shape="rect" id="node3" href="$classentity_1_1_entity.html" title="Represents an abstract entity with position, hitbox, and animations." alt="" coords="5,5,168,273"/>
+</map>

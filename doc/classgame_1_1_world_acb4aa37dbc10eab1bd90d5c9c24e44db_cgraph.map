@@ -1,0 +1,7 @@
+<map id="game.World.setupGame" name="game.World.setupGame">
+<area shape="rect" id="node1" title="Set up the initial state of the game." alt="" coords="5,31,184,57"/>
+<area shape="rect" id="node2" href="$classentity_1_1_entity_setter.html#a102773a9c4c8ff3b86f7028c568f9746" title=" " alt="" coords="232,5,451,32"/>
+<area shape="rect" id="node4" href="$classentity_1_1_entity_setter.html#ac8c3fa3789803b2286d5f5df7a89594e" title="Method to set up objects in the game world, such as keys, doors, and chests." alt="" coords="239,56,443,83"/>
+<area shape="rect" id="node3" href="$classgame_1_1_world.html#accb9e77e21056039771d52bc5b1cfd31" title=" " alt="" coords="499,5,672,32"/>
+<area shape="rect" id="node5" href="$classgame_1_1_world.html#a65d2a74c48359e2f77648d1433f84104" title="Adds an object to the HashMap with the specified coordinates." alt="" coords="500,56,671,83"/>
+</map>

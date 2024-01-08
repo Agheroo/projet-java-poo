@@ -1,0 +1,81 @@
+\hypertarget{_key_handler_8java_source}{}\doxysection{Key\+Handler.\+java}
+\label{_key_handler_8java_source}\index{src/main/KeyHandler.java@{src/main/KeyHandler.java}}
+\mbox{\hyperlink{_key_handler_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00006}\mbox{\hyperlink{namespacemain}{00006}} \textcolor{keyword}{package }main;}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00008}00008 \textcolor{keyword}{import} java.awt.event.KeyEvent;}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00009}00009 \textcolor{keyword}{import} java.awt.event.KeyListener;}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00016}\mbox{\hyperlink{classmain_1_1_key_handler}{00016}} \textcolor{keyword}{public} \textcolor{keyword}{final} \textcolor{keyword}{class }\mbox{\hyperlink{classmain_1_1_key_handler}{KeyHandler}} \textcolor{keyword}{implements} KeyListener \{}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00017}\mbox{\hyperlink{classmain_1_1_key_handler_a7233926b03a51a795037945dd4427da3}{00017}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \mbox{\hyperlink{classmain_1_1_key_handler}{KeyHandler}} \mbox{\hyperlink{classmain_1_1_key_handler_a7233926b03a51a795037945dd4427da3}{instance}};}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00018}\mbox{\hyperlink{classmain_1_1_key_handler_a0bc680db42254a7fdf434b26894da9ea}{00018}}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \mbox{\hyperlink{classmain_1_1_key_handler_ac3d3d01a55a35bd42ab2de4fbfe60889}{upPressed}}, \mbox{\hyperlink{classmain_1_1_key_handler_a0bc680db42254a7fdf434b26894da9ea}{downPressed}}, \mbox{\hyperlink{classmain_1_1_key_handler_a61ed218f99a07f22ded4b1ccbcf716c1}{leftPressed}}, \mbox{\hyperlink{classmain_1_1_key_handler_a16cb9356b8971e17b39edbf8823150cc}{rightPressed}};}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00019}\mbox{\hyperlink{classmain_1_1_key_handler_aaaa3f8f86ebada192b298f0ace674c9b}{00019}}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \mbox{\hyperlink{classmain_1_1_key_handler_aaaa3f8f86ebada192b298f0ace674c9b}{interactPressed}};}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00020}\mbox{\hyperlink{classmain_1_1_key_handler_a8695999bf8fc25d2928ff04bfa228e48}{00020}}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \mbox{\hyperlink{classmain_1_1_key_handler_a8695999bf8fc25d2928ff04bfa228e48}{escPressed}};}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00022}00022     \textcolor{comment}{// Private constructor to prevent instantiation from outside the class}}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00023}\mbox{\hyperlink{classmain_1_1_key_handler_ababc1e747b32dd75a1eae7ffc0e361e3}{00023}}     \textcolor{keyword}{private} \mbox{\hyperlink{classmain_1_1_key_handler_ababc1e747b32dd75a1eae7ffc0e361e3}{KeyHandler}}() \{\}}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00030}\mbox{\hyperlink{classmain_1_1_key_handler_abdb9d096bf21b6a49847291e9e4e04a9}{00030}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \mbox{\hyperlink{classmain_1_1_key_handler}{KeyHandler}} \mbox{\hyperlink{classmain_1_1_key_handler_abdb9d096bf21b6a49847291e9e4e04a9}{getInstance}}() \{}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00031}00031         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classmain_1_1_key_handler_a7233926b03a51a795037945dd4427da3}{instance}} == \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00032}00032             \mbox{\hyperlink{classmain_1_1_key_handler_a7233926b03a51a795037945dd4427da3}{instance}} = \textcolor{keyword}{new} \mbox{\hyperlink{classmain_1_1_key_handler_ababc1e747b32dd75a1eae7ffc0e361e3}{KeyHandler}}();}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00033}00033         \}}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00034}00034         \textcolor{keywordflow}{return} \mbox{\hyperlink{classmain_1_1_key_handler_a7233926b03a51a795037945dd4427da3}{instance}};}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00035}00035     \}}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00037}00037     @Override}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00038}\mbox{\hyperlink{classmain_1_1_key_handler_a6087887b2e39bdeb1e80c89f31f8584e}{00038}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classmain_1_1_key_handler_a6087887b2e39bdeb1e80c89f31f8584e}{keyTyped}}(KeyEvent e) \{}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00039}00039         \textcolor{comment}{// Not used}}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00040}00040     \}}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00042}00042     @Override}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00043}\mbox{\hyperlink{classmain_1_1_key_handler_a1107b078f3813bd4bbbb2f13d7f43d0a}{00043}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classmain_1_1_key_handler_a1107b078f3813bd4bbbb2f13d7f43d0a}{keyPressed}}(KeyEvent e) \{}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00044}00044         \textcolor{keywordtype}{int} code = e.getKeyCode();}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00046}00046         \textcolor{keywordflow}{if} (code == KeyEvent.VK\_Z) \{}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00047}00047             \mbox{\hyperlink{classmain_1_1_key_handler_ac3d3d01a55a35bd42ab2de4fbfe60889}{upPressed}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00048}00048         \}}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00049}00049         \textcolor{keywordflow}{if} (code == KeyEvent.VK\_Q) \{}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00050}00050             \mbox{\hyperlink{classmain_1_1_key_handler_a61ed218f99a07f22ded4b1ccbcf716c1}{leftPressed}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00051}00051         \}}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00052}00052         \textcolor{keywordflow}{if} (code == KeyEvent.VK\_S) \{}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00053}00053             \mbox{\hyperlink{classmain_1_1_key_handler_a0bc680db42254a7fdf434b26894da9ea}{downPressed}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00054}00054         \}}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00055}00055         \textcolor{keywordflow}{if} (code == KeyEvent.VK\_D) \{}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00056}00056             \mbox{\hyperlink{classmain_1_1_key_handler_a16cb9356b8971e17b39edbf8823150cc}{rightPressed}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00057}00057         \}}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00058}00058         \textcolor{keywordflow}{if} (code == KeyEvent.VK\_SPACE) \{}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00059}00059             \mbox{\hyperlink{classmain_1_1_key_handler_aaaa3f8f86ebada192b298f0ace674c9b}{interactPressed}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00060}00060         \}}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00061}00061         \textcolor{keywordflow}{if} (code == KeyEvent.VK\_ESCAPE) \{}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00062}00062             \mbox{\hyperlink{classmain_1_1_key_handler_a8695999bf8fc25d2928ff04bfa228e48}{escPressed}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00063}00063         \}}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00064}00064     \}}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00066}00066     @Override}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00067}\mbox{\hyperlink{classmain_1_1_key_handler_a7348a9c91fb271544600f06331952b29}{00067}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classmain_1_1_key_handler_a7348a9c91fb271544600f06331952b29}{keyReleased}}(KeyEvent e) \{}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00068}00068         \textcolor{keywordtype}{int} code = e.getKeyCode();}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00070}00070         \textcolor{keywordflow}{if} (code == KeyEvent.VK\_Z) \{}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00071}00071             \mbox{\hyperlink{classmain_1_1_key_handler_ac3d3d01a55a35bd42ab2de4fbfe60889}{upPressed}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00072}00072         \}}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00073}00073         \textcolor{keywordflow}{if} (code == KeyEvent.VK\_Q) \{}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00074}00074             \mbox{\hyperlink{classmain_1_1_key_handler_a61ed218f99a07f22ded4b1ccbcf716c1}{leftPressed}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00075}00075         \}}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00076}00076         \textcolor{keywordflow}{if} (code == KeyEvent.VK\_S) \{}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00077}00077             \mbox{\hyperlink{classmain_1_1_key_handler_a0bc680db42254a7fdf434b26894da9ea}{downPressed}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00078}00078         \}}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00079}00079         \textcolor{keywordflow}{if} (code == KeyEvent.VK\_D) \{}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00080}00080             \mbox{\hyperlink{classmain_1_1_key_handler_a16cb9356b8971e17b39edbf8823150cc}{rightPressed}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00081}00081         \}}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00082}00082         \textcolor{keywordflow}{if} (code == KeyEvent.VK\_SPACE) \{}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00083}00083             \mbox{\hyperlink{classmain_1_1_key_handler_aaaa3f8f86ebada192b298f0ace674c9b}{interactPressed}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00084}00084         \}}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00085}00085         \textcolor{keywordflow}{if} (code == KeyEvent.VK\_ESCAPE) \{}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00086}00086             \mbox{\hyperlink{classmain_1_1_key_handler_a8695999bf8fc25d2928ff04bfa228e48}{escPressed}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00087}00087         \}}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00088}00088     \}}
+\DoxyCodeLine{\Hypertarget{_key_handler_8java_source_l00089}00089 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,8 @@
+<map id="item.armor.Armor" name="item.armor.Armor">
+<area shape="rect" id="node1" title=" " alt="" coords="231,131,369,208"/>
+<area shape="rect" id="node3" href="$classitem_1_1armor_1_1_body.html" title=" " alt="" coords="5,256,136,333"/>
+<area shape="rect" id="node4" href="$classitem_1_1armor_1_1_foot.html" title=" " alt="" coords="161,256,287,333"/>
+<area shape="rect" id="node5" href="$classitem_1_1armor_1_1_head.html" title=" " alt="" coords="311,256,443,333"/>
+<area shape="rect" id="node6" href="$classitem_1_1armor_1_1_legs.html" title=" " alt="" coords="468,256,596,333"/>
+<area shape="rect" id="node2" href="$classitem_1_1_item.html" title=" " alt="" coords="257,5,343,83"/>
+</map>

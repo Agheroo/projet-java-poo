@@ -1,0 +1,6 @@
+<map id="tiles.TileManager.loadMap" name="tiles.TileManager.loadMap">
+<area shape="rect" id="node1" title="Reads the txt map file to store the tileMap accordingly." alt="" coords="5,56,200,83"/>
+<area shape="rect" id="node2" href="$classtiles_1_1_tile.html#aa0b0d298e48f2280cbc63d95de07d675" title="Set whether the tile is blocking." alt="" coords="248,5,407,32"/>
+<area shape="rect" id="node3" href="$classtiles_1_1_tile.html#a46f5c3f74e0fcbbdb7de428d0431c6c9" title="Set the position of the tile." alt="" coords="265,56,390,83"/>
+<area shape="rect" id="node4" href="$classtiles_1_1_tile.html#a344a65a84a3f750cbb57f1d1e6c66c3d" title="Set the texture for the tile." alt="" coords="252,107,403,133"/>
+</map>

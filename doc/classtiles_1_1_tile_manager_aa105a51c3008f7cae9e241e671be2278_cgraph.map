@@ -1,0 +1,5 @@
+<map id="tiles.TileManager.update" name="tiles.TileManager.update">
+<area shape="rect" id="node1" title="Updates the tile frames based on the player&#39;s position." alt="" coords="5,31,188,57"/>
+<area shape="rect" id="node2" href="$classtiles_1_1_tile.html#a7bfcdb11efa89176a068c2a473ce3e9d" title="Get the position of the tile." alt="" coords="260,5,387,32"/>
+<area shape="rect" id="node3" href="$classtiles_1_1_tile.html#aba5dbd821ef786c025e887b5c2e801f5" title="Update the sprite frames for the tile." alt="" coords="236,56,411,83"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="entity.Character.update" name="entity.Character.update">
+<area shape="rect" id="node1" title="Updates the character entity based on the current scene and time elapsed." alt="" coords="5,172,179,199"/>
+<area shape="rect" id="node2" href="$classentity_1_1_character.html#aeee6d959ceb691d58104656642f828fc" title="Checks for collision with nearby tiles using the character&#39;s hitbox." alt="" coords="229,59,419,101"/>
+<area shape="rect" id="node6" href="$classgame_1_1_world.html#a0e40ca86573cf45d858cc8e529865649" title="Gets the instance of the World." alt="" coords="243,147,405,173"/>
+<area shape="rect" id="node8" href="$classentity_1_1_character.html#a6d3e0c3ebf51d3728acd70c5a5654090" title="Moves the character in the world based on its direction, speed, and the elapsed time." alt="" coords="241,197,407,224"/>
+<area shape="rect" id="node9" href="$classentity_1_1_entity.html#a41e81bb1c3a3e86f3f43aa39d8fbb748" title="Updates the frames of the entity&#39;s animation." alt="" coords="227,248,421,275"/>
+<area shape="rect" id="node3" href="$classtiles_1_1_tile.html#a1e53f21e3c78b581b3afa51cd1488fe9" title="Get whether the tile is blocking." alt="" coords="481,5,640,32"/>
+<area shape="rect" id="node4" href="$classtiles_1_1_tile.html#a7bfcdb11efa89176a068c2a473ce3e9d" title="Get the position of the tile." alt="" coords="497,56,624,83"/>
+<area shape="rect" id="node5" href="$classtiles_1_1_tile_manager.html#a74de5c7690737d961af5aaf5dbca1046" title="Gets the tile of the top map with its x, y coordinates." alt="" coords="469,107,652,133"/>
+<area shape="rect" id="node7" href="$class_u_i_1_1_textbox.html#ac3a40742547f48f95f29ce1649ac88a0" title=" " alt="" coords="485,157,636,184"/>
+</map>

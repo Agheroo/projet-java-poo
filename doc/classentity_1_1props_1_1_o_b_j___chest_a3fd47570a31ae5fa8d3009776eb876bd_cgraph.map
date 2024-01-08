@@ -1,0 +1,11 @@
+<map id="entity.props.OBJ_Chest.playerInterraction" name="entity.props.OBJ_Chest.playerInterraction">
+<area shape="rect" id="node1" title=" " alt="" coords="5,49,220,90"/>
+<area shape="rect" id="node2" href="$classentity_1_1_player.html#a91613b74f81278a4bd845bef223b0b5f" title=" " alt="" coords="296,5,456,32"/>
+<area shape="rect" id="node3" href="$classentity_1_1props_1_1_props.html#ab837cf0c685323fe8c2cc84d80f6315a" title=" " alt="" coords="268,56,484,83"/>
+<area shape="rect" id="node6" href="$classitem_1_1_generator.html#ac17e98c64dc79f381c465bf21b5409a0" title=" " alt="" coords="270,119,482,145"/>
+<area shape="rect" id="node4" href="$classgame_1_1_world.html#a0e40ca86573cf45d858cc8e529865649" title="Gets the instance of the World." alt="" coords="568,43,731,69"/>
+<area shape="rect" id="node5" href="$class_u_i_1_1_textbox.html#ac3a40742547f48f95f29ce1649ac88a0" title=" " alt="" coords="815,43,965,69"/>
+<area shape="rect" id="node7" href="$classitem_1_1_generator.html#a851f02e244a9b63f0bb0e508a9a4d40d" title=" " alt="" coords="538,93,761,120"/>
+<area shape="rect" id="node8" href="$classitem_1_1_generator.html#a6dfd2f13dbf175b05ba5a999650a1003" title=" " alt="" coords="538,144,761,171"/>
+<area shape="rect" id="node9" href="$classitem_1_1_generator.html#a997be8c512cda143c1b157628213ea91" title=" " alt="" coords="532,195,767,221"/>
+</map>

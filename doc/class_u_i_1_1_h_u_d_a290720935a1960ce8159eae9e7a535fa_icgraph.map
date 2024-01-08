@@ -1,0 +1,6 @@
+<map id="UI.HUD.draw" name="UI.HUD.draw">
+<area shape="rect" id="node1" title=" " alt="" coords="464,31,571,57"/>
+<area shape="rect" id="node2" href="$classgame_1_1_fight_scene.html#a9525cb3d263680e8d808b3abde00e8d8" title="Draws the fight scene." alt="" coords="217,5,388,32"/>
+<area shape="rect" id="node4" href="$classgame_1_1_window.html#a5096ae95c1e62bac2005e73621cdb41c" title="Paints the components of the game window." alt="" coords="189,56,416,83"/>
+<area shape="rect" id="node3" href="$classgame_1_1_world.html#ac405787ac7b11c4ed39a5cd9250e398f" title="Draws the game world and its entities." alt="" coords="5,5,141,32"/>
+</map>
