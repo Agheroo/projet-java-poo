@@ -91,12 +91,6 @@ public class World extends Scene {
     public void update() {
         checkPauseScene();
         if (state == State.WORLD) {
-            Point ptn = new Point((int)13 * Const.WRLD_entityScreenSize, (int) 13 * Const.WRLD_entityScreenSize);
-            Props key = objMap.get(ptn);
-            //System.out.println("("+key.worldX +"," + key.worldY + ")  (" + key.hitbox.x +","+key.hitbox.y+")");
-            //int playerScreenX = (Const.WDW_width - Const.WRLD_entityScreenSize) / 2;
-            //int playerScreenY = (Const.WDW_height - Const.WRLD_entityScreenSize) / 2;
-
             player.update(this, dt);
             tileManager.update(this);
 
