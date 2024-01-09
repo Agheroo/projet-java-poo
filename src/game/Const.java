@@ -21,4 +21,12 @@ public final class Const {
     //TileManager
     public final static int nbFloorTextures = 7;
     public final static int nbTopTextures = 29;
+
+    //HUD
+    private final static int HUD_welcomeWidth = 600;
+    private final static int HUD_welcomeHeight = 550;
+    private final static int HUD_pauseWidth = 600;
+    private final static int HUD_pauseHeight = 550;
+    private final static int HUD_fightWidth = 700;
+    private final static int HUD_fightHeight = 300;
 }

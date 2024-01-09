@@ -10,7 +10,7 @@ import main.KeyHandler;
 import java.awt.*;
 
 import UI.HUD;
-import UI.HUD.MenuType;
+import UI.HUD_Pause;
 
 /**
  * @class Scene
@@ -79,7 +79,7 @@ public abstract class Scene {
                 System.out.println("CHANGING SCENE TO: PAUSE");
                 _lastState = state;
                 state = State.PAUSE;
-                menu = new HUD(MenuType.PAUSE);
+                menu = new HUD_Pause(3);
             } else {
                 System.out.println("CHANGING SCENE TO: "+_lastState);
                 state = _lastState;

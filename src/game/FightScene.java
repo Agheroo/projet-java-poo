@@ -13,7 +13,7 @@ import java.awt.*;
 import java.util.HashMap;
 
 import UI.HUD;
-import UI.HUD.MenuType;
+import UI.HUD_Fight;
 
 
 /**
@@ -39,7 +39,7 @@ public class FightScene {
         this.player = player;
         this.enemy = enemy;
         state = FightState.FIGHTING;
-        menu = new HUD(MenuType.FIGHT);
+        menu = new HUD_Fight(3);
     }
 
     /**
