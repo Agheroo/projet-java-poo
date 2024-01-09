@@ -19,6 +19,6 @@ public final class Const {
     public final static int FGHT_entityScreenSize = 200;
 
     //TileManager
-    public final static int nbFloorTextures = 6;
+    public final static int nbFloorTextures = 7;
     public final static int nbTopTextures = 29;
 }
