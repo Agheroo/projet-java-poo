@@ -37,8 +37,7 @@ public class World extends Scene {
     
   
     // Player settings
-    public Player player = new Player("player",15 * Const.WRLD_tileScreenSize,
-            15 * Const.WRLD_tileScreenSize, 0, 0, 0, "down", 4, 20);
+    public Player player;
 
 
     //public Player player;
@@ -64,8 +63,8 @@ public class World extends Scene {
         entitySetter.setObject();
         entitySetter.setEnemies();
 
-        player = new Player("player", 15 * Const.WRLD_tileScreenSize,
-            15 * Const.WRLD_tileScreenSize, 0, 0, 0, "down", 4, 20);
+        player = new Player("player", 8 * Const.WRLD_tileScreenSize,
+            16 * Const.WRLD_tileScreenSize, 0, 0, 0, "down", 4, 20);
     
     }
 
