@@ -1,0 +1,4 @@
+<map id="entity.props.OBJ_Chest.OBJ_Chest" name="entity.props.OBJ_Chest.OBJ_Chest">
+<area shape="rect" id="node1" title="Constructor for the OBJ_Chest class." alt="" coords="5,5,201,47"/>
+<area shape="rect" id="node2" href="$classentity_1_1_entity.html#a9060501233d22f6130e204799a1f01c5" title="Loads textures for the entity based on its name." alt="" coords="249,13,435,39"/>
+</map>

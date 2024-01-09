@@ -1,0 +1,218 @@
+\hypertarget{classentity_1_1_enemy}{}\doxysection{entity.\+Enemy Class Reference}
+\label{classentity_1_1_enemy}\index{entity.Enemy@{entity.Enemy}}
+
+
+Represents an enemy entity in the game.  
+
+
+
+
+Inheritance diagram for entity.\+Enemy\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classentity_1_1_enemy__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for entity.\+Enemy\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classentity_1_1_enemy__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classentity_1_1_enemy_af51eefe1612d7a7506f3f1f24cfb7268}{Enemy}} (String enemy\+Name, int \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}}, int \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}}, int \mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}}, int \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}}, int \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}}, String \mbox{\hyperlink{classentity_1_1_character_a249d5d0b8f600f332b5715e93f83668d}{facing}}, int sprite\+Cnt\+Max, int sprite\+Speed)
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classentity_1_1_enemy}{Enemy}} class. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classentity_1_1_enemy_a8f3405c245d6c43ff3b09953eb5b4636}{touching\+Player}} (\mbox{\hyperlink{classentity_1_1_player}{Player}} player)
+\begin{DoxyCompactList}\small\item\em Checks if the current enemy is in contact with the player. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classentity_1_1_enemy_ab115ccb1365609753aa1dddbc9df0580}{update}} (\mbox{\hyperlink{classgame_1_1_scene}{Scene}} scene, double dt)
+\begin{DoxyCompactList}\small\item\em Updates the enemy entity based on the current scene and time elapsed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classentity_1_1_enemy_a429f4fa6c8b461d4c18802d35d9b5092}{player\+Interraction}} (\mbox{\hyperlink{classentity_1_1_player}{Player}} player)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+String \mbox{\hyperlink{classentity_1_1_enemy_a175fabae6e9cb47ec24f230e048afa91}{name}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classentity_1_1_enemy_a98ff59cf7565dd9fce084cfee4b9cb4b}{\+\_\+xp\+Rate}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Represents an enemy entity in the game. 
+
+Definition at line \mbox{\hyperlink{_enemy_8java_source_l00015}{15}} of file \mbox{\hyperlink{_enemy_8java_source}{Enemy.\+java}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classentity_1_1_enemy_af51eefe1612d7a7506f3f1f24cfb7268}\label{classentity_1_1_enemy_af51eefe1612d7a7506f3f1f24cfb7268}} 
+\index{entity.Enemy@{entity.Enemy}!Enemy@{Enemy}}
+\index{Enemy@{Enemy}!entity.Enemy@{entity.Enemy}}
+\doxysubsubsection{\texorpdfstring{Enemy()}{Enemy()}}
+{\footnotesize\ttfamily entity.\+Enemy.\+Enemy (\begin{DoxyParamCaption}\item[{String}]{enemy\+Name,  }\item[{int}]{worldX,  }\item[{int}]{worldY,  }\item[{int}]{dirX,  }\item[{int}]{dirY,  }\item[{int}]{speed,  }\item[{String}]{facing,  }\item[{int}]{sprite\+Cnt\+Max,  }\item[{int}]{sprite\+Speed }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \mbox{\hyperlink{classentity_1_1_enemy}{Enemy}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em worldX} & The X-\/coordinate of the enemy in the world. \\
+\hline
+{\em worldY} & The Y-\/coordinate of the enemy in the world. \\
+\hline
+{\em dirX} & The X-\/direction of the enemy. \\
+\hline
+{\em dirY} & The Y-\/direction of the enemy. \\
+\hline
+{\em speed} & The speed of the enemy\textquotesingle{}s movement. \\
+\hline
+{\em facing} & The direction the enemy is facing (up, down, left, right). \\
+\hline
+{\em sprite\+Cnt\+Max} & The maximum number of sprites for animation. \\
+\hline
+{\em sprite\+Speed} & The speed of sprite animation. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_enemy_8java_source_l00030}{30}} of file \mbox{\hyperlink{_enemy_8java_source}{Enemy.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030                                                                                                                                             \{}
+\DoxyCodeLine{00031         super(enemyName, \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}}, \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}}, \mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}}, \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}}, \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}}, \mbox{\hyperlink{classentity_1_1_character_a249d5d0b8f600f332b5715e93f83668d}{facing}}, spriteCntMax, spriteSpeed);  \textcolor{comment}{// Calls the parent class for entity setup, specifying scene.keyH for player}}
+\DoxyCodeLine{00032     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classentity_1_1_enemy_a429f4fa6c8b461d4c18802d35d9b5092}\label{classentity_1_1_enemy_a429f4fa6c8b461d4c18802d35d9b5092}} 
+\index{entity.Enemy@{entity.Enemy}!playerInterraction@{playerInterraction}}
+\index{playerInterraction@{playerInterraction}!entity.Enemy@{entity.Enemy}}
+\doxysubsubsection{\texorpdfstring{playerInterraction()}{playerInterraction()}}
+{\footnotesize\ttfamily void entity.\+Enemy.\+player\+Interraction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classentity_1_1_player}{Player}}}]{player }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classentity_1_1_character_af7bcb14c587e5ae5e9fef046b28072a0}{entity.\+Character}}.
+
+
+
+Definition at line \mbox{\hyperlink{_enemy_8java_source_l00062}{62}} of file \mbox{\hyperlink{_enemy_8java_source}{Enemy.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00062                                                  \{}
+\DoxyCodeLine{00063         }
+\DoxyCodeLine{00064     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classentity_1_1_enemy_a8f3405c245d6c43ff3b09953eb5b4636}\label{classentity_1_1_enemy_a8f3405c245d6c43ff3b09953eb5b4636}} 
+\index{entity.Enemy@{entity.Enemy}!touchingPlayer@{touchingPlayer}}
+\index{touchingPlayer@{touchingPlayer}!entity.Enemy@{entity.Enemy}}
+\doxysubsubsection{\texorpdfstring{touchingPlayer()}{touchingPlayer()}}
+{\footnotesize\ttfamily boolean entity.\+Enemy.\+touching\+Player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classentity_1_1_player}{Player}}}]{player }\end{DoxyParamCaption})}
+
+
+
+Checks if the current enemy is in contact with the player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & The player entity \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_enemy_8java_source_l00038}{38}} of file \mbox{\hyperlink{_enemy_8java_source}{Enemy.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038                                                 \{}
+\DoxyCodeLine{00039         }
+\DoxyCodeLine{00040         \textcolor{keywordflow}{if}((\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x >= player.hitbox.x + player.hitbox.width)      \textcolor{comment}{// trop à droite}}
+\DoxyCodeLine{00041         || (\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.width <= player.hitbox.x) \textcolor{comment}{// trop à gauche}}
+\DoxyCodeLine{00042         || (\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y >= player.hitbox.y + player.hitbox.height) \textcolor{comment}{// trop en bas}}
+\DoxyCodeLine{00043         || (\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.height <= player.hitbox.y))\{\textcolor{comment}{// trop en haut}}
+\DoxyCodeLine{00044             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00045         \}}
+\DoxyCodeLine{00046 }
+\DoxyCodeLine{00047         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00048     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classentity_1_1_enemy_ab115ccb1365609753aa1dddbc9df0580}\label{classentity_1_1_enemy_ab115ccb1365609753aa1dddbc9df0580}} 
+\index{entity.Enemy@{entity.Enemy}!update@{update}}
+\index{update@{update}!entity.Enemy@{entity.Enemy}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void entity.\+Enemy.\+update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1_scene}{Scene}}}]{scene,  }\item[{double}]{dt }\end{DoxyParamCaption})}
+
+
+
+Updates the enemy entity based on the current scene and time elapsed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene} & The current game scene. \\
+\hline
+{\em dt} & The time elapsed since the last update. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classentity_1_1_character_a2d5d7da3d6f49c2b0b040850d741f8f7}{entity.\+Character}}.
+
+
+
+Definition at line \mbox{\hyperlink{_enemy_8java_source_l00057}{57}} of file \mbox{\hyperlink{_enemy_8java_source}{Enemy.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00057                                                \{}
+\DoxyCodeLine{00058         super.update(scene, dt); \textcolor{comment}{// Calls the parent class update method}}
+\DoxyCodeLine{00059         \textcolor{comment}{//TODO : find a method to make the enemy move in predictive patterns}}
+\DoxyCodeLine{00060     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classentity_1_1_enemy_a98ff59cf7565dd9fce084cfee4b9cb4b}\label{classentity_1_1_enemy_a98ff59cf7565dd9fce084cfee4b9cb4b}} 
+\index{entity.Enemy@{entity.Enemy}!\_xpRate@{\_xpRate}}
+\index{\_xpRate@{\_xpRate}!entity.Enemy@{entity.Enemy}}
+\doxysubsubsection{\texorpdfstring{\_xpRate}{\_xpRate}}
+{\footnotesize\ttfamily int entity.\+Enemy.\+\_\+xp\+Rate\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_enemy_8java_source_l00017}{17}} of file \mbox{\hyperlink{_enemy_8java_source}{Enemy.\+java}}.
+
+\mbox{\Hypertarget{classentity_1_1_enemy_a175fabae6e9cb47ec24f230e048afa91}\label{classentity_1_1_enemy_a175fabae6e9cb47ec24f230e048afa91}} 
+\index{entity.Enemy@{entity.Enemy}!name@{name}}
+\index{name@{name}!entity.Enemy@{entity.Enemy}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily String entity.\+Enemy.\+name}
+
+
+
+Definition at line \mbox{\hyperlink{_enemy_8java_source_l00018}{18}} of file \mbox{\hyperlink{_enemy_8java_source}{Enemy.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/entity/\mbox{\hyperlink{_enemy_8java}{Enemy.\+java}}\end{DoxyCompactItemize}

@@ -1,0 +1,167 @@
+\hypertarget{classitem_1_1_generator}{}\doxysection{item.\+Generator Class Reference}
+\label{classitem_1_1_generator}\index{item.Generator@{item.Generator}}
+
+
+Collaboration diagram for item.\+Generator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classitem_1_1_generator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classitem_1_1_item}{Item}} \mbox{\hyperlink{classitem_1_1_generator_ac17e98c64dc79f381c465bf21b5409a0}{generate\+Item}} ()
+\item 
+static \mbox{\hyperlink{classitem_1_1weapon_1_1_weapon}{Weapon}} \mbox{\hyperlink{classitem_1_1_generator_a997be8c512cda143c1b157628213ea91}{generate\+Weapon}} ()
+\item 
+static \mbox{\hyperlink{classitem_1_1potion_1_1_potion}{Potion}} \mbox{\hyperlink{classitem_1_1_generator_a6dfd2f13dbf175b05ba5a999650a1003}{generate\+Potion}} ()
+\item 
+static \mbox{\hyperlink{classitem_1_1armor_1_1_armor}{Armor}} \mbox{\hyperlink{classitem_1_1_generator_a851f02e244a9b63f0bb0e508a9a4d40d}{generate\+Armor}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_generator_8java_source_l00007}{7}} of file \mbox{\hyperlink{_generator_8java_source}{Generator.\+java}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classitem_1_1_generator_a851f02e244a9b63f0bb0e508a9a4d40d}\label{classitem_1_1_generator_a851f02e244a9b63f0bb0e508a9a4d40d}} 
+\index{item.Generator@{item.Generator}!generateArmor@{generateArmor}}
+\index{generateArmor@{generateArmor}!item.Generator@{item.Generator}}
+\doxysubsubsection{\texorpdfstring{generateArmor()}{generateArmor()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classitem_1_1armor_1_1_armor}{Armor}} item.\+Generator.\+generate\+Armor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_generator_8java_source_l00036}{36}} of file \mbox{\hyperlink{_generator_8java_source}{Generator.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036                                        \{}
+\DoxyCodeLine{00037         \textcolor{keywordtype}{int} nbRandom= (int) (Math.random() * 4);}
+\DoxyCodeLine{00038         \textcolor{keywordflow}{return} \textcolor{keywordflow}{switch} (nbRandom) \{}
+\DoxyCodeLine{00039             \textcolor{keywordflow}{case} 1 -\/> \textcolor{keyword}{new} \mbox{\hyperlink{classitem_1_1armor_1_1_body}{Body}}();}
+\DoxyCodeLine{00040             \textcolor{keywordflow}{case} 2 -\/> \textcolor{keyword}{new} \mbox{\hyperlink{classitem_1_1armor_1_1_head}{Head}}();}
+\DoxyCodeLine{00041             \textcolor{keywordflow}{case} 3 -\/> \textcolor{keyword}{new} \mbox{\hyperlink{classitem_1_1armor_1_1_legs}{Legs}}();}
+\DoxyCodeLine{00042             \textcolor{keywordflow}{default} -\/> \textcolor{keyword}{new} \mbox{\hyperlink{classitem_1_1armor_1_1_foot}{Foot}}();}
+\DoxyCodeLine{00043         \};}
+\DoxyCodeLine{00044     \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classitem_1_1_generator_a851f02e244a9b63f0bb0e508a9a4d40d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classitem_1_1_generator_ac17e98c64dc79f381c465bf21b5409a0}\label{classitem_1_1_generator_ac17e98c64dc79f381c465bf21b5409a0}} 
+\index{item.Generator@{item.Generator}!generateItem@{generateItem}}
+\index{generateItem@{generateItem}!item.Generator@{item.Generator}}
+\doxysubsubsection{\texorpdfstring{generateItem()}{generateItem()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classitem_1_1_item}{Item}} item.\+Generator.\+generate\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_generator_8java_source_l00009}{9}} of file \mbox{\hyperlink{_generator_8java_source}{Generator.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00009                                      \{}
+\DoxyCodeLine{00010         \textcolor{keywordtype}{int} nbRandom= (int) (Math.random() * 3);}
+\DoxyCodeLine{00011         \textcolor{keywordflow}{return} \textcolor{keywordflow}{switch} (nbRandom) \{}
+\DoxyCodeLine{00012             \textcolor{keywordflow}{case} 1 -\/> Generator.generateWeapon();}
+\DoxyCodeLine{00013             \textcolor{keywordflow}{case} 2 -\/> Generator.generateArmor();}
+\DoxyCodeLine{00014             \textcolor{keywordflow}{default} -\/> Generator.generatePotion();}
+\DoxyCodeLine{00015         \};}
+\DoxyCodeLine{00016     \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classitem_1_1_generator_ac17e98c64dc79f381c465bf21b5409a0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classitem_1_1_generator_ac17e98c64dc79f381c465bf21b5409a0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classitem_1_1_generator_a6dfd2f13dbf175b05ba5a999650a1003}\label{classitem_1_1_generator_a6dfd2f13dbf175b05ba5a999650a1003}} 
+\index{item.Generator@{item.Generator}!generatePotion@{generatePotion}}
+\index{generatePotion@{generatePotion}!item.Generator@{item.Generator}}
+\doxysubsubsection{\texorpdfstring{generatePotion()}{generatePotion()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classitem_1_1potion_1_1_potion}{Potion}} item.\+Generator.\+generate\+Potion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_generator_8java_source_l00027}{27}} of file \mbox{\hyperlink{_generator_8java_source}{Generator.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027                                          \{}
+\DoxyCodeLine{00028         \textcolor{keywordtype}{int} nbRandom= (int) (Math.random() * 3);}
+\DoxyCodeLine{00029         \textcolor{keywordflow}{return} \textcolor{keywordflow}{switch} (nbRandom) \{}
+\DoxyCodeLine{00030             \textcolor{keywordflow}{case} 1 -\/> \textcolor{keyword}{new} \mbox{\hyperlink{classitem_1_1potion_1_1_health_potion}{HealthPotion}}();}
+\DoxyCodeLine{00031             \textcolor{keywordflow}{case} 2 -\/> \textcolor{keyword}{new} \mbox{\hyperlink{classitem_1_1potion_1_1_mana_potion}{ManaPotion}}();}
+\DoxyCodeLine{00032             \textcolor{keywordflow}{default} -\/> \textcolor{keyword}{new} \mbox{\hyperlink{classitem_1_1potion_1_1_speed_potion}{SpeedPotion}}();}
+\DoxyCodeLine{00033         \};}
+\DoxyCodeLine{00034     \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classitem_1_1_generator_a6dfd2f13dbf175b05ba5a999650a1003_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classitem_1_1_generator_a997be8c512cda143c1b157628213ea91}\label{classitem_1_1_generator_a997be8c512cda143c1b157628213ea91}} 
+\index{item.Generator@{item.Generator}!generateWeapon@{generateWeapon}}
+\index{generateWeapon@{generateWeapon}!item.Generator@{item.Generator}}
+\doxysubsubsection{\texorpdfstring{generateWeapon()}{generateWeapon()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classitem_1_1weapon_1_1_weapon}{Weapon}} item.\+Generator.\+generate\+Weapon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_generator_8java_source_l00018}{18}} of file \mbox{\hyperlink{_generator_8java_source}{Generator.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018                                          \{}
+\DoxyCodeLine{00019         \textcolor{keywordtype}{int} nbRandom= (int) (Math.random() * 3);}
+\DoxyCodeLine{00020         \textcolor{keywordflow}{return} \textcolor{keywordflow}{switch} (nbRandom) \{}
+\DoxyCodeLine{00021             \textcolor{keywordflow}{case} 1 -\/> \textcolor{keyword}{new} \mbox{\hyperlink{classitem_1_1weapon_1_1_bow}{Bow}}();}
+\DoxyCodeLine{00022             \textcolor{keywordflow}{case} 2 -\/> \textcolor{keyword}{new} \mbox{\hyperlink{classitem_1_1weapon_1_1_staff}{Staff}}();}
+\DoxyCodeLine{00023             \textcolor{keywordflow}{default} -\/> \textcolor{keyword}{new} \mbox{\hyperlink{classitem_1_1weapon_1_1_sword}{Sword}}();}
+\DoxyCodeLine{00024         \};}
+\DoxyCodeLine{00025     \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classitem_1_1_generator_a997be8c512cda143c1b157628213ea91_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/item/\mbox{\hyperlink{_generator_8java}{Generator.\+java}}\end{DoxyCompactItemize}

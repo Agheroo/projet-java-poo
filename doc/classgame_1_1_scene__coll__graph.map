@@ -1,0 +1,14 @@
+<map id="game.Scene" name="game.Scene">
+<area shape="rect" id="node1" title="Represents an abstract scene in the game." alt="" coords="158,844,321,980"/>
+<area shape="rect" id="node2" href="$enumgame_1_1_scene_1_1_state.html" title=" " alt="" coords="5,601,145,723"/>
+<area shape="rect" id="node3" href="$classmain_1_1_key_handler.html" title="Handles keyboard input using the singleton pattern." alt="" coords="170,557,309,767"/>
+<area shape="rect" id="node4" title=" " alt="" coords="190,381,289,458"/>
+<area shape="rect" id="node5" href="$class_u_i_1_1_h_u_d.html" title=" " alt="" coords="428,579,539,745"/>
+<area shape="rect" id="node6" href="$class_u_i_1_1_choice_button.html" title=" " alt="" coords="364,359,499,480"/>
+<area shape="rect" id="node7" href="$class_u_i_1_1_textbox.html" title=" " alt="" coords="279,145,410,296"/>
+<area shape="rect" id="node8" title=" " alt="" coords="231,5,293,83"/>
+<area shape="rect" id="node9" title=" " alt="" coords="317,5,373,83"/>
+<area shape="rect" id="node10" title=" " alt="" coords="399,5,450,83"/>
+<area shape="rect" id="node11" title=" " alt="" coords="435,182,553,259"/>
+<area shape="rect" id="node12" href="$enum_u_i_1_1_h_u_d_1_1_menu_type.html" title=" " alt="" coords="523,359,663,480"/>
+</map>

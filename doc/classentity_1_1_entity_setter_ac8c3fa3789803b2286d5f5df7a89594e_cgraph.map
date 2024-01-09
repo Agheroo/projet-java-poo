@@ -1,0 +1,4 @@
+<map id="entity.EntitySetter.setObject" name="entity.EntitySetter.setObject">
+<area shape="rect" id="node1" title="Method to set up objects in the game world, such as keys, doors, and chests." alt="" coords="5,5,209,32"/>
+<area shape="rect" id="node2" href="$classgame_1_1_world.html#a65d2a74c48359e2f77648d1433f84104" title="Adds an object to the HashMap with the specified coordinates." alt="" coords="257,5,428,32"/>
+</map>

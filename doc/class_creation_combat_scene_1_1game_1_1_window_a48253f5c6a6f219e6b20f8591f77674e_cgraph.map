@@ -1,0 +1,5 @@
+<map id="CreationCombatScene.game.Window.run" name="CreationCombatScene.game.Window.run">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,217,47"/>
+<area shape="rect" id="node2" href="$class_creation_combat_scene_1_1game_1_1_window.html#ac3d02abb951693093b08c7041d41e66f" title=" " alt="" coords="265,5,477,47"/>
+<area shape="rect" id="node3" href="$classgame_1_1_scene.html#a6b61e8f2533a2ba76c543bbd00d989a2" title="Updates the scene." alt="" coords="525,13,676,39"/>
+</map>

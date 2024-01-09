@@ -1,0 +1,8 @@
+<map id="CreationCombatScene.entity.PlayerTest" name="CreationCombatScene.entity.PlayerTest">
+<area shape="rect" id="node1" title=" " alt="" coords="64,1155,275,1261"/>
+<area shape="rect" id="node2" href="$classentity_1_1_player.html" title="Represents the player entity in the game." alt="" coords="102,969,237,1105"/>
+<area shape="rect" id="node3" href="$classentity_1_1_character.html" title="Represents an abstract character entity with position, hitbox, stats, and animations." alt="" coords="88,564,251,920"/>
+<area shape="rect" id="node4" href="$classentity_1_1_entity.html" title="Represents an abstract entity with position, hitbox, and animations." alt="" coords="5,145,168,399"/>
+<area shape="rect" id="node5" title=" " alt="" coords="43,5,130,83"/>
+<area shape="rect" id="node6" title=" " alt="" coords="193,233,311,311"/>
+</map>

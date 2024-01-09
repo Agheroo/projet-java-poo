@@ -1,0 +1,232 @@
+\hypertarget{class_u_i_1_1_textbox}{}\doxysection{UI.\+Textbox Class Reference}
+\label{class_u_i_1_1_textbox}\index{UI.Textbox@{UI.Textbox}}
+
+
+Inheritance diagram for UI.\+Textbox\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{class_u_i_1_1_textbox__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UI.\+Textbox\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{class_u_i_1_1_textbox__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_i_1_1_textbox_a11acae0a6446e83c4bcff70bdba42a89}{Textbox}} (String text, String font\+Name, int w, int h, Color color)
+\item 
+void \mbox{\hyperlink{class_u_i_1_1_textbox_aab675a99675e6ba3e03630cf973f2799}{draw}} (Graphics2D g2, int x, int y)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_u_i_1_1_textbox_ac3a40742547f48f95f29ce1649ac88a0}{load\+Font}} (String font\+Name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_u_i_1_1_textbox_abe6a2b59a3f649a7aa35e0cb14a1d66b}{\+\_\+width}}
+\item 
+int \mbox{\hyperlink{class_u_i_1_1_textbox_a76ab01a7be11595a9a06032f7d248470}{\+\_\+height}}
+\item 
+Color \mbox{\hyperlink{class_u_i_1_1_textbox_a5c682cf12a37a04fd9276b686618f7d8}{\+\_\+color}}
+\item 
+String \mbox{\hyperlink{class_u_i_1_1_textbox_ab5418e63a4261406606ce6843cb7da57}{\+\_\+text}}
+\item 
+Font \mbox{\hyperlink{class_u_i_1_1_textbox_a31b10668babae92bd413efc2f95e2a62}{\+\_\+font}}
+\item 
+int \mbox{\hyperlink{class_u_i_1_1_textbox_a186137af66f49813dc7aa286c1c75fa0}{\+\_\+font\+Size\+To\+Use}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_textbox_8java_source_l00012}{12}} of file \mbox{\hyperlink{_textbox_8java_source}{Textbox.\+java}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_u_i_1_1_textbox_a11acae0a6446e83c4bcff70bdba42a89}\label{class_u_i_1_1_textbox_a11acae0a6446e83c4bcff70bdba42a89}} 
+\index{UI.Textbox@{UI.Textbox}!Textbox@{Textbox}}
+\index{Textbox@{Textbox}!UI.Textbox@{UI.Textbox}}
+\doxysubsubsection{\texorpdfstring{Textbox()}{Textbox()}}
+{\footnotesize\ttfamily UI.\+Textbox.\+Textbox (\begin{DoxyParamCaption}\item[{String}]{text,  }\item[{String}]{font\+Name,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{Color}]{color }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_textbox_8java_source_l00020}{20}} of file \mbox{\hyperlink{_textbox_8java_source}{Textbox.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020                                                                            \{  }
+\DoxyCodeLine{00021         \mbox{\hyperlink{class_u_i_1_1_textbox_abe6a2b59a3f649a7aa35e0cb14a1d66b}{\_width}} = w; \mbox{\hyperlink{class_u_i_1_1_textbox_a76ab01a7be11595a9a06032f7d248470}{\_height}} = h;}
+\DoxyCodeLine{00022         \mbox{\hyperlink{class_u_i_1_1_textbox_ab5418e63a4261406606ce6843cb7da57}{\_text}} = text;  }
+\DoxyCodeLine{00023         \mbox{\hyperlink{class_u_i_1_1_textbox_a5c682cf12a37a04fd9276b686618f7d8}{\_color}} = color;}
+\DoxyCodeLine{00024         }
+\DoxyCodeLine{00025         \textcolor{comment}{//loadFont(fontName);}}
+\DoxyCodeLine{00026         \mbox{\hyperlink{class_u_i_1_1_textbox_a31b10668babae92bd413efc2f95e2a62}{\_font}} = \textcolor{keyword}{new} Font(fontName, Font.PLAIN, 1);}
+\DoxyCodeLine{00027 }
+\DoxyCodeLine{00028         }
+\DoxyCodeLine{00029         \textcolor{keywordtype}{int} stringWidth = this.getFontMetrics(\mbox{\hyperlink{class_u_i_1_1_textbox_a31b10668babae92bd413efc2f95e2a62}{\_font}}).stringWidth(\mbox{\hyperlink{class_u_i_1_1_textbox_ab5418e63a4261406606ce6843cb7da57}{\_text}});}
+\DoxyCodeLine{00030         \textcolor{keywordtype}{int} componentWidth = \mbox{\hyperlink{class_u_i_1_1_textbox_abe6a2b59a3f649a7aa35e0cb14a1d66b}{\_width}};}
+\DoxyCodeLine{00031 }
+\DoxyCodeLine{00032         \textcolor{comment}{// Find out how much the font can grow in width.}}
+\DoxyCodeLine{00033         \textcolor{keywordtype}{double} widthRatio = (double)componentWidth / (\textcolor{keywordtype}{double})stringWidth;}
+\DoxyCodeLine{00034 }
+\DoxyCodeLine{00035         \textcolor{keywordtype}{int} newFontSize = (int)(\mbox{\hyperlink{class_u_i_1_1_textbox_a31b10668babae92bd413efc2f95e2a62}{\_font}}.getSize() * widthRatio);}
+\DoxyCodeLine{00036         \textcolor{keywordtype}{int} componentHeight = \mbox{\hyperlink{class_u_i_1_1_textbox_a76ab01a7be11595a9a06032f7d248470}{\_height}};}
+\DoxyCodeLine{00037 }
+\DoxyCodeLine{00038         \textcolor{comment}{// Pick a new font size so it will not be larger than the height of label.}}
+\DoxyCodeLine{00039         \mbox{\hyperlink{class_u_i_1_1_textbox_a186137af66f49813dc7aa286c1c75fa0}{\_fontSizeToUse}} = Math.min(newFontSize, componentHeight);}
+\DoxyCodeLine{00040 }
+\DoxyCodeLine{00041         \textcolor{comment}{// Set the label's font size to the newly determined size.}}
+\DoxyCodeLine{00042         \mbox{\hyperlink{class_u_i_1_1_textbox_a31b10668babae92bd413efc2f95e2a62}{\_font}} = \textcolor{keyword}{new} Font(fontName, Font.PLAIN, \mbox{\hyperlink{class_u_i_1_1_textbox_a186137af66f49813dc7aa286c1c75fa0}{\_fontSizeToUse}});}
+\DoxyCodeLine{00043     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_i_1_1_textbox_aab675a99675e6ba3e03630cf973f2799}\label{class_u_i_1_1_textbox_aab675a99675e6ba3e03630cf973f2799}} 
+\index{UI.Textbox@{UI.Textbox}!draw@{draw}}
+\index{draw@{draw}!UI.Textbox@{UI.Textbox}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void UI.\+Textbox.\+draw (\begin{DoxyParamCaption}\item[{Graphics2D}]{g2,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_textbox_8java_source_l00059}{59}} of file \mbox{\hyperlink{_textbox_8java_source}{Textbox.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00059                                                 \{}
+\DoxyCodeLine{00060         \textcolor{comment}{//TODO: find a way to center text on the button}}
+\DoxyCodeLine{00061         g2.setFont(\mbox{\hyperlink{class_u_i_1_1_textbox_a31b10668babae92bd413efc2f95e2a62}{\_font}});}
+\DoxyCodeLine{00062         g2.setColor(Color.black);}
+\DoxyCodeLine{00063         g2.drawRect(x,y,\mbox{\hyperlink{class_u_i_1_1_textbox_abe6a2b59a3f649a7aa35e0cb14a1d66b}{\_width}},\mbox{\hyperlink{class_u_i_1_1_textbox_a76ab01a7be11595a9a06032f7d248470}{\_height}});}
+\DoxyCodeLine{00064         g2.setColor(\mbox{\hyperlink{class_u_i_1_1_textbox_a5c682cf12a37a04fd9276b686618f7d8}{\_color}});}
+\DoxyCodeLine{00065         g2.drawString(\mbox{\hyperlink{class_u_i_1_1_textbox_ab5418e63a4261406606ce6843cb7da57}{\_text}}, x + \mbox{\hyperlink{class_u_i_1_1_textbox_a186137af66f49813dc7aa286c1c75fa0}{\_fontSizeToUse}}, y + (\mbox{\hyperlink{class_u_i_1_1_textbox_a76ab01a7be11595a9a06032f7d248470}{\_height}} +\mbox{\hyperlink{class_u_i_1_1_textbox_a186137af66f49813dc7aa286c1c75fa0}{\_fontSizeToUse}})/2);}
+\DoxyCodeLine{00066     \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_1_1_textbox_aab675a99675e6ba3e03630cf973f2799_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_i_1_1_textbox_ac3a40742547f48f95f29ce1649ac88a0}\label{class_u_i_1_1_textbox_ac3a40742547f48f95f29ce1649ac88a0}} 
+\index{UI.Textbox@{UI.Textbox}!loadFont@{loadFont}}
+\index{loadFont@{loadFont}!UI.Textbox@{UI.Textbox}}
+\doxysubsubsection{\texorpdfstring{loadFont()}{loadFont()}}
+{\footnotesize\ttfamily static void UI.\+Textbox.\+load\+Font (\begin{DoxyParamCaption}\item[{String}]{font\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_textbox_8java_source_l00046}{46}} of file \mbox{\hyperlink{_textbox_8java_source}{Textbox.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00046                                                 \{}
+\DoxyCodeLine{00047         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{00048             GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();}
+\DoxyCodeLine{00049             ge.registerFont(Font.createFont(Font.TRUETYPE\_FONT, \textcolor{keyword}{new} File(\textcolor{stringliteral}{"{}res/hud/font/rainyhearts.ttf"{}})));}
+\DoxyCodeLine{00050         \} }
+\DoxyCodeLine{00051         \textcolor{keywordflow}{catch} (FontFormatException e) \{}
+\DoxyCodeLine{00052             e.printStackTrace();}
+\DoxyCodeLine{00053         \}}
+\DoxyCodeLine{00054         \textcolor{keywordflow}{catch} (IOException e) \{}
+\DoxyCodeLine{00055             e.printStackTrace();}
+\DoxyCodeLine{00056         \}}
+\DoxyCodeLine{00057     \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_1_1_textbox_ac3a40742547f48f95f29ce1649ac88a0_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_u_i_1_1_textbox_a5c682cf12a37a04fd9276b686618f7d8}\label{class_u_i_1_1_textbox_a5c682cf12a37a04fd9276b686618f7d8}} 
+\index{UI.Textbox@{UI.Textbox}!\_color@{\_color}}
+\index{\_color@{\_color}!UI.Textbox@{UI.Textbox}}
+\doxysubsubsection{\texorpdfstring{\_color}{\_color}}
+{\footnotesize\ttfamily Color UI.\+Textbox.\+\_\+color\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_textbox_8java_source_l00014}{14}} of file \mbox{\hyperlink{_textbox_8java_source}{Textbox.\+java}}.
+
+\mbox{\Hypertarget{class_u_i_1_1_textbox_a31b10668babae92bd413efc2f95e2a62}\label{class_u_i_1_1_textbox_a31b10668babae92bd413efc2f95e2a62}} 
+\index{UI.Textbox@{UI.Textbox}!\_font@{\_font}}
+\index{\_font@{\_font}!UI.Textbox@{UI.Textbox}}
+\doxysubsubsection{\texorpdfstring{\_font}{\_font}}
+{\footnotesize\ttfamily Font UI.\+Textbox.\+\_\+font\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_textbox_8java_source_l00016}{16}} of file \mbox{\hyperlink{_textbox_8java_source}{Textbox.\+java}}.
+
+\mbox{\Hypertarget{class_u_i_1_1_textbox_a186137af66f49813dc7aa286c1c75fa0}\label{class_u_i_1_1_textbox_a186137af66f49813dc7aa286c1c75fa0}} 
+\index{UI.Textbox@{UI.Textbox}!\_fontSizeToUse@{\_fontSizeToUse}}
+\index{\_fontSizeToUse@{\_fontSizeToUse}!UI.Textbox@{UI.Textbox}}
+\doxysubsubsection{\texorpdfstring{\_fontSizeToUse}{\_fontSizeToUse}}
+{\footnotesize\ttfamily int UI.\+Textbox.\+\_\+font\+Size\+To\+Use\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_textbox_8java_source_l00017}{17}} of file \mbox{\hyperlink{_textbox_8java_source}{Textbox.\+java}}.
+
+\mbox{\Hypertarget{class_u_i_1_1_textbox_a76ab01a7be11595a9a06032f7d248470}\label{class_u_i_1_1_textbox_a76ab01a7be11595a9a06032f7d248470}} 
+\index{UI.Textbox@{UI.Textbox}!\_height@{\_height}}
+\index{\_height@{\_height}!UI.Textbox@{UI.Textbox}}
+\doxysubsubsection{\texorpdfstring{\_height}{\_height}}
+{\footnotesize\ttfamily int UI.\+Textbox.\+\_\+height\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_textbox_8java_source_l00013}{13}} of file \mbox{\hyperlink{_textbox_8java_source}{Textbox.\+java}}.
+
+\mbox{\Hypertarget{class_u_i_1_1_textbox_ab5418e63a4261406606ce6843cb7da57}\label{class_u_i_1_1_textbox_ab5418e63a4261406606ce6843cb7da57}} 
+\index{UI.Textbox@{UI.Textbox}!\_text@{\_text}}
+\index{\_text@{\_text}!UI.Textbox@{UI.Textbox}}
+\doxysubsubsection{\texorpdfstring{\_text}{\_text}}
+{\footnotesize\ttfamily String UI.\+Textbox.\+\_\+text\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_textbox_8java_source_l00015}{15}} of file \mbox{\hyperlink{_textbox_8java_source}{Textbox.\+java}}.
+
+\mbox{\Hypertarget{class_u_i_1_1_textbox_abe6a2b59a3f649a7aa35e0cb14a1d66b}\label{class_u_i_1_1_textbox_abe6a2b59a3f649a7aa35e0cb14a1d66b}} 
+\index{UI.Textbox@{UI.Textbox}!\_width@{\_width}}
+\index{\_width@{\_width}!UI.Textbox@{UI.Textbox}}
+\doxysubsubsection{\texorpdfstring{\_width}{\_width}}
+{\footnotesize\ttfamily int UI.\+Textbox.\+\_\+width\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_textbox_8java_source_l00013}{13}} of file \mbox{\hyperlink{_textbox_8java_source}{Textbox.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+UI/\mbox{\hyperlink{_textbox_8java}{Textbox.\+java}}\end{DoxyCompactItemize}

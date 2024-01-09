@@ -1,0 +1,12 @@
+<map id="game.World.draw" name="game.World.draw">
+<area shape="rect" id="node1" title="Draws the game world and its entities." alt="" coords="5,107,141,133"/>
+<area shape="rect" id="node2" href="$classgame_1_1_fight_scene.html#a9525cb3d263680e8d808b3abde00e8d8" title="Draws the fight scene." alt="" coords="209,56,379,83"/>
+<area shape="rect" id="node7" href="$classtiles_1_1_tile_manager.html#a3225a1e7f736b5eb311b0efd9f34613b" title="Draws the tiles in the game world." alt="" coords="209,107,379,133"/>
+<area shape="rect" id="node10" href="$classentity_1_1_character.html#a2e5b1455cc08b1a213cf51ecf102b6bb" title="Draws the character in the world scene." alt="" coords="189,157,399,184"/>
+<area shape="rect" id="node3" href="$class_u_i_1_1_h_u_d.html#a290720935a1960ce8159eae9e7a535fa" title=" " alt="" coords="495,5,602,32"/>
+<area shape="rect" id="node6" href="$classentity_1_1_character.html#a24e991ea21c30b197a36fe5e9c7b0733" title="Draws the character in the fight scene." alt="" coords="447,56,651,83"/>
+<area shape="rect" id="node4" href="$class_u_i_1_1_choice_button.html#a1000744853168892a77f3aaa14886739" title=" " alt="" coords="699,5,861,32"/>
+<area shape="rect" id="node5" href="$class_u_i_1_1_textbox.html#aab675a99675e6ba3e03630cf973f2799" title=" " alt="" coords="909,5,1036,32"/>
+<area shape="rect" id="node8" href="$classtiles_1_1_tile.html#a31c27631fa71574b1a9bd9cad296fcbe" title="Draw the tile on the screen." alt="" coords="491,107,606,133"/>
+<area shape="rect" id="node9" href="$classtiles_1_1_tile.html#a7bfcdb11efa89176a068c2a473ce3e9d" title="Get the position of the tile." alt="" coords="485,157,612,184"/>
+</map>

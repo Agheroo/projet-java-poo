@@ -1,0 +1,194 @@
+\hypertarget{class_u_i_1_1_choice_button}{}\doxysection{UI.\+Choice\+Button Class Reference}
+\label{class_u_i_1_1_choice_button}\index{UI.ChoiceButton@{UI.ChoiceButton}}
+
+
+Collaboration diagram for UI.\+Choice\+Button\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{class_u_i_1_1_choice_button__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_i_1_1_choice_button_a294842049466c9c08efadc34133dfb92}{Choice\+Button}} (int w, int h, String title, String font\+Name, Color font\+Color)
+\item 
+void \mbox{\hyperlink{class_u_i_1_1_choice_button_a1000744853168892a77f3aaa14886739}{draw}} (Graphics2D g2, int x, int y)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_u_i_1_1_choice_button_a1e99b395d0551ce2a7e867a40f7ccdeb}{width}}
+\item 
+int \mbox{\hyperlink{class_u_i_1_1_choice_button_a63b5743b35bdb35e849f314efd401e54}{height}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_u_i_1_1_choice_button_ae85180ccaa8c752d9adb039d65d969a7}{load\+Texture}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_i_1_1_textbox}{Textbox}} \mbox{\hyperlink{class_u_i_1_1_choice_button_aef1f2977be8b76a11ac2c5e78ccf54a4}{\+\_\+text\+Box}}
+\item 
+Buffered\+Image \mbox{\hyperlink{class_u_i_1_1_choice_button_aec1a0d44421fad173aa039f396cae669}{\+\_\+bg\+Texture}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_choice_button_8java_source_l00013}{13}} of file \mbox{\hyperlink{_choice_button_8java_source}{Choice\+Button.\+java}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_u_i_1_1_choice_button_a294842049466c9c08efadc34133dfb92}\label{class_u_i_1_1_choice_button_a294842049466c9c08efadc34133dfb92}} 
+\index{UI.ChoiceButton@{UI.ChoiceButton}!ChoiceButton@{ChoiceButton}}
+\index{ChoiceButton@{ChoiceButton}!UI.ChoiceButton@{UI.ChoiceButton}}
+\doxysubsubsection{\texorpdfstring{ChoiceButton()}{ChoiceButton()}}
+{\footnotesize\ttfamily UI.\+Choice\+Button.\+Choice\+Button (\begin{DoxyParamCaption}\item[{int}]{w,  }\item[{int}]{h,  }\item[{String}]{title,  }\item[{String}]{font\+Name,  }\item[{Color}]{font\+Color }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_choice_button_8java_source_l00018}{18}} of file \mbox{\hyperlink{_choice_button_8java_source}{Choice\+Button.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018                                                                                     \{}
+\DoxyCodeLine{00019         this.width = w; this.height = h;}
+\DoxyCodeLine{00020 }
+\DoxyCodeLine{00021         \mbox{\hyperlink{class_u_i_1_1_choice_button_aef1f2977be8b76a11ac2c5e78ccf54a4}{\_textBox}} = \textcolor{keyword}{new} Textbox(title,fontName,w,h,fontColor);}
+\DoxyCodeLine{00022 }
+\DoxyCodeLine{00023         \mbox{\hyperlink{class_u_i_1_1_choice_button_ae85180ccaa8c752d9adb039d65d969a7}{loadTexture}}();}
+\DoxyCodeLine{00024     \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_1_1_choice_button_a294842049466c9c08efadc34133dfb92_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_i_1_1_choice_button_a1000744853168892a77f3aaa14886739}\label{class_u_i_1_1_choice_button_a1000744853168892a77f3aaa14886739}} 
+\index{UI.ChoiceButton@{UI.ChoiceButton}!draw@{draw}}
+\index{draw@{draw}!UI.ChoiceButton@{UI.ChoiceButton}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void UI.\+Choice\+Button.\+draw (\begin{DoxyParamCaption}\item[{Graphics2D}]{g2,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_choice_button_8java_source_l00035}{35}} of file \mbox{\hyperlink{_choice_button_8java_source}{Choice\+Button.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035                                                  \{}
+\DoxyCodeLine{00036         \textcolor{comment}{//g2.drawImage(\_bgTexture,x,y,80*3,20*3,null);}}
+\DoxyCodeLine{00037         g2.setColor(\textcolor{keyword}{new} Color(0xA38168));}
+\DoxyCodeLine{00038         g2.fillRect(x,y,\mbox{\hyperlink{class_u_i_1_1_choice_button_a1e99b395d0551ce2a7e867a40f7ccdeb}{width}},\mbox{\hyperlink{class_u_i_1_1_choice_button_a63b5743b35bdb35e849f314efd401e54}{height}});}
+\DoxyCodeLine{00039         \mbox{\hyperlink{class_u_i_1_1_choice_button_aef1f2977be8b76a11ac2c5e78ccf54a4}{\_textBox}}.\mbox{\hyperlink{class_u_i_1_1_textbox_aab675a99675e6ba3e03630cf973f2799}{draw}}(g2,x,y);}
+\DoxyCodeLine{00040     \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{class_u_i_1_1_choice_button_a1000744853168892a77f3aaa14886739_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_1_1_choice_button_a1000744853168892a77f3aaa14886739_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_i_1_1_choice_button_ae85180ccaa8c752d9adb039d65d969a7}\label{class_u_i_1_1_choice_button_ae85180ccaa8c752d9adb039d65d969a7}} 
+\index{UI.ChoiceButton@{UI.ChoiceButton}!loadTexture@{loadTexture}}
+\index{loadTexture@{loadTexture}!UI.ChoiceButton@{UI.ChoiceButton}}
+\doxysubsubsection{\texorpdfstring{loadTexture()}{loadTexture()}}
+{\footnotesize\ttfamily void UI.\+Choice\+Button.\+load\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_choice_button_8java_source_l00026}{26}} of file \mbox{\hyperlink{_choice_button_8java_source}{Choice\+Button.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00026                               \{}
+\DoxyCodeLine{00027         \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{00028             \mbox{\hyperlink{class_u_i_1_1_choice_button_aec1a0d44421fad173aa039f396cae669}{\_bgTexture}} = ImageIO.read(\textcolor{keyword}{new} FileInputStream(\textcolor{stringliteral}{"{}res/hud/bg.png"{}}));}
+\DoxyCodeLine{00029         \}}
+\DoxyCodeLine{00030         \textcolor{keywordflow}{catch}(IOException e)\{}
+\DoxyCodeLine{00031             e.printStackTrace();}
+\DoxyCodeLine{00032         \}}
+\DoxyCodeLine{00033     \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_1_1_choice_button_ae85180ccaa8c752d9adb039d65d969a7_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_u_i_1_1_choice_button_aec1a0d44421fad173aa039f396cae669}\label{class_u_i_1_1_choice_button_aec1a0d44421fad173aa039f396cae669}} 
+\index{UI.ChoiceButton@{UI.ChoiceButton}!\_bgTexture@{\_bgTexture}}
+\index{\_bgTexture@{\_bgTexture}!UI.ChoiceButton@{UI.ChoiceButton}}
+\doxysubsubsection{\texorpdfstring{\_bgTexture}{\_bgTexture}}
+{\footnotesize\ttfamily Buffered\+Image UI.\+Choice\+Button.\+\_\+bg\+Texture\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_choice_button_8java_source_l00016}{16}} of file \mbox{\hyperlink{_choice_button_8java_source}{Choice\+Button.\+java}}.
+
+\mbox{\Hypertarget{class_u_i_1_1_choice_button_aef1f2977be8b76a11ac2c5e78ccf54a4}\label{class_u_i_1_1_choice_button_aef1f2977be8b76a11ac2c5e78ccf54a4}} 
+\index{UI.ChoiceButton@{UI.ChoiceButton}!\_textBox@{\_textBox}}
+\index{\_textBox@{\_textBox}!UI.ChoiceButton@{UI.ChoiceButton}}
+\doxysubsubsection{\texorpdfstring{\_textBox}{\_textBox}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_u_i_1_1_textbox}{Textbox}} UI.\+Choice\+Button.\+\_\+text\+Box\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_choice_button_8java_source_l00015}{15}} of file \mbox{\hyperlink{_choice_button_8java_source}{Choice\+Button.\+java}}.
+
+\mbox{\Hypertarget{class_u_i_1_1_choice_button_a63b5743b35bdb35e849f314efd401e54}\label{class_u_i_1_1_choice_button_a63b5743b35bdb35e849f314efd401e54}} 
+\index{UI.ChoiceButton@{UI.ChoiceButton}!height@{height}}
+\index{height@{height}!UI.ChoiceButton@{UI.ChoiceButton}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily int UI.\+Choice\+Button.\+height}
+
+
+
+Definition at line \mbox{\hyperlink{_choice_button_8java_source_l00014}{14}} of file \mbox{\hyperlink{_choice_button_8java_source}{Choice\+Button.\+java}}.
+
+\mbox{\Hypertarget{class_u_i_1_1_choice_button_a1e99b395d0551ce2a7e867a40f7ccdeb}\label{class_u_i_1_1_choice_button_a1e99b395d0551ce2a7e867a40f7ccdeb}} 
+\index{UI.ChoiceButton@{UI.ChoiceButton}!width@{width}}
+\index{width@{width}!UI.ChoiceButton@{UI.ChoiceButton}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily int UI.\+Choice\+Button.\+width}
+
+
+
+Definition at line \mbox{\hyperlink{_choice_button_8java_source_l00014}{14}} of file \mbox{\hyperlink{_choice_button_8java_source}{Choice\+Button.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+UI/\mbox{\hyperlink{_choice_button_8java}{Choice\+Button.\+java}}\end{DoxyCompactItemize}

@@ -1,0 +1,5 @@
+<map id="tiles.Tile.getCollision" name="tiles.Tile.getCollision">
+<area shape="rect" id="node1" title="Get whether the tile is blocking." alt="" coords="465,13,624,39"/>
+<area shape="rect" id="node2" href="$classentity_1_1_character.html#aeee6d959ceb691d58104656642f828fc" title="Checks for collision with nearby tiles using the character&#39;s hitbox." alt="" coords="227,5,417,47"/>
+<area shape="rect" id="node3" href="$classentity_1_1_character.html#a2d5d7da3d6f49c2b0b040850d741f8f7" title="Updates the character entity based on the current scene and time elapsed." alt="" coords="5,13,179,39"/>
+</map>

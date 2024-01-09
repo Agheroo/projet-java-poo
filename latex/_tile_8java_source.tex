@@ -1,0 +1,112 @@
+\hypertarget{_tile_8java_source}{}\doxysection{Tile.\+java}
+\label{_tile_8java_source}\index{src/tiles/Tile.java@{src/tiles/Tile.java}}
+\mbox{\hyperlink{_tile_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00006}\mbox{\hyperlink{namespacetiles}{00006}} \textcolor{keyword}{package }tiles;}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00008}00008 \textcolor{keyword}{import} java.awt.Graphics2D;}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00009}00009 \textcolor{keyword}{import} java.awt.image.BufferedImage;}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00010}00010 \textcolor{keyword}{import} java.io.FileInputStream;}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00011}00011 \textcolor{keyword}{import} java.io.IOException;}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00013}00013 \textcolor{keyword}{import} javax.imageio.ImageIO;}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00015}00015 \textcolor{keyword}{import} \mbox{\hyperlink{namespacegame}{game}}.\mbox{\hyperlink{classgame_1_1_const}{Const}};}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00021}\mbox{\hyperlink{classtiles_1_1_tile}{00021}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classtiles_1_1_tile}{Tile}} \{}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00022}\mbox{\hyperlink{classtiles_1_1_tile_a40936298413f15da671cea46fb906a7f}{00022}}     \textcolor{keyword}{private} \textcolor{keywordtype}{boolean} \mbox{\hyperlink{classtiles_1_1_tile_a40936298413f15da671cea46fb906a7f}{\_isBlocking}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00023}\mbox{\hyperlink{classtiles_1_1_tile_ac5f4a59757ed0765e77cc1400da27190}{00023}}     \textcolor{keyword}{private} \textcolor{keywordtype}{int} \mbox{\hyperlink{classtiles_1_1_tile_ac5f4a59757ed0765e77cc1400da27190}{\_worldX}}, \mbox{\hyperlink{classtiles_1_1_tile_a2309cd4b5bf1a049920e9a253864531c}{\_worldY}};}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00025}00025     \textcolor{comment}{// Display purpose variables}}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00026}\mbox{\hyperlink{classtiles_1_1_tile_a9b560cd2617c57129c1dc091f1e4ea15}{00026}}     \textcolor{keyword}{private} \textcolor{keyword}{final} \textcolor{keywordtype}{int} \mbox{\hyperlink{classtiles_1_1_tile_a9b560cd2617c57129c1dc091f1e4ea15}{tileSize}} = 16;}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00027}\mbox{\hyperlink{classtiles_1_1_tile_a54c891592dfd8bda917414c5c2b7e157}{00027}}     \textcolor{keyword}{private} \textcolor{keyword}{final} \textcolor{keywordtype}{int} \mbox{\hyperlink{classtiles_1_1_tile_a54c891592dfd8bda917414c5c2b7e157}{scale}} = 3;}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00028}\mbox{\hyperlink{classtiles_1_1_tile_a8e40c03ec34d2c7678df14f7b0ebf44f}{00028}}     \textcolor{keyword}{public} \textcolor{keyword}{final} \textcolor{keywordtype}{int} \mbox{\hyperlink{classtiles_1_1_tile_a8e40c03ec34d2c7678df14f7b0ebf44f}{screenSize}} = \mbox{\hyperlink{classtiles_1_1_tile_a9b560cd2617c57129c1dc091f1e4ea15}{tileSize}} * \mbox{\hyperlink{classtiles_1_1_tile_a54c891592dfd8bda917414c5c2b7e157}{scale}};}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00030}\mbox{\hyperlink{classtiles_1_1_tile_aa5dc000dc3230aa50f4f15ef57987c58}{00030}}     \textcolor{keyword}{private} \textcolor{keywordtype}{int} \mbox{\hyperlink{classtiles_1_1_tile_aa5dc000dc3230aa50f4f15ef57987c58}{\_spriteCnt}} = 0; \textcolor{comment}{// Variable responsible for the incrementation of the different sprites}}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00031}\mbox{\hyperlink{classtiles_1_1_tile_a21d0ebea99533f4928c0aea73a420ad1}{00031}}     \textcolor{keyword}{private} \textcolor{keywordtype}{int} \mbox{\hyperlink{classtiles_1_1_tile_a21d0ebea99533f4928c0aea73a420ad1}{\_spriteUpdater}} = 0; \textcolor{comment}{// Variable responsible for the incrementation of the speed of the sprites}}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00032}\mbox{\hyperlink{classtiles_1_1_tile_a3ff503fd877dd679605655acb6f3c956}{00032}}     \textcolor{keyword}{public} \textcolor{keywordtype}{int} \mbox{\hyperlink{classtiles_1_1_tile_a3ff503fd877dd679605655acb6f3c956}{spriteSpeed}}; \textcolor{comment}{// How fast are the sprites changing (higher spriteSpeed means slower time to change)}}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00033}00033     \textcolor{comment}{// spriteSpeed of 0 means it has NO animation}}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00034}\mbox{\hyperlink{classtiles_1_1_tile_addfa89908a39300f3d61f7de1f322b26}{00034}}     \textcolor{keyword}{public} \textcolor{keywordtype}{int} \mbox{\hyperlink{classtiles_1_1_tile_addfa89908a39300f3d61f7de1f322b26}{spriteCntMax}}; \textcolor{comment}{// How many sprite does the entity have}}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00036}\mbox{\hyperlink{classtiles_1_1_tile_aad477728d9fdf5b742dbf3039675e510}{00036}}     \textcolor{keyword}{public} BufferedImage[] \mbox{\hyperlink{classtiles_1_1_tile_aad477728d9fdf5b742dbf3039675e510}{image}};}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00046}\mbox{\hyperlink{classtiles_1_1_tile_ab87aa9e1129657bce837ba406f6c827b}{00046}}     \textcolor{keyword}{public} \mbox{\hyperlink{classtiles_1_1_tile_ab87aa9e1129657bce837ba406f6c827b}{Tile}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{classtiles_1_1_tile_addfa89908a39300f3d61f7de1f322b26}{spriteCntMax}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{classtiles_1_1_tile_a3ff503fd877dd679605655acb6f3c956}{spriteSpeed}}, \textcolor{keywordtype}{boolean} isBlocking, \textcolor{keywordtype}{int} ind) \{}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00047}00047         this.spriteCntMax = \mbox{\hyperlink{classtiles_1_1_tile_addfa89908a39300f3d61f7de1f322b26}{spriteCntMax}};}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00048}00048         this.spriteSpeed = \mbox{\hyperlink{classtiles_1_1_tile_a3ff503fd877dd679605655acb6f3c956}{spriteSpeed}};}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00049}00049         this.\_isBlocking = isBlocking;}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00050}00050         \mbox{\hyperlink{classtiles_1_1_tile_aad477728d9fdf5b742dbf3039675e510}{image}} = \textcolor{keyword}{new} BufferedImage[\mbox{\hyperlink{classtiles_1_1_tile_addfa89908a39300f3d61f7de1f322b26}{spriteCntMax}}];}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00051}00051     \}}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00058}\mbox{\hyperlink{classtiles_1_1_tile_aa0b0d298e48f2280cbc63d95de07d675}{00058}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classtiles_1_1_tile_aa0b0d298e48f2280cbc63d95de07d675}{setCollision}}(\textcolor{keywordtype}{boolean} collision) \{}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00059}00059         \mbox{\hyperlink{classtiles_1_1_tile_a40936298413f15da671cea46fb906a7f}{\_isBlocking}} = collision;}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00060}00060     \}}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00067}\mbox{\hyperlink{classtiles_1_1_tile_a344a65a84a3f750cbb57f1d1e6c66c3d}{00067}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classtiles_1_1_tile_a344a65a84a3f750cbb57f1d1e6c66c3d}{setTexture}}(BufferedImage[] newTexture) \{}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00068}00068         this.image = newTexture;}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00069}00069     \}}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00077}\mbox{\hyperlink{classtiles_1_1_tile_a46f5c3f74e0fcbbdb7de428d0431c6c9}{00077}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classtiles_1_1_tile_a46f5c3f74e0fcbbdb7de428d0431c6c9}{setPos}}(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y) \{}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00078}00078         this.\_worldX = x;}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00079}00079         this.\_worldY = y;}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00080}00080     \}}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00081}00081 }
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00087}\mbox{\hyperlink{classtiles_1_1_tile_a7bfcdb11efa89176a068c2a473ce3e9d}{00087}}     \textcolor{keyword}{public} \textcolor{keywordtype}{int}[] \mbox{\hyperlink{classtiles_1_1_tile_a7bfcdb11efa89176a068c2a473ce3e9d}{getPos}}() \{}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00088}00088         \textcolor{keywordtype}{int} tmp[] = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[2];}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00089}00089         tmp[0] = \mbox{\hyperlink{classtiles_1_1_tile_ac5f4a59757ed0765e77cc1400da27190}{\_worldX}};}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00090}00090         tmp[1] = \mbox{\hyperlink{classtiles_1_1_tile_a2309cd4b5bf1a049920e9a253864531c}{\_worldY}};}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00091}00091         \textcolor{keywordflow}{return} tmp;}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00092}00092     \}}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00099}\mbox{\hyperlink{classtiles_1_1_tile_a1e53f21e3c78b581b3afa51cd1488fe9}{00099}}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \mbox{\hyperlink{classtiles_1_1_tile_a1e53f21e3c78b581b3afa51cd1488fe9}{getCollision}}() \{}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00100}00100         \textcolor{keywordflow}{return} \mbox{\hyperlink{classtiles_1_1_tile_a40936298413f15da671cea46fb906a7f}{\_isBlocking}};}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00101}00101     \}}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00102}00102 }
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00109}\mbox{\hyperlink{classtiles_1_1_tile_a7bd8d49ee15121a32a1b47f8d461cdc2}{00109}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classtiles_1_1_tile_a7bd8d49ee15121a32a1b47f8d461cdc2}{setSpriteCountAndSpeed}}(\textcolor{keywordtype}{int} newSpriteCntMax, \textcolor{keywordtype}{int} newSpriteSpeed) \{}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00110}00110         this.spriteCntMax = newSpriteCntMax;}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00111}00111         this.spriteSpeed = newSpriteSpeed;}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00112}00112     \}}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00113}00113 }
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00121}\mbox{\hyperlink{classtiles_1_1_tile_af5e9d327ec95dab36e5223c0e71051a1}{00121}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classtiles_1_1_tile_af5e9d327ec95dab36e5223c0e71051a1}{loadTextures}}(String name, \textcolor{keywordtype}{boolean} animated, \textcolor{keywordtype}{int} i) \{}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00122}00122         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00123}00123             \textcolor{keywordflow}{if} (animated) \{}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00124}00124                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{classtiles_1_1_tile_addfa89908a39300f3d61f7de1f322b26}{spriteCntMax}}; j++) \{}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00125}00125                     \mbox{\hyperlink{classtiles_1_1_tile_aad477728d9fdf5b742dbf3039675e510}{image}}[j] = ImageIO.read(\textcolor{keyword}{new} FileInputStream(\textcolor{stringliteral}{"{}res/tiles/animated/"{}} + name + (j + 1) + \textcolor{stringliteral}{"{}.png"{}}));}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00126}00126                 \}}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00127}00127             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00128}00128                 \mbox{\hyperlink{classtiles_1_1_tile_aad477728d9fdf5b742dbf3039675e510}{image}}[0] = ImageIO.read(\textcolor{keyword}{new} FileInputStream(\textcolor{stringliteral}{"{}res/tiles/static/"{}} + name + (i + 1) + \textcolor{stringliteral}{"{}.png"{}}));}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00129}00129             \}}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00130}00130         \} \textcolor{keywordflow}{catch} (IOException e) \{}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00131}00131             e.printStackTrace();}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00132}00132         \}}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00133}00133     \}}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00134}00134 }
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00138}\mbox{\hyperlink{classtiles_1_1_tile_aba5dbd821ef786c025e887b5c2e801f5}{00138}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classtiles_1_1_tile_aba5dbd821ef786c025e887b5c2e801f5}{updateFrames}}() \{}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00139}00139         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classtiles_1_1_tile_a3ff503fd877dd679605655acb6f3c956}{spriteSpeed}} > 0) \{}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00140}00140             \mbox{\hyperlink{classtiles_1_1_tile_a21d0ebea99533f4928c0aea73a420ad1}{\_spriteUpdater}}++;}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00141}00141             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classtiles_1_1_tile_a21d0ebea99533f4928c0aea73a420ad1}{\_spriteUpdater}} > \mbox{\hyperlink{classtiles_1_1_tile_a3ff503fd877dd679605655acb6f3c956}{spriteSpeed}}) \{}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00142}00142                 \mbox{\hyperlink{classtiles_1_1_tile_aa5dc000dc3230aa50f4f15ef57987c58}{\_spriteCnt}}++;}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00143}00143                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classtiles_1_1_tile_aa5dc000dc3230aa50f4f15ef57987c58}{\_spriteCnt}} == \mbox{\hyperlink{classtiles_1_1_tile_addfa89908a39300f3d61f7de1f322b26}{spriteCntMax}}) \{}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00144}00144                     \mbox{\hyperlink{classtiles_1_1_tile_aa5dc000dc3230aa50f4f15ef57987c58}{\_spriteCnt}} = 0;}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00145}00145                 \}}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00146}00146                 \mbox{\hyperlink{classtiles_1_1_tile_a21d0ebea99533f4928c0aea73a420ad1}{\_spriteUpdater}} = 1;}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00147}00147             \}}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00148}00148         \}}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00149}00149     \}}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00150}00150 }
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00158}\mbox{\hyperlink{classtiles_1_1_tile_a31c27631fa71574b1a9bd9cad296fcbe}{00158}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classtiles_1_1_tile_a31c27631fa71574b1a9bd9cad296fcbe}{draw}}(Graphics2D g2, \textcolor{keywordtype}{int} screenX, \textcolor{keywordtype}{int} screenY) \{}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00159}00159         BufferedImage render = \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00160}00160 }
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00161}00161         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classtiles_1_1_tile_addfa89908a39300f3d61f7de1f322b26}{spriteCntMax}}; i++) \{}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00162}00162             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classtiles_1_1_tile_aa5dc000dc3230aa50f4f15ef57987c58}{\_spriteCnt}} == i) \{}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00163}00163                 render = \mbox{\hyperlink{classtiles_1_1_tile_aad477728d9fdf5b742dbf3039675e510}{image}}[i];}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00164}00164             \}}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00165}00165         \}}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00166}00166 }
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00167}00167         g2.drawImage(render, screenX, screenY, \mbox{\hyperlink{classtiles_1_1_tile_a8e40c03ec34d2c7678df14f7b0ebf44f}{screenSize}}, \mbox{\hyperlink{classtiles_1_1_tile_a8e40c03ec34d2c7678df14f7b0ebf44f}{screenSize}}, \textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00168}00168         \textcolor{comment}{//g2.drawRect(screenX,screenY,Const.WRLD\_tileScreenSize,Const.WRLD\_tileScreenSize);   //Debugging purposes}}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00169}00169     \}}
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00170}00170 }
+\DoxyCodeLine{\Hypertarget{_tile_8java_source_l00171}00171 \}}
+
+\end{DoxyCode}

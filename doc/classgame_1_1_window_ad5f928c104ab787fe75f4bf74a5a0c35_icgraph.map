@@ -1,0 +1,4 @@
+<map id="game.Window.startGameThread" name="game.Window.startGameThread">
+<area shape="rect" id="node1" title="Starts the game thread." alt="" coords="181,5,413,32"/>
+<area shape="rect" id="node2" href="$classmain_1_1_main.html#a896f71a651b705304693dbfe0cf9ca63" title="The main method that initializes the game window and starts the game thread." alt="" coords="5,5,133,32"/>
+</map>

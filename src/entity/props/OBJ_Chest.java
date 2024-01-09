@@ -24,7 +24,7 @@ public class OBJ_Chest extends Props {
     public OBJ_Chest(int worldX, int worldY){
         super(worldX,worldY,"chest",1,0,true);
         loadTextures("chest");
-        collision = true;
+        collision = true; // Chests are not meant to be collided with by default
     }
     public void playerInterraction(Player p) {
         Item item= Generator.generateItem();

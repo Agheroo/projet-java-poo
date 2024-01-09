@@ -1,0 +1,4 @@
+<map id="tiles.TileManager.loadMap" name="tiles.TileManager.loadMap">
+<area shape="rect" id="node1" title="Reads the txt map file to store the tileMap accordingly." alt="" coords="272,5,467,32"/>
+<area shape="rect" id="node2" href="$classtiles_1_1_tile_manager.html#aea298074ba24c77622186915c8c11171" title="Constructor for the TileManager class." alt="" coords="5,5,224,32"/>
+</map>

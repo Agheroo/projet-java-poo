@@ -1,0 +1,17 @@
+<map id="game.FightScene" name="game.FightScene">
+<area shape="rect" id="node1" title="Represents the scene during a fight between a player and an enemy." alt="" coords="273,1225,407,1347"/>
+<area shape="rect" id="node2" href="$classentity_1_1_player.html" title="Represents the player entity in the game." alt="" coords="19,1012,154,1148"/>
+<area shape="rect" id="node3" href="$classentity_1_1_character.html" title="Represents an abstract character entity with position, hitbox, stats, and animations." alt="" coords="37,564,200,920"/>
+<area shape="rect" id="node7" href="$classentity_1_1_enemy.html" title="Represents an enemy entity in the game." alt="" coords="179,1012,341,1148"/>
+<area shape="rect" id="node4" href="$classentity_1_1_entity.html" title="Represents an abstract entity with position, hitbox, and animations." alt="" coords="5,145,168,399"/>
+<area shape="rect" id="node5" title=" " alt="" coords="43,5,130,83"/>
+<area shape="rect" id="node6" title=" " alt="" coords="193,233,311,311"/>
+<area shape="rect" id="node10" href="$class_u_i_1_1_choice_button.html" title=" " alt="" coords="230,681,365,803"/>
+<area shape="rect" id="node8" href="$enumgame_1_1_fight_scene_1_1_fight_state.html" title=" " alt="" coords="501,1027,705,1133"/>
+<area shape="rect" id="node9" href="$class_u_i_1_1_h_u_d.html" title=" " alt="" coords="366,997,477,1163"/>
+<area shape="rect" id="node11" href="$class_u_i_1_1_textbox.html" title=" " alt="" coords="335,197,465,347"/>
+<area shape="rect" id="node12" title=" " alt="" coords="287,5,348,83"/>
+<area shape="rect" id="node13" title=" " alt="" coords="372,5,428,83"/>
+<area shape="rect" id="node14" title=" " alt="" coords="455,5,505,83"/>
+<area shape="rect" id="node15" href="$enum_u_i_1_1_h_u_d_1_1_menu_type.html" title=" " alt="" coords="389,681,529,803"/>
+</map>

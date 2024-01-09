@@ -1,0 +1,62 @@
+\hypertarget{_fight_scene_8java_source}{}\doxysection{Fight\+Scene.\+java}
+\label{_fight_scene_8java_source}\index{src/game/FightScene.java@{src/game/FightScene.java}}
+\mbox{\hyperlink{_fight_scene_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00006}00006 \textcolor{keyword}{package }game;}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00008}00008 \textcolor{keyword}{import} \mbox{\hyperlink{namespaceentity}{entity}}.\mbox{\hyperlink{classentity_1_1_enemy}{Enemy}};}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00009}00009 \textcolor{keyword}{import} \mbox{\hyperlink{namespaceentity}{entity}}.\mbox{\hyperlink{classentity_1_1_player}{Player}};}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00010}00010 \textcolor{keyword}{import} \mbox{\hyperlink{namespacegame}{game}}.\mbox{\hyperlink{classgame_1_1_scene}{Scene}}.\mbox{\hyperlink{enumgame_1_1_scene_1_1_state}{State}};}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00012}00012 \textcolor{keyword}{import} java.awt.*;}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00013}00013 \textcolor{keyword}{import} java.util.HashMap;}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00015}00015 \textcolor{keyword}{import} \mbox{\hyperlink{namespace_u_i}{UI}}.\mbox{\hyperlink{class_u_i_1_1_h_u_d}{HUD}};}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00016}00016 \textcolor{keyword}{import} \mbox{\hyperlink{namespace_u_i}{UI}}.\mbox{\hyperlink{class_u_i_1_1_h_u_d}{HUD}}.\mbox{\hyperlink{enum_u_i_1_1_h_u_d_1_1_menu_type}{MenuType}};}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00024}\mbox{\hyperlink{classgame_1_1_fight_scene}{00024}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classgame_1_1_fight_scene}{FightScene}} \{}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00025}\mbox{\hyperlink{enumgame_1_1_fight_scene_1_1_fight_state_a77b37c857042568e7388cae1af334ebd}{00025}}     \textcolor{keyword}{public} \textcolor{keyword}{enum} \mbox{\hyperlink{enumgame_1_1_fight_scene_1_1_fight_state}{FightState}} \{\mbox{\hyperlink{enumgame_1_1_fight_scene_1_1_fight_state_a77b37c857042568e7388cae1af334ebd}{FIGHTING}}, WON , LOST\};}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00026}00026     \textcolor{comment}{//private double dt = Scene.getdt();}}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00027}\mbox{\hyperlink{classgame_1_1_fight_scene_aec9af8460fd8aa51e0b260f4a48b11ec}{00027}}     \textcolor{keyword}{public} \mbox{\hyperlink{classentity_1_1_player}{Player}} \mbox{\hyperlink{classgame_1_1_fight_scene_aec9af8460fd8aa51e0b260f4a48b11ec}{player}};}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00028}\mbox{\hyperlink{classgame_1_1_fight_scene_ac2f268ca7a750704296e941b70efd839}{00028}}     \textcolor{keyword}{public} \mbox{\hyperlink{classentity_1_1_enemy}{Enemy}} \mbox{\hyperlink{classgame_1_1_fight_scene_ac2f268ca7a750704296e941b70efd839}{enemy}};}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00029}\mbox{\hyperlink{classgame_1_1_fight_scene_a1bc4ac9f4832a190bf00012ec26670c5}{00029}}     \textcolor{keyword}{public} \mbox{\hyperlink{enumgame_1_1_fight_scene_1_1_fight_state}{FightState}} \mbox{\hyperlink{classgame_1_1_fight_scene_a1bc4ac9f4832a190bf00012ec26670c5}{state}};}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00030}\mbox{\hyperlink{classgame_1_1_fight_scene_a769fd96d2588b4414dce9ac338f63bad}{00030}}     \textcolor{keyword}{private} \mbox{\hyperlink{class_u_i_1_1_h_u_d}{HUD}} \mbox{\hyperlink{classgame_1_1_fight_scene_a769fd96d2588b4414dce9ac338f63bad}{menu}};}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00037}\mbox{\hyperlink{classgame_1_1_fight_scene_a529a19188f0cb98415d9ec5ec67f151b}{00037}}     \textcolor{keyword}{public} \mbox{\hyperlink{classgame_1_1_fight_scene_a529a19188f0cb98415d9ec5ec67f151b}{FightScene}}(\mbox{\hyperlink{classentity_1_1_player}{Player}} \mbox{\hyperlink{classgame_1_1_fight_scene_aec9af8460fd8aa51e0b260f4a48b11ec}{player}}, \mbox{\hyperlink{classentity_1_1_enemy}{Enemy}} \mbox{\hyperlink{classgame_1_1_fight_scene_ac2f268ca7a750704296e941b70efd839}{enemy}}) \{}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00038}00038         System.out.println(\textcolor{stringliteral}{"{}Entering combat"{}});}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00039}00039         this.player = \mbox{\hyperlink{classgame_1_1_fight_scene_aec9af8460fd8aa51e0b260f4a48b11ec}{player}};}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00040}00040         this.enemy = \mbox{\hyperlink{classgame_1_1_fight_scene_ac2f268ca7a750704296e941b70efd839}{enemy}};}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00041}00041         \mbox{\hyperlink{classgame_1_1_fight_scene_a1bc4ac9f4832a190bf00012ec26670c5}{state}} = \mbox{\hyperlink{enumgame_1_1_fight_scene_1_1_fight_state}{FightState}}.\mbox{\hyperlink{enumgame_1_1_fight_scene_1_1_fight_state_a77b37c857042568e7388cae1af334ebd}{FIGHTING}};}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00042}00042         \mbox{\hyperlink{classgame_1_1_fight_scene_a769fd96d2588b4414dce9ac338f63bad}{menu}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_u_i_1_1_h_u_d}{HUD}}(\mbox{\hyperlink{enum_u_i_1_1_h_u_d_1_1_menu_type}{MenuType}}.\mbox{\hyperlink{enum_u_i_1_1_h_u_d_1_1_menu_type_a3e45f8ce3609b44b9d1116aed2b9e44d}{FIGHT}});}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00043}00043     \}}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00048}\mbox{\hyperlink{classgame_1_1_fight_scene_a6f8060e45bcb70f13265bd6d3b2a52d5}{00048}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classgame_1_1_fight_scene_a6f8060e45bcb70f13265bd6d3b2a52d5}{update}}(\mbox{\hyperlink{classgame_1_1_scene}{Scene}} scene) \{}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00050}00050         \textcolor{comment}{// Additional logic for the fight scene update}}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00051}00051         System.out.println(\textcolor{stringliteral}{"{}Le joueur est en combat avec "{}}+ \mbox{\hyperlink{classgame_1_1_fight_scene_ac2f268ca7a750704296e941b70efd839}{enemy}}.\mbox{\hyperlink{classentity_1_1_enemy_a175fabae6e9cb47ec24f230e048afa91}{name}});}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00052}00052         \textcolor{keywordflow}{if}(scene.\mbox{\hyperlink{classgame_1_1_scene_a2bbc8cb5064aaa5cc1ed0ec8950f4a58}{keyH}}.\mbox{\hyperlink{classmain_1_1_key_handler_aaaa3f8f86ebada192b298f0ace674c9b}{interactPressed}})\{}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00053}00053             \mbox{\hyperlink{classgame_1_1_fight_scene_a1bc4ac9f4832a190bf00012ec26670c5}{state}} = \mbox{\hyperlink{enumgame_1_1_fight_scene_1_1_fight_state}{FightState}}.\mbox{\hyperlink{enumgame_1_1_fight_scene_1_1_fight_state_a1c4e5cd4ba0f5374190e0be6dc2c8617}{WON}};}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00054}00054             scene.state = \mbox{\hyperlink{enumgame_1_1_scene_1_1_state}{State}}.\mbox{\hyperlink{enumgame_1_1_scene_1_1_state_aed7f5813d309282d14a426b8e65a408b}{WORLD}};}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00055}00055             player.speed = 0;}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00056}00056             \mbox{\hyperlink{classgame_1_1_fight_scene_ac5c0c512caf53672fcbc0cb2c9e26012}{killEnemy}}(\mbox{\hyperlink{classgame_1_1_world}{World}}.\mbox{\hyperlink{classgame_1_1_world_a8f7650232d674854c7be0df78b0b736d}{enemies}}, \mbox{\hyperlink{classgame_1_1_fight_scene_ac2f268ca7a750704296e941b70efd839}{enemy}});}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00057}00057             }
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00058}00058             scene.keyH.interactPressed = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00059}00059         \}}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00060}00060     \}}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00062}\mbox{\hyperlink{classgame_1_1_fight_scene_ac5c0c512caf53672fcbc0cb2c9e26012}{00062}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classgame_1_1_fight_scene_ac5c0c512caf53672fcbc0cb2c9e26012}{killEnemy}}(HashMap<Point, Enemy> enemies, \mbox{\hyperlink{classentity_1_1_enemy}{Enemy}} \mbox{\hyperlink{classgame_1_1_fight_scene_ac2f268ca7a750704296e941b70efd839}{enemy}})\{}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00063}00063         enemies.remove(\textcolor{keyword}{new} Point(\mbox{\hyperlink{classgame_1_1_fight_scene_ac2f268ca7a750704296e941b70efd839}{enemy}}.\mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}},\mbox{\hyperlink{classgame_1_1_fight_scene_ac2f268ca7a750704296e941b70efd839}{enemy}}.\mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}}), \mbox{\hyperlink{classgame_1_1_fight_scene_ac2f268ca7a750704296e941b70efd839}{enemy}});}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00064}00064     \}}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00073}\mbox{\hyperlink{classgame_1_1_fight_scene_a9525cb3d263680e8d808b3abde00e8d8}{00073}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classgame_1_1_fight_scene_a9525cb3d263680e8d808b3abde00e8d8}{draw}}(Graphics2D g2) \{}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00074}00074         g2.setColor( \textcolor{keyword}{new} Color(0xFF2265));}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00075}00075         g2.fillRect(100,200,400,150);}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00076}00076         \mbox{\hyperlink{classgame_1_1_fight_scene_aec9af8460fd8aa51e0b260f4a48b11ec}{player}}.\mbox{\hyperlink{classentity_1_1_character_a24e991ea21c30b197a36fe5e9c7b0733}{drawInFight}}(g2, \mbox{\hyperlink{classgame_1_1_const}{Const}}.\mbox{\hyperlink{classgame_1_1_const_a7b89e8a9f4d03d66a340747ae93306bc}{WDW\_width}} / 2 -\/ (\mbox{\hyperlink{classgame_1_1_const}{Const}}.\mbox{\hyperlink{classgame_1_1_const_a9c3ba38aa97e94c23467cb8837b4c782}{FGHT\_entityScreenSize}} / 2), \mbox{\hyperlink{classgame_1_1_const}{Const}}.\mbox{\hyperlink{classgame_1_1_const_aff58926bfb5d6e3327d26c2f6c175e0b}{WDW\_height}} / 2 -\/ (\mbox{\hyperlink{classgame_1_1_const}{Const}}.\mbox{\hyperlink{classgame_1_1_const_a9c3ba38aa97e94c23467cb8837b4c782}{FGHT\_entityScreenSize}} / 2));}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00077}00077         \mbox{\hyperlink{classgame_1_1_fight_scene_a769fd96d2588b4414dce9ac338f63bad}{menu}}.\mbox{\hyperlink{class_u_i_1_1_h_u_d_a290720935a1960ce8159eae9e7a535fa}{draw}}(g2, \mbox{\hyperlink{classgame_1_1_const}{Const}}.\mbox{\hyperlink{classgame_1_1_const_a7b89e8a9f4d03d66a340747ae93306bc}{WDW\_width}}, \mbox{\hyperlink{classgame_1_1_const}{Const}}.\mbox{\hyperlink{classgame_1_1_const_aff58926bfb5d6e3327d26c2f6c175e0b}{WDW\_height}});}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00078}00078     \}}
+\DoxyCodeLine{\Hypertarget{_fight_scene_8java_source_l00079}00079 \}}
+
+\end{DoxyCode}

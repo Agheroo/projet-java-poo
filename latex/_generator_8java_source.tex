@@ -1,0 +1,51 @@
+\hypertarget{_generator_8java_source}{}\doxysection{Generator.\+java}
+\label{_generator_8java_source}\index{src/item/Generator.java@{src/item/Generator.java}}
+\mbox{\hyperlink{_generator_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00001}00001 \textcolor{keyword}{package }item;}
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00003}00003 \textcolor{keyword}{import} \mbox{\hyperlink{namespaceitem}{item}}.\mbox{\hyperlink{namespaceitem_1_1armor}{armor}}.*;}
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00004}00004 \textcolor{keyword}{import} \mbox{\hyperlink{namespaceitem}{item}}.\mbox{\hyperlink{namespaceitem_1_1potion}{potion}}.*;}
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00005}00005 \textcolor{keyword}{import} \mbox{\hyperlink{namespaceitem}{item}}.\mbox{\hyperlink{namespaceitem_1_1weapon}{weapon}}.*;}
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00007}\mbox{\hyperlink{classitem_1_1_generator}{00007}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classitem_1_1_generator}{Generator}} \{}
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00009}\mbox{\hyperlink{classitem_1_1_generator_ac17e98c64dc79f381c465bf21b5409a0}{00009}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \mbox{\hyperlink{classitem_1_1_item}{Item}} \mbox{\hyperlink{classitem_1_1_generator_ac17e98c64dc79f381c465bf21b5409a0}{generateItem}}()\{}
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00010}00010         \textcolor{keywordtype}{int} nbRandom= (int) (Math.random() * 3);}
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00011}00011         \textcolor{keywordflow}{return} \textcolor{keywordflow}{switch} (nbRandom) \{}
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00012}00012             \textcolor{keywordflow}{case} 1 -\/> \mbox{\hyperlink{classitem_1_1_generator}{Generator}}.\mbox{\hyperlink{classitem_1_1_generator_a997be8c512cda143c1b157628213ea91}{generateWeapon}}();}
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00013}00013             \textcolor{keywordflow}{case} 2 -\/> \mbox{\hyperlink{classitem_1_1_generator}{Generator}}.\mbox{\hyperlink{classitem_1_1_generator_a851f02e244a9b63f0bb0e508a9a4d40d}{generateArmor}}();}
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00014}00014             \textcolor{keywordflow}{default} -\/> \mbox{\hyperlink{classitem_1_1_generator}{Generator}}.\mbox{\hyperlink{classitem_1_1_generator_a6dfd2f13dbf175b05ba5a999650a1003}{generatePotion}}();}
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00015}00015         \};}
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00016}00016     \}}
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00018}\mbox{\hyperlink{classitem_1_1_generator_a997be8c512cda143c1b157628213ea91}{00018}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \mbox{\hyperlink{classitem_1_1weapon_1_1_weapon}{Weapon}} \mbox{\hyperlink{classitem_1_1_generator_a997be8c512cda143c1b157628213ea91}{generateWeapon}}()\{}
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00019}00019         \textcolor{keywordtype}{int} nbRandom= (int) (Math.random() * 3);}
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00020}00020         \textcolor{keywordflow}{return} \textcolor{keywordflow}{switch} (nbRandom) \{}
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00021}00021             \textcolor{keywordflow}{case} 1 -\/> \textcolor{keyword}{new} \mbox{\hyperlink{classitem_1_1weapon_1_1_bow}{Bow}}();}
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00022}00022             \textcolor{keywordflow}{case} 2 -\/> \textcolor{keyword}{new} \mbox{\hyperlink{classitem_1_1weapon_1_1_staff}{Staff}}();}
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00023}00023             \textcolor{keywordflow}{default} -\/> \textcolor{keyword}{new} \mbox{\hyperlink{classitem_1_1weapon_1_1_sword}{Sword}}();}
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00024}00024         \};}
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00025}00025     \}}
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00027}\mbox{\hyperlink{classitem_1_1_generator_a6dfd2f13dbf175b05ba5a999650a1003}{00027}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \mbox{\hyperlink{classitem_1_1potion_1_1_potion}{Potion}} \mbox{\hyperlink{classitem_1_1_generator_a6dfd2f13dbf175b05ba5a999650a1003}{generatePotion}}()\{}
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00028}00028         \textcolor{keywordtype}{int} nbRandom= (int) (Math.random() * 3);}
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00029}00029         \textcolor{keywordflow}{return} \textcolor{keywordflow}{switch} (nbRandom) \{}
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00030}00030             \textcolor{keywordflow}{case} 1 -\/> \textcolor{keyword}{new} \mbox{\hyperlink{classitem_1_1potion_1_1_health_potion}{HealthPotion}}();}
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00031}00031             \textcolor{keywordflow}{case} 2 -\/> \textcolor{keyword}{new} \mbox{\hyperlink{classitem_1_1potion_1_1_mana_potion}{ManaPotion}}();}
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00032}00032             \textcolor{keywordflow}{default} -\/> \textcolor{keyword}{new} \mbox{\hyperlink{classitem_1_1potion_1_1_speed_potion}{SpeedPotion}}();}
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00033}00033         \};}
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00034}00034     \}}
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00036}\mbox{\hyperlink{classitem_1_1_generator_a851f02e244a9b63f0bb0e508a9a4d40d}{00036}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \mbox{\hyperlink{classitem_1_1armor_1_1_armor}{Armor}} \mbox{\hyperlink{classitem_1_1_generator_a851f02e244a9b63f0bb0e508a9a4d40d}{generateArmor}}()\{}
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00037}00037         \textcolor{keywordtype}{int} nbRandom= (int) (Math.random() * 4);}
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00038}00038         \textcolor{keywordflow}{return} \textcolor{keywordflow}{switch} (nbRandom) \{}
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00039}00039             \textcolor{keywordflow}{case} 1 -\/> \textcolor{keyword}{new} \mbox{\hyperlink{classitem_1_1armor_1_1_body}{Body}}();}
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00040}00040             \textcolor{keywordflow}{case} 2 -\/> \textcolor{keyword}{new} \mbox{\hyperlink{classitem_1_1armor_1_1_head}{Head}}();}
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00041}00041             \textcolor{keywordflow}{case} 3 -\/> \textcolor{keyword}{new} \mbox{\hyperlink{classitem_1_1armor_1_1_legs}{Legs}}();}
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00042}00042             \textcolor{keywordflow}{default} -\/> \textcolor{keyword}{new} \mbox{\hyperlink{classitem_1_1armor_1_1_foot}{Foot}}();}
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00043}00043         \};}
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00044}00044     \}}
+\DoxyCodeLine{\Hypertarget{_generator_8java_source_l00045}00045 \}}
+
+\end{DoxyCode}

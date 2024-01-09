@@ -1,0 +1,6 @@
+<map id="entity.Character.checkTileCollision" name="entity.Character.checkTileCollision">
+<area shape="rect" id="node1" title="Checks for collision with nearby tiles using the character&#39;s hitbox." alt="" coords="5,49,196,90"/>
+<area shape="rect" id="node2" href="$classtiles_1_1_tile.html#a1e53f21e3c78b581b3afa51cd1488fe9" title="Get whether the tile is blocking." alt="" coords="256,5,415,32"/>
+<area shape="rect" id="node3" href="$classtiles_1_1_tile.html#a7bfcdb11efa89176a068c2a473ce3e9d" title="Get the position of the tile." alt="" coords="272,56,399,83"/>
+<area shape="rect" id="node4" href="$classtiles_1_1_tile_manager.html#a74de5c7690737d961af5aaf5dbca1046" title="Gets the tile of the top map with its x, y coordinates." alt="" coords="244,107,427,133"/>
+</map>

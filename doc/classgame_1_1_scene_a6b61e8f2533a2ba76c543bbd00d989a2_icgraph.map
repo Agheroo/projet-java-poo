@@ -1,0 +1,7 @@
+<map id="game.Scene.update" name="game.Scene.update">
+<area shape="rect" id="node1" title="Updates the scene." alt="" coords="525,35,676,61"/>
+<area shape="rect" id="node2" href="$classgame_1_1_window.html#a41cef38f9afc72fa1b4a1dfdc2bf9b92" title="Updates the game scene." alt="" coords="290,5,453,32"/>
+<area shape="rect" id="node4" href="$class_creation_combat_scene_1_1game_1_1_window.html#ac3d02abb951693093b08c7041d41e66f" title=" " alt="" coords="265,57,477,98"/>
+<area shape="rect" id="node3" href="$classgame_1_1_window.html#acb08b17fe8fb90e42db6e58164ed5421" title="Runs the game loop." alt="" coords="42,5,181,32"/>
+<area shape="rect" id="node5" href="$class_creation_combat_scene_1_1game_1_1_window.html#a48253f5c6a6f219e6b20f8591f77674e" title=" " alt="" coords="5,57,217,98"/>
+</map>

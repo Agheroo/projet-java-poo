@@ -1,0 +1,14 @@
+digraph "entity.props.OBJ_Key.interagitAvec"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="entity.props.OBJ_Key.interagitAvec",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="entity.props.Props.destructor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classentity_1_1props_1_1_props.html#af5b4763272001b71fac74759b7ed6c3d",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="game.World.getWorld",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgame_1_1_world.html#a0e40ca86573cf45d858cc8e529865649",tooltip="Gets the instance of the World."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="UI.Textbox.loadFont",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_u_i_1_1_textbox.html#ac3a40742547f48f95f29ce1649ac88a0",tooltip=" "];
+}

@@ -1,0 +1,16 @@
+<map id="game.World.update" name="game.World.update">
+<area shape="rect" id="node1" title="Updates the game world based on the scene state." alt="" coords="5,132,155,159"/>
+<area shape="rect" id="node2" href="$classgame_1_1_scene.html#a8836ac66378d274d9935a950e0b83d7a" title="Gets the World scene." alt="" coords="203,56,424,83"/>
+<area shape="rect" id="node3" href="$classgame_1_1_fight_scene.html#a6f8060e45bcb70f13265bd6d3b2a52d5" title="Updates the fight scene." alt="" coords="222,107,405,133"/>
+<area shape="rect" id="node5" href="$classentity_1_1_player.html#ae48f1e24c9ff0b7bd4f55b470bf66e7e" title="Updates the player entity based on the current scene and time elapsed." alt="" coords="238,157,389,184"/>
+<area shape="rect" id="node12" href="$classtiles_1_1_tile_manager.html#aa105a51c3008f7cae9e241e671be2278" title="Updates the tile frames based on the player&#39;s position." alt="" coords="222,309,405,336"/>
+<area shape="rect" id="node4" href="$classgame_1_1_fight_scene.html#ac5c0c512caf53672fcbc0cb2c9e26012" title=" " alt="" coords="472,5,675,32"/>
+<area shape="rect" id="node6" href="$classentity_1_1_character.html#a937e8e2ad1ddaccfdf7fbc52c9f532f6" title="Accelerates the character&#39;s speed up to the specified maximum speed." alt="" coords="475,56,671,83"/>
+<area shape="rect" id="node7" href="$classentity_1_1_player.html#ac01d8a2c0231c9b74b44dbb4e79802e8" title="Checks for collision with nearby objects using the player&#39;s hitbox." alt="" coords="480,107,667,133"/>
+<area shape="rect" id="node8" href="$classentity_1_1_character.html#ab41258c00232def146bcb8f5fb17fa75" title="Decelerates the character&#39;s speed." alt="" coords="475,157,672,184"/>
+<area shape="rect" id="node9" href="$classgame_1_1_world.html#a0e40ca86573cf45d858cc8e529865649" title="Gets the instance of the World." alt="" coords="492,208,655,235"/>
+<area shape="rect" id="node11" href="$classentity_1_1_player.html#ae8efbe5149efbe2255ee8de096472197" title=" " alt="" coords="477,259,670,285"/>
+<area shape="rect" id="node10" href="$class_u_i_1_1_textbox.html#ac3a40742547f48f95f29ce1649ac88a0" title=" " alt="" coords="723,208,873,235"/>
+<area shape="rect" id="node13" href="$classtiles_1_1_tile.html#a7bfcdb11efa89176a068c2a473ce3e9d" title="Get the position of the tile." alt="" coords="510,309,637,336"/>
+<area shape="rect" id="node14" href="$classtiles_1_1_tile.html#aba5dbd821ef786c025e887b5c2e801f5" title="Update the sprite frames for the tile." alt="" coords="486,360,661,387"/>
+</map>

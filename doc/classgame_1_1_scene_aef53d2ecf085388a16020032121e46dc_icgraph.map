@@ -1,0 +1,5 @@
+<map id="game.Scene.draw" name="game.Scene.draw">
+<area shape="rect" id="node1" title="Draws the scene." alt="" coords="280,35,419,61"/>
+<area shape="rect" id="node2" href="$classgame_1_1_window.html#a5096ae95c1e62bac2005e73621cdb41c" title="Paints the components of the game window." alt="" coords="5,5,232,32"/>
+<area shape="rect" id="node3" href="$class_creation_combat_scene_1_1game_1_1_window.html#a61d08bccb221eb1df7fad73d67287f99" title=" " alt="" coords="13,57,225,98"/>
+</map>
