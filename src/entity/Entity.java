@@ -62,15 +62,6 @@ public abstract class Entity {
     }
 
     // GRAPHICS
-
-    /**
-     * @brief Loads textures for the entity based on its name.
-     * @param name The name used to determine the textures to load.
-     */
-    private void loadTextures() {
-        // TODO: Different texture loading from characters
-    }
-
     /**
      * @brief Updates the frames of the entity's animation.
      */
