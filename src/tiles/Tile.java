@@ -12,8 +12,6 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-import game.Const;
-
 /**
  * @class Tile
  * @brief Represents a tile in the game world.
@@ -122,10 +120,10 @@ public class Tile {
         try {
             if (animated) {
                 for (int j = 0; j < spriteCntMax; j++) {
-                    image[j] = ImageIO.read(new FileInputStream("res/tiles/animated/" + name + (j + 1) + ".png"));
+                    image[j] = ImageIO.read(new FileInputStream("res/tiles/animated/" + name + "/" + name + (j + 1) + ".png"));
                 }
             } else {
-                image[0] = ImageIO.read(new FileInputStream("res/tiles/static/" + name + (i + 1) + ".png"));
+                image[0] = ImageIO.read(new FileInputStream("res/tiles/static/" + name + "/" + name + (i + 1) + ".png"));
             }
         } catch (IOException e) {
             e.printStackTrace();

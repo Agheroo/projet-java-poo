@@ -101,6 +101,7 @@ public class Player extends Character {
                 if (hitbox.intersects(obj.hitbox)) {
                     if (obj.getCollision()) {   //If object has "solid" collision
                         //prevent the player from moving in the hitbox
+                        
                         obj.block(this);
                     }
                     index = new Point((int) obj.worldX, (int) obj.worldY);

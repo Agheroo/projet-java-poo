@@ -41,8 +41,8 @@ public class TileManager {
         _topMap = new Tile[Const.WRLD_maxRow][Const.WRLD_maxCol];
 
         loadTextures();
-        loadMap("res/maps/debugfloor.txt", world, _floorMap, _floorMapTextures);
-        loadMap("res/maps/debugtop.txt", world, _topMap, _topMapTextures);
+        loadMap("res/maps/test_floor.csv", world, _floorMap, _floorMapTextures);
+        loadMap("res/maps/test_top.csv", world, _topMap, _topMapTextures);
     }
 
     /**
@@ -123,8 +123,8 @@ public class TileManager {
                 String line = br.readLine();
 
                 for (int j = 0; j < Const.WRLD_maxCol; j++) {
-                    String[] numbers = line.split("\\s+");
-                    int num = Integer.parseInt(numbers[j]); // Reading the file itself and stocking int read
+                    String[] numbers = line.split(",");
+                    int num = 1 + Integer.parseInt(numbers[j]); // Reading the file itself and stocking int read
 
                     Tile tileCurrent = new Tile(textures[num].spriteCntMax, textures[num].spriteSpeed,
                             textures[num].getCollision(), num); // Creating new tile to store with the according texture
