@@ -79,6 +79,12 @@ public class World extends Scene {
         objMap.put(coordinates, object);
     }
 
+    /**
+     * Adds an enemy to the HashMap with the specified coordinates.
+     *
+     * @param coordinates The coordinates of the object.
+     * @param object      The object to be added.
+     */
     public void addEnemy(Point coordinates, Enemy enemy){
         enemies.put(coordinates,enemy);
     }

@@ -6,7 +6,6 @@
 package entity;
 
 import java.awt.Rectangle;
-import game.Scene;
 
 /**
  * @class Entity
@@ -34,6 +33,8 @@ public abstract class Entity {
         // Default constructor
     }
 
+    
+
     /**
      * @brief Constructor for the Entity class with specified initial position and animation parameters.
      * @param x The initial X-coordinate of the entity in the world.
@@ -50,15 +51,6 @@ public abstract class Entity {
         this._spriteCntMax = _spriteCntMax;
         this._spriteSpeed = spriteSpeed;
         this.name = entityName;
-    }
-
-    /**
-     * @brief Updates the entity's position based on the current scene and time elapsed.
-     * @param scene The current game scene.
-     * @param dt The time elapsed since the last update.
-     */
-    public void update(Scene scene, double dt) {
-        // Updating entity position accurately (at any point in time either pressing keys or not)
     }
 
     // GRAPHICS

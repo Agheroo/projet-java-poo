@@ -50,10 +50,12 @@ public class FightScene {
         menu.update();
 
         if(menu.selection == Const.Selection.ATTACK && menu.confirm){
+            //Implement combat game mechanics here
+            //If the fight is won, theses lines are mendatory
             state = Const.FightState.WON;
             Scene.state = State.WORLD;
             player.speed = 0;
-            killEnemy(World.enemies, enemy);
+            World.enemies.remove(new Point(enemy.worldX,enemy.worldY), enemy);
         }
         if(menu.selection == Const.Selection.POTION && menu.confirm){
             
@@ -75,7 +77,8 @@ public class FightScene {
     public void draw(Graphics2D g2) {
         g2.setColor( new Color(0xFF2265));
         g2.fillRect(100,200,400,150);
-        player.drawInFight(g2, Const.WDW_width / 2 - (Const.FGHT_entityScreenSize / 2), Const.WDW_height / 2 - (Const.FGHT_entityScreenSize / 2));
+        player.drawInFight(g2, 50, 200);
+        enemy.drawInFight(g2, 600, 200);
         menu.draw(g2, Const.WDW_width, Const.WDW_height);
     }
 }

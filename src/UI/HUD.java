@@ -1,6 +1,5 @@
 package UI;
 
-import java.awt.Color;
 import java.awt.Graphics2D;
 
 import game.Const.Selection;
@@ -22,12 +21,7 @@ public abstract class HUD {
         _buttons = new ChoiceButton[_nbButtons];
         keyH = KeyHandler.getInstance();
         confirm = false;
-
-        //To replace with the current names that we want depending on the MenuType
         
-        for(int i =0; i<_nbButtons ; i++){
-            _buttons[i] = new ChoiceButton(80*3,20*3, "BUTTON " +i, "rainyhearts",Color.black);
-        }
     }
 
 

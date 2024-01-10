@@ -10,11 +10,16 @@ public class HUD_Fight extends HUD {
 
 
     public void update(){
+        //System.out.println(selection);
         if(keyH.interactPressed){
-            System.out.println("Je confirme ma selection");
-            System.out.println(selection);
-            keyH.interactPressed = false;
             confirm = true;
+            System.out.println("Je confirme ma selection");
+            
+            keyH.interactPressed = false;
+            keyH.downPressed = false;
+            keyH.upPressed = false;
+            keyH.leftPressed = false;
+            keyH.rightPressed = false;
         }
         if(keyH.rightPressed || keyH.leftPressed){
             if(selection == Const.Selection.ATTACK){

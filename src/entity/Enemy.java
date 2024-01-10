@@ -17,7 +17,7 @@ import game.Scene.State;
  */
 public class Enemy extends Character {
 
-    private int _xpRate; // Experience points rate for defeating the enemy
+    public int xpRate; // Experience points rate for defeating the enemy
     /**
      * @brief Constructor for the Enemy class.
      * @param worldX The X-coordinate of the enemy in the world.
@@ -45,13 +45,32 @@ public class Enemy extends Character {
 
     }
 
+    /**
+     * Setter for enemy creation to initialize thei stats
+     * @param xpRate    The xp that will give the enemy to the player once beaten
+     * @param health    The health of the enemy
+     * @param mana      The mana of the enemy (if he has spe atk)
+     * @param strength  The "damage" of the enemy
+     * @param defense   The reducing of damage of the enemy
+     * @param agility   The probability of the enemy to dodge the attack
+     * @param initiative    Who attacks first
+     */
+    public void setStats(int xpRate, int health, int mana, int strength, int defense,  int agility, int initiative){
+        this.xpRate = xpRate;
+        this.health = health;
+        this.mana = mana;
+        this.strength = strength;
+        this.defense = defense;
+        this.agility = agility;
+        this.initiative = initiative;
+    }
+
 
     /**
      * @brief Updates the enemy entity based on the current scene and time elapsed.
      * @param scene The current game scene.
      * @param dt The time elapsed since the last update.
      */
-    @Override
     public void update(Scene scene, double dt) {
         super.update(scene, dt); // Calls the parent class update method
         //TODO : find a method to make the enemy move in predictive patterns

@@ -36,10 +36,10 @@ public abstract class Props extends Entity {
      */
     Props(int x, int y, String name, int spriteCntMax, int spriteSpeed, boolean collision){
         super(name,x,y,spriteCntMax,spriteSpeed,collision);
-        hitbox.width = 3*Const.WRLD_tileScreenSize/4;  //Slightly smaller than a tile
-        hitbox.height = 3*Const.WRLD_tileScreenSize/4;
-        hitbox.x = worldX + hitbox.width/4;
-        hitbox.y = worldY + hitbox.height/4;
+        hitbox.width = Const.WRLD_tileScreenSize;
+        hitbox.height = Const.WRLD_tileScreenSize;
+        hitbox.x = worldX;
+        hitbox.y = worldY;
     }
 
     /**
@@ -50,24 +50,32 @@ public abstract class Props extends Entity {
         return collision;
     }
 
-    public void block(Player player){/*
-        if((tileManager.getTile(hitbox.x, hitbox.y - 5).getCollision() //Checks collision with tile on top of the character
-        || tileManager.getTile(hitbox.x + hitbox.width , hitbox.y - 5).getCollision() )&&  player.dirY == -1) {
-            worldY = tileManager.getTile(hitbox.x,hitbox.y).getPos()[1] - hitbox.height;    //Prevent moving if collidable terrain
+    public void block(Player player){
+        if((player.hitbox.y > hitbox.y && player.hitbox.y < hitbox.y + hitbox.height)
+        || (player.hitbox.y + player.hitbox.height > hitbox.y && player.hitbox.y + player.hitbox.height < hitbox.y + hitbox.height)){
+            if(player.hitbox.x + player.hitbox.width > hitbox.x && player.hitbox.x < hitbox.x + hitbox.width){
+                if(player.dirX == 1 && player.hitbox.x < hitbox.x){
+                    player.worldX = hitbox.x - player.hitbox.width -player.hitbox.width/2;
+                }
+                if(player.dirX == -1 && player.hitbox.x + player.hitbox.width > hitbox.x + hitbox.width){
+                    player.worldX = hitbox.x + hitbox.width - player.hitbox.width/2;
+                }
+            }
         }
-        if((tileManager.getTile(hitbox.x, hitbox.y + hitbox.height + 5).getCollision() //Checks collision with tile beneath of the character
-        || tileManager.getTile(hitbox.x + hitbox.width, hitbox.y + hitbox.height + 5).getCollision()) && player.dirY == 1){
-            worldY = tileManager.getTile(hitbox.x,hitbox.y).getPos()[1] -1;        //Prevent moving if collidable terrain
+
+        if((player.hitbox.x > hitbox.x && player.hitbox.x < hitbox.x + hitbox.width)
+        || (player.hitbox.x + player.hitbox.width > hitbox.x && player.hitbox.x + player.hitbox.width < hitbox.x + hitbox.width)){
+            if(player.hitbox.y + player.hitbox.height > hitbox.y && player.hitbox.y < hitbox.y + hitbox.height){
+                if(player.dirY == 1 && player.hitbox.y < hitbox.y){
+                    player.worldY = hitbox.y - player.hitbox.height - player.hitbox.height;
+                }
+                if(player.dirY == -1 && player.hitbox.y + player.hitbox.height > hitbox.y + hitbox.height){
+                    player.worldY = hitbox.y + hitbox.height - player.hitbox.height;
+                }
+            }
         }
-        if((tileManager.getTile(hitbox.x - 5, hitbox.y).getCollision() //Checks collision with tile on the left of the character
-        || tileManager.getTile(hitbox.x - 5, hitbox.y + hitbox.height).getCollision()) && player.dirX == -1) {
-            worldX = tileManager.getTile(hitbox.x,hitbox.y).getPos()[0] - hitbox.width/2 ;    //Prevent moving if collidable terrain
-        }
-        if((hitbox.x + hitbox.width + 5, hitbox.y).getCollision() //Checks collision with tile on the right of the character
-        || tileManager.getTile(hitbox.x + hitbox.width + 5, hitbox.y + hitbox.height).getCollision()) && player.dirX == 1){
-            worldX = tileManager.getTile(hitbox.x,hitbox.y).getPos()[0] + hitbox.width/2 - 1;        //Prevent moving if collidable terrain
-        }
-            */
+        
+
     }
 
     protected void loadTextures(String name){
@@ -109,7 +117,7 @@ public abstract class Props extends Entity {
                 && worldY - Const.WRLD_tileScreenSize < world.player.worldY + playerScreenY) {
             // Draw the prop on the screen
             g2.drawImage(image, screenX, screenY, Const.WRLD_entityScreenSize, Const.WRLD_entityScreenSize, null);
-            g2.drawRect(screenX + Const.WRLD_entityScreenSize/8, screenY + Const.WRLD_entityScreenSize/8, this.hitbox.width, this.hitbox.height);
+            g2.drawRect(screenX, screenY, this.hitbox.width, this.hitbox.height);
         }
     }
 
