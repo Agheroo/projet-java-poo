@@ -12,7 +12,7 @@ import game.Scene.State;
 import java.awt.*;
 import java.util.HashMap;
 
-import UI.HUD;
+
 import UI.HUD_Fight;
 
 
@@ -22,12 +22,12 @@ import UI.HUD_Fight;
  * @brief Represents the scene during a fight between a player and an enemy.
  */
 public class FightScene {
-    public enum FightState {FIGHTING, WON , LOST};
+    
     //private double dt = Scene.getdt();
     public Player player;
     public Enemy enemy;
-    public FightState state;
-    private HUD menu;
+    public Const.FightState state;
+    private HUD_Fight menu;
 
     /**
      * @brief Constructor for the FightScene class.
@@ -35,28 +35,30 @@ public class FightScene {
      * @param enemy The enemy entity in the fight.
      */
     public FightScene(Player player, Enemy enemy) {
-        System.out.println("Entering combat");
         this.player = player;
         this.enemy = enemy;
-        state = FightState.FIGHTING;
+        state = Const.FightState.FIGHTING;
         menu = new HUD_Fight(3);
+        menu.selection = Const.Selection.ATTACK;
     }
 
     /**
      * @brief Updates the fight scene.
      */
     public void update(Scene scene) {
-
         // Additional logic for the fight scene update
-        System.out.println("Le joueur est en combat avec "+ enemy.name);
-        if(scene.keyH.interactPressed){
-            state = FightState.WON;
+        menu.update();
+
+        if(menu.selection == Const.Selection.ATTACK && menu.confirm){
+            state = Const.FightState.WON;
             Scene.state = State.WORLD;
             player.speed = 0;
             killEnemy(World.enemies, enemy);
-            
-            scene.keyH.interactPressed = false;
         }
+        if(menu.selection == Const.Selection.POTION && menu.confirm){
+            
+        }
+        menu.confirm = false;
     }
 
     public void killEnemy(HashMap<Point, Enemy> enemies, Enemy enemy){

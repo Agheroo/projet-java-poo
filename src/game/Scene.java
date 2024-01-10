@@ -34,7 +34,11 @@ public abstract class Scene {
     /**
      * @brief Updates the scene.
      */
-    public abstract void update();
+    public void update(){
+        if(menu != null){
+            menu.update();
+        }
+    }
 
     /**
      * @brief Draws the scene.

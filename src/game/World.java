@@ -10,7 +10,6 @@ import tiles.TileManager;
 import entity.Enemy;
 import entity.EntitySetter;
 import entity.props.Props;
-import game.FightScene.FightState;
 import java.awt.*;
 import java.util.HashMap;
 import UI.Textbox;
@@ -128,10 +127,10 @@ public class World extends Scene {
         
         //If there is a fight, draw the fight instead of the game world
         if(currfight != null){
-            if( currfight.state == FightState.FIGHTING){
+            if( currfight.state == Const.FightState.FIGHTING){
                 currfight.draw(g2);
             }
-            if(currfight.state == FightState.WON){
+            if(currfight.state == Const.FightState.WON){
                 currfight = null;
             }
         }

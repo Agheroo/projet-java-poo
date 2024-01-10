@@ -16,6 +16,7 @@ public final class Const {
     public final static int WRLD_maxRow = 64, WRLD_maxCol = 64; // DONT FORGET TO MODIFY WHEN CHANGING THE MAP !!!
 
     //FightScene parameters
+    public static enum FightState {FIGHTING, WON , LOST}
     public final static int FGHT_entityScreenSize = 200;
 
     //TileManager
@@ -23,6 +24,8 @@ public final class Const {
     public final static int nbTopTextures = 29;
 
     //HUD
+    public static enum Selection {NONE, PLAY, RESUME, CONTINUE, QUIT, ATTACK, POTION, BACK}
+    
     private final static int HUD_welcomeWidth = 600;
     private final static int HUD_welcomeHeight = 550;
     private final static int HUD_pauseWidth = 600;

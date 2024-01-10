@@ -3,19 +3,25 @@ package UI;
 import java.awt.Color;
 import java.awt.Graphics2D;
 
+import game.Const.Selection;
+import main.KeyHandler;
+
 public abstract class HUD {
-    public enum MenuType {WELCOME, PAUSE, FIGHT, SHOP}
+    public Selection selection;
+    public boolean confirm;
 
     protected int _nbButtons;
     protected ChoiceButton[] _buttons;
     protected Textbox[] _texts;
-    protected MenuType _type;
-
+    protected KeyHandler keyH;
+    
 
 
     public HUD(int nbButtons){
         _nbButtons = nbButtons;
         _buttons = new ChoiceButton[_nbButtons];
+        keyH = KeyHandler.getInstance();
+        confirm = false;
 
         //To replace with the current names that we want depending on the MenuType
         
@@ -29,5 +35,5 @@ public abstract class HUD {
 
     }
 
- 
+    public abstract void update();
 }
