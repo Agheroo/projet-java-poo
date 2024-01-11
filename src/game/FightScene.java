@@ -58,7 +58,7 @@ public class FightScene {
             World.enemies.remove(new Point(enemy.worldX,enemy.worldY), enemy);
         }
         if(menu.selection == Const.Selection.POTION && menu.confirm){
-            
+            System.out.println("Je cherche dans le HUD des popo ;)");
         }
         menu.confirm = false;
     }
@@ -75,10 +75,8 @@ public class FightScene {
      * @param screenHeight The height of the screen.
      */
     public void draw(Graphics2D g2) {
-        g2.setColor( new Color(0xFF2265));
-        g2.fillRect(100,200,400,150);
         player.drawInFight(g2, 50, 200);
         enemy.drawInFight(g2, 600, 200);
-        menu.draw(g2, Const.WDW_width, Const.WDW_height);
+        menu.draw(g2);
     }
 }

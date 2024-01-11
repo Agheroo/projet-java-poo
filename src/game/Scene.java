@@ -76,20 +76,27 @@ public abstract class Scene {
      * @brief Checks for a change in the scene state based on user input.
      */
     public void checkPauseScene() {
-        if (keyH.escPressed) {
-            keyH.escPressed = false;
-
-            if (state != State.PAUSE) {
+        //If the game is not already paused, pause it and show pause HUD
+        if(state != State.PAUSE){
+            if(keyH.escPressed){
                 System.out.println("CHANGING SCENE TO: PAUSE");
                 _lastState = state;
                 state = State.PAUSE;
-                menu = new HUD_Pause(3);
-            } else {
+                menu = new HUD_Pause();
+                keyH.escPressed = false;
+            }
+        }
+        else{ //If the game is paused
+            if(keyH.escPressed || (keyH.interactPressed && menu.selection == Const.Selection.CONTINUE)){    //Change back to current scene if the continue is selected
                 System.out.println("CHANGING SCENE TO: "+_lastState);
                 state = _lastState;
                 menu = null;
             }
-        }
+            else if(keyH.interactPressed && menu.selection == Const.Selection.QUIT){        //Destroy window and close game if quit is selected
+                System.out.println("Détruire la fenêtre");
+            }
+            keyH.interactPressed = false;
+        }        
     }
 
     public void changeScene(State newState){

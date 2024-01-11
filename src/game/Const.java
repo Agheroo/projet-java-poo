@@ -26,10 +26,10 @@ public final class Const {
     //HUD
     public static enum Selection {NONE, PLAY, RESUME, CONTINUE, QUIT, ATTACK, POTION, BACK}
     
-    private final static int HUD_welcomeWidth = 600;
-    private final static int HUD_welcomeHeight = 550;
-    private final static int HUD_pauseWidth = 600;
-    private final static int HUD_pauseHeight = 550;
-    private final static int HUD_fightWidth = 700;
-    private final static int HUD_fightHeight = 300;
+    public final static int HUD_welcomeWidth = 600;
+    public final static int HUD_welcomeHeight = 550;
+    public final static int HUD_pauseWidth = 600;
+    public final static int HUD_pauseHeight = 550;
+    public final static int HUD_fightWidth = 750;
+    public final static int HUD_fightHeight = 200;
 }

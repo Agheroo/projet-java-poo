@@ -94,32 +94,37 @@ public class World extends Scene {
      */
     public void update() {
         checkPauseScene();
-        if (state == State.WORLD) {
-            player.update(this, dt);
-            tileManager.update(this);
+        switch(state){
+            case State.WORLD:
+                player.update(this, dt);
+                tileManager.update(this);
 
 
-            //Update enemy if he's close enough otherwise useless to update (5 tile radius around the screen)
-            for(Enemy enemy : enemies.values()){
-                int playerScreenX = (Const.WDW_width - Const.WRLD_entityScreenSize) / 2;
-                int playerScreenY = (Const.WDW_height - Const.WRLD_entityScreenSize) / 2;
+                //Update enemy if he's close enough otherwise useless to update (5 tile radius around the screen)
+                for(Enemy enemy : enemies.values()){
+                    int playerScreenX = (Const.WDW_width - Const.WRLD_entityScreenSize) / 2;
+                    int playerScreenY = (Const.WDW_height - Const.WRLD_entityScreenSize) / 2;
 
-                if (enemy.worldX + 5*Const.WRLD_tileScreenSize > player.worldX - playerScreenX
-                && enemy.worldX - 5*Const.WRLD_tileScreenSize < player.worldX + playerScreenX
-                && enemy.worldY + 5*Const.WRLD_tileScreenSize > player.worldY - playerScreenY
-                && enemy.worldY - 5*Const.WRLD_tileScreenSize < player.worldY + playerScreenY) {  
-                    enemy.update(this, dt);
+                    if(enemy.worldX + 5*Const.WRLD_tileScreenSize > player.worldX - playerScreenX
+                    && enemy.worldX - 5*Const.WRLD_tileScreenSize < player.worldX + playerScreenX
+                    && enemy.worldY + 5*Const.WRLD_tileScreenSize > player.worldY - playerScreenY
+                    && enemy.worldY - 5*Const.WRLD_tileScreenSize < player.worldY + playerScreenY) {  
+                        enemy.update(this, dt);
 
+                    }
                 }
-            }
+                break;
+            
+            case State.PAUSE:
+                menu.update(); break;
+
+            case State.FIGHT:
+                currfight.update(this); break;
+
+            default:
+                break;
         }
 
-            
-            
-
-        if (state == State.FIGHT){
-            currfight.update(this);
-        }
     }
 
     /**
@@ -130,7 +135,7 @@ public class World extends Scene {
      * @param screenHeight The height of the screen.
      */
     public void draw(Graphics2D g2, int screenWidth, int screenHeight) {
-        
+
         //If there is a fight, draw the fight instead of the game world
         if(currfight != null){
             if( currfight.state == Const.FightState.FIGHTING){
@@ -160,10 +165,14 @@ public class World extends Scene {
                 int screenX = enemy.worldX - player.worldX + (Const.WDW_width - Const.WRLD_entityScreenSize)/2;
                 int screenY = enemy.worldY - player.worldY + (Const.WDW_height - Const.WRLD_entityScreenSize)/2;
 
-
-                
                 enemy.drawInWorld(g2, screenX, screenY);
             }   
-        }   
+        }
+
+
+        //Draw pause screen last but still draw the background game
+        if(Scene.state == State.PAUSE){
+            menu.draw(g2);
+        }
     }
 }

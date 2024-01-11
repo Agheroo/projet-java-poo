@@ -1,5 +1,7 @@
 package UI;
 
+
+import java.awt.Color;
 import java.awt.Graphics2D;
 
 import game.Const.Selection;
@@ -16,18 +18,25 @@ public abstract class HUD {
     
 
 
-    public HUD(int nbButtons){
-        _nbButtons = nbButtons;
-        _buttons = new ChoiceButton[_nbButtons];
+    public HUD(){
         keyH = KeyHandler.getInstance();
         confirm = false;
-        
+
+        keyH.interactPressed = false;
+        keyH.downPressed = false;
+        keyH.upPressed = false;
+        keyH.leftPressed = false;
+        keyH.rightPressed = false;
     }
 
 
-    public void draw(Graphics2D g2, int screenWidth, int screenHeight){
-
+    protected void changeSelectionColor(int selectionIndex, Color baseColor, Color selectColor){
+        for(int i =0; i< _nbButtons; i++){
+            _buttons[i].setTextColor(baseColor);
+        }
+        _buttons[selectionIndex].setTextColor(selectColor);
     }
 
+    public abstract void draw(Graphics2D g2);
     public abstract void update();
 }

@@ -1,14 +1,51 @@
 package UI;
 
+import java.awt.Color;
+import java.awt.Graphics2D;
+
+import game.Const;
+import game.Const.Selection;
+
 public class HUD_Pause extends HUD{
 
 
-    public HUD_Pause(int nbButtons){
-        super(nbButtons);
+    public HUD_Pause(){
+        super();
+        selection = Selection.CONTINUE;
+        _nbButtons = 2;
+        _buttons = new ChoiceButton[_nbButtons];
+
+        _buttons[0] = new ChoiceButton(200, 50, "CONTINUER", "rainyhearts", Color.red );
+        _buttons[1] = new ChoiceButton(200, 50, "QUITTER", "rainyhearts", Color.blue);
     }
 
 
     public void update(){
-        
+        if(keyH.interactPressed){
+            confirm = true;
+            System.out.println("Je confirme ma selection");
+        }
+        if(keyH.upPressed || keyH.downPressed){
+            if(selection == Const.Selection.CONTINUE){
+                selection = Const.Selection.QUIT;
+                changeSelectionColor(1, Color.blue, Color.red);
+            }
+            else if(selection == Const.Selection.QUIT){
+                selection = Const.Selection.CONTINUE;
+                changeSelectionColor(0, Color.blue, Color.red);
+            }
+            keyH.upPressed = false;
+            keyH.downPressed = false;
+        }
+    }
+
+    public void draw(Graphics2D g2){
+        //Darkened background
+        g2.setColor(new Color(0, 0, 0, 180));
+        g2.fillRect(0, 0, Const.WDW_width, Const.WDW_height);
+
+        //Actual buttons to draw
+        _buttons[0].draw(g2,(Const.WDW_width - _buttons[0].width)/2 , 200);
+        _buttons[1].draw(g2,(Const.WDW_width - _buttons[0].width)/2 , 400);
     }
 }
