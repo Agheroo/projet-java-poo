@@ -30,12 +30,15 @@ public class EntitySetter {
      */
     public void setObject() {
         // Create and set up a Key object at a specific location in the world
-        Props key = new OBJ_Key(13 * Const.WRLD_entityScreenSize,13 * Const.WRLD_entityScreenSize);
+        Props key = new OBJ_Key(13 * Const.WRLD_entityScreenSize, 13 * Const.WRLD_entityScreenSize);
         world.addObject(new Point((int) key.worldX, (int) key.worldY), key);
 
         // Create and set up a Door object at a specific location in the world
-        Props door = new OBJ_Door(14 * Const.WRLD_entityScreenSize,13 * Const.WRLD_entityScreenSize);
+        Props door = new OBJ_Door(14 * Const.WRLD_entityScreenSize, 13 * Const.WRLD_entityScreenSize);
         world.addObject(new Point((int) door.worldX, (int) door.worldY), door);
+
+        Props door2 = new OBJ_Door( 10 * Const.WRLD_entityScreenSize, 19 * Const.WRLD_entityScreenSize);
+        world.addObject(new Point((int) door2.worldX, (int) door2.worldY), door2);
 
         // Create and set up a Chest object at a specific location in the world
         Props chest = new OBJ_Chest(15 * Const.WRLD_entityScreenSize,13 * Const.WRLD_entityScreenSize);

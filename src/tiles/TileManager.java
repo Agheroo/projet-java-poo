@@ -41,8 +41,8 @@ public class TileManager {
         _topMap = new Tile[Const.WRLD_maxRow][Const.WRLD_maxCol];
 
         loadTextures();
-        loadMap("res/maps/debugfloor.txt", world, _floorMap, _floorMapTextures);
-        loadMap("res/maps/debugtop.txt", world, _topMap, _topMapTextures);
+        loadMap("res/maps/test_floor.csv", world, _floorMap, _floorMapTextures);
+        loadMap("res/maps/test_top.csv", world, _topMap, _topMapTextures);
     }
 
     /**
@@ -86,11 +86,12 @@ public class TileManager {
      */
     private void loadTextures() {
         // Floor map textures
-        storeTexture("grass", _floorMapTextures, 0, 3, false, 1, 0, false);
+        storeTexture("void", _floorMapTextures, 0, 1, false, 1, 0, false);
+        storeTexture("grass", _floorMapTextures, 1, 3, false, 1, 0, false);
         // Decoration textures (plants and tall grass)
-        storeTexture("grass0", _floorMapTextures, 3, 1, true, 5, 20, false);
-        storeTexture("grass1", _floorMapTextures, 4, 1, true, 5, 20, false);
-        storeTexture("flower0", _floorMapTextures, 5, 1, true, 6, 20, false);
+        storeTexture("grass0", _floorMapTextures, 4, 1, true, 5, 20, false);
+        storeTexture("grass1", _floorMapTextures, 5, 1, true, 5, 20, false);
+        storeTexture("flower0", _floorMapTextures, 6, 1, true, 6, 20, false);
 
         // Top map textures (trees & forest)
         storeTexture("void", _topMapTextures, 0, 1, false, 1, 0, false);
@@ -98,11 +99,7 @@ public class TileManager {
         storeTexture("forest", _topMapTextures, 1, 9, false, 1, 0, true);
         storeTexture("tree", _topMapTextures, 10, 9, false, 1, 0, true);
 
-        storeTexture("forest_topleft", _topMapTextures, 19, 3, false, 1, 0, true);
-        storeTexture("forest_topright", _topMapTextures, 22, 2, false, 1, 0, true);
-        storeTexture("forest_bottomleft", _topMapTextures, 24, 2, false, 1, 0, true);
-        storeTexture("forest_bottomright", _topMapTextures, 26, 1, false, 1, 0, true);
-        storeTexture("fire", _topMapTextures, 27, 1, true, 7, 15, true);
+        storeTexture("fire", _topMapTextures, 19, 1, true, 7, 15, true);
     }
 
     /**
@@ -123,9 +120,8 @@ public class TileManager {
                 String line = br.readLine();
 
                 for (int j = 0; j < Const.WRLD_maxCol; j++) {
-                    String[] numbers = line.split("\\s+");
-                    int num = Integer.parseInt(numbers[j]); // Reading the file itself and stocking int read
-
+                    String[] numbers = line.split(",");
+                    int num = 1 + Integer.parseInt(numbers[j]); // Reading the file itself and stocking int read
                     Tile tileCurrent = new Tile(textures[num].spriteCntMax, textures[num].spriteSpeed,
                             textures[num].getCollision(), num); // Creating new tile to store with the according texture
                     tileCurrent.setPos(Const.WRLD_tileScreenSize * j, Const.WRLD_tileScreenSize * i);

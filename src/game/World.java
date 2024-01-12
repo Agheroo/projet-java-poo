@@ -10,7 +10,6 @@ import tiles.TileManager;
 import entity.Enemy;
 import entity.EntitySetter;
 import entity.props.Props;
-import game.FightScene.FightState;
 import java.awt.*;
 import java.util.HashMap;
 import UI.Textbox;
@@ -37,8 +36,7 @@ public class World extends Scene {
     
   
     // Player settings
-    public Player player = new Player("player",15 * Const.WRLD_tileScreenSize,
-            15 * Const.WRLD_tileScreenSize, 0, 0, 0, "down", 4, 20);
+    public Player player;
 
 
     //public Player player;
@@ -64,8 +62,8 @@ public class World extends Scene {
         entitySetter.setObject();
         entitySetter.setEnemies();
 
-        player = new Player("player", 15 * Const.WRLD_tileScreenSize,
-            15 * Const.WRLD_tileScreenSize, 0, 0, 0, "down", 4, 20);
+        player = new Player("player", 8 * Const.WRLD_tileScreenSize,
+            16 * Const.WRLD_tileScreenSize, 0, 0, 0, "down", 4, 20);
     
     }
 
@@ -81,6 +79,12 @@ public class World extends Scene {
         objMap.put(coordinates, object);
     }
 
+    /**
+     * Adds an enemy to the HashMap with the specified coordinates.
+     *
+     * @param coordinates The coordinates of the object.
+     * @param object      The object to be added.
+     */
     public void addEnemy(Point coordinates, Enemy enemy){
         enemies.put(coordinates,enemy);
     }
@@ -90,38 +94,37 @@ public class World extends Scene {
      */
     public void update() {
         checkPauseScene();
-        if (state == State.WORLD) {
-            Point ptn = new Point((int)13 * Const.WRLD_entityScreenSize, (int) 13 * Const.WRLD_entityScreenSize);
-            Props key = objMap.get(ptn);
-            //System.out.println("("+key.worldX +"," + key.worldY + ")  (" + key.hitbox.x +","+key.hitbox.y+")");
-            //int playerScreenX = (Const.WDW_width - Const.WRLD_entityScreenSize) / 2;
-            //int playerScreenY = (Const.WDW_height - Const.WRLD_entityScreenSize) / 2;
-
-            player.update(this, dt);
-            tileManager.update(this);
+        switch(state){
+            case State.WORLD:
+                player.update(this, dt);
+                tileManager.update(this);
 
 
-            //Update enemy if he's close enough otherwise useless to update (5 tile radius around the screen)
-            for(Enemy enemy : enemies.values()){
-                int playerScreenX = (Const.WDW_width - Const.WRLD_entityScreenSize) / 2;
-                int playerScreenY = (Const.WDW_height - Const.WRLD_entityScreenSize) / 2;
+                //Update enemy if he's close enough otherwise useless to update (5 tile radius around the screen)
+                for(Enemy enemy : enemies.values()){
+                    int playerScreenX = (Const.WDW_width - Const.WRLD_entityScreenSize) / 2;
+                    int playerScreenY = (Const.WDW_height - Const.WRLD_entityScreenSize) / 2;
 
-                if (enemy.worldX + 5*Const.WRLD_tileScreenSize > player.worldX - playerScreenX
-                && enemy.worldX - 5*Const.WRLD_tileScreenSize < player.worldX + playerScreenX
-                && enemy.worldY + 5*Const.WRLD_tileScreenSize > player.worldY - playerScreenY
-                && enemy.worldY - 5*Const.WRLD_tileScreenSize < player.worldY + playerScreenY) {  
-                    enemy.update(this, dt);
+                    if(enemy.worldX + 5*Const.WRLD_tileScreenSize > player.worldX - playerScreenX
+                    && enemy.worldX - 5*Const.WRLD_tileScreenSize < player.worldX + playerScreenX
+                    && enemy.worldY + 5*Const.WRLD_tileScreenSize > player.worldY - playerScreenY
+                    && enemy.worldY - 5*Const.WRLD_tileScreenSize < player.worldY + playerScreenY) {  
+                        enemy.update(this, dt);
 
+                    }
                 }
-            }
+                break;
+            
+            case State.PAUSE:
+                menu.update(); break;
+
+            case State.FIGHT:
+                currfight.update(this); break;
+
+            default:
+                break;
         }
 
-            
-            
-
-        if (state == State.FIGHT){
-            currfight.update(this);
-        }
     }
 
     /**
@@ -132,13 +135,13 @@ public class World extends Scene {
      * @param screenHeight The height of the screen.
      */
     public void draw(Graphics2D g2, int screenWidth, int screenHeight) {
-        
+
         //If there is a fight, draw the fight instead of the game world
         if(currfight != null){
-            if( currfight.state == FightState.FIGHTING){
+            if( currfight.state == Const.FightState.FIGHTING){
                 currfight.draw(g2);
             }
-            if(currfight.state == FightState.WON){
+            if(currfight.state == Const.FightState.WON){
                 currfight = null;
             }
         }
@@ -162,10 +165,14 @@ public class World extends Scene {
                 int screenX = enemy.worldX - player.worldX + (Const.WDW_width - Const.WRLD_entityScreenSize)/2;
                 int screenY = enemy.worldY - player.worldY + (Const.WDW_height - Const.WRLD_entityScreenSize)/2;
 
-
-                
                 enemy.drawInWorld(g2, screenX, screenY);
             }   
-        }   
+        }
+
+
+        //Draw pause screen last but still draw the background game
+        if(Scene.state == State.PAUSE){
+            menu.draw(g2);
+        }
     }
 }

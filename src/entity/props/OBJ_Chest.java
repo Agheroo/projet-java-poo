@@ -16,7 +16,7 @@ import item.Item;
  * @brief Represents a chest object.
  */
 public class OBJ_Chest extends Props {
-
+    public boolean open;
     /**
      * @brief Constructor for the OBJ_Chest class.
      * @details Initializes the name and loads the image for the chest.
@@ -24,7 +24,8 @@ public class OBJ_Chest extends Props {
     public OBJ_Chest(int worldX, int worldY){
         super(worldX,worldY,"chest",1,0,true);
         loadTextures("chest");
-        collision = true; // Chests are not meant to be collided with by default
+        collision = true;
+        open = false;
     }
     public void playerInterraction(Player p) {
         Item item= Generator.generateItem();

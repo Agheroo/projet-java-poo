@@ -19,7 +19,8 @@ import java.awt.*;
  * @brief Represents the player entity in the game.
  */
 public class Player extends Character {
-
+    public int level;
+    public int xp;  //xp of the player
     public int hasKey = 0;
     /**
      * @brief Constructor for the Player class.
@@ -34,6 +35,15 @@ public class Player extends Character {
      */
     public Player(String entityName, int worldX, int worldY, int dirX, int dirY, int speed, String facing, int spriteCntMax, int spriteSpeed) {
         super(entityName, worldX, worldY, dirX, dirY, speed, facing, spriteCntMax, spriteSpeed);  // Calls the parent class for entity setup, specifying scene.keyH for player
+        
+        level = 1;
+        xp = 0;
+        health = level*100;
+        mana = 100;
+        agility = 10;
+        strength = 10;
+        defense = 10;
+        initiative = 10;
     }
 
     /**
@@ -99,10 +109,10 @@ public class Player extends Character {
         for (Props obj : World.objMap.values()) {
             if (obj != null) {
                 if (hitbox.intersects(obj.hitbox)) {
-                    if (obj.getCollision()) {   //If object has "solid" collision
-                        //prevent the player from moving in the hitbox
-                        obj.block(this);
+                    if(obj.getCollision()){ //If object has "solid" collision
+                        obj.block(this);    //Block the playersd
                     }
+
                     index = new Point((int) obj.worldX, (int) obj.worldY);
                     break;
                 }

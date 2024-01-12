@@ -7,8 +7,6 @@ package game;
 
 import javax.swing.JPanel;
 
-import game.Scene.State;
-
 import java.awt.*;
 
 /**
@@ -95,12 +93,7 @@ public class Window extends JPanel implements Runnable {
 
         scene.draw(g2, Const.WDW_width, Const.WDW_height);
 
-        // Darkens the scene on the background to let the menu on top
-        if (Scene.state == State.PAUSE) {
-            g2.setColor(new Color(0, 0, 0, 180));
-            g2.fillRect(0, 0, Const.WDW_width, Const.WDW_height);
-            scene.menu.draw(g2, Const.WDW_width, Const.WDW_height);
-        }
+
 
         g2.dispose();
     }

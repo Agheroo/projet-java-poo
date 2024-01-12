@@ -12,8 +12,8 @@ import game.Scene.State;
 import java.awt.*;
 import java.util.HashMap;
 
-import UI.HUD;
-import UI.HUD.MenuType;
+
+import UI.HUD_Fight;
 
 
 /**
@@ -22,12 +22,12 @@ import UI.HUD.MenuType;
  * @brief Represents the scene during a fight between a player and an enemy.
  */
 public class FightScene {
-    public enum FightState {FIGHTING, WON , LOST};
+    
     //private double dt = Scene.getdt();
     public Player player;
     public Enemy enemy;
-    public FightState state;
-    private HUD menu;
+    public Const.FightState state;
+    private HUD_Fight menu;
 
     /**
      * @brief Constructor for the FightScene class.
@@ -35,28 +35,32 @@ public class FightScene {
      * @param enemy The enemy entity in the fight.
      */
     public FightScene(Player player, Enemy enemy) {
-        System.out.println("Entering combat");
         this.player = player;
         this.enemy = enemy;
-        state = FightState.FIGHTING;
-        menu = new HUD(MenuType.FIGHT);
+        state = Const.FightState.FIGHTING;
+        menu = new HUD_Fight(3);
+        menu.selection = Const.Selection.ATTACK;
     }
 
     /**
      * @brief Updates the fight scene.
      */
     public void update(Scene scene) {
-
         // Additional logic for the fight scene update
-        System.out.println("Le joueur est en combat avec "+ enemy.name);
-        if(scene.keyH.interactPressed){
-            state = FightState.WON;
+        menu.update();
+
+        if(menu.selection == Const.Selection.ATTACK && menu.confirm){
+            //Implement combat game mechanics here
+            //If the fight is won, theses lines are mendatory
+            state = Const.FightState.WON;
             Scene.state = State.WORLD;
             player.speed = 0;
-            killEnemy(World.enemies, enemy);
-            
-            scene.keyH.interactPressed = false;
+            World.enemies.remove(new Point(enemy.worldX,enemy.worldY), enemy);
         }
+        if(menu.selection == Const.Selection.POTION && menu.confirm){
+            System.out.println("Je cherche dans le HUD des popo ;)");
+        }
+        menu.confirm = false;
     }
 
     public void killEnemy(HashMap<Point, Enemy> enemies, Enemy enemy){
@@ -71,9 +75,8 @@ public class FightScene {
      * @param screenHeight The height of the screen.
      */
     public void draw(Graphics2D g2) {
-        g2.setColor( new Color(0xFF2265));
-        g2.fillRect(100,200,400,150);
-        player.drawInFight(g2, Const.WDW_width / 2 - (Const.FGHT_entityScreenSize / 2), Const.WDW_height / 2 - (Const.FGHT_entityScreenSize / 2));
-        menu.draw(g2, Const.WDW_width, Const.WDW_height);
+        player.drawInFight(g2, 50, 200);
+        enemy.drawInFight(g2, 600, 200);
+        menu.draw(g2);
     }
 }

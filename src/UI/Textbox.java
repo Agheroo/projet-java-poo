@@ -17,6 +17,14 @@ public class Textbox extends JLabel{
     private int _fontSizeToUse;
 
 
+    /**
+     * Class used for displaying texts, for buttons or dialogues
+     * @param text The text diplayed on screen
+     * @param fontName The font to use
+     * @param w The total width the text has to cover
+     * @param h The total height the text had to cover
+     * @param color The colour of the text
+     */
     public Textbox(String text, String fontName, int w, int h, Color color){  
         _width = w; _height = h;
         _text = text;  
@@ -42,6 +50,13 @@ public class Textbox extends JLabel{
         _font = new Font(fontName, Font.PLAIN, _fontSizeToUse);
     }
 
+    /**
+     * @brief Setter func for a new font color of the current text
+     * @param newCol The new Color of the text
+     */
+    public void setColor(Color newCol){
+        _color = newCol;
+    }
 
     public static void loadFont(String fontName){
         try {
@@ -59,8 +74,6 @@ public class Textbox extends JLabel{
     public void draw(Graphics2D g2,int x, int y){
         //TODO: find a way to center text on the button
         g2.setFont(_font);
-        g2.setColor(Color.black);
-        g2.drawRect(x,y,_width,_height);
         g2.setColor(_color);
         g2.drawString(_text, x + _fontSizeToUse, y + (_height +_fontSizeToUse)/2);
     }

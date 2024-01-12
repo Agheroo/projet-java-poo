@@ -17,7 +17,7 @@ import game.Scene.State;
  */
 public class Enemy extends Character {
 
-    private int _xpRate; // Experience points rate for defeating the enemy
+    public int xpRate; // Experience points rate for defeating the enemy
     /**
      * @brief Constructor for the Enemy class.
      * @param worldX The X-coordinate of the enemy in the world.
@@ -38,15 +38,31 @@ public class Enemy extends Character {
      * @param player The player entity
      */
     public boolean touchingPlayer(Player player){
-        
-        if((hitbox.x >= player.hitbox.x + player.hitbox.width)      // trop à droite
-	    || (hitbox.x + hitbox.width <= player.hitbox.x) // trop à gauche
-	    || (hitbox.y >= player.hitbox.y + player.hitbox.height) // trop en bas
-	    || (hitbox.y + hitbox.height <= player.hitbox.y)){// trop en haut
-            return false;
+        if(hitbox.intersects(player.hitbox)){
+            return true;
         }
+        return false;
 
-        return true;
+    }
+
+    /**
+     * Setter for enemy creation to initialize thei stats
+     * @param xpRate    The xp that will give the enemy to the player once beaten
+     * @param health    The health of the enemy
+     * @param mana      The mana of the enemy (if he has spe atk)
+     * @param strength  The "damage" of the enemy
+     * @param defense   The reducing of damage of the enemy
+     * @param agility   The probability of the enemy to dodge the attack
+     * @param initiative    Who attacks first
+     */
+    public void setStats(int xpRate, int health, int mana, int strength, int defense,  int agility, int initiative){
+        this.xpRate = xpRate;
+        this.health = health;
+        this.mana = mana;
+        this.strength = strength;
+        this.defense = defense;
+        this.agility = agility;
+        this.initiative = initiative;
     }
 
 
@@ -55,7 +71,6 @@ public class Enemy extends Character {
      * @param scene The current game scene.
      * @param dt The time elapsed since the last update.
      */
-    @Override
     public void update(Scene scene, double dt) {
         super.update(scene, dt); // Calls the parent class update method
         //TODO : find a method to make the enemy move in predictive patterns

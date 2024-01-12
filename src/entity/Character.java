@@ -23,15 +23,19 @@ import javax.imageio.ImageIO;
  * @brief Represents an abstract character entity with position, hitbox, stats, and animations.
  */
 public abstract class Character extends Entity {
-    int health;
-    int mana;
-    int agility;
-    int strength;
-    int defense;
-    int initiative;
+    //Stats for fights
+    public int health;  //health
+    public int mana;    //mana for special attacks
+    public int agility; //probability to dodge an attack
+    public int strength;//damage to inflict
+    public int defense; //damag to reduce
+    public int initiative;  //who strikes first in a battle
+
+
+    //World movement "stats"
     public int speed;
     public int dirX, dirY;
-    int hasKey = 0; //normalement dans player
+    
 
     // Which direction is the entity facing (if directions are available) for animation
     public String facing;
@@ -86,7 +90,6 @@ public abstract class Character extends Entity {
      * @param scene The current game scene.
      * @param dt The time elapsed since the last update.
      */
-    @Override
     public void update(Scene scene, double dt) {
         if (Scene.state == State.WORLD) {
             World currWorld = World.getWorld();

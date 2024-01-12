@@ -26,18 +26,13 @@ public class OBJ_Door extends Props {
         collision = true;
     }
     public void playerInterraction(Player p) {
-        if(p.hasKey > 0 ) {
-            // TODO : Change door collision; it's still here but with different textures and properties
+        if(p.hasKey > 0 && collision == true) {
+            
             p.hasKey--;
 
+            // TODO : Change door collision; instead of destroying self
             destroySelf();
         }
-
-        System.out.println("Key:"+p.hasKey);
-
-
-
-
     }
 
 }
