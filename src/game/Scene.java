@@ -91,6 +91,7 @@ public abstract class Scene {
                 System.out.println("CHANGING SCENE TO: "+_lastState);
                 state = _lastState;
                 menu = null;
+                keyH.escPressed = false;
             }
             else if(keyH.interactPressed && menu.selection == Const.Selection.QUIT){        //Destroy window and close game if quit is selected
                 System.out.println("Détruire la fenêtre");

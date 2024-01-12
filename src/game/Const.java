@@ -30,6 +30,6 @@ public final class Const {
     public final static int HUD_welcomeHeight = 550;
     public final static int HUD_pauseWidth = 600;
     public final static int HUD_pauseHeight = 550;
-    public final static int HUD_fightWidth = 750;
-    public final static int HUD_fightHeight = 200;
+    public final static int HUD_fightWidth = 760;
+    public final static int HUD_fightHeight = 160;
 }

@@ -74,8 +74,6 @@ public class Textbox extends JLabel{
     public void draw(Graphics2D g2,int x, int y){
         //TODO: find a way to center text on the button
         g2.setFont(_font);
-        g2.setColor(Color.black);
-        g2.drawRect(x,y,_width,_height);
         g2.setColor(_color);
         g2.drawString(_text, x + _fontSizeToUse, y + (_height +_fontSizeToUse)/2);
     }

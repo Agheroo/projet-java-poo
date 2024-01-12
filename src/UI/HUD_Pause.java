@@ -15,8 +15,9 @@ public class HUD_Pause extends HUD{
         _nbButtons = 2;
         _buttons = new ChoiceButton[_nbButtons];
 
-        _buttons[0] = new ChoiceButton(200, 50, "CONTINUER", "rainyhearts", Color.red );
+        _buttons[0] = new ChoiceButton(200, 50, "CONTINUER", "rainyhearts", Color.blue);
         _buttons[1] = new ChoiceButton(200, 50, "QUITTER", "rainyhearts", Color.blue);
+        changeSelectionColor(0, Color.blue, Color.red);
     }
 
 
@@ -26,13 +27,17 @@ public class HUD_Pause extends HUD{
             System.out.println("Je confirme ma selection");
         }
         if(keyH.upPressed || keyH.downPressed){
-            if(selection == Const.Selection.CONTINUE){
-                selection = Const.Selection.QUIT;
-                changeSelectionColor(1, Color.blue, Color.red);
-            }
-            else if(selection == Const.Selection.QUIT){
-                selection = Const.Selection.CONTINUE;
-                changeSelectionColor(0, Color.blue, Color.red);
+            switch(selection){
+                case Const.Selection.CONTINUE:
+                    selection = Const.Selection.QUIT;
+                    changeSelectionColor(1, Color.blue, Color.red);
+                    break;
+                case Const.Selection.QUIT:
+                    selection = Const.Selection.CONTINUE;
+                    changeSelectionColor(0, Color.blue, Color.red);
+                    break;
+
+                default: break;    
             }
             keyH.upPressed = false;
             keyH.downPressed = false;

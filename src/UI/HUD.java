@@ -33,8 +33,10 @@ public abstract class HUD {
     protected void changeSelectionColor(int selectionIndex, Color baseColor, Color selectColor){
         for(int i =0; i< _nbButtons; i++){
             _buttons[i].setTextColor(baseColor);
+            _buttons[i].highlighted = false;
         }
         _buttons[selectionIndex].setTextColor(selectColor);
+        _buttons[selectionIndex].highlighted = true;
     }
 
     public abstract void draw(Graphics2D g2);

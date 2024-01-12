@@ -12,14 +12,14 @@ import java.awt.Color;
 
 public class ChoiceButton {
     public int width, height;
+    public boolean highlighted;
     private Textbox _textBox;
     
     public ChoiceButton(int w,int h, String title, String fontName, Color fontColor){
         this.width = w; this.height = h;
+        highlighted = false;
 
         _textBox = new Textbox(title,fontName,w,h,fontColor);
-
-        //loadTexture();
     }
 
     /**
@@ -30,15 +30,6 @@ public class ChoiceButton {
         _textBox.setColor(newColor);
     }
 
-    /*private void loadTexture(){
-        try{
-            _bgTexture = ImageIO.read(new FileInputStream("res/hud/bg.png"));
-        }
-        catch(IOException e){
-            e.printStackTrace();
-        }
-    }*/
-
     /**
      * @brief Draws a button (rectangle) on the screen at x,y coords (top left)
      * @param g2 //Graphics2D
@@ -46,6 +37,12 @@ public class ChoiceButton {
      * @param y //y coord
      */
     public void draw(Graphics2D g2, int x, int y){
+        if(highlighted){
+            g2.setColor(Color.black);
+            g2.fillRect(x-2, y-2, width + 4, height + 4);
+        }
+        
+
         g2.setColor(new Color(0xA38168));
         g2.fillRect(x,y,width,height);
 
