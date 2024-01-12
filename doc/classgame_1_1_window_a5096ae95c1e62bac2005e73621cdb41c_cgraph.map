@@ -1,0 +1,7 @@
+<map id="game.Window.paintComponent" name="game.Window.paintComponent">
+<area shape="rect" id="node1" title="Paints the components of the game window." alt="" coords="5,31,232,57"/>
+<area shape="rect" id="node2" href="$classgame_1_1_scene.html#aef53d2ecf085388a16020032121e46dc" title="Draws the scene." alt="" coords="280,5,419,32"/>
+<area shape="rect" id="node3" href="$class_u_i_1_1_h_u_d.html#a290720935a1960ce8159eae9e7a535fa" title=" " alt="" coords="296,56,403,83"/>
+<area shape="rect" id="node4" href="$class_u_i_1_1_choice_button.html#a1000744853168892a77f3aaa14886739" title=" " alt="" coords="467,56,629,83"/>
+<area shape="rect" id="node5" href="$class_u_i_1_1_textbox.html#aab675a99675e6ba3e03630cf973f2799" title=" " alt="" coords="677,56,804,83"/>
+</map>

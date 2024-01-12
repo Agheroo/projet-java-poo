@@ -1,0 +1,4 @@
+<map id="tiles.TileManager.loadTextures" name="tiles.TileManager.loadTextures">
+<area shape="rect" id="node1" title="Loading all tiles&#39; textures of the game for the map in an array." alt="" coords="5,5,227,32"/>
+<area shape="rect" id="node2" href="$classtiles_1_1_tile_manager.html#ab21de0db126abd1652c47f993b4a8c06" title="Stores in a Tile array (from &quot;start&quot; to &quot;start + size&quot;) the textures that are loaded for the game." alt="" coords="275,5,493,32"/>
+</map>

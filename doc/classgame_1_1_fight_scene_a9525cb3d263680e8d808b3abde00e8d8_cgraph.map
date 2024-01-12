@@ -1,0 +1,7 @@
+<map id="game.FightScene.draw" name="game.FightScene.draw">
+<area shape="rect" id="node1" title="Draws the fight scene." alt="" coords="5,31,176,57"/>
+<area shape="rect" id="node2" href="$class_u_i_1_1_h_u_d.html#a290720935a1960ce8159eae9e7a535fa" title=" " alt="" coords="273,5,379,32"/>
+<area shape="rect" id="node5" href="$classentity_1_1_character.html#a24e991ea21c30b197a36fe5e9c7b0733" title="Draws the character in the fight scene." alt="" coords="224,56,428,83"/>
+<area shape="rect" id="node3" href="$class_u_i_1_1_choice_button.html#a1000744853168892a77f3aaa14886739" title=" " alt="" coords="476,5,639,32"/>
+<area shape="rect" id="node4" href="$class_u_i_1_1_textbox.html#aab675a99675e6ba3e03630cf973f2799" title=" " alt="" coords="687,5,813,32"/>
+</map>

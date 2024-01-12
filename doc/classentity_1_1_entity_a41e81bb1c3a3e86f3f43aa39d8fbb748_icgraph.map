@@ -1,0 +1,4 @@
+<map id="entity.Entity.updateFrames" name="entity.Entity.updateFrames">
+<area shape="rect" id="node1" title="Updates the frames of the entity&#39;s animation." alt="" coords="227,5,421,32"/>
+<area shape="rect" id="node2" href="$classentity_1_1_character.html#a2d5d7da3d6f49c2b0b040850d741f8f7" title="Updates the character entity based on the current scene and time elapsed." alt="" coords="5,5,179,32"/>
+</map>

@@ -1,0 +1,65 @@
+\hypertarget{_entity_8java_source}{}\doxysection{Entity.\+java}
+\label{_entity_8java_source}\index{src/entity/Entity.java@{src/entity/Entity.java}}
+\mbox{\hyperlink{_entity_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00006}00006 \textcolor{keyword}{package }entity;}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00008}00008 \textcolor{keyword}{import} java.awt.Rectangle;}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00009}00009 \textcolor{keyword}{import} \mbox{\hyperlink{namespacegame}{game}}.\mbox{\hyperlink{classgame_1_1_scene}{Scene}};}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00015}\mbox{\hyperlink{classentity_1_1_entity}{00015}} \textcolor{keyword}{public} \textcolor{keyword}{abstract} \textcolor{keyword}{class }\mbox{\hyperlink{classentity_1_1_entity}{Entity}} \{}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00016}00016     \textcolor{comment}{// Position of the entity in the world, directions, and speed}}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00017}\mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{00017}}     \textcolor{keyword}{public} \textcolor{keywordtype}{int} \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}}, \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}};}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00018}\mbox{\hyperlink{classentity_1_1_entity_acd7f4b7c1acbdcd410ee9ad61a86b58e}{00018}}     \textcolor{keyword}{protected} \textcolor{keywordtype}{boolean} \mbox{\hyperlink{classentity_1_1_entity_acd7f4b7c1acbdcd410ee9ad61a86b58e}{collision}};}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00019}00019     \textcolor{comment}{// Hitbox of the entity}}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00020}\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{00020}}     \textcolor{keyword}{public} Rectangle \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}} = \textcolor{keyword}{new} Rectangle();}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00022}00022     \textcolor{comment}{// Entity animations}}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00023}\mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{00023}}     \textcolor{keyword}{protected} \textcolor{keywordtype}{int} \mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}} = 0; \textcolor{comment}{// Variable responsible for the incrementation of the different sprites}}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00024}\mbox{\hyperlink{classentity_1_1_entity_a2ab792cccf8b5931642f7fa8432186af}{00024}}     \textcolor{keyword}{protected} \textcolor{keywordtype}{int} \mbox{\hyperlink{classentity_1_1_entity_a2ab792cccf8b5931642f7fa8432186af}{\_spriteUpdater}} = 0; \textcolor{comment}{// Variable responsible for the incrementation of the speed of the sprites}}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00025}\mbox{\hyperlink{classentity_1_1_entity_a61ba22624c5da7387312d9aa6d8e2526}{00025}}     \textcolor{keyword}{protected} \textcolor{keywordtype}{int} \mbox{\hyperlink{classentity_1_1_entity_a61ba22624c5da7387312d9aa6d8e2526}{\_spriteSpeed}}; \textcolor{comment}{// How fast the sprites are changing (higher spriteSpeed means slower time to change)}}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00026}\mbox{\hyperlink{classentity_1_1_entity_af6b442584a7caf6e84e73872f9f8e080}{00026}}     \textcolor{keyword}{protected} \textcolor{keywordtype}{int} \mbox{\hyperlink{classentity_1_1_entity_af6b442584a7caf6e84e73872f9f8e080}{\_spriteCntMax}}; \textcolor{comment}{// How many sprites does the entity have}}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00028}\mbox{\hyperlink{classentity_1_1_entity_a19fc9a3b25d27f23c8ada7af8e746a17}{00028}}     \textcolor{keyword}{public} String \mbox{\hyperlink{classentity_1_1_entity_a19fc9a3b25d27f23c8ada7af8e746a17}{name}}; \textcolor{comment}{//Name of the current entity}}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00033}\mbox{\hyperlink{classentity_1_1_entity_a5b732487cc1bdf1388db4e3f59409d52}{00033}}     \textcolor{keyword}{public} \mbox{\hyperlink{classentity_1_1_entity_a5b732487cc1bdf1388db4e3f59409d52}{Entity}}() \{}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00034}00034         \textcolor{comment}{// Default constructor}}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00035}00035     \}}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00044}\mbox{\hyperlink{classentity_1_1_entity_a64161739076def0816eab3956d5b6346}{00044}}     \textcolor{keyword}{public} \mbox{\hyperlink{classentity_1_1_entity_a64161739076def0816eab3956d5b6346}{Entity}}(String entityName, \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y, \textcolor{keywordtype}{int} \mbox{\hyperlink{classentity_1_1_entity_af6b442584a7caf6e84e73872f9f8e080}{\_spriteCntMax}}, \textcolor{keywordtype}{int} spriteSpeed, \textcolor{keywordtype}{boolean} \mbox{\hyperlink{classentity_1_1_entity_acd7f4b7c1acbdcd410ee9ad61a86b58e}{collision}}) \{}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00045}00045         this.collision = \mbox{\hyperlink{classentity_1_1_entity_acd7f4b7c1acbdcd410ee9ad61a86b58e}{collision}};}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00046}00046         this.worldX = x;}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00047}00047         this.worldY = y;}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00048}00048         this.hitbox.x = \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}};}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00049}00049         this.hitbox.y = \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}};}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00050}00050         this.\_spriteCntMax = \mbox{\hyperlink{classentity_1_1_entity_af6b442584a7caf6e84e73872f9f8e080}{\_spriteCntMax}};}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00051}00051         this.\_spriteSpeed = spriteSpeed;}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00052}00052         this.name = entityName;}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00053}00053     \}}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00060}\mbox{\hyperlink{classentity_1_1_entity_a127423f72cd9e8ec189509dad498b21b}{00060}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classentity_1_1_entity_a127423f72cd9e8ec189509dad498b21b}{update}}(\mbox{\hyperlink{classgame_1_1_scene}{Scene}} scene, \textcolor{keywordtype}{double} dt) \{}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00061}00061         \textcolor{comment}{// Updating entity position accurately (at any point in time either pressing keys or not)}}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00062}00062     \}}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00064}00064     \textcolor{comment}{// GRAPHICS}}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00070}\mbox{\hyperlink{classentity_1_1_entity_a9060501233d22f6130e204799a1f01c5}{00070}}     \textcolor{keyword}{private} \textcolor{keywordtype}{void} \mbox{\hyperlink{classentity_1_1_entity_a9060501233d22f6130e204799a1f01c5}{loadTextures}}() \{}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00071}00071         \textcolor{comment}{// TODO: Different texture loading from characters}}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00072}00072     \}}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00077}\mbox{\hyperlink{classentity_1_1_entity_a41e81bb1c3a3e86f3f43aa39d8fbb748}{00077}}     \textcolor{keyword}{protected} \textcolor{keywordtype}{void} \mbox{\hyperlink{classentity_1_1_entity_a41e81bb1c3a3e86f3f43aa39d8fbb748}{updateFrames}}() \{}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00078}00078         \mbox{\hyperlink{classentity_1_1_entity_a2ab792cccf8b5931642f7fa8432186af}{\_spriteUpdater}}++;}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00079}00079         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_a2ab792cccf8b5931642f7fa8432186af}{\_spriteUpdater}} > \mbox{\hyperlink{classentity_1_1_entity_a61ba22624c5da7387312d9aa6d8e2526}{\_spriteSpeed}}) \{}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00080}00080             \mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}}++;}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00081}00081             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}} == \mbox{\hyperlink{classentity_1_1_entity_af6b442584a7caf6e84e73872f9f8e080}{\_spriteCntMax}}) \{}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00082}00082                 \mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}} = 0;}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00083}00083             \}}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00084}00084             \mbox{\hyperlink{classentity_1_1_entity_a2ab792cccf8b5931642f7fa8432186af}{\_spriteUpdater}} = 0;}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00085}00085         \}}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00086}00086     \}}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00087}00087 }
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00088}\mbox{\hyperlink{classentity_1_1_entity_ae874ae13e301bb9f227535534869f64e}{00088}}     \textcolor{keyword}{protected} \textcolor{keyword}{abstract} \textcolor{keywordtype}{void} \mbox{\hyperlink{classentity_1_1_entity_ae874ae13e301bb9f227535534869f64e}{playerInterraction}}(\mbox{\hyperlink{classentity_1_1_player}{Player}} player);}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00089}00089 \}}
+
+\end{DoxyCode}

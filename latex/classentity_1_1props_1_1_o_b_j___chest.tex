@@ -1,0 +1,120 @@
+\hypertarget{classentity_1_1props_1_1_o_b_j___chest}{}\doxysection{entity.\+props.\+OBJ\+\_\+\+Chest Class Reference}
+\label{classentity_1_1props_1_1_o_b_j___chest}\index{entity.props.OBJ\_Chest@{entity.props.OBJ\_Chest}}
+
+
+Represents a chest object.  
+
+
+
+
+Inheritance diagram for entity.\+props.\+OBJ\+\_\+\+Chest\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{classentity_1_1props_1_1_o_b_j___chest__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for entity.\+props.\+OBJ\+\_\+\+Chest\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classentity_1_1props_1_1_o_b_j___chest__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___chest_a791b6f22d201a11338c82f65b5b65bc5}{OBJ\+\_\+\+Chest}} (int \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}}, int \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}})
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___chest}{OBJ\+\_\+\+Chest}} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___chest_a3fd47570a31ae5fa8d3009776eb876bd}{player\+Interraction}} (\mbox{\hyperlink{classentity_1_1_player}{Player}} p)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Represents a chest object. 
+
+Definition at line \mbox{\hyperlink{_o_b_j___chest_8java_source_l00018}{18}} of file \mbox{\hyperlink{_o_b_j___chest_8java_source}{OBJ\+\_\+\+Chest.\+java}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classentity_1_1props_1_1_o_b_j___chest_a791b6f22d201a11338c82f65b5b65bc5}\label{classentity_1_1props_1_1_o_b_j___chest_a791b6f22d201a11338c82f65b5b65bc5}} 
+\index{entity.props.OBJ\_Chest@{entity.props.OBJ\_Chest}!OBJ\_Chest@{OBJ\_Chest}}
+\index{OBJ\_Chest@{OBJ\_Chest}!entity.props.OBJ\_Chest@{entity.props.OBJ\_Chest}}
+\doxysubsubsection{\texorpdfstring{OBJ\_Chest()}{OBJ\_Chest()}}
+{\footnotesize\ttfamily entity.\+props.\+OBJ\+\_\+\+Chest.\+OBJ\+\_\+\+Chest (\begin{DoxyParamCaption}\item[{int}]{worldX,  }\item[{int}]{worldY }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___chest}{OBJ\+\_\+\+Chest}} class. 
+
+Initializes the name and loads the image for the chest. 
+
+Definition at line \mbox{\hyperlink{_o_b_j___chest_8java_source_l00024}{24}} of file \mbox{\hyperlink{_o_b_j___chest_8java_source}{OBJ\+\_\+\+Chest.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024                                             \{}
+\DoxyCodeLine{00025         super(\mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}},\mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}},\textcolor{stringliteral}{"{}chest"{}},1,0,\textcolor{keyword}{true});}
+\DoxyCodeLine{00026         \mbox{\hyperlink{classentity_1_1_entity_a9060501233d22f6130e204799a1f01c5}{loadTextures}}(\textcolor{stringliteral}{"{}chest"{}});}
+\DoxyCodeLine{00027         \mbox{\hyperlink{classentity_1_1_entity_acd7f4b7c1acbdcd410ee9ad61a86b58e}{collision}} = \textcolor{keyword}{true}; \textcolor{comment}{// Chests are not meant to be collided with by default}}
+\DoxyCodeLine{00028     \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classentity_1_1props_1_1_o_b_j___chest_a791b6f22d201a11338c82f65b5b65bc5_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classentity_1_1props_1_1_o_b_j___chest_a3fd47570a31ae5fa8d3009776eb876bd}\label{classentity_1_1props_1_1_o_b_j___chest_a3fd47570a31ae5fa8d3009776eb876bd}} 
+\index{entity.props.OBJ\_Chest@{entity.props.OBJ\_Chest}!playerInterraction@{playerInterraction}}
+\index{playerInterraction@{playerInterraction}!entity.props.OBJ\_Chest@{entity.props.OBJ\_Chest}}
+\doxysubsubsection{\texorpdfstring{playerInterraction()}{playerInterraction()}}
+{\footnotesize\ttfamily void entity.\+props.\+OBJ\+\_\+\+Chest.\+player\+Interraction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classentity_1_1_player}{Player}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classentity_1_1_entity_ae874ae13e301bb9f227535534869f64e}{entity.\+Entity}}.
+
+
+
+Definition at line \mbox{\hyperlink{_o_b_j___chest_8java_source_l00029}{29}} of file \mbox{\hyperlink{_o_b_j___chest_8java_source}{OBJ\+\_\+\+Chest.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029                                              \{}
+\DoxyCodeLine{00030         Item \mbox{\hyperlink{namespaceitem}{item}}= Generator.generateItem();}
+\DoxyCodeLine{00031         \textcolor{keywordflow}{if}(\textcolor{keyword}{true})\{}
+\DoxyCodeLine{00032             p.addItem(\mbox{\hyperlink{namespaceitem}{item}});}
+\DoxyCodeLine{00033         \}}
+\DoxyCodeLine{00034         System.out.println(\textcolor{stringliteral}{"{}Chest interaction"{}});}
+\DoxyCodeLine{00035 }
+\DoxyCodeLine{00036         \mbox{\hyperlink{classentity_1_1props_1_1_props_ab837cf0c685323fe8c2cc84d80f6315a}{destroySelf}}();}
+\DoxyCodeLine{00037 }
+\DoxyCodeLine{00038     \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classentity_1_1props_1_1_o_b_j___chest_a3fd47570a31ae5fa8d3009776eb876bd_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/entity/props/\mbox{\hyperlink{_o_b_j___chest_8java}{OBJ\+\_\+\+Chest.\+java}}\end{DoxyCompactItemize}

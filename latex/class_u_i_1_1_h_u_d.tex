@@ -1,0 +1,255 @@
+\hypertarget{class_u_i_1_1_h_u_d}{}\doxysection{UI.\+HUD Class Reference}
+\label{class_u_i_1_1_h_u_d}\index{UI.HUD@{UI.HUD}}
+
+
+Collaboration diagram for UI.\+HUD\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_1_1_h_u_d__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{enum_u_i_1_1_h_u_d_1_1_menu_type}{Menu\+Type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_i_1_1_h_u_d_a394b5cad072fa9364ed20f648974d6dd}{HUD}} (\mbox{\hyperlink{enum_u_i_1_1_h_u_d_1_1_menu_type}{Menu\+Type}} type)
+\item 
+void \mbox{\hyperlink{class_u_i_1_1_h_u_d_a290720935a1960ce8159eae9e7a535fa}{draw}} (Graphics2D g2, int screen\+Width, int screen\+Height)
+\item 
+void \mbox{\hyperlink{class_u_i_1_1_h_u_d_ad960c142c73e280881c32f452a4e844a}{update}} (double dt)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+final int \mbox{\hyperlink{class_u_i_1_1_h_u_d_a5ce40c660b55fea474d7d72a61b9ea52}{HUDWidth}} = 600
+\item 
+final int \mbox{\hyperlink{class_u_i_1_1_h_u_d_a726457ceeae60078debbf4605357b33b}{HUDHeight}} = 550
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_u_i_1_1_h_u_d_a2b2c87a34b30ab4ab62d4e58390b1560}{\+\_\+nb\+Buttons}}
+\item 
+\mbox{\hyperlink{class_u_i_1_1_choice_button}{Choice\+Button}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_u_i_1_1_h_u_d_a89e962c43a04bc0bc065a74e6cd52720}{\+\_\+buttons}}
+\item 
+\mbox{\hyperlink{class_u_i_1_1_choice_button}{Choice\+Button}} \mbox{\hyperlink{class_u_i_1_1_h_u_d_a1bc0e7e673fea33efd34f3613d5656e7}{\+\_\+title}}
+\item 
+\mbox{\hyperlink{enum_u_i_1_1_h_u_d_1_1_menu_type}{Menu\+Type}} \mbox{\hyperlink{class_u_i_1_1_h_u_d_a4b4a963ffd455d5cdbda1a31847e1e35}{\+\_\+type}}
+\item 
+int \mbox{\hyperlink{class_u_i_1_1_h_u_d_a9c58dd644fb0192b3edda7dca9807c4c}{\+\_\+title\+Width}}
+\item 
+int \mbox{\hyperlink{class_u_i_1_1_h_u_d_acac7a7226aaf2f1e5219023954455841}{\+\_\+title\+Height}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_h_u_d_8java_source_l00006}{6}} of file \mbox{\hyperlink{_h_u_d_8java_source}{HUD.\+java}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_u_i_1_1_h_u_d_a394b5cad072fa9364ed20f648974d6dd}\label{class_u_i_1_1_h_u_d_a394b5cad072fa9364ed20f648974d6dd}} 
+\index{UI.HUD@{UI.HUD}!HUD@{HUD}}
+\index{HUD@{HUD}!UI.HUD@{UI.HUD}}
+\doxysubsubsection{\texorpdfstring{HUD()}{HUD()}}
+{\footnotesize\ttfamily UI.\+HUD.\+HUD (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enum_u_i_1_1_h_u_d_1_1_menu_type}{Menu\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_h_u_d_8java_source_l00020}{20}} of file \mbox{\hyperlink{_h_u_d_8java_source}{HUD.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020                              \{}
+\DoxyCodeLine{00021         \mbox{\hyperlink{class_u_i_1_1_h_u_d_a4b4a963ffd455d5cdbda1a31847e1e35}{\_type}} = type;}
+\DoxyCodeLine{00022         \textcolor{keywordflow}{switch}(\mbox{\hyperlink{class_u_i_1_1_h_u_d_a4b4a963ffd455d5cdbda1a31847e1e35}{\_type}})\{}
+\DoxyCodeLine{00023             \textcolor{keywordflow}{case} WELCOME:}
+\DoxyCodeLine{00024                 \mbox{\hyperlink{class_u_i_1_1_h_u_d_a2b2c87a34b30ab4ab62d4e58390b1560}{\_nbButtons}} = 2;}
+\DoxyCodeLine{00025                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00026             \textcolor{keywordflow}{case} PAUSE:}
+\DoxyCodeLine{00027                 \mbox{\hyperlink{class_u_i_1_1_h_u_d_a2b2c87a34b30ab4ab62d4e58390b1560}{\_nbButtons}} = 3;}
+\DoxyCodeLine{00028                 \mbox{\hyperlink{class_u_i_1_1_h_u_d_a9c58dd644fb0192b3edda7dca9807c4c}{\_titleWidth}} = 300;}
+\DoxyCodeLine{00029                 \mbox{\hyperlink{class_u_i_1_1_h_u_d_acac7a7226aaf2f1e5219023954455841}{\_titleHeight}} = 80;}
+\DoxyCodeLine{00030                 \mbox{\hyperlink{class_u_i_1_1_h_u_d_a1bc0e7e673fea33efd34f3613d5656e7}{\_title}} = \textcolor{keyword}{new} ChoiceButton(\mbox{\hyperlink{class_u_i_1_1_h_u_d_a9c58dd644fb0192b3edda7dca9807c4c}{\_titleWidth}},\mbox{\hyperlink{class_u_i_1_1_h_u_d_acac7a7226aaf2f1e5219023954455841}{\_titleHeight}},\textcolor{stringliteral}{"{}PAUSE"{}},\textcolor{stringliteral}{"{}rainyhearts"{}},\textcolor{keyword}{new} Color(0x834317));}
+\DoxyCodeLine{00031                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00032             \textcolor{keywordflow}{case} FIGHT:}
+\DoxyCodeLine{00033                 \mbox{\hyperlink{class_u_i_1_1_h_u_d_a9c58dd644fb0192b3edda7dca9807c4c}{\_titleWidth}} = 300;}
+\DoxyCodeLine{00034                 \mbox{\hyperlink{class_u_i_1_1_h_u_d_acac7a7226aaf2f1e5219023954455841}{\_titleHeight}} = 60;}
+\DoxyCodeLine{00035                 \mbox{\hyperlink{class_u_i_1_1_h_u_d_a2b2c87a34b30ab4ab62d4e58390b1560}{\_nbButtons}} = 4;}
+\DoxyCodeLine{00036                 \mbox{\hyperlink{class_u_i_1_1_h_u_d_a1bc0e7e673fea33efd34f3613d5656e7}{\_title}} = \textcolor{keyword}{new} ChoiceButton(\mbox{\hyperlink{class_u_i_1_1_h_u_d_a9c58dd644fb0192b3edda7dca9807c4c}{\_titleWidth}},\mbox{\hyperlink{class_u_i_1_1_h_u_d_acac7a7226aaf2f1e5219023954455841}{\_titleHeight}},\textcolor{stringliteral}{"{}FIGHT"{}},\textcolor{stringliteral}{"{}rainyhearts"{}},\textcolor{keyword}{new} Color(0xF10516));}
+\DoxyCodeLine{00037                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00038             \textcolor{keywordflow}{case} SHOP:}
+\DoxyCodeLine{00039                 \mbox{\hyperlink{class_u_i_1_1_h_u_d_a2b2c87a34b30ab4ab62d4e58390b1560}{\_nbButtons}} = 4;}
+\DoxyCodeLine{00040                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00041         \}}
+\DoxyCodeLine{00042 }
+\DoxyCodeLine{00043         \mbox{\hyperlink{class_u_i_1_1_h_u_d_a89e962c43a04bc0bc065a74e6cd52720}{\_buttons}} = \textcolor{keyword}{new} ChoiceButton[\mbox{\hyperlink{class_u_i_1_1_h_u_d_a2b2c87a34b30ab4ab62d4e58390b1560}{\_nbButtons}}];}
+\DoxyCodeLine{00044 }
+\DoxyCodeLine{00045         \textcolor{comment}{//To replace with the current names that we want depending on the MenuType}}
+\DoxyCodeLine{00046         }
+\DoxyCodeLine{00047         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i =0; i<\mbox{\hyperlink{class_u_i_1_1_h_u_d_a2b2c87a34b30ab4ab62d4e58390b1560}{\_nbButtons}} ; i++)\{}
+\DoxyCodeLine{00048             \mbox{\hyperlink{class_u_i_1_1_h_u_d_a89e962c43a04bc0bc065a74e6cd52720}{\_buttons}}[i] = \textcolor{keyword}{new} ChoiceButton(80*3,20*3, \textcolor{stringliteral}{"{}BUTTON "{}} +i, \textcolor{stringliteral}{"{}rainyhearts"{}},Color.black);}
+\DoxyCodeLine{00049         \}}
+\DoxyCodeLine{00050     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_i_1_1_h_u_d_a290720935a1960ce8159eae9e7a535fa}\label{class_u_i_1_1_h_u_d_a290720935a1960ce8159eae9e7a535fa}} 
+\index{UI.HUD@{UI.HUD}!draw@{draw}}
+\index{draw@{draw}!UI.HUD@{UI.HUD}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void UI.\+HUD.\+draw (\begin{DoxyParamCaption}\item[{Graphics2D}]{g2,  }\item[{int}]{screen\+Width,  }\item[{int}]{screen\+Height }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_h_u_d_8java_source_l00053}{53}} of file \mbox{\hyperlink{_h_u_d_8java_source}{HUD.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00053                                                                       \{}
+\DoxyCodeLine{00054         \textcolor{comment}{//g2.drawImage(\_bgTexture, (800 -\/ HUDWidth)/2,(600 -\/ HUDHeight)/2,HUDWidth, HUDHeight, null);}}
+\DoxyCodeLine{00055         g2.setColor(\textcolor{keyword}{new} Color(0,0,0,20));}
+\DoxyCodeLine{00056         g2.fillRect((screenWidth -\/ \mbox{\hyperlink{class_u_i_1_1_h_u_d_a5ce40c660b55fea474d7d72a61b9ea52}{HUDWidth}})/2, (screenHeight -\/ \mbox{\hyperlink{class_u_i_1_1_h_u_d_a726457ceeae60078debbf4605357b33b}{HUDHeight}})/2,\mbox{\hyperlink{class_u_i_1_1_h_u_d_a5ce40c660b55fea474d7d72a61b9ea52}{HUDWidth}},\mbox{\hyperlink{class_u_i_1_1_h_u_d_a726457ceeae60078debbf4605357b33b}{HUDHeight}});   \textcolor{comment}{//"{}Drawing"{} HUD with soft background color}}
+\DoxyCodeLine{00057 }
+\DoxyCodeLine{00058 }
+\DoxyCodeLine{00059 }
+\DoxyCodeLine{00060 }
+\DoxyCodeLine{00061         \textcolor{keywordtype}{int} gap = (\mbox{\hyperlink{class_u_i_1_1_h_u_d_a726457ceeae60078debbf4605357b33b}{HUDHeight}} -\/ \mbox{\hyperlink{class_u_i_1_1_h_u_d_a2b2c87a34b30ab4ab62d4e58390b1560}{\_nbButtons}}*\mbox{\hyperlink{class_u_i_1_1_h_u_d_a89e962c43a04bc0bc065a74e6cd52720}{\_buttons}}[0].\mbox{\hyperlink{class_u_i_1_1_choice_button_a63b5743b35bdb35e849f314efd401e54}{height}})/(\mbox{\hyperlink{class_u_i_1_1_h_u_d_a2b2c87a34b30ab4ab62d4e58390b1560}{\_nbButtons}}+1);    \textcolor{comment}{//Small gap to space the buttons and keep them centered on screen}}
+\DoxyCodeLine{00062         \mbox{\hyperlink{class_u_i_1_1_h_u_d_a1bc0e7e673fea33efd34f3613d5656e7}{\_title}}.\mbox{\hyperlink{class_u_i_1_1_choice_button_a1000744853168892a77f3aaa14886739}{draw}}(g2,(screenWidth -\/ \mbox{\hyperlink{class_u_i_1_1_h_u_d_a9c58dd644fb0192b3edda7dca9807c4c}{\_titleWidth}})/2, screenHeight -\/ \mbox{\hyperlink{class_u_i_1_1_h_u_d_a726457ceeae60078debbf4605357b33b}{HUDHeight}});}
+\DoxyCodeLine{00063         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i < \mbox{\hyperlink{class_u_i_1_1_h_u_d_a2b2c87a34b30ab4ab62d4e58390b1560}{\_nbButtons}}; i++)\{}
+\DoxyCodeLine{00064             \mbox{\hyperlink{class_u_i_1_1_h_u_d_a89e962c43a04bc0bc065a74e6cd52720}{\_buttons}}[i].\mbox{\hyperlink{class_u_i_1_1_choice_button_a1000744853168892a77f3aaa14886739}{draw}}(g2,(screenWidth -\/ \mbox{\hyperlink{class_u_i_1_1_h_u_d_a89e962c43a04bc0bc065a74e6cd52720}{\_buttons}}[i].width)/2, (gap+gap*(i+1)/2 + \mbox{\hyperlink{class_u_i_1_1_h_u_d_a89e962c43a04bc0bc065a74e6cd52720}{\_buttons}}[i].height*i + (screenHeight -\/ \mbox{\hyperlink{class_u_i_1_1_h_u_d_a726457ceeae60078debbf4605357b33b}{HUDHeight}})/2));}
+\DoxyCodeLine{00065         \}}
+\DoxyCodeLine{00066     \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_1_1_h_u_d_a290720935a1960ce8159eae9e7a535fa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_1_1_h_u_d_a290720935a1960ce8159eae9e7a535fa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_i_1_1_h_u_d_ad960c142c73e280881c32f452a4e844a}\label{class_u_i_1_1_h_u_d_ad960c142c73e280881c32f452a4e844a}} 
+\index{UI.HUD@{UI.HUD}!update@{update}}
+\index{update@{update}!UI.HUD@{UI.HUD}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void UI.\+HUD.\+update (\begin{DoxyParamCaption}\item[{double}]{dt }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_h_u_d_8java_source_l00068}{68}} of file \mbox{\hyperlink{_h_u_d_8java_source}{HUD.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00068                                  \{}
+\DoxyCodeLine{00069         }
+\DoxyCodeLine{00070     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_u_i_1_1_h_u_d_a89e962c43a04bc0bc065a74e6cd52720}\label{class_u_i_1_1_h_u_d_a89e962c43a04bc0bc065a74e6cd52720}} 
+\index{UI.HUD@{UI.HUD}!\_buttons@{\_buttons}}
+\index{\_buttons@{\_buttons}!UI.HUD@{UI.HUD}}
+\doxysubsubsection{\texorpdfstring{\_buttons}{\_buttons}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_u_i_1_1_choice_button}{Choice\+Button}} \mbox{[}$\,$\mbox{]} UI.\+HUD.\+\_\+buttons\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_h_u_d_8java_source_l00010}{10}} of file \mbox{\hyperlink{_h_u_d_8java_source}{HUD.\+java}}.
+
+\mbox{\Hypertarget{class_u_i_1_1_h_u_d_a2b2c87a34b30ab4ab62d4e58390b1560}\label{class_u_i_1_1_h_u_d_a2b2c87a34b30ab4ab62d4e58390b1560}} 
+\index{UI.HUD@{UI.HUD}!\_nbButtons@{\_nbButtons}}
+\index{\_nbButtons@{\_nbButtons}!UI.HUD@{UI.HUD}}
+\doxysubsubsection{\texorpdfstring{\_nbButtons}{\_nbButtons}}
+{\footnotesize\ttfamily int UI.\+HUD.\+\_\+nb\+Buttons\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_h_u_d_8java_source_l00009}{9}} of file \mbox{\hyperlink{_h_u_d_8java_source}{HUD.\+java}}.
+
+\mbox{\Hypertarget{class_u_i_1_1_h_u_d_a1bc0e7e673fea33efd34f3613d5656e7}\label{class_u_i_1_1_h_u_d_a1bc0e7e673fea33efd34f3613d5656e7}} 
+\index{UI.HUD@{UI.HUD}!\_title@{\_title}}
+\index{\_title@{\_title}!UI.HUD@{UI.HUD}}
+\doxysubsubsection{\texorpdfstring{\_title}{\_title}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_u_i_1_1_choice_button}{Choice\+Button}} UI.\+HUD.\+\_\+title\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_h_u_d_8java_source_l00011}{11}} of file \mbox{\hyperlink{_h_u_d_8java_source}{HUD.\+java}}.
+
+\mbox{\Hypertarget{class_u_i_1_1_h_u_d_acac7a7226aaf2f1e5219023954455841}\label{class_u_i_1_1_h_u_d_acac7a7226aaf2f1e5219023954455841}} 
+\index{UI.HUD@{UI.HUD}!\_titleHeight@{\_titleHeight}}
+\index{\_titleHeight@{\_titleHeight}!UI.HUD@{UI.HUD}}
+\doxysubsubsection{\texorpdfstring{\_titleHeight}{\_titleHeight}}
+{\footnotesize\ttfamily int UI.\+HUD.\+\_\+title\+Height\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_h_u_d_8java_source_l00013}{13}} of file \mbox{\hyperlink{_h_u_d_8java_source}{HUD.\+java}}.
+
+\mbox{\Hypertarget{class_u_i_1_1_h_u_d_a9c58dd644fb0192b3edda7dca9807c4c}\label{class_u_i_1_1_h_u_d_a9c58dd644fb0192b3edda7dca9807c4c}} 
+\index{UI.HUD@{UI.HUD}!\_titleWidth@{\_titleWidth}}
+\index{\_titleWidth@{\_titleWidth}!UI.HUD@{UI.HUD}}
+\doxysubsubsection{\texorpdfstring{\_titleWidth}{\_titleWidth}}
+{\footnotesize\ttfamily int UI.\+HUD.\+\_\+title\+Width\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_h_u_d_8java_source_l00013}{13}} of file \mbox{\hyperlink{_h_u_d_8java_source}{HUD.\+java}}.
+
+\mbox{\Hypertarget{class_u_i_1_1_h_u_d_a4b4a963ffd455d5cdbda1a31847e1e35}\label{class_u_i_1_1_h_u_d_a4b4a963ffd455d5cdbda1a31847e1e35}} 
+\index{UI.HUD@{UI.HUD}!\_type@{\_type}}
+\index{\_type@{\_type}!UI.HUD@{UI.HUD}}
+\doxysubsubsection{\texorpdfstring{\_type}{\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{enum_u_i_1_1_h_u_d_1_1_menu_type}{Menu\+Type}} UI.\+HUD.\+\_\+type\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_h_u_d_8java_source_l00012}{12}} of file \mbox{\hyperlink{_h_u_d_8java_source}{HUD.\+java}}.
+
+\mbox{\Hypertarget{class_u_i_1_1_h_u_d_a726457ceeae60078debbf4605357b33b}\label{class_u_i_1_1_h_u_d_a726457ceeae60078debbf4605357b33b}} 
+\index{UI.HUD@{UI.HUD}!HUDHeight@{HUDHeight}}
+\index{HUDHeight@{HUDHeight}!UI.HUD@{UI.HUD}}
+\doxysubsubsection{\texorpdfstring{HUDHeight}{HUDHeight}}
+{\footnotesize\ttfamily final int UI.\+HUD.\+HUDHeight = 550}
+
+
+
+Definition at line \mbox{\hyperlink{_h_u_d_8java_source_l00018}{18}} of file \mbox{\hyperlink{_h_u_d_8java_source}{HUD.\+java}}.
+
+\mbox{\Hypertarget{class_u_i_1_1_h_u_d_a5ce40c660b55fea474d7d72a61b9ea52}\label{class_u_i_1_1_h_u_d_a5ce40c660b55fea474d7d72a61b9ea52}} 
+\index{UI.HUD@{UI.HUD}!HUDWidth@{HUDWidth}}
+\index{HUDWidth@{HUDWidth}!UI.HUD@{UI.HUD}}
+\doxysubsubsection{\texorpdfstring{HUDWidth}{HUDWidth}}
+{\footnotesize\ttfamily final int UI.\+HUD.\+HUDWidth = 600}
+
+
+
+Definition at line \mbox{\hyperlink{_h_u_d_8java_source_l00017}{17}} of file \mbox{\hyperlink{_h_u_d_8java_source}{HUD.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+UI/\mbox{\hyperlink{_h_u_d_8java}{HUD.\+java}}\end{DoxyCompactItemize}

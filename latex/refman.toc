@@ -1,0 +1,524 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}a\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Faire}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Projet Objet en Java}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Avancé du projet}{3}{section.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.0.1}06/10/23 \discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:}{3}{subsubsection.2.1.0.1}%
+\contentsline {subsubsection}{\numberline {2.1.0.2}13/10/23 \discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:}{3}{subsubsection.2.1.0.2}%
+\contentsline {subsubsection}{\numberline {2.1.0.3}16/10/23 \discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:}{3}{subsubsection.2.1.0.3}%
+\contentsline {subsubsection}{\numberline {2.1.0.4}18/10/23 \discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:}{3}{subsubsection.2.1.0.4}%
+\contentsline {subsubsection}{\numberline {2.1.0.5}29/10/23 \discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:}{4}{subsubsection.2.1.0.5}%
+\contentsline {subsubsection}{\numberline {2.1.0.6}14/11/23 \discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:}{4}{subsubsection.2.1.0.6}%
+\contentsline {subsubsection}{\numberline {2.1.0.7}15/11/23 \discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:}{4}{subsubsection.2.1.0.7}%
+\contentsline {subsubsection}{\numberline {2.1.0.8}19/11/23 \discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:}{4}{subsubsection.2.1.0.8}%
+\contentsline {chapter}{\numberline {3}Namespace Index}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Package List}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Hierarchical Index}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Class Hierarchy}{7}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Class Index}{9}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Class List}{9}{section.5.1}%
+\contentsline {chapter}{\numberline {6}File Index}{11}{chapter.6}%
+\contentsline {section}{\numberline {6.1}File List}{11}{section.6.1}%
+\contentsline {chapter}{\numberline {7}Namespace Documentation}{13}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Package Creation\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Combat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scene}{13}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Package Creation\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Combat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scene.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}entity}{13}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Package Creation\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Combat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scene.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}game}{13}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Package entity}{13}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Package entity.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}props}{14}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Package game}{14}{section.7.6}%
+\contentsline {section}{\numberline {7.7}Package item}{14}{section.7.7}%
+\contentsline {section}{\numberline {7.8}Package item.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}armor}{15}{section.7.8}%
+\contentsline {section}{\numberline {7.9}Package item.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}potion}{15}{section.7.9}%
+\contentsline {section}{\numberline {7.10}Package item.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}weapon}{15}{section.7.10}%
+\contentsline {section}{\numberline {7.11}Package main}{15}{section.7.11}%
+\contentsline {section}{\numberline {7.12}Package tiles}{16}{section.7.12}%
+\contentsline {section}{\numberline {7.13}Package UI}{16}{section.7.13}%
+\contentsline {chapter}{\numberline {8}Class Documentation}{17}{chapter.8}%
+\contentsline {section}{\numberline {8.1}item.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}armor.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Armor Class Reference}{17}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Detailed Description}{17}{subsection.8.1.1}%
+\contentsline {section}{\numberline {8.2}item.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}armor.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Body Class Reference}{17}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Detailed Description}{17}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Constructor \& Destructor Documentation}{18}{subsection.8.2.2}%
+\contentsline {subsubsection}{\numberline {8.2.2.1}Body()}{18}{subsubsection.8.2.2.1}%
+\contentsline {section}{\numberline {8.3}item.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}weapon.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Bow Class Reference}{18}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Detailed Description}{18}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Constructor \& Destructor Documentation}{18}{subsection.8.3.2}%
+\contentsline {subsubsection}{\numberline {8.3.2.1}Bow()}{18}{subsubsection.8.3.2.1}%
+\contentsline {section}{\numberline {8.4}entity.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Character Class Reference}{19}{section.8.4}%
+\contentsline {subsection}{\numberline {8.4.1}Detailed Description}{20}{subsection.8.4.1}%
+\contentsline {subsection}{\numberline {8.4.2}Constructor \& Destructor Documentation}{20}{subsection.8.4.2}%
+\contentsline {subsubsection}{\numberline {8.4.2.1}Character()}{20}{subsubsection.8.4.2.1}%
+\contentsline {subsection}{\numberline {8.4.3}Member Function Documentation}{21}{subsection.8.4.3}%
+\contentsline {subsubsection}{\numberline {8.4.3.1}accelerate()}{21}{subsubsection.8.4.3.1}%
+\contentsline {subsubsection}{\numberline {8.4.3.2}checkTileCollision()}{21}{subsubsection.8.4.3.2}%
+\contentsline {subsubsection}{\numberline {8.4.3.3}decelerate()}{22}{subsubsection.8.4.3.3}%
+\contentsline {subsubsection}{\numberline {8.4.3.4}drawInFight()}{22}{subsubsection.8.4.3.4}%
+\contentsline {subsubsection}{\numberline {8.4.3.5}drawInWorld()}{23}{subsubsection.8.4.3.5}%
+\contentsline {subsubsection}{\numberline {8.4.3.6}loadTextures()}{24}{subsubsection.8.4.3.6}%
+\contentsline {subsubsection}{\numberline {8.4.3.7}move()}{24}{subsubsection.8.4.3.7}%
+\contentsline {subsubsection}{\numberline {8.4.3.8}playerInterraction()}{25}{subsubsection.8.4.3.8}%
+\contentsline {subsubsection}{\numberline {8.4.3.9}update()}{25}{subsubsection.8.4.3.9}%
+\contentsline {subsection}{\numberline {8.4.4}Member Data Documentation}{26}{subsection.8.4.4}%
+\contentsline {subsubsection}{\numberline {8.4.4.1}\_idle\_down}{26}{subsubsection.8.4.4.1}%
+\contentsline {subsubsection}{\numberline {8.4.4.2}\_idle\_left}{26}{subsubsection.8.4.4.2}%
+\contentsline {subsubsection}{\numberline {8.4.4.3}\_idle\_right}{26}{subsubsection.8.4.4.3}%
+\contentsline {subsubsection}{\numberline {8.4.4.4}\_idle\_up}{27}{subsubsection.8.4.4.4}%
+\contentsline {subsubsection}{\numberline {8.4.4.5}\_walk\_down}{27}{subsubsection.8.4.4.5}%
+\contentsline {subsubsection}{\numberline {8.4.4.6}\_walk\_left}{27}{subsubsection.8.4.4.6}%
+\contentsline {subsubsection}{\numberline {8.4.4.7}\_walk\_right}{27}{subsubsection.8.4.4.7}%
+\contentsline {subsubsection}{\numberline {8.4.4.8}\_walk\_up}{27}{subsubsection.8.4.4.8}%
+\contentsline {subsubsection}{\numberline {8.4.4.9}agility}{27}{subsubsection.8.4.4.9}%
+\contentsline {subsubsection}{\numberline {8.4.4.10}defense}{28}{subsubsection.8.4.4.10}%
+\contentsline {subsubsection}{\numberline {8.4.4.11}dirX}{28}{subsubsection.8.4.4.11}%
+\contentsline {subsubsection}{\numberline {8.4.4.12}dirY}{28}{subsubsection.8.4.4.12}%
+\contentsline {subsubsection}{\numberline {8.4.4.13}facing}{28}{subsubsection.8.4.4.13}%
+\contentsline {subsubsection}{\numberline {8.4.4.14}hasKey}{28}{subsubsection.8.4.4.14}%
+\contentsline {subsubsection}{\numberline {8.4.4.15}health}{28}{subsubsection.8.4.4.15}%
+\contentsline {subsubsection}{\numberline {8.4.4.16}initiative}{29}{subsubsection.8.4.4.16}%
+\contentsline {subsubsection}{\numberline {8.4.4.17}mana}{29}{subsubsection.8.4.4.17}%
+\contentsline {subsubsection}{\numberline {8.4.4.18}speed}{29}{subsubsection.8.4.4.18}%
+\contentsline {subsubsection}{\numberline {8.4.4.19}strength}{29}{subsubsection.8.4.4.19}%
+\contentsline {section}{\numberline {8.5}UI.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Choice\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Button Class Reference}{29}{section.8.5}%
+\contentsline {subsection}{\numberline {8.5.1}Detailed Description}{30}{subsection.8.5.1}%
+\contentsline {subsection}{\numberline {8.5.2}Constructor \& Destructor Documentation}{30}{subsection.8.5.2}%
+\contentsline {subsubsection}{\numberline {8.5.2.1}ChoiceButton()}{30}{subsubsection.8.5.2.1}%
+\contentsline {subsection}{\numberline {8.5.3}Member Function Documentation}{30}{subsection.8.5.3}%
+\contentsline {subsubsection}{\numberline {8.5.3.1}draw()}{30}{subsubsection.8.5.3.1}%
+\contentsline {subsubsection}{\numberline {8.5.3.2}loadTexture()}{31}{subsubsection.8.5.3.2}%
+\contentsline {subsection}{\numberline {8.5.4}Member Data Documentation}{31}{subsection.8.5.4}%
+\contentsline {subsubsection}{\numberline {8.5.4.1}\_bgTexture}{31}{subsubsection.8.5.4.1}%
+\contentsline {subsubsection}{\numberline {8.5.4.2}\_textBox}{31}{subsubsection.8.5.4.2}%
+\contentsline {subsubsection}{\numberline {8.5.4.3}height}{31}{subsubsection.8.5.4.3}%
+\contentsline {subsubsection}{\numberline {8.5.4.4}width}{31}{subsubsection.8.5.4.4}%
+\contentsline {section}{\numberline {8.6}game.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Const Class Reference}{32}{section.8.6}%
+\contentsline {subsection}{\numberline {8.6.1}Detailed Description}{32}{subsection.8.6.1}%
+\contentsline {subsection}{\numberline {8.6.2}Member Data Documentation}{32}{subsection.8.6.2}%
+\contentsline {subsubsection}{\numberline {8.6.2.1}FGHT\_entityScreenSize}{32}{subsubsection.8.6.2.1}%
+\contentsline {subsubsection}{\numberline {8.6.2.2}nbFloorTextures}{32}{subsubsection.8.6.2.2}%
+\contentsline {subsubsection}{\numberline {8.6.2.3}nbTopTextures}{32}{subsubsection.8.6.2.3}%
+\contentsline {subsubsection}{\numberline {8.6.2.4}WDW\_height}{33}{subsubsection.8.6.2.4}%
+\contentsline {subsubsection}{\numberline {8.6.2.5}WDW\_width}{33}{subsubsection.8.6.2.5}%
+\contentsline {subsubsection}{\numberline {8.6.2.6}WRLD\_entityScreenSize}{33}{subsubsection.8.6.2.6}%
+\contentsline {subsubsection}{\numberline {8.6.2.7}WRLD\_maxCol}{33}{subsubsection.8.6.2.7}%
+\contentsline {subsubsection}{\numberline {8.6.2.8}WRLD\_maxRow}{33}{subsubsection.8.6.2.8}%
+\contentsline {subsubsection}{\numberline {8.6.2.9}WRLD\_scale}{33}{subsubsection.8.6.2.9}%
+\contentsline {subsubsection}{\numberline {8.6.2.10}WRLD\_tileScreenSize}{34}{subsubsection.8.6.2.10}%
+\contentsline {subsubsection}{\numberline {8.6.2.11}WRLD\_tileSize}{34}{subsubsection.8.6.2.11}%
+\contentsline {section}{\numberline {8.7}entity.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Enemy Class Reference}{34}{section.8.7}%
+\contentsline {subsection}{\numberline {8.7.1}Detailed Description}{35}{subsection.8.7.1}%
+\contentsline {subsection}{\numberline {8.7.2}Constructor \& Destructor Documentation}{35}{subsection.8.7.2}%
+\contentsline {subsubsection}{\numberline {8.7.2.1}Enemy()}{35}{subsubsection.8.7.2.1}%
+\contentsline {subsection}{\numberline {8.7.3}Member Function Documentation}{35}{subsection.8.7.3}%
+\contentsline {subsubsection}{\numberline {8.7.3.1}playerInterraction()}{36}{subsubsection.8.7.3.1}%
+\contentsline {subsubsection}{\numberline {8.7.3.2}touchingPlayer()}{36}{subsubsection.8.7.3.2}%
+\contentsline {subsubsection}{\numberline {8.7.3.3}update()}{36}{subsubsection.8.7.3.3}%
+\contentsline {subsection}{\numberline {8.7.4}Member Data Documentation}{37}{subsection.8.7.4}%
+\contentsline {subsubsection}{\numberline {8.7.4.1}\_xpRate}{37}{subsubsection.8.7.4.1}%
+\contentsline {subsubsection}{\numberline {8.7.4.2}name}{37}{subsubsection.8.7.4.2}%
+\contentsline {section}{\numberline {8.8}entity.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Entity Class Reference}{37}{section.8.8}%
+\contentsline {subsection}{\numberline {8.8.1}Detailed Description}{38}{subsection.8.8.1}%
+\contentsline {subsection}{\numberline {8.8.2}Constructor \& Destructor Documentation}{38}{subsection.8.8.2}%
+\contentsline {subsubsection}{\numberline {8.8.2.1}Entity()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{38}{subsubsection.8.8.2.1}%
+\contentsline {subsubsection}{\numberline {8.8.2.2}Entity()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{39}{subsubsection.8.8.2.2}%
+\contentsline {subsection}{\numberline {8.8.3}Member Function Documentation}{40}{subsection.8.8.3}%
+\contentsline {subsubsection}{\numberline {8.8.3.1}loadTextures()}{40}{subsubsection.8.8.3.1}%
+\contentsline {subsubsection}{\numberline {8.8.3.2}playerInterraction()}{40}{subsubsection.8.8.3.2}%
+\contentsline {subsubsection}{\numberline {8.8.3.3}update()}{41}{subsubsection.8.8.3.3}%
+\contentsline {subsubsection}{\numberline {8.8.3.4}updateFrames()}{42}{subsubsection.8.8.3.4}%
+\contentsline {subsection}{\numberline {8.8.4}Member Data Documentation}{42}{subsection.8.8.4}%
+\contentsline {subsubsection}{\numberline {8.8.4.1}\_spriteCnt}{42}{subsubsection.8.8.4.1}%
+\contentsline {subsubsection}{\numberline {8.8.4.2}\_spriteCntMax}{42}{subsubsection.8.8.4.2}%
+\contentsline {subsubsection}{\numberline {8.8.4.3}\_spriteSpeed}{43}{subsubsection.8.8.4.3}%
+\contentsline {subsubsection}{\numberline {8.8.4.4}\_spriteUpdater}{43}{subsubsection.8.8.4.4}%
+\contentsline {subsubsection}{\numberline {8.8.4.5}collision}{43}{subsubsection.8.8.4.5}%
+\contentsline {subsubsection}{\numberline {8.8.4.6}hitbox}{43}{subsubsection.8.8.4.6}%
+\contentsline {subsubsection}{\numberline {8.8.4.7}name}{43}{subsubsection.8.8.4.7}%
+\contentsline {subsubsection}{\numberline {8.8.4.8}worldX}{43}{subsubsection.8.8.4.8}%
+\contentsline {subsubsection}{\numberline {8.8.4.9}worldY}{44}{subsubsection.8.8.4.9}%
+\contentsline {section}{\numberline {8.9}entity.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Entity\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Setter Class Reference}{44}{section.8.9}%
+\contentsline {subsection}{\numberline {8.9.1}Detailed Description}{44}{subsection.8.9.1}%
+\contentsline {subsection}{\numberline {8.9.2}Constructor \& Destructor Documentation}{44}{subsection.8.9.2}%
+\contentsline {subsubsection}{\numberline {8.9.2.1}EntitySetter()}{44}{subsubsection.8.9.2.1}%
+\contentsline {subsection}{\numberline {8.9.3}Member Function Documentation}{45}{subsection.8.9.3}%
+\contentsline {subsubsection}{\numberline {8.9.3.1}setEnemies()}{45}{subsubsection.8.9.3.1}%
+\contentsline {subsubsection}{\numberline {8.9.3.2}setObject()}{45}{subsubsection.8.9.3.2}%
+\contentsline {subsection}{\numberline {8.9.4}Member Data Documentation}{45}{subsection.8.9.4}%
+\contentsline {subsubsection}{\numberline {8.9.4.1}world}{46}{subsubsection.8.9.4.1}%
+\contentsline {section}{\numberline {8.10}game.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Fight\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scene Class Reference}{46}{section.8.10}%
+\contentsline {subsection}{\numberline {8.10.1}Detailed Description}{46}{subsection.8.10.1}%
+\contentsline {subsection}{\numberline {8.10.2}Constructor \& Destructor Documentation}{46}{subsection.8.10.2}%
+\contentsline {subsubsection}{\numberline {8.10.2.1}FightScene()}{46}{subsubsection.8.10.2.1}%
+\contentsline {subsection}{\numberline {8.10.3}Member Function Documentation}{47}{subsection.8.10.3}%
+\contentsline {subsubsection}{\numberline {8.10.3.1}draw()}{47}{subsubsection.8.10.3.1}%
+\contentsline {subsubsection}{\numberline {8.10.3.2}killEnemy()}{47}{subsubsection.8.10.3.2}%
+\contentsline {subsubsection}{\numberline {8.10.3.3}update()}{48}{subsubsection.8.10.3.3}%
+\contentsline {subsection}{\numberline {8.10.4}Member Data Documentation}{48}{subsection.8.10.4}%
+\contentsline {subsubsection}{\numberline {8.10.4.1}enemy}{48}{subsubsection.8.10.4.1}%
+\contentsline {subsubsection}{\numberline {8.10.4.2}menu}{48}{subsubsection.8.10.4.2}%
+\contentsline {subsubsection}{\numberline {8.10.4.3}player}{48}{subsubsection.8.10.4.3}%
+\contentsline {subsubsection}{\numberline {8.10.4.4}state}{49}{subsubsection.8.10.4.4}%
+\contentsline {section}{\numberline {8.11}game.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Fight\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scene.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Fight\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State Enum Reference}{49}{section.8.11}%
+\contentsline {subsection}{\numberline {8.11.1}Detailed Description}{49}{subsection.8.11.1}%
+\contentsline {subsection}{\numberline {8.11.2}Member Data Documentation}{49}{subsection.8.11.2}%
+\contentsline {subsubsection}{\numberline {8.11.2.1}FIGHTING}{49}{subsubsection.8.11.2.1}%
+\contentsline {subsubsection}{\numberline {8.11.2.2}LOST}{49}{subsubsection.8.11.2.2}%
+\contentsline {subsubsection}{\numberline {8.11.2.3}WON}{50}{subsubsection.8.11.2.3}%
+\contentsline {section}{\numberline {8.12}item.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}armor.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Foot Class Reference}{50}{section.8.12}%
+\contentsline {subsection}{\numberline {8.12.1}Detailed Description}{50}{subsection.8.12.1}%
+\contentsline {subsection}{\numberline {8.12.2}Constructor \& Destructor Documentation}{50}{subsection.8.12.2}%
+\contentsline {subsubsection}{\numberline {8.12.2.1}Foot()}{50}{subsubsection.8.12.2.1}%
+\contentsline {section}{\numberline {8.13}item.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Generator Class Reference}{50}{section.8.13}%
+\contentsline {subsection}{\numberline {8.13.1}Detailed Description}{51}{subsection.8.13.1}%
+\contentsline {subsection}{\numberline {8.13.2}Member Function Documentation}{51}{subsection.8.13.2}%
+\contentsline {subsubsection}{\numberline {8.13.2.1}generateArmor()}{51}{subsubsection.8.13.2.1}%
+\contentsline {subsubsection}{\numberline {8.13.2.2}generateItem()}{51}{subsubsection.8.13.2.2}%
+\contentsline {subsubsection}{\numberline {8.13.2.3}generatePotion()}{51}{subsubsection.8.13.2.3}%
+\contentsline {subsubsection}{\numberline {8.13.2.4}generateWeapon()}{52}{subsubsection.8.13.2.4}%
+\contentsline {section}{\numberline {8.14}item.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}armor.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Head Class Reference}{52}{section.8.14}%
+\contentsline {subsection}{\numberline {8.14.1}Detailed Description}{52}{subsection.8.14.1}%
+\contentsline {subsection}{\numberline {8.14.2}Constructor \& Destructor Documentation}{52}{subsection.8.14.2}%
+\contentsline {subsubsection}{\numberline {8.14.2.1}Head()}{52}{subsubsection.8.14.2.1}%
+\contentsline {section}{\numberline {8.15}item.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}potion.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Health\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Potion Class Reference}{53}{section.8.15}%
+\contentsline {subsection}{\numberline {8.15.1}Detailed Description}{53}{subsection.8.15.1}%
+\contentsline {subsection}{\numberline {8.15.2}Constructor \& Destructor Documentation}{53}{subsection.8.15.2}%
+\contentsline {subsubsection}{\numberline {8.15.2.1}HealthPotion()}{53}{subsubsection.8.15.2.1}%
+\contentsline {section}{\numberline {8.16}UI.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}HUD Class Reference}{53}{section.8.16}%
+\contentsline {subsection}{\numberline {8.16.1}Detailed Description}{54}{subsection.8.16.1}%
+\contentsline {subsection}{\numberline {8.16.2}Constructor \& Destructor Documentation}{54}{subsection.8.16.2}%
+\contentsline {subsubsection}{\numberline {8.16.2.1}HUD()}{54}{subsubsection.8.16.2.1}%
+\contentsline {subsection}{\numberline {8.16.3}Member Function Documentation}{55}{subsection.8.16.3}%
+\contentsline {subsubsection}{\numberline {8.16.3.1}draw()}{55}{subsubsection.8.16.3.1}%
+\contentsline {subsubsection}{\numberline {8.16.3.2}update()}{55}{subsubsection.8.16.3.2}%
+\contentsline {subsection}{\numberline {8.16.4}Member Data Documentation}{55}{subsection.8.16.4}%
+\contentsline {subsubsection}{\numberline {8.16.4.1}\_buttons}{55}{subsubsection.8.16.4.1}%
+\contentsline {subsubsection}{\numberline {8.16.4.2}\_nbButtons}{56}{subsubsection.8.16.4.2}%
+\contentsline {subsubsection}{\numberline {8.16.4.3}\_title}{56}{subsubsection.8.16.4.3}%
+\contentsline {subsubsection}{\numberline {8.16.4.4}\_titleHeight}{56}{subsubsection.8.16.4.4}%
+\contentsline {subsubsection}{\numberline {8.16.4.5}\_titleWidth}{56}{subsubsection.8.16.4.5}%
+\contentsline {subsubsection}{\numberline {8.16.4.6}\_type}{56}{subsubsection.8.16.4.6}%
+\contentsline {subsubsection}{\numberline {8.16.4.7}HUDHeight}{56}{subsubsection.8.16.4.7}%
+\contentsline {subsubsection}{\numberline {8.16.4.8}HUDWidth}{57}{subsubsection.8.16.4.8}%
+\contentsline {section}{\numberline {8.17}item.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Item Class Reference}{57}{section.8.17}%
+\contentsline {subsection}{\numberline {8.17.1}Detailed Description}{57}{subsection.8.17.1}%
+\contentsline {section}{\numberline {8.18}main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler Class Reference}{57}{section.8.18}%
+\contentsline {subsection}{\numberline {8.18.1}Detailed Description}{58}{subsection.8.18.1}%
+\contentsline {subsection}{\numberline {8.18.2}Constructor \& Destructor Documentation}{58}{subsection.8.18.2}%
+\contentsline {subsubsection}{\numberline {8.18.2.1}KeyHandler()}{58}{subsubsection.8.18.2.1}%
+\contentsline {subsection}{\numberline {8.18.3}Member Function Documentation}{58}{subsection.8.18.3}%
+\contentsline {subsubsection}{\numberline {8.18.3.1}getInstance()}{59}{subsubsection.8.18.3.1}%
+\contentsline {subsubsection}{\numberline {8.18.3.2}keyPressed()}{59}{subsubsection.8.18.3.2}%
+\contentsline {subsubsection}{\numberline {8.18.3.3}keyReleased()}{59}{subsubsection.8.18.3.3}%
+\contentsline {subsubsection}{\numberline {8.18.3.4}keyTyped()}{60}{subsubsection.8.18.3.4}%
+\contentsline {subsection}{\numberline {8.18.4}Member Data Documentation}{60}{subsection.8.18.4}%
+\contentsline {subsubsection}{\numberline {8.18.4.1}downPressed}{60}{subsubsection.8.18.4.1}%
+\contentsline {subsubsection}{\numberline {8.18.4.2}escPressed}{60}{subsubsection.8.18.4.2}%
+\contentsline {subsubsection}{\numberline {8.18.4.3}instance}{60}{subsubsection.8.18.4.3}%
+\contentsline {subsubsection}{\numberline {8.18.4.4}interactPressed}{61}{subsubsection.8.18.4.4}%
+\contentsline {subsubsection}{\numberline {8.18.4.5}leftPressed}{61}{subsubsection.8.18.4.5}%
+\contentsline {subsubsection}{\numberline {8.18.4.6}rightPressed}{61}{subsubsection.8.18.4.6}%
+\contentsline {subsubsection}{\numberline {8.18.4.7}upPressed}{61}{subsubsection.8.18.4.7}%
+\contentsline {section}{\numberline {8.19}item.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}armor.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Legs Class Reference}{61}{section.8.19}%
+\contentsline {subsection}{\numberline {8.19.1}Detailed Description}{61}{subsection.8.19.1}%
+\contentsline {subsection}{\numberline {8.19.2}Constructor \& Destructor Documentation}{62}{subsection.8.19.2}%
+\contentsline {subsubsection}{\numberline {8.19.2.1}Legs()}{62}{subsubsection.8.19.2.1}%
+\contentsline {section}{\numberline {8.20}Creation\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Combat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scene.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Main Class Reference}{62}{section.8.20}%
+\contentsline {section}{\numberline {8.21}main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Main Class Reference}{62}{section.8.21}%
+\contentsline {subsection}{\numberline {8.21.1}Detailed Description}{62}{subsection.8.21.1}%
+\contentsline {subsection}{\numberline {8.21.2}Member Function Documentation}{62}{subsection.8.21.2}%
+\contentsline {subsubsection}{\numberline {8.21.2.1}main()}{62}{subsubsection.8.21.2.1}%
+\contentsline {section}{\numberline {8.22}item.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}potion.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Mana\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Potion Class Reference}{63}{section.8.22}%
+\contentsline {subsection}{\numberline {8.22.1}Detailed Description}{63}{subsection.8.22.1}%
+\contentsline {subsection}{\numberline {8.22.2}Constructor \& Destructor Documentation}{63}{subsection.8.22.2}%
+\contentsline {subsubsection}{\numberline {8.22.2.1}ManaPotion()}{64}{subsubsection.8.22.2.1}%
+\contentsline {section}{\numberline {8.23}UI.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}HUD.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Menu\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Type Enum Reference}{64}{section.8.23}%
+\contentsline {subsection}{\numberline {8.23.1}Detailed Description}{64}{subsection.8.23.1}%
+\contentsline {subsection}{\numberline {8.23.2}Member Data Documentation}{64}{subsection.8.23.2}%
+\contentsline {subsubsection}{\numberline {8.23.2.1}FIGHT}{64}{subsubsection.8.23.2.1}%
+\contentsline {subsubsection}{\numberline {8.23.2.2}PAUSE}{64}{subsubsection.8.23.2.2}%
+\contentsline {subsubsection}{\numberline {8.23.2.3}SHOP}{65}{subsubsection.8.23.2.3}%
+\contentsline {subsubsection}{\numberline {8.23.2.4}WELCOME}{65}{subsubsection.8.23.2.4}%
+\contentsline {section}{\numberline {8.24}entity.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}props.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}OBJ\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Chest Class Reference}{65}{section.8.24}%
+\contentsline {subsection}{\numberline {8.24.1}Detailed Description}{65}{subsection.8.24.1}%
+\contentsline {subsection}{\numberline {8.24.2}Constructor \& Destructor Documentation}{65}{subsection.8.24.2}%
+\contentsline {subsubsection}{\numberline {8.24.2.1}OBJ\_Chest()}{66}{subsubsection.8.24.2.1}%
+\contentsline {subsection}{\numberline {8.24.3}Member Function Documentation}{66}{subsection.8.24.3}%
+\contentsline {subsubsection}{\numberline {8.24.3.1}playerInterraction()}{66}{subsubsection.8.24.3.1}%
+\contentsline {section}{\numberline {8.25}entity.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}props.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}OBJ\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Door Class Reference}{66}{section.8.25}%
+\contentsline {subsection}{\numberline {8.25.1}Detailed Description}{67}{subsection.8.25.1}%
+\contentsline {subsection}{\numberline {8.25.2}Constructor \& Destructor Documentation}{67}{subsection.8.25.2}%
+\contentsline {subsubsection}{\numberline {8.25.2.1}OBJ\_Door()}{67}{subsubsection.8.25.2.1}%
+\contentsline {subsection}{\numberline {8.25.3}Member Function Documentation}{67}{subsection.8.25.3}%
+\contentsline {subsubsection}{\numberline {8.25.3.1}playerInterraction()}{68}{subsubsection.8.25.3.1}%
+\contentsline {section}{\numberline {8.26}entity.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}props.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}OBJ\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Key Class Reference}{68}{section.8.26}%
+\contentsline {subsection}{\numberline {8.26.1}Detailed Description}{68}{subsection.8.26.1}%
+\contentsline {subsection}{\numberline {8.26.2}Constructor \& Destructor Documentation}{68}{subsection.8.26.2}%
+\contentsline {subsubsection}{\numberline {8.26.2.1}OBJ\_Key()}{69}{subsubsection.8.26.2.1}%
+\contentsline {subsection}{\numberline {8.26.3}Member Function Documentation}{69}{subsection.8.26.3}%
+\contentsline {subsubsection}{\numberline {8.26.3.1}playerInterraction()}{69}{subsubsection.8.26.3.1}%
+\contentsline {section}{\numberline {8.27}entity.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Player Class Reference}{69}{section.8.27}%
+\contentsline {subsection}{\numberline {8.27.1}Detailed Description}{70}{subsection.8.27.1}%
+\contentsline {subsection}{\numberline {8.27.2}Constructor \& Destructor Documentation}{70}{subsection.8.27.2}%
+\contentsline {subsubsection}{\numberline {8.27.2.1}Player()}{70}{subsubsection.8.27.2.1}%
+\contentsline {subsection}{\numberline {8.27.3}Member Function Documentation}{71}{subsection.8.27.3}%
+\contentsline {subsubsection}{\numberline {8.27.3.1}addItem()}{71}{subsubsection.8.27.3.1}%
+\contentsline {subsubsection}{\numberline {8.27.3.2}checkObject()}{71}{subsubsection.8.27.3.2}%
+\contentsline {subsubsection}{\numberline {8.27.3.3}pickUpObject()}{72}{subsubsection.8.27.3.3}%
+\contentsline {subsubsection}{\numberline {8.27.3.4}update()}{72}{subsubsection.8.27.3.4}%
+\contentsline {subsection}{\numberline {8.27.4}Member Data Documentation}{73}{subsection.8.27.4}%
+\contentsline {subsubsection}{\numberline {8.27.4.1}hasKey}{73}{subsubsection.8.27.4.1}%
+\contentsline {section}{\numberline {8.28}Creation\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Combat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scene.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}entity.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Player\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test Class Reference}{73}{section.8.28}%
+\contentsline {subsection}{\numberline {8.28.1}Detailed Description}{73}{subsection.8.28.1}%
+\contentsline {subsection}{\numberline {8.28.2}Constructor \& Destructor Documentation}{73}{subsection.8.28.2}%
+\contentsline {subsubsection}{\numberline {8.28.2.1}PlayerTest()}{74}{subsubsection.8.28.2.1}%
+\contentsline {subsection}{\numberline {8.28.3}Member Function Documentation}{74}{subsection.8.28.3}%
+\contentsline {subsubsection}{\numberline {8.28.3.1}update()}{74}{subsubsection.8.28.3.1}%
+\contentsline {section}{\numberline {8.29}item.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}potion.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Potion Class Reference}{74}{section.8.29}%
+\contentsline {subsection}{\numberline {8.29.1}Detailed Description}{74}{subsection.8.29.1}%
+\contentsline {section}{\numberline {8.30}entity.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}props.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Props Class Reference}{74}{section.8.30}%
+\contentsline {subsection}{\numberline {8.30.1}Detailed Description}{75}{subsection.8.30.1}%
+\contentsline {subsection}{\numberline {8.30.2}Constructor \& Destructor Documentation}{75}{subsection.8.30.2}%
+\contentsline {subsubsection}{\numberline {8.30.2.1}Props()}{75}{subsubsection.8.30.2.1}%
+\contentsline {subsection}{\numberline {8.30.3}Member Function Documentation}{76}{subsection.8.30.3}%
+\contentsline {subsubsection}{\numberline {8.30.3.1}destroySelf()}{76}{subsubsection.8.30.3.1}%
+\contentsline {subsubsection}{\numberline {8.30.3.2}draw()}{76}{subsubsection.8.30.3.2}%
+\contentsline {subsubsection}{\numberline {8.30.3.3}getCollision()}{76}{subsubsection.8.30.3.3}%
+\contentsline {subsubsection}{\numberline {8.30.3.4}loadTextures()}{77}{subsubsection.8.30.3.4}%
+\contentsline {subsection}{\numberline {8.30.4}Member Data Documentation}{77}{subsection.8.30.4}%
+\contentsline {subsubsection}{\numberline {8.30.4.1}image}{77}{subsubsection.8.30.4.1}%
+\contentsline {section}{\numberline {8.31}game.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scene Class Reference}{77}{section.8.31}%
+\contentsline {subsection}{\numberline {8.31.1}Detailed Description}{78}{subsection.8.31.1}%
+\contentsline {subsection}{\numberline {8.31.2}Member Function Documentation}{78}{subsection.8.31.2}%
+\contentsline {subsubsection}{\numberline {8.31.2.1}changeScene()}{78}{subsubsection.8.31.2.1}%
+\contentsline {subsubsection}{\numberline {8.31.2.2}checkPauseScene()}{79}{subsubsection.8.31.2.2}%
+\contentsline {subsubsection}{\numberline {8.31.2.3}draw()}{79}{subsubsection.8.31.2.3}%
+\contentsline {subsubsection}{\numberline {8.31.2.4}getdt()}{80}{subsubsection.8.31.2.4}%
+\contentsline {subsubsection}{\numberline {8.31.2.5}update()}{80}{subsubsection.8.31.2.5}%
+\contentsline {subsection}{\numberline {8.31.3}Member Data Documentation}{80}{subsection.8.31.3}%
+\contentsline {subsubsection}{\numberline {8.31.3.1}\_lastState}{80}{subsubsection.8.31.3.1}%
+\contentsline {subsubsection}{\numberline {8.31.3.2}dt}{80}{subsubsection.8.31.3.2}%
+\contentsline {subsubsection}{\numberline {8.31.3.3}keyH}{81}{subsubsection.8.31.3.3}%
+\contentsline {subsubsection}{\numberline {8.31.3.4}menu}{81}{subsubsection.8.31.3.4}%
+\contentsline {subsubsection}{\numberline {8.31.3.5}state}{81}{subsubsection.8.31.3.5}%
+\contentsline {section}{\numberline {8.32}item.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}potion.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Speed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Potion Class Reference}{81}{section.8.32}%
+\contentsline {subsection}{\numberline {8.32.1}Detailed Description}{81}{subsection.8.32.1}%
+\contentsline {subsection}{\numberline {8.32.2}Constructor \& Destructor Documentation}{81}{subsection.8.32.2}%
+\contentsline {subsubsection}{\numberline {8.32.2.1}SpeedPotion()}{82}{subsubsection.8.32.2.1}%
+\contentsline {section}{\numberline {8.33}item.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}weapon.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Staff Class Reference}{82}{section.8.33}%
+\contentsline {subsection}{\numberline {8.33.1}Detailed Description}{82}{subsection.8.33.1}%
+\contentsline {subsection}{\numberline {8.33.2}Constructor \& Destructor Documentation}{82}{subsection.8.33.2}%
+\contentsline {subsubsection}{\numberline {8.33.2.1}Staff()}{82}{subsubsection.8.33.2.1}%
+\contentsline {section}{\numberline {8.34}game.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scene.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}State Enum Reference}{82}{section.8.34}%
+\contentsline {subsection}{\numberline {8.34.1}Detailed Description}{83}{subsection.8.34.1}%
+\contentsline {subsection}{\numberline {8.34.2}Member Data Documentation}{83}{subsection.8.34.2}%
+\contentsline {subsubsection}{\numberline {8.34.2.1}FIGHT}{83}{subsubsection.8.34.2.1}%
+\contentsline {subsubsection}{\numberline {8.34.2.2}MENU}{83}{subsubsection.8.34.2.2}%
+\contentsline {subsubsection}{\numberline {8.34.2.3}PAUSE}{83}{subsubsection.8.34.2.3}%
+\contentsline {subsubsection}{\numberline {8.34.2.4}WORLD}{83}{subsubsection.8.34.2.4}%
+\contentsline {section}{\numberline {8.35}item.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}weapon.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sword Class Reference}{84}{section.8.35}%
+\contentsline {subsection}{\numberline {8.35.1}Detailed Description}{84}{subsection.8.35.1}%
+\contentsline {subsection}{\numberline {8.35.2}Constructor \& Destructor Documentation}{84}{subsection.8.35.2}%
+\contentsline {subsubsection}{\numberline {8.35.2.1}Sword()}{84}{subsubsection.8.35.2.1}%
+\contentsline {section}{\numberline {8.36}UI.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Textbox Class Reference}{84}{section.8.36}%
+\contentsline {subsection}{\numberline {8.36.1}Detailed Description}{85}{subsection.8.36.1}%
+\contentsline {subsection}{\numberline {8.36.2}Constructor \& Destructor Documentation}{85}{subsection.8.36.2}%
+\contentsline {subsubsection}{\numberline {8.36.2.1}Textbox()}{85}{subsubsection.8.36.2.1}%
+\contentsline {subsection}{\numberline {8.36.3}Member Function Documentation}{85}{subsection.8.36.3}%
+\contentsline {subsubsection}{\numberline {8.36.3.1}draw()}{86}{subsubsection.8.36.3.1}%
+\contentsline {subsubsection}{\numberline {8.36.3.2}loadFont()}{86}{subsubsection.8.36.3.2}%
+\contentsline {subsection}{\numberline {8.36.4}Member Data Documentation}{86}{subsection.8.36.4}%
+\contentsline {subsubsection}{\numberline {8.36.4.1}\_color}{86}{subsubsection.8.36.4.1}%
+\contentsline {subsubsection}{\numberline {8.36.4.2}\_font}{86}{subsubsection.8.36.4.2}%
+\contentsline {subsubsection}{\numberline {8.36.4.3}\_fontSizeToUse}{87}{subsubsection.8.36.4.3}%
+\contentsline {subsubsection}{\numberline {8.36.4.4}\_height}{87}{subsubsection.8.36.4.4}%
+\contentsline {subsubsection}{\numberline {8.36.4.5}\_text}{87}{subsubsection.8.36.4.5}%
+\contentsline {subsubsection}{\numberline {8.36.4.6}\_width}{87}{subsubsection.8.36.4.6}%
+\contentsline {section}{\numberline {8.37}tiles.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tile Class Reference}{87}{section.8.37}%
+\contentsline {subsection}{\numberline {8.37.1}Detailed Description}{88}{subsection.8.37.1}%
+\contentsline {subsection}{\numberline {8.37.2}Constructor \& Destructor Documentation}{88}{subsection.8.37.2}%
+\contentsline {subsubsection}{\numberline {8.37.2.1}Tile()}{89}{subsubsection.8.37.2.1}%
+\contentsline {subsection}{\numberline {8.37.3}Member Function Documentation}{89}{subsection.8.37.3}%
+\contentsline {subsubsection}{\numberline {8.37.3.1}draw()}{89}{subsubsection.8.37.3.1}%
+\contentsline {subsubsection}{\numberline {8.37.3.2}getCollision()}{90}{subsubsection.8.37.3.2}%
+\contentsline {subsubsection}{\numberline {8.37.3.3}getPos()}{90}{subsubsection.8.37.3.3}%
+\contentsline {subsubsection}{\numberline {8.37.3.4}loadTextures()}{90}{subsubsection.8.37.3.4}%
+\contentsline {subsubsection}{\numberline {8.37.3.5}setCollision()}{91}{subsubsection.8.37.3.5}%
+\contentsline {subsubsection}{\numberline {8.37.3.6}setPos()}{91}{subsubsection.8.37.3.6}%
+\contentsline {subsubsection}{\numberline {8.37.3.7}setSpriteCountAndSpeed()}{92}{subsubsection.8.37.3.7}%
+\contentsline {subsubsection}{\numberline {8.37.3.8}setTexture()}{92}{subsubsection.8.37.3.8}%
+\contentsline {subsubsection}{\numberline {8.37.3.9}updateFrames()}{92}{subsubsection.8.37.3.9}%
+\contentsline {subsection}{\numberline {8.37.4}Member Data Documentation}{93}{subsection.8.37.4}%
+\contentsline {subsubsection}{\numberline {8.37.4.1}\_isBlocking}{93}{subsubsection.8.37.4.1}%
+\contentsline {subsubsection}{\numberline {8.37.4.2}\_spriteCnt}{93}{subsubsection.8.37.4.2}%
+\contentsline {subsubsection}{\numberline {8.37.4.3}\_spriteUpdater}{93}{subsubsection.8.37.4.3}%
+\contentsline {subsubsection}{\numberline {8.37.4.4}\_worldX}{93}{subsubsection.8.37.4.4}%
+\contentsline {subsubsection}{\numberline {8.37.4.5}\_worldY}{94}{subsubsection.8.37.4.5}%
+\contentsline {subsubsection}{\numberline {8.37.4.6}image}{94}{subsubsection.8.37.4.6}%
+\contentsline {subsubsection}{\numberline {8.37.4.7}scale}{94}{subsubsection.8.37.4.7}%
+\contentsline {subsubsection}{\numberline {8.37.4.8}screenSize}{94}{subsubsection.8.37.4.8}%
+\contentsline {subsubsection}{\numberline {8.37.4.9}spriteCntMax}{94}{subsubsection.8.37.4.9}%
+\contentsline {subsubsection}{\numberline {8.37.4.10}spriteSpeed}{94}{subsubsection.8.37.4.10}%
+\contentsline {subsubsection}{\numberline {8.37.4.11}tileSize}{95}{subsubsection.8.37.4.11}%
+\contentsline {section}{\numberline {8.38}tiles.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tile\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager Class Reference}{95}{section.8.38}%
+\contentsline {subsection}{\numberline {8.38.1}Detailed Description}{96}{subsection.8.38.1}%
+\contentsline {subsection}{\numberline {8.38.2}Constructor \& Destructor Documentation}{96}{subsection.8.38.2}%
+\contentsline {subsubsection}{\numberline {8.38.2.1}TileManager()}{96}{subsubsection.8.38.2.1}%
+\contentsline {subsection}{\numberline {8.38.3}Member Function Documentation}{96}{subsection.8.38.3}%
+\contentsline {subsubsection}{\numberline {8.38.3.1}draw()}{96}{subsubsection.8.38.3.1}%
+\contentsline {subsubsection}{\numberline {8.38.3.2}getTile()}{97}{subsubsection.8.38.3.2}%
+\contentsline {subsubsection}{\numberline {8.38.3.3}loadMap()}{97}{subsubsection.8.38.3.3}%
+\contentsline {subsubsection}{\numberline {8.38.3.4}loadTextures()}{98}{subsubsection.8.38.3.4}%
+\contentsline {subsubsection}{\numberline {8.38.3.5}storeTexture()}{99}{subsubsection.8.38.3.5}%
+\contentsline {subsubsection}{\numberline {8.38.3.6}update()}{99}{subsubsection.8.38.3.6}%
+\contentsline {subsection}{\numberline {8.38.4}Member Data Documentation}{100}{subsection.8.38.4}%
+\contentsline {subsubsection}{\numberline {8.38.4.1}\_floorMap}{100}{subsubsection.8.38.4.1}%
+\contentsline {subsubsection}{\numberline {8.38.4.2}\_floorMapTextures}{100}{subsubsection.8.38.4.2}%
+\contentsline {subsubsection}{\numberline {8.38.4.3}\_topMap}{100}{subsubsection.8.38.4.3}%
+\contentsline {subsubsection}{\numberline {8.38.4.4}\_topMapTextures}{100}{subsubsection.8.38.4.4}%
+\contentsline {section}{\numberline {8.39}item.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}weapon.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Weapon Class Reference}{101}{section.8.39}%
+\contentsline {subsection}{\numberline {8.39.1}Detailed Description}{101}{subsection.8.39.1}%
+\contentsline {section}{\numberline {8.40}Creation\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Combat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scene.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}game.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Window Class Reference}{101}{section.8.40}%
+\contentsline {subsection}{\numberline {8.40.1}Detailed Description}{101}{subsection.8.40.1}%
+\contentsline {subsection}{\numberline {8.40.2}Constructor \& Destructor Documentation}{102}{subsection.8.40.2}%
+\contentsline {subsubsection}{\numberline {8.40.2.1}Window()}{102}{subsubsection.8.40.2.1}%
+\contentsline {subsection}{\numberline {8.40.3}Member Function Documentation}{102}{subsection.8.40.3}%
+\contentsline {subsubsection}{\numberline {8.40.3.1}paintComponent()}{102}{subsubsection.8.40.3.1}%
+\contentsline {subsubsection}{\numberline {8.40.3.2}run()}{102}{subsubsection.8.40.3.2}%
+\contentsline {subsubsection}{\numberline {8.40.3.3}startGameThread()}{103}{subsubsection.8.40.3.3}%
+\contentsline {subsubsection}{\numberline {8.40.3.4}update()}{103}{subsubsection.8.40.3.4}%
+\contentsline {subsection}{\numberline {8.40.4}Member Data Documentation}{103}{subsection.8.40.4}%
+\contentsline {subsubsection}{\numberline {8.40.4.1}FPS}{103}{subsubsection.8.40.4.1}%
+\contentsline {subsubsection}{\numberline {8.40.4.2}gameThread}{103}{subsubsection.8.40.4.2}%
+\contentsline {subsubsection}{\numberline {8.40.4.3}scene}{103}{subsubsection.8.40.4.3}%
+\contentsline {subsubsection}{\numberline {8.40.4.4}screenHeight}{104}{subsubsection.8.40.4.4}%
+\contentsline {subsubsection}{\numberline {8.40.4.5}screenWidth}{104}{subsubsection.8.40.4.5}%
+\contentsline {section}{\numberline {8.41}game.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Window Class Reference}{104}{section.8.41}%
+\contentsline {subsection}{\numberline {8.41.1}Detailed Description}{105}{subsection.8.41.1}%
+\contentsline {subsection}{\numberline {8.41.2}Constructor \& Destructor Documentation}{105}{subsection.8.41.2}%
+\contentsline {subsubsection}{\numberline {8.41.2.1}Window()}{105}{subsubsection.8.41.2.1}%
+\contentsline {subsection}{\numberline {8.41.3}Member Function Documentation}{105}{subsection.8.41.3}%
+\contentsline {subsubsection}{\numberline {8.41.3.1}paintComponent()}{105}{subsubsection.8.41.3.1}%
+\contentsline {subsubsection}{\numberline {8.41.3.2}run()}{106}{subsubsection.8.41.3.2}%
+\contentsline {subsubsection}{\numberline {8.41.3.3}startGameThread()}{106}{subsubsection.8.41.3.3}%
+\contentsline {subsubsection}{\numberline {8.41.3.4}update()}{107}{subsubsection.8.41.3.4}%
+\contentsline {subsection}{\numberline {8.41.4}Member Data Documentation}{107}{subsection.8.41.4}%
+\contentsline {subsubsection}{\numberline {8.41.4.1}\_FPS}{107}{subsubsection.8.41.4.1}%
+\contentsline {subsubsection}{\numberline {8.41.4.2}gameThread}{107}{subsubsection.8.41.4.2}%
+\contentsline {subsubsection}{\numberline {8.41.4.3}scene}{107}{subsubsection.8.41.4.3}%
+\contentsline {subsubsection}{\numberline {8.41.4.4}screenHeight}{108}{subsubsection.8.41.4.4}%
+\contentsline {subsubsection}{\numberline {8.41.4.5}screenWidth}{108}{subsubsection.8.41.4.5}%
+\contentsline {subsubsection}{\numberline {8.41.4.6}world}{108}{subsubsection.8.41.4.6}%
+\contentsline {section}{\numberline {8.42}game.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}World Class Reference}{108}{section.8.42}%
+\contentsline {subsection}{\numberline {8.42.1}Detailed Description}{109}{subsection.8.42.1}%
+\contentsline {subsection}{\numberline {8.42.2}Member Function Documentation}{109}{subsection.8.42.2}%
+\contentsline {subsubsection}{\numberline {8.42.2.1}addEnemy()}{109}{subsubsection.8.42.2.1}%
+\contentsline {subsubsection}{\numberline {8.42.2.2}addObject()}{109}{subsubsection.8.42.2.2}%
+\contentsline {subsubsection}{\numberline {8.42.2.3}draw()}{110}{subsubsection.8.42.2.3}%
+\contentsline {subsubsection}{\numberline {8.42.2.4}getWorld()}{111}{subsubsection.8.42.2.4}%
+\contentsline {subsubsection}{\numberline {8.42.2.5}setupGame()}{111}{subsubsection.8.42.2.5}%
+\contentsline {subsubsection}{\numberline {8.42.2.6}update()}{112}{subsubsection.8.42.2.6}%
+\contentsline {subsection}{\numberline {8.42.3}Member Data Documentation}{112}{subsection.8.42.3}%
+\contentsline {subsubsection}{\numberline {8.42.3.1}\_currfight}{112}{subsubsection.8.42.3.1}%
+\contentsline {subsubsection}{\numberline {8.42.3.2}\_instance}{112}{subsubsection.8.42.3.2}%
+\contentsline {subsubsection}{\numberline {8.42.3.3}enemies}{113}{subsubsection.8.42.3.3}%
+\contentsline {subsubsection}{\numberline {8.42.3.4}entitySetter}{113}{subsubsection.8.42.3.4}%
+\contentsline {subsubsection}{\numberline {8.42.3.5}objMap}{113}{subsubsection.8.42.3.5}%
+\contentsline {subsubsection}{\numberline {8.42.3.6}player}{113}{subsubsection.8.42.3.6}%
+\contentsline {subsubsection}{\numberline {8.42.3.7}tileManager}{113}{subsubsection.8.42.3.7}%
+\contentsline {chapter}{\numberline {9}File Documentation}{115}{chapter.9}%
+\contentsline {section}{\numberline {9.1}a\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Faire.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md File Reference}{115}{section.9.1}%
+\contentsline {section}{\numberline {9.2}README.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md File Reference}{115}{section.9.2}%
+\contentsline {section}{\numberline {9.3}src/entity/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Character.java File Reference}{115}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}Detailed Description}{115}{subsection.9.3.1}%
+\contentsline {section}{\numberline {9.4}Character.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}java}{116}{section.9.4}%
+\contentsline {section}{\numberline {9.5}src/entity/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Enemy.java File Reference}{118}{section.9.5}%
+\contentsline {subsection}{\numberline {9.5.1}Detailed Description}{119}{subsection.9.5.1}%
+\contentsline {section}{\numberline {9.6}Enemy.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}java}{119}{section.9.6}%
+\contentsline {section}{\numberline {9.7}src/entity/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Entity.java File Reference}{119}{section.9.7}%
+\contentsline {subsection}{\numberline {9.7.1}Detailed Description}{120}{subsection.9.7.1}%
+\contentsline {section}{\numberline {9.8}Entity.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}java}{120}{section.9.8}%
+\contentsline {section}{\numberline {9.9}src/entity/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Entity\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Setter.java File Reference}{121}{section.9.9}%
+\contentsline {subsection}{\numberline {9.9.1}Detailed Description}{121}{subsection.9.9.1}%
+\contentsline {section}{\numberline {9.10}Entity\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Setter.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}java}{121}{section.9.10}%
+\contentsline {section}{\numberline {9.11}src/entity/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Player.java File Reference}{122}{section.9.11}%
+\contentsline {subsection}{\numberline {9.11.1}Detailed Description}{122}{subsection.9.11.1}%
+\contentsline {section}{\numberline {9.12}Player.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}java}{122}{section.9.12}%
+\contentsline {section}{\numberline {9.13}src/entity/props/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}OBJ\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Chest.java File Reference}{124}{section.9.13}%
+\contentsline {subsection}{\numberline {9.13.1}Detailed Description}{124}{subsection.9.13.1}%
+\contentsline {section}{\numberline {9.14}OBJ\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Chest.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}java}{124}{section.9.14}%
+\contentsline {section}{\numberline {9.15}src/entity/props/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}OBJ\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Door.java File Reference}{124}{section.9.15}%
+\contentsline {subsection}{\numberline {9.15.1}Detailed Description}{125}{subsection.9.15.1}%
+\contentsline {section}{\numberline {9.16}OBJ\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Door.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}java}{125}{section.9.16}%
+\contentsline {section}{\numberline {9.17}src/entity/props/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}OBJ\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Key.java File Reference}{125}{section.9.17}%
+\contentsline {subsection}{\numberline {9.17.1}Detailed Description}{126}{subsection.9.17.1}%
+\contentsline {section}{\numberline {9.18}OBJ\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Key.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}java}{126}{section.9.18}%
+\contentsline {section}{\numberline {9.19}src/entity/props/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Props.java File Reference}{126}{section.9.19}%
+\contentsline {subsection}{\numberline {9.19.1}Detailed Description}{126}{subsection.9.19.1}%
+\contentsline {section}{\numberline {9.20}Props.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}java}{127}{section.9.20}%
+\contentsline {section}{\numberline {9.21}src/game/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Const.java File Reference}{127}{section.9.21}%
+\contentsline {section}{\numberline {9.22}Const.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}java}{128}{section.9.22}%
+\contentsline {section}{\numberline {9.23}src/game/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Fight\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scene.java File Reference}{128}{section.9.23}%
+\contentsline {subsection}{\numberline {9.23.1}Detailed Description}{128}{subsection.9.23.1}%
+\contentsline {section}{\numberline {9.24}Fight\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scene.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}java}{129}{section.9.24}%
+\contentsline {section}{\numberline {9.25}src/game/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scene.java File Reference}{129}{section.9.25}%
+\contentsline {subsection}{\numberline {9.25.1}Detailed Description}{130}{subsection.9.25.1}%
+\contentsline {section}{\numberline {9.26}Scene.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}java}{130}{section.9.26}%
+\contentsline {section}{\numberline {9.27}src/game/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}World.java File Reference}{131}{section.9.27}%
+\contentsline {subsection}{\numberline {9.27.1}Detailed Description}{131}{subsection.9.27.1}%
+\contentsline {section}{\numberline {9.28}World.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}java}{131}{section.9.28}%
+\contentsline {section}{\numberline {9.29}src/item/armor/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Armor.java File Reference}{133}{section.9.29}%
+\contentsline {section}{\numberline {9.30}Armor.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}java}{133}{section.9.30}%
+\contentsline {section}{\numberline {9.31}src/item/armor/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Body.java File Reference}{133}{section.9.31}%
+\contentsline {section}{\numberline {9.32}Body.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}java}{133}{section.9.32}%
+\contentsline {section}{\numberline {9.33}src/item/armor/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Foot.java File Reference}{134}{section.9.33}%
+\contentsline {section}{\numberline {9.34}Foot.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}java}{134}{section.9.34}%
+\contentsline {section}{\numberline {9.35}src/item/armor/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Head.java File Reference}{134}{section.9.35}%
+\contentsline {section}{\numberline {9.36}Head.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}java}{134}{section.9.36}%
+\contentsline {section}{\numberline {9.37}src/item/armor/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Legs.java File Reference}{134}{section.9.37}%
+\contentsline {section}{\numberline {9.38}Legs.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}java}{135}{section.9.38}%
+\contentsline {section}{\numberline {9.39}src/item/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Generator.java File Reference}{135}{section.9.39}%
+\contentsline {section}{\numberline {9.40}Generator.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}java}{135}{section.9.40}%
+\contentsline {section}{\numberline {9.41}src/item/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Item.java File Reference}{136}{section.9.41}%
+\contentsline {section}{\numberline {9.42}Item.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}java}{136}{section.9.42}%
+\contentsline {section}{\numberline {9.43}src/item/potion/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Health\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Potion.java File Reference}{136}{section.9.43}%
+\contentsline {section}{\numberline {9.44}Health\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Potion.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}java}{136}{section.9.44}%
+\contentsline {section}{\numberline {9.45}src/item/potion/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Mana\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Potion.java File Reference}{137}{section.9.45}%
+\contentsline {section}{\numberline {9.46}Mana\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Potion.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}java}{137}{section.9.46}%
+\contentsline {section}{\numberline {9.47}src/item/potion/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Potion.java File Reference}{137}{section.9.47}%
+\contentsline {section}{\numberline {9.48}Potion.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}java}{137}{section.9.48}%
+\contentsline {section}{\numberline {9.49}src/item/potion/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Speed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Potion.java File Reference}{137}{section.9.49}%
+\contentsline {section}{\numberline {9.50}Speed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Potion.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}java}{138}{section.9.50}%
+\contentsline {section}{\numberline {9.51}src/item/weapon/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Bow.java File Reference}{138}{section.9.51}%
+\contentsline {section}{\numberline {9.52}Bow.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}java}{138}{section.9.52}%
+\contentsline {section}{\numberline {9.53}src/item/weapon/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Staff.java File Reference}{138}{section.9.53}%
+\contentsline {section}{\numberline {9.54}Staff.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}java}{139}{section.9.54}%
+\contentsline {section}{\numberline {9.55}src/item/weapon/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sword.java File Reference}{139}{section.9.55}%
+\contentsline {section}{\numberline {9.56}Sword.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}java}{139}{section.9.56}%
+\contentsline {section}{\numberline {9.57}src/item/weapon/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Weapon.java File Reference}{139}{section.9.57}%
+\contentsline {section}{\numberline {9.58}Weapon.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}java}{139}{section.9.58}%
+\contentsline {section}{\numberline {9.59}src/main/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.java File Reference}{140}{section.9.59}%
+\contentsline {subsection}{\numberline {9.59.1}Detailed Description}{140}{subsection.9.59.1}%
+\contentsline {section}{\numberline {9.60}Key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}java}{140}{section.9.60}%
+\contentsline {section}{\numberline {9.61}src/tiles/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tile.java File Reference}{141}{section.9.61}%
+\contentsline {subsection}{\numberline {9.61.1}Detailed Description}{141}{subsection.9.61.1}%
+\contentsline {section}{\numberline {9.62}Tile.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}java}{142}{section.9.62}%
+\contentsline {section}{\numberline {9.63}src/tiles/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tile\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.java File Reference}{143}{section.9.63}%
+\contentsline {subsection}{\numberline {9.63.1}Detailed Description}{143}{subsection.9.63.1}%
+\contentsline {section}{\numberline {9.64}Tile\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}java}{144}{section.9.64}%
+\contentsline {section}{\numberline {9.65}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}UI/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Choice\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Button.java File Reference}{145}{section.9.65}%
+\contentsline {section}{\numberline {9.66}Choice\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Button.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}java}{146}{section.9.66}%
+\contentsline {section}{\numberline {9.67}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}UI/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}HUD.java File Reference}{146}{section.9.67}%
+\contentsline {section}{\numberline {9.68}HUD.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}java}{147}{section.9.68}%
+\contentsline {section}{\numberline {9.69}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}UI/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Textbox.java File Reference}{148}{section.9.69}%
+\contentsline {section}{\numberline {9.70}Textbox.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}java}{148}{section.9.70}%
+\contentsline {section}{\numberline {9.71}test/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Creation\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Combat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scene/entity/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Player\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test.java File Reference}{149}{section.9.71}%
+\contentsline {section}{\numberline {9.72}Player\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}java}{149}{section.9.72}%
+\contentsline {section}{\numberline {9.73}src/game/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Window.java File Reference}{149}{section.9.73}%
+\contentsline {subsection}{\numberline {9.73.1}Detailed Description}{150}{subsection.9.73.1}%
+\contentsline {section}{\numberline {9.74}Window.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}java}{150}{section.9.74}%
+\contentsline {section}{\numberline {9.75}test/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Creation\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Combat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scene/game/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Window.java File Reference}{151}{section.9.75}%
+\contentsline {section}{\numberline {9.76}Window.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}java}{151}{section.9.76}%
+\contentsline {section}{\numberline {9.77}src/main/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Main.java File Reference}{152}{section.9.77}%
+\contentsline {subsection}{\numberline {9.77.1}Detailed Description}{152}{subsection.9.77.1}%
+\contentsline {section}{\numberline {9.78}Main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}java}{153}{section.9.78}%
+\contentsline {section}{\numberline {9.79}test/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Creation\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Combat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scene/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Main.java File Reference}{153}{section.9.79}%
+\contentsline {section}{\numberline {9.80}Main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}java}{153}{section.9.80}%
+\contentsline {chapter}{Index}{155}{section*.191}%

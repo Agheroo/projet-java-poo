@@ -1,0 +1,5 @@
+<map id="tiles.TileManager.draw" name="tiles.TileManager.draw">
+<area shape="rect" id="node1" title="Draws the tiles in the game world." alt="" coords="5,31,176,57"/>
+<area shape="rect" id="node2" href="$classtiles_1_1_tile.html#a31c27631fa71574b1a9bd9cad296fcbe" title="Draw the tile on the screen." alt="" coords="230,5,345,32"/>
+<area shape="rect" id="node3" href="$classtiles_1_1_tile.html#a7bfcdb11efa89176a068c2a473ce3e9d" title="Get the position of the tile." alt="" coords="224,56,351,83"/>
+</map>

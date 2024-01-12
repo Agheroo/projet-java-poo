@@ -1,0 +1,6 @@
+<map id="entity.props.Props" name="entity.props.Props">
+<area shape="rect" id="node1" title="Represents in&#45;game props with properties such as image, name, and position." alt="" coords="100,461,239,597"/>
+<area shape="rect" id="node2" href="$classentity_1_1_entity.html" title="Represents an abstract entity with position, hitbox, and animations." alt="" coords="5,145,168,399"/>
+<area shape="rect" id="node3" title=" " alt="" coords="43,5,130,83"/>
+<area shape="rect" id="node4" title=" " alt="" coords="193,233,311,311"/>
+</map>

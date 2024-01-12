@@ -1,0 +1,280 @@
+\hypertarget{class_creation_combat_scene_1_1game_1_1_window}{}\doxysection{Creation\+Combat\+Scene.\+game.\+Window Class Reference}
+\label{class_creation_combat_scene_1_1game_1_1_window}\index{CreationCombatScene.game.Window@{CreationCombatScene.game.Window}}
+
+
+Inheritance diagram for Creation\+Combat\+Scene.\+game.\+Window\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{class_creation_combat_scene_1_1game_1_1_window__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Creation\+Combat\+Scene.\+game.\+Window\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_creation_combat_scene_1_1game_1_1_window__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_a074bfecf28fb056c878c37c019e04cb3}{Window}} ()
+\item 
+void \mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_a48253f5c6a6f219e6b20f8591f77674e}{run}} ()
+\item 
+void \mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_ada057fa01af9f7473f792665872d4f31}{start\+Game\+Thread}} ()
+\item 
+void \mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_ac3d02abb951693093b08c7041d41e66f}{update}} ()
+\item 
+void \mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_a61d08bccb221eb1df7fad73d67287f99}{paint\+Component}} (Graphics g)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1_scene}{Scene}} \mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_af7253a0c9bc355e988192a55755c51f3}{scene}}
+\item 
+final int \mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_a02e61bb69a24e0eaae3de2f38613a353}{screen\+Width}} =800
+\item 
+final int \mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_ab9750ac4c0823d8b3b6d58c19d212815}{screen\+Height}} =600
+\end{DoxyCompactItemize}
+\doxysubsection*{Package Attributes}
+\begin{DoxyCompactItemize}
+\item 
+final int \mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_af8b5564a2700335a99f8b98496c27cb4}{FPS}} = 120
+\item 
+Thread \mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_a0578612384f8406b88e5858b467dbe46}{game\+Thread}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{test_2_creation_combat_scene_2game_2_window_8java_source_l00013}{13}} of file \mbox{\hyperlink{test_2_creation_combat_scene_2game_2_window_8java_source}{Window.\+java}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_creation_combat_scene_1_1game_1_1_window_a074bfecf28fb056c878c37c019e04cb3}\label{class_creation_combat_scene_1_1game_1_1_window_a074bfecf28fb056c878c37c019e04cb3}} 
+\index{CreationCombatScene.game.Window@{CreationCombatScene.game.Window}!Window@{Window}}
+\index{Window@{Window}!CreationCombatScene.game.Window@{CreationCombatScene.game.Window}}
+\doxysubsubsection{\texorpdfstring{Window()}{Window()}}
+{\footnotesize\ttfamily Creation\+Combat\+Scene.\+game.\+Window.\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test_2_creation_combat_scene_2game_2_window_8java_source_l00028}{28}} of file \mbox{\hyperlink{test_2_creation_combat_scene_2game_2_window_8java_source}{Window.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028                    \{}
+\DoxyCodeLine{00029         PlayerTest playerTest=\textcolor{keyword}{new} PlayerTest();}
+\DoxyCodeLine{00030         Enemy ennemy=\textcolor{keyword}{new} Enemy();}
+\DoxyCodeLine{00031 }
+\DoxyCodeLine{00032         \mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_af7253a0c9bc355e988192a55755c51f3}{scene}} = \mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_af7253a0c9bc355e988192a55755c51f3}{scene}}.fightScene(playerTest,ennemy);}
+\DoxyCodeLine{00033         this.setPreferredSize(\textcolor{keyword}{new} Dimension(\mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_a02e61bb69a24e0eaae3de2f38613a353}{screenWidth}},\mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_ab9750ac4c0823d8b3b6d58c19d212815}{screenHeight}}));}
+\DoxyCodeLine{00034         this.setBackground(Color.black);}
+\DoxyCodeLine{00035         this.setDoubleBuffered(\textcolor{keyword}{true});}
+\DoxyCodeLine{00036         this.addKeyListener(\mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_af7253a0c9bc355e988192a55755c51f3}{scene}}.\mbox{\hyperlink{classgame_1_1_scene_a2bbc8cb5064aaa5cc1ed0ec8950f4a58}{keyH}});}
+\DoxyCodeLine{00037         this.setFocusable(\textcolor{keyword}{true});}
+\DoxyCodeLine{00038 }
+\DoxyCodeLine{00039 }
+\DoxyCodeLine{00040     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_creation_combat_scene_1_1game_1_1_window_a61d08bccb221eb1df7fad73d67287f99}\label{class_creation_combat_scene_1_1game_1_1_window_a61d08bccb221eb1df7fad73d67287f99}} 
+\index{CreationCombatScene.game.Window@{CreationCombatScene.game.Window}!paintComponent@{paintComponent}}
+\index{paintComponent@{paintComponent}!CreationCombatScene.game.Window@{CreationCombatScene.game.Window}}
+\doxysubsubsection{\texorpdfstring{paintComponent()}{paintComponent()}}
+{\footnotesize\ttfamily void Creation\+Combat\+Scene.\+game.\+Window.\+paint\+Component (\begin{DoxyParamCaption}\item[{Graphics}]{g }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test_2_creation_combat_scene_2game_2_window_8java_source_l00072}{72}} of file \mbox{\hyperlink{test_2_creation_combat_scene_2game_2_window_8java_source}{Window.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00072                                           \{}
+\DoxyCodeLine{00073 }
+\DoxyCodeLine{00074         super.paintComponent(g);}
+\DoxyCodeLine{00075 }
+\DoxyCodeLine{00076         Graphics2D g2= (Graphics2D)g;}
+\DoxyCodeLine{00077 }
+\DoxyCodeLine{00078         \mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_af7253a0c9bc355e988192a55755c51f3}{scene}}.\mbox{\hyperlink{classgame_1_1_scene_aef53d2ecf085388a16020032121e46dc}{draw}}(g2,\mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_a02e61bb69a24e0eaae3de2f38613a353}{screenWidth}},\mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_ab9750ac4c0823d8b3b6d58c19d212815}{screenHeight}});}
+\DoxyCodeLine{00079 }
+\DoxyCodeLine{00080         g2.dispose();}
+\DoxyCodeLine{00081     \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_creation_combat_scene_1_1game_1_1_window_a61d08bccb221eb1df7fad73d67287f99_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_creation_combat_scene_1_1game_1_1_window_a48253f5c6a6f219e6b20f8591f77674e}\label{class_creation_combat_scene_1_1game_1_1_window_a48253f5c6a6f219e6b20f8591f77674e}} 
+\index{CreationCombatScene.game.Window@{CreationCombatScene.game.Window}!run@{run}}
+\index{run@{run}!CreationCombatScene.game.Window@{CreationCombatScene.game.Window}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Creation\+Combat\+Scene.\+game.\+Window.\+run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test_2_creation_combat_scene_2game_2_window_8java_source_l00043}{43}} of file \mbox{\hyperlink{test_2_creation_combat_scene_2game_2_window_8java_source}{Window.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00043                       \{}
+\DoxyCodeLine{00044         \textcolor{keywordtype}{double} drawInterval = 10e9/\mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_af8b5564a2700335a99f8b98496c27cb4}{FPS}};}
+\DoxyCodeLine{00045         \textcolor{keywordtype}{long} lastTime = System.nanoTime();}
+\DoxyCodeLine{00046         \textcolor{keywordtype}{long} currentTime;}
+\DoxyCodeLine{00047 }
+\DoxyCodeLine{00048         \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_a0578612384f8406b88e5858b467dbe46}{gameThread}} != \textcolor{keyword}{null})\{}
+\DoxyCodeLine{00049             currentTime = System.nanoTime();}
+\DoxyCodeLine{00050 }
+\DoxyCodeLine{00051             scene.dt += (currentTime -\/ lastTime) / drawInterval;}
+\DoxyCodeLine{00052             lastTime = currentTime;}
+\DoxyCodeLine{00053 }
+\DoxyCodeLine{00054             \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_af7253a0c9bc355e988192a55755c51f3}{scene}}.\mbox{\hyperlink{classgame_1_1_scene_ae2b7be4c9099875e858f88458b7d4a1d}{dt}} > 0.1)\{}
+\DoxyCodeLine{00055                 \mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_ac3d02abb951693093b08c7041d41e66f}{update}}();           \textcolor{comment}{//update() method for window both updates the world and repaints the components of it}}
+\DoxyCodeLine{00056                 \mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_af7253a0c9bc355e988192a55755c51f3}{scene}}.\mbox{\hyperlink{classgame_1_1_scene_ae2b7be4c9099875e858f88458b7d4a1d}{dt}}-\/= 0.1;}
+\DoxyCodeLine{00057             \}}
+\DoxyCodeLine{00058         \}}
+\DoxyCodeLine{00059     \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_creation_combat_scene_1_1game_1_1_window_a48253f5c6a6f219e6b20f8591f77674e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_creation_combat_scene_1_1game_1_1_window_ada057fa01af9f7473f792665872d4f31}\label{class_creation_combat_scene_1_1game_1_1_window_ada057fa01af9f7473f792665872d4f31}} 
+\index{CreationCombatScene.game.Window@{CreationCombatScene.game.Window}!startGameThread@{startGameThread}}
+\index{startGameThread@{startGameThread}!CreationCombatScene.game.Window@{CreationCombatScene.game.Window}}
+\doxysubsubsection{\texorpdfstring{startGameThread()}{startGameThread()}}
+{\footnotesize\ttfamily void Creation\+Combat\+Scene.\+game.\+Window.\+start\+Game\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test_2_creation_combat_scene_2game_2_window_8java_source_l00061}{61}} of file \mbox{\hyperlink{test_2_creation_combat_scene_2game_2_window_8java_source}{Window.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061                                  \{}
+\DoxyCodeLine{00062         \mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_a0578612384f8406b88e5858b467dbe46}{gameThread}} = \textcolor{keyword}{new} Thread(\textcolor{keyword}{this});}
+\DoxyCodeLine{00063         \mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_a0578612384f8406b88e5858b467dbe46}{gameThread}}.start();}
+\DoxyCodeLine{00064     \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_creation_combat_scene_1_1game_1_1_window_ada057fa01af9f7473f792665872d4f31_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_creation_combat_scene_1_1game_1_1_window_ac3d02abb951693093b08c7041d41e66f}\label{class_creation_combat_scene_1_1game_1_1_window_ac3d02abb951693093b08c7041d41e66f}} 
+\index{CreationCombatScene.game.Window@{CreationCombatScene.game.Window}!update@{update}}
+\index{update@{update}!CreationCombatScene.game.Window@{CreationCombatScene.game.Window}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Creation\+Combat\+Scene.\+game.\+Window.\+update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{test_2_creation_combat_scene_2game_2_window_8java_source_l00066}{66}} of file \mbox{\hyperlink{test_2_creation_combat_scene_2game_2_window_8java_source}{Window.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00066                         \{}
+\DoxyCodeLine{00067         \mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_af7253a0c9bc355e988192a55755c51f3}{scene}}.\mbox{\hyperlink{classgame_1_1_scene_a6b61e8f2533a2ba76c543bbd00d989a2}{update}}();         \textcolor{comment}{//Updating abstract class scene which means either world or fightscene}}
+\DoxyCodeLine{00068         repaint();}
+\DoxyCodeLine{00069     \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_creation_combat_scene_1_1game_1_1_window_ac3d02abb951693093b08c7041d41e66f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_creation_combat_scene_1_1game_1_1_window_ac3d02abb951693093b08c7041d41e66f_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_creation_combat_scene_1_1game_1_1_window_af8b5564a2700335a99f8b98496c27cb4}\label{class_creation_combat_scene_1_1game_1_1_window_af8b5564a2700335a99f8b98496c27cb4}} 
+\index{CreationCombatScene.game.Window@{CreationCombatScene.game.Window}!FPS@{FPS}}
+\index{FPS@{FPS}!CreationCombatScene.game.Window@{CreationCombatScene.game.Window}}
+\doxysubsubsection{\texorpdfstring{FPS}{FPS}}
+{\footnotesize\ttfamily final int Creation\+Combat\+Scene.\+game.\+Window.\+FPS = 120\hspace{0.3cm}{\ttfamily [package]}}
+
+
+
+Definition at line \mbox{\hyperlink{test_2_creation_combat_scene_2game_2_window_8java_source_l00023}{23}} of file \mbox{\hyperlink{test_2_creation_combat_scene_2game_2_window_8java_source}{Window.\+java}}.
+
+\mbox{\Hypertarget{class_creation_combat_scene_1_1game_1_1_window_a0578612384f8406b88e5858b467dbe46}\label{class_creation_combat_scene_1_1game_1_1_window_a0578612384f8406b88e5858b467dbe46}} 
+\index{CreationCombatScene.game.Window@{CreationCombatScene.game.Window}!gameThread@{gameThread}}
+\index{gameThread@{gameThread}!CreationCombatScene.game.Window@{CreationCombatScene.game.Window}}
+\doxysubsubsection{\texorpdfstring{gameThread}{gameThread}}
+{\footnotesize\ttfamily Thread Creation\+Combat\+Scene.\+game.\+Window.\+game\+Thread\hspace{0.3cm}{\ttfamily [package]}}
+
+
+
+Definition at line \mbox{\hyperlink{test_2_creation_combat_scene_2game_2_window_8java_source_l00024}{24}} of file \mbox{\hyperlink{test_2_creation_combat_scene_2game_2_window_8java_source}{Window.\+java}}.
+
+\mbox{\Hypertarget{class_creation_combat_scene_1_1game_1_1_window_af7253a0c9bc355e988192a55755c51f3}\label{class_creation_combat_scene_1_1game_1_1_window_af7253a0c9bc355e988192a55755c51f3}} 
+\index{CreationCombatScene.game.Window@{CreationCombatScene.game.Window}!scene@{scene}}
+\index{scene@{scene}!CreationCombatScene.game.Window@{CreationCombatScene.game.Window}}
+\doxysubsubsection{\texorpdfstring{scene}{scene}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgame_1_1_scene}{Scene}} Creation\+Combat\+Scene.\+game.\+Window.\+scene}
+
+
+
+Definition at line \mbox{\hyperlink{test_2_creation_combat_scene_2game_2_window_8java_source_l00015}{15}} of file \mbox{\hyperlink{test_2_creation_combat_scene_2game_2_window_8java_source}{Window.\+java}}.
+
+\mbox{\Hypertarget{class_creation_combat_scene_1_1game_1_1_window_ab9750ac4c0823d8b3b6d58c19d212815}\label{class_creation_combat_scene_1_1game_1_1_window_ab9750ac4c0823d8b3b6d58c19d212815}} 
+\index{CreationCombatScene.game.Window@{CreationCombatScene.game.Window}!screenHeight@{screenHeight}}
+\index{screenHeight@{screenHeight}!CreationCombatScene.game.Window@{CreationCombatScene.game.Window}}
+\doxysubsubsection{\texorpdfstring{screenHeight}{screenHeight}}
+{\footnotesize\ttfamily final int Creation\+Combat\+Scene.\+game.\+Window.\+screen\+Height =600}
+
+
+
+Definition at line \mbox{\hyperlink{test_2_creation_combat_scene_2game_2_window_8java_source_l00019}{19}} of file \mbox{\hyperlink{test_2_creation_combat_scene_2game_2_window_8java_source}{Window.\+java}}.
+
+\mbox{\Hypertarget{class_creation_combat_scene_1_1game_1_1_window_a02e61bb69a24e0eaae3de2f38613a353}\label{class_creation_combat_scene_1_1game_1_1_window_a02e61bb69a24e0eaae3de2f38613a353}} 
+\index{CreationCombatScene.game.Window@{CreationCombatScene.game.Window}!screenWidth@{screenWidth}}
+\index{screenWidth@{screenWidth}!CreationCombatScene.game.Window@{CreationCombatScene.game.Window}}
+\doxysubsubsection{\texorpdfstring{screenWidth}{screenWidth}}
+{\footnotesize\ttfamily final int Creation\+Combat\+Scene.\+game.\+Window.\+screen\+Width =800}
+
+
+
+Definition at line \mbox{\hyperlink{test_2_creation_combat_scene_2game_2_window_8java_source_l00018}{18}} of file \mbox{\hyperlink{test_2_creation_combat_scene_2game_2_window_8java_source}{Window.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+test/\+Creation\+Combat\+Scene/game/\mbox{\hyperlink{test_2_creation_combat_scene_2game_2_window_8java}{Window.\+java}}\end{DoxyCompactItemize}

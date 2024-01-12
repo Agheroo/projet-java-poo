@@ -1,0 +1,68 @@
+\hypertarget{_scene_8java_source}{}\doxysection{Scene.\+java}
+\label{_scene_8java_source}\index{src/game/Scene.java@{src/game/Scene.java}}
+\mbox{\hyperlink{_scene_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00006}00006 \textcolor{keyword}{package }game;}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00008}00008 \textcolor{keyword}{import} \mbox{\hyperlink{namespacemain}{main}}.\mbox{\hyperlink{classmain_1_1_key_handler}{KeyHandler}};}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00010}00010 \textcolor{keyword}{import} java.awt.*;}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00012}00012 \textcolor{keyword}{import} \mbox{\hyperlink{namespace_u_i}{UI}}.\mbox{\hyperlink{class_u_i_1_1_h_u_d}{HUD}};}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00013}00013 \textcolor{keyword}{import} \mbox{\hyperlink{namespace_u_i}{UI}}.\mbox{\hyperlink{class_u_i_1_1_h_u_d}{HUD}}.\mbox{\hyperlink{enum_u_i_1_1_h_u_d_1_1_menu_type}{MenuType}};}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00019}\mbox{\hyperlink{classgame_1_1_scene}{00019}} \textcolor{keyword}{public} \textcolor{keyword}{abstract} \textcolor{keyword}{class }\mbox{\hyperlink{classgame_1_1_scene}{Scene}} \{}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00020}00020     }
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00025}\mbox{\hyperlink{enumgame_1_1_scene_1_1_state_a4be157e7856d538c28aadfa79666f4cc}{00025}}     \textcolor{keyword}{public} \textcolor{keyword}{enum} \mbox{\hyperlink{enumgame_1_1_scene_1_1_state}{State}} \{WORLD, \mbox{\hyperlink{enumgame_1_1_scene_1_1_state_a4be157e7856d538c28aadfa79666f4cc}{FIGHT}}, PAUSE, MENU\}}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00027}\mbox{\hyperlink{classgame_1_1_scene_ab07579f123902402ef95caff79345edc}{00027}}     \textcolor{keyword}{private} \mbox{\hyperlink{enumgame_1_1_scene_1_1_state}{State}} \mbox{\hyperlink{classgame_1_1_scene_ab07579f123902402ef95caff79345edc}{\_lastState}};}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00029}\mbox{\hyperlink{classgame_1_1_scene_a2bbc8cb5064aaa5cc1ed0ec8950f4a58}{00029}}     \textcolor{keyword}{public} \mbox{\hyperlink{classmain_1_1_key_handler}{KeyHandler}} \mbox{\hyperlink{classgame_1_1_scene_a2bbc8cb5064aaa5cc1ed0ec8950f4a58}{keyH}} = \mbox{\hyperlink{classmain_1_1_key_handler}{KeyHandler}}.\mbox{\hyperlink{classmain_1_1_key_handler_abdb9d096bf21b6a49847291e9e4e04a9}{getInstance}}();}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00030}\mbox{\hyperlink{classgame_1_1_scene_ae2b7be4c9099875e858f88458b7d4a1d}{00030}}     \textcolor{keyword}{protected} \textcolor{keyword}{static} \textcolor{keywordtype}{double} \mbox{\hyperlink{classgame_1_1_scene_ae2b7be4c9099875e858f88458b7d4a1d}{dt}} = 0;}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00031}\mbox{\hyperlink{classgame_1_1_scene_afa46982ec00ac703190b0642d8a3c4be}{00031}}     \textcolor{keyword}{public} \mbox{\hyperlink{enumgame_1_1_scene_1_1_state}{State}} \mbox{\hyperlink{classgame_1_1_scene_afa46982ec00ac703190b0642d8a3c4be}{state}};}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00032}\mbox{\hyperlink{classgame_1_1_scene_abfeaf3d13d7ff744014bcad7f4790501}{00032}}     \textcolor{keyword}{public} \mbox{\hyperlink{class_u_i_1_1_h_u_d}{HUD}} \mbox{\hyperlink{classgame_1_1_scene_abfeaf3d13d7ff744014bcad7f4790501}{menu}};}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00037}\mbox{\hyperlink{classgame_1_1_scene_a6b61e8f2533a2ba76c543bbd00d989a2}{00037}}     \textcolor{keyword}{public} \textcolor{keyword}{abstract} \textcolor{keywordtype}{void} \mbox{\hyperlink{classgame_1_1_scene_a6b61e8f2533a2ba76c543bbd00d989a2}{update}}();}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00045}\mbox{\hyperlink{classgame_1_1_scene_aef53d2ecf085388a16020032121e46dc}{00045}}     \textcolor{keyword}{public} \textcolor{keyword}{abstract} \textcolor{keywordtype}{void} \mbox{\hyperlink{classgame_1_1_scene_aef53d2ecf085388a16020032121e46dc}{draw}}(Graphics2D g2, \textcolor{keywordtype}{int} screenWidth, \textcolor{keywordtype}{int} screenHeight);}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00046}00046     }
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00048}\mbox{\hyperlink{classgame_1_1_scene_a05d509ca7d7adfd12e2e071b5d57f11a}{00048}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{double} \mbox{\hyperlink{classgame_1_1_scene_a05d509ca7d7adfd12e2e071b5d57f11a}{getdt}}()\{}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00049}00049         \textcolor{keywordflow}{return} \mbox{\hyperlink{classgame_1_1_scene_ae2b7be4c9099875e858f88458b7d4a1d}{dt}};}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00050}00050     \}}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00051}00051     }
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00056}00056     \textcolor{comment}{/*public Scene worldScene() \{}}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00057}00057 \textcolor{comment}{        return World.getWorld();}}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00058}00058 \textcolor{comment}{    \}*/}}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00066}00066     \textcolor{comment}{/*public Scene fightScene(Player player, Enemy enemy) \{}}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00067}00067 \textcolor{comment}{        return new FightScene(player, enemy);}}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00068}00068 \textcolor{comment}{    \}*/}}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00074}\mbox{\hyperlink{classgame_1_1_scene_a8836ac66378d274d9935a950e0b83d7a}{00074}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classgame_1_1_scene_a8836ac66378d274d9935a950e0b83d7a}{checkPauseScene}}() \{}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00075}00075         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classgame_1_1_scene_a2bbc8cb5064aaa5cc1ed0ec8950f4a58}{keyH}}.\mbox{\hyperlink{classmain_1_1_key_handler_a8695999bf8fc25d2928ff04bfa228e48}{escPressed}}) \{}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00076}00076             keyH.escPressed = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00078}00078             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classgame_1_1_scene_afa46982ec00ac703190b0642d8a3c4be}{state}} != \mbox{\hyperlink{enumgame_1_1_scene_1_1_state}{State}}.\mbox{\hyperlink{enumgame_1_1_scene_1_1_state_a326c78372f2da432b10cdf952e5984e7}{PAUSE}}) \{}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00079}00079                 System.out.println(\textcolor{stringliteral}{"{}CHANGING SCENE TO: PAUSE"{}});}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00080}00080                 \mbox{\hyperlink{classgame_1_1_scene_ab07579f123902402ef95caff79345edc}{\_lastState}} = \mbox{\hyperlink{classgame_1_1_scene_afa46982ec00ac703190b0642d8a3c4be}{state}};}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00081}00081                 \mbox{\hyperlink{classgame_1_1_scene_afa46982ec00ac703190b0642d8a3c4be}{state}} = \mbox{\hyperlink{enumgame_1_1_scene_1_1_state}{State}}.\mbox{\hyperlink{enumgame_1_1_scene_1_1_state_a326c78372f2da432b10cdf952e5984e7}{PAUSE}};}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00082}00082                 \mbox{\hyperlink{classgame_1_1_scene_abfeaf3d13d7ff744014bcad7f4790501}{menu}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_u_i_1_1_h_u_d}{HUD}}(\mbox{\hyperlink{enum_u_i_1_1_h_u_d_1_1_menu_type}{MenuType}}.\mbox{\hyperlink{enum_u_i_1_1_h_u_d_1_1_menu_type_a53b9ea2408f0a1335fce84c8a6e10dc0}{PAUSE}});}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00083}00083             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00084}00084                 System.out.println(\textcolor{stringliteral}{"{}CHANGING SCENE TO: "{}}+\mbox{\hyperlink{classgame_1_1_scene_ab07579f123902402ef95caff79345edc}{\_lastState}});}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00085}00085                 \mbox{\hyperlink{classgame_1_1_scene_afa46982ec00ac703190b0642d8a3c4be}{state}} = \mbox{\hyperlink{classgame_1_1_scene_ab07579f123902402ef95caff79345edc}{\_lastState}};}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00086}00086                 \mbox{\hyperlink{classgame_1_1_scene_abfeaf3d13d7ff744014bcad7f4790501}{menu}} = \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00087}00087             \}}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00088}00088         \}}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00089}00089     \}}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00091}\mbox{\hyperlink{classgame_1_1_scene_a1133bbe7f1bf2b14f648c9a8e70d5886}{00091}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classgame_1_1_scene_a1133bbe7f1bf2b14f648c9a8e70d5886}{changeScene}}(\mbox{\hyperlink{enumgame_1_1_scene_1_1_state}{State}} newState)\{}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00092}00092         System.out.println(\textcolor{stringliteral}{"{}CHANGING SCENE TO: "{}} + newState);}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00093}00093         this.state = newState;}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00094}00094     \}}
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{_scene_8java_source_l00096}00096 \}}
+
+\end{DoxyCode}

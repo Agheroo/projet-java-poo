@@ -1,0 +1,822 @@
+\hypertarget{classentity_1_1_character}{}\doxysection{entity.\+Character Class Reference}
+\label{classentity_1_1_character}\index{entity.Character@{entity.Character}}
+
+
+Represents an abstract character entity with position, hitbox, stats, and animations.  
+
+
+
+
+Inheritance diagram for entity.\+Character\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classentity_1_1_character__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for entity.\+Character\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classentity_1_1_character__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classentity_1_1_character_aa40a6947a230fa0e48701a1da7a507e4}{Character}} (String entity\+Name, int x, int y, int \mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}}, int \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}}, int \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}}, String \mbox{\hyperlink{classentity_1_1_character_a249d5d0b8f600f332b5715e93f83668d}{facing}}, int \mbox{\hyperlink{classentity_1_1_entity_af6b442584a7caf6e84e73872f9f8e080}{\+\_\+sprite\+Cnt\+Max}}, int sprite\+Speed)
+\begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classentity_1_1_character}{Character}} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classentity_1_1_character_a2d5d7da3d6f49c2b0b040850d741f8f7}{update}} (\mbox{\hyperlink{classgame_1_1_scene}{Scene}} scene, double dt)
+\begin{DoxyCompactList}\small\item\em Updates the character entity based on the current scene and time elapsed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classentity_1_1_character_a2e5b1455cc08b1a213cf51ecf102b6bb}{draw\+In\+World}} (Graphics2D g2, int screenX, int screenY)
+\begin{DoxyCompactList}\small\item\em Draws the character in the world scene. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classentity_1_1_character_a24e991ea21c30b197a36fe5e9c7b0733}{draw\+In\+Fight}} (Graphics2D g2, int screenX, int screenY)
+\begin{DoxyCompactList}\small\item\em Draws the character in the fight scene. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}}
+\item 
+int \mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}}
+\item 
+int \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}}
+\item 
+String \mbox{\hyperlink{classentity_1_1_character_a249d5d0b8f600f332b5715e93f83668d}{facing}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classentity_1_1_character_a6d3e0c3ebf51d3728acd70c5a5654090}{move}} (\mbox{\hyperlink{classgame_1_1_world}{World}} world, int \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}}, double dt)
+\begin{DoxyCompactList}\small\item\em Moves the character in the world based on its direction, speed, and the elapsed time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classentity_1_1_character_a937e8e2ad1ddaccfdf7fbc52c9f532f6}{accelerate}} (int max\+Speed, int factor, double dt)
+\begin{DoxyCompactList}\small\item\em Accelerates the character\textquotesingle{}s speed up to the specified maximum speed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classentity_1_1_character_ab41258c00232def146bcb8f5fb17fa75}{decelerate}} (int factor, double dt)
+\begin{DoxyCompactList}\small\item\em Decelerates the character\textquotesingle{}s speed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classentity_1_1_character_a4c8a51975e3de06074b0d13f16116a7c}{load\+Textures}} (String \mbox{\hyperlink{classentity_1_1_entity_a19fc9a3b25d27f23c8ada7af8e746a17}{name}})
+\begin{DoxyCompactList}\small\item\em Loads character textures based on the specified name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classentity_1_1_character_af7bcb14c587e5ae5e9fef046b28072a0}{player\+Interraction}} (\mbox{\hyperlink{classentity_1_1_player}{Player}} player)
+\end{DoxyCompactItemize}
+\doxysubsection*{Package Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classentity_1_1_character_a96f55e259dad88a0cf1cf3f7debffebf}{health}}
+\item 
+int \mbox{\hyperlink{classentity_1_1_character_a739de76015650bfb302e42a0b2069771}{mana}}
+\item 
+int \mbox{\hyperlink{classentity_1_1_character_ae6dea43904c63b70961d9b7b412575a9}{agility}}
+\item 
+int \mbox{\hyperlink{classentity_1_1_character_a59d53e55d7c7d77f86fd646728eb6746}{strength}}
+\item 
+int \mbox{\hyperlink{classentity_1_1_character_ad97a3b4055ba1daa2abfbb1150f34049}{defense}}
+\item 
+int \mbox{\hyperlink{classentity_1_1_character_a5e5b278c340d28b08a71621bcec4d780}{initiative}}
+\item 
+int \mbox{\hyperlink{classentity_1_1_character_aaedd508f39aebb389108e4f10e696e7d}{has\+Key}} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classentity_1_1_character_aeee6d959ceb691d58104656642f828fc}{check\+Tile\+Collision}} (\mbox{\hyperlink{classtiles_1_1_tile_manager}{Tile\+Manager}} tile\+Manager)
+\begin{DoxyCompactList}\small\item\em Checks for collision with nearby tiles using the character\textquotesingle{}s hitbox. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Buffered\+Image\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classentity_1_1_character_a17c079a2829f8df0b6905939695da06a}{\+\_\+idle\+\_\+up}}
+\item 
+Buffered\+Image\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classentity_1_1_character_ad868c4663c2b2a03eabf7d079bc0290f}{\+\_\+idle\+\_\+down}}
+\item 
+Buffered\+Image\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classentity_1_1_character_af58d7b8dea3d200104e64eec7c174f48}{\+\_\+idle\+\_\+right}}
+\item 
+Buffered\+Image\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classentity_1_1_character_a147002d1dbc06ed223ee52d4ea16accb}{\+\_\+idle\+\_\+left}}
+\item 
+Buffered\+Image\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classentity_1_1_character_a10a24e019ad08ce7236f5dab6edb668d}{\+\_\+walk\+\_\+up}}
+\item 
+Buffered\+Image\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classentity_1_1_character_ae6680e0a3694b8321f074a206dd15b4c}{\+\_\+walk\+\_\+down}}
+\item 
+Buffered\+Image\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classentity_1_1_character_af0c4c9cfad4aa70ea8d45fb4d7ddded3}{\+\_\+walk\+\_\+right}}
+\item 
+Buffered\+Image\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classentity_1_1_character_ac548fc202ded76d7652997c57d1e4dcb}{\+\_\+walk\+\_\+left}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Represents an abstract character entity with position, hitbox, stats, and animations. 
+
+Definition at line \mbox{\hyperlink{_character_8java_source_l00025}{25}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classentity_1_1_character_aa40a6947a230fa0e48701a1da7a507e4}\label{classentity_1_1_character_aa40a6947a230fa0e48701a1da7a507e4}} 
+\index{entity.Character@{entity.Character}!Character@{Character}}
+\index{Character@{Character}!entity.Character@{entity.Character}}
+\doxysubsubsection{\texorpdfstring{Character()}{Character()}}
+{\footnotesize\ttfamily entity.\+Character.\+Character (\begin{DoxyParamCaption}\item[{String}]{entity\+Name,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{dirX,  }\item[{int}]{dirY,  }\item[{int}]{speed,  }\item[{String}]{facing,  }\item[{int}]{\+\_\+sprite\+Cnt\+Max,  }\item[{int}]{sprite\+Speed }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \mbox{\hyperlink{classentity_1_1_character}{Character}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The initial X-\/coordinate of the character in the world. \\
+\hline
+{\em y} & The initial Y-\/coordinate of the character in the world. \\
+\hline
+{\em dirX} & The X-\/direction of the character. \\
+\hline
+{\em dirY} & The Y-\/direction of the character. \\
+\hline
+{\em speed} & The speed of the character\textquotesingle{}s movement. \\
+\hline
+{\em facing} & The direction the character is facing (up, down, left, right). \\
+\hline
+{\em \+\_\+sprite\+Cnt\+Max} & The maximum number of sprites for animation. \\
+\hline
+{\em sprite\+Speed} & The speed of sprite animation. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_character_8java_source_l00060}{60}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00060                                                                                                                                         \{}
+\DoxyCodeLine{00061         super(entityName, x, y, \mbox{\hyperlink{classentity_1_1_entity_af6b442584a7caf6e84e73872f9f8e080}{\_spriteCntMax}}, spriteSpeed,\textcolor{keyword}{true});}
+\DoxyCodeLine{00062 }
+\DoxyCodeLine{00063 }
+\DoxyCodeLine{00064 }
+\DoxyCodeLine{00065         \textcolor{comment}{// Hitbox settings (size of the entity)}}
+\DoxyCodeLine{00066         this.hitbox.width = Const.WRLD\_entityScreenSize / 2;}
+\DoxyCodeLine{00067         this.hitbox.height = Const.WRLD\_entityScreenSize / 2;}
+\DoxyCodeLine{00068         this.dirX = \mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}};}
+\DoxyCodeLine{00069         this.dirY = \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}};}
+\DoxyCodeLine{00070         this.speed = \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}};}
+\DoxyCodeLine{00071         this.facing = \mbox{\hyperlink{classentity_1_1_character_a249d5d0b8f600f332b5715e93f83668d}{facing}};}
+\DoxyCodeLine{00072 }
+\DoxyCodeLine{00073         \mbox{\hyperlink{classentity_1_1_character_a17c079a2829f8df0b6905939695da06a}{\_idle\_up}} = \textcolor{keyword}{new} BufferedImage[\mbox{\hyperlink{classentity_1_1_entity_af6b442584a7caf6e84e73872f9f8e080}{\_spriteCntMax}}];}
+\DoxyCodeLine{00074         \mbox{\hyperlink{classentity_1_1_character_ad868c4663c2b2a03eabf7d079bc0290f}{\_idle\_down}} = \textcolor{keyword}{new} BufferedImage[\mbox{\hyperlink{classentity_1_1_entity_af6b442584a7caf6e84e73872f9f8e080}{\_spriteCntMax}}];}
+\DoxyCodeLine{00075         \mbox{\hyperlink{classentity_1_1_character_af58d7b8dea3d200104e64eec7c174f48}{\_idle\_right}} = \textcolor{keyword}{new} BufferedImage[\mbox{\hyperlink{classentity_1_1_entity_af6b442584a7caf6e84e73872f9f8e080}{\_spriteCntMax}}];}
+\DoxyCodeLine{00076         \mbox{\hyperlink{classentity_1_1_character_a147002d1dbc06ed223ee52d4ea16accb}{\_idle\_left}} = \textcolor{keyword}{new} BufferedImage[\mbox{\hyperlink{classentity_1_1_entity_af6b442584a7caf6e84e73872f9f8e080}{\_spriteCntMax}}];}
+\DoxyCodeLine{00077         \mbox{\hyperlink{classentity_1_1_character_a10a24e019ad08ce7236f5dab6edb668d}{\_walk\_up}} = \textcolor{keyword}{new} BufferedImage[\mbox{\hyperlink{classentity_1_1_entity_af6b442584a7caf6e84e73872f9f8e080}{\_spriteCntMax}}];}
+\DoxyCodeLine{00078         \mbox{\hyperlink{classentity_1_1_character_ae6680e0a3694b8321f074a206dd15b4c}{\_walk\_down}} = \textcolor{keyword}{new} BufferedImage[\mbox{\hyperlink{classentity_1_1_entity_af6b442584a7caf6e84e73872f9f8e080}{\_spriteCntMax}}];}
+\DoxyCodeLine{00079         \mbox{\hyperlink{classentity_1_1_character_af0c4c9cfad4aa70ea8d45fb4d7ddded3}{\_walk\_right}} = \textcolor{keyword}{new} BufferedImage[\mbox{\hyperlink{classentity_1_1_entity_af6b442584a7caf6e84e73872f9f8e080}{\_spriteCntMax}}];}
+\DoxyCodeLine{00080         \mbox{\hyperlink{classentity_1_1_character_ac548fc202ded76d7652997c57d1e4dcb}{\_walk\_left}} = \textcolor{keyword}{new} BufferedImage[\mbox{\hyperlink{classentity_1_1_entity_af6b442584a7caf6e84e73872f9f8e080}{\_spriteCntMax}}];}
+\DoxyCodeLine{00081         \mbox{\hyperlink{classentity_1_1_entity_a9060501233d22f6130e204799a1f01c5}{loadTextures}}(entityName);}
+\DoxyCodeLine{00082     \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classentity_1_1_character_aa40a6947a230fa0e48701a1da7a507e4_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classentity_1_1_character_a937e8e2ad1ddaccfdf7fbc52c9f532f6}\label{classentity_1_1_character_a937e8e2ad1ddaccfdf7fbc52c9f532f6}} 
+\index{entity.Character@{entity.Character}!accelerate@{accelerate}}
+\index{accelerate@{accelerate}!entity.Character@{entity.Character}}
+\doxysubsubsection{\texorpdfstring{accelerate()}{accelerate()}}
+{\footnotesize\ttfamily void entity.\+Character.\+accelerate (\begin{DoxyParamCaption}\item[{int}]{max\+Speed,  }\item[{int}]{factor,  }\item[{double}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Accelerates the character\textquotesingle{}s speed up to the specified maximum speed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\+Speed} & The maximum speed to accelerate to. \\
+\hline
+{\em dt} & The time elapsed since the last update. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_character_8java_source_l00168}{168}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00168                                                                    \{}
+\DoxyCodeLine{00169         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} < maxSpeed) \{}
+\DoxyCodeLine{00170             \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} += factor*dt;}
+\DoxyCodeLine{00171         \}}
+\DoxyCodeLine{00172         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} > maxSpeed) \{}
+\DoxyCodeLine{00173             \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} = maxSpeed;}
+\DoxyCodeLine{00174         \}}
+\DoxyCodeLine{00175     \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classentity_1_1_character_a937e8e2ad1ddaccfdf7fbc52c9f532f6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classentity_1_1_character_aeee6d959ceb691d58104656642f828fc}\label{classentity_1_1_character_aeee6d959ceb691d58104656642f828fc}} 
+\index{entity.Character@{entity.Character}!checkTileCollision@{checkTileCollision}}
+\index{checkTileCollision@{checkTileCollision}!entity.Character@{entity.Character}}
+\doxysubsubsection{\texorpdfstring{checkTileCollision()}{checkTileCollision()}}
+{\footnotesize\ttfamily void entity.\+Character.\+check\+Tile\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtiles_1_1_tile_manager}{Tile\+Manager}}}]{tile\+Manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Checks for collision with nearby tiles using the character\textquotesingle{}s hitbox. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tile\+Manager} & The Tile\+Manager containing information about tiles in the world. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_character_8java_source_l00111}{111}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00111                                                              \{}
+\DoxyCodeLine{00112         \textcolor{comment}{// Checking tiles with hitbox}}
+\DoxyCodeLine{00113         }
+\DoxyCodeLine{00114         }
+\DoxyCodeLine{00115         \textcolor{keywordflow}{if}((tileManager.getTile(\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x, \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y -\/ 5).getCollision() \textcolor{comment}{//Checks collision with tile on top of the character}}
+\DoxyCodeLine{00116         || tileManager.getTile(\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.width , \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y -\/ 5).getCollision() )\&\&  \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}} == -\/1) \{}
+\DoxyCodeLine{00117             \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} = tileManager.getTile(\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x,\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y).getPos()[1] -\/ \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.height;    \textcolor{comment}{//Prevent moving if collidable terrain}}
+\DoxyCodeLine{00118         \}}
+\DoxyCodeLine{00119         \textcolor{keywordflow}{if}((tileManager.getTile(\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x, \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.height + 5).getCollision() \textcolor{comment}{//Checks collision with tile beneath of the character}}
+\DoxyCodeLine{00120         || tileManager.getTile(\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.width, \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.height + 5).getCollision()) \&\& \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}} == 1)\{}
+\DoxyCodeLine{00121             \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} = tileManager.getTile(\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x,\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y).getPos()[1] -\/1;        \textcolor{comment}{//Prevent moving if collidable terrain}}
+\DoxyCodeLine{00122         \}}
+\DoxyCodeLine{00123         \textcolor{keywordflow}{if}((tileManager.getTile(\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x -\/ 5, \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y).getCollision() \textcolor{comment}{//Checks collision with tile on the left of the character}}
+\DoxyCodeLine{00124         || tileManager.getTile(\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x -\/ 5, \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.height).getCollision()) \&\& \mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} == -\/1) \{}
+\DoxyCodeLine{00125             \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} = tileManager.getTile(\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x,\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y).getPos()[0] -\/ \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.width/2 ;    \textcolor{comment}{//Prevent moving if collidable terrain}}
+\DoxyCodeLine{00126         \}}
+\DoxyCodeLine{00127         \textcolor{keywordflow}{if}((tileManager.getTile(\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.width + 5, \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y).getCollision() \textcolor{comment}{//Checks collision with tile on the right of the character}}
+\DoxyCodeLine{00128         || tileManager.getTile(\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.width + 5, \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.height).getCollision()) \&\& \mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} == 1)\{}
+\DoxyCodeLine{00129             \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} = tileManager.getTile(\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x,\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y).getPos()[0] + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.width/2 -\/ 1;        \textcolor{comment}{//Prevent moving if collidable terrain}}
+\DoxyCodeLine{00130         \}}
+\DoxyCodeLine{00131     \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classentity_1_1_character_aeee6d959ceb691d58104656642f828fc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classentity_1_1_character_aeee6d959ceb691d58104656642f828fc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classentity_1_1_character_ab41258c00232def146bcb8f5fb17fa75}\label{classentity_1_1_character_ab41258c00232def146bcb8f5fb17fa75}} 
+\index{entity.Character@{entity.Character}!decelerate@{decelerate}}
+\index{decelerate@{decelerate}!entity.Character@{entity.Character}}
+\doxysubsubsection{\texorpdfstring{decelerate()}{decelerate()}}
+{\footnotesize\ttfamily void entity.\+Character.\+decelerate (\begin{DoxyParamCaption}\item[{int}]{factor,  }\item[{double}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Decelerates the character\textquotesingle{}s speed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & The time elapsed since the last update. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_character_8java_source_l00181}{181}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00181                                                     \{}
+\DoxyCodeLine{00182         \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} -\/= factor*dt;}
+\DoxyCodeLine{00183     \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classentity_1_1_character_ab41258c00232def146bcb8f5fb17fa75_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classentity_1_1_character_a24e991ea21c30b197a36fe5e9c7b0733}\label{classentity_1_1_character_a24e991ea21c30b197a36fe5e9c7b0733}} 
+\index{entity.Character@{entity.Character}!drawInFight@{drawInFight}}
+\index{drawInFight@{drawInFight}!entity.Character@{entity.Character}}
+\doxysubsubsection{\texorpdfstring{drawInFight()}{drawInFight()}}
+{\footnotesize\ttfamily void entity.\+Character.\+draw\+In\+Fight (\begin{DoxyParamCaption}\item[{Graphics2D}]{g2,  }\item[{int}]{screenX,  }\item[{int}]{screenY }\end{DoxyParamCaption})}
+
+
+
+Draws the character in the fight scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g2} & The Graphics2D object for drawing. \\
+\hline
+{\em screenX} & The X-\/coordinate on the screen. \\
+\hline
+{\em screenY} & The Y-\/coordinate on the screen. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_character_8java_source_l00276}{276}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00276                                                                      \{}
+\DoxyCodeLine{00277         \textcolor{comment}{// Other function to draw in fight scene}}
+\DoxyCodeLine{00278     \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classentity_1_1_character_a24e991ea21c30b197a36fe5e9c7b0733_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classentity_1_1_character_a2e5b1455cc08b1a213cf51ecf102b6bb}\label{classentity_1_1_character_a2e5b1455cc08b1a213cf51ecf102b6bb}} 
+\index{entity.Character@{entity.Character}!drawInWorld@{drawInWorld}}
+\index{drawInWorld@{drawInWorld}!entity.Character@{entity.Character}}
+\doxysubsubsection{\texorpdfstring{drawInWorld()}{drawInWorld()}}
+{\footnotesize\ttfamily void entity.\+Character.\+draw\+In\+World (\begin{DoxyParamCaption}\item[{Graphics2D}]{g2,  }\item[{int}]{screenX,  }\item[{int}]{screenY }\end{DoxyParamCaption})}
+
+
+
+Draws the character in the world scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g2} & The Graphics2D object for drawing. \\
+\hline
+{\em screenX} & The X-\/coordinate on the screen. \\
+\hline
+{\em screenY} & The Y-\/coordinate on the screen. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_character_8java_source_l00215}{215}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00215                                                                      \{}
+\DoxyCodeLine{00216         BufferedImage image = \textcolor{keyword}{null};}
+\DoxyCodeLine{00217         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} == 0) \{ \textcolor{comment}{// IDLE ANIMATIONS}}
+\DoxyCodeLine{00218             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classentity_1_1_entity_af6b442584a7caf6e84e73872f9f8e080}{\_spriteCntMax}}; i++) \{}
+\DoxyCodeLine{00219                 \textcolor{keywordflow}{switch} (\mbox{\hyperlink{classentity_1_1_character_a249d5d0b8f600f332b5715e93f83668d}{facing}}) \{}
+\DoxyCodeLine{00220                     \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}up"{}}:}
+\DoxyCodeLine{00221                         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}} == i) image = \mbox{\hyperlink{classentity_1_1_character_a17c079a2829f8df0b6905939695da06a}{\_idle\_up}}[i];}
+\DoxyCodeLine{00222                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00223                     \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}down"{}}:}
+\DoxyCodeLine{00224                         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}} == i) image = \mbox{\hyperlink{classentity_1_1_character_ad868c4663c2b2a03eabf7d079bc0290f}{\_idle\_down}}[i];}
+\DoxyCodeLine{00225                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00226                     \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}left"{}}:}
+\DoxyCodeLine{00227                         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}} == i) image = \mbox{\hyperlink{classentity_1_1_character_a147002d1dbc06ed223ee52d4ea16accb}{\_idle\_left}}[i];}
+\DoxyCodeLine{00228                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00229                     \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}right"{}}:}
+\DoxyCodeLine{00230                         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}} == i) image = \mbox{\hyperlink{classentity_1_1_character_af58d7b8dea3d200104e64eec7c174f48}{\_idle\_right}}[i];}
+\DoxyCodeLine{00231                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00232                 \}}
+\DoxyCodeLine{00233             \}}
+\DoxyCodeLine{00234         \}}
+\DoxyCodeLine{00235         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} > 0) \{ \textcolor{comment}{// WALKING ANIMATIONS}}
+\DoxyCodeLine{00236             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classentity_1_1_entity_af6b442584a7caf6e84e73872f9f8e080}{\_spriteCntMax}}; i++) \{}
+\DoxyCodeLine{00237                 \textcolor{keywordflow}{switch} (\mbox{\hyperlink{classentity_1_1_character_a249d5d0b8f600f332b5715e93f83668d}{facing}}) \{}
+\DoxyCodeLine{00238                     \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}up"{}}:}
+\DoxyCodeLine{00239                         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}} == i) image = \mbox{\hyperlink{classentity_1_1_character_a10a24e019ad08ce7236f5dab6edb668d}{\_walk\_up}}[i];}
+\DoxyCodeLine{00240                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00241                     \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}down"{}}:}
+\DoxyCodeLine{00242                         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}} == i) image = \mbox{\hyperlink{classentity_1_1_character_ae6680e0a3694b8321f074a206dd15b4c}{\_walk\_down}}[i];}
+\DoxyCodeLine{00243                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00244                     \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}left"{}}:}
+\DoxyCodeLine{00245                         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}} == i) image = \mbox{\hyperlink{classentity_1_1_character_ac548fc202ded76d7652997c57d1e4dcb}{\_walk\_left}}[i];}
+\DoxyCodeLine{00246                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00247                     \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}right"{}}:}
+\DoxyCodeLine{00248                         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}} == i) image = \mbox{\hyperlink{classentity_1_1_character_af0c4c9cfad4aa70ea8d45fb4d7ddded3}{\_walk\_right}}[i];}
+\DoxyCodeLine{00249                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00250                 \}}
+\DoxyCodeLine{00251             \}}
+\DoxyCodeLine{00252         \}}
+\DoxyCodeLine{00253         }
+\DoxyCodeLine{00254 }
+\DoxyCodeLine{00255         \textcolor{keywordtype}{int} playerScreenX = (Const.WDW\_width -\/ Const.WRLD\_entityScreenSize) / 2;}
+\DoxyCodeLine{00256         \textcolor{keywordtype}{int} playerScreenY = (Const.WDW\_height -\/ Const.WRLD\_entityScreenSize) / 2;}
+\DoxyCodeLine{00257 }
+\DoxyCodeLine{00258         \textcolor{comment}{//Checking if we need to draw enemy or not}}
+\DoxyCodeLine{00259         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} + Const.WRLD\_tileScreenSize > \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} -\/ playerScreenX}
+\DoxyCodeLine{00260         \&\& \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} -\/ Const.WRLD\_tileScreenSize < \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} + playerScreenX}
+\DoxyCodeLine{00261         \&\& \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} + Const.WRLD\_tileScreenSize > \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} -\/ playerScreenY}
+\DoxyCodeLine{00262         \&\& \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} -\/ Const.WRLD\_tileScreenSize < \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} + playerScreenY) \{}
+\DoxyCodeLine{00263                         }
+\DoxyCodeLine{00264             g2.drawImage(image, screenX, screenY, Const.WRLD\_entityScreenSize, Const.WRLD\_entityScreenSize, \textcolor{keyword}{null});}
+\DoxyCodeLine{00265             g2.drawRect(screenX + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.width / 2, screenY + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.height, \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.width, \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.height); \textcolor{comment}{// Center the hitbox to the entity}}
+\DoxyCodeLine{00266         \}}
+\DoxyCodeLine{00267     \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classentity_1_1_character_a2e5b1455cc08b1a213cf51ecf102b6bb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classentity_1_1_character_a4c8a51975e3de06074b0d13f16116a7c}\label{classentity_1_1_character_a4c8a51975e3de06074b0d13f16116a7c}} 
+\index{entity.Character@{entity.Character}!loadTextures@{loadTextures}}
+\index{loadTextures@{loadTextures}!entity.Character@{entity.Character}}
+\doxysubsubsection{\texorpdfstring{loadTextures()}{loadTextures()}}
+{\footnotesize\ttfamily void entity.\+Character.\+load\+Textures (\begin{DoxyParamCaption}\item[{String}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Loads character textures based on the specified name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name used to determine the textures to load. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_character_8java_source_l00189}{189}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00189                                              \{}
+\DoxyCodeLine{00190         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{00191             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classentity_1_1_entity_af6b442584a7caf6e84e73872f9f8e080}{\_spriteCntMax}}; i++) \{}
+\DoxyCodeLine{00192                 \mbox{\hyperlink{classentity_1_1_character_a17c079a2829f8df0b6905939695da06a}{\_idle\_up}}[i] = ImageIO.read(\textcolor{keyword}{new} FileInputStream(\textcolor{stringliteral}{"{}res/entity/character/idle/"{}} + \mbox{\hyperlink{classentity_1_1_entity_a19fc9a3b25d27f23c8ada7af8e746a17}{name}} + \textcolor{stringliteral}{"{}/up"{}} + (i + 1) + \textcolor{stringliteral}{"{}.png"{}}));}
+\DoxyCodeLine{00193                 \mbox{\hyperlink{classentity_1_1_character_ad868c4663c2b2a03eabf7d079bc0290f}{\_idle\_down}}[i] = ImageIO.read(\textcolor{keyword}{new} FileInputStream(\textcolor{stringliteral}{"{}res/entity/character/idle/"{}} + \mbox{\hyperlink{classentity_1_1_entity_a19fc9a3b25d27f23c8ada7af8e746a17}{name}} + \textcolor{stringliteral}{"{}/down"{}} + (i + 1) + \textcolor{stringliteral}{"{}.png"{}}));}
+\DoxyCodeLine{00194                 \mbox{\hyperlink{classentity_1_1_character_a147002d1dbc06ed223ee52d4ea16accb}{\_idle\_left}}[i] = ImageIO.read(\textcolor{keyword}{new} FileInputStream(\textcolor{stringliteral}{"{}res/entity/character/idle/"{}} + \mbox{\hyperlink{classentity_1_1_entity_a19fc9a3b25d27f23c8ada7af8e746a17}{name}} + \textcolor{stringliteral}{"{}/left"{}} + (i + 1) + \textcolor{stringliteral}{"{}.png"{}}));}
+\DoxyCodeLine{00195                 \mbox{\hyperlink{classentity_1_1_character_af58d7b8dea3d200104e64eec7c174f48}{\_idle\_right}}[i] = ImageIO.read(\textcolor{keyword}{new} FileInputStream(\textcolor{stringliteral}{"{}res/entity/character/idle/"{}} + \mbox{\hyperlink{classentity_1_1_entity_a19fc9a3b25d27f23c8ada7af8e746a17}{name}} + \textcolor{stringliteral}{"{}/right"{}} + (i + 1) + \textcolor{stringliteral}{"{}.png"{}}));}
+\DoxyCodeLine{00196 }
+\DoxyCodeLine{00197                 \mbox{\hyperlink{classentity_1_1_character_a10a24e019ad08ce7236f5dab6edb668d}{\_walk\_up}}[i] = ImageIO.read(\textcolor{keyword}{new} FileInputStream(\textcolor{stringliteral}{"{}res/entity/character/walk/"{}} + \mbox{\hyperlink{classentity_1_1_entity_a19fc9a3b25d27f23c8ada7af8e746a17}{name}} + \textcolor{stringliteral}{"{}/up"{}} + (i + 1) + \textcolor{stringliteral}{"{}.png"{}}));}
+\DoxyCodeLine{00198                 \mbox{\hyperlink{classentity_1_1_character_ae6680e0a3694b8321f074a206dd15b4c}{\_walk\_down}}[i] = ImageIO.read(\textcolor{keyword}{new} FileInputStream(\textcolor{stringliteral}{"{}res/entity/character/walk/"{}} + \mbox{\hyperlink{classentity_1_1_entity_a19fc9a3b25d27f23c8ada7af8e746a17}{name}} + \textcolor{stringliteral}{"{}/down"{}} + (i + 1) + \textcolor{stringliteral}{"{}.png"{}}));}
+\DoxyCodeLine{00199                 \mbox{\hyperlink{classentity_1_1_character_ac548fc202ded76d7652997c57d1e4dcb}{\_walk\_left}}[i] = ImageIO.read(\textcolor{keyword}{new} FileInputStream(\textcolor{stringliteral}{"{}res/entity/character/walk/"{}} + \mbox{\hyperlink{classentity_1_1_entity_a19fc9a3b25d27f23c8ada7af8e746a17}{name}} + \textcolor{stringliteral}{"{}/left"{}} + (i + 1) + \textcolor{stringliteral}{"{}.png"{}}));}
+\DoxyCodeLine{00200                 \mbox{\hyperlink{classentity_1_1_character_af0c4c9cfad4aa70ea8d45fb4d7ddded3}{\_walk\_right}}[i] = ImageIO.read(\textcolor{keyword}{new} FileInputStream(\textcolor{stringliteral}{"{}res/entity/character/walk/"{}} + \mbox{\hyperlink{classentity_1_1_entity_a19fc9a3b25d27f23c8ada7af8e746a17}{name}} + \textcolor{stringliteral}{"{}/right"{}} + (i + 1) + \textcolor{stringliteral}{"{}.png"{}}));}
+\DoxyCodeLine{00201             \}}
+\DoxyCodeLine{00202 }
+\DoxyCodeLine{00203         \} \textcolor{keywordflow}{catch} (IOException e) \{}
+\DoxyCodeLine{00204             e.printStackTrace();}
+\DoxyCodeLine{00205         \}}
+\DoxyCodeLine{00206     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classentity_1_1_character_a6d3e0c3ebf51d3728acd70c5a5654090}\label{classentity_1_1_character_a6d3e0c3ebf51d3728acd70c5a5654090}} 
+\index{entity.Character@{entity.Character}!move@{move}}
+\index{move@{move}!entity.Character@{entity.Character}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void entity.\+Character.\+move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1_world}{World}}}]{world,  }\item[{int}]{speed,  }\item[{double}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Moves the character in the world based on its direction, speed, and the elapsed time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em world} & The current game world. \\
+\hline
+{\em speed} & The speed of the character\textquotesingle{}s movement. \\
+\hline
+{\em dt} & The time elapsed since the last update. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_character_8java_source_l00141}{141}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00141                                                            \{}
+\DoxyCodeLine{00142         \textcolor{keywordflow}{if} ((\mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} == 0 \&\& \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}} != 0) || (\mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}} == 0 \&\& \mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} != 0)) \{}
+\DoxyCodeLine{00143             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} == 1) \{}
+\DoxyCodeLine{00144                 \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} += \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} * dt;}
+\DoxyCodeLine{00145             \}}
+\DoxyCodeLine{00146             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} == -\/1) \{}
+\DoxyCodeLine{00147                 \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} -\/= \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} * dt;}
+\DoxyCodeLine{00148             \}}
+\DoxyCodeLine{00149             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}} == 1) \{}
+\DoxyCodeLine{00150                 \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} += \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} * dt;}
+\DoxyCodeLine{00151             \}}
+\DoxyCodeLine{00152             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}} == -\/1) \{}
+\DoxyCodeLine{00153                 \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} -\/= \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} * dt;}
+\DoxyCodeLine{00154             \}}
+\DoxyCodeLine{00155         \}}
+\DoxyCodeLine{00156         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} != 0 \&\& \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}} != 0) \{}
+\DoxyCodeLine{00157             \textcolor{keywordtype}{double} normSum = Math.sqrt(\mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} * \mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} + \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}} * \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}});      \textcolor{comment}{//Normalizing vector}}
+\DoxyCodeLine{00158             \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} += (\mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} / normSum) * \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} * dt;}
+\DoxyCodeLine{00159             \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} += (\mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}} / normSum) * \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} * dt;}
+\DoxyCodeLine{00160         \}}
+\DoxyCodeLine{00161     \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classentity_1_1_character_a6d3e0c3ebf51d3728acd70c5a5654090_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classentity_1_1_character_af7bcb14c587e5ae5e9fef046b28072a0}\label{classentity_1_1_character_af7bcb14c587e5ae5e9fef046b28072a0}} 
+\index{entity.Character@{entity.Character}!playerInterraction@{playerInterraction}}
+\index{playerInterraction@{playerInterraction}!entity.Character@{entity.Character}}
+\doxysubsubsection{\texorpdfstring{playerInterraction()}{playerInterraction()}}
+{\footnotesize\ttfamily void entity.\+Character.\+player\+Interraction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classentity_1_1_player}{Player}}}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classentity_1_1_entity_ae874ae13e301bb9f227535534869f64e}{entity.\+Entity}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classentity_1_1_enemy_a429f4fa6c8b461d4c18802d35d9b5092}{entity.\+Enemy}}.
+
+
+
+Definition at line \mbox{\hyperlink{_character_8java_source_l00281}{281}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00281                                                      \{}
+\DoxyCodeLine{00282     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classentity_1_1_character_a2d5d7da3d6f49c2b0b040850d741f8f7}\label{classentity_1_1_character_a2d5d7da3d6f49c2b0b040850d741f8f7}} 
+\index{entity.Character@{entity.Character}!update@{update}}
+\index{update@{update}!entity.Character@{entity.Character}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void entity.\+Character.\+update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1_scene}{Scene}}}]{scene,  }\item[{double}]{dt }\end{DoxyParamCaption})}
+
+
+
+Updates the character entity based on the current scene and time elapsed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene} & The current game scene. \\
+\hline
+{\em dt} & The time elapsed since the last update. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classentity_1_1_entity_a127423f72cd9e8ec189509dad498b21b}{entity.\+Entity}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classentity_1_1_enemy_ab115ccb1365609753aa1dddbc9df0580}{entity.\+Enemy}}, and \mbox{\hyperlink{classentity_1_1_player_ae48f1e24c9ff0b7bd4f55b470bf66e7e}{entity.\+Player}}.
+
+
+
+Definition at line \mbox{\hyperlink{_character_8java_source_l00090}{90}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00090                                                \{}
+\DoxyCodeLine{00091         \textcolor{keywordflow}{if} (scene.state == State.WORLD) \{}
+\DoxyCodeLine{00092             World currWorld = World.getWorld();}
+\DoxyCodeLine{00093 }
+\DoxyCodeLine{00094             hitbox.x = \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} + hitbox.width / 2;}
+\DoxyCodeLine{00095             hitbox.y = \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.height;}
+\DoxyCodeLine{00096 }
+\DoxyCodeLine{00097             \textcolor{comment}{// CHECK THE COLLISION}}
+\DoxyCodeLine{00098             \mbox{\hyperlink{classentity_1_1_character_a6d3e0c3ebf51d3728acd70c5a5654090}{move}}(World.getWorld(), \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}}, dt);}
+\DoxyCodeLine{00099             \mbox{\hyperlink{classentity_1_1_character_aeee6d959ceb691d58104656642f828fc}{checkTileCollision}}(currWorld.tileManager);}
+\DoxyCodeLine{00100             }
+\DoxyCodeLine{00101             }
+\DoxyCodeLine{00102 }
+\DoxyCodeLine{00103             \mbox{\hyperlink{classentity_1_1_entity_a41e81bb1c3a3e86f3f43aa39d8fbb748}{updateFrames}}();}
+\DoxyCodeLine{00104         \}}
+\DoxyCodeLine{00105     \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classentity_1_1_character_a2d5d7da3d6f49c2b0b040850d741f8f7_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classentity_1_1_character_ad868c4663c2b2a03eabf7d079bc0290f}\label{classentity_1_1_character_ad868c4663c2b2a03eabf7d079bc0290f}} 
+\index{entity.Character@{entity.Character}!\_idle\_down@{\_idle\_down}}
+\index{\_idle\_down@{\_idle\_down}!entity.Character@{entity.Character}}
+\doxysubsubsection{\texorpdfstring{\_idle\_down}{\_idle\_down}}
+{\footnotesize\ttfamily Buffered\+Image \mbox{[}$\,$\mbox{]} entity.\+Character.\+\_\+idle\+\_\+down\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_character_8java_source_l00041}{41}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
+
+\mbox{\Hypertarget{classentity_1_1_character_a147002d1dbc06ed223ee52d4ea16accb}\label{classentity_1_1_character_a147002d1dbc06ed223ee52d4ea16accb}} 
+\index{entity.Character@{entity.Character}!\_idle\_left@{\_idle\_left}}
+\index{\_idle\_left@{\_idle\_left}!entity.Character@{entity.Character}}
+\doxysubsubsection{\texorpdfstring{\_idle\_left}{\_idle\_left}}
+{\footnotesize\ttfamily Buffered\+Image \mbox{[}$\,$\mbox{]} entity.\+Character.\+\_\+idle\+\_\+left\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_character_8java_source_l00043}{43}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
+
+\mbox{\Hypertarget{classentity_1_1_character_af58d7b8dea3d200104e64eec7c174f48}\label{classentity_1_1_character_af58d7b8dea3d200104e64eec7c174f48}} 
+\index{entity.Character@{entity.Character}!\_idle\_right@{\_idle\_right}}
+\index{\_idle\_right@{\_idle\_right}!entity.Character@{entity.Character}}
+\doxysubsubsection{\texorpdfstring{\_idle\_right}{\_idle\_right}}
+{\footnotesize\ttfamily Buffered\+Image \mbox{[}$\,$\mbox{]} entity.\+Character.\+\_\+idle\+\_\+right\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_character_8java_source_l00042}{42}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
+
+\mbox{\Hypertarget{classentity_1_1_character_a17c079a2829f8df0b6905939695da06a}\label{classentity_1_1_character_a17c079a2829f8df0b6905939695da06a}} 
+\index{entity.Character@{entity.Character}!\_idle\_up@{\_idle\_up}}
+\index{\_idle\_up@{\_idle\_up}!entity.Character@{entity.Character}}
+\doxysubsubsection{\texorpdfstring{\_idle\_up}{\_idle\_up}}
+{\footnotesize\ttfamily Buffered\+Image \mbox{[}$\,$\mbox{]} entity.\+Character.\+\_\+idle\+\_\+up\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_character_8java_source_l00040}{40}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
+
+\mbox{\Hypertarget{classentity_1_1_character_ae6680e0a3694b8321f074a206dd15b4c}\label{classentity_1_1_character_ae6680e0a3694b8321f074a206dd15b4c}} 
+\index{entity.Character@{entity.Character}!\_walk\_down@{\_walk\_down}}
+\index{\_walk\_down@{\_walk\_down}!entity.Character@{entity.Character}}
+\doxysubsubsection{\texorpdfstring{\_walk\_down}{\_walk\_down}}
+{\footnotesize\ttfamily Buffered\+Image \mbox{[}$\,$\mbox{]} entity.\+Character.\+\_\+walk\+\_\+down\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_character_8java_source_l00045}{45}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
+
+\mbox{\Hypertarget{classentity_1_1_character_ac548fc202ded76d7652997c57d1e4dcb}\label{classentity_1_1_character_ac548fc202ded76d7652997c57d1e4dcb}} 
+\index{entity.Character@{entity.Character}!\_walk\_left@{\_walk\_left}}
+\index{\_walk\_left@{\_walk\_left}!entity.Character@{entity.Character}}
+\doxysubsubsection{\texorpdfstring{\_walk\_left}{\_walk\_left}}
+{\footnotesize\ttfamily Buffered\+Image \mbox{[}$\,$\mbox{]} entity.\+Character.\+\_\+walk\+\_\+left\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_character_8java_source_l00047}{47}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
+
+\mbox{\Hypertarget{classentity_1_1_character_af0c4c9cfad4aa70ea8d45fb4d7ddded3}\label{classentity_1_1_character_af0c4c9cfad4aa70ea8d45fb4d7ddded3}} 
+\index{entity.Character@{entity.Character}!\_walk\_right@{\_walk\_right}}
+\index{\_walk\_right@{\_walk\_right}!entity.Character@{entity.Character}}
+\doxysubsubsection{\texorpdfstring{\_walk\_right}{\_walk\_right}}
+{\footnotesize\ttfamily Buffered\+Image \mbox{[}$\,$\mbox{]} entity.\+Character.\+\_\+walk\+\_\+right\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_character_8java_source_l00046}{46}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
+
+\mbox{\Hypertarget{classentity_1_1_character_a10a24e019ad08ce7236f5dab6edb668d}\label{classentity_1_1_character_a10a24e019ad08ce7236f5dab6edb668d}} 
+\index{entity.Character@{entity.Character}!\_walk\_up@{\_walk\_up}}
+\index{\_walk\_up@{\_walk\_up}!entity.Character@{entity.Character}}
+\doxysubsubsection{\texorpdfstring{\_walk\_up}{\_walk\_up}}
+{\footnotesize\ttfamily Buffered\+Image \mbox{[}$\,$\mbox{]} entity.\+Character.\+\_\+walk\+\_\+up\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_character_8java_source_l00044}{44}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
+
+\mbox{\Hypertarget{classentity_1_1_character_ae6dea43904c63b70961d9b7b412575a9}\label{classentity_1_1_character_ae6dea43904c63b70961d9b7b412575a9}} 
+\index{entity.Character@{entity.Character}!agility@{agility}}
+\index{agility@{agility}!entity.Character@{entity.Character}}
+\doxysubsubsection{\texorpdfstring{agility}{agility}}
+{\footnotesize\ttfamily int entity.\+Character.\+agility\hspace{0.3cm}{\ttfamily [package]}}
+
+
+
+Definition at line \mbox{\hyperlink{_character_8java_source_l00028}{28}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
+
+\mbox{\Hypertarget{classentity_1_1_character_ad97a3b4055ba1daa2abfbb1150f34049}\label{classentity_1_1_character_ad97a3b4055ba1daa2abfbb1150f34049}} 
+\index{entity.Character@{entity.Character}!defense@{defense}}
+\index{defense@{defense}!entity.Character@{entity.Character}}
+\doxysubsubsection{\texorpdfstring{defense}{defense}}
+{\footnotesize\ttfamily int entity.\+Character.\+defense\hspace{0.3cm}{\ttfamily [package]}}
+
+
+
+Definition at line \mbox{\hyperlink{_character_8java_source_l00030}{30}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
+
+\mbox{\Hypertarget{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}\label{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}} 
+\index{entity.Character@{entity.Character}!dirX@{dirX}}
+\index{dirX@{dirX}!entity.Character@{entity.Character}}
+\doxysubsubsection{\texorpdfstring{dirX}{dirX}}
+{\footnotesize\ttfamily int entity.\+Character.\+dirX}
+
+
+
+Definition at line \mbox{\hyperlink{_character_8java_source_l00033}{33}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
+
+\mbox{\Hypertarget{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}\label{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}} 
+\index{entity.Character@{entity.Character}!dirY@{dirY}}
+\index{dirY@{dirY}!entity.Character@{entity.Character}}
+\doxysubsubsection{\texorpdfstring{dirY}{dirY}}
+{\footnotesize\ttfamily int entity.\+Character.\+dirY}
+
+
+
+Definition at line \mbox{\hyperlink{_character_8java_source_l00033}{33}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
+
+\mbox{\Hypertarget{classentity_1_1_character_a249d5d0b8f600f332b5715e93f83668d}\label{classentity_1_1_character_a249d5d0b8f600f332b5715e93f83668d}} 
+\index{entity.Character@{entity.Character}!facing@{facing}}
+\index{facing@{facing}!entity.Character@{entity.Character}}
+\doxysubsubsection{\texorpdfstring{facing}{facing}}
+{\footnotesize\ttfamily String entity.\+Character.\+facing}
+
+
+
+Definition at line \mbox{\hyperlink{_character_8java_source_l00037}{37}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
+
+\mbox{\Hypertarget{classentity_1_1_character_aaedd508f39aebb389108e4f10e696e7d}\label{classentity_1_1_character_aaedd508f39aebb389108e4f10e696e7d}} 
+\index{entity.Character@{entity.Character}!hasKey@{hasKey}}
+\index{hasKey@{hasKey}!entity.Character@{entity.Character}}
+\doxysubsubsection{\texorpdfstring{hasKey}{hasKey}}
+{\footnotesize\ttfamily int entity.\+Character.\+has\+Key = 0\hspace{0.3cm}{\ttfamily [package]}}
+
+
+
+Definition at line \mbox{\hyperlink{_character_8java_source_l00034}{34}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
+
+\mbox{\Hypertarget{classentity_1_1_character_a96f55e259dad88a0cf1cf3f7debffebf}\label{classentity_1_1_character_a96f55e259dad88a0cf1cf3f7debffebf}} 
+\index{entity.Character@{entity.Character}!health@{health}}
+\index{health@{health}!entity.Character@{entity.Character}}
+\doxysubsubsection{\texorpdfstring{health}{health}}
+{\footnotesize\ttfamily int entity.\+Character.\+health\hspace{0.3cm}{\ttfamily [package]}}
+
+
+
+Definition at line \mbox{\hyperlink{_character_8java_source_l00026}{26}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
+
+\mbox{\Hypertarget{classentity_1_1_character_a5e5b278c340d28b08a71621bcec4d780}\label{classentity_1_1_character_a5e5b278c340d28b08a71621bcec4d780}} 
+\index{entity.Character@{entity.Character}!initiative@{initiative}}
+\index{initiative@{initiative}!entity.Character@{entity.Character}}
+\doxysubsubsection{\texorpdfstring{initiative}{initiative}}
+{\footnotesize\ttfamily int entity.\+Character.\+initiative\hspace{0.3cm}{\ttfamily [package]}}
+
+
+
+Definition at line \mbox{\hyperlink{_character_8java_source_l00031}{31}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
+
+\mbox{\Hypertarget{classentity_1_1_character_a739de76015650bfb302e42a0b2069771}\label{classentity_1_1_character_a739de76015650bfb302e42a0b2069771}} 
+\index{entity.Character@{entity.Character}!mana@{mana}}
+\index{mana@{mana}!entity.Character@{entity.Character}}
+\doxysubsubsection{\texorpdfstring{mana}{mana}}
+{\footnotesize\ttfamily int entity.\+Character.\+mana\hspace{0.3cm}{\ttfamily [package]}}
+
+
+
+Definition at line \mbox{\hyperlink{_character_8java_source_l00027}{27}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
+
+\mbox{\Hypertarget{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}\label{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}} 
+\index{entity.Character@{entity.Character}!speed@{speed}}
+\index{speed@{speed}!entity.Character@{entity.Character}}
+\doxysubsubsection{\texorpdfstring{speed}{speed}}
+{\footnotesize\ttfamily int entity.\+Character.\+speed}
+
+
+
+Definition at line \mbox{\hyperlink{_character_8java_source_l00032}{32}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
+
+\mbox{\Hypertarget{classentity_1_1_character_a59d53e55d7c7d77f86fd646728eb6746}\label{classentity_1_1_character_a59d53e55d7c7d77f86fd646728eb6746}} 
+\index{entity.Character@{entity.Character}!strength@{strength}}
+\index{strength@{strength}!entity.Character@{entity.Character}}
+\doxysubsubsection{\texorpdfstring{strength}{strength}}
+{\footnotesize\ttfamily int entity.\+Character.\+strength\hspace{0.3cm}{\ttfamily [package]}}
+
+
+
+Definition at line \mbox{\hyperlink{_character_8java_source_l00029}{29}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/entity/\mbox{\hyperlink{_character_8java}{Character.\+java}}\end{DoxyCompactItemize}

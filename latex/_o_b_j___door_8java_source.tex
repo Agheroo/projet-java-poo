@@ -1,0 +1,36 @@
+\hypertarget{_o_b_j___door_8java_source}{}\doxysection{OBJ\+\_\+\+Door.\+java}
+\label{_o_b_j___door_8java_source}\index{src/entity/props/OBJ\_Door.java@{src/entity/props/OBJ\_Door.java}}
+\mbox{\hyperlink{_o_b_j___door_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_o_b_j___door_8java_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_o_b_j___door_8java_source_l00006}00006 \textcolor{keyword}{package }entity.props;}
+\DoxyCodeLine{\Hypertarget{_o_b_j___door_8java_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_o_b_j___door_8java_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{_o_b_j___door_8java_source_l00009}00009 \textcolor{keyword}{import} \mbox{\hyperlink{namespaceentity}{entity}}.\mbox{\hyperlink{classentity_1_1_player}{Player}};}
+\DoxyCodeLine{\Hypertarget{_o_b_j___door_8java_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{_o_b_j___door_8java_source_l00016}\mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___door}{00016}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___door}{OBJ\_Door}} \textcolor{keyword}{extends} \mbox{\hyperlink{classentity_1_1props_1_1_props}{Props}} \{}
+\DoxyCodeLine{\Hypertarget{_o_b_j___door_8java_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{_o_b_j___door_8java_source_l00022}\mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___door_ad1cdabdc34de0662d6d6d568ba31e8ad}{00022}}     \textcolor{keyword}{public} \mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___door_ad1cdabdc34de0662d6d6d568ba31e8ad}{OBJ\_Door}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}}) \{}
+\DoxyCodeLine{\Hypertarget{_o_b_j___door_8java_source_l00023}00023         super(\mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}}, \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}},\textcolor{stringliteral}{"{}door"{}},1,0, \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_o_b_j___door_8java_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_o_b_j___door_8java_source_l00025}00025         \mbox{\hyperlink{classentity_1_1_entity_a9060501233d22f6130e204799a1f01c5}{loadTextures}}(\textcolor{stringliteral}{"{}door"{}});}
+\DoxyCodeLine{\Hypertarget{_o_b_j___door_8java_source_l00026}00026         \mbox{\hyperlink{classentity_1_1_entity_acd7f4b7c1acbdcd410ee9ad61a86b58e}{collision}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_o_b_j___door_8java_source_l00027}00027     \}}
+\DoxyCodeLine{\Hypertarget{_o_b_j___door_8java_source_l00028}\mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___door_a9839aec16dffa3eadd3085215c3659be}{00028}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___door_a9839aec16dffa3eadd3085215c3659be}{playerInterraction}}(\mbox{\hyperlink{classentity_1_1_player}{Player}} p) \{}
+\DoxyCodeLine{\Hypertarget{_o_b_j___door_8java_source_l00029}00029         \textcolor{keywordflow}{if}(p.\mbox{\hyperlink{classentity_1_1_player_aea13f23cdb47c44a2a30beb185088240}{hasKey}} > 0 ) \{}
+\DoxyCodeLine{\Hypertarget{_o_b_j___door_8java_source_l00030}00030             \textcolor{comment}{// TODO : Change door collision; it's still here but with different textures and properties}}
+\DoxyCodeLine{\Hypertarget{_o_b_j___door_8java_source_l00031}00031             p.\mbox{\hyperlink{classentity_1_1_player_aea13f23cdb47c44a2a30beb185088240}{hasKey}}-\/-\/;}
+\DoxyCodeLine{\Hypertarget{_o_b_j___door_8java_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{_o_b_j___door_8java_source_l00033}00033             \mbox{\hyperlink{classentity_1_1props_1_1_props_ab837cf0c685323fe8c2cc84d80f6315a}{destroySelf}}();}
+\DoxyCodeLine{\Hypertarget{_o_b_j___door_8java_source_l00034}00034         \}}
+\DoxyCodeLine{\Hypertarget{_o_b_j___door_8java_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{_o_b_j___door_8java_source_l00036}00036         System.out.println(\textcolor{stringliteral}{"{}Key:"{}}+p.\mbox{\hyperlink{classentity_1_1_player_aea13f23cdb47c44a2a30beb185088240}{hasKey}});}
+\DoxyCodeLine{\Hypertarget{_o_b_j___door_8java_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{_o_b_j___door_8java_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{_o_b_j___door_8java_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{_o_b_j___door_8java_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{_o_b_j___door_8java_source_l00041}00041     \}}
+\DoxyCodeLine{\Hypertarget{_o_b_j___door_8java_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{_o_b_j___door_8java_source_l00043}00043 \}}
+
+\end{DoxyCode}

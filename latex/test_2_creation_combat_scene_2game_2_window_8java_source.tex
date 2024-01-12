@@ -1,0 +1,88 @@
+\hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source}{}\doxysection{Window.\+java}
+\label{test_2_creation_combat_scene_2game_2_window_8java_source}\index{test/CreationCombatScene/game/Window.java@{test/CreationCombatScene/game/Window.java}}
+\mbox{\hyperlink{test_2_creation_combat_scene_2game_2_window_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00001}\mbox{\hyperlink{namespace_creation_combat_scene_1_1game}{00001}} \textcolor{keyword}{package }CreationCombatScene.game;}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00003}00003 \textcolor{keyword}{import} \mbox{\hyperlink{namespace_creation_combat_scene}{CreationCombatScene}}.\mbox{\hyperlink{namespace_creation_combat_scene_1_1entity}{entity}}.\mbox{\hyperlink{class_creation_combat_scene_1_1entity_1_1_player_test}{PlayerTest}};}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00004}00004 \textcolor{keyword}{import} \mbox{\hyperlink{namespaceentity}{entity}}.\mbox{\hyperlink{classentity_1_1_enemy}{Enemy}};}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00005}00005 \textcolor{keyword}{import} \mbox{\hyperlink{namespacegame}{game}}.\mbox{\hyperlink{classgame_1_1_scene}{Scene}};}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00007}00007 \textcolor{keyword}{import} javax.swing.*;}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00008}00008 \textcolor{keyword}{import} java.awt.*;}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00010}00010 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00011}00011 \textcolor{comment}{ * This class's purpose is to keep track of the displaying of the game, based on what is on the backend (World.java)}}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00012}00012 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00013}\mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window}{00013}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window}{Window}} \textcolor{keyword}{extends} JPanel implements Runnable\{}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00014}00014     \textcolor{comment}{//Game world}}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00015}\mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_af7253a0c9bc355e988192a55755c51f3}{00015}}     \textcolor{keyword}{public} \mbox{\hyperlink{classgame_1_1_scene}{Scene}} \mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_af7253a0c9bc355e988192a55755c51f3}{scene}};}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00017}00017     \textcolor{comment}{//Game screen}}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00018}\mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_a02e61bb69a24e0eaae3de2f38613a353}{00018}}     \textcolor{keyword}{public} \textcolor{keyword}{final} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_a02e61bb69a24e0eaae3de2f38613a353}{screenWidth}}=800;}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00019}\mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_ab9750ac4c0823d8b3b6d58c19d212815}{00019}}     \textcolor{keyword}{public} \textcolor{keyword}{final} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_ab9750ac4c0823d8b3b6d58c19d212815}{screenHeight}}=600;}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00022}00022     \textcolor{comment}{//Game init}}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00023}\mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_af8b5564a2700335a99f8b98496c27cb4}{00023}}     \textcolor{keyword}{final} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_af8b5564a2700335a99f8b98496c27cb4}{FPS}} = 120;}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00024}\mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_a0578612384f8406b88e5858b467dbe46}{00024}}     Thread \mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_a0578612384f8406b88e5858b467dbe46}{gameThread}};}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00028}\mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_a074bfecf28fb056c878c37c019e04cb3}{00028}}     \textcolor{keyword}{public} \mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_a074bfecf28fb056c878c37c019e04cb3}{Window}}()\{}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00029}00029         \mbox{\hyperlink{class_creation_combat_scene_1_1entity_1_1_player_test}{PlayerTest}} playerTest=\textcolor{keyword}{new} \mbox{\hyperlink{class_creation_combat_scene_1_1entity_1_1_player_test}{PlayerTest}}();}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00030}00030         \mbox{\hyperlink{classentity_1_1_enemy}{Enemy}} ennemy=\textcolor{keyword}{new} \mbox{\hyperlink{classentity_1_1_enemy}{Enemy}}();}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00032}00032         \mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_af7253a0c9bc355e988192a55755c51f3}{scene}} = \mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_af7253a0c9bc355e988192a55755c51f3}{scene}}.fightScene(playerTest,ennemy);}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00033}00033         this.setPreferredSize(\textcolor{keyword}{new} Dimension(\mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_a02e61bb69a24e0eaae3de2f38613a353}{screenWidth}},\mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_ab9750ac4c0823d8b3b6d58c19d212815}{screenHeight}}));}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00034}00034         this.setBackground(Color.black);}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00035}00035         this.setDoubleBuffered(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00036}00036         this.addKeyListener(\mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_af7253a0c9bc355e988192a55755c51f3}{scene}}.\mbox{\hyperlink{classgame_1_1_scene_a2bbc8cb5064aaa5cc1ed0ec8950f4a58}{keyH}});}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00037}00037         this.setFocusable(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00040}00040     \}}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00042}00042     @Override}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00043}\mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_a48253f5c6a6f219e6b20f8591f77674e}{00043}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_a48253f5c6a6f219e6b20f8591f77674e}{run}}() \{}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00044}00044         \textcolor{keywordtype}{double} drawInterval = 10e9/\mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_af8b5564a2700335a99f8b98496c27cb4}{FPS}};}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00045}00045         \textcolor{keywordtype}{long} lastTime = System.nanoTime();}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00046}00046         \textcolor{keywordtype}{long} currentTime;}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00048}00048         \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_a0578612384f8406b88e5858b467dbe46}{gameThread}} != \textcolor{keyword}{null})\{}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00049}00049             currentTime = System.nanoTime();}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00051}00051             scene.dt += (currentTime -\/ lastTime) / drawInterval;}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00052}00052             lastTime = currentTime;}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00054}00054             \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_af7253a0c9bc355e988192a55755c51f3}{scene}}.\mbox{\hyperlink{classgame_1_1_scene_ae2b7be4c9099875e858f88458b7d4a1d}{dt}} > 0.1)\{}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00055}00055                 \mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_ac3d02abb951693093b08c7041d41e66f}{update}}();           \textcolor{comment}{//update() method for window both updates the world and repaints the components of it}}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00056}00056                 \mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_af7253a0c9bc355e988192a55755c51f3}{scene}}.\mbox{\hyperlink{classgame_1_1_scene_ae2b7be4c9099875e858f88458b7d4a1d}{dt}}-\/= 0.1;}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00057}00057             \}}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00058}00058         \}}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00059}00059     \}}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00061}\mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_ada057fa01af9f7473f792665872d4f31}{00061}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_ada057fa01af9f7473f792665872d4f31}{startGameThread}}()\{}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00062}00062         \mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_a0578612384f8406b88e5858b467dbe46}{gameThread}} = \textcolor{keyword}{new} Thread(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00063}00063         \mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_a0578612384f8406b88e5858b467dbe46}{gameThread}}.start();}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00064}00064     \}}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00066}\mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_ac3d02abb951693093b08c7041d41e66f}{00066}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_ac3d02abb951693093b08c7041d41e66f}{update}}()\{}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00067}00067         \mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_af7253a0c9bc355e988192a55755c51f3}{scene}}.\mbox{\hyperlink{classgame_1_1_scene_a6b61e8f2533a2ba76c543bbd00d989a2}{update}}();         \textcolor{comment}{//Updating abstract class scene which means either world or fightscene}}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00068}00068         repaint();}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00069}00069     \}}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00071}00071     }
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00072}\mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_a61d08bccb221eb1df7fad73d67287f99}{00072}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_a61d08bccb221eb1df7fad73d67287f99}{paintComponent}}(Graphics g)\{}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00074}00074         super.paintComponent(g);}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00075}00075 }
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00076}00076         Graphics2D g2= (Graphics2D)g;}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00078}00078         \mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_af7253a0c9bc355e988192a55755c51f3}{scene}}.\mbox{\hyperlink{classgame_1_1_scene_aef53d2ecf085388a16020032121e46dc}{draw}}(g2,\mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_a02e61bb69a24e0eaae3de2f38613a353}{screenWidth}},\mbox{\hyperlink{class_creation_combat_scene_1_1game_1_1_window_ab9750ac4c0823d8b3b6d58c19d212815}{screenHeight}});}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00080}00080         g2.dispose();}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00081}00081     \}}
+\DoxyCodeLine{\Hypertarget{test_2_creation_combat_scene_2game_2_window_8java_source_l00082}00082 \}}
+
+\end{DoxyCode}
