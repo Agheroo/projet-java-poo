@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Graphics2D;
 
 import game.Const;
+import game.Scene;
 import game.Const.Selection;
 
 public class HUD_Pause extends HUD{
@@ -22,11 +23,11 @@ public class HUD_Pause extends HUD{
 
 
     public void update(){
-        if(keyH.interactPressed){
+        if(Scene.keyH.interactPressed){
             confirm = true;
             System.out.println("Je confirme ma selection");
         }
-        if(keyH.upPressed || keyH.downPressed){
+        if(Scene.keyH.upPressed || Scene.keyH.downPressed){
             switch(selection){
                 case Const.Selection.CONTINUE:
                     selection = Const.Selection.QUIT;
@@ -39,8 +40,8 @@ public class HUD_Pause extends HUD{
 
                 default: break;    
             }
-            keyH.upPressed = false;
-            keyH.downPressed = false;
+            Scene.keyH.upPressed = false;
+            Scene.keyH.downPressed = false;
         }
     }
 

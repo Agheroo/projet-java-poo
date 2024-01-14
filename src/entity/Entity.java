@@ -68,5 +68,5 @@ public abstract class Entity {
         }
     }
 
-    protected abstract void playerInterraction(Player player);
+    public abstract void playerInterraction(Player player);
 }

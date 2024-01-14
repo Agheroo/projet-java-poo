@@ -23,8 +23,8 @@ import javax.imageio.ImageIO;
  * @brief Represents in-game props with properties such as image, name, and position.
  */
 public abstract class Props extends Entity {
-    private BufferedImage image; // Image representing the prop
-    
+    private BufferedImage images[]; // Image representing the prop
+    protected boolean open;
     /**
      * @brief Constructor for props (keys/doors/chests...)
      * @param x WorldX of entity
@@ -36,6 +36,7 @@ public abstract class Props extends Entity {
      */
     Props(int x, int y, String name, int spriteCntMax, int spriteSpeed, boolean collision){
         super(name,x,y,spriteCntMax,spriteSpeed,collision);
+        this.images =  new BufferedImage[spriteCntMax];
         hitbox.width = Const.WRLD_tileScreenSize;
         hitbox.height = Const.WRLD_tileScreenSize;
         hitbox.x = worldX;
@@ -50,6 +51,10 @@ public abstract class Props extends Entity {
         return collision;
     }
 
+    /**
+     * @brief Quick util functions to check if the current prop need to block the player and updates directly its worldW worldY coordinates
+     * @param player   The player to check collisions with
+     */
     public void block(Player player){
         if((player.hitbox.y > hitbox.y && player.hitbox.y < hitbox.y + hitbox.height)
         || (player.hitbox.y + player.hitbox.height > hitbox.y && player.hitbox.y + player.hitbox.height < hitbox.y + hitbox.height)){
@@ -78,10 +83,16 @@ public abstract class Props extends Entity {
 
     }
 
+    /**
+     * 
+     * @param name
+     */
     protected void loadTextures(String name){
         try {
             // Load the image of the key from the specified file path
-            image = ImageIO.read(new FileInputStream("res/object/"+name+".png"));
+            for(int i=0;i<_spriteCntMax;i++){
+                images[i] = ImageIO.read(new FileInputStream("res/object/"+name+i+".png"));
+            }
         } catch (IOException e) {
             // Print the stack trace in case of an IOException during image loading
             e.printStackTrace();
@@ -116,7 +127,13 @@ public abstract class Props extends Entity {
                 && worldY + Const.WRLD_tileScreenSize > world.player.worldY - playerScreenY
                 && worldY - Const.WRLD_tileScreenSize < world.player.worldY + playerScreenY) {
             // Draw the prop on the screen
-            g2.drawImage(image, screenX, screenY, Const.WRLD_entityScreenSize, Const.WRLD_entityScreenSize, null);
+            if(open){
+                g2.drawImage(images[1], screenX, screenY, Const.WRLD_entityScreenSize, Const.WRLD_entityScreenSize, null);  //For props having collision, the images[1] is the "open" one
+            }
+            else{
+                g2.drawImage(images[0], screenX, screenY, Const.WRLD_entityScreenSize, Const.WRLD_entityScreenSize, null);
+            }
+            
             g2.drawRect(screenX, screenY, this.hitbox.width, this.hitbox.height);
         }
     }

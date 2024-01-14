@@ -71,8 +71,8 @@ public class Enemy extends Character {
      * @param scene The current game scene.
      * @param dt The time elapsed since the last update.
      */
-    public void update(Scene scene, double dt) {
-        super.update(scene, dt); // Calls the parent class update method
+    public void update(double dt) {
+        super.update(dt); // Calls the parent class update method
         //TODO : find a method to make the enemy move in predictive patterns
     }
 

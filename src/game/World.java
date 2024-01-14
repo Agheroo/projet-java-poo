@@ -5,10 +5,10 @@
 
 package game;
 
-import entity.Player;
 import tiles.TileManager;
 import entity.Enemy;
 import entity.EntitySetter;
+import entity.Player;
 import entity.props.Props;
 import java.awt.*;
 import java.util.HashMap;
@@ -37,11 +37,8 @@ public class World extends Scene {
   
     // Player settings
     public Player player;
-
-
-    //public Player player;
     /**
-     * Gets the instance of the World.
+     * @brief Gets the instance of the World.
      *
      * @return The World instance.
      */
@@ -96,7 +93,7 @@ public class World extends Scene {
         checkPauseScene();
         switch(state){
             case State.WORLD:
-                player.update(this, dt);
+                player.update(dt);
                 tileManager.update(this);
 
 
@@ -109,7 +106,7 @@ public class World extends Scene {
                     && enemy.worldX - 5*Const.WRLD_tileScreenSize < player.worldX + playerScreenX
                     && enemy.worldY + 5*Const.WRLD_tileScreenSize > player.worldY - playerScreenY
                     && enemy.worldY - 5*Const.WRLD_tileScreenSize < player.worldY + playerScreenY) {  
-                        enemy.update(this, dt);
+                        enemy.update(dt);
 
                     }
                 }

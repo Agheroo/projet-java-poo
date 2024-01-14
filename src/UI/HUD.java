@@ -4,6 +4,7 @@ package UI;
 import java.awt.Color;
 import java.awt.Graphics2D;
 
+import game.Scene;
 import game.Const.Selection;
 import main.KeyHandler;
 
@@ -14,19 +15,18 @@ public abstract class HUD {
     protected int _nbButtons;
     protected ChoiceButton[] _buttons;
     protected Textbox[] _texts;
-    protected KeyHandler keyH;
     
 
 
     public HUD(){
-        keyH = KeyHandler.getInstance();
+        Scene.keyH = KeyHandler.getInstance();
         confirm = false;
 
-        keyH.interactPressed = false;
-        keyH.downPressed = false;
-        keyH.upPressed = false;
-        keyH.leftPressed = false;
-        keyH.rightPressed = false;
+        Scene.keyH.interactPressed = false;
+        Scene.keyH.downPressed = false;
+        Scene.keyH.upPressed = false;
+        Scene.keyH.leftPressed = false;
+        Scene.keyH.rightPressed = false;
     }
 
 

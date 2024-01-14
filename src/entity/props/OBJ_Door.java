@@ -20,18 +20,20 @@ public class OBJ_Door extends Props {
      * @details Initializes the name of the door and loads its image from a resource file.
      */
     public OBJ_Door(int worldX, int worldY) {
-        super(worldX, worldY,"door",1,0, true);
+        super(worldX, worldY,"door",2,0, true);
 
+        open = false;
         loadTextures("door");
-        collision = true;
     }
-    public void playerInterraction(Player p) {
-        if(p.hasKey > 0 && collision == true) {
+    public void playerInterraction(Player player) {
+        if(player.hasKey > 0 && collision == true){
             
-            p.hasKey--;
-
-            // TODO : Change door collision; instead of destroying self
-            destroySelf();
+            player.hasKey--;
+            collision = false;
+            open = true;
+        }
+        if(player.hasKey == 0 && collision == true){
+            System.out.println("Key missing");
         }
     }
 

@@ -7,6 +7,7 @@ package entity.props;
 
 
 import entity.Player;
+import game.Scene;
 import item.Generator;
 import item.Item;
 
@@ -22,19 +23,15 @@ public class OBJ_Chest extends Props {
      * @details Initializes the name and loads the image for the chest.
      */
     public OBJ_Chest(int worldX, int worldY){
-        super(worldX,worldY,"chest",1,0,true);
-        loadTextures("chest");
-        collision = true;
+        super(worldX,worldY,"chest",2,0,true);
         open = false;
+        loadTextures("chest");
     }
-    public void playerInterraction(Player p) {
-        Item item= Generator.generateItem();
-        if(true){
-            p.addItem(item);
+    public void playerInterraction(Player player) {
+        if(open == false && Scene.keyH.interactPressed){
+            Item item = Generator.generateItem();
+            player.addItem(item);
+            open = true;
         }
-        System.out.println("Chest interaction");
-
-        destroySelf();
-
     }
 }

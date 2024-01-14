@@ -90,7 +90,7 @@ public abstract class Character extends Entity {
      * @param scene The current game scene.
      * @param dt The time elapsed since the last update.
      */
-    public void update(Scene scene, double dt) {
+    public void update(double dt) {
         if (Scene.state == State.WORLD) {
             World currWorld = World.getWorld();
 

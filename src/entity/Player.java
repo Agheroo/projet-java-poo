@@ -12,6 +12,7 @@ import game.World;
 import item.Item;
 
 import java.awt.*;
+import java.util.Vector;
 
 /**
  * @class Player
@@ -22,6 +23,8 @@ public class Player extends Character {
     public int level;
     public int xp;  //xp of the player
     public int hasKey = 0;
+    public Vector<Item> potions = new Vector<Item>();
+
     /**
      * @brief Constructor for the Player class.
      * @param worldX The X-coordinate of the player in the world.
@@ -34,7 +37,7 @@ public class Player extends Character {
      * @param spriteSpeed The speed of sprite animation.
      */
     public Player(String entityName, int worldX, int worldY, int dirX, int dirY, int speed, String facing, int spriteCntMax, int spriteSpeed) {
-        super(entityName, worldX, worldY, dirX, dirY, speed, facing, spriteCntMax, spriteSpeed);  // Calls the parent class for entity setup, specifying scene.keyH for player
+        super(entityName, worldX, worldY, dirX, dirY, speed, facing, spriteCntMax, spriteSpeed);  // Calls the parent class for entity setup, specifying Scene.keyH for player
         
         level = 1;
         xp = 0;
@@ -51,26 +54,26 @@ public class Player extends Character {
      * @param scene The current game scene.
      * @param dt The time elapsed since the last update.
      */
-    public void update(Scene scene, double dt) {
-        super.update(scene, dt);  // Calls the parent class update method
+    public void update(double dt) {
+        super.update(dt);  // Calls the parent class update method
         // World updates
         if (Scene.state == State.WORLD) {
-            if (scene.keyH.upPressed || scene.keyH.downPressed || scene.keyH.leftPressed || scene.keyH.rightPressed) {
+            if (Scene.keyH.upPressed || Scene.keyH.downPressed || Scene.keyH.leftPressed || Scene.keyH.rightPressed) {
                 dirX = 0;
                 dirY = 0;
-                if (scene.keyH.leftPressed) {
+                if (Scene.keyH.leftPressed) {
                     dirX = -1;
                     facing = "left";
                 }
-                if (scene.keyH.rightPressed) {
+                if (Scene.keyH.rightPressed) {
                     dirX = 1;
                     facing = "right";
                 }
-                if (scene.keyH.upPressed) {
+                if (Scene.keyH.upPressed) {
                     dirY = -1;
                     facing = "up";
                 }
-                if (scene.keyH.downPressed) {
+                if (Scene.keyH.downPressed) {
                     dirY = 1;
                     facing = "down";
                 }
@@ -110,7 +113,7 @@ public class Player extends Character {
             if (obj != null) {
                 if (hitbox.intersects(obj.hitbox)) {
                     if(obj.getCollision()){ //If object has "solid" collision
-                        obj.block(this);    //Block the playersd
+                        obj.block(this);    //Block the player
                     }
 
                     index = new Point((int) obj.worldX, (int) obj.worldY);
@@ -144,21 +147,36 @@ public class Player extends Character {
             Enemy enemy = World.enemies.get(ind);
             enemy.playerInterraction(this); 
         }
-        
     }
 
+    /**
+     * @brief Lets the player pick up the object near him if he presses the interract button (space)
+     * @param index Point "coordinates" of the object
+     */
     public void pickUpObject(Point index) {
         if (index != null) {
             Entity object = World.objMap.get(index);
-            object.playerInterraction(this);
+            if(Scene.keyH.interactPressed){
+                object.playerInterraction(this);
+                Scene.keyH.interactPressed = false;
+            }   
+            
         }
     }
 
+    /**
+     * @brief Adds item to the virtual inventory of the player, if it's not a potion it will be directly converted to additionnal stats
+     * @param i The item t add
+     */
     public void addItem(Item i){
-        System.out.println("J'ai rajoutée un item");   
+        System.out.println("J'ai rajoutée un item"); 
+        if(i.type == "potion"){
+            potions.add(i);
+        }
+        //Change stats directly if the item is not a potion
     }
 
-    @Override
-    protected void playerInterraction(Player player) {}
-
+    public void playerInterraction(Player player) {
+        //
+    }
 }

@@ -5,6 +5,7 @@ import java.awt.Color;
 import java.awt.Graphics2D;
 
 import game.Const;
+import game.Scene;
 import game.Const.Selection;
 
 public class HUD_Fight extends HUD {
@@ -24,12 +25,12 @@ public class HUD_Fight extends HUD {
 
     public void update(){
         //System.out.println(selection);
-        if(keyH.interactPressed){
+        if(Scene.keyH.interactPressed){
             confirm = true;
             System.out.println("Je confirme ma selection");
-            keyH.interactPressed = false;
+            Scene.keyH.interactPressed = false;
         }
-        if(keyH.rightPressed || keyH.leftPressed){
+        if(Scene.keyH.rightPressed || Scene.keyH.leftPressed){
             switch(selection){
                 case Const.Selection.ATTACK:
                     selection = Const.Selection.POTION;
@@ -43,8 +44,8 @@ public class HUD_Fight extends HUD {
 
                 default: break;
             }
-            keyH.rightPressed = false;
-            keyH.leftPressed = false;
+            Scene.keyH.rightPressed = false;
+            Scene.keyH.leftPressed = false;
         }
     }
 

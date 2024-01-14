@@ -5,8 +5,6 @@
 
 package game;
 
-import entity.Enemy;
-import entity.Player;
 import game.Scene.State;
 
 import java.awt.*;
@@ -14,6 +12,8 @@ import java.util.HashMap;
 
 
 import UI.HUD_Fight;
+import entity.Enemy;
+import entity.Player;
 
 
 /**

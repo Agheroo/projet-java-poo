@@ -26,7 +26,7 @@ public abstract class Scene {
 
     private State _lastState;
 
-    public KeyHandler keyH = KeyHandler.getInstance();
+    public static KeyHandler keyH = KeyHandler.getInstance();
     protected static double dt = 0;
     public static State state;
     public HUD menu;

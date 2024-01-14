@@ -38,7 +38,7 @@ public class Window extends JPanel implements Runnable {
         this.setPreferredSize(new Dimension(Const.WDW_width, Const.WDW_height));
         this.setBackground(Color.black);
         this.setDoubleBuffered(true);
-        this.addKeyListener(scene.keyH);
+        this.addKeyListener(Scene.keyH);
         this.setFocusable(true);
         world.setupGame(); // Creation of instance setter
     }
