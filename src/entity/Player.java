@@ -6,8 +6,9 @@
 package entity;
 
 import entity.props.Props;
+import game.Attack;
+import game.Const;
 import game.Scene;
-import game.Scene.State;
 import game.World;
 import item.Item;
 
@@ -22,10 +23,12 @@ import java.util.Vector;
 public class Player extends Character {
     public int level;
     public int xp;  //xp of the player
+    public int xpMax; //The amount of xp the player needs to level up
     public int hasKey = 0;
-    public Vector<Item> potions = new Vector<Item>();
+    public static Attack attacks[]; 
+    public static Vector<Item> potions = new Vector<Item>();
 
-    /**
+    /*
      * @brief Constructor for the Player class.
      * @param worldX The X-coordinate of the player in the world.
      * @param worldY The Y-coordinate of the player in the world.
@@ -39,14 +42,10 @@ public class Player extends Character {
     public Player(String entityName, int worldX, int worldY, int dirX, int dirY, int speed, String facing, int spriteCntMax, int spriteSpeed) {
         super(entityName, worldX, worldY, dirX, dirY, speed, facing, spriteCntMax, spriteSpeed);  // Calls the parent class for entity setup, specifying Scene.keyH for player
         
+        attacks = new Attack[4];
         level = 1;
-        xp = 0;
-        health = level*100;
-        mana = 100;
-        agility = 10;
-        strength = 10;
-        defense = 10;
-        initiative = 10;
+        xpMax = 700;
+        xp = 50;
     }
 
     /**
@@ -57,7 +56,7 @@ public class Player extends Character {
     public void update(double dt) {
         super.update(dt);  // Calls the parent class update method
         // World updates
-        if (Scene.state == State.WORLD) {
+        if (Scene.state == Const.State.WORLD) {
             if (Scene.keyH.upPressed || Scene.keyH.downPressed || Scene.keyH.leftPressed || Scene.keyH.rightPressed) {
                 dirX = 0;
                 dirY = 0;
@@ -93,7 +92,7 @@ public class Player extends Character {
         }
 
         // Fightscene updates
-        if (Scene.state == State.FIGHT) {
+        if (Scene.state == Const.State.FIGHT) {
             // To be implemented
             
 

@@ -10,7 +10,7 @@ import java.io.IOException;
 
 import javax.swing.JLabel;
 public class Textbox extends JLabel{
-    private int _width, _height;
+    public int width, height;
     private Color _color;
     private String _text;
     private Font _font;
@@ -26,7 +26,7 @@ public class Textbox extends JLabel{
      * @param color The colour of the text
      */
     public Textbox(String text, String fontName, int w, int h, Color color){  
-        _width = w; _height = h;
+        width = w; height = h;
         _text = text;  
         _color = color;
         
@@ -35,13 +35,13 @@ public class Textbox extends JLabel{
 
         
         int stringWidth = this.getFontMetrics(_font).stringWidth(_text);
-        int componentWidth = _width;
+        int componentWidth = width;
 
         // Find out how much the font can grow in width.
         double widthRatio = (double)componentWidth / (double)stringWidth;
 
         int newFontSize = (int)(_font.getSize() * widthRatio);
-        int componentHeight = _height;
+        int componentHeight = height;
 
         // Pick a new font size so it will not be larger than the height of label.
         _fontSizeToUse = Math.min(newFontSize, componentHeight);
@@ -56,6 +56,10 @@ public class Textbox extends JLabel{
      */
     public void setColor(Color newCol){
         _color = newCol;
+    }
+
+    public void setNewText(String newText){
+        _text = newText;
     }
 
     public static void loadFont(String fontName){
@@ -75,7 +79,7 @@ public class Textbox extends JLabel{
         //TODO: find a way to center text on the button
         g2.setFont(_font);
         g2.setColor(_color);
-        g2.drawString(_text, x + _fontSizeToUse, y + (_height +_fontSizeToUse)/2);
+        g2.drawString(_text, x + _fontSizeToUse, y + (height +_fontSizeToUse)/2);
     }
 
 }

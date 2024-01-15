@@ -11,20 +11,14 @@ import java.awt.*;
 
 import UI.HUD;
 import UI.HUD_Pause;
+import game.Const.State;
 
 /**
  * @class Scene
  * @brief Represents an abstract scene in the game.
  */
 public abstract class Scene {
-    
-    /**
-     * @enum State
-     * @brief Represents the possible states of a scene (WORLD, FIGHT, PAUSE, MENU).
-     */
-    public enum State {WORLD, FIGHT, PAUSE, MENU}
-
-    private State _lastState;
+    public static State lastState;
 
     public static KeyHandler keyH = KeyHandler.getInstance();
     protected static double dt = 0;
@@ -52,24 +46,6 @@ public abstract class Scene {
     public static double getdt(){
         return dt;
     }
-    
-    /**
-     * @brief Gets the World scene.
-     * @return The World scene.
-     */
-    /*public Scene worldScene() {
-        return World.getWorld();
-    }*/
-
-    /**
-     * @brief Creates and returns a new FightScene.
-     * @param player The player entity in the fight.
-     * @param enemy The enemy entity in the fight.
-     * @return The new FightScene.
-     */
-    /*public Scene fightScene(Player player, Enemy enemy) {
-        return new FightScene(player, enemy);
-    }*/
 
 
     /**
@@ -80,21 +56,23 @@ public abstract class Scene {
         if(state != State.PAUSE){
             if(keyH.escPressed){
                 System.out.println("CHANGING SCENE TO: PAUSE");
-                _lastState = state;
+                lastState = state;
                 state = State.PAUSE;
                 menu = new HUD_Pause();
                 keyH.escPressed = false;
             }
         }
         else{ //If the game is paused
-            if(keyH.escPressed || (keyH.interactPressed && menu.selection == Const.Selection.CONTINUE)){    //Change back to current scene if the continue is selected
-                System.out.println("CHANGING SCENE TO: "+_lastState);
-                state = _lastState;
-                menu = null;
+            if(keyH.escPressed || (menu.confirm && menu.selection == Const.Selection.CONTINUE)){    //Change back to current scene if the continue is selected
+                System.out.println("CHANGING SCENE TO: "+lastState);
+                state = lastState;
                 keyH.escPressed = false;
+                menu.confirm = false;
+                menu = null;
             }
-            else if(keyH.interactPressed && menu.selection == Const.Selection.QUIT){        //Destroy window and close game if quit is selected
+            else if(menu.confirm && menu.selection == Const.Selection.QUIT){        //Destroy window and close game if quit is selected
                 System.out.println("Détruire la fenêtre");
+                menu.confirm = false;
             }
             keyH.interactPressed = false;
         }        

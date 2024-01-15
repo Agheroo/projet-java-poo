@@ -8,10 +8,12 @@ package game;
 import tiles.TileManager;
 import entity.Enemy;
 import entity.EntitySetter;
-import entity.Player;
+import entity.Warrior;
 import entity.props.Props;
 import java.awt.*;
 import java.util.HashMap;
+
+import UI.HUD_World;
 import UI.Textbox;
 
 
@@ -23,9 +25,9 @@ import UI.Textbox;
 public class World extends Scene {
 
     private static World _instance;
+    private HUD_World HUD_world;
     public static FightScene currfight;
     public TileManager tileManager = new TileManager(this);
-
     
 
     public EntitySetter entitySetter = new EntitySetter(this); // Instance of EntitySetter
@@ -36,17 +38,17 @@ public class World extends Scene {
     
   
     // Player settings
-    public Player player;
+    public Warrior player;
     /**
      * @brief Gets the instance of the World.
      *
      * @return The World instance.
      */
     public static World getWorld() {
-        Textbox.loadFont("rainyhearts");
+        Textbox.loadFont(Const.fontName);
         if (_instance == null) {
             _instance = new World();
-            state = State.WORLD;
+            state = Const.State.WORLD;
         }
         return _instance;
     }
@@ -59,9 +61,10 @@ public class World extends Scene {
         entitySetter.setObject();
         entitySetter.setEnemies();
 
-        player = new Player("player", 8 * Const.WRLD_tileScreenSize,
+        player = new Warrior("player", 8 * Const.WRLD_tileScreenSize,
             16 * Const.WRLD_tileScreenSize, 0, 0, 0, "down", 4, 20);
-    
+        
+        HUD_world = new HUD_World();
     }
 
     
@@ -90,9 +93,10 @@ public class World extends Scene {
      * Updates the game world based on the scene state.
      */
     public void update() {
-        checkPauseScene();
         switch(state){
-            case State.WORLD:
+            case Const.State.WORLD:
+                checkPauseScene();
+                HUD_world.update();
                 player.update(dt);
                 tileManager.update(this);
 
@@ -112,10 +116,12 @@ public class World extends Scene {
                 }
                 break;
             
-            case State.PAUSE:
-                menu.update(); break;
+            case Const.State.PAUSE:
+                menu.update(); 
+                checkPauseScene();
+                break;
 
-            case State.FIGHT:
+            case Const.State.FIGHT:
                 currfight.update(this); break;
 
             default:
@@ -163,12 +169,13 @@ public class World extends Scene {
                 int screenY = enemy.worldY - player.worldY + (Const.WDW_height - Const.WRLD_entityScreenSize)/2;
 
                 enemy.drawInWorld(g2, screenX, screenY);
-            }   
+            }
+            HUD_world.draw(g2);
         }
 
 
         //Draw pause screen last but still draw the background game
-        if(Scene.state == State.PAUSE){
+        if(Scene.state == Const.State.PAUSE){
             menu.draw(g2);
         }
     }

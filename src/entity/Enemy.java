@@ -5,10 +5,9 @@
 
 package entity;
 
+import game.Const;
 import game.FightScene;
-import game.Scene;
 import game.World;
-import game.Scene.State;
 
 /**
  * @class Enemy
@@ -79,6 +78,6 @@ public class Enemy extends Character {
     public void playerInterraction(Player player){
         System.out.println("Attention : je pratique le tabassing.");
         World.currfight = new FightScene(player,this);
-        World.state = State.FIGHT;
+        World.state = Const.State.FIGHT;
     }
 }

@@ -1,6 +1,11 @@
 package game;
 
 public final class Const {
+    //Enums
+    public static enum State {WORLD, FIGHT, PAUSE, MENU}
+    public static enum FightState {FIGHTING, WON , LOST}
+    public static enum Selection {NONE, PLAY, RESUME, CONTINUE, QUIT, ATTACK, POTION, BACK}
+
 
     //Window parameters
     public final static int WDW_width = 800;
@@ -16,7 +21,6 @@ public final class Const {
     public final static int WRLD_maxRow = 64, WRLD_maxCol = 64; // DONT FORGET TO MODIFY WHEN CHANGING THE MAP !!!
 
     //FightScene parameters
-    public static enum FightState {FIGHTING, WON , LOST}
     public final static int FGHT_entityScreenSize = 200;
 
     //TileManager
@@ -24,8 +28,7 @@ public final class Const {
     public final static int nbTopTextures = 29;
 
     //HUD
-    public static enum Selection {NONE, PLAY, RESUME, CONTINUE, QUIT, ATTACK, POTION, BACK}
-    
+    public static String fontName = "rainyhearts";
     public final static int HUD_welcomeWidth = 600;
     public final static int HUD_welcomeHeight = 550;
     public final static int HUD_pauseWidth = 600;

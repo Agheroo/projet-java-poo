@@ -5,8 +5,6 @@
 
 package game;
 
-import game.Scene.State;
-
 import java.awt.*;
 import java.util.HashMap;
 
@@ -14,6 +12,7 @@ import java.util.HashMap;
 import UI.HUD_Fight;
 import entity.Enemy;
 import entity.Player;
+import game.Const.Selection;
 
 
 /**
@@ -49,17 +48,54 @@ public class FightScene {
         // Additional logic for the fight scene update
         menu.update();
 
-        if(menu.selection == Const.Selection.ATTACK && menu.confirm){
-            //Implement combat game mechanics here
+
+        switch(menu.selection){
+            case Const.Selection.ATTACK:
+                if(menu.confirm){
+                    //Implement combat game mechanics here
+                    menu.page = 1;
+                    menu.selection = Selection.NONE;
+
+
+
+
+
+                }
+                break;
+            
+            case Const.Selection.POTION:
+                if(menu.confirm){
+                    menu.page = 2;
+                    menu.selection = Selection.NONE;
+                    System.out.println("Je cherche dans le HUD des popo ;)");
+                }
+                break;
+            
+            case Const.Selection.BACK:
+                if(menu.confirm){
+                    menu.selection = Const.Selection.ATTACK;
+                    menu.page = 0;
+                }
+                break;
+            
+            default: break;
+        }
+        if(Scene.keyH.escPressed && (menu.selection == Const.Selection.NONE || menu.selection == Const.Selection.BACK)){  //If you want to go back to choice between potion & attacks
+            menu.selection = Const.Selection.ATTACK;
+            menu.changeSelectionColor(0, Color.blue, Color.red);
+            menu.page = 0;
+            Scene.keyH.escPressed = false;
+        }
+
+        //Check if the fight is won to add xp and update the rest
+        if(state == Const.FightState.WON){
             //If the fight is won, theses lines are mendatory
-            state = Const.FightState.WON;
-            Scene.state = State.WORLD;
+
+            Scene.state = Const.State.WORLD;
             player.speed = 0;
             World.enemies.remove(new Point(enemy.worldX,enemy.worldY), enemy);
         }
-        if(menu.selection == Const.Selection.POTION && menu.confirm){
-            System.out.println("Je cherche dans le HUD des popo ;)");
-        }
+
         menu.confirm = false;
     }
 

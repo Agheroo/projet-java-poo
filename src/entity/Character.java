@@ -9,7 +9,6 @@ import game.Const;
 import game.Scene;
 import game.World;
 import tiles.TileManager;
-import game.Scene.State;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.FileInputStream;
@@ -91,7 +90,7 @@ public abstract class Character extends Entity {
      * @param dt The time elapsed since the last update.
      */
     public void update(double dt) {
-        if (Scene.state == State.WORLD) {
+        if (Scene.state == Const.State.WORLD) {
             World currWorld = World.getWorld();
 
             hitbox.x = worldX + hitbox.width / 2;

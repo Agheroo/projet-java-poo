@@ -6,7 +6,6 @@ import java.awt.Graphics2D;
 
 import game.Scene;
 import game.Const.Selection;
-import main.KeyHandler;
 
 public abstract class HUD {
     public Selection selection;
@@ -19,7 +18,6 @@ public abstract class HUD {
 
 
     public HUD(){
-        Scene.keyH = KeyHandler.getInstance();
         confirm = false;
 
         Scene.keyH.interactPressed = false;
@@ -30,7 +28,7 @@ public abstract class HUD {
     }
 
 
-    protected void changeSelectionColor(int selectionIndex, Color baseColor, Color selectColor){
+    public void changeSelectionColor(int selectionIndex, Color baseColor, Color selectColor){
         for(int i =0; i< _nbButtons; i++){
             _buttons[i].setTextColor(baseColor);
             _buttons[i].highlighted = false;
