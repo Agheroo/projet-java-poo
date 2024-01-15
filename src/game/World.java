@@ -13,6 +13,7 @@ import entity.props.Props;
 import java.awt.*;
 import java.util.HashMap;
 
+import UI.HUD_Welcome;
 import UI.HUD_World;
 import UI.Textbox;
 
@@ -64,6 +65,8 @@ public class World extends Scene {
         player = new Warrior("player", 8 * Const.WRLD_tileScreenSize,
             16 * Const.WRLD_tileScreenSize, 0, 0, 0, "down", 4, 20);
         
+        menu = new HUD_Welcome();
+        state = Const.State.WORLD;    //TODO : CHANGE THIS STATE WHEN RELEASING THE GAME
         HUD_world = new HUD_World();
     }
 
@@ -94,6 +97,9 @@ public class World extends Scene {
      */
     public void update() {
         switch(state){
+            case Const.State.WELCOME:
+                menu.update();
+                break;
             case Const.State.WORLD:
                 checkPauseScene();
                 HUD_world.update();
@@ -138,7 +144,7 @@ public class World extends Scene {
      * @param screenHeight The height of the screen.
      */
     public void draw(Graphics2D g2, int screenWidth, int screenHeight) {
-
+        
         //If there is a fight, draw the fight instead of the game world
         if(currfight != null){
             if( currfight.state == Const.FightState.FIGHTING){
@@ -150,28 +156,33 @@ public class World extends Scene {
         }
         
         else{
-            // TILE
-            tileManager.draw(g2, this);
-            // OBJECT
-            for (Props props : objMap.values()) {
-                props.draw(g2, this);
+            if(state == Const.State.WORLD){
+                // TILE
+                tileManager.draw(g2, this);
+                // OBJECT
+                for (Props props : objMap.values()) {
+                    props.draw(g2, this);
+                }
+                // PLAYER
+                player.drawInWorld(g2, (screenWidth-Const.WRLD_entityScreenSize)/2,
+                                        (screenHeight-Const.WRLD_entityScreenSize)/2); // Player is always centered to screen
+
+                
+
+                //ENEMIES
+                for(Enemy enemy : enemies.values()){
+                    // Calculate the screen position of the character relative to the player's position
+                    int screenX = enemy.worldX - player.worldX + (Const.WDW_width - Const.WRLD_entityScreenSize)/2;
+                    int screenY = enemy.worldY - player.worldY + (Const.WDW_height - Const.WRLD_entityScreenSize)/2;
+
+                    enemy.drawInWorld(g2, screenX, screenY);
+                }
+                HUD_world.draw(g2);
             }
-            // PLAYER
-            player.drawInWorld(g2, (screenWidth-Const.WRLD_entityScreenSize)/2,
-                                    (screenHeight-Const.WRLD_entityScreenSize)/2); // Player is always centered to screen
-
-            
-
-            //ENEMIES
-            for(Enemy enemy : enemies.values()){
-                // Calculate the screen position of the character relative to the player's position
-                int screenX = enemy.worldX - player.worldX + (Const.WDW_width - Const.WRLD_entityScreenSize)/2;
-                int screenY = enemy.worldY - player.worldY + (Const.WDW_height - Const.WRLD_entityScreenSize)/2;
-
-                enemy.drawInWorld(g2, screenX, screenY);
+            else if(state == Const.State.WELCOME){
+                menu.draw(g2);
             }
-            HUD_world.draw(g2);
-        }
+        }  
 
 
         //Draw pause screen last but still draw the background game

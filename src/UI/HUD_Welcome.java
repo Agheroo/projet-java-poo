@@ -5,8 +5,6 @@ import java.awt.Graphics2D;
 public class HUD_Welcome extends HUD{
     public HUD_Welcome(){
         super();
-        _nbButtons = 2;
-        _buttons = new ChoiceButton[_nbButtons];
     }
 
 

@@ -23,10 +23,13 @@ public class HUD_World{
     }
 
     public void draw(Graphics2D g2) {
+        //small background to make it more readable
         instructions.draw(g2,-10,Const.WDW_height - instructions.height-20);
-        level.draw(g2,0,0);
-        key.draw(g2,Const.WDW_width-key.width,10);
         
+        key.draw(g2,Const.WDW_width-key.width,10);
+
+        
+        level.draw(g2,0,0);
         //Xp bar drawing
         g2.setColor(Color.black);
         g2.drawRect(9,39,151,31);

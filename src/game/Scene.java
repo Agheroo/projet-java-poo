@@ -77,10 +77,4 @@ public abstract class Scene {
             keyH.interactPressed = false;
         }        
     }
-
-    public void changeScene(State newState){
-        System.out.println("CHANGING SCENE TO: " + newState);
-        state = newState;
-    }
-
 }

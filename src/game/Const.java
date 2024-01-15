@@ -2,7 +2,7 @@ package game;
 
 public final class Const {
     //Enums
-    public static enum State {WORLD, FIGHT, PAUSE, MENU}
+    public static enum State {WORLD, FIGHT, PAUSE, WELCOME}
     public static enum FightState {FIGHTING, WON , LOST}
     public static enum Selection {NONE, PLAY, RESUME, CONTINUE, QUIT, ATTACK, POTION, BACK}
 
