@@ -28,12 +28,12 @@ public class HUD_Pause extends HUD{
             Scene.keyH.interactPressed = false;
         }
         if(Scene.keyH.upPressed || Scene.keyH.downPressed){
-            switch(selection){
-                case Const.Selection.CONTINUE:
+            switch(selection.toString()){
+                case "CONTINUE":
                     selection = Const.Selection.QUIT;
                     changeSelectionColor(1, Color.blue, Color.red);
                     break;
-                case Const.Selection.QUIT:
+                case "QUIT":
                     selection = Const.Selection.CONTINUE;
                     changeSelectionColor(0, Color.blue, Color.red);
                     break;

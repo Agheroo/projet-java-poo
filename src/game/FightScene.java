@@ -49,8 +49,8 @@ public class FightScene {
         menu.update();
 
 
-        switch(menu.selection){
-            case Const.Selection.ATTACK:
+        switch(menu.selection.toString()){
+            case "ATTACK":
                 if(menu.confirm){
                     //Implement combat game mechanics here
                     menu.page = 1;
@@ -63,7 +63,7 @@ public class FightScene {
                 }
                 break;
             
-            case Const.Selection.POTION:
+            case "POTION":
                 if(menu.confirm){
                     menu.page = 2;
                     menu.selection = Selection.NONE;
@@ -71,7 +71,7 @@ public class FightScene {
                 }
                 break;
             
-            case Const.Selection.BACK:
+            case "BACK":
                 if(menu.confirm){
                     menu.selection = Const.Selection.ATTACK;
                     menu.page = 0;
@@ -107,8 +107,6 @@ public class FightScene {
     /**
      * @brief Draws the fight scene.
      * @param g2 The Graphics2D object for drawing.
-     * @param screenWidth The width of the screen.
-     * @param screenHeight The height of the screen.
      */
     public void draw(Graphics2D g2) {
         player.drawInFight(g2, 50, 200);

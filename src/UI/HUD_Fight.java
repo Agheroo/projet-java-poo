@@ -44,13 +44,13 @@ public class HUD_Fight extends HUD {
             Scene.keyH.interactPressed = false;
         }
         if(Scene.keyH.rightPressed || Scene.keyH.leftPressed){
-            switch(selection){
-                case Const.Selection.ATTACK:
+            switch(selection.toString()){
+                case "ATTACK":
                     selection = Const.Selection.POTION;
                     changeSelectionColor(1, Color.blue, Color.red);
                     break;
                 
-                case Const.Selection.POTION:
+                case "POTION":
                     selection = Const.Selection.ATTACK;
                     changeSelectionColor(0, Color.blue, Color.red);
                     break;

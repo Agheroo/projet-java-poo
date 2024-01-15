@@ -50,7 +50,6 @@ public class Player extends Character {
 
     /**
      * @brief Updates the player entity based on the current scene and time elapsed.
-     * @param scene The current game scene.
      * @param dt The time elapsed since the last update.
      */
     public void update(double dt) {
@@ -101,8 +100,6 @@ public class Player extends Character {
 
     /**
      * @brief Checks for collision with nearby objects using the player's hitbox.
-     * @param entity The entity to check collision for.
-     * @param world     The current game world.
      * @return The coordinates of the collided object or null if no collision.
      */
     public Point checkObject() {

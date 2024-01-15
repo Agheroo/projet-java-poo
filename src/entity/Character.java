@@ -86,7 +86,6 @@ public abstract class Character extends Entity {
 
     /**
      * @brief Updates the character entity based on the current scene and time elapsed.
-     * @param scene The current game scene.
      * @param dt The time elapsed since the last update.
      */
     public void update(double dt) {

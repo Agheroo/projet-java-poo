@@ -146,8 +146,6 @@ public class TileManager {
      * Updates the tile frames based on the player's position.
      *
      * @param world        The world object.
-     * @param screenWidth  The screen width.
-     * @param screenHeight The screen height.
      */
     public void update(World world) {
         int playerScreenX = (Const.WDW_width - Const.WRLD_entityScreenSize) / 2;
@@ -175,8 +173,6 @@ public class TileManager {
      *
      * @param g2           The graphics context.
      * @param world        The world object.
-     * @param screenWidth  The screen width.
-     * @param screenHeight The screen height.
      */
     public void draw(Graphics2D g2, World world) {
         int playerScreenX = (Const.WDW_width - Const.WRLD_entityScreenSize) / 2;

@@ -67,7 +67,6 @@ public class Enemy extends Character {
 
     /**
      * @brief Updates the enemy entity based on the current scene and time elapsed.
-     * @param scene The current game scene.
      * @param dt The time elapsed since the last update.
      */
     public void update(double dt) {
