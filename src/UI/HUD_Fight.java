@@ -7,6 +7,7 @@ import java.awt.Graphics2D;
 import entity.Enemy;
 import entity.Player;
 import game.Const;
+import game.FightScene;
 import game.Scene;
 import game.Const.Selection;
 
@@ -34,8 +35,8 @@ public class HUD_Fight extends HUD {
         
         
         playerStats = new Textbox[2];
-        playerStats[0] = new Textbox(String.valueOf(player.health) + "/" + String.valueOf(player.maxHealth),Const.fontName,100,30,new Color(0x0EC44C));
-        playerStats[1] = new Textbox(String.valueOf(player.mana) + "/" + String.valueOf(player.maxMana),Const.fontName,100,30,new Color(0x1D81CE));
+        playerStats[0] = new Textbox(String.valueOf(player.health) + "/" + String.valueOf(player.maxHealth),Const.fontName,100,30,new Color(0x0D9B44));
+        playerStats[1] = new Textbox(String.valueOf(player.mana) + "/" + String.valueOf(player.maxMana),Const.fontName,100,30,new Color(0x2367C3));
 
         for(int i=0;i<player.attacks.length;i++){
             _texts[i] = new Textbox(player.attacks[i].name,Const.fontName,200,30,Color.black);
@@ -158,80 +159,94 @@ public class HUD_Fight extends HUD {
 
 
     public void draw(Graphics2D g2){
-        //Background of the HUD
-        int margin = (Const.WDW_width - Const.HUD_fightWidth)/2;
-        g2.setColor(new Color(0x5A2D16));
-        g2.fillRect(margin-2, Const.WDW_height - Const.HUD_fightHeight - margin-2, Const.HUD_fightWidth+4, Const.HUD_fightHeight+4);
-        g2.setColor(new Color(0xC4A187));
-        g2.fillRect(margin, Const.WDW_height - Const.HUD_fightHeight - margin, Const.HUD_fightWidth, Const.HUD_fightHeight);
 
-        //Small seperation
-        g2.setColor(Color.BLACK);
-        g2.fillRect(_buttons[0].width+_buttons[1].width+ 7*margin,Const.WDW_height - Const.HUD_fightHeight - margin/2,2,Const.HUD_fightHeight - margin);
+        if(FightScene.state == Const.FightState.FIGHTING){
+            //Background of the HUD
+            int margin = (Const.WDW_width - Const.HUD_fightWidth)/2;
+            g2.setColor(new Color(0x5A2D16));
+            g2.fillRect(margin-2, Const.WDW_height - Const.HUD_fightHeight - margin-2, Const.HUD_fightWidth+4, Const.HUD_fightHeight+4);
+            g2.setColor(new Color(0xC4A187));
+            g2.fillRect(margin, Const.WDW_height - Const.HUD_fightHeight - margin, Const.HUD_fightWidth, Const.HUD_fightHeight);
 
-        //Displaying current player's health  and mana
-        playerStats[0].draw(g2,_buttons[0].width+_buttons[1].width+ 8*margin,Const.WDW_height - Const.HUD_fightHeight - margin);
-        playerStats[1].draw(g2,_buttons[0].width+_buttons[1].width+ 8*margin,Const.WDW_height - Const.HUD_fightHeight + margin);
+            //Small seperation
+            g2.setColor(Color.BLACK);
+            g2.fillRect(_buttons[0].width+_buttons[1].width+ 7*margin,Const.WDW_height - Const.HUD_fightHeight - margin/2,2,Const.HUD_fightHeight - margin);
+
+            //Displaying current player's health  and mana
+            playerStats[0].draw(g2,_buttons[0].width+_buttons[1].width+ 8*margin,Const.WDW_height - Const.HUD_fightHeight - margin);
+            playerStats[1].draw(g2,_buttons[0].width+_buttons[1].width+ 8*margin,Const.WDW_height - Const.HUD_fightHeight + margin);
 
 
 
-        //Buttons and texts
-        switch(page){
-            case 0: //Drawing main page buttons (attack or potion)
-                for(int i=0;i<2;i++){
-                    _buttons[i].draw(g2, 3*margin + i*(_buttons[0].width+2*margin), Const.WDW_height - Const.HUD_fightHeight - margin + (Const.HUD_fightHeight - _buttons[i].height)/2 );
-                }
-                break;
-            case 1: //Drawing all attacks available
-                for(int i=0;i<player.attacks.length;i++){
-                    if(player.attacks[i].unlocked){
-                        _texts[i].setColor(new Color(0x4669A0));
+            //Buttons and texts
+            switch(page){
+                case 0: //Drawing main page buttons (attack or potion)
+                    for(int i=0;i<2;i++){
+                        _buttons[i].draw(g2, 3*margin + i*(_buttons[0].width+2*margin), Const.WDW_height - Const.HUD_fightHeight - margin + (Const.HUD_fightHeight - _buttons[i].height)/2 );
+                    }
+                    break;
+                case 1: //Drawing all attacks available
+                    for(int i=0;i<player.attacks.length;i++){
+                        if(player.attacks[i].unlocked){
+                            _texts[i].setColor(new Color(0x4669A0));
+                        }
+                        else{
+                            _texts[i].setColor(new Color(0x9390A2));
+                        }
+                    }
+
+                    //Small rectangle to underline the selection
+                    if(choice != -1 && player.attacks[choice].unlocked){
+                        _texts[choice].setColor(new Color(0x1B1E5B));
+                    }
+
+                    
+                    if(choice < 2 && choice != -1){
+                        Textbox dmgInfo = new Textbox("dmg:"+player.attacks[choice].damage,Const.fontName,20,20,new Color(0xB90E30));
+                        Textbox manaInfo = new Textbox("cost"+player.attacks[choice].cost,Const.fontName,20,20,new Color(0x2367C3));
+                        dmgInfo.draw(g2, _texts[choice].width + margin*(1+13*choice), Const.WDW_height - Const.HUD_fightHeight + margin/2 - manaInfo.height/2);
+                        manaInfo.draw(g2, _texts[choice].width + margin*(1+13*choice), Const.WDW_height - Const.HUD_fightHeight + margin/2 + manaInfo.height/2);
+                        g2.setColor(new Color(0x1B1E5B));
+                        g2.fillRect(margin*(2+13*choice),Const.WDW_height - Const.HUD_fightHeight + margin/2 + _texts[choice].height,_texts[choice].width - margin,3);
+                    }
+                    else if(choice >= 2){
+                        Textbox dmgInfo = new Textbox("dmg:"+player.attacks[choice].damage,Const.fontName,20,20,new Color(0xB90E30));
+                        Textbox manaInfo = new Textbox("cost"+player.attacks[choice].cost,Const.fontName,20,20,new Color(0x2367C3));
+                        dmgInfo.draw(g2, _texts[choice].width + margin*(1+13*(choice-2)), Const.WDW_height - Const.HUD_fightHeight + 4*margin - manaInfo.height );
+                        manaInfo.draw(g2, _texts[choice].width + margin*(1+13*(choice-2)), Const.WDW_height - Const.HUD_fightHeight + 4*margin);
+                        g2.setColor(new Color(0x1B1E5B));
+                        g2.fillRect(margin*(2+13*(choice-2)),Const.WDW_height - Const.HUD_fightHeight + 4*margin + _texts[choice].height,_texts[choice].width - margin,3);
+                    }
+                    
+                    _texts[0].draw(g2,margin,Const.WDW_height - Const.HUD_fightHeight);
+                    _texts[1].draw(g2, 4*margin + _texts[0].width,Const.WDW_height - Const.HUD_fightHeight);
+                    _texts[2].draw(g2,margin,Const.WDW_height - Const.HUD_fightHeight + 3*margin);
+                    _texts[3].draw(g2,4*margin + _texts[2].width,Const.WDW_height - Const.HUD_fightHeight + 3*margin);
+
+                    //Draw the "go back button"
+                    _buttons[2].draw(g2,Const.WDW_width-_buttons[2].width-2*margin,Const.WDW_height-2*margin-_buttons[2].height);
+                    break;
+                case 2: //Drawing all the potions of the inventory
+                    if(player.potions.size() > 0){
+                        choice = 0;
+                        for(int i=player.attacks.length;i<player.attacks.length + player.potions.size();i++){
+                            _texts[i].draw(g2,50*i+margin,Const.WDW_height - margin - Const.HUD_fightHeight);
+                        }
                     }
                     else{
-                        _texts[i].setColor(new Color(0xAAB2B6));
+                        Textbox alert = new Textbox("Vous n'avez pas de potion !", Const.fontName, Const.HUD_fightWidth-margin,40, new Color(0xCF1C3F));
+                        alert.draw(g2,3*margin,Const.WDW_height - Const.HUD_fightHeight + (3/2)*margin);
+                        choice = -1;
+                        selection = Const.Selection.BACK;
+                        changeSelectionColor(2, Color.blue, Color.red);
                     }
-                }
 
-                //Small rectangle to underline the selection
-                if(choice != -1 && player.attacks[choice].unlocked){
-                    _texts[choice].setColor(new Color(0x1B1E5B));
-                }
+                    //Draw the "go back button"
+                    _buttons[2].draw(g2,Const.WDW_width-_buttons[2].width-2*margin,Const.WDW_height-2*margin-_buttons[2].height);
+                    break;
 
-                g2.setColor(new Color(0x1B1E5B));
-                if(choice < 2 && choice != -1)
-                    g2.fillRect(margin*(2+13*choice),Const.WDW_height - Const.HUD_fightHeight + margin/2 + _texts[choice].height,_texts[choice].width,3);
-                else if(choice >= 2)
-                    g2.fillRect(margin*(2+13*(choice-2)),Const.WDW_height - Const.HUD_fightHeight + 4*margin + _texts[choice].height,_texts[choice].width,3);
-                
-                _texts[0].draw(g2,margin,Const.WDW_height - Const.HUD_fightHeight);
-                _texts[1].draw(g2,4*margin + _texts[0].width,Const.WDW_height -Const.HUD_fightHeight);
-                _texts[2].draw(g2,margin,Const.WDW_height - Const.HUD_fightHeight + 3*margin);
-                _texts[3].draw(g2,4*margin + _texts[2].width,Const.WDW_height - Const.HUD_fightHeight + 3*margin);
-
-                //Draw the "go back button"
-                _buttons[2].draw(g2,Const.WDW_width-_buttons[2].width-2*margin,Const.WDW_height-2*margin-_buttons[2].height);
-                break;
-            case 2: //Drawing all the potions of the inventory
-                if(player.potions.size() > 0){
-                    choice = 0;
-                    for(int i=player.attacks.length;i<player.attacks.length + player.potions.size();i++){
-                        _texts[i].draw(g2,50*i+margin,Const.WDW_height - margin - Const.HUD_fightHeight);
-                    }
-                }
-                else{
-                    Textbox alert = new Textbox("Vous n'avez pas de potion !", Const.fontName, Const.HUD_fightWidth-margin,40, new Color(0xCF1C3F));
-                    alert.draw(g2,3*margin,Const.WDW_height - Const.HUD_fightHeight + (3/2)*margin);
-                    choice = -1;
-                    selection = Const.Selection.BACK;
-                    changeSelectionColor(2, Color.blue, Color.red);
-                }
-
-                //Draw the "go back button"
-                _buttons[2].draw(g2,Const.WDW_width-_buttons[2].width-2*margin,Const.WDW_height-2*margin-_buttons[2].height);
-                break;
-
-            default: break;
+                default: break;
+            }
         }
-
     }
 }

@@ -25,7 +25,9 @@ public class Attack {
         //Find a nice equation to balance a bit the game and add a dodge chance with agility
         //Also find a interval "crit chance" maybe to make it more interesting
         if(emitter.mana >= cost){
-            reciever.health -= (int)(damage + 0.4*emitter.strength*damage - 1.3*reciever.defense);
+            int dmg = (int)(damage + 0.4*emitter.strength*damage - 1.3*reciever.defense);
+
+            reciever.health -= dmg;
             emitter.mana -= cost;
         }
         else{

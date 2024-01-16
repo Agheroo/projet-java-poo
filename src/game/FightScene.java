@@ -27,7 +27,7 @@ import game.Const.Selection;
 public class FightScene {
     public Player player;
     public Enemy enemy;
-    public Const.FightState state;
+    public static Const.FightState state;
     private HUD_Fight menu;
     private BufferedImage bg;
 
@@ -44,6 +44,7 @@ public class FightScene {
         }
         this.player = player;
         this.enemy = enemy;
+
         state = Const.FightState.FIGHTING;
         menu = new HUD_Fight(player,enemy);
         menu.selection = Const.Selection.ATTACK;
@@ -52,7 +53,7 @@ public class FightScene {
     /**
      * @brief Updates the fight scene.
      */
-    public void update(Scene scene) {
+    public void update(Scene scene){
         // Additional logic for the fight scene update
         menu.update();
         player.updateFrames();
@@ -182,7 +183,7 @@ public class FightScene {
             else{
                 player.xp += enemy.xpRate;
                 if(player.health < player.maxHealth){
-                    player.health += (int)0.2*player.maxHealth;
+                    player.health += (int)0.2*player.maxHealth;//Regen a bit of the health
                     if(player.health > player.maxHealth)
                         player.health = player.maxHealth;
                 }
@@ -218,6 +219,7 @@ public class FightScene {
         //Actual HP (in green)
         g2.setColor(new Color(10,190,50));
         g2.fillRect(50, Const.WDW_height-Const.HUD_fightHeight - 250, player.health*200/player.maxHealth,30);
+
         player.drawInFight(g2, 100, Const.WDW_height-Const.HUD_fightHeight - 200);
 
         
@@ -232,6 +234,9 @@ public class FightScene {
         g2.fillRect(Const.WDW_width - Const.FGHT_entityScreenSize - 150, Const.WDW_height-Const.HUD_fightHeight - 250, enemy.health*200/enemy.maxHealth,30);
 
         enemy.drawInFight(g2, Const.WDW_width - Const.FGHT_entityScreenSize - 100, Const.WDW_height-Const.HUD_fightHeight - 200);
+
+
+        //Drawing menu
         menu.draw(g2);
     }
 }
