@@ -159,7 +159,7 @@ public class World extends Scene {
         }
         
         else{
-            if(state == Const.State.WORLD){
+            if(Scene.state == Const.State.WORLD || Scene.state == Const.State.PAUSE){
                 // TILE
                 tileManager.draw(g2, this);
                 // OBJECT
@@ -181,19 +181,20 @@ public class World extends Scene {
                     enemy.drawInWorld(g2, screenX, screenY);
                 }
                 HUD_world.draw(g2);
+                //Draw pause screen last but still draw the background game
                 
             }
-
-            else if(state == Const.State.WELCOME){
+            if(Scene.state == Const.State.PAUSE){
                 menu.draw(g2);
             }
+
+            else if(Scene.state == Const.State.WELCOME){
+                menu.draw(g2);
+            }
+
+            
+            
         }  
 
-
-        //Draw pause screen last but still draw the background game
-        if(Scene.state == Const.State.PAUSE){
-            menu.draw(g2);
-        }
-        
     }
 }
