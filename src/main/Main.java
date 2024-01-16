@@ -24,7 +24,7 @@ public class Main {
         JFrame window = new JFrame();
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setResizable(false);
-        window.setTitle("2D Adventure");
+        window.setTitle("Gaming");
 
         // Create an instance of the Window class (game window)
         Window gameWindow = new Window();

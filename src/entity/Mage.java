@@ -1,8 +1,9 @@
 package entity;
+
 import game.Attack;
 
-public class Warrior extends Player{
-
+public class Mage extends Player{
+    
     /**
      * @brief Different player class for another gameplay experience, only stats change from Player class
      * @param entityName    //Same as player
@@ -15,26 +16,25 @@ public class Warrior extends Player{
      * @param spriteCntMax //Same as player
      * @param spriteSpeed //Same as player
      */
-    public Warrior(String entityName, int worldX, int worldY, int dirX, int dirY, int speed, String facing,
+    public Mage(String entityName, int worldX, int worldY, int dirX, int dirY, int speed, String facing,
             int spriteCntMax, int spriteSpeed) {
         super(entityName, worldX, worldY, dirX, dirY, speed, facing, spriteCntMax, spriteSpeed);
 
-        maxHealth = 130;
+        maxHealth = 100;
         health = maxHealth;
 
-        maxMana = 35;
+        maxMana = 70;
         mana = maxMana;
 
-        agility = 6;
-        strength = 26;
-        defense = 25;
-        initiative = 10;
-        
-        
-        attacks[0] = new Attack("Coup d'épaule", 10, 0, true,1);
-        attacks[1] = new Attack("Tranchage", 27, 10, true,1);
-        attacks[2] = new Attack("Berserk", 40, 15, false,2);
-        attacks[3] = new Attack("Shlass tha'Mair", 67, 20, false,3);
-    }
+        agility = 7;
+        strength = 20;
+        defense = 18;
+        initiative = 13;
 
+        
+        attacks[0] = new Attack("Coup de sceptre", 10, 0, true,1);
+        attacks[1] = new Attack("Boule de glace", 30, 10, true,1);
+        attacks[2] = new Attack("Flammes de la haine", 50, 27, false,2);
+        attacks[3] = new Attack("Die de gazo", 90, 60, false,4);
+    }
 }

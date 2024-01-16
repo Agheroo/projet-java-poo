@@ -13,8 +13,8 @@ import game.World;
 import item.Item;
 
 import java.awt.*;
+import java.awt.image.BufferedImage;
 import java.util.Vector;
-
 /**
  * @class Player
  * @extends Character
@@ -25,8 +25,8 @@ public class Player extends Character {
     public int xp;  //xp of the player
     public int xpMax; //The amount of xp the player needs to level up
     public int hasKey = 0;
-    public static Attack attacks[]; 
-    public static Vector<Item> potions = new Vector<Item>();
+    public Attack attacks[]; 
+    public Vector<Item> potions = new Vector<Item>();
 
     /*
      * @brief Constructor for the Player class.
@@ -44,8 +44,8 @@ public class Player extends Character {
         
         attacks = new Attack[4];
         level = 1;
-        xpMax = 700;
-        xp = 50;
+        xpMax = 100;
+        xp = 0;
     }
 
     /**
@@ -101,8 +101,6 @@ public class Player extends Character {
 
     /**
      * @brief Checks for collision with nearby objects using the player's hitbox.
-     * @param entity The entity to check collision for.
-     * @param world     The current game world.
      * @return The coordinates of the collided object or null if no collision.
      */
     public Point checkObject() {
@@ -124,6 +122,11 @@ public class Player extends Character {
         return index;
     }
 
+    /**
+     * @brief Checks for collision with nearby enemy using the player's hitbox.
+     * @return The coordinates of the collided enemy or null if no collision.
+     */
+
     public Point checkEnemy(){
         Point index = null;
 
@@ -142,7 +145,6 @@ public class Player extends Character {
     
     public void fightEnemy(Point ind){
         if(ind != null){
-            System.out.println("JE TABASSE");
             Enemy enemy = World.enemies.get(ind);
             enemy.playerInterraction(this); 
         }
@@ -168,14 +170,31 @@ public class Player extends Character {
      * @param i The item t add
      */
     public void addItem(Item i){
-        System.out.println("J'ai rajoutée un item"); 
         if(i.type == "potion"){
             potions.add(i);
         }
-        //Change stats directly if the item is not a potion
+        //Change stats of player here directly if the item is not a potion
+
+        System.out.println("Nouvel objet : "+i.name);
+    }
+
+    /**
+     * @brief Draws the character in the fight scene.
+     * @param g2 The Graphics2D object for drawing.
+     * @param screenX The X-coordinate on the screen.
+     * @param screenY The Y-coordinate on the screen.
+     */
+    public void drawInFight(Graphics2D g2, int screenX, int screenY){
+        BufferedImage image = null;
+        for (int i = 0; i < _spriteCntMax; i++) {
+            if(_spriteCnt == i){
+                image = _idle_right[i];
+            }
+        }
+        g2.drawImage(image,screenX,screenY,Const.FGHT_entityScreenSize,Const.FGHT_entityScreenSize,null);
     }
 
     public void playerInterraction(Player player) {
-        //
+        //Nothing
     }
 }

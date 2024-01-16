@@ -5,6 +5,10 @@
 
 package entity;
 
+import java.awt.Graphics2D;
+import java.awt.image.BufferedImage;
+
+import game.Attack;
 import game.Const;
 import game.FightScene;
 import game.World;
@@ -17,6 +21,7 @@ import game.World;
 public class Enemy extends Character {
 
     public int xpRate; // Experience points rate for defeating the enemy
+    public Attack attack;
     /**
      * @brief Constructor for the Enemy class.
      * @param worldX The X-coordinate of the enemy in the world.
@@ -53,15 +58,19 @@ public class Enemy extends Character {
      * @param defense   The reducing of damage of the enemy
      * @param agility   The probability of the enemy to dodge the attack
      * @param initiative    Who attacks first
+     * @param attack The attack that the enemy will use to fight
      */
-    public void setStats(int xpRate, int health, int mana, int strength, int defense,  int agility, int initiative){
+    public void setStats(int xpRate, int health, int mana, int strength, int defense,  int agility, int initiative, Attack attack){
         this.xpRate = xpRate;
         this.health = health;
+        this.maxHealth = health;
         this.mana = mana;
+        this.maxMana = mana;
         this.strength = strength;
         this.defense = defense;
         this.agility = agility;
         this.initiative = initiative;
+        this.attack = attack;
     }
 
 
@@ -72,12 +81,28 @@ public class Enemy extends Character {
      */
     public void update(double dt) {
         super.update(dt); // Calls the parent class update method
-        //TODO : find a method to make the enemy move in predictive patterns
+        // find a method to make the enemy move in predictive patterns
     }
+    
 
     public void playerInterraction(Player player){
-        System.out.println("Attention : je pratique le tabassing.");
         World.currfight = new FightScene(player,this);
         World.state = Const.State.FIGHT;
+    }
+
+    /**
+     * @brief Draws the character in the fight scene.
+     * @param g2 The Graphics2D object for drawing.
+     * @param screenX The X-coordinate on the screen.
+     * @param screenY The Y-coordinate on the screen.
+     */
+    public void drawInFight(Graphics2D g2, int screenX, int screenY){
+        BufferedImage image = null;
+        for (int i = 0; i < _spriteCntMax; i++) {
+            if(_spriteCnt == i){
+                image = _idle_left[i];
+            }
+        }
+        g2.drawImage(image,screenX,screenY,Const.FGHT_entityScreenSize,Const.FGHT_entityScreenSize,null);
     }
 }

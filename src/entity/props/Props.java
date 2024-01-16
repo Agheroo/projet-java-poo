@@ -17,13 +17,14 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
+
 /**
  * @class Props
  * @extends Entity
  * @brief Represents in-game props with properties such as image, name, and position.
  */
 public abstract class Props extends Entity {
-    private BufferedImage images[]; // Image representing the prop
+    public BufferedImage images[]; // Image representing the prop
     protected boolean open;
     /**
      * @brief Constructor for props (keys/doors/chests...)
@@ -123,20 +124,19 @@ public abstract class Props extends Entity {
 
         // Check if the prop is within the visible screen region around the player
         if (worldX + Const.WRLD_tileScreenSize > world.player.worldX - playerScreenX
-                && worldX - Const.WRLD_tileScreenSize < world.player.worldX + playerScreenX
-                && worldY + Const.WRLD_tileScreenSize > world.player.worldY - playerScreenY
-                && worldY - Const.WRLD_tileScreenSize < world.player.worldY + playerScreenY) {
+        && worldX - Const.WRLD_tileScreenSize < world.player.worldX + playerScreenX
+        && worldY + Const.WRLD_tileScreenSize > world.player.worldY - playerScreenY
+        && worldY - Const.WRLD_tileScreenSize < world.player.worldY + playerScreenY) {
+            
             // Draw the prop on the screen
-            if(open){
-                g2.drawImage(images[1], screenX, screenY, Const.WRLD_entityScreenSize, Const.WRLD_entityScreenSize, null);  //For props having collision, the images[1] is the "open" one
+            if(open){ //For some props like chests or doors the images[1] is the "open" one
+                g2.drawImage(images[1], screenX, screenY, Const.WRLD_entityScreenSize, Const.WRLD_entityScreenSize, null); 
             }
             else{
                 g2.drawImage(images[0], screenX, screenY, Const.WRLD_entityScreenSize, Const.WRLD_entityScreenSize, null);
             }
             
-            g2.drawRect(screenX, screenY, this.hitbox.width, this.hitbox.height);
+            //g2.drawRect(screenX, screenY, this.hitbox.width, this.hitbox.height);  //hitbox debuig purposes
         }
     }
-
-    
 }

@@ -3,6 +3,7 @@ package item.weapon;
 public class Sword extends Weapon{
 
     public Sword(){
-        System.out.println("Armure foot");
+        type = "weapon";
+        name = "Épée à double tranchant";
     }
 }

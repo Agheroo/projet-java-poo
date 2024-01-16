@@ -33,8 +33,7 @@ public class OBJ_Door extends Props {
             open = true;
         }
         if(player.hasKey == 0 && collision == true){
-            System.out.println("Key missing");
+            System.out.println("Key missing !");
         }
     }
-
 }
