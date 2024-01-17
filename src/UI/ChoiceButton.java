@@ -14,12 +14,14 @@ public class ChoiceButton {
     public int width, height;
     public boolean highlighted;
     private Textbox _textBox;
+    private Color _bgColor;
     
     public ChoiceButton(int w,int h, String title, String fontName, Color fontColor){
         this.width = w; this.height = h;
         highlighted = false;
 
         _textBox = new Textbox(title,fontName,w,h,fontColor);
+        _bgColor = new Color(0xA38168);
     }
 
     /**
@@ -28,6 +30,14 @@ public class ChoiceButton {
      */
     public void setTextColor(Color newColor){
         _textBox.setColor(newColor);
+    }
+
+    /**
+     * @brief Setter func to change the button's background color
+     * @param newColor  The new color to use for the background
+     */
+    public void setBgColor(Color newColor){
+        _bgColor = newColor;
     }
 
     /**
@@ -43,7 +53,7 @@ public class ChoiceButton {
         }
         
 
-        g2.setColor(new Color(0xA38168));
+        g2.setColor(_bgColor);
         g2.fillRect(x,y,width,height);
 
         _textBox.draw(g2,x,y);

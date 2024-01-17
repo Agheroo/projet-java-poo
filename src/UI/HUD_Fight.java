@@ -44,10 +44,10 @@ public class HUD_Fight extends HUD {
         for(int i=player.attacks.length;i<player.attacks.length + player.potions.size();i++){
             _texts[i] = new Textbox(player.potions.get(i-player.attacks.length).name,Const.fontName,100,50,Color.black);
         }
-        _buttons[0] = new ChoiceButton(220, 80, "ATTAQUER", Const.fontName, Color.blue);
-        _buttons[1] = new ChoiceButton(220, 80, "POTION", Const.fontName, Color.blue);
-        _buttons[2] = new ChoiceButton(160, 50, "RETOUR", Const.fontName, Color.blue);
-        changeSelectionColor(0, Color.blue, Color.red);
+        _buttons[0] = new ChoiceButton(220, 80, "ATTAQUER", Const.fontName, new Color(0x784F30));
+        _buttons[1] = new ChoiceButton(220, 80, "POTION", Const.fontName, new Color(0x784F30));
+        _buttons[2] = new ChoiceButton(160, 50, "RETOUR", Const.fontName, new Color(0x784F30));
+        changeSelectionColor(0, new Color(0x784F30), new Color(0x594E3B),new Color(0xA38168), new Color(0xAB9672));
     }
 
 
@@ -107,7 +107,6 @@ public class HUD_Fight extends HUD {
                     } 
                     if(Scene.keyH.rightPressed){
                         selection = Const.Selection.BACK;
-                        changeSelectionColor(2, Color.blue, Color.red);
                         choice = -1;
                     }
                     break;
@@ -122,7 +121,6 @@ public class HUD_Fight extends HUD {
                 case 3:
                     if(Scene.keyH.rightPressed){
                         selection = Const.Selection.BACK;
-                        changeSelectionColor(2, Color.blue, Color.red);
                         choice = -1;
                     }  
                     if(Scene.keyH.upPressed){
@@ -141,16 +139,16 @@ public class HUD_Fight extends HUD {
         //Simply updating colors
         switch(selection){
             case Const.Selection.ATTACK:
-                changeSelectionColor(0, Color.blue, Color.red); break;
+                changeSelectionColor(0, new Color(0x784F30),  new Color(0x452A26),new Color(0xAE8E65), new Color(0x926E4F)); break;
                 
             case Const.Selection.POTION: 
-                changeSelectionColor(1, Color.blue, Color.red); break;
+                changeSelectionColor(1, new Color(0x784F30),  new Color(0x452A26),new Color(0xAE8E65), new Color(0x926E4F)); break;
             
             case Const.Selection.BACK:
-                changeSelectionColor(2, Color.blue, Color.red); break;
+                changeSelectionColor(2, new Color(0x784F30),  new Color(0x452A26),new Color(0xAE8E65), new Color(0x926E4F)); break;
 
             default: 
-                changeSelectionColor(0, Color.blue, Color.red); break;   
+                changeSelectionColor(0, new Color(0x784F30),  new Color(0x452A26),new Color(0xAE8E65), new Color(0x926E4F)); break;   
         }
 
         Scene.keyH.rightPressed = false; Scene.keyH.upPressed = false;
@@ -191,7 +189,7 @@ public class HUD_Fight extends HUD {
                             _texts[i].setColor(new Color(0x4669A0));
                         }
                         else{
-                            _texts[i].setColor(new Color(0x9390A2));
+                            _texts[i].setColor(new Color(0x5A5C6C));
                         }
                     }
 
@@ -199,23 +197,39 @@ public class HUD_Fight extends HUD {
                     if(choice != -1 && player.attacks[choice].unlocked){
                         _texts[choice].setColor(new Color(0x1B1E5B));
                     }
+                    else if(choice != -1 && player.attacks[choice].unlocked == false){
+                        _texts[choice].setColor(new Color(0xCDCED5));
+                    }
 
                     
                     if(choice < 2 && choice != -1){
-                        Textbox dmgInfo = new Textbox("dmg:"+player.attacks[choice].damage,Const.fontName,20,20,new Color(0xB90E30));
-                        Textbox manaInfo = new Textbox("cost"+player.attacks[choice].cost,Const.fontName,20,20,new Color(0x2367C3));
-                        dmgInfo.draw(g2, _texts[choice].width + margin*(1+13*choice), Const.WDW_height - Const.HUD_fightHeight + margin/2 - manaInfo.height/2);
-                        manaInfo.draw(g2, _texts[choice].width + margin*(1+13*choice), Const.WDW_height - Const.HUD_fightHeight + margin/2 + manaInfo.height/2);
+                        if(player.attacks[choice].unlocked){
+                            Textbox dmgInfo = new Textbox("dmg:"+player.attacks[choice].damage,Const.fontName,20,20,new Color(0xB90E30));
+                            Textbox manaInfo = new Textbox("cost"+player.attacks[choice].cost,Const.fontName,20,20,new Color(0x2367C3));
+                            dmgInfo.draw(g2, _texts[choice].width + margin*(1+13*choice), Const.WDW_height - Const.HUD_fightHeight + margin/2 - manaInfo.height/2);
+                            manaInfo.draw(g2, _texts[choice].width + margin*(1+13*choice), Const.WDW_height - Const.HUD_fightHeight + margin/2 + manaInfo.height/2);
+                        }
+                        else{
+                            Textbox unlock = new Textbox("lvl"+player.attacks[choice].unlockLvl,Const.fontName,20,20,new Color(0x5A5C6C));
+                            unlock.draw(g2,_texts[choice].width + margin*(2+13*choice), Const.WDW_height - Const.HUD_fightHeight + margin);
+                        }
+                        
                         g2.setColor(new Color(0x1B1E5B));
                         g2.fillRect(margin*(2+13*choice),Const.WDW_height - Const.HUD_fightHeight + margin/2 + _texts[choice].height,_texts[choice].width - margin,3);
                     }
                     else if(choice >= 2){
-                        Textbox dmgInfo = new Textbox("dmg:"+player.attacks[choice].damage,Const.fontName,20,20,new Color(0xB90E30));
-                        Textbox manaInfo = new Textbox("cost"+player.attacks[choice].cost,Const.fontName,20,20,new Color(0x2367C3));
-                        dmgInfo.draw(g2, _texts[choice].width + margin*(1+13*(choice-2)), Const.WDW_height - Const.HUD_fightHeight + 4*margin - manaInfo.height );
-                        manaInfo.draw(g2, _texts[choice].width + margin*(1+13*(choice-2)), Const.WDW_height - Const.HUD_fightHeight + 4*margin);
+                        if(player.attacks[choice].unlocked){
+                            Textbox dmgInfo = new Textbox("dmg:"+player.attacks[choice].damage,Const.fontName,20,20,new Color(0xB90E30));
+                            Textbox manaInfo = new Textbox("cost"+player.attacks[choice].cost,Const.fontName,20,20,new Color(0x2367C3));
+                            dmgInfo.draw(g2, _texts[choice].width + margin*(1+13*(choice-2)), Const.WDW_height - Const.HUD_fightHeight + 4*margin - manaInfo.height );
+                            manaInfo.draw(g2, _texts[choice].width + margin*(1+13*(choice-2)), Const.WDW_height - Const.HUD_fightHeight + 4*margin);
+                        }
+                        else{
+                            Textbox unlock = new Textbox("lvl"+player.attacks[choice].unlockLvl,Const.fontName,20,20,new Color(0x5A5C6C));
+                            unlock.draw(g2,_texts[choice].width + margin*(2+13*(choice-2)), Const.WDW_height - Const.HUD_fightHeight + 3*margin + 10);
+                        }
                         g2.setColor(new Color(0x1B1E5B));
-                        g2.fillRect(margin*(2+13*(choice-2)),Const.WDW_height - Const.HUD_fightHeight + 4*margin + _texts[choice].height,_texts[choice].width - margin,3);
+                        g2.fillRect(margin*(2+13*(choice-2)),Const.WDW_height - Const.HUD_fightHeight + 4*margin + _texts[choice].height - 10, _texts[choice].width - margin,3);
                     }
                     
                     _texts[0].draw(g2,margin,Const.WDW_height - Const.HUD_fightHeight);
@@ -238,7 +252,6 @@ public class HUD_Fight extends HUD {
                         alert.draw(g2,3*margin,Const.WDW_height - Const.HUD_fightHeight + (3/2)*margin);
                         choice = -1;
                         selection = Const.Selection.BACK;
-                        changeSelectionColor(2, Color.blue, Color.red);
                     }
 
                     //Draw the "go back button"

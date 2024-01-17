@@ -80,7 +80,7 @@ public class FightScene {
             case Const.Selection.BACK:
                 if(menu.confirm){
                     menu.selection = Const.Selection.ATTACK;
-                    menu.changeSelectionColor(0, Color.blue, Color.red);
+                    //menu.changeSelectionColor(0, Color.blue, Color.red);
                     menu.page = 0;
                     menu.choice = -1;
                 }
