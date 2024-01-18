@@ -29,9 +29,9 @@ public class OBJ_Chest extends Props {
     }
     public void playerInterraction(Player player) {
         if(open == false && Scene.keyH.interactPressed){
+            open = true;
             Item item = Generator.generateItem();
             player.addItem(item);
-            open = true;
         }
     }
 }

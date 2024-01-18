@@ -24,7 +24,9 @@ import javax.imageio.ImageIO;
 public abstract class Character extends Entity {
     //Stats for fights
     public int health;  //health
+    public int maxHealth;
     public int mana;    //mana for special attacks
+    public int maxMana;
     public int agility; //probability to dodge an attack
     public int strength;//damage to inflict
     public int defense; //damag to reduce
@@ -40,14 +42,14 @@ public abstract class Character extends Entity {
     public String facing;
 
     // Character animations
-    private BufferedImage[] _idle_up;
-    private BufferedImage[] _idle_down;
-    private BufferedImage[] _idle_right;
-    private BufferedImage[] _idle_left;
-    private BufferedImage[] _walk_up;
-    private BufferedImage[] _walk_down;
-    private BufferedImage[] _walk_right;
-    private BufferedImage[] _walk_left;
+    protected BufferedImage[] _idle_up;
+    protected BufferedImage[] _idle_down;
+    protected BufferedImage[] _idle_right;
+    protected BufferedImage[] _idle_left;
+    protected BufferedImage[] _walk_up;
+    protected BufferedImage[] _walk_down;
+    protected BufferedImage[] _walk_right;
+    protected BufferedImage[] _walk_left;
 
     /**
      * @brief Constructor for the Character class.
@@ -263,18 +265,7 @@ public abstract class Character extends Entity {
         && worldY - Const.WRLD_tileScreenSize < worldY + playerScreenY) {
                         
             g2.drawImage(image, screenX, screenY, Const.WRLD_entityScreenSize, Const.WRLD_entityScreenSize, null);
-            g2.drawRect(screenX + hitbox.width / 2, screenY + hitbox.height, hitbox.width, hitbox.height); // Center the hitbox to the entity
+            //g2.drawRect(screenX + hitbox.width / 2, screenY + hitbox.height, hitbox.width, hitbox.height); //hitbox debug purposes
         }
-    }
-
-
-    /**
-     * @brief Draws the character in the fight scene.
-     * @param g2 The Graphics2D object for drawing.
-     * @param screenX The X-coordinate on the screen.
-     * @param screenY The Y-coordinate on the screen.
-     */
-    public void drawInFight(Graphics2D g2, int screenX, int screenY) {
-        // Other function to draw in fight scene
     }
 }

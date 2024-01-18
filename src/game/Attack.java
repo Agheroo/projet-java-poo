@@ -23,7 +23,16 @@ public class Attack {
      */
     public void applyAttack(Character emitter, Character reciever){
         //Find a nice equation to balance a bit the game and add a dodge chance with agility
-        reciever.health -= (emitter.strength*damage - 0.7*reciever.defense);
-        emitter.mana -= cost;
+        //Also find a interval "crit chance" maybe to make it more interesting
+        if(emitter.mana >= cost){
+            int dmg = (int)(damage + 0.4*emitter.strength*damage - 1.3*reciever.defense);
+
+            reciever.health -= dmg;
+            emitter.mana -= cost;
+        }
+        else{
+            emitter.mana = 0;
+            System.out.println("Vous avez tout donné... mais vous n'aviez pas assez de mana");
+        }
     }
 }

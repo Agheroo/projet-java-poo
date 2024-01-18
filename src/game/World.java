@@ -66,7 +66,7 @@ public class World extends Scene {
             16 * Const.WRLD_tileScreenSize, 0, 0, 0, "down", 4, 20);
         
         menu = new HUD_Welcome();
-        state = Const.State.WORLD;    //TODO : CHANGE THIS STATE WHEN RELEASING THE GAME
+        state = Const.State.WORLD;    //TODO : CHANGE THIS STATE TO WELCOME WHEN RELEASING THE GAME
         HUD_world = new HUD_World();
     }
 
@@ -147,16 +147,19 @@ public class World extends Scene {
         
         //If there is a fight, draw the fight instead of the game world
         if(currfight != null){
-            if( currfight.state == Const.FightState.FIGHTING){
-                currfight.draw(g2);
-            }
-            if(currfight.state == Const.FightState.WON){
-                currfight = null;
+            switch(FightScene.state){
+                case Const.FightState.FIGHTING:
+                    currfight.draw(g2); break;
+                case Const.FightState.WON:
+                    currfight = null; break;
+                case Const.FightState.LOST:
+                    menu.draw(g2); break;
+                default: break;
             }
         }
         
         else{
-            if(state == Const.State.WORLD){
+            if(Scene.state == Const.State.WORLD || Scene.state == Const.State.PAUSE){
                 // TILE
                 tileManager.draw(g2, this);
                 // OBJECT
@@ -178,16 +181,20 @@ public class World extends Scene {
                     enemy.drawInWorld(g2, screenX, screenY);
                 }
                 HUD_world.draw(g2);
+                //Draw pause screen last but still draw the background game
+                
             }
-            else if(state == Const.State.WELCOME){
+            if(Scene.state == Const.State.PAUSE){
                 menu.draw(g2);
             }
+
+            else if(Scene.state == Const.State.WELCOME){
+                menu.draw(g2);
+            }
+
+            
+            
         }  
 
-
-        //Draw pause screen last but still draw the background game
-        if(Scene.state == Const.State.PAUSE){
-            menu.draw(g2);
-        }
     }
 }

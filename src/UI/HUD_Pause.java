@@ -18,7 +18,7 @@ public class HUD_Pause extends HUD{
 
         _buttons[0] = new ChoiceButton(200, 50, "CONTINUER", Const.fontName, Color.blue);
         _buttons[1] = new ChoiceButton(200, 50, "QUITTER", Const.fontName, Color.blue);
-        changeSelectionColor(0, Color.blue, Color.red);
+        changeSelectionColor(0, new Color(0x784F30), new Color(0x594E3B),new Color(0xA38168), new Color(0xAB9672));
     }
 
 
@@ -31,11 +31,11 @@ public class HUD_Pause extends HUD{
             switch(selection.toString()){
                 case "CONTINUE":
                     selection = Const.Selection.QUIT;
-                    changeSelectionColor(1, Color.blue, Color.red);
+                    changeSelectionColor(1, new Color(0x784F30), new Color(0x594E3B),new Color(0xA38168), new Color(0x996348));
                     break;
                 case "QUIT":
                     selection = Const.Selection.CONTINUE;
-                    changeSelectionColor(0, Color.blue, Color.red);
+                    changeSelectionColor(0, new Color(0x784F30), new Color(0x594E3B),new Color(0xA38168), new Color(0x996348));
                     break;
 
                 default: break;    

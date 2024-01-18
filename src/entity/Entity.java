@@ -7,6 +7,7 @@ package entity;
 
 import java.awt.Rectangle;
 
+
 /**
  * @class Entity
  * @brief Represents an abstract entity with position, hitbox, and animations.
@@ -57,7 +58,7 @@ public abstract class Entity {
     /**
      * @brief Updates the frames of the entity's animation.
      */
-    protected void updateFrames() {
+    public void updateFrames() {
         _spriteUpdater++;
         if (_spriteUpdater > _spriteSpeed) {
             _spriteCnt++;

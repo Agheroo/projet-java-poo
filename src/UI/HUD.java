@@ -28,12 +28,14 @@ public abstract class HUD {
     }
 
 
-    public void changeSelectionColor(int selectionIndex, Color baseColor, Color selectColor){
+    public void changeSelectionColor(int selectionIndex, Color baseText, Color newText, Color baseBg, Color newBg){
         for(int i =0; i< _nbButtons; i++){
-            _buttons[i].setTextColor(baseColor);
+            _buttons[i].setTextColor(baseText);
+            _buttons[i].setBgColor(baseBg);
             _buttons[i].highlighted = false;
         }
-        _buttons[selectionIndex].setTextColor(selectColor);
+        _buttons[selectionIndex].setTextColor(newText);
+        _buttons[selectionIndex].setBgColor(newBg);
         _buttons[selectionIndex].highlighted = true;
     }
 

@@ -21,7 +21,7 @@ public final class Const {
     public final static int WRLD_maxRow = 64, WRLD_maxCol = 64; // DONT FORGET TO MODIFY WHEN CHANGING THE MAP !!!
 
     //FightScene parameters
-    public final static int FGHT_entityScreenSize = 200;
+    public final static int FGHT_entityScreenSize = 100;
 
     //TileManager
     public final static int nbFloorTextures = 7;
