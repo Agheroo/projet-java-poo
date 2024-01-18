@@ -86,7 +86,7 @@ public class FightScene {
                 }
                 break;
             
-            case Const.Selection.NONE:
+            case "NONE":
                 if(menu.confirm){
                     if(menu.choice != -1){
                         switch(menu.page){

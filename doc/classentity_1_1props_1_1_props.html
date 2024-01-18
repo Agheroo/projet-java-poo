@@ -68,9 +68,10 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#pac-methods">Package Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classentity_1_1props_1_1_props-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">entity.props.Props Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
@@ -83,11 +84,11 @@ Inheritance diagram for entity.props.Props:</div>
 <div class="dyncontent">
 <div class="center"><img src="classentity_1_1props_1_1_props__inherit__graph.png" border="0" usemap="#aentity_8props_8_props_inherit__map" alt="Inheritance graph"/></div>
 <map name="aentity_8props_8_props_inherit__map" id="aentity_8props_8_props_inherit__map">
-<area shape="rect" title="Represents in&#45;game props with properties such as image, name, and position." alt="" coords="211,321,350,457"/>
+<area shape="rect" title="Represents in&#45;game props with properties such as image, name, and position." alt="" coords="211,292,350,457"/>
 <area shape="rect" href="classentity_1_1props_1_1_o_b_j___chest.html" title="Represents a chest object." alt="" coords="5,505,175,597"/>
 <area shape="rect" href="classentity_1_1props_1_1_o_b_j___door.html" title="Represents a door object in the game." alt="" coords="199,505,362,597"/>
 <area shape="rect" href="classentity_1_1props_1_1_o_b_j___key.html" title="Represents a key object in the game." alt="" coords="386,505,549,597"/>
-<area shape="rect" href="classentity_1_1_entity.html" title="Represents an abstract entity with position, hitbox, and animations." alt="" coords="199,5,362,273"/>
+<area shape="rect" href="classentity_1_1_entity.html" title="Represents an abstract entity with position, hitbox, and animations." alt="" coords="199,5,362,244"/>
 </map>
 </div>
 <div class="dynheader">
@@ -95,22 +96,27 @@ Collaboration diagram for entity.props.Props:</div>
 <div class="dyncontent">
 <div class="center"><img src="classentity_1_1props_1_1_props__coll__graph.png" border="0" usemap="#aentity_8props_8_props_coll__map" alt="Collaboration graph"/></div>
 <map name="aentity_8props_8_props_coll__map" id="aentity_8props_8_props_coll__map">
-<area shape="rect" title="Represents in&#45;game props with properties such as image, name, and position." alt="" coords="100,461,239,597"/>
-<area shape="rect" href="classentity_1_1_entity.html" title="Represents an abstract entity with position, hitbox, and animations." alt="" coords="5,145,168,399"/>
+<area shape="rect" title="Represents in&#45;game props with properties such as image, name, and position." alt="" coords="100,432,239,583"/>
+<area shape="rect" href="classentity_1_1_entity.html" title="Represents an abstract entity with position, hitbox, and animations." alt="" coords="5,145,168,369"/>
 <area shape="rect" title=" " alt="" coords="43,5,130,83"/>
-<area shape="rect" title=" " alt="" coords="193,233,311,311"/>
+<area shape="rect" title=" " alt="" coords="193,219,311,296"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8089810f8f67b92327a31a6858e0e85f"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classentity_1_1props_1_1_props.html#a8089810f8f67b92327a31a6858e0e85f">getCollision</a> ()</td></tr>
+<tr class="memdesc:a8089810f8f67b92327a31a6858e0e85f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the collision of the prop.  <a href="classentity_1_1props_1_1_props.html#a8089810f8f67b92327a31a6858e0e85f">More...</a><br /></td></tr>
 <tr class="separator:a8089810f8f67b92327a31a6858e0e85f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63deacfcaa9b826683111566c0b442c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classentity_1_1props_1_1_props.html#a63deacfcaa9b826683111566c0b442c5">block</a> (<a class="el" href="classentity_1_1_player.html">Player</a> player)</td></tr>
+<tr class="memdesc:a63deacfcaa9b826683111566c0b442c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Quick util functions to check if the current prop need to block the player and updates directly its worldW worldY coordinates.  <a href="classentity_1_1props_1_1_props.html#a63deacfcaa9b826683111566c0b442c5">More...</a><br /></td></tr>
+<tr class="separator:a63deacfcaa9b826683111566c0b442c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab837cf0c685323fe8c2cc84d80f6315a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classentity_1_1props_1_1_props.html#ab837cf0c685323fe8c2cc84d80f6315a">destroySelf</a> ()</td></tr>
+<tr class="memdesc:ab837cf0c685323fe8c2cc84d80f6315a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the current prop in the world (using the hashmap)  <a href="classentity_1_1props_1_1_props.html#ab837cf0c685323fe8c2cc84d80f6315a">More...</a><br /></td></tr>
+<tr class="separator:ab837cf0c685323fe8c2cc84d80f6315a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe21ed292d32b599d5b042106e0cfb51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classentity_1_1props_1_1_props.html#abe21ed292d32b599d5b042106e0cfb51">draw</a> (Graphics2D g2, <a class="el" href="classgame_1_1_world.html">World</a> world)</td></tr>
 <tr class="memdesc:abe21ed292d32b599d5b042106e0cfb51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the prop on the screen based on its position relative to the player's position.  <a href="classentity_1_1props_1_1_props.html#abe21ed292d32b599d5b042106e0cfb51">More...</a><br /></td></tr>
 <tr class="separator:abe21ed292d32b599d5b042106e0cfb51"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab837cf0c685323fe8c2cc84d80f6315a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classentity_1_1props_1_1_props.html#ab837cf0c685323fe8c2cc84d80f6315a">destroySelf</a> ()</td></tr>
-<tr class="separator:ab837cf0c685323fe8c2cc84d80f6315a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classentity_1_1_entity"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classentity_1_1_entity')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classentity_1_1_entity.html">entity.Entity</a></td></tr>
 <tr class="memitem:a5b732487cc1bdf1388db4e3f59409d52 inherit pub_methods_classentity_1_1_entity"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classentity_1_1_entity.html#a5b732487cc1bdf1388db4e3f59409d52">Entity</a> ()</td></tr>
 <tr class="memdesc:a5b732487cc1bdf1388db4e3f59409d52 inherit pub_methods_classentity_1_1_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor for the <a class="el" href="classentity_1_1_entity.html" title="Represents an abstract entity with position, hitbox, and animations.">Entity</a> class.  <a href="classentity_1_1_entity.html#a5b732487cc1bdf1388db4e3f59409d52">More...</a><br /></td></tr>
@@ -118,33 +124,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a64161739076def0816eab3956d5b6346 inherit pub_methods_classentity_1_1_entity"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classentity_1_1_entity.html#a64161739076def0816eab3956d5b6346">Entity</a> (String entityName, int x, int y, int <a class="el" href="classentity_1_1_entity.html#af6b442584a7caf6e84e73872f9f8e080">_spriteCntMax</a>, int spriteSpeed, boolean <a class="el" href="classentity_1_1_entity.html#acd7f4b7c1acbdcd410ee9ad61a86b58e">collision</a>)</td></tr>
 <tr class="memdesc:a64161739076def0816eab3956d5b6346 inherit pub_methods_classentity_1_1_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the <a class="el" href="classentity_1_1_entity.html" title="Represents an abstract entity with position, hitbox, and animations.">Entity</a> class with specified initial position and animation parameters.  <a href="classentity_1_1_entity.html#a64161739076def0816eab3956d5b6346">More...</a><br /></td></tr>
 <tr class="separator:a64161739076def0816eab3956d5b6346 inherit pub_methods_classentity_1_1_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a127423f72cd9e8ec189509dad498b21b inherit pub_methods_classentity_1_1_entity"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classentity_1_1_entity.html#a127423f72cd9e8ec189509dad498b21b">update</a> (<a class="el" href="classgame_1_1_scene.html">Scene</a> scene, double dt)</td></tr>
-<tr class="memdesc:a127423f72cd9e8ec189509dad498b21b inherit pub_methods_classentity_1_1_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the entity's position based on the current scene and time elapsed.  <a href="classentity_1_1_entity.html#a127423f72cd9e8ec189509dad498b21b">More...</a><br /></td></tr>
-<tr class="separator:a127423f72cd9e8ec189509dad498b21b inherit pub_methods_classentity_1_1_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41e81bb1c3a3e86f3f43aa39d8fbb748 inherit pub_methods_classentity_1_1_entity"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classentity_1_1_entity.html#a41e81bb1c3a3e86f3f43aa39d8fbb748">updateFrames</a> ()</td></tr>
+<tr class="memdesc:a41e81bb1c3a3e86f3f43aa39d8fbb748 inherit pub_methods_classentity_1_1_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the frames of the entity's animation.  <a href="classentity_1_1_entity.html#a41e81bb1c3a3e86f3f43aa39d8fbb748">More...</a><br /></td></tr>
+<tr class="separator:a41e81bb1c3a3e86f3f43aa39d8fbb748 inherit pub_methods_classentity_1_1_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae874ae13e301bb9f227535534869f64e inherit pub_methods_classentity_1_1_entity"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classentity_1_1_entity.html#ae874ae13e301bb9f227535534869f64e">playerInterraction</a> (<a class="el" href="classentity_1_1_player.html">Player</a> player)</td></tr>
+<tr class="separator:ae874ae13e301bb9f227535534869f64e inherit pub_methods_classentity_1_1_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:ad9057ae1a190d0f140f579820860b176"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classentity_1_1props_1_1_props.html#ad9057ae1a190d0f140f579820860b176">loadTextures</a> (String <a class="el" href="classentity_1_1_entity.html#a19fc9a3b25d27f23c8ada7af8e746a17">name</a>)</td></tr>
-<tr class="separator:ad9057ae1a190d0f140f579820860b176"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_methods_classentity_1_1_entity"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classentity_1_1_entity')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classentity_1_1_entity.html">entity.Entity</a></td></tr>
-<tr class="memitem:a41e81bb1c3a3e86f3f43aa39d8fbb748 inherit pro_methods_classentity_1_1_entity"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classentity_1_1_entity.html#a41e81bb1c3a3e86f3f43aa39d8fbb748">updateFrames</a> ()</td></tr>
-<tr class="memdesc:a41e81bb1c3a3e86f3f43aa39d8fbb748 inherit pro_methods_classentity_1_1_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the frames of the entity's animation.  <a href="classentity_1_1_entity.html#a41e81bb1c3a3e86f3f43aa39d8fbb748">More...</a><br /></td></tr>
-<tr class="separator:a41e81bb1c3a3e86f3f43aa39d8fbb748 inherit pro_methods_classentity_1_1_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae874ae13e301bb9f227535534869f64e inherit pro_methods_classentity_1_1_entity"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classentity_1_1_entity.html#ae874ae13e301bb9f227535534869f64e">playerInterraction</a> (<a class="el" href="classentity_1_1_player.html">Player</a> player)</td></tr>
-<tr class="separator:ae874ae13e301bb9f227535534869f64e inherit pro_methods_classentity_1_1_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pac-methods" name="pac-methods"></a>
-Package Functions</h2></td></tr>
-<tr class="memitem:ad691e3b1fba4f339b58e928321572bb6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classentity_1_1props_1_1_props.html#ad691e3b1fba4f339b58e928321572bb6">Props</a> (int x, int y, String <a class="el" href="classentity_1_1_entity.html#a19fc9a3b25d27f23c8ada7af8e746a17">name</a>, int spriteCntMax, int spriteSpeed, boolean <a class="el" href="classentity_1_1_entity.html#acd7f4b7c1acbdcd410ee9ad61a86b58e">collision</a>)</td></tr>
-<tr class="separator:ad691e3b1fba4f339b58e928321572bb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:a4c5f6481f26f897dc5467c91498ff77b"><td class="memItemLeft" align="right" valign="top">BufferedImage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classentity_1_1props_1_1_props.html#a4c5f6481f26f897dc5467c91498ff77b">image</a></td></tr>
-<tr class="separator:a4c5f6481f26f897dc5467c91498ff77b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a2c69a7ac84902c86a6dd74bfc9807018"><td class="memItemLeft" align="right" valign="top">BufferedImage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classentity_1_1props_1_1_props.html#a2c69a7ac84902c86a6dd74bfc9807018">images</a> []</td></tr>
+<tr class="separator:a2c69a7ac84902c86a6dd74bfc9807018"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classentity_1_1_entity"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classentity_1_1_entity')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classentity_1_1_entity.html">entity.Entity</a></td></tr>
 <tr class="memitem:a1e32a2c118ea8db4ad607cfc1a8beabe inherit pub_attribs_classentity_1_1_entity"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classentity_1_1_entity.html#a1e32a2c118ea8db4ad607cfc1a8beabe">worldX</a></td></tr>
 <tr class="separator:a1e32a2c118ea8db4ad607cfc1a8beabe inherit pub_attribs_classentity_1_1_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,6 +143,16 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a5b026458182ab12ddcacb2858eca0a41 inherit pub_attribs_classentity_1_1_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19fc9a3b25d27f23c8ada7af8e746a17 inherit pub_attribs_classentity_1_1_entity"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classentity_1_1_entity.html#a19fc9a3b25d27f23c8ada7af8e746a17">name</a></td></tr>
 <tr class="separator:a19fc9a3b25d27f23c8ada7af8e746a17 inherit pub_attribs_classentity_1_1_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:ad9057ae1a190d0f140f579820860b176"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classentity_1_1props_1_1_props.html#ad9057ae1a190d0f140f579820860b176">loadTextures</a> (String <a class="el" href="classentity_1_1_entity.html#a19fc9a3b25d27f23c8ada7af8e746a17">name</a>)</td></tr>
+<tr class="separator:ad9057ae1a190d0f140f579820860b176"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a606e89d3bbe76b48434258901f3af6b3"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classentity_1_1props_1_1_props.html#a606e89d3bbe76b48434258901f3af6b3">open</a></td></tr>
+<tr class="separator:a606e89d3bbe76b48434258901f3af6b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classentity_1_1_entity"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classentity_1_1_entity')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classentity_1_1_entity.html">entity.Entity</a></td></tr>
 <tr class="memitem:acd7f4b7c1acbdcd410ee9ad61a86b58e inherit pro_attribs_classentity_1_1_entity"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classentity_1_1_entity.html#acd7f4b7c1acbdcd410ee9ad61a86b58e">collision</a></td></tr>
 <tr class="separator:acd7f4b7c1acbdcd410ee9ad61a86b58e inherit pro_attribs_classentity_1_1_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,11 +164,17 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a61ba22624c5da7387312d9aa6d8e2526 inherit pro_attribs_classentity_1_1_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6b442584a7caf6e84e73872f9f8e080 inherit pro_attribs_classentity_1_1_entity"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classentity_1_1_entity.html#af6b442584a7caf6e84e73872f9f8e080">_spriteCntMax</a></td></tr>
 <tr class="separator:af6b442584a7caf6e84e73872f9f8e080 inherit pro_attribs_classentity_1_1_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pac-methods" name="pac-methods"></a>
+Package Functions</h2></td></tr>
+<tr class="memitem:ad691e3b1fba4f339b58e928321572bb6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classentity_1_1props_1_1_props.html#ad691e3b1fba4f339b58e928321572bb6">Props</a> (int x, int y, String <a class="el" href="classentity_1_1_entity.html#a19fc9a3b25d27f23c8ada7af8e746a17">name</a>, int spriteCntMax, int spriteSpeed, boolean <a class="el" href="classentity_1_1_entity.html#acd7f4b7c1acbdcd410ee9ad61a86b58e">collision</a>)</td></tr>
+<tr class="memdesc:ad691e3b1fba4f339b58e928321572bb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for props (keys/doors/chests...)  <a href="classentity_1_1props_1_1_props.html#ad691e3b1fba4f339b58e928321572bb6">More...</a><br /></td></tr>
+<tr class="separator:ad691e3b1fba4f339b58e928321572bb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Represents in-game props with properties such as image, name, and position. </p>
 
-<p class="definition">Definition at line <a class="el" href="_props_8java_source.html#l00024">24</a> of file <a class="el" href="_props_8java_source.html">Props.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_props_8java_source.html#l00026">26</a> of file <a class="el" href="_props_8java_source.html">Props.java</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad691e3b1fba4f339b58e928321572bb6" name="ad691e3b1fba4f339b58e928321572bb6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad691e3b1fba4f339b58e928321572bb6">&#9670;&nbsp;</a></span>Props()</h2>
@@ -229,23 +234,92 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_props_8java_source.html#l00028">28</a> of file <a class="el" href="_props_8java_source.html">Props.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   28</span>                                                                                          {</div>
-<div class="line"><span class="lineno">   29</span>        super(<a class="code hl_variable" href="classentity_1_1_entity.html#a19fc9a3b25d27f23c8ada7af8e746a17">name</a>,x,y,spriteCntMax,spriteSpeed,<a class="code hl_variable" href="classentity_1_1_entity.html#acd7f4b7c1acbdcd410ee9ad61a86b58e">collision</a>);</div>
-<div class="line"><span class="lineno">   30</span>        hitbox.width = 3*Const.WRLD_tileScreenSize/4;  <span class="comment">//Slightly smaller than a tile</span></div>
-<div class="line"><span class="lineno">   31</span>        hitbox.height = 3*Const.WRLD_tileScreenSize/4;</div>
-<div class="line"><span class="lineno">   32</span>        hitbox.x = <a class="code hl_variable" href="classentity_1_1_entity.html#a1e32a2c118ea8db4ad607cfc1a8beabe">worldX</a> + <a class="code hl_variable" href="classentity_1_1_entity.html#a5b026458182ab12ddcacb2858eca0a41">hitbox</a>.width/4;</div>
-<div class="line"><span class="lineno">   33</span>        hitbox.y = <a class="code hl_variable" href="classentity_1_1_entity.html#a7bde61b88f69e437b0d21df86698a7a0">worldY</a> + <a class="code hl_variable" href="classentity_1_1_entity.html#a5b026458182ab12ddcacb2858eca0a41">hitbox</a>.height/4;</div>
-<div class="line"><span class="lineno">   34</span>    }</div>
+<p>Constructor for props (keys/doors/chests...) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>WorldX of entity </td></tr>
+    <tr><td class="paramname">y</td><td>worldY of entity </td></tr>
+    <tr><td class="paramname">name</td><td>Name of entity </td></tr>
+    <tr><td class="paramname">spriteCntMax</td><td>If animated, nb of sprites </td></tr>
+    <tr><td class="paramname">spriteSpeed</td><td>If animated, speed of animation of sprites </td></tr>
+    <tr><td class="paramname">collision</td><td>Is the character blocked by the prop or not </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_props_8java_source.html#l00038">38</a> of file <a class="el" href="_props_8java_source.html">Props.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   38</span>                                                                                          {</div>
+<div class="line"><span class="lineno">   39</span>        super(<a class="code hl_variable" href="classentity_1_1_entity.html#a19fc9a3b25d27f23c8ada7af8e746a17">name</a>,x,y,spriteCntMax,spriteSpeed,<a class="code hl_variable" href="classentity_1_1_entity.html#acd7f4b7c1acbdcd410ee9ad61a86b58e">collision</a>);</div>
+<div class="line"><span class="lineno">   40</span>        this.images =  <span class="keyword">new</span> BufferedImage[spriteCntMax];</div>
+<div class="line"><span class="lineno">   41</span>        hitbox.width = Const.WRLD_tileScreenSize;</div>
+<div class="line"><span class="lineno">   42</span>        hitbox.height = Const.WRLD_tileScreenSize;</div>
+<div class="line"><span class="lineno">   43</span>        hitbox.x = <a class="code hl_variable" href="classentity_1_1_entity.html#a1e32a2c118ea8db4ad607cfc1a8beabe">worldX</a>;</div>
+<div class="line"><span class="lineno">   44</span>        hitbox.y = <a class="code hl_variable" href="classentity_1_1_entity.html#a7bde61b88f69e437b0d21df86698a7a0">worldY</a>;</div>
+<div class="line"><span class="lineno">   45</span>    }</div>
 <div class="ttc" id="aclassentity_1_1_entity_html_a19fc9a3b25d27f23c8ada7af8e746a17"><div class="ttname"><a href="classentity_1_1_entity.html#a19fc9a3b25d27f23c8ada7af8e746a17">entity.Entity.name</a></div><div class="ttdeci">String name</div><div class="ttdef"><b>Definition:</b> <a href="_entity_8java_source.html#l00028">Entity.java:28</a></div></div>
 <div class="ttc" id="aclassentity_1_1_entity_html_a1e32a2c118ea8db4ad607cfc1a8beabe"><div class="ttname"><a href="classentity_1_1_entity.html#a1e32a2c118ea8db4ad607cfc1a8beabe">entity.Entity.worldX</a></div><div class="ttdeci">int worldX</div><div class="ttdef"><b>Definition:</b> <a href="_entity_8java_source.html#l00017">Entity.java:17</a></div></div>
-<div class="ttc" id="aclassentity_1_1_entity_html_a5b026458182ab12ddcacb2858eca0a41"><div class="ttname"><a href="classentity_1_1_entity.html#a5b026458182ab12ddcacb2858eca0a41">entity.Entity.hitbox</a></div><div class="ttdeci">Rectangle hitbox</div><div class="ttdef"><b>Definition:</b> <a href="_entity_8java_source.html#l00020">Entity.java:20</a></div></div>
 <div class="ttc" id="aclassentity_1_1_entity_html_a7bde61b88f69e437b0d21df86698a7a0"><div class="ttname"><a href="classentity_1_1_entity.html#a7bde61b88f69e437b0d21df86698a7a0">entity.Entity.worldY</a></div><div class="ttdeci">int worldY</div><div class="ttdef"><b>Definition:</b> <a href="_entity_8java_source.html#l00017">Entity.java:17</a></div></div>
 <div class="ttc" id="aclassentity_1_1_entity_html_acd7f4b7c1acbdcd410ee9ad61a86b58e"><div class="ttname"><a href="classentity_1_1_entity.html#acd7f4b7c1acbdcd410ee9ad61a86b58e">entity.Entity.collision</a></div><div class="ttdeci">boolean collision</div><div class="ttdef"><b>Definition:</b> <a href="_entity_8java_source.html#l00018">Entity.java:18</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a63deacfcaa9b826683111566c0b442c5" name="a63deacfcaa9b826683111566c0b442c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63deacfcaa9b826683111566c0b442c5">&#9670;&nbsp;</a></span>block()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void entity.props.Props.block </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classentity_1_1_player.html">Player</a>&#160;</td>
+          <td class="paramname"><em>player</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Quick util functions to check if the current prop need to block the player and updates directly its worldW worldY coordinates. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">player</td><td>The player to check collisions with </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_props_8java_source.html#l00059">59</a> of file <a class="el" href="_props_8java_source.html">Props.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>                                    {</div>
+<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">if</span>((player.hitbox.y &gt; <a class="code hl_variable" href="classentity_1_1_entity.html#a5b026458182ab12ddcacb2858eca0a41">hitbox</a>.y &amp;&amp; player.hitbox.y &lt; <a class="code hl_variable" href="classentity_1_1_entity.html#a5b026458182ab12ddcacb2858eca0a41">hitbox</a>.y + <a class="code hl_variable" href="classentity_1_1_entity.html#a5b026458182ab12ddcacb2858eca0a41">hitbox</a>.height)</div>
+<div class="line"><span class="lineno">   61</span>        || (player.hitbox.y + player.hitbox.height &gt; <a class="code hl_variable" href="classentity_1_1_entity.html#a5b026458182ab12ddcacb2858eca0a41">hitbox</a>.y &amp;&amp; player.hitbox.y + player.hitbox.height &lt; <a class="code hl_variable" href="classentity_1_1_entity.html#a5b026458182ab12ddcacb2858eca0a41">hitbox</a>.y + <a class="code hl_variable" href="classentity_1_1_entity.html#a5b026458182ab12ddcacb2858eca0a41">hitbox</a>.height)){</div>
+<div class="line"><span class="lineno">   62</span>            <span class="keywordflow">if</span>(player.hitbox.x + player.hitbox.width &gt; <a class="code hl_variable" href="classentity_1_1_entity.html#a5b026458182ab12ddcacb2858eca0a41">hitbox</a>.x &amp;&amp; player.hitbox.x &lt; <a class="code hl_variable" href="classentity_1_1_entity.html#a5b026458182ab12ddcacb2858eca0a41">hitbox</a>.x + <a class="code hl_variable" href="classentity_1_1_entity.html#a5b026458182ab12ddcacb2858eca0a41">hitbox</a>.width){</div>
+<div class="line"><span class="lineno">   63</span>                <span class="keywordflow">if</span>(player.dirX == 1 &amp;&amp; player.hitbox.x &lt; <a class="code hl_variable" href="classentity_1_1_entity.html#a5b026458182ab12ddcacb2858eca0a41">hitbox</a>.x){</div>
+<div class="line"><span class="lineno">   64</span>                    player.worldX = hitbox.x - player.hitbox.width -player.hitbox.width/2;</div>
+<div class="line"><span class="lineno">   65</span>                }</div>
+<div class="line"><span class="lineno">   66</span>                <span class="keywordflow">if</span>(player.dirX == -1 &amp;&amp; player.hitbox.x + player.hitbox.width &gt; <a class="code hl_variable" href="classentity_1_1_entity.html#a5b026458182ab12ddcacb2858eca0a41">hitbox</a>.x + <a class="code hl_variable" href="classentity_1_1_entity.html#a5b026458182ab12ddcacb2858eca0a41">hitbox</a>.width){</div>
+<div class="line"><span class="lineno">   67</span>                    player.worldX = hitbox.x + hitbox.width - player.hitbox.width/2;</div>
+<div class="line"><span class="lineno">   68</span>                }</div>
+<div class="line"><span class="lineno">   69</span>            }</div>
+<div class="line"><span class="lineno">   70</span>        }</div>
+<div class="line"><span class="lineno">   71</span> </div>
+<div class="line"><span class="lineno">   72</span>        <span class="keywordflow">if</span>((player.hitbox.x &gt; <a class="code hl_variable" href="classentity_1_1_entity.html#a5b026458182ab12ddcacb2858eca0a41">hitbox</a>.x &amp;&amp; player.hitbox.x &lt; <a class="code hl_variable" href="classentity_1_1_entity.html#a5b026458182ab12ddcacb2858eca0a41">hitbox</a>.x + <a class="code hl_variable" href="classentity_1_1_entity.html#a5b026458182ab12ddcacb2858eca0a41">hitbox</a>.width)</div>
+<div class="line"><span class="lineno">   73</span>        || (player.hitbox.x + player.hitbox.width &gt; <a class="code hl_variable" href="classentity_1_1_entity.html#a5b026458182ab12ddcacb2858eca0a41">hitbox</a>.x &amp;&amp; player.hitbox.x + player.hitbox.width &lt; <a class="code hl_variable" href="classentity_1_1_entity.html#a5b026458182ab12ddcacb2858eca0a41">hitbox</a>.x + <a class="code hl_variable" href="classentity_1_1_entity.html#a5b026458182ab12ddcacb2858eca0a41">hitbox</a>.width)){</div>
+<div class="line"><span class="lineno">   74</span>            <span class="keywordflow">if</span>(player.hitbox.y + player.hitbox.height &gt; <a class="code hl_variable" href="classentity_1_1_entity.html#a5b026458182ab12ddcacb2858eca0a41">hitbox</a>.y &amp;&amp; player.hitbox.y &lt; <a class="code hl_variable" href="classentity_1_1_entity.html#a5b026458182ab12ddcacb2858eca0a41">hitbox</a>.y + <a class="code hl_variable" href="classentity_1_1_entity.html#a5b026458182ab12ddcacb2858eca0a41">hitbox</a>.height){</div>
+<div class="line"><span class="lineno">   75</span>                <span class="keywordflow">if</span>(player.dirY == 1 &amp;&amp; player.hitbox.y &lt; <a class="code hl_variable" href="classentity_1_1_entity.html#a5b026458182ab12ddcacb2858eca0a41">hitbox</a>.y){</div>
+<div class="line"><span class="lineno">   76</span>                    player.worldY = hitbox.y - player.hitbox.height - player.hitbox.height;</div>
+<div class="line"><span class="lineno">   77</span>                }</div>
+<div class="line"><span class="lineno">   78</span>                <span class="keywordflow">if</span>(player.dirY == -1 &amp;&amp; player.hitbox.y + player.hitbox.height &gt; <a class="code hl_variable" href="classentity_1_1_entity.html#a5b026458182ab12ddcacb2858eca0a41">hitbox</a>.y + <a class="code hl_variable" href="classentity_1_1_entity.html#a5b026458182ab12ddcacb2858eca0a41">hitbox</a>.height){</div>
+<div class="line"><span class="lineno">   79</span>                    player.worldY = hitbox.y + hitbox.height - player.hitbox.height;</div>
+<div class="line"><span class="lineno">   80</span>                }</div>
+<div class="line"><span class="lineno">   81</span>            }</div>
+<div class="line"><span class="lineno">   82</span>        }</div>
+<div class="line"><span class="lineno">   83</span>        </div>
+<div class="line"><span class="lineno">   84</span> </div>
+<div class="line"><span class="lineno">   85</span>    }</div>
+<div class="ttc" id="aclassentity_1_1_entity_html_a5b026458182ab12ddcacb2858eca0a41"><div class="ttname"><a href="classentity_1_1_entity.html#a5b026458182ab12ddcacb2858eca0a41">entity.Entity.hitbox</a></div><div class="ttdeci">Rectangle hitbox</div><div class="ttdef"><b>Definition:</b> <a href="_entity_8java_source.html#l00020">Entity.java:20</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="ab837cf0c685323fe8c2cc84d80f6315a" name="ab837cf0c685323fe8c2cc84d80f6315a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab837cf0c685323fe8c2cc84d80f6315a">&#9670;&nbsp;</a></span>destroySelf()</h2>
 
@@ -261,31 +335,20 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_props_8java_source.html#l00077">77</a> of file <a class="el" href="_props_8java_source.html">Props.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   77</span>                             {</div>
-<div class="line"><span class="lineno">   78</span>        Point point=<span class="keyword">new</span> Point(<a class="code hl_variable" href="classentity_1_1_entity.html#a1e32a2c118ea8db4ad607cfc1a8beabe">worldX</a>,<a class="code hl_variable" href="classentity_1_1_entity.html#a7bde61b88f69e437b0d21df86698a7a0">worldY</a>);</div>
-<div class="line"><span class="lineno">   79</span>        World instance=World.getWorld();</div>
-<div class="line"><span class="lineno">   80</span>        instance.objMap.remove(point,<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   81</span>    }</div>
+<p>Destroys the current prop in the world (using the hashmap) </p>
+
+<p class="definition">Definition at line <a class="el" href="_props_8java_source.html#l00106">106</a> of file <a class="el" href="_props_8java_source.html">Props.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  106</span>                             {</div>
+<div class="line"><span class="lineno">  107</span>        Point point=<span class="keyword">new</span> Point(<a class="code hl_variable" href="classentity_1_1_entity.html#a1e32a2c118ea8db4ad607cfc1a8beabe">worldX</a>,<a class="code hl_variable" href="classentity_1_1_entity.html#a7bde61b88f69e437b0d21df86698a7a0">worldY</a>);</div>
+<div class="line"><span class="lineno">  108</span>        World.objMap.remove(point,<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  109</span>    }</div>
 </div><!-- fragment --><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classentity_1_1props_1_1_props_ab837cf0c685323fe8c2cc84d80f6315a_cgraph.png" border="0" usemap="#aclassentity_1_1props_1_1_props_ab837cf0c685323fe8c2cc84d80f6315a_cgraph" alt=""/></div>
-<map name="aclassentity_1_1props_1_1_props_ab837cf0c685323fe8c2cc84d80f6315a_cgraph" id="aclassentity_1_1props_1_1_props_ab837cf0c685323fe8c2cc84d80f6315a_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,221,32"/>
-<area shape="rect" href="classgame_1_1_world.html#a0e40ca86573cf45d858cc8e529865649" title="Gets the instance of the World." alt="" coords="269,5,432,32"/>
-<area shape="rect" href="class_u_i_1_1_textbox.html#ac3a40742547f48f95f29ce1649ac88a0" title=" " alt="" coords="480,5,631,32"/>
-</map>
-</div>
-<div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classentity_1_1props_1_1_props_ab837cf0c685323fe8c2cc84d80f6315a_icgraph.png" border="0" usemap="#aclassentity_1_1props_1_1_props_ab837cf0c685323fe8c2cc84d80f6315a_icgraph" alt=""/></div>
 <map name="aclassentity_1_1props_1_1_props_ab837cf0c685323fe8c2cc84d80f6315a_icgraph" id="aclassentity_1_1props_1_1_props_ab837cf0c685323fe8c2cc84d80f6315a_icgraph">
-<area shape="rect" title=" " alt="" coords="268,78,484,105"/>
-<area shape="rect" href="classentity_1_1props_1_1_o_b_j___chest.html#a3fd47570a31ae5fa8d3009776eb876bd" title=" " alt="" coords="5,5,220,47"/>
-<area shape="rect" href="classentity_1_1props_1_1_o_b_j___door.html#a9839aec16dffa3eadd3085215c3659be" title=" " alt="" coords="9,71,216,112"/>
-<area shape="rect" href="classentity_1_1props_1_1_o_b_j___key.html#a0c36447224c2d7c67b9b015cd40e0f35" title=" " alt="" coords="13,136,212,177"/>
+<area shape="rect" title="Destroys the current prop in the world (using the hashmap)" alt="" coords="252,13,468,39"/>
+<area shape="rect" href="classentity_1_1props_1_1_o_b_j___key.html#a0c36447224c2d7c67b9b015cd40e0f35" title=" " alt="" coords="5,5,204,47"/>
 </map>
 </div>
 
@@ -326,27 +389,35 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_props_8java_source.html#l00057">57</a> of file <a class="el" href="_props_8java_source.html">Props.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   57</span>                                                 {</div>
-<div class="line"><span class="lineno">   58</span>        <span class="comment">// Calculate the screen position of the player</span></div>
-<div class="line"><span class="lineno">   59</span>        <span class="keywordtype">int</span> playerScreenX = (Const.WDW_width - Const.WRLD_entityScreenSize) / 2;</div>
-<div class="line"><span class="lineno">   60</span>        <span class="keywordtype">int</span> playerScreenY = (Const.WDW_height - Const.WRLD_entityScreenSize) / 2;</div>
-<div class="line"><span class="lineno">   61</span> </div>
-<div class="line"><span class="lineno">   62</span>        <span class="comment">// Calculate the screen position of the prop relative to the player&#39;s position</span></div>
-<div class="line"><span class="lineno">   63</span>        <span class="keywordtype">int</span> screenX = <a class="code hl_variable" href="classentity_1_1_entity.html#a1e32a2c118ea8db4ad607cfc1a8beabe">worldX</a> - world.player.worldX + playerScreenX;</div>
-<div class="line"><span class="lineno">   64</span>        <span class="keywordtype">int</span> screenY = <a class="code hl_variable" href="classentity_1_1_entity.html#a7bde61b88f69e437b0d21df86698a7a0">worldY</a> - world.player.worldY + playerScreenY;</div>
-<div class="line"><span class="lineno">   65</span> </div>
-<div class="line"><span class="lineno">   66</span>        <span class="comment">// Check if the prop is within the visible screen region around the player</span></div>
-<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classentity_1_1_entity.html#a1e32a2c118ea8db4ad607cfc1a8beabe">worldX</a> + Const.WRLD_tileScreenSize &gt; world.player.worldX - playerScreenX</div>
-<div class="line"><span class="lineno">   68</span>                &amp;&amp; <a class="code hl_variable" href="classentity_1_1_entity.html#a1e32a2c118ea8db4ad607cfc1a8beabe">worldX</a> - Const.WRLD_tileScreenSize &lt; world.player.worldX + playerScreenX</div>
-<div class="line"><span class="lineno">   69</span>                &amp;&amp; <a class="code hl_variable" href="classentity_1_1_entity.html#a7bde61b88f69e437b0d21df86698a7a0">worldY</a> + Const.WRLD_tileScreenSize &gt; world.player.worldY - playerScreenY</div>
-<div class="line"><span class="lineno">   70</span>                &amp;&amp; <a class="code hl_variable" href="classentity_1_1_entity.html#a7bde61b88f69e437b0d21df86698a7a0">worldY</a> - Const.WRLD_tileScreenSize &lt; world.player.worldY + playerScreenY) {</div>
-<div class="line"><span class="lineno">   71</span>            <span class="comment">// Draw the prop on the screen</span></div>
-<div class="line"><span class="lineno">   72</span>            g2.drawImage(<a class="code hl_variable" href="classentity_1_1props_1_1_props.html#a4c5f6481f26f897dc5467c91498ff77b">image</a>, screenX, screenY, Const.WRLD_entityScreenSize, Const.WRLD_entityScreenSize, <span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">   73</span>            g2.drawRect(screenX + Const.WRLD_entityScreenSize/8, screenY + Const.WRLD_entityScreenSize/8, <span class="keyword">this</span>.hitbox.width, <span class="keyword">this</span>.hitbox.height);</div>
-<div class="line"><span class="lineno">   74</span>        }</div>
-<div class="line"><span class="lineno">   75</span>    }</div>
-<div class="ttc" id="aclassentity_1_1props_1_1_props_html_a4c5f6481f26f897dc5467c91498ff77b"><div class="ttname"><a href="classentity_1_1props_1_1_props.html#a4c5f6481f26f897dc5467c91498ff77b">entity.props.Props.image</a></div><div class="ttdeci">BufferedImage image</div><div class="ttdef"><b>Definition:</b> <a href="_props_8java_source.html#l00025">Props.java:25</a></div></div>
+<p class="definition">Definition at line <a class="el" href="_props_8java_source.html#l00116">116</a> of file <a class="el" href="_props_8java_source.html">Props.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  116</span>                                                 {</div>
+<div class="line"><span class="lineno">  117</span>        <span class="comment">// Calculate the screen position of the player</span></div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordtype">int</span> playerScreenX = (Const.WDW_width - Const.WRLD_entityScreenSize) / 2;</div>
+<div class="line"><span class="lineno">  119</span>        <span class="keywordtype">int</span> playerScreenY = (Const.WDW_height - Const.WRLD_entityScreenSize) / 2;</div>
+<div class="line"><span class="lineno">  120</span> </div>
+<div class="line"><span class="lineno">  121</span>        <span class="comment">// Calculate the screen position of the prop relative to the player&#39;s position</span></div>
+<div class="line"><span class="lineno">  122</span>        <span class="keywordtype">int</span> screenX = <a class="code hl_variable" href="classentity_1_1_entity.html#a1e32a2c118ea8db4ad607cfc1a8beabe">worldX</a> - world.player.worldX + playerScreenX;</div>
+<div class="line"><span class="lineno">  123</span>        <span class="keywordtype">int</span> screenY = <a class="code hl_variable" href="classentity_1_1_entity.html#a7bde61b88f69e437b0d21df86698a7a0">worldY</a> - world.player.worldY + playerScreenY;</div>
+<div class="line"><span class="lineno">  124</span> </div>
+<div class="line"><span class="lineno">  125</span>        <span class="comment">// Check if the prop is within the visible screen region around the player</span></div>
+<div class="line"><span class="lineno">  126</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classentity_1_1_entity.html#a1e32a2c118ea8db4ad607cfc1a8beabe">worldX</a> + Const.WRLD_tileScreenSize &gt; world.player.worldX - playerScreenX</div>
+<div class="line"><span class="lineno">  127</span>        &amp;&amp; <a class="code hl_variable" href="classentity_1_1_entity.html#a1e32a2c118ea8db4ad607cfc1a8beabe">worldX</a> - Const.WRLD_tileScreenSize &lt; world.player.worldX + playerScreenX</div>
+<div class="line"><span class="lineno">  128</span>        &amp;&amp; <a class="code hl_variable" href="classentity_1_1_entity.html#a7bde61b88f69e437b0d21df86698a7a0">worldY</a> + Const.WRLD_tileScreenSize &gt; world.player.worldY - playerScreenY</div>
+<div class="line"><span class="lineno">  129</span>        &amp;&amp; <a class="code hl_variable" href="classentity_1_1_entity.html#a7bde61b88f69e437b0d21df86698a7a0">worldY</a> - Const.WRLD_tileScreenSize &lt; world.player.worldY + playerScreenY) {</div>
+<div class="line"><span class="lineno">  130</span>            </div>
+<div class="line"><span class="lineno">  131</span>            <span class="comment">// Draw the prop on the screen</span></div>
+<div class="line"><span class="lineno">  132</span>            <span class="keywordflow">if</span>(<a class="code hl_variable" href="classentity_1_1props_1_1_props.html#a606e89d3bbe76b48434258901f3af6b3">open</a>){ <span class="comment">//For some props like chests or doors the images[1] is the &quot;open&quot; one</span></div>
+<div class="line"><span class="lineno">  133</span>                g2.drawImage(<a class="code hl_variable" href="classentity_1_1props_1_1_props.html#a2c69a7ac84902c86a6dd74bfc9807018">images</a>[1], screenX, screenY, Const.WRLD_entityScreenSize, Const.WRLD_entityScreenSize, <span class="keyword">null</span>); </div>
+<div class="line"><span class="lineno">  134</span>            }</div>
+<div class="line"><span class="lineno">  135</span>            <span class="keywordflow">else</span>{</div>
+<div class="line"><span class="lineno">  136</span>                g2.drawImage(<a class="code hl_variable" href="classentity_1_1props_1_1_props.html#a2c69a7ac84902c86a6dd74bfc9807018">images</a>[0], screenX, screenY, Const.WRLD_entityScreenSize, Const.WRLD_entityScreenSize, <span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  137</span>            }</div>
+<div class="line"><span class="lineno">  138</span>            </div>
+<div class="line"><span class="lineno">  139</span>            <span class="comment">//g2.drawRect(screenX, screenY, this.hitbox.width, this.hitbox.height);  //hitbox debuig purposes</span></div>
+<div class="line"><span class="lineno">  140</span>        }</div>
+<div class="line"><span class="lineno">  141</span>    }</div>
+<div class="ttc" id="aclassentity_1_1props_1_1_props_html_a2c69a7ac84902c86a6dd74bfc9807018"><div class="ttname"><a href="classentity_1_1props_1_1_props.html#a2c69a7ac84902c86a6dd74bfc9807018">entity.props.Props.images</a></div><div class="ttdeci">BufferedImage images[]</div><div class="ttdef"><b>Definition:</b> <a href="_props_8java_source.html#l00027">Props.java:27</a></div></div>
+<div class="ttc" id="aclassentity_1_1props_1_1_props_html_a606e89d3bbe76b48434258901f3af6b3"><div class="ttname"><a href="classentity_1_1props_1_1_props.html#a606e89d3bbe76b48434258901f3af6b3">entity.props.Props.open</a></div><div class="ttdeci">boolean open</div><div class="ttdef"><b>Definition:</b> <a href="_props_8java_source.html#l00028">Props.java:28</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -365,10 +436,13 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_props_8java_source.html#l00036">36</a> of file <a class="el" href="_props_8java_source.html">Props.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   36</span>                                 {</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classentity_1_1_entity.html#acd7f4b7c1acbdcd410ee9ad61a86b58e">collision</a>;</div>
-<div class="line"><span class="lineno">   38</span>    }</div>
+<p>Getter for the collision of the prop. </p>
+<dl class="section return"><dt>Returns</dt><dd>collision of the prop </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_props_8java_source.html#l00051">51</a> of file <a class="el" href="_props_8java_source.html">Props.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>                                 {</div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classentity_1_1_entity.html#acd7f4b7c1acbdcd410ee9ad61a86b58e">collision</a>;</div>
+<div class="line"><span class="lineno">   53</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -395,23 +469,59 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="_props_8java_source.html#l00040">40</a> of file <a class="el" href="_props_8java_source.html">Props.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   40</span>                                            {</div>
-<div class="line"><span class="lineno">   41</span>        <span class="keywordflow">try</span> {</div>
-<div class="line"><span class="lineno">   42</span>            <span class="comment">// Load the image of the key from the specified file path</span></div>
-<div class="line"><span class="lineno">   43</span>            <a class="code hl_variable" href="classentity_1_1props_1_1_props.html#a4c5f6481f26f897dc5467c91498ff77b">image</a> = ImageIO.read(<span class="keyword">new</span> FileInputStream(<span class="stringliteral">&quot;res/object/&quot;</span>+<a class="code hl_variable" href="classentity_1_1_entity.html#a19fc9a3b25d27f23c8ada7af8e746a17">name</a>+<span class="stringliteral">&quot;.png&quot;</span>));</div>
-<div class="line"><span class="lineno">   44</span>        } <span class="keywordflow">catch</span> (IOException e) {</div>
-<div class="line"><span class="lineno">   45</span>            <span class="comment">// Print the stack trace in case of an IOException during image loading</span></div>
-<div class="line"><span class="lineno">   46</span>            e.printStackTrace();</div>
-<div class="line"><span class="lineno">   47</span>        }</div>
-<div class="line"><span class="lineno">   48</span>    }</div>
-</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="_props_8java_source.html#l00091">91</a> of file <a class="el" href="_props_8java_source.html">Props.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   91</span>                                            {</div>
+<div class="line"><span class="lineno">   92</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">   93</span>            <span class="comment">// Load the image of the key from the specified file path</span></div>
+<div class="line"><span class="lineno">   94</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;<a class="code hl_variable" href="classentity_1_1_entity.html#af6b442584a7caf6e84e73872f9f8e080">_spriteCntMax</a>;i++){</div>
+<div class="line"><span class="lineno">   95</span>                <a class="code hl_variable" href="classentity_1_1props_1_1_props.html#a2c69a7ac84902c86a6dd74bfc9807018">images</a>[i] = ImageIO.read(<span class="keyword">new</span> FileInputStream(<span class="stringliteral">&quot;res/object/&quot;</span>+<a class="code hl_variable" href="classentity_1_1_entity.html#a19fc9a3b25d27f23c8ada7af8e746a17">name</a>+i+<span class="stringliteral">&quot;.png&quot;</span>));</div>
+<div class="line"><span class="lineno">   96</span>            }</div>
+<div class="line"><span class="lineno">   97</span>        } <span class="keywordflow">catch</span> (IOException e) {</div>
+<div class="line"><span class="lineno">   98</span>            <span class="comment">// Print the stack trace in case of an IOException during image loading</span></div>
+<div class="line"><span class="lineno">   99</span>            e.printStackTrace();</div>
+<div class="line"><span class="lineno">  100</span>        }</div>
+<div class="line"><span class="lineno">  101</span>    }</div>
+<div class="ttc" id="aclassentity_1_1_entity_html_af6b442584a7caf6e84e73872f9f8e080"><div class="ttname"><a href="classentity_1_1_entity.html#af6b442584a7caf6e84e73872f9f8e080">entity.Entity._spriteCntMax</a></div><div class="ttdeci">int _spriteCntMax</div><div class="ttdef"><b>Definition:</b> <a href="_entity_8java_source.html#l00026">Entity.java:26</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classentity_1_1props_1_1_props_ad9057ae1a190d0f140f579820860b176_icgraph.png" border="0" usemap="#aclassentity_1_1props_1_1_props_ad9057ae1a190d0f140f579820860b176_icgraph" alt=""/></div>
+<map name="aclassentity_1_1props_1_1_props_ad9057ae1a190d0f140f579820860b176_icgraph" id="aclassentity_1_1props_1_1_props_ad9057ae1a190d0f140f579820860b176_icgraph">
+<area shape="rect" title=" " alt="" coords="280,71,505,98"/>
+<area shape="rect" href="classentity_1_1props_1_1_o_b_j___chest.html#a791b6f22d201a11338c82f65b5b65bc5" title="Constructor for the OBJ_Chest class." alt="" coords="21,5,217,47"/>
+<area shape="rect" href="classentity_1_1props_1_1_o_b_j___door.html#ad1cdabdc34de0662d6d6d568ba31e8ad" title="Constructor for the OBJ_Door class." alt="" coords="5,71,232,98"/>
+<area shape="rect" href="classentity_1_1props_1_1_o_b_j___key.html#ac30d918f2fedaf3ebe653a6e00a5fc25" title="Constructor for the OBJ_Key class." alt="" coords="13,122,225,149"/>
+</map>
+</div>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a4c5f6481f26f897dc5467c91498ff77b" name="a4c5f6481f26f897dc5467c91498ff77b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c5f6481f26f897dc5467c91498ff77b">&#9670;&nbsp;</a></span>image</h2>
+<a id="a2c69a7ac84902c86a6dd74bfc9807018" name="a2c69a7ac84902c86a6dd74bfc9807018"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c69a7ac84902c86a6dd74bfc9807018">&#9670;&nbsp;</a></span>images</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BufferedImage entity.props.Props.images[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_props_8java_source.html#l00027">27</a> of file <a class="el" href="_props_8java_source.html">Props.java</a>.</p>
+
+</div>
+</div>
+<a id="a606e89d3bbe76b48434258901f3af6b3" name="a606e89d3bbe76b48434258901f3af6b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a606e89d3bbe76b48434258901f3af6b3">&#9670;&nbsp;</a></span>open</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -420,17 +530,17 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">BufferedImage entity.props.Props.image</td>
+          <td class="memname">boolean entity.props.Props.open</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_props_8java_source.html#l00025">25</a> of file <a class="el" href="_props_8java_source.html">Props.java</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_props_8java_source.html#l00028">28</a> of file <a class="el" href="_props_8java_source.html">Props.java</a>.</p>
 
 </div>
 </div>

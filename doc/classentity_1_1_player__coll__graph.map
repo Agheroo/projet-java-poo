@@ -1,7 +1,9 @@
 <map id="entity.Player" name="entity.Player">
-<area shape="rect" id="node1" title="Represents the player entity in the game." alt="" coords="102,969,237,1105"/>
-<area shape="rect" id="node2" href="$classentity_1_1_character.html" title="Represents an abstract character entity with position, hitbox, stats, and animations." alt="" coords="88,564,251,920"/>
-<area shape="rect" id="node3" href="$classentity_1_1_entity.html" title="Represents an abstract entity with position, hitbox, and animations." alt="" coords="5,145,168,399"/>
+<area shape="rect" id="node1" title="Represents the player entity in the game." alt="" coords="255,939,417,1177"/>
+<area shape="rect" id="node2" href="$classentity_1_1_character.html" title="Represents an abstract character entity with position, hitbox, stats, and animations." alt="" coords="90,535,249,876"/>
+<area shape="rect" id="node3" href="$classentity_1_1_entity.html" title="Represents an abstract entity with position, hitbox, and animations." alt="" coords="5,145,168,369"/>
 <area shape="rect" id="node4" title=" " alt="" coords="43,5,130,83"/>
-<area shape="rect" id="node5" title=" " alt="" coords="193,233,311,311"/>
+<area shape="rect" id="node5" title=" " alt="" coords="193,219,311,296"/>
+<area shape="rect" id="node6" href="$classgame_1_1_attack.html" title=" " alt="" coords="273,630,399,781"/>
+<area shape="rect" id="node7" title=" " alt="" coords="423,667,580,744"/>
 </map>

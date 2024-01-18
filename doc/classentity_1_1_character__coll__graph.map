@@ -1,6 +1,6 @@
 <map id="entity.Character" name="entity.Character">
-<area shape="rect" id="node1" title="Represents an abstract character entity with position, hitbox, stats, and animations." alt="" coords="88,564,251,920"/>
-<area shape="rect" id="node2" href="$classentity_1_1_entity.html" title="Represents an abstract entity with position, hitbox, and animations." alt="" coords="5,145,168,399"/>
+<area shape="rect" id="node1" title="Represents an abstract character entity with position, hitbox, stats, and animations." alt="" coords="90,535,249,876"/>
+<area shape="rect" id="node2" href="$classentity_1_1_entity.html" title="Represents an abstract entity with position, hitbox, and animations." alt="" coords="5,145,168,369"/>
 <area shape="rect" id="node3" title=" " alt="" coords="43,5,130,83"/>
-<area shape="rect" id="node4" title=" " alt="" coords="193,233,311,311"/>
+<area shape="rect" id="node4" title=" " alt="" coords="193,219,311,296"/>
 </map>

@@ -32,8 +32,8 @@ public class HUD_Fight extends HUD {
         _nbButtons = 3;
         _buttons = new ChoiceButton[_nbButtons];
         _texts = new Textbox[player.potions.size()+player.attacks.length];
-        
-        
+
+
         playerStats = new Textbox[2];
         playerStats[0] = new Textbox(String.valueOf(player.health) + "/" + String.valueOf(player.maxHealth),Const.fontName,100,30,new Color(0x0D9B44));
         playerStats[1] = new Textbox(String.valueOf(player.mana) + "/" + String.valueOf(player.maxMana),Const.fontName,100,30,new Color(0x2367C3));
@@ -72,7 +72,7 @@ public class HUD_Fight extends HUD {
 
                 default: break;
 
-                case Const.Selection.BACK:
+                case "BACK":
                     if(Scene.keyH.leftPressed){
                         selection = Const.Selection.NONE;
                         choice = 1;
@@ -137,14 +137,14 @@ public class HUD_Fight extends HUD {
         }
 
         //Simply updating colors
-        switch(selection){
-            case Const.Selection.ATTACK:
+        switch(selection.toString()){
+            case "ATTACK":
                 changeSelectionColor(0, new Color(0x784F30),  new Color(0x452A26),new Color(0xAE8E65), new Color(0x926E4F)); break;
                 
-            case Const.Selection.POTION: 
+            case "POTION":
                 changeSelectionColor(1, new Color(0x784F30),  new Color(0x452A26),new Color(0xAE8E65), new Color(0x926E4F)); break;
             
-            case Const.Selection.BACK:
+            case "BACK":
                 changeSelectionColor(2, new Color(0x784F30),  new Color(0x452A26),new Color(0xAE8E65), new Color(0x926E4F)); break;
 
             default: 

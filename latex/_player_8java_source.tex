@@ -6,98 +6,164 @@
 \DoxyCodeLine{\Hypertarget{_player_8java_source_l00006}00006 \textcolor{keyword}{package }entity;}
 \DoxyCodeLine{\Hypertarget{_player_8java_source_l00007}00007 }
 \DoxyCodeLine{\Hypertarget{_player_8java_source_l00008}00008 \textcolor{keyword}{import} \mbox{\hyperlink{namespaceentity}{entity}}.\mbox{\hyperlink{namespaceentity_1_1props}{props}}.\mbox{\hyperlink{classentity_1_1props_1_1_props}{Props}};}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00009}00009 \textcolor{keyword}{import} \mbox{\hyperlink{namespacegame}{game}}.\mbox{\hyperlink{classgame_1_1_scene}{Scene}};}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00010}00010 \textcolor{keyword}{import} \mbox{\hyperlink{namespacegame}{game}}.\mbox{\hyperlink{classgame_1_1_scene}{Scene}}.\mbox{\hyperlink{enumgame_1_1_scene_1_1_state}{State}};}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00011}00011 \textcolor{keyword}{import} \mbox{\hyperlink{namespacegame}{game}}.\mbox{\hyperlink{classgame_1_1_world}{World}};}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00012}00012 \textcolor{keyword}{import} \mbox{\hyperlink{namespaceitem}{item}}.\mbox{\hyperlink{classitem_1_1_item}{Item}};}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00013}00013 }
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00014}00014 \textcolor{keyword}{import} java.awt.*;}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00015}00015 }
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00021}\mbox{\hyperlink{classentity_1_1_player}{00021}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classentity_1_1_player}{Player}} \textcolor{keyword}{extends} \mbox{\hyperlink{classentity_1_1_character}{Character}} \{}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00022}00022 }
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00023}\mbox{\hyperlink{classentity_1_1_player_aea13f23cdb47c44a2a30beb185088240}{00023}}     \textcolor{keyword}{public} \textcolor{keywordtype}{int} \mbox{\hyperlink{classentity_1_1_player_aea13f23cdb47c44a2a30beb185088240}{hasKey}} = 0;}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00035}\mbox{\hyperlink{classentity_1_1_player_aaf9357b5699979e2c824b214e5ab7e97}{00035}}     \textcolor{keyword}{public} \mbox{\hyperlink{classentity_1_1_player_aaf9357b5699979e2c824b214e5ab7e97}{Player}}(String entityName, \textcolor{keywordtype}{int} \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}}, String \mbox{\hyperlink{classentity_1_1_character_a249d5d0b8f600f332b5715e93f83668d}{facing}}, \textcolor{keywordtype}{int} spriteCntMax, \textcolor{keywordtype}{int} spriteSpeed) \{}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00036}00036         super(entityName, \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}}, \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}}, \mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}}, \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}}, \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}}, \mbox{\hyperlink{classentity_1_1_character_a249d5d0b8f600f332b5715e93f83668d}{facing}}, spriteCntMax, spriteSpeed);  \textcolor{comment}{// Calls the parent class for entity setup, specifying scene.keyH for player}}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00037}00037     \}}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00038}00038 }
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00044}\mbox{\hyperlink{classentity_1_1_player_ae48f1e24c9ff0b7bd4f55b470bf66e7e}{00044}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classentity_1_1_player_ae48f1e24c9ff0b7bd4f55b470bf66e7e}{update}}(\mbox{\hyperlink{classgame_1_1_scene}{Scene}} scene, \textcolor{keywordtype}{double} dt) \{}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00045}00045         super.update(scene, dt);  \textcolor{comment}{// Calls the parent class update method}}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00046}00046         \textcolor{comment}{// World updates}}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00047}00047         \textcolor{keywordflow}{if} (scene.\mbox{\hyperlink{classgame_1_1_scene_afa46982ec00ac703190b0642d8a3c4be}{state}} == \mbox{\hyperlink{enumgame_1_1_scene_1_1_state}{State}}.\mbox{\hyperlink{enumgame_1_1_scene_1_1_state_aed7f5813d309282d14a426b8e65a408b}{WORLD}}) \{}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00048}00048             \textcolor{keywordflow}{if} (scene.\mbox{\hyperlink{classgame_1_1_scene_a2bbc8cb5064aaa5cc1ed0ec8950f4a58}{keyH}}.\mbox{\hyperlink{classmain_1_1_key_handler_ac3d3d01a55a35bd42ab2de4fbfe60889}{upPressed}} || scene.\mbox{\hyperlink{classgame_1_1_scene_a2bbc8cb5064aaa5cc1ed0ec8950f4a58}{keyH}}.\mbox{\hyperlink{classmain_1_1_key_handler_a0bc680db42254a7fdf434b26894da9ea}{downPressed}} || scene.\mbox{\hyperlink{classgame_1_1_scene_a2bbc8cb5064aaa5cc1ed0ec8950f4a58}{keyH}}.\mbox{\hyperlink{classmain_1_1_key_handler_a61ed218f99a07f22ded4b1ccbcf716c1}{leftPressed}} || scene.\mbox{\hyperlink{classgame_1_1_scene_a2bbc8cb5064aaa5cc1ed0ec8950f4a58}{keyH}}.\mbox{\hyperlink{classmain_1_1_key_handler_a16cb9356b8971e17b39edbf8823150cc}{rightPressed}}) \{}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00049}00049                 \mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} = 0;}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00050}00050                 \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}} = 0;}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00051}00051                 \textcolor{keywordflow}{if} (scene.\mbox{\hyperlink{classgame_1_1_scene_a2bbc8cb5064aaa5cc1ed0ec8950f4a58}{keyH}}.\mbox{\hyperlink{classmain_1_1_key_handler_a61ed218f99a07f22ded4b1ccbcf716c1}{leftPressed}}) \{}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00052}00052                     \mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} = -\/1;}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00053}00053                     \mbox{\hyperlink{classentity_1_1_character_a249d5d0b8f600f332b5715e93f83668d}{facing}} = \textcolor{stringliteral}{"{}left"{}};}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00054}00054                 \}}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00055}00055                 \textcolor{keywordflow}{if} (scene.\mbox{\hyperlink{classgame_1_1_scene_a2bbc8cb5064aaa5cc1ed0ec8950f4a58}{keyH}}.\mbox{\hyperlink{classmain_1_1_key_handler_a16cb9356b8971e17b39edbf8823150cc}{rightPressed}}) \{}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00056}00056                     \mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} = 1;}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00057}00057                     \mbox{\hyperlink{classentity_1_1_character_a249d5d0b8f600f332b5715e93f83668d}{facing}} = \textcolor{stringliteral}{"{}right"{}};}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00058}00058                 \}}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00059}00059                 \textcolor{keywordflow}{if} (scene.\mbox{\hyperlink{classgame_1_1_scene_a2bbc8cb5064aaa5cc1ed0ec8950f4a58}{keyH}}.\mbox{\hyperlink{classmain_1_1_key_handler_ac3d3d01a55a35bd42ab2de4fbfe60889}{upPressed}}) \{}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00060}00060                     \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}} = -\/1;}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00061}00061                     \mbox{\hyperlink{classentity_1_1_character_a249d5d0b8f600f332b5715e93f83668d}{facing}} = \textcolor{stringliteral}{"{}up"{}};}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00062}00062                 \}}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00063}00063                 \textcolor{keywordflow}{if} (scene.\mbox{\hyperlink{classgame_1_1_scene_a2bbc8cb5064aaa5cc1ed0ec8950f4a58}{keyH}}.\mbox{\hyperlink{classmain_1_1_key_handler_a0bc680db42254a7fdf434b26894da9ea}{downPressed}}) \{}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00064}00064                     \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}} = 1;}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00065}00065                     \mbox{\hyperlink{classentity_1_1_character_a249d5d0b8f600f332b5715e93f83668d}{facing}} = \textcolor{stringliteral}{"{}down"{}};}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00009}00009 \textcolor{keyword}{import} \mbox{\hyperlink{namespacegame}{game}}.\mbox{\hyperlink{classgame_1_1_attack}{Attack}};}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00010}00010 \textcolor{keyword}{import} \mbox{\hyperlink{namespacegame}{game}}.\mbox{\hyperlink{classgame_1_1_const}{Const}};}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00011}00011 \textcolor{keyword}{import} \mbox{\hyperlink{namespacegame}{game}}.\mbox{\hyperlink{classgame_1_1_scene}{Scene}};}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00012}00012 \textcolor{keyword}{import} \mbox{\hyperlink{namespacegame}{game}}.\mbox{\hyperlink{classgame_1_1_world}{World}};}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00013}00013 \textcolor{keyword}{import} \mbox{\hyperlink{namespaceitem}{item}}.\mbox{\hyperlink{classitem_1_1_item}{Item}};}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00015}00015 \textcolor{keyword}{import} java.awt.*;}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00016}00016 \textcolor{keyword}{import} java.awt.image.BufferedImage;}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00017}00017 \textcolor{keyword}{import} java.util.Vector;}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00023}\mbox{\hyperlink{classentity_1_1_player}{00023}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classentity_1_1_player}{Player}} \textcolor{keyword}{extends} \mbox{\hyperlink{classentity_1_1_character}{Character}} \{}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00024}\mbox{\hyperlink{classentity_1_1_player_aaf5c533aa31cc876fce4d36587a28585}{00024}}     \textcolor{keyword}{public} \textcolor{keywordtype}{int} \mbox{\hyperlink{classentity_1_1_player_aaf5c533aa31cc876fce4d36587a28585}{level}};}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00025}\mbox{\hyperlink{classentity_1_1_player_af42b336a8af76edf7cd86742b3ea937d}{00025}}     \textcolor{keyword}{public} \textcolor{keywordtype}{int} \mbox{\hyperlink{classentity_1_1_player_af42b336a8af76edf7cd86742b3ea937d}{xp}};  \textcolor{comment}{//xp of the player}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00026}\mbox{\hyperlink{classentity_1_1_player_adfda230ef1386fa32d9b35e4c1982654}{00026}}     \textcolor{keyword}{public} \textcolor{keywordtype}{int} \mbox{\hyperlink{classentity_1_1_player_adfda230ef1386fa32d9b35e4c1982654}{xpMax}}; \textcolor{comment}{//The amount of xp the player needs to level up}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00027}\mbox{\hyperlink{classentity_1_1_player_aea13f23cdb47c44a2a30beb185088240}{00027}}     \textcolor{keyword}{public} \textcolor{keywordtype}{int} \mbox{\hyperlink{classentity_1_1_player_aea13f23cdb47c44a2a30beb185088240}{hasKey}} = 0;}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00028}\mbox{\hyperlink{classentity_1_1_player_ae0c881fe1f49ad49ee748ba842b3d494}{00028}}     \textcolor{keyword}{public} \mbox{\hyperlink{classgame_1_1_attack}{Attack}} \mbox{\hyperlink{classentity_1_1_player_ae0c881fe1f49ad49ee748ba842b3d494}{attacks}}[]; }
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00029}\mbox{\hyperlink{classentity_1_1_player_a07e498bfb54f0666df41972f5a4674cc}{00029}}     \textcolor{keyword}{public} Vector<Item> \mbox{\hyperlink{classentity_1_1_player_a07e498bfb54f0666df41972f5a4674cc}{potions}} = \textcolor{keyword}{new} Vector<Item>();}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00031}00031     \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00032}00032 \textcolor{comment}{     * @brief Constructor for the Player class.}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00033}00033 \textcolor{comment}{     * @param worldX The X-\/coordinate of the player in the world.}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00034}00034 \textcolor{comment}{     * @param worldY The Y-\/coordinate of the player in the world.}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00035}00035 \textcolor{comment}{     * @param dirX The X-\/direction of the player.}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00036}00036 \textcolor{comment}{     * @param dirY The Y-\/direction of the player.}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00037}00037 \textcolor{comment}{     * @param speed The speed of the player's movement.}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00038}00038 \textcolor{comment}{     * @param facing The direction the player is facing (up, down, left, right).}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00039}00039 \textcolor{comment}{     * @param spriteCntMax The maximum number of sprites for animation.}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00040}00040 \textcolor{comment}{     * @param spriteSpeed The speed of sprite animation.}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00041}00041 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00042}\mbox{\hyperlink{classentity_1_1_player_aaf9357b5699979e2c824b214e5ab7e97}{00042}}     \textcolor{keyword}{public} \mbox{\hyperlink{classentity_1_1_player_aaf9357b5699979e2c824b214e5ab7e97}{Player}}(String entityName, \textcolor{keywordtype}{int} \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}}, String \mbox{\hyperlink{classentity_1_1_character_a249d5d0b8f600f332b5715e93f83668d}{facing}}, \textcolor{keywordtype}{int} spriteCntMax, \textcolor{keywordtype}{int} spriteSpeed) \{}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00043}00043         super(entityName, \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}}, \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}}, \mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}}, \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}}, \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}}, \mbox{\hyperlink{classentity_1_1_character_a249d5d0b8f600f332b5715e93f83668d}{facing}}, spriteCntMax, spriteSpeed);  \textcolor{comment}{// Calls the parent class for entity setup, specifying Scene.keyH for player}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00044}00044         }
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00045}00045         \mbox{\hyperlink{classentity_1_1_player_ae0c881fe1f49ad49ee748ba842b3d494}{attacks}} = \textcolor{keyword}{new} \mbox{\hyperlink{classgame_1_1_attack}{Attack}}[4];}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00046}00046         \mbox{\hyperlink{classentity_1_1_player_aaf5c533aa31cc876fce4d36587a28585}{level}} = 1;}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00047}00047         \mbox{\hyperlink{classentity_1_1_player_adfda230ef1386fa32d9b35e4c1982654}{xpMax}} = 100;}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00048}00048         \mbox{\hyperlink{classentity_1_1_player_af42b336a8af76edf7cd86742b3ea937d}{xp}} = 0;}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00049}00049     \}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00056}\mbox{\hyperlink{classentity_1_1_player_ae9f8bc01c80f5ed6ffc7fb656f7895c1}{00056}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classentity_1_1_player_ae9f8bc01c80f5ed6ffc7fb656f7895c1}{update}}(\textcolor{keywordtype}{double} dt) \{}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00057}00057         super.update(dt);  \textcolor{comment}{// Calls the parent class update method}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00058}00058         \textcolor{comment}{// World updates}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00059}00059         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classgame_1_1_scene}{Scene}}.\mbox{\hyperlink{classgame_1_1_scene_afa46982ec00ac703190b0642d8a3c4be}{state}} == \mbox{\hyperlink{classgame_1_1_const}{Const}}.\mbox{\hyperlink{enumgame_1_1_const_1_1_state}{State}}.\mbox{\hyperlink{enumgame_1_1_const_1_1_state_ad7237c8ca0d5611c5ab2538232b207cd}{WORLD}}) \{}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00060}00060             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classgame_1_1_scene}{Scene}}.\mbox{\hyperlink{classgame_1_1_scene_a2bbc8cb5064aaa5cc1ed0ec8950f4a58}{keyH}}.\mbox{\hyperlink{classmain_1_1_key_handler_ac3d3d01a55a35bd42ab2de4fbfe60889}{upPressed}} || \mbox{\hyperlink{classgame_1_1_scene}{Scene}}.\mbox{\hyperlink{classgame_1_1_scene_a2bbc8cb5064aaa5cc1ed0ec8950f4a58}{keyH}}.\mbox{\hyperlink{classmain_1_1_key_handler_a0bc680db42254a7fdf434b26894da9ea}{downPressed}} || \mbox{\hyperlink{classgame_1_1_scene}{Scene}}.\mbox{\hyperlink{classgame_1_1_scene_a2bbc8cb5064aaa5cc1ed0ec8950f4a58}{keyH}}.\mbox{\hyperlink{classmain_1_1_key_handler_a61ed218f99a07f22ded4b1ccbcf716c1}{leftPressed}} || \mbox{\hyperlink{classgame_1_1_scene}{Scene}}.\mbox{\hyperlink{classgame_1_1_scene_a2bbc8cb5064aaa5cc1ed0ec8950f4a58}{keyH}}.\mbox{\hyperlink{classmain_1_1_key_handler_a16cb9356b8971e17b39edbf8823150cc}{rightPressed}}) \{}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00061}00061                 \mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} = 0;}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00062}00062                 \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}} = 0;}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00063}00063                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classgame_1_1_scene}{Scene}}.\mbox{\hyperlink{classgame_1_1_scene_a2bbc8cb5064aaa5cc1ed0ec8950f4a58}{keyH}}.\mbox{\hyperlink{classmain_1_1_key_handler_a61ed218f99a07f22ded4b1ccbcf716c1}{leftPressed}}) \{}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00064}00064                     \mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} = -\/1;}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00065}00065                     \mbox{\hyperlink{classentity_1_1_character_a249d5d0b8f600f332b5715e93f83668d}{facing}} = \textcolor{stringliteral}{"{}left"{}};}
 \DoxyCodeLine{\Hypertarget{_player_8java_source_l00066}00066                 \}}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00067}00067                 \mbox{\hyperlink{classentity_1_1_character_a937e8e2ad1ddaccfdf7fbc52c9f532f6}{accelerate}}(30,20, dt);}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00068}00068             \} \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00069}00069                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} > 0) \{}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00070}00070                     \mbox{\hyperlink{classentity_1_1_character_ab41258c00232def146bcb8f5fb17fa75}{decelerate}}(1,dt);}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00071}00071                 \}}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00072}00072             \}}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00073}00073 }
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00074}00074             \textcolor{comment}{// CHECK OBJECT COLLISION}}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00075}00075             Point objIndex = \mbox{\hyperlink{classentity_1_1_player_ac01d8a2c0231c9b74b44dbb4e79802e8}{checkObject}}(\textcolor{keyword}{this}, \mbox{\hyperlink{classgame_1_1_world}{World}}.\mbox{\hyperlink{classgame_1_1_world_a0e40ca86573cf45d858cc8e529865649}{getWorld}}());}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00076}00076             \mbox{\hyperlink{classentity_1_1_player_ae8efbe5149efbe2255ee8de096472197}{pickUpObject}}(\mbox{\hyperlink{classgame_1_1_world}{World}}.\mbox{\hyperlink{classgame_1_1_world_a0e40ca86573cf45d858cc8e529865649}{getWorld}}(), objIndex);}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00077}00077 }
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00078}00078             }
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00079}00079         \}}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00080}00080 }
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00081}00081         \textcolor{comment}{// Fightscene updates}}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00082}00082         \textcolor{keywordflow}{if} (scene.\mbox{\hyperlink{classgame_1_1_scene_afa46982ec00ac703190b0642d8a3c4be}{state}} == \mbox{\hyperlink{enumgame_1_1_scene_1_1_state}{State}}.\mbox{\hyperlink{enumgame_1_1_scene_1_1_state_a4be157e7856d538c28aadfa79666f4cc}{FIGHT}}) \{}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00083}00083             \textcolor{comment}{// To be implemented}}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00084}00084             }
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00067}00067                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classgame_1_1_scene}{Scene}}.\mbox{\hyperlink{classgame_1_1_scene_a2bbc8cb5064aaa5cc1ed0ec8950f4a58}{keyH}}.\mbox{\hyperlink{classmain_1_1_key_handler_a16cb9356b8971e17b39edbf8823150cc}{rightPressed}}) \{}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00068}00068                     \mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} = 1;}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00069}00069                     \mbox{\hyperlink{classentity_1_1_character_a249d5d0b8f600f332b5715e93f83668d}{facing}} = \textcolor{stringliteral}{"{}right"{}};}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00070}00070                 \}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00071}00071                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classgame_1_1_scene}{Scene}}.\mbox{\hyperlink{classgame_1_1_scene_a2bbc8cb5064aaa5cc1ed0ec8950f4a58}{keyH}}.\mbox{\hyperlink{classmain_1_1_key_handler_ac3d3d01a55a35bd42ab2de4fbfe60889}{upPressed}}) \{}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00072}00072                     \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}} = -\/1;}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00073}00073                     \mbox{\hyperlink{classentity_1_1_character_a249d5d0b8f600f332b5715e93f83668d}{facing}} = \textcolor{stringliteral}{"{}up"{}};}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00074}00074                 \}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00075}00075                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classgame_1_1_scene}{Scene}}.\mbox{\hyperlink{classgame_1_1_scene_a2bbc8cb5064aaa5cc1ed0ec8950f4a58}{keyH}}.\mbox{\hyperlink{classmain_1_1_key_handler_a0bc680db42254a7fdf434b26894da9ea}{downPressed}}) \{}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00076}00076                     \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}} = 1;}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00077}00077                     \mbox{\hyperlink{classentity_1_1_character_a249d5d0b8f600f332b5715e93f83668d}{facing}} = \textcolor{stringliteral}{"{}down"{}};}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00078}00078                 \}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00079}00079                 \mbox{\hyperlink{classentity_1_1_character_a937e8e2ad1ddaccfdf7fbc52c9f532f6}{accelerate}}(30,20, dt);}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00080}00080             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00081}00081                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} > 0) \{}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00082}00082                     \mbox{\hyperlink{classentity_1_1_character_ab41258c00232def146bcb8f5fb17fa75}{decelerate}}(1,dt);}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00083}00083                 \}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00084}00084             \}}
 \DoxyCodeLine{\Hypertarget{_player_8java_source_l00085}00085 }
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00086}00086         \}}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00087}00087     \}}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00088}00088 }
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00095}\mbox{\hyperlink{classentity_1_1_player_ac01d8a2c0231c9b74b44dbb4e79802e8}{00095}}     \textcolor{keyword}{public} Point \mbox{\hyperlink{classentity_1_1_player_ac01d8a2c0231c9b74b44dbb4e79802e8}{checkObject}}(\mbox{\hyperlink{classentity_1_1_entity}{Entity}} \mbox{\hyperlink{namespaceentity}{entity}}, \mbox{\hyperlink{classgame_1_1_world}{World}} world) \{}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00096}00096         }
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00097}00097         Point index = \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00086}00086             \textcolor{comment}{// CHECK OBJECT COLLISION}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00087}00087             Point objIndex = \mbox{\hyperlink{classentity_1_1_player_adb890f89741a84069bb1288c7093508f}{checkObject}}();}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00088}00088             \mbox{\hyperlink{classentity_1_1_player_ada21c104a2dbe0b76b595df6b1cdeae0}{pickUpObject}}(objIndex);}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00089}00089 }
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00090}00090             Point enemyInd = \mbox{\hyperlink{classentity_1_1_player_afd8ccd449d009e222e579aa68eeb8a50}{checkEnemy}}();}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00091}00091             \mbox{\hyperlink{classentity_1_1_player_aadffbed42af93cecf0e3590efe8e0db9}{fightEnemy}}(enemyInd);}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00092}00092         \}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00094}00094         \textcolor{comment}{// Fightscene updates}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00095}00095         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classgame_1_1_scene}{Scene}}.\mbox{\hyperlink{classgame_1_1_scene_afa46982ec00ac703190b0642d8a3c4be}{state}} == \mbox{\hyperlink{classgame_1_1_const}{Const}}.\mbox{\hyperlink{enumgame_1_1_const_1_1_state}{State}}.\mbox{\hyperlink{enumgame_1_1_const_1_1_state_a2cdf14624160ddcbf20b61c0b839700e}{FIGHT}}) \{}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00096}00096             \textcolor{comment}{// To be implemented}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00097}00097             }
 \DoxyCodeLine{\Hypertarget{_player_8java_source_l00098}00098 }
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00099}00099         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classentity_1_1props_1_1_props}{Props}} obj : world.\mbox{\hyperlink{classgame_1_1_world_a287fcd8121546f4cffd9685453a4f635}{objMap}}.values()) \{}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00100}00100             \textcolor{keywordflow}{if} (obj != \textcolor{keyword}{null}) \{}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00101}00101                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{namespaceentity}{entity}}.hitbox.intersects(obj.hitbox)) \{}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00102}00102                     \textcolor{keywordflow}{if} (obj.getCollision()) \{   \textcolor{comment}{//If object has "{}solid"{} collision}}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00103}00103                         \textcolor{comment}{//prevent the player from moving in the hitbox}}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00104}00104             }
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00105}00105                     \}}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00106}00106                     index = \textcolor{keyword}{new} Point((\textcolor{keywordtype}{int}) obj.worldX, (\textcolor{keywordtype}{int}) obj.worldY);}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00107}00107                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00108}00108                 \}}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00109}00109             \}}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00110}00110         \}}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00111}00111 }
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00112}00112         \textcolor{keywordflow}{return} index;}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00113}00113     \}}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00114}00114 }
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00099}00099         \}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00100}00100     \}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00101}00101 }
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00106}\mbox{\hyperlink{classentity_1_1_player_adb890f89741a84069bb1288c7093508f}{00106}}     \textcolor{keyword}{public} Point \mbox{\hyperlink{classentity_1_1_player_adb890f89741a84069bb1288c7093508f}{checkObject}}() \{}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00107}00107         Point index = \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00108}00108 }
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00109}00109         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classentity_1_1props_1_1_props}{Props}} obj : \mbox{\hyperlink{classgame_1_1_world}{World}}.\mbox{\hyperlink{classgame_1_1_world_a287fcd8121546f4cffd9685453a4f635}{objMap}}.values()) \{}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00110}00110             \textcolor{keywordflow}{if} (obj != \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00111}00111                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.intersects(obj.hitbox)) \{}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00112}00112                     \textcolor{keywordflow}{if}(obj.getCollision())\{ \textcolor{comment}{//If object has "{}solid"{} collision}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00113}00113                         obj.block(\textcolor{keyword}{this});    \textcolor{comment}{//Block the player}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00114}00114                     \}}
 \DoxyCodeLine{\Hypertarget{_player_8java_source_l00115}00115 }
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00116}00116 }
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00117}\mbox{\hyperlink{classentity_1_1_player_ae8efbe5149efbe2255ee8de096472197}{00117}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classentity_1_1_player_ae8efbe5149efbe2255ee8de096472197}{pickUpObject}}(\mbox{\hyperlink{classgame_1_1_world}{World}} gp, Point index) \{}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00118}00118         \textcolor{keywordflow}{if} (index != \textcolor{keyword}{null}) \{}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00119}00119             \mbox{\hyperlink{classentity_1_1_entity}{Entity}} \textcolor{keywordtype}{object} = gp.\mbox{\hyperlink{classgame_1_1_world_a287fcd8121546f4cffd9685453a4f635}{objMap}}.get(index);}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00120}00120             \textcolor{keywordtype}{object}.playerInterraction(\textcolor{keyword}{this});}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00121}00121         \}}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00122}00122     \}}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00123}00123 }
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00124}\mbox{\hyperlink{classentity_1_1_player_a91613b74f81278a4bd845bef223b0b5f}{00124}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classentity_1_1_player_a91613b74f81278a4bd845bef223b0b5f}{addItem}}(\mbox{\hyperlink{classitem_1_1_item}{Item}} i)\{}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00125}00125         System.out.println(\textcolor{stringliteral}{"{}J'ai rajoutée un item"{}});}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00126}00126     \}}
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00127}00127 }
-\DoxyCodeLine{\Hypertarget{_player_8java_source_l00128}00128 \}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00116}00116                     index = \textcolor{keyword}{new} Point((\textcolor{keywordtype}{int}) obj.worldX, (\textcolor{keywordtype}{int}) obj.worldY);}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00117}00117                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00118}00118                 \}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00119}00119             \}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00120}00120         \}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00121}00121 }
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00122}00122         \textcolor{keywordflow}{return} index;}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00123}00123     \}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00124}00124 }
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00130}\mbox{\hyperlink{classentity_1_1_player_afd8ccd449d009e222e579aa68eeb8a50}{00130}}     \textcolor{keyword}{public} Point \mbox{\hyperlink{classentity_1_1_player_afd8ccd449d009e222e579aa68eeb8a50}{checkEnemy}}()\{}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00131}00131         Point index = \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00132}00132 }
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00133}00133         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classentity_1_1_enemy}{Enemy}} enemy : \mbox{\hyperlink{classgame_1_1_world}{World}}.\mbox{\hyperlink{classgame_1_1_world_a8f7650232d674854c7be0df78b0b736d}{enemies}}.values()) \{}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00134}00134             \textcolor{keywordflow}{if} (enemy != \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00135}00135                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.intersects(enemy.hitbox)) \{}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00136}00136                     }
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00137}00137                     index = \textcolor{keyword}{new} Point((\textcolor{keywordtype}{int}) enemy.worldX, (\textcolor{keywordtype}{int}) enemy.worldY);}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00138}00138                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00139}00139                 \}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00140}00140             \}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00141}00141         \}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00142}00142 }
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00143}00143         \textcolor{keywordflow}{return} index;}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00144}00144     \}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00145}00145     }
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00146}\mbox{\hyperlink{classentity_1_1_player_aadffbed42af93cecf0e3590efe8e0db9}{00146}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classentity_1_1_player_aadffbed42af93cecf0e3590efe8e0db9}{fightEnemy}}(Point ind)\{}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00147}00147         \textcolor{keywordflow}{if}(ind != \textcolor{keyword}{null})\{}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00148}00148             \mbox{\hyperlink{classentity_1_1_enemy}{Enemy}} enemy = \mbox{\hyperlink{classgame_1_1_world}{World}}.\mbox{\hyperlink{classgame_1_1_world_a8f7650232d674854c7be0df78b0b736d}{enemies}}.get(ind);}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00149}00149             enemy.\mbox{\hyperlink{classentity_1_1_enemy_a429f4fa6c8b461d4c18802d35d9b5092}{playerInterraction}}(\textcolor{keyword}{this}); }
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00150}00150         \}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00151}00151     \}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00152}00152 }
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00157}\mbox{\hyperlink{classentity_1_1_player_ada21c104a2dbe0b76b595df6b1cdeae0}{00157}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classentity_1_1_player_ada21c104a2dbe0b76b595df6b1cdeae0}{pickUpObject}}(Point index) \{}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00158}00158         \textcolor{keywordflow}{if} (index != \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00159}00159             \mbox{\hyperlink{classentity_1_1_entity}{Entity}} \textcolor{keywordtype}{object} = \mbox{\hyperlink{classgame_1_1_world}{World}}.\mbox{\hyperlink{classgame_1_1_world_a287fcd8121546f4cffd9685453a4f635}{objMap}}.get(index);}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00160}00160             \textcolor{keywordflow}{if}(\mbox{\hyperlink{classgame_1_1_scene}{Scene}}.\mbox{\hyperlink{classgame_1_1_scene_a2bbc8cb5064aaa5cc1ed0ec8950f4a58}{keyH}}.\mbox{\hyperlink{classmain_1_1_key_handler_aaaa3f8f86ebada192b298f0ace674c9b}{interactPressed}})\{}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00161}00161                 \textcolor{keywordtype}{object}.playerInterraction(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00162}00162                 Scene.keyH.interactPressed = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00163}00163             \}   }
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00164}00164             }
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00165}00165         \}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00166}00166     \}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00167}00167 }
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00172}\mbox{\hyperlink{classentity_1_1_player_a91613b74f81278a4bd845bef223b0b5f}{00172}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classentity_1_1_player_a91613b74f81278a4bd845bef223b0b5f}{addItem}}(\mbox{\hyperlink{classitem_1_1_item}{Item}} i)\{}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00173}00173         \textcolor{keywordflow}{if}(i.\mbox{\hyperlink{classitem_1_1_item_a89f40a13eef5043c8d7b62bedcd238d4}{type}} == \textcolor{stringliteral}{"{}potion"{}})\{}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00174}00174             \mbox{\hyperlink{classentity_1_1_player_a07e498bfb54f0666df41972f5a4674cc}{potions}}.add(i);}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00175}00175         \}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00176}00176         \textcolor{comment}{//Change stats of player here directly if the item is not a potion}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00177}00177 }
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00178}00178         System.out.println(\textcolor{stringliteral}{"{}Nouvel objet : "{}}+i.\mbox{\hyperlink{classitem_1_1_item_a7441fd46656c99d80977facde7cc265d}{name}});}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00179}00179     \}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00180}00180 }
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00187}\mbox{\hyperlink{classentity_1_1_player_a724d0cb885da2e80adfe13ca1901a12b}{00187}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classentity_1_1_player_a724d0cb885da2e80adfe13ca1901a12b}{drawInFight}}(Graphics2D g2, \textcolor{keywordtype}{int} screenX, \textcolor{keywordtype}{int} screenY)\{}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00188}00188         BufferedImage image = \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00189}00189         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classentity_1_1_entity_af6b442584a7caf6e84e73872f9f8e080}{\_spriteCntMax}}; i++) \{}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00190}00190             \textcolor{keywordflow}{if}(\mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}} == i)\{}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00191}00191                 image = \mbox{\hyperlink{classentity_1_1_character_af58d7b8dea3d200104e64eec7c174f48}{\_idle\_right}}[i];}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00192}00192             \}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00193}00193         \}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00194}00194         g2.drawImage(image,screenX,screenY,\mbox{\hyperlink{classgame_1_1_const}{Const}}.\mbox{\hyperlink{classgame_1_1_const_a9c3ba38aa97e94c23467cb8837b4c782}{FGHT\_entityScreenSize}},\mbox{\hyperlink{classgame_1_1_const}{Const}}.\mbox{\hyperlink{classgame_1_1_const_a9c3ba38aa97e94c23467cb8837b4c782}{FGHT\_entityScreenSize}},\textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00195}00195     \}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00196}00196 }
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00197}\mbox{\hyperlink{classentity_1_1_player_a95285f428f77399f48065c1e03c9bcfc}{00197}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classentity_1_1_player_a95285f428f77399f48065c1e03c9bcfc}{playerInterraction}}(\mbox{\hyperlink{classentity_1_1_player}{Player}} player) \{}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00198}00198         \textcolor{comment}{//Nothing}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00199}00199     \}}
+\DoxyCodeLine{\Hypertarget{_player_8java_source_l00200}00200 \}}
 
 \end{DoxyCode}

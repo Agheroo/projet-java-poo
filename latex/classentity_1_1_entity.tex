@@ -32,8 +32,10 @@ Collaboration diagram for entity.\+Entity\+:
 \begin{DoxyCompactList}\small\item\em Default constructor for the \mbox{\hyperlink{classentity_1_1_entity}{Entity}} class. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classentity_1_1_entity_a64161739076def0816eab3956d5b6346}{Entity}} (String entity\+Name, int x, int y, int \mbox{\hyperlink{classentity_1_1_entity_af6b442584a7caf6e84e73872f9f8e080}{\+\_\+sprite\+Cnt\+Max}}, int sprite\+Speed, boolean \mbox{\hyperlink{classentity_1_1_entity_acd7f4b7c1acbdcd410ee9ad61a86b58e}{collision}})
 \begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classentity_1_1_entity}{Entity}} class with specified initial position and animation parameters. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classentity_1_1_entity_a127423f72cd9e8ec189509dad498b21b}{update}} (\mbox{\hyperlink{classgame_1_1_scene}{Scene}} scene, double dt)
-\begin{DoxyCompactList}\small\item\em Updates the entity\textquotesingle{}s position based on the current scene and time elapsed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classentity_1_1_entity_a41e81bb1c3a3e86f3f43aa39d8fbb748}{update\+Frames}} ()
+\begin{DoxyCompactList}\small\item\em Updates the frames of the entity\textquotesingle{}s animation. \end{DoxyCompactList}\item 
+abstract void \mbox{\hyperlink{classentity_1_1_entity_ae874ae13e301bb9f227535534869f64e}{player\+Interraction}} (\mbox{\hyperlink{classentity_1_1_player}{Player}} player)
+\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -44,13 +46,6 @@ int \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{w
 Rectangle \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}} = new Rectangle()
 \item 
 String \mbox{\hyperlink{classentity_1_1_entity_a19fc9a3b25d27f23c8ada7af8e746a17}{name}}
-\end{DoxyCompactItemize}
-\doxysubsection*{Protected Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-void \mbox{\hyperlink{classentity_1_1_entity_a41e81bb1c3a3e86f3f43aa39d8fbb748}{update\+Frames}} ()
-\begin{DoxyCompactList}\small\item\em Updates the frames of the entity\textquotesingle{}s animation. \end{DoxyCompactList}\item 
-abstract void \mbox{\hyperlink{classentity_1_1_entity_ae874ae13e301bb9f227535534869f64e}{player\+Interraction}} (\mbox{\hyperlink{classentity_1_1_player}{Player}} player)
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -65,11 +60,6 @@ int \mbox{\hyperlink{classentity_1_1_entity_a61ba22624c5da7387312d9aa6d8e2526}{\
 \item 
 int \mbox{\hyperlink{classentity_1_1_entity_af6b442584a7caf6e84e73872f9f8e080}{\+\_\+sprite\+Cnt\+Max}}
 \end{DoxyCompactItemize}
-\doxysubsection*{Private Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-void \mbox{\hyperlink{classentity_1_1_entity_a9060501233d22f6130e204799a1f01c5}{load\+Textures}} ()
-\begin{DoxyCompactList}\small\item\em Loads textures for the entity based on its name. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -124,106 +114,40 @@ Constructor for the \mbox{\hyperlink{classentity_1_1_entity}{Entity}} class with
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_entity_8java_source_l00044}{44}} of file \mbox{\hyperlink{_entity_8java_source}{Entity.\+java}}.
+Definition at line \mbox{\hyperlink{_entity_8java_source_l00046}{46}} of file \mbox{\hyperlink{_entity_8java_source}{Entity.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00044                                                                                                           \{}
-\DoxyCodeLine{00045         this.collision = \mbox{\hyperlink{classentity_1_1_entity_acd7f4b7c1acbdcd410ee9ad61a86b58e}{collision}};}
-\DoxyCodeLine{00046         this.worldX = x;}
-\DoxyCodeLine{00047         this.worldY = y;}
-\DoxyCodeLine{00048         this.hitbox.x = \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}};}
-\DoxyCodeLine{00049         this.hitbox.y = \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}};}
-\DoxyCodeLine{00050         this.\_spriteCntMax = \mbox{\hyperlink{classentity_1_1_entity_af6b442584a7caf6e84e73872f9f8e080}{\_spriteCntMax}};}
-\DoxyCodeLine{00051         this.\_spriteSpeed = spriteSpeed;}
-\DoxyCodeLine{00052         this.name = entityName;}
-\DoxyCodeLine{00053     \}}
+\DoxyCodeLine{00046                                                                                                           \{}
+\DoxyCodeLine{00047         this.collision = \mbox{\hyperlink{classentity_1_1_entity_acd7f4b7c1acbdcd410ee9ad61a86b58e}{collision}};}
+\DoxyCodeLine{00048         this.worldX = x;}
+\DoxyCodeLine{00049         this.worldY = y;}
+\DoxyCodeLine{00050         this.hitbox.x = \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}};}
+\DoxyCodeLine{00051         this.hitbox.y = \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}};}
+\DoxyCodeLine{00052         this.\_spriteCntMax = \mbox{\hyperlink{classentity_1_1_entity_af6b442584a7caf6e84e73872f9f8e080}{\_spriteCntMax}};}
+\DoxyCodeLine{00053         this.\_spriteSpeed = spriteSpeed;}
+\DoxyCodeLine{00054         this.name = entityName;}
+\DoxyCodeLine{00055     \}}
 
 \end{DoxyCode}
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classentity_1_1_entity_a9060501233d22f6130e204799a1f01c5}\label{classentity_1_1_entity_a9060501233d22f6130e204799a1f01c5}} 
-\index{entity.Entity@{entity.Entity}!loadTextures@{loadTextures}}
-\index{loadTextures@{loadTextures}!entity.Entity@{entity.Entity}}
-\doxysubsubsection{\texorpdfstring{loadTextures()}{loadTextures()}}
-{\footnotesize\ttfamily void entity.\+Entity.\+load\+Textures (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Loads textures for the entity based on its name. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em name} & The name used to determine the textures to load. \\
-\hline
-\end{DoxyParams}
-
-
-Definition at line \mbox{\hyperlink{_entity_8java_source_l00070}{70}} of file \mbox{\hyperlink{_entity_8java_source}{Entity.\+java}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00070                                 \{}
-\DoxyCodeLine{00071         \textcolor{comment}{// TODO: Different texture loading from characters}}
-\DoxyCodeLine{00072     \}}
-
-\end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classentity_1_1_entity_a9060501233d22f6130e204799a1f01c5_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{classentity_1_1_entity_ae874ae13e301bb9f227535534869f64e}\label{classentity_1_1_entity_ae874ae13e301bb9f227535534869f64e}} 
 \index{entity.Entity@{entity.Entity}!playerInterraction@{playerInterraction}}
 \index{playerInterraction@{playerInterraction}!entity.Entity@{entity.Entity}}
 \doxysubsubsection{\texorpdfstring{playerInterraction()}{playerInterraction()}}
-{\footnotesize\ttfamily abstract void entity.\+Entity.\+player\+Interraction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classentity_1_1_player}{Player}}}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}, {\ttfamily [protected]}}
+{\footnotesize\ttfamily abstract void entity.\+Entity.\+player\+Interraction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classentity_1_1_player}{Player}}}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
 
 
 
-Reimplemented in \mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___chest_a3fd47570a31ae5fa8d3009776eb876bd}{entity.\+props.\+OBJ\+\_\+\+Chest}}, \mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___door_a9839aec16dffa3eadd3085215c3659be}{entity.\+props.\+OBJ\+\_\+\+Door}}, \mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___key_a0c36447224c2d7c67b9b015cd40e0f35}{entity.\+props.\+OBJ\+\_\+\+Key}}, \mbox{\hyperlink{classentity_1_1_character_af7bcb14c587e5ae5e9fef046b28072a0}{entity.\+Character}}, and \mbox{\hyperlink{classentity_1_1_enemy_a429f4fa6c8b461d4c18802d35d9b5092}{entity.\+Enemy}}.
+Reimplemented in \mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___key_a0c36447224c2d7c67b9b015cd40e0f35}{entity.\+props.\+OBJ\+\_\+\+Key}}, \mbox{\hyperlink{classentity_1_1_enemy_a429f4fa6c8b461d4c18802d35d9b5092}{entity.\+Enemy}}, \mbox{\hyperlink{classentity_1_1_player_a95285f428f77399f48065c1e03c9bcfc}{entity.\+Player}}, \mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___chest_adca5888ccf1317edc6302fd38b74a0aa}{entity.\+props.\+OBJ\+\_\+\+Chest}}, and \mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___door_ab5d21b32a7d840c3385c63cdc166dbe3}{entity.\+props.\+OBJ\+\_\+\+Door}}.
 
-\mbox{\Hypertarget{classentity_1_1_entity_a127423f72cd9e8ec189509dad498b21b}\label{classentity_1_1_entity_a127423f72cd9e8ec189509dad498b21b}} 
-\index{entity.Entity@{entity.Entity}!update@{update}}
-\index{update@{update}!entity.Entity@{entity.Entity}}
-\doxysubsubsection{\texorpdfstring{update()}{update()}}
-{\footnotesize\ttfamily void entity.\+Entity.\+update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgame_1_1_scene}{Scene}}}]{scene,  }\item[{double}]{dt }\end{DoxyParamCaption})}
-
-
-
-Updates the entity\textquotesingle{}s position based on the current scene and time elapsed. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em scene} & The current game scene. \\
-\hline
-{\em dt} & The time elapsed since the last update. \\
-\hline
-\end{DoxyParams}
-
-
-Reimplemented in \mbox{\hyperlink{classentity_1_1_character_a2d5d7da3d6f49c2b0b040850d741f8f7}{entity.\+Character}}, \mbox{\hyperlink{classentity_1_1_enemy_ab115ccb1365609753aa1dddbc9df0580}{entity.\+Enemy}}, and \mbox{\hyperlink{classentity_1_1_player_ae48f1e24c9ff0b7bd4f55b470bf66e7e}{entity.\+Player}}.
-
-
-
-Definition at line \mbox{\hyperlink{_entity_8java_source_l00060}{60}} of file \mbox{\hyperlink{_entity_8java_source}{Entity.\+java}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00060                                                \{}
-\DoxyCodeLine{00061         \textcolor{comment}{// Updating entity position accurately (at any point in time either pressing keys or not)}}
-\DoxyCodeLine{00062     \}}
-
-\end{DoxyCode}
 \mbox{\Hypertarget{classentity_1_1_entity_a41e81bb1c3a3e86f3f43aa39d8fbb748}\label{classentity_1_1_entity_a41e81bb1c3a3e86f3f43aa39d8fbb748}} 
 \index{entity.Entity@{entity.Entity}!updateFrames@{updateFrames}}
 \index{updateFrames@{updateFrames}!entity.Entity@{entity.Entity}}
 \doxysubsubsection{\texorpdfstring{updateFrames()}{updateFrames()}}
-{\footnotesize\ttfamily void entity.\+Entity.\+update\+Frames (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily void entity.\+Entity.\+update\+Frames (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -231,20 +155,20 @@ Updates the frames of the entity\textquotesingle{}s animation.
 
 
 
-Definition at line \mbox{\hyperlink{_entity_8java_source_l00077}{77}} of file \mbox{\hyperlink{_entity_8java_source}{Entity.\+java}}.
+Definition at line \mbox{\hyperlink{_entity_8java_source_l00061}{61}} of file \mbox{\hyperlink{_entity_8java_source}{Entity.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00077                                   \{}
-\DoxyCodeLine{00078         \mbox{\hyperlink{classentity_1_1_entity_a2ab792cccf8b5931642f7fa8432186af}{\_spriteUpdater}}++;}
-\DoxyCodeLine{00079         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_a2ab792cccf8b5931642f7fa8432186af}{\_spriteUpdater}} > \mbox{\hyperlink{classentity_1_1_entity_a61ba22624c5da7387312d9aa6d8e2526}{\_spriteSpeed}}) \{}
-\DoxyCodeLine{00080             \mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}}++;}
-\DoxyCodeLine{00081             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}} == \mbox{\hyperlink{classentity_1_1_entity_af6b442584a7caf6e84e73872f9f8e080}{\_spriteCntMax}}) \{}
-\DoxyCodeLine{00082                 \mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}} = 0;}
-\DoxyCodeLine{00083             \}}
-\DoxyCodeLine{00084             \mbox{\hyperlink{classentity_1_1_entity_a2ab792cccf8b5931642f7fa8432186af}{\_spriteUpdater}} = 0;}
-\DoxyCodeLine{00085         \}}
-\DoxyCodeLine{00086     \}}
+\DoxyCodeLine{00061                                \{}
+\DoxyCodeLine{00062         \mbox{\hyperlink{classentity_1_1_entity_a2ab792cccf8b5931642f7fa8432186af}{\_spriteUpdater}}++;}
+\DoxyCodeLine{00063         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_a2ab792cccf8b5931642f7fa8432186af}{\_spriteUpdater}} > \mbox{\hyperlink{classentity_1_1_entity_a61ba22624c5da7387312d9aa6d8e2526}{\_spriteSpeed}}) \{}
+\DoxyCodeLine{00064             \mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}}++;}
+\DoxyCodeLine{00065             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}} == \mbox{\hyperlink{classentity_1_1_entity_af6b442584a7caf6e84e73872f9f8e080}{\_spriteCntMax}}) \{}
+\DoxyCodeLine{00066                 \mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}} = 0;}
+\DoxyCodeLine{00067             \}}
+\DoxyCodeLine{00068             \mbox{\hyperlink{classentity_1_1_entity_a2ab792cccf8b5931642f7fa8432186af}{\_spriteUpdater}} = 0;}
+\DoxyCodeLine{00069         \}}
+\DoxyCodeLine{00070     \}}
 
 \end{DoxyCode}
 Here is the caller graph for this function\+:

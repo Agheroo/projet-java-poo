@@ -1,6 +1,4 @@
 <map id="entity.props.Props.destroySelf" name="entity.props.Props.destroySelf">
-<area shape="rect" id="node1" title=" " alt="" coords="268,78,484,105"/>
-<area shape="rect" id="node2" href="$classentity_1_1props_1_1_o_b_j___chest.html#a3fd47570a31ae5fa8d3009776eb876bd" title=" " alt="" coords="5,5,220,47"/>
-<area shape="rect" id="node3" href="$classentity_1_1props_1_1_o_b_j___door.html#a9839aec16dffa3eadd3085215c3659be" title=" " alt="" coords="9,71,216,112"/>
-<area shape="rect" id="node4" href="$classentity_1_1props_1_1_o_b_j___key.html#a0c36447224c2d7c67b9b015cd40e0f35" title=" " alt="" coords="13,136,212,177"/>
+<area shape="rect" id="node1" title="Destroys the current prop in the world (using the hashmap)" alt="" coords="252,13,468,39"/>
+<area shape="rect" id="node2" href="$classentity_1_1props_1_1_o_b_j___key.html#a0c36447224c2d7c67b9b015cd40e0f35" title=" " alt="" coords="5,5,204,47"/>
 </map>

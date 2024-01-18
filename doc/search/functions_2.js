@@ -1,9 +1,10 @@
 var searchData=
 [
-  ['changescene_0',['changeScene',['../classgame_1_1_scene.html#a1133bbe7f1bf2b14f648c9a8e70d5886',1,'game::Scene']]],
+  ['changeselectioncolor_0',['changeSelectionColor',['../class_u_i_1_1_h_u_d.html#a5039f6b8d54a62926eabd210aeb1fea4',1,'UI::HUD']]],
   ['character_1',['Character',['../classentity_1_1_character.html#aa40a6947a230fa0e48701a1da7a507e4',1,'entity::Character']]],
-  ['checkobject_2',['checkObject',['../classentity_1_1_player.html#ac01d8a2c0231c9b74b44dbb4e79802e8',1,'entity::Player']]],
-  ['checkpausescene_3',['checkPauseScene',['../classgame_1_1_scene.html#a8836ac66378d274d9935a950e0b83d7a',1,'game::Scene']]],
-  ['checktilecollision_4',['checkTileCollision',['../classentity_1_1_character.html#aeee6d959ceb691d58104656642f828fc',1,'entity::Character']]],
-  ['choicebutton_5',['ChoiceButton',['../class_u_i_1_1_choice_button.html#a294842049466c9c08efadc34133dfb92',1,'UI::ChoiceButton']]]
+  ['checkenemy_2',['checkEnemy',['../classentity_1_1_player.html#afd8ccd449d009e222e579aa68eeb8a50',1,'entity::Player']]],
+  ['checkobject_3',['checkObject',['../classentity_1_1_player.html#adb890f89741a84069bb1288c7093508f',1,'entity::Player']]],
+  ['checkpausescene_4',['checkPauseScene',['../classgame_1_1_scene.html#a8836ac66378d274d9935a950e0b83d7a',1,'game::Scene']]],
+  ['checktilecollision_5',['checkTileCollision',['../classentity_1_1_character.html#aeee6d959ceb691d58104656642f828fc',1,'entity::Character']]],
+  ['choicebutton_6',['ChoiceButton',['../class_u_i_1_1_choice_button.html#a294842049466c9c08efadc34133dfb92',1,'UI::ChoiceButton']]]
 ];

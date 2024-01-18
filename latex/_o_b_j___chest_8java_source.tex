@@ -7,26 +7,24 @@
 \DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00007}00007 }
 \DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00008}00008 }
 \DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00009}00009 \textcolor{keyword}{import} \mbox{\hyperlink{namespaceentity}{entity}}.\mbox{\hyperlink{classentity_1_1_player}{Player}};}
-\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00010}00010 \textcolor{keyword}{import} \mbox{\hyperlink{namespaceitem}{item}}.\mbox{\hyperlink{classitem_1_1_generator}{Generator}};}
-\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00011}00011 \textcolor{keyword}{import} \mbox{\hyperlink{namespaceitem}{item}}.\mbox{\hyperlink{classitem_1_1_item}{Item}};}
-\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00012}00012 }
-\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00018}\mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___chest}{00018}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___chest}{OBJ\_Chest}} \textcolor{keyword}{extends} \mbox{\hyperlink{classentity_1_1props_1_1_props}{Props}} \{}
-\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00019}00019 }
-\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00024}\mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___chest_a791b6f22d201a11338c82f65b5b65bc5}{00024}}     \textcolor{keyword}{public} \mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___chest_a791b6f22d201a11338c82f65b5b65bc5}{OBJ\_Chest}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}})\{}
-\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00025}00025         super(\mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}},\mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}},\textcolor{stringliteral}{"{}chest"{}},1,0,\textcolor{keyword}{true});}
-\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00026}00026         \mbox{\hyperlink{classentity_1_1_entity_a9060501233d22f6130e204799a1f01c5}{loadTextures}}(\textcolor{stringliteral}{"{}chest"{}});}
-\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00027}00027         \mbox{\hyperlink{classentity_1_1_entity_acd7f4b7c1acbdcd410ee9ad61a86b58e}{collision}} = \textcolor{keyword}{true}; \textcolor{comment}{// Chests are not meant to be collided with by default}}
-\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00028}00028     \}}
-\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00029}\mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___chest_a3fd47570a31ae5fa8d3009776eb876bd}{00029}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___chest_a3fd47570a31ae5fa8d3009776eb876bd}{playerInterraction}}(\mbox{\hyperlink{classentity_1_1_player}{Player}} p) \{}
-\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00030}00030         \mbox{\hyperlink{classitem_1_1_item}{Item}} \mbox{\hyperlink{namespaceitem}{item}}= \mbox{\hyperlink{classitem_1_1_generator}{Generator}}.\mbox{\hyperlink{classitem_1_1_generator_ac17e98c64dc79f381c465bf21b5409a0}{generateItem}}();}
-\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00031}00031         \textcolor{keywordflow}{if}(\textcolor{keyword}{true})\{}
-\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00032}00032             p.\mbox{\hyperlink{classentity_1_1_player_a91613b74f81278a4bd845bef223b0b5f}{addItem}}(\mbox{\hyperlink{namespaceitem}{item}});}
-\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00033}00033         \}}
-\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00034}00034         System.out.println(\textcolor{stringliteral}{"{}Chest interaction"{}});}
-\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00035}00035 }
-\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00036}00036         \mbox{\hyperlink{classentity_1_1props_1_1_props_ab837cf0c685323fe8c2cc84d80f6315a}{destroySelf}}();}
-\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00037}00037 }
-\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00038}00038     \}}
-\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00039}00039 \}}
+\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00010}00010 \textcolor{keyword}{import} \mbox{\hyperlink{namespacegame}{game}}.\mbox{\hyperlink{classgame_1_1_scene}{Scene}};}
+\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00011}00011 \textcolor{keyword}{import} \mbox{\hyperlink{namespaceitem}{item}}.\mbox{\hyperlink{classitem_1_1_generator}{Generator}};}
+\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00012}00012 \textcolor{keyword}{import} \mbox{\hyperlink{namespaceitem}{item}}.\mbox{\hyperlink{classitem_1_1_item}{Item}};}
+\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00019}\mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___chest}{00019}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___chest}{OBJ\_Chest}} \textcolor{keyword}{extends} \mbox{\hyperlink{classentity_1_1props_1_1_props}{Props}} \{}
+\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00020}\mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___chest_a67aa885597301f8d23f60586d12e3668}{00020}}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___chest_a67aa885597301f8d23f60586d12e3668}{open}};}
+\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00025}\mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___chest_a791b6f22d201a11338c82f65b5b65bc5}{00025}}     \textcolor{keyword}{public} \mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___chest_a791b6f22d201a11338c82f65b5b65bc5}{OBJ\_Chest}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}})\{}
+\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00026}00026         super(\mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}},\mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}},\textcolor{stringliteral}{"{}chest"{}},2,0,\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00027}00027         \mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___chest_a67aa885597301f8d23f60586d12e3668}{open}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00028}00028         \mbox{\hyperlink{classentity_1_1props_1_1_props_ad9057ae1a190d0f140f579820860b176}{loadTextures}}(\textcolor{stringliteral}{"{}chest"{}});}
+\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00029}00029     \}}
+\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00030}\mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___chest_adca5888ccf1317edc6302fd38b74a0aa}{00030}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___chest_adca5888ccf1317edc6302fd38b74a0aa}{playerInterraction}}(\mbox{\hyperlink{classentity_1_1_player}{Player}} player) \{}
+\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00031}00031         \textcolor{keywordflow}{if}(\mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___chest_a67aa885597301f8d23f60586d12e3668}{open}} == \textcolor{keyword}{false} \&\& \mbox{\hyperlink{classgame_1_1_scene}{Scene}}.\mbox{\hyperlink{classgame_1_1_scene_a2bbc8cb5064aaa5cc1ed0ec8950f4a58}{keyH}}.\mbox{\hyperlink{classmain_1_1_key_handler_aaaa3f8f86ebada192b298f0ace674c9b}{interactPressed}})\{}
+\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00032}00032             \mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___chest_a67aa885597301f8d23f60586d12e3668}{open}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00033}00033             \mbox{\hyperlink{classitem_1_1_item}{Item}} \mbox{\hyperlink{namespaceitem}{item}} = \mbox{\hyperlink{classitem_1_1_generator}{Generator}}.\mbox{\hyperlink{classitem_1_1_generator_ac17e98c64dc79f381c465bf21b5409a0}{generateItem}}();}
+\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00034}00034             player.\mbox{\hyperlink{classentity_1_1_player_a91613b74f81278a4bd845bef223b0b5f}{addItem}}(\mbox{\hyperlink{namespaceitem}{item}});}
+\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00035}00035         \}}
+\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00036}00036     \}}
+\DoxyCodeLine{\Hypertarget{_o_b_j___chest_8java_source_l00037}00037 \}}
 
 \end{DoxyCode}

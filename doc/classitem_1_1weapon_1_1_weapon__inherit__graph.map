@@ -1,7 +1,7 @@
 <map id="item.weapon.Weapon" name="item.weapon.Weapon">
-<area shape="rect" id="node1" title=" " alt="" coords="157,131,320,208"/>
-<area shape="rect" id="node3" href="$classitem_1_1weapon_1_1_bow.html" title=" " alt="" coords="5,256,144,333"/>
-<area shape="rect" id="node4" href="$classitem_1_1weapon_1_1_staff.html" title=" " alt="" coords="168,256,309,333"/>
-<area shape="rect" id="node5" href="$classitem_1_1weapon_1_1_sword.html" title=" " alt="" coords="334,256,485,333"/>
-<area shape="rect" id="node2" href="$classitem_1_1_item.html" title=" " alt="" coords="195,5,282,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="157,145,320,237"/>
+<area shape="rect" id="node3" href="$classitem_1_1weapon_1_1_bow.html" title=" " alt="" coords="5,285,144,377"/>
+<area shape="rect" id="node4" href="$classitem_1_1weapon_1_1_staff.html" title=" " alt="" coords="168,293,309,370"/>
+<area shape="rect" id="node5" href="$classitem_1_1weapon_1_1_sword.html" title=" " alt="" coords="334,293,485,370"/>
+<area shape="rect" id="node2" href="$classitem_1_1_item.html" title=" " alt="" coords="189,5,289,97"/>
 </map>

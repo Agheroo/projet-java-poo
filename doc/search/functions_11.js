@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['window_0',['Window',['../classgame_1_1_window.html#a98e156c2148852f07cf8eef903d4b175',1,'game.Window.Window()'],['../class_creation_combat_scene_1_1game_1_1_window.html#a074bfecf28fb056c878c37c019e04cb3',1,'CreationCombatScene.game.Window.Window()']]]
+  ['warrior_0',['Warrior',['../classentity_1_1_warrior.html#aa4d999f88c7cd9a2a2c1a85d0708b474',1,'entity::Warrior']]],
+  ['weapon_1',['Weapon',['../classitem_1_1weapon_1_1_weapon.html#a8ff2ea1f2e88e5acce3d78cf104a8ebe',1,'item::weapon::Weapon']]],
+  ['window_2',['Window',['../classgame_1_1_window.html#a98e156c2148852f07cf8eef903d4b175',1,'game::Window']]]
 ];

@@ -7,8 +7,7 @@ Represents a tile in the game world.
 
 
 
-Collaboration diagram for tiles.\+Tile\+:
-\nopagebreak
+Collaboration diagram for tiles.\+Tile\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -71,7 +70,7 @@ int \mbox{\hyperlink{classtiles_1_1_tile_a21d0ebea99533f4928c0aea73a420ad1}{\+\_
 \doxysubsection{Detailed Description}
 Represents a tile in the game world. 
 
-Definition at line \mbox{\hyperlink{_tile_8java_source_l00021}{21}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
+Definition at line \mbox{\hyperlink{_tile_8java_source_l00019}{19}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
 
 
 
@@ -99,16 +98,16 @@ Constructor for the \mbox{\hyperlink{classtiles_1_1_tile}{Tile}} class.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_tile_8java_source_l00046}{46}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
+Definition at line \mbox{\hyperlink{_tile_8java_source_l00044}{44}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00046                                                                                 \{}
-\DoxyCodeLine{00047         this.spriteCntMax = \mbox{\hyperlink{classtiles_1_1_tile_addfa89908a39300f3d61f7de1f322b26}{spriteCntMax}};}
-\DoxyCodeLine{00048         this.spriteSpeed = \mbox{\hyperlink{classtiles_1_1_tile_a3ff503fd877dd679605655acb6f3c956}{spriteSpeed}};}
-\DoxyCodeLine{00049         this.\_isBlocking = isBlocking;}
-\DoxyCodeLine{00050         \mbox{\hyperlink{classtiles_1_1_tile_aad477728d9fdf5b742dbf3039675e510}{image}} = \textcolor{keyword}{new} BufferedImage[\mbox{\hyperlink{classtiles_1_1_tile_addfa89908a39300f3d61f7de1f322b26}{spriteCntMax}}];}
-\DoxyCodeLine{00051     \}}
+\DoxyCodeLine{00044                                                                                 \{}
+\DoxyCodeLine{00045         this.spriteCntMax = \mbox{\hyperlink{classtiles_1_1_tile_addfa89908a39300f3d61f7de1f322b26}{spriteCntMax}};}
+\DoxyCodeLine{00046         this.spriteSpeed = \mbox{\hyperlink{classtiles_1_1_tile_a3ff503fd877dd679605655acb6f3c956}{spriteSpeed}};}
+\DoxyCodeLine{00047         this.\_isBlocking = isBlocking;}
+\DoxyCodeLine{00048         \mbox{\hyperlink{classtiles_1_1_tile_aad477728d9fdf5b742dbf3039675e510}{image}} = \textcolor{keyword}{new} BufferedImage[\mbox{\hyperlink{classtiles_1_1_tile_addfa89908a39300f3d61f7de1f322b26}{spriteCntMax}}];}
+\DoxyCodeLine{00049     \}}
 
 \end{DoxyCode}
 
@@ -135,26 +134,25 @@ Draw the tile on the screen.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_tile_8java_source_l00158}{158}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
+Definition at line \mbox{\hyperlink{_tile_8java_source_l00156}{156}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00158                                                               \{}
-\DoxyCodeLine{00159         BufferedImage render = \textcolor{keyword}{null};}
-\DoxyCodeLine{00160 }
-\DoxyCodeLine{00161         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classtiles_1_1_tile_addfa89908a39300f3d61f7de1f322b26}{spriteCntMax}}; i++) \{}
-\DoxyCodeLine{00162             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classtiles_1_1_tile_aa5dc000dc3230aa50f4f15ef57987c58}{\_spriteCnt}} == i) \{}
-\DoxyCodeLine{00163                 render = \mbox{\hyperlink{classtiles_1_1_tile_aad477728d9fdf5b742dbf3039675e510}{image}}[i];}
-\DoxyCodeLine{00164             \}}
-\DoxyCodeLine{00165         \}}
-\DoxyCodeLine{00166 }
-\DoxyCodeLine{00167         g2.drawImage(render, screenX, screenY, \mbox{\hyperlink{classtiles_1_1_tile_a8e40c03ec34d2c7678df14f7b0ebf44f}{screenSize}}, \mbox{\hyperlink{classtiles_1_1_tile_a8e40c03ec34d2c7678df14f7b0ebf44f}{screenSize}}, \textcolor{keyword}{null});}
-\DoxyCodeLine{00168         \textcolor{comment}{//g2.drawRect(screenX,screenY,Const.WRLD\_tileScreenSize,Const.WRLD\_tileScreenSize);   //Debugging purposes}}
-\DoxyCodeLine{00169     \}}
+\DoxyCodeLine{00156                                                               \{}
+\DoxyCodeLine{00157         BufferedImage render = \textcolor{keyword}{null};}
+\DoxyCodeLine{00158 }
+\DoxyCodeLine{00159         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classtiles_1_1_tile_addfa89908a39300f3d61f7de1f322b26}{spriteCntMax}}; i++) \{}
+\DoxyCodeLine{00160             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classtiles_1_1_tile_aa5dc000dc3230aa50f4f15ef57987c58}{\_spriteCnt}} == i) \{}
+\DoxyCodeLine{00161                 render = \mbox{\hyperlink{classtiles_1_1_tile_aad477728d9fdf5b742dbf3039675e510}{image}}[i];}
+\DoxyCodeLine{00162             \}}
+\DoxyCodeLine{00163         \}}
+\DoxyCodeLine{00164 }
+\DoxyCodeLine{00165         g2.drawImage(render, screenX, screenY, \mbox{\hyperlink{classtiles_1_1_tile_a8e40c03ec34d2c7678df14f7b0ebf44f}{screenSize}}, \mbox{\hyperlink{classtiles_1_1_tile_a8e40c03ec34d2c7678df14f7b0ebf44f}{screenSize}}, \textcolor{keyword}{null});}
+\DoxyCodeLine{00166         \textcolor{comment}{//g2.drawRect(screenX,screenY,Const.WRLD\_tileScreenSize,Const.WRLD\_tileScreenSize);   //Debugging purposes}}
+\DoxyCodeLine{00167     \}}
 
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -176,13 +174,13 @@ True if the tile is blocking, false otherwise.
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_tile_8java_source_l00099}{99}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
+Definition at line \mbox{\hyperlink{_tile_8java_source_l00097}{97}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00099                                   \{}
-\DoxyCodeLine{00100         \textcolor{keywordflow}{return} \mbox{\hyperlink{classtiles_1_1_tile_a40936298413f15da671cea46fb906a7f}{\_isBlocking}};}
-\DoxyCodeLine{00101     \}}
+\DoxyCodeLine{00097                                   \{}
+\DoxyCodeLine{00098         \textcolor{keywordflow}{return} \mbox{\hyperlink{classtiles_1_1_tile_a40936298413f15da671cea46fb906a7f}{\_isBlocking}};}
+\DoxyCodeLine{00099     \}}
 
 \end{DoxyCode}
 Here is the caller graph for this function\+:
@@ -208,16 +206,16 @@ An array containing the x and y coordinates of the tile.
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_tile_8java_source_l00087}{87}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
+Definition at line \mbox{\hyperlink{_tile_8java_source_l00085}{85}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00087                           \{}
-\DoxyCodeLine{00088         \textcolor{keywordtype}{int} tmp[] = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[2];}
-\DoxyCodeLine{00089         tmp[0] = \mbox{\hyperlink{classtiles_1_1_tile_ac5f4a59757ed0765e77cc1400da27190}{\_worldX}};}
-\DoxyCodeLine{00090         tmp[1] = \mbox{\hyperlink{classtiles_1_1_tile_a2309cd4b5bf1a049920e9a253864531c}{\_worldY}};}
-\DoxyCodeLine{00091         \textcolor{keywordflow}{return} tmp;}
-\DoxyCodeLine{00092     \}}
+\DoxyCodeLine{00085                           \{}
+\DoxyCodeLine{00086         \textcolor{keywordtype}{int} tmp[] = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[2];}
+\DoxyCodeLine{00087         tmp[0] = \mbox{\hyperlink{classtiles_1_1_tile_ac5f4a59757ed0765e77cc1400da27190}{\_worldX}};}
+\DoxyCodeLine{00088         tmp[1] = \mbox{\hyperlink{classtiles_1_1_tile_a2309cd4b5bf1a049920e9a253864531c}{\_worldY}};}
+\DoxyCodeLine{00089         \textcolor{keywordflow}{return} tmp;}
+\DoxyCodeLine{00090     \}}
 
 \end{DoxyCode}
 Here is the caller graph for this function\+:
@@ -249,23 +247,23 @@ Load textures for the tile.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_tile_8java_source_l00121}{121}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
+Definition at line \mbox{\hyperlink{_tile_8java_source_l00119}{119}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00121                                                                    \{}
-\DoxyCodeLine{00122         \textcolor{keywordflow}{try} \{}
-\DoxyCodeLine{00123             \textcolor{keywordflow}{if} (animated) \{}
-\DoxyCodeLine{00124                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{classtiles_1_1_tile_addfa89908a39300f3d61f7de1f322b26}{spriteCntMax}}; j++) \{}
-\DoxyCodeLine{00125                     \mbox{\hyperlink{classtiles_1_1_tile_aad477728d9fdf5b742dbf3039675e510}{image}}[j] = ImageIO.read(\textcolor{keyword}{new} FileInputStream(\textcolor{stringliteral}{"{}res/tiles/animated/"{}} + name + (j + 1) + \textcolor{stringliteral}{"{}.png"{}}));}
-\DoxyCodeLine{00126                 \}}
-\DoxyCodeLine{00127             \} \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{00128                 \mbox{\hyperlink{classtiles_1_1_tile_aad477728d9fdf5b742dbf3039675e510}{image}}[0] = ImageIO.read(\textcolor{keyword}{new} FileInputStream(\textcolor{stringliteral}{"{}res/tiles/static/"{}} + name + (i + 1) + \textcolor{stringliteral}{"{}.png"{}}));}
-\DoxyCodeLine{00129             \}}
-\DoxyCodeLine{00130         \} \textcolor{keywordflow}{catch} (IOException e) \{}
-\DoxyCodeLine{00131             e.printStackTrace();}
-\DoxyCodeLine{00132         \}}
-\DoxyCodeLine{00133     \}}
+\DoxyCodeLine{00119                                                                    \{}
+\DoxyCodeLine{00120         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{00121             \textcolor{keywordflow}{if} (animated) \{}
+\DoxyCodeLine{00122                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{classtiles_1_1_tile_addfa89908a39300f3d61f7de1f322b26}{spriteCntMax}}; j++) \{}
+\DoxyCodeLine{00123                     \mbox{\hyperlink{classtiles_1_1_tile_aad477728d9fdf5b742dbf3039675e510}{image}}[j] = ImageIO.read(\textcolor{keyword}{new} FileInputStream(\textcolor{stringliteral}{"{}res/tiles/animated/"{}} + name + \textcolor{stringliteral}{"{}/"{}} + name + (j + 1) + \textcolor{stringliteral}{"{}.png"{}}));}
+\DoxyCodeLine{00124                 \}}
+\DoxyCodeLine{00125             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00126                 \mbox{\hyperlink{classtiles_1_1_tile_aad477728d9fdf5b742dbf3039675e510}{image}}[0] = ImageIO.read(\textcolor{keyword}{new} FileInputStream(\textcolor{stringliteral}{"{}res/tiles/static/"{}} + name + \textcolor{stringliteral}{"{}/"{}} + name + (i + 1) + \textcolor{stringliteral}{"{}.png"{}}));}
+\DoxyCodeLine{00127             \}}
+\DoxyCodeLine{00128         \} \textcolor{keywordflow}{catch} (IOException e) \{}
+\DoxyCodeLine{00129             e.printStackTrace();}
+\DoxyCodeLine{00130         \}}
+\DoxyCodeLine{00131     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classtiles_1_1_tile_aa0b0d298e48f2280cbc63d95de07d675}\label{classtiles_1_1_tile_aa0b0d298e48f2280cbc63d95de07d675}} 
@@ -285,17 +283,16 @@ Set whether the tile is blocking.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_tile_8java_source_l00058}{58}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
+Definition at line \mbox{\hyperlink{_tile_8java_source_l00056}{56}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00058                                                 \{}
-\DoxyCodeLine{00059         \mbox{\hyperlink{classtiles_1_1_tile_a40936298413f15da671cea46fb906a7f}{\_isBlocking}} = collision;}
-\DoxyCodeLine{00060     \}}
+\DoxyCodeLine{00056                                                 \{}
+\DoxyCodeLine{00057         \mbox{\hyperlink{classtiles_1_1_tile_a40936298413f15da671cea46fb906a7f}{\_isBlocking}} = collision;}
+\DoxyCodeLine{00058     \}}
 
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -321,18 +318,17 @@ Set the position of the tile.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_tile_8java_source_l00077}{77}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
+Definition at line \mbox{\hyperlink{_tile_8java_source_l00075}{75}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00077                                      \{}
-\DoxyCodeLine{00078         this.\_worldX = x;}
-\DoxyCodeLine{00079         this.\_worldY = y;}
-\DoxyCodeLine{00080     \}}
+\DoxyCodeLine{00075                                      \{}
+\DoxyCodeLine{00076         this.\_worldX = x;}
+\DoxyCodeLine{00077         this.\_worldY = y;}
+\DoxyCodeLine{00078     \}}
 
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -358,14 +354,14 @@ Set the sprite count and speed for the tile.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_tile_8java_source_l00109}{109}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
+Definition at line \mbox{\hyperlink{_tile_8java_source_l00107}{107}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00109                                                                                 \{}
-\DoxyCodeLine{00110         this.spriteCntMax = newSpriteCntMax;}
-\DoxyCodeLine{00111         this.spriteSpeed = newSpriteSpeed;}
-\DoxyCodeLine{00112     \}}
+\DoxyCodeLine{00107                                                                                 \{}
+\DoxyCodeLine{00108         this.spriteCntMax = newSpriteCntMax;}
+\DoxyCodeLine{00109         this.spriteSpeed = newSpriteSpeed;}
+\DoxyCodeLine{00110     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classtiles_1_1_tile_a344a65a84a3f750cbb57f1d1e6c66c3d}\label{classtiles_1_1_tile_a344a65a84a3f750cbb57f1d1e6c66c3d}} 
@@ -385,17 +381,16 @@ Set the texture for the tile.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_tile_8java_source_l00067}{67}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
+Definition at line \mbox{\hyperlink{_tile_8java_source_l00065}{65}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00067                                                        \{}
-\DoxyCodeLine{00068         this.image = newTexture;}
-\DoxyCodeLine{00069     \}}
+\DoxyCodeLine{00065                                                        \{}
+\DoxyCodeLine{00066         this.image = newTexture;}
+\DoxyCodeLine{00067     \}}
 
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -414,26 +409,25 @@ Update the sprite frames for the tile.
 
 
 
-Definition at line \mbox{\hyperlink{_tile_8java_source_l00138}{138}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
+Definition at line \mbox{\hyperlink{_tile_8java_source_l00136}{136}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00138                                \{}
-\DoxyCodeLine{00139         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classtiles_1_1_tile_a3ff503fd877dd679605655acb6f3c956}{spriteSpeed}} > 0) \{}
-\DoxyCodeLine{00140             \mbox{\hyperlink{classtiles_1_1_tile_a21d0ebea99533f4928c0aea73a420ad1}{\_spriteUpdater}}++;}
-\DoxyCodeLine{00141             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classtiles_1_1_tile_a21d0ebea99533f4928c0aea73a420ad1}{\_spriteUpdater}} > \mbox{\hyperlink{classtiles_1_1_tile_a3ff503fd877dd679605655acb6f3c956}{spriteSpeed}}) \{}
-\DoxyCodeLine{00142                 \mbox{\hyperlink{classtiles_1_1_tile_aa5dc000dc3230aa50f4f15ef57987c58}{\_spriteCnt}}++;}
-\DoxyCodeLine{00143                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classtiles_1_1_tile_aa5dc000dc3230aa50f4f15ef57987c58}{\_spriteCnt}} == \mbox{\hyperlink{classtiles_1_1_tile_addfa89908a39300f3d61f7de1f322b26}{spriteCntMax}}) \{}
-\DoxyCodeLine{00144                     \mbox{\hyperlink{classtiles_1_1_tile_aa5dc000dc3230aa50f4f15ef57987c58}{\_spriteCnt}} = 0;}
-\DoxyCodeLine{00145                 \}}
-\DoxyCodeLine{00146                 \mbox{\hyperlink{classtiles_1_1_tile_a21d0ebea99533f4928c0aea73a420ad1}{\_spriteUpdater}} = 1;}
-\DoxyCodeLine{00147             \}}
-\DoxyCodeLine{00148         \}}
-\DoxyCodeLine{00149     \}}
+\DoxyCodeLine{00136                                \{}
+\DoxyCodeLine{00137         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classtiles_1_1_tile_a3ff503fd877dd679605655acb6f3c956}{spriteSpeed}} > 0) \{}
+\DoxyCodeLine{00138             \mbox{\hyperlink{classtiles_1_1_tile_a21d0ebea99533f4928c0aea73a420ad1}{\_spriteUpdater}}++;}
+\DoxyCodeLine{00139             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classtiles_1_1_tile_a21d0ebea99533f4928c0aea73a420ad1}{\_spriteUpdater}} > \mbox{\hyperlink{classtiles_1_1_tile_a3ff503fd877dd679605655acb6f3c956}{spriteSpeed}}) \{}
+\DoxyCodeLine{00140                 \mbox{\hyperlink{classtiles_1_1_tile_aa5dc000dc3230aa50f4f15ef57987c58}{\_spriteCnt}}++;}
+\DoxyCodeLine{00141                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classtiles_1_1_tile_aa5dc000dc3230aa50f4f15ef57987c58}{\_spriteCnt}} == \mbox{\hyperlink{classtiles_1_1_tile_addfa89908a39300f3d61f7de1f322b26}{spriteCntMax}}) \{}
+\DoxyCodeLine{00142                     \mbox{\hyperlink{classtiles_1_1_tile_aa5dc000dc3230aa50f4f15ef57987c58}{\_spriteCnt}} = 0;}
+\DoxyCodeLine{00143                 \}}
+\DoxyCodeLine{00144                 \mbox{\hyperlink{classtiles_1_1_tile_a21d0ebea99533f4928c0aea73a420ad1}{\_spriteUpdater}} = 1;}
+\DoxyCodeLine{00145             \}}
+\DoxyCodeLine{00146         \}}
+\DoxyCodeLine{00147     \}}
 
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -451,7 +445,7 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line \mbox{\hyperlink{_tile_8java_source_l00022}{22}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
+Definition at line \mbox{\hyperlink{_tile_8java_source_l00020}{20}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
 
 \mbox{\Hypertarget{classtiles_1_1_tile_aa5dc000dc3230aa50f4f15ef57987c58}\label{classtiles_1_1_tile_aa5dc000dc3230aa50f4f15ef57987c58}} 
 \index{tiles.Tile@{tiles.Tile}!\_spriteCnt@{\_spriteCnt}}
@@ -461,7 +455,7 @@ Definition at line \mbox{\hyperlink{_tile_8java_source_l00022}{22}} of file \mbo
 
 
 
-Definition at line \mbox{\hyperlink{_tile_8java_source_l00030}{30}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
+Definition at line \mbox{\hyperlink{_tile_8java_source_l00028}{28}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
 
 \mbox{\Hypertarget{classtiles_1_1_tile_a21d0ebea99533f4928c0aea73a420ad1}\label{classtiles_1_1_tile_a21d0ebea99533f4928c0aea73a420ad1}} 
 \index{tiles.Tile@{tiles.Tile}!\_spriteUpdater@{\_spriteUpdater}}
@@ -471,7 +465,7 @@ Definition at line \mbox{\hyperlink{_tile_8java_source_l00030}{30}} of file \mbo
 
 
 
-Definition at line \mbox{\hyperlink{_tile_8java_source_l00031}{31}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
+Definition at line \mbox{\hyperlink{_tile_8java_source_l00029}{29}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
 
 \mbox{\Hypertarget{classtiles_1_1_tile_ac5f4a59757ed0765e77cc1400da27190}\label{classtiles_1_1_tile_ac5f4a59757ed0765e77cc1400da27190}} 
 \index{tiles.Tile@{tiles.Tile}!\_worldX@{\_worldX}}
@@ -481,7 +475,7 @@ Definition at line \mbox{\hyperlink{_tile_8java_source_l00031}{31}} of file \mbo
 
 
 
-Definition at line \mbox{\hyperlink{_tile_8java_source_l00023}{23}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
+Definition at line \mbox{\hyperlink{_tile_8java_source_l00021}{21}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
 
 \mbox{\Hypertarget{classtiles_1_1_tile_a2309cd4b5bf1a049920e9a253864531c}\label{classtiles_1_1_tile_a2309cd4b5bf1a049920e9a253864531c}} 
 \index{tiles.Tile@{tiles.Tile}!\_worldY@{\_worldY}}
@@ -491,7 +485,7 @@ Definition at line \mbox{\hyperlink{_tile_8java_source_l00023}{23}} of file \mbo
 
 
 
-Definition at line \mbox{\hyperlink{_tile_8java_source_l00023}{23}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
+Definition at line \mbox{\hyperlink{_tile_8java_source_l00021}{21}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
 
 \mbox{\Hypertarget{classtiles_1_1_tile_aad477728d9fdf5b742dbf3039675e510}\label{classtiles_1_1_tile_aad477728d9fdf5b742dbf3039675e510}} 
 \index{tiles.Tile@{tiles.Tile}!image@{image}}
@@ -501,7 +495,7 @@ Definition at line \mbox{\hyperlink{_tile_8java_source_l00023}{23}} of file \mbo
 
 
 
-Definition at line \mbox{\hyperlink{_tile_8java_source_l00036}{36}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
+Definition at line \mbox{\hyperlink{_tile_8java_source_l00034}{34}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
 
 \mbox{\Hypertarget{classtiles_1_1_tile_a54c891592dfd8bda917414c5c2b7e157}\label{classtiles_1_1_tile_a54c891592dfd8bda917414c5c2b7e157}} 
 \index{tiles.Tile@{tiles.Tile}!scale@{scale}}
@@ -511,7 +505,7 @@ Definition at line \mbox{\hyperlink{_tile_8java_source_l00036}{36}} of file \mbo
 
 
 
-Definition at line \mbox{\hyperlink{_tile_8java_source_l00027}{27}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
+Definition at line \mbox{\hyperlink{_tile_8java_source_l00025}{25}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
 
 \mbox{\Hypertarget{classtiles_1_1_tile_a8e40c03ec34d2c7678df14f7b0ebf44f}\label{classtiles_1_1_tile_a8e40c03ec34d2c7678df14f7b0ebf44f}} 
 \index{tiles.Tile@{tiles.Tile}!screenSize@{screenSize}}
@@ -521,7 +515,7 @@ Definition at line \mbox{\hyperlink{_tile_8java_source_l00027}{27}} of file \mbo
 
 
 
-Definition at line \mbox{\hyperlink{_tile_8java_source_l00028}{28}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
+Definition at line \mbox{\hyperlink{_tile_8java_source_l00026}{26}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
 
 \mbox{\Hypertarget{classtiles_1_1_tile_addfa89908a39300f3d61f7de1f322b26}\label{classtiles_1_1_tile_addfa89908a39300f3d61f7de1f322b26}} 
 \index{tiles.Tile@{tiles.Tile}!spriteCntMax@{spriteCntMax}}
@@ -531,7 +525,7 @@ Definition at line \mbox{\hyperlink{_tile_8java_source_l00028}{28}} of file \mbo
 
 
 
-Definition at line \mbox{\hyperlink{_tile_8java_source_l00034}{34}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
+Definition at line \mbox{\hyperlink{_tile_8java_source_l00032}{32}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
 
 \mbox{\Hypertarget{classtiles_1_1_tile_a3ff503fd877dd679605655acb6f3c956}\label{classtiles_1_1_tile_a3ff503fd877dd679605655acb6f3c956}} 
 \index{tiles.Tile@{tiles.Tile}!spriteSpeed@{spriteSpeed}}
@@ -541,7 +535,7 @@ Definition at line \mbox{\hyperlink{_tile_8java_source_l00034}{34}} of file \mbo
 
 
 
-Definition at line \mbox{\hyperlink{_tile_8java_source_l00032}{32}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
+Definition at line \mbox{\hyperlink{_tile_8java_source_l00030}{30}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
 
 \mbox{\Hypertarget{classtiles_1_1_tile_a9b560cd2617c57129c1dc091f1e4ea15}\label{classtiles_1_1_tile_a9b560cd2617c57129c1dc091f1e4ea15}} 
 \index{tiles.Tile@{tiles.Tile}!tileSize@{tileSize}}
@@ -551,7 +545,7 @@ Definition at line \mbox{\hyperlink{_tile_8java_source_l00032}{32}} of file \mbo
 
 
 
-Definition at line \mbox{\hyperlink{_tile_8java_source_l00026}{26}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
+Definition at line \mbox{\hyperlink{_tile_8java_source_l00024}{24}} of file \mbox{\hyperlink{_tile_8java_source}{Tile.\+java}}.
 
 
 

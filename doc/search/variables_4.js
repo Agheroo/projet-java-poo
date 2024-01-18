@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['enemies_0',['enemies',['../classgame_1_1_world.html#a8f7650232d674854c7be0df78b0b736d',1,'game::World']]],
-  ['enemy_1',['enemy',['../classgame_1_1_fight_scene.html#ac2f268ca7a750704296e941b70efd839',1,'game::FightScene']]],
-  ['entitysetter_2',['entitySetter',['../classgame_1_1_world.html#a8d8a2c5dda788bab03181b14b661e8dd',1,'game::World']]],
-  ['escpressed_3',['escPressed',['../classmain_1_1_key_handler.html#a8695999bf8fc25d2928ff04bfa228e48',1,'main::KeyHandler']]]
+  ['damage_0',['damage',['../classgame_1_1_attack.html#a644b567caf6a9274c0b4737866ae60db',1,'game::Attack']]],
+  ['defense_1',['defense',['../classentity_1_1_character.html#ad97a3b4055ba1daa2abfbb1150f34049',1,'entity::Character']]],
+  ['dirx_2',['dirX',['../classentity_1_1_character.html#a71d9fd51a7255f0acfcbe9a3dfe3f30c',1,'entity::Character']]],
+  ['diry_3',['dirY',['../classentity_1_1_character.html#a53d3f8e3cc8c7297d94092dada79588c',1,'entity::Character']]],
+  ['downpressed_4',['downPressed',['../classmain_1_1_key_handler.html#a0bc680db42254a7fdf434b26894da9ea',1,'main::KeyHandler']]],
+  ['dt_5',['dt',['../classgame_1_1_scene.html#ae2b7be4c9099875e858f88458b7d4a1d',1,'game::Scene']]]
 ];

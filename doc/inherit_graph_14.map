@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classtiles_1_1_tile.html" title="Represents a tile in the game world." alt="" coords="5,5,84,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,88,32"/>
+<area shape="rect" id="node2" href="$classgame_1_1_window.html" title="Represents the window that displays the game." alt="" coords="136,31,251,57"/>
+<area shape="rect" id="node3" title=" " alt="" coords="16,56,77,83"/>
 </map>

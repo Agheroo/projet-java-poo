@@ -147,12 +147,12 @@ public class World extends Scene {
         
         //If there is a fight, draw the fight instead of the game world
         if(currfight != null){
-            switch(FightScene.state){
-                case Const.FightState.FIGHTING:
+            switch(FightScene.state.toString()){
+                case "FIGHTING":
                     currfight.draw(g2); break;
-                case Const.FightState.WON:
+                case "WON":
                     currfight = null; break;
-                case Const.FightState.LOST:
+                case "LOST":
                     menu.draw(g2); break;
                 default: break;
             }
