@@ -1,5 +1,6 @@
 <map id="game.Window.run" name="game.Window.run">
 <area shape="rect" id="node1" title="Runs the game loop." alt="" coords="5,5,144,32"/>
 <area shape="rect" id="node2" href="$classgame_1_1_window.html#a41cef38f9afc72fa1b4a1dfdc2bf9b92" title="Updates the game scene." alt="" coords="192,5,355,32"/>
-<area shape="rect" id="node3" href="$classgame_1_1_scene.html#a6b61e8f2533a2ba76c543bbd00d989a2" title="Updates the scene." alt="" coords="403,5,553,32"/>
+<area shape="rect" id="node3" href="$classgame_1_1_scene.html#a23b3275854d4de945e1f8eba10f382a3" title="Updates the scene." alt="" coords="403,5,553,32"/>
+<area shape="rect" id="node4" href="$class_u_i_1_1_h_u_d.html#ad0c1abd2a8e1c763e8c508b4535cbe68" title=" " alt="" coords="601,5,720,32"/>
 </map>

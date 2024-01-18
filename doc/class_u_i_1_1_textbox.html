@@ -69,6 +69,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_u_i_1_1_textbox-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">UI.Textbox Class Reference</div></div>
@@ -79,7 +80,7 @@ Inheritance diagram for UI.Textbox:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_u_i_1_1_textbox__inherit__graph.png" border="0" usemap="#a_u_i_8_textbox_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_u_i_8_textbox_inherit__map" id="a_u_i_8_textbox_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,131,136,311"/>
+<area shape="rect" title=" " alt="" coords="5,131,136,340"/>
 <area shape="rect" title=" " alt="" coords="40,5,101,83"/>
 </map>
 </div>
@@ -88,7 +89,7 @@ Collaboration diagram for UI.Textbox:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_u_i_1_1_textbox__coll__graph.png" border="0" usemap="#a_u_i_8_textbox_coll__map" alt="Collaboration graph"/></div>
 <map name="a_u_i_8_textbox_coll__map" id="a_u_i_8_textbox_coll__map">
-<area shape="rect" title=" " alt="" coords="53,145,184,296"/>
+<area shape="rect" title=" " alt="" coords="53,145,184,325"/>
 <area shape="rect" title=" " alt="" coords="5,5,67,83"/>
 <area shape="rect" title=" " alt="" coords="91,5,147,83"/>
 <area shape="rect" title=" " alt="" coords="173,5,224,83"/>
@@ -98,7 +99,13 @@ Collaboration diagram for UI.Textbox:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a11acae0a6446e83c4bcff70bdba42a89"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_1_1_textbox.html#a11acae0a6446e83c4bcff70bdba42a89">Textbox</a> (String text, String fontName, int w, int h, Color color)</td></tr>
+<tr class="memdesc:a11acae0a6446e83c4bcff70bdba42a89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class used for displaying texts, for buttons or dialogues.  <a href="class_u_i_1_1_textbox.html#a11acae0a6446e83c4bcff70bdba42a89">More...</a><br /></td></tr>
 <tr class="separator:a11acae0a6446e83c4bcff70bdba42a89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4725a8ec93796dcc1a2aa14ad16952f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_1_1_textbox.html#a4725a8ec93796dcc1a2aa14ad16952f6">setColor</a> (Color newCol)</td></tr>
+<tr class="memdesc:a4725a8ec93796dcc1a2aa14ad16952f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter func for a new font color of the current text.  <a href="class_u_i_1_1_textbox.html#a4725a8ec93796dcc1a2aa14ad16952f6">More...</a><br /></td></tr>
+<tr class="separator:a4725a8ec93796dcc1a2aa14ad16952f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78802d3a8816c733a592e1d56710020b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_1_1_textbox.html#a78802d3a8816c733a592e1d56710020b">setNewText</a> (String newText)</td></tr>
+<tr class="separator:a78802d3a8816c733a592e1d56710020b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab675a99675e6ba3e03630cf973f2799"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_1_1_textbox.html#aab675a99675e6ba3e03630cf973f2799">draw</a> (Graphics2D g2, int x, int y)</td></tr>
 <tr class="separator:aab675a99675e6ba3e03630cf973f2799"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -107,12 +114,15 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ac3a40742547f48f95f29ce1649ac88a0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_1_1_textbox.html#ac3a40742547f48f95f29ce1649ac88a0">loadFont</a> (String fontName)</td></tr>
 <tr class="separator:ac3a40742547f48f95f29ce1649ac88a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a3534f90d6bbd5304f70162bad6c9275a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_1_1_textbox.html#a3534f90d6bbd5304f70162bad6c9275a">width</a></td></tr>
+<tr class="separator:a3534f90d6bbd5304f70162bad6c9275a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc4a874b6d13011dd89afcca48d3ff57"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_1_1_textbox.html#acc4a874b6d13011dd89afcca48d3ff57">height</a></td></tr>
+<tr class="separator:acc4a874b6d13011dd89afcca48d3ff57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:abe6a2b59a3f649a7aa35e0cb14a1d66b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_1_1_textbox.html#abe6a2b59a3f649a7aa35e0cb14a1d66b">_width</a></td></tr>
-<tr class="separator:abe6a2b59a3f649a7aa35e0cb14a1d66b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76ab01a7be11595a9a06032f7d248470"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_1_1_textbox.html#a76ab01a7be11595a9a06032f7d248470">_height</a></td></tr>
-<tr class="separator:a76ab01a7be11595a9a06032f7d248470"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c682cf12a37a04fd9276b686618f7d8"><td class="memItemLeft" align="right" valign="top">Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_1_1_textbox.html#a5c682cf12a37a04fd9276b686618f7d8">_color</a></td></tr>
 <tr class="separator:a5c682cf12a37a04fd9276b686618f7d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5418e63a4261406606ce6843cb7da57"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_1_1_textbox.html#ab5418e63a4261406606ce6843cb7da57">_text</a></td></tr>
@@ -170,37 +180,49 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_textbox_8java_source.html#l00020">20</a> of file <a class="el" href="_textbox_8java_source.html">Textbox.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   20</span>                                                                           {  </div>
-<div class="line"><span class="lineno">   21</span>        <a class="code hl_variable" href="class_u_i_1_1_textbox.html#abe6a2b59a3f649a7aa35e0cb14a1d66b">_width</a> = w; <a class="code hl_variable" href="class_u_i_1_1_textbox.html#a76ab01a7be11595a9a06032f7d248470">_height</a> = h;</div>
-<div class="line"><span class="lineno">   22</span>        <a class="code hl_variable" href="class_u_i_1_1_textbox.html#ab5418e63a4261406606ce6843cb7da57">_text</a> = text;  </div>
-<div class="line"><span class="lineno">   23</span>        <a class="code hl_variable" href="class_u_i_1_1_textbox.html#a5c682cf12a37a04fd9276b686618f7d8">_color</a> = color;</div>
-<div class="line"><span class="lineno">   24</span>        </div>
-<div class="line"><span class="lineno">   25</span>        <span class="comment">//loadFont(fontName);</span></div>
-<div class="line"><span class="lineno">   26</span>        <a class="code hl_variable" href="class_u_i_1_1_textbox.html#a31b10668babae92bd413efc2f95e2a62">_font</a> = <span class="keyword">new</span> Font(fontName, Font.PLAIN, 1);</div>
-<div class="line"><span class="lineno">   27</span> </div>
-<div class="line"><span class="lineno">   28</span>        </div>
-<div class="line"><span class="lineno">   29</span>        <span class="keywordtype">int</span> stringWidth = this.getFontMetrics(<a class="code hl_variable" href="class_u_i_1_1_textbox.html#a31b10668babae92bd413efc2f95e2a62">_font</a>).stringWidth(<a class="code hl_variable" href="class_u_i_1_1_textbox.html#ab5418e63a4261406606ce6843cb7da57">_text</a>);</div>
-<div class="line"><span class="lineno">   30</span>        <span class="keywordtype">int</span> componentWidth = <a class="code hl_variable" href="class_u_i_1_1_textbox.html#abe6a2b59a3f649a7aa35e0cb14a1d66b">_width</a>;</div>
-<div class="line"><span class="lineno">   31</span> </div>
-<div class="line"><span class="lineno">   32</span>        <span class="comment">// Find out how much the font can grow in width.</span></div>
-<div class="line"><span class="lineno">   33</span>        <span class="keywordtype">double</span> widthRatio = (double)componentWidth / (<span class="keywordtype">double</span>)stringWidth;</div>
-<div class="line"><span class="lineno">   34</span> </div>
-<div class="line"><span class="lineno">   35</span>        <span class="keywordtype">int</span> newFontSize = (int)(<a class="code hl_variable" href="class_u_i_1_1_textbox.html#a31b10668babae92bd413efc2f95e2a62">_font</a>.getSize() * widthRatio);</div>
-<div class="line"><span class="lineno">   36</span>        <span class="keywordtype">int</span> componentHeight = <a class="code hl_variable" href="class_u_i_1_1_textbox.html#a76ab01a7be11595a9a06032f7d248470">_height</a>;</div>
-<div class="line"><span class="lineno">   37</span> </div>
-<div class="line"><span class="lineno">   38</span>        <span class="comment">// Pick a new font size so it will not be larger than the height of label.</span></div>
-<div class="line"><span class="lineno">   39</span>        <a class="code hl_variable" href="class_u_i_1_1_textbox.html#a186137af66f49813dc7aa286c1c75fa0">_fontSizeToUse</a> = Math.min(newFontSize, componentHeight);</div>
-<div class="line"><span class="lineno">   40</span> </div>
-<div class="line"><span class="lineno">   41</span>        <span class="comment">// Set the label&#39;s font size to the newly determined size.</span></div>
-<div class="line"><span class="lineno">   42</span>        <a class="code hl_variable" href="class_u_i_1_1_textbox.html#a31b10668babae92bd413efc2f95e2a62">_font</a> = <span class="keyword">new</span> Font(fontName, Font.PLAIN, <a class="code hl_variable" href="class_u_i_1_1_textbox.html#a186137af66f49813dc7aa286c1c75fa0">_fontSizeToUse</a>);</div>
-<div class="line"><span class="lineno">   43</span>    }</div>
+<p>Class used for displaying texts, for buttons or dialogues. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>The text diplayed on screen </td></tr>
+    <tr><td class="paramname">fontName</td><td>The font to use </td></tr>
+    <tr><td class="paramname">w</td><td>The total width the text has to cover </td></tr>
+    <tr><td class="paramname">h</td><td>The total height the text had to cover </td></tr>
+    <tr><td class="paramname">color</td><td>The colour of the text </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_textbox_8java_source.html#l00028">28</a> of file <a class="el" href="_textbox_8java_source.html">Textbox.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   28</span>                                                                           {  </div>
+<div class="line"><span class="lineno">   29</span>        <a class="code hl_variable" href="class_u_i_1_1_textbox.html#a3534f90d6bbd5304f70162bad6c9275a">width</a> = w; <a class="code hl_variable" href="class_u_i_1_1_textbox.html#acc4a874b6d13011dd89afcca48d3ff57">height</a> = h;</div>
+<div class="line"><span class="lineno">   30</span>        <a class="code hl_variable" href="class_u_i_1_1_textbox.html#ab5418e63a4261406606ce6843cb7da57">_text</a> = text;  </div>
+<div class="line"><span class="lineno">   31</span>        <a class="code hl_variable" href="class_u_i_1_1_textbox.html#a5c682cf12a37a04fd9276b686618f7d8">_color</a> = color;</div>
+<div class="line"><span class="lineno">   32</span>        </div>
+<div class="line"><span class="lineno">   33</span>        <span class="comment">//loadFont(fontName);</span></div>
+<div class="line"><span class="lineno">   34</span>        <a class="code hl_variable" href="class_u_i_1_1_textbox.html#a31b10668babae92bd413efc2f95e2a62">_font</a> = <span class="keyword">new</span> Font(fontName, Font.PLAIN, 1);</div>
+<div class="line"><span class="lineno">   35</span> </div>
+<div class="line"><span class="lineno">   36</span>        </div>
+<div class="line"><span class="lineno">   37</span>        <span class="keywordtype">int</span> stringWidth = this.getFontMetrics(<a class="code hl_variable" href="class_u_i_1_1_textbox.html#a31b10668babae92bd413efc2f95e2a62">_font</a>).stringWidth(<a class="code hl_variable" href="class_u_i_1_1_textbox.html#ab5418e63a4261406606ce6843cb7da57">_text</a>);</div>
+<div class="line"><span class="lineno">   38</span>        <span class="keywordtype">int</span> componentWidth = <a class="code hl_variable" href="class_u_i_1_1_textbox.html#a3534f90d6bbd5304f70162bad6c9275a">width</a>;</div>
+<div class="line"><span class="lineno">   39</span> </div>
+<div class="line"><span class="lineno">   40</span>        <span class="comment">// Find out how much the font can grow in width.</span></div>
+<div class="line"><span class="lineno">   41</span>        <span class="keywordtype">double</span> widthRatio = (double)componentWidth / (<span class="keywordtype">double</span>)stringWidth;</div>
+<div class="line"><span class="lineno">   42</span> </div>
+<div class="line"><span class="lineno">   43</span>        <span class="keywordtype">int</span> newFontSize = (int)(<a class="code hl_variable" href="class_u_i_1_1_textbox.html#a31b10668babae92bd413efc2f95e2a62">_font</a>.getSize() * widthRatio);</div>
+<div class="line"><span class="lineno">   44</span>        <span class="keywordtype">int</span> componentHeight = <a class="code hl_variable" href="class_u_i_1_1_textbox.html#acc4a874b6d13011dd89afcca48d3ff57">height</a>;</div>
+<div class="line"><span class="lineno">   45</span> </div>
+<div class="line"><span class="lineno">   46</span>        <span class="comment">// Pick a new font size so it will not be larger than the height of label.</span></div>
+<div class="line"><span class="lineno">   47</span>        <a class="code hl_variable" href="class_u_i_1_1_textbox.html#a186137af66f49813dc7aa286c1c75fa0">_fontSizeToUse</a> = Math.min(newFontSize, componentHeight);</div>
+<div class="line"><span class="lineno">   48</span> </div>
+<div class="line"><span class="lineno">   49</span>        <span class="comment">// Set the label&#39;s font size to the newly determined size.</span></div>
+<div class="line"><span class="lineno">   50</span>        <a class="code hl_variable" href="class_u_i_1_1_textbox.html#a31b10668babae92bd413efc2f95e2a62">_font</a> = <span class="keyword">new</span> Font(fontName, Font.PLAIN, <a class="code hl_variable" href="class_u_i_1_1_textbox.html#a186137af66f49813dc7aa286c1c75fa0">_fontSizeToUse</a>);</div>
+<div class="line"><span class="lineno">   51</span>    }</div>
 <div class="ttc" id="aclass_u_i_1_1_textbox_html_a186137af66f49813dc7aa286c1c75fa0"><div class="ttname"><a href="class_u_i_1_1_textbox.html#a186137af66f49813dc7aa286c1c75fa0">UI.Textbox._fontSizeToUse</a></div><div class="ttdeci">int _fontSizeToUse</div><div class="ttdef"><b>Definition:</b> <a href="_textbox_8java_source.html#l00017">Textbox.java:17</a></div></div>
 <div class="ttc" id="aclass_u_i_1_1_textbox_html_a31b10668babae92bd413efc2f95e2a62"><div class="ttname"><a href="class_u_i_1_1_textbox.html#a31b10668babae92bd413efc2f95e2a62">UI.Textbox._font</a></div><div class="ttdeci">Font _font</div><div class="ttdef"><b>Definition:</b> <a href="_textbox_8java_source.html#l00016">Textbox.java:16</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_textbox_html_a3534f90d6bbd5304f70162bad6c9275a"><div class="ttname"><a href="class_u_i_1_1_textbox.html#a3534f90d6bbd5304f70162bad6c9275a">UI.Textbox.width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition:</b> <a href="_textbox_8java_source.html#l00013">Textbox.java:13</a></div></div>
 <div class="ttc" id="aclass_u_i_1_1_textbox_html_a5c682cf12a37a04fd9276b686618f7d8"><div class="ttname"><a href="class_u_i_1_1_textbox.html#a5c682cf12a37a04fd9276b686618f7d8">UI.Textbox._color</a></div><div class="ttdeci">Color _color</div><div class="ttdef"><b>Definition:</b> <a href="_textbox_8java_source.html#l00014">Textbox.java:14</a></div></div>
-<div class="ttc" id="aclass_u_i_1_1_textbox_html_a76ab01a7be11595a9a06032f7d248470"><div class="ttname"><a href="class_u_i_1_1_textbox.html#a76ab01a7be11595a9a06032f7d248470">UI.Textbox._height</a></div><div class="ttdeci">int _height</div><div class="ttdef"><b>Definition:</b> <a href="_textbox_8java_source.html#l00013">Textbox.java:13</a></div></div>
 <div class="ttc" id="aclass_u_i_1_1_textbox_html_ab5418e63a4261406606ce6843cb7da57"><div class="ttname"><a href="class_u_i_1_1_textbox.html#ab5418e63a4261406606ce6843cb7da57">UI.Textbox._text</a></div><div class="ttdeci">String _text</div><div class="ttdef"><b>Definition:</b> <a href="_textbox_8java_source.html#l00015">Textbox.java:15</a></div></div>
-<div class="ttc" id="aclass_u_i_1_1_textbox_html_abe6a2b59a3f649a7aa35e0cb14a1d66b"><div class="ttname"><a href="class_u_i_1_1_textbox.html#abe6a2b59a3f649a7aa35e0cb14a1d66b">UI.Textbox._width</a></div><div class="ttdeci">int _width</div><div class="ttdef"><b>Definition:</b> <a href="_textbox_8java_source.html#l00013">Textbox.java:13</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_textbox_html_acc4a874b6d13011dd89afcca48d3ff57"><div class="ttname"><a href="class_u_i_1_1_textbox.html#acc4a874b6d13011dd89afcca48d3ff57">UI.Textbox.height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition:</b> <a href="_textbox_8java_source.html#l00013">Textbox.java:13</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -237,26 +259,25 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_textbox_8java_source.html#l00059">59</a> of file <a class="el" href="_textbox_8java_source.html">Textbox.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   59</span>                                                {</div>
-<div class="line"><span class="lineno">   60</span>        <span class="comment">//TODO: find a way to center text on the button</span></div>
-<div class="line"><span class="lineno">   61</span>        g2.setFont(<a class="code hl_variable" href="class_u_i_1_1_textbox.html#a31b10668babae92bd413efc2f95e2a62">_font</a>);</div>
-<div class="line"><span class="lineno">   62</span>        g2.setColor(Color.black);</div>
-<div class="line"><span class="lineno">   63</span>        g2.drawRect(x,y,<a class="code hl_variable" href="class_u_i_1_1_textbox.html#abe6a2b59a3f649a7aa35e0cb14a1d66b">_width</a>,<a class="code hl_variable" href="class_u_i_1_1_textbox.html#a76ab01a7be11595a9a06032f7d248470">_height</a>);</div>
-<div class="line"><span class="lineno">   64</span>        g2.setColor(<a class="code hl_variable" href="class_u_i_1_1_textbox.html#a5c682cf12a37a04fd9276b686618f7d8">_color</a>);</div>
-<div class="line"><span class="lineno">   65</span>        g2.drawString(<a class="code hl_variable" href="class_u_i_1_1_textbox.html#ab5418e63a4261406606ce6843cb7da57">_text</a>, x + <a class="code hl_variable" href="class_u_i_1_1_textbox.html#a186137af66f49813dc7aa286c1c75fa0">_fontSizeToUse</a>, y + (<a class="code hl_variable" href="class_u_i_1_1_textbox.html#a76ab01a7be11595a9a06032f7d248470">_height</a> +<a class="code hl_variable" href="class_u_i_1_1_textbox.html#a186137af66f49813dc7aa286c1c75fa0">_fontSizeToUse</a>)/2);</div>
-<div class="line"><span class="lineno">   66</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_textbox_8java_source.html#l00078">78</a> of file <a class="el" href="_textbox_8java_source.html">Textbox.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   78</span>                                                {</div>
+<div class="line"><span class="lineno">   79</span>        <span class="comment">//find a way to better center text on the button</span></div>
+<div class="line"><span class="lineno">   80</span>        g2.setFont(<a class="code hl_variable" href="class_u_i_1_1_textbox.html#a31b10668babae92bd413efc2f95e2a62">_font</a>);</div>
+<div class="line"><span class="lineno">   81</span>        g2.setColor(<a class="code hl_variable" href="class_u_i_1_1_textbox.html#a5c682cf12a37a04fd9276b686618f7d8">_color</a>);</div>
+<div class="line"><span class="lineno">   82</span>        g2.drawString(<a class="code hl_variable" href="class_u_i_1_1_textbox.html#ab5418e63a4261406606ce6843cb7da57">_text</a>, x + <a class="code hl_variable" href="class_u_i_1_1_textbox.html#a186137af66f49813dc7aa286c1c75fa0">_fontSizeToUse</a>, y + (<a class="code hl_variable" href="class_u_i_1_1_textbox.html#acc4a874b6d13011dd89afcca48d3ff57">height</a> +<a class="code hl_variable" href="class_u_i_1_1_textbox.html#a186137af66f49813dc7aa286c1c75fa0">_fontSizeToUse</a>)/2);</div>
+<div class="line"><span class="lineno">   83</span>    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_u_i_1_1_textbox_aab675a99675e6ba3e03630cf973f2799_icgraph.png" border="0" usemap="#aclass_u_i_1_1_textbox_aab675a99675e6ba3e03630cf973f2799_icgraph" alt=""/></div>
 <map name="aclass_u_i_1_1_textbox_aab675a99675e6ba3e03630cf973f2799_icgraph" id="aclass_u_i_1_1_textbox_aab675a99675e6ba3e03630cf973f2799_icgraph">
-<area shape="rect" title=" " alt="" coords="829,31,956,57"/>
-<area shape="rect" href="class_u_i_1_1_choice_button.html#a1000744853168892a77f3aaa14886739" title=" " alt="" coords="619,31,781,57"/>
-<area shape="rect" href="class_u_i_1_1_h_u_d.html#a290720935a1960ce8159eae9e7a535fa" title=" " alt="" coords="464,31,571,57"/>
-<area shape="rect" href="classgame_1_1_fight_scene.html#a9525cb3d263680e8d808b3abde00e8d8" title="Draws the fight scene." alt="" coords="217,5,388,32"/>
-<area shape="rect" href="classgame_1_1_window.html#a5096ae95c1e62bac2005e73621cdb41c" title="Paints the components of the game window." alt="" coords="189,56,416,83"/>
-<area shape="rect" href="classgame_1_1_world.html#ac405787ac7b11c4ed39a5cd9250e398f" title="Draws the game world and its entities." alt="" coords="5,5,141,32"/>
+<area shape="rect" title=" " alt="" coords="817,56,944,83"/>
+<area shape="rect" href="class_u_i_1_1_h_u_d___fight.html#a444cd5e7f43dd55149762e5738ba2cf7" title=" " alt="" coords="411,56,556,83"/>
+<area shape="rect" href="class_u_i_1_1_h_u_d___world.html#a3168ce83edffabbe6347f9478523936d" title=" " alt="" coords="199,5,350,32"/>
+<area shape="rect" href="class_u_i_1_1_choice_button.html#a1000744853168892a77f3aaa14886739" title="Draws a button (rectangle) on the screen at x,y coords (top left)" alt="" coords="607,107,769,133"/>
+<area shape="rect" href="classgame_1_1_fight_scene.html#a9525cb3d263680e8d808b3abde00e8d8" title="Draws the fight scene." alt="" coords="189,56,360,83"/>
+<area shape="rect" href="classgame_1_1_world.html#ac405787ac7b11c4ed39a5cd9250e398f" title="Draws the game world and its entities." alt="" coords="5,31,141,57"/>
+<area shape="rect" href="class_u_i_1_1_h_u_d___pause.html#acb7e2c68e46c0188dac220ee1969e387" title=" " alt="" coords="408,107,559,133"/>
 </map>
 </div>
 
@@ -286,34 +307,111 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_textbox_8java_source.html#l00046">46</a> of file <a class="el" href="_textbox_8java_source.html">Textbox.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   46</span>                                                {</div>
-<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">try</span> {</div>
-<div class="line"><span class="lineno">   48</span>            GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();</div>
-<div class="line"><span class="lineno">   49</span>            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, <span class="keyword">new</span> File(<span class="stringliteral">&quot;res/hud/font/rainyhearts.ttf&quot;</span>)));</div>
-<div class="line"><span class="lineno">   50</span>        } </div>
-<div class="line"><span class="lineno">   51</span>        <span class="keywordflow">catch</span> (FontFormatException e) {</div>
-<div class="line"><span class="lineno">   52</span>            e.printStackTrace();</div>
-<div class="line"><span class="lineno">   53</span>        }</div>
-<div class="line"><span class="lineno">   54</span>        <span class="keywordflow">catch</span> (IOException e) {</div>
-<div class="line"><span class="lineno">   55</span>            e.printStackTrace();</div>
-<div class="line"><span class="lineno">   56</span>        }</div>
-<div class="line"><span class="lineno">   57</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_textbox_8java_source.html#l00065">65</a> of file <a class="el" href="_textbox_8java_source.html">Textbox.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   65</span>                                                {</div>
+<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">   67</span>            GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();</div>
+<div class="line"><span class="lineno">   68</span>            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, <span class="keyword">new</span> File(<span class="stringliteral">&quot;res/hud/font/rainyhearts.ttf&quot;</span>)));</div>
+<div class="line"><span class="lineno">   69</span>        } </div>
+<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">catch</span> (FontFormatException e) {</div>
+<div class="line"><span class="lineno">   71</span>            e.printStackTrace();</div>
+<div class="line"><span class="lineno">   72</span>        }</div>
+<div class="line"><span class="lineno">   73</span>        <span class="keywordflow">catch</span> (IOException e) {</div>
+<div class="line"><span class="lineno">   74</span>            e.printStackTrace();</div>
+<div class="line"><span class="lineno">   75</span>        }</div>
+<div class="line"><span class="lineno">   76</span>    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_u_i_1_1_textbox_ac3a40742547f48f95f29ce1649ac88a0_icgraph.png" border="0" usemap="#aclass_u_i_1_1_textbox_ac3a40742547f48f95f29ce1649ac88a0_icgraph" alt=""/></div>
 <map name="aclass_u_i_1_1_textbox_ac3a40742547f48f95f29ce1649ac88a0_icgraph" id="aclass_u_i_1_1_textbox_ac3a40742547f48f95f29ce1649ac88a0_icgraph">
-<area shape="rect" title=" " alt="" coords="743,171,893,198"/>
-<area shape="rect" href="classgame_1_1_world.html#a0e40ca86573cf45d858cc8e529865649" title="Gets the instance of the World." alt="" coords="532,171,695,198"/>
-<area shape="rect" href="classentity_1_1props_1_1_props.html#ab837cf0c685323fe8c2cc84d80f6315a" title=" " alt="" coords="268,85,484,111"/>
-<area shape="rect" href="classentity_1_1_character.html#a2d5d7da3d6f49c2b0b040850d741f8f7" title="Updates the character entity based on the current scene and time elapsed." alt="" coords="289,146,463,173"/>
-<area shape="rect" href="classentity_1_1_player.html#ae48f1e24c9ff0b7bd4f55b470bf66e7e" title="Updates the player entity based on the current scene and time elapsed." alt="" coords="301,197,451,223"/>
-<area shape="rect" href="classgame_1_1_window.html#a98e156c2148852f07cf8eef903d4b175" title="Constructor for the Window class." alt="" coords="291,247,461,274"/>
-<area shape="rect" href="classentity_1_1props_1_1_o_b_j___chest.html#a3fd47570a31ae5fa8d3009776eb876bd" title=" " alt="" coords="5,5,220,47"/>
-<area shape="rect" href="classentity_1_1props_1_1_o_b_j___door.html#a9839aec16dffa3eadd3085215c3659be" title=" " alt="" coords="9,71,216,112"/>
-<area shape="rect" href="classentity_1_1props_1_1_o_b_j___key.html#a0c36447224c2d7c67b9b015cd40e0f35" title=" " alt="" coords="13,136,212,177"/>
-<area shape="rect" href="classgame_1_1_world.html#a05a7f2e7a65c2a3449efdaa0a87c49f5" title="Updates the game world based on the scene state." alt="" coords="38,202,187,229"/>
+<area shape="rect" title=" " alt="" coords="437,31,588,57"/>
+<area shape="rect" href="classgame_1_1_world.html#a0e40ca86573cf45d858cc8e529865649" title="Gets the instance of the World." alt="" coords="227,31,389,57"/>
+<area shape="rect" href="classentity_1_1_character.html#a0beaf70a50b785c4c4c38b9566593206" title="Updates the character entity based on the current scene and time elapsed." alt="" coords="5,5,179,32"/>
+<area shape="rect" href="classgame_1_1_window.html#a98e156c2148852f07cf8eef903d4b175" title="Constructor for the Window class." alt="" coords="7,56,177,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4725a8ec93796dcc1a2aa14ad16952f6" name="a4725a8ec93796dcc1a2aa14ad16952f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4725a8ec93796dcc1a2aa14ad16952f6">&#9670;&nbsp;</a></span>setColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UI.Textbox.setColor </td>
+          <td>(</td>
+          <td class="paramtype">Color&#160;</td>
+          <td class="paramname"><em>newCol</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Setter func for a new font color of the current text. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newCol</td><td>The new Color of the text </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_textbox_8java_source.html#l00057">57</a> of file <a class="el" href="_textbox_8java_source.html">Textbox.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>                                      {</div>
+<div class="line"><span class="lineno">   58</span>        <a class="code hl_variable" href="class_u_i_1_1_textbox.html#a5c682cf12a37a04fd9276b686618f7d8">_color</a> = newCol;</div>
+<div class="line"><span class="lineno">   59</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_u_i_1_1_textbox_a4725a8ec93796dcc1a2aa14ad16952f6_icgraph.png" border="0" usemap="#aclass_u_i_1_1_textbox_a4725a8ec93796dcc1a2aa14ad16952f6_icgraph" alt=""/></div>
+<map name="aclass_u_i_1_1_textbox_a4725a8ec93796dcc1a2aa14ad16952f6_icgraph" id="aclass_u_i_1_1_textbox_a4725a8ec93796dcc1a2aa14ad16952f6_icgraph">
+<area shape="rect" title="Setter func for a new font color of the current text." alt="" coords="1199,56,1348,83"/>
+<area shape="rect" href="class_u_i_1_1_h_u_d___fight.html#a444cd5e7f43dd55149762e5738ba2cf7" title=" " alt="" coords="458,5,603,32"/>
+<area shape="rect" href="class_u_i_1_1_choice_button.html#a72e2bde42a5a426ffa1686e4b724afa1" title="Setter func to change a button&#39;s text color." alt="" coords="939,81,1151,108"/>
+<area shape="rect" href="classgame_1_1_fight_scene.html#a9525cb3d263680e8d808b3abde00e8d8" title="Draws the fight scene." alt="" coords="209,5,379,32"/>
+<area shape="rect" href="classgame_1_1_world.html#ac405787ac7b11c4ed39a5cd9250e398f" title="Draws the game world and its entities." alt="" coords="12,5,148,32"/>
+<area shape="rect" href="class_u_i_1_1_h_u_d.html#a5039f6b8d54a62926eabd210aeb1fea4" title=" " alt="" coords="676,107,891,133"/>
+<area shape="rect" href="class_u_i_1_1_h_u_d___fight.html#ad430cdcd167a0f56c794138576a1130a" title=" " alt="" coords="439,56,622,83"/>
+<area shape="rect" href="class_u_i_1_1_h_u_d___pause.html#a1b2f7ebb698ec273744fd7404321305b" title=" " alt="" coords="433,107,628,133"/>
+<area shape="rect" href="class_u_i_1_1_h_u_d___fight.html#adf261e5266f353eba13c384f69ae723e" title="Update the HUD of the current fight the player is in." alt="" coords="451,157,610,184"/>
+<area shape="rect" href="classgame_1_1_fight_scene.html#a6f8060e45bcb70f13265bd6d3b2a52d5" title="Updates the fight scene." alt="" coords="203,183,385,209"/>
+<area shape="rect" href="class_u_i_1_1_h_u_d___pause.html#aec196ac720b763075dbea8841507d686" title=" " alt="" coords="449,259,613,285"/>
+<area shape="rect" href="classgame_1_1_world.html#a05a7f2e7a65c2a3449efdaa0a87c49f5" title="Updates the game world based on the scene state." alt="" coords="5,183,155,209"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a78802d3a8816c733a592e1d56710020b" name="a78802d3a8816c733a592e1d56710020b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78802d3a8816c733a592e1d56710020b">&#9670;&nbsp;</a></span>setNewText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UI.Textbox.setNewText </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>newText</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_textbox_8java_source.html#l00061">61</a> of file <a class="el" href="_textbox_8java_source.html">Textbox.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   61</span>                                          {</div>
+<div class="line"><span class="lineno">   62</span>        <a class="code hl_variable" href="class_u_i_1_1_textbox.html#ab5418e63a4261406606ce6843cb7da57">_text</a> = newText;</div>
+<div class="line"><span class="lineno">   63</span>    }</div>
+</div><!-- fragment --><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_u_i_1_1_textbox_a78802d3a8816c733a592e1d56710020b_icgraph.png" border="0" usemap="#aclass_u_i_1_1_textbox_a78802d3a8816c733a592e1d56710020b_icgraph" alt=""/></div>
+<map name="aclass_u_i_1_1_textbox_a78802d3a8816c733a592e1d56710020b_icgraph" id="aclass_u_i_1_1_textbox_a78802d3a8816c733a592e1d56710020b_icgraph">
+<area shape="rect" title=" " alt="" coords="413,5,584,32"/>
+<area shape="rect" href="class_u_i_1_1_h_u_d___world.html#af61b9be0ebdafc7487eacb0afb6d4fcd" title=" " alt="" coords="203,5,365,32"/>
+<area shape="rect" href="classgame_1_1_world.html#a05a7f2e7a65c2a3449efdaa0a87c49f5" title="Updates the game world based on the scene state." alt="" coords="5,5,155,32"/>
 </map>
 </div>
 
@@ -392,30 +490,6 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a76ab01a7be11595a9a06032f7d248470" name="a76ab01a7be11595a9a06032f7d248470"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a76ab01a7be11595a9a06032f7d248470">&#9670;&nbsp;</a></span>_height</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int UI.Textbox._height</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_textbox_8java_source.html#l00013">13</a> of file <a class="el" href="_textbox_8java_source.html">Textbox.java</a>.</p>
-
-</div>
-</div>
 <a id="ab5418e63a4261406606ce6843cb7da57" name="ab5418e63a4261406606ce6843cb7da57"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab5418e63a4261406606ce6843cb7da57">&#9670;&nbsp;</a></span>_text</h2>
 
@@ -440,24 +514,32 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="abe6a2b59a3f649a7aa35e0cb14a1d66b" name="abe6a2b59a3f649a7aa35e0cb14a1d66b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe6a2b59a3f649a7aa35e0cb14a1d66b">&#9670;&nbsp;</a></span>_width</h2>
+<a id="acc4a874b6d13011dd89afcca48d3ff57" name="acc4a874b6d13011dd89afcca48d3ff57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc4a874b6d13011dd89afcca48d3ff57">&#9670;&nbsp;</a></span>height</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int UI.Textbox._width</td>
+          <td class="memname">int UI.Textbox.height</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_textbox_8java_source.html#l00013">13</a> of file <a class="el" href="_textbox_8java_source.html">Textbox.java</a>.</p>
+
+</div>
+</div>
+<a id="a3534f90d6bbd5304f70162bad6c9275a" name="a3534f90d6bbd5304f70162bad6c9275a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3534f90d6bbd5304f70162bad6c9275a">&#9670;&nbsp;</a></span>width</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UI.Textbox.width</td>
+        </tr>
+      </table>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_textbox_8java_source.html#l00013">13</a> of file <a class="el" href="_textbox_8java_source.html">Textbox.java</a>.</p>

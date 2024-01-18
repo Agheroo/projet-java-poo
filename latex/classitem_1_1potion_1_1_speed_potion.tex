@@ -24,13 +24,16 @@ Collaboration diagram for item.\+potion.\+Speed\+Potion\+:
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classitem_1_1potion_1_1_speed_potion_a45dbb2f1cec822f6d7e652efd12ed5bf}{Speed\+Potion}} ()
+\item 
+void \mbox{\hyperlink{classitem_1_1potion_1_1_speed_potion_a53ca73660bf0cfe5ceedf029494974d2}{use\+Potion}} (\mbox{\hyperlink{classentity_1_1_player}{Player}} player)
 \end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
 
 
-Definition at line \mbox{\hyperlink{_speed_potion_8java_source_l00003}{3}} of file \mbox{\hyperlink{_speed_potion_8java_source}{Speed\+Potion.\+java}}.
+Definition at line \mbox{\hyperlink{_speed_potion_8java_source_l00005}{5}} of file \mbox{\hyperlink{_speed_potion_8java_source}{Speed\+Potion.\+java}}.
 
 
 
@@ -43,13 +46,39 @@ Definition at line \mbox{\hyperlink{_speed_potion_8java_source_l00003}{3}} of fi
 
 
 
-Definition at line \mbox{\hyperlink{_speed_potion_8java_source_l00005}{5}} of file \mbox{\hyperlink{_speed_potion_8java_source}{Speed\+Potion.\+java}}.
+Definition at line \mbox{\hyperlink{_speed_potion_8java_source_l00007}{7}} of file \mbox{\hyperlink{_speed_potion_8java_source}{Speed\+Potion.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00005                         \{}
-\DoxyCodeLine{00006         System.out.println(\textcolor{stringliteral}{"{}Potion de vitesse"{}});}
-\DoxyCodeLine{00007     \}}
+\DoxyCodeLine{00007                         \{}
+\DoxyCodeLine{00008         \mbox{\hyperlink{classitem_1_1_item_a89f40a13eef5043c8d7b62bedcd238d4}{type}} = \textcolor{stringliteral}{"{}potion"{}};}
+\DoxyCodeLine{00009         \mbox{\hyperlink{classitem_1_1_item_a7441fd46656c99d80977facde7cc265d}{name}} = \textcolor{stringliteral}{"{}Potion de vitesse"{}};}
+\DoxyCodeLine{00010     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classitem_1_1potion_1_1_speed_potion_a53ca73660bf0cfe5ceedf029494974d2}\label{classitem_1_1potion_1_1_speed_potion_a53ca73660bf0cfe5ceedf029494974d2}} 
+\index{item.potion.SpeedPotion@{item.potion.SpeedPotion}!usePotion@{usePotion}}
+\index{usePotion@{usePotion}!item.potion.SpeedPotion@{item.potion.SpeedPotion}}
+\doxysubsubsection{\texorpdfstring{usePotion()}{usePotion()}}
+{\footnotesize\ttfamily void item.\+potion.\+Speed\+Potion.\+use\+Potion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classentity_1_1_player}{Player}}}]{player }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{classitem_1_1potion_1_1_potion_a139e17c2c16b37e14f555ad85164a98c}{item.\+potion.\+Potion}}.
+
+
+
+Definition at line \mbox{\hyperlink{_speed_potion_8java_source_l00011}{11}} of file \mbox{\hyperlink{_speed_potion_8java_source}{Speed\+Potion.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011                                          \{}
+\DoxyCodeLine{00012         player.agility += 4;}
+\DoxyCodeLine{00013         player.initiative += 5;}
+\DoxyCodeLine{00014     \}}
 
 \end{DoxyCode}
 

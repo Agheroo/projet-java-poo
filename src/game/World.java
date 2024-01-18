@@ -86,7 +86,7 @@ public class World extends Scene {
      * Adds an enemy to the HashMap with the specified coordinates.
      *
      * @param coordinates The coordinates of the object.
-     * @param object      The object to be added.
+     * @param enemy      The object to be added.
      */
     public void addEnemy(Point coordinates, Enemy enemy){
         enemies.put(coordinates,enemy);
@@ -96,11 +96,11 @@ public class World extends Scene {
      * Updates the game world based on the scene state.
      */
     public void update() {
-        switch(state){
-            case Const.State.WELCOME:
+        switch(state.toString()){
+            case "WELCOME":
                 menu.update();
                 break;
-            case Const.State.WORLD:
+            case "WORLD":
                 checkPauseScene();
                 HUD_world.update();
                 player.update(dt);
@@ -122,12 +122,12 @@ public class World extends Scene {
                 }
                 break;
             
-            case Const.State.PAUSE:
+            case "PAUSE":
                 menu.update(); 
                 checkPauseScene();
                 break;
 
-            case Const.State.FIGHT:
+            case "FIGHT":
                 currfight.update(this); break;
 
             default:
@@ -147,12 +147,12 @@ public class World extends Scene {
         
         //If there is a fight, draw the fight instead of the game world
         if(currfight != null){
-            switch(FightScene.state){
-                case Const.FightState.FIGHTING:
+            switch(FightScene.state.toString()){
+                case "FIGHTING":
                     currfight.draw(g2); break;
-                case Const.FightState.WON:
+                case "WON":
                     currfight = null; break;
-                case Const.FightState.LOST:
+                case "LOST":
                     menu.draw(g2); break;
                 default: break;
             }

@@ -1,4 +1,5 @@
 <map id="entity.EntitySetter.setEnemies" name="entity.EntitySetter.setEnemies">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,224,32"/>
-<area shape="rect" id="node2" href="$classgame_1_1_world.html#accb9e77e21056039771d52bc5b1cfd31" title=" " alt="" coords="272,5,445,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,224,57"/>
+<area shape="rect" id="node2" href="$classgame_1_1_world.html#accb9e77e21056039771d52bc5b1cfd31" title="Adds an enemy to the HashMap with the specified coordinates." alt="" coords="272,5,445,32"/>
+<area shape="rect" id="node3" href="$classentity_1_1_enemy.html#ac5f10be7699c7e275eb4a67370b930d0" title="Setter for enemy creation to initialize thei stats." alt="" coords="277,56,440,83"/>
 </map>

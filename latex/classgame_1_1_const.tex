@@ -10,12 +10,23 @@ Collaboration diagram for game.\+Const\+:
 \includegraphics[width=224pt]{classgame_1_1_const__coll__graph}
 \end{center}
 \end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{enumgame_1_1_const_1_1_fight_state}{Fight\+State}}
+\item 
+enum \mbox{\hyperlink{enumgame_1_1_const_1_1_selection}{Selection}}
+\item 
+enum \mbox{\hyperlink{enumgame_1_1_const_1_1_state}{State}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 static final int \mbox{\hyperlink{classgame_1_1_const_a7b89e8a9f4d03d66a340747ae93306bc}{WDW\+\_\+width}} = 800
 \item 
 static final int \mbox{\hyperlink{classgame_1_1_const_aff58926bfb5d6e3327d26c2f6c175e0b}{WDW\+\_\+height}} = 600
+\item 
+static final int \mbox{\hyperlink{classgame_1_1_const_a3d5ba0247ef003ca260adf2fdc06085c}{WDW\+\_\+\+FPS}} = 60
 \item 
 static final int \mbox{\hyperlink{classgame_1_1_const_af178d40fff1ff252c503b73a3771f00c}{WRLD\+\_\+tile\+Size}} = 16
 \item 
@@ -25,15 +36,29 @@ static final int \mbox{\hyperlink{classgame_1_1_const_ace19bccb12a301c90c9d546cc
 \item 
 static final int \mbox{\hyperlink{classgame_1_1_const_aa0fc56892a36ffd4a1b39f8fd4fa7b1e}{WRLD\+\_\+entity\+Screen\+Size}} = \mbox{\hyperlink{classgame_1_1_const_af178d40fff1ff252c503b73a3771f00c}{WRLD\+\_\+tile\+Size}}$\ast$\mbox{\hyperlink{classgame_1_1_const_a20aad8876cf80d318864010559875790}{WRLD\+\_\+scale}}
 \item 
-static final int \mbox{\hyperlink{classgame_1_1_const_ad6736460791865fdfae0e50112925d99}{WRLD\+\_\+max\+Row}} = 27
+static final int \mbox{\hyperlink{classgame_1_1_const_ad6736460791865fdfae0e50112925d99}{WRLD\+\_\+max\+Row}} = 64
 \item 
-static final int \mbox{\hyperlink{classgame_1_1_const_ae3d2e0b14ad9aba18cfab7a741caf100}{WRLD\+\_\+max\+Col}} = 27
+static final int \mbox{\hyperlink{classgame_1_1_const_ae3d2e0b14ad9aba18cfab7a741caf100}{WRLD\+\_\+max\+Col}} = 64
 \item 
-static final int \mbox{\hyperlink{classgame_1_1_const_a9c3ba38aa97e94c23467cb8837b4c782}{FGHT\+\_\+entity\+Screen\+Size}} = 200
+static final int \mbox{\hyperlink{classgame_1_1_const_a9c3ba38aa97e94c23467cb8837b4c782}{FGHT\+\_\+entity\+Screen\+Size}} = 100
 \item 
-static final int \mbox{\hyperlink{classgame_1_1_const_aa5e5c2779132accee5674e9a0aa1cf61}{nb\+Floor\+Textures}} = 6
+static final int \mbox{\hyperlink{classgame_1_1_const_aa5e5c2779132accee5674e9a0aa1cf61}{nb\+Floor\+Textures}} = 7
 \item 
 static final int \mbox{\hyperlink{classgame_1_1_const_a52997e55fa9941c0d9ec8af3dd9a3a94}{nb\+Top\+Textures}} = 29
+\item 
+static String \mbox{\hyperlink{classgame_1_1_const_ae42ae57a3b0bc5a6bbbe1f0e45c7d9aa}{font\+Name}} = \char`\"{}rainyhearts\char`\"{}
+\item 
+static final int \mbox{\hyperlink{classgame_1_1_const_aa205d10b5c87aa1a3bd93a1b3db56626}{HUD\+\_\+welcome\+Width}} = 600
+\item 
+static final int \mbox{\hyperlink{classgame_1_1_const_a72d9655698b852c8ac089fad2bda042f}{HUD\+\_\+welcome\+Height}} = 550
+\item 
+static final int \mbox{\hyperlink{classgame_1_1_const_a75cbf92243b8c713e8b7512b2a0ebaf5}{HUD\+\_\+pause\+Width}} = 600
+\item 
+static final int \mbox{\hyperlink{classgame_1_1_const_a4900538f6361493f7a0d9d7ab6e99816}{HUD\+\_\+pause\+Height}} = 550
+\item 
+static final int \mbox{\hyperlink{classgame_1_1_const_a4a73888404cca429b51d7ac7e18d9033}{HUD\+\_\+fight\+Width}} = 760
+\item 
+static final int \mbox{\hyperlink{classgame_1_1_const_af823ebc671b39840ec50b571fa5572c4}{HUD\+\_\+fight\+Height}} = 160
 \end{DoxyCompactItemize}
 
 
@@ -49,21 +74,91 @@ Definition at line \mbox{\hyperlink{_const_8java_source_l00003}{3}} of file \mbo
 \index{game.Const@{game.Const}!FGHT\_entityScreenSize@{FGHT\_entityScreenSize}}
 \index{FGHT\_entityScreenSize@{FGHT\_entityScreenSize}!game.Const@{game.Const}}
 \doxysubsubsection{\texorpdfstring{FGHT\_entityScreenSize}{FGHT\_entityScreenSize}}
-{\footnotesize\ttfamily final int game.\+Const.\+FGHT\+\_\+entity\+Screen\+Size = 200\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily final int game.\+Const.\+FGHT\+\_\+entity\+Screen\+Size = 100\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
-Definition at line \mbox{\hyperlink{_const_8java_source_l00018}{18}} of file \mbox{\hyperlink{_const_8java_source}{Const.\+java}}.
+Definition at line \mbox{\hyperlink{_const_8java_source_l00024}{24}} of file \mbox{\hyperlink{_const_8java_source}{Const.\+java}}.
+
+\mbox{\Hypertarget{classgame_1_1_const_ae42ae57a3b0bc5a6bbbe1f0e45c7d9aa}\label{classgame_1_1_const_ae42ae57a3b0bc5a6bbbe1f0e45c7d9aa}} 
+\index{game.Const@{game.Const}!fontName@{fontName}}
+\index{fontName@{fontName}!game.Const@{game.Const}}
+\doxysubsubsection{\texorpdfstring{fontName}{fontName}}
+{\footnotesize\ttfamily String game.\+Const.\+font\+Name = \char`\"{}rainyhearts\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_const_8java_source_l00031}{31}} of file \mbox{\hyperlink{_const_8java_source}{Const.\+java}}.
+
+\mbox{\Hypertarget{classgame_1_1_const_af823ebc671b39840ec50b571fa5572c4}\label{classgame_1_1_const_af823ebc671b39840ec50b571fa5572c4}} 
+\index{game.Const@{game.Const}!HUD\_fightHeight@{HUD\_fightHeight}}
+\index{HUD\_fightHeight@{HUD\_fightHeight}!game.Const@{game.Const}}
+\doxysubsubsection{\texorpdfstring{HUD\_fightHeight}{HUD\_fightHeight}}
+{\footnotesize\ttfamily final int game.\+Const.\+HUD\+\_\+fight\+Height = 160\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_const_8java_source_l00037}{37}} of file \mbox{\hyperlink{_const_8java_source}{Const.\+java}}.
+
+\mbox{\Hypertarget{classgame_1_1_const_a4a73888404cca429b51d7ac7e18d9033}\label{classgame_1_1_const_a4a73888404cca429b51d7ac7e18d9033}} 
+\index{game.Const@{game.Const}!HUD\_fightWidth@{HUD\_fightWidth}}
+\index{HUD\_fightWidth@{HUD\_fightWidth}!game.Const@{game.Const}}
+\doxysubsubsection{\texorpdfstring{HUD\_fightWidth}{HUD\_fightWidth}}
+{\footnotesize\ttfamily final int game.\+Const.\+HUD\+\_\+fight\+Width = 760\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_const_8java_source_l00036}{36}} of file \mbox{\hyperlink{_const_8java_source}{Const.\+java}}.
+
+\mbox{\Hypertarget{classgame_1_1_const_a4900538f6361493f7a0d9d7ab6e99816}\label{classgame_1_1_const_a4900538f6361493f7a0d9d7ab6e99816}} 
+\index{game.Const@{game.Const}!HUD\_pauseHeight@{HUD\_pauseHeight}}
+\index{HUD\_pauseHeight@{HUD\_pauseHeight}!game.Const@{game.Const}}
+\doxysubsubsection{\texorpdfstring{HUD\_pauseHeight}{HUD\_pauseHeight}}
+{\footnotesize\ttfamily final int game.\+Const.\+HUD\+\_\+pause\+Height = 550\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_const_8java_source_l00035}{35}} of file \mbox{\hyperlink{_const_8java_source}{Const.\+java}}.
+
+\mbox{\Hypertarget{classgame_1_1_const_a75cbf92243b8c713e8b7512b2a0ebaf5}\label{classgame_1_1_const_a75cbf92243b8c713e8b7512b2a0ebaf5}} 
+\index{game.Const@{game.Const}!HUD\_pauseWidth@{HUD\_pauseWidth}}
+\index{HUD\_pauseWidth@{HUD\_pauseWidth}!game.Const@{game.Const}}
+\doxysubsubsection{\texorpdfstring{HUD\_pauseWidth}{HUD\_pauseWidth}}
+{\footnotesize\ttfamily final int game.\+Const.\+HUD\+\_\+pause\+Width = 600\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_const_8java_source_l00034}{34}} of file \mbox{\hyperlink{_const_8java_source}{Const.\+java}}.
+
+\mbox{\Hypertarget{classgame_1_1_const_a72d9655698b852c8ac089fad2bda042f}\label{classgame_1_1_const_a72d9655698b852c8ac089fad2bda042f}} 
+\index{game.Const@{game.Const}!HUD\_welcomeHeight@{HUD\_welcomeHeight}}
+\index{HUD\_welcomeHeight@{HUD\_welcomeHeight}!game.Const@{game.Const}}
+\doxysubsubsection{\texorpdfstring{HUD\_welcomeHeight}{HUD\_welcomeHeight}}
+{\footnotesize\ttfamily final int game.\+Const.\+HUD\+\_\+welcome\+Height = 550\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_const_8java_source_l00033}{33}} of file \mbox{\hyperlink{_const_8java_source}{Const.\+java}}.
+
+\mbox{\Hypertarget{classgame_1_1_const_aa205d10b5c87aa1a3bd93a1b3db56626}\label{classgame_1_1_const_aa205d10b5c87aa1a3bd93a1b3db56626}} 
+\index{game.Const@{game.Const}!HUD\_welcomeWidth@{HUD\_welcomeWidth}}
+\index{HUD\_welcomeWidth@{HUD\_welcomeWidth}!game.Const@{game.Const}}
+\doxysubsubsection{\texorpdfstring{HUD\_welcomeWidth}{HUD\_welcomeWidth}}
+{\footnotesize\ttfamily final int game.\+Const.\+HUD\+\_\+welcome\+Width = 600\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_const_8java_source_l00032}{32}} of file \mbox{\hyperlink{_const_8java_source}{Const.\+java}}.
 
 \mbox{\Hypertarget{classgame_1_1_const_aa5e5c2779132accee5674e9a0aa1cf61}\label{classgame_1_1_const_aa5e5c2779132accee5674e9a0aa1cf61}} 
 \index{game.Const@{game.Const}!nbFloorTextures@{nbFloorTextures}}
 \index{nbFloorTextures@{nbFloorTextures}!game.Const@{game.Const}}
 \doxysubsubsection{\texorpdfstring{nbFloorTextures}{nbFloorTextures}}
-{\footnotesize\ttfamily final int game.\+Const.\+nb\+Floor\+Textures = 6\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily final int game.\+Const.\+nb\+Floor\+Textures = 7\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
-Definition at line \mbox{\hyperlink{_const_8java_source_l00021}{21}} of file \mbox{\hyperlink{_const_8java_source}{Const.\+java}}.
+Definition at line \mbox{\hyperlink{_const_8java_source_l00027}{27}} of file \mbox{\hyperlink{_const_8java_source}{Const.\+java}}.
 
 \mbox{\Hypertarget{classgame_1_1_const_a52997e55fa9941c0d9ec8af3dd9a3a94}\label{classgame_1_1_const_a52997e55fa9941c0d9ec8af3dd9a3a94}} 
 \index{game.Const@{game.Const}!nbTopTextures@{nbTopTextures}}
@@ -73,7 +168,17 @@ Definition at line \mbox{\hyperlink{_const_8java_source_l00021}{21}} of file \mb
 
 
 
-Definition at line \mbox{\hyperlink{_const_8java_source_l00022}{22}} of file \mbox{\hyperlink{_const_8java_source}{Const.\+java}}.
+Definition at line \mbox{\hyperlink{_const_8java_source_l00028}{28}} of file \mbox{\hyperlink{_const_8java_source}{Const.\+java}}.
+
+\mbox{\Hypertarget{classgame_1_1_const_a3d5ba0247ef003ca260adf2fdc06085c}\label{classgame_1_1_const_a3d5ba0247ef003ca260adf2fdc06085c}} 
+\index{game.Const@{game.Const}!WDW\_FPS@{WDW\_FPS}}
+\index{WDW\_FPS@{WDW\_FPS}!game.Const@{game.Const}}
+\doxysubsubsection{\texorpdfstring{WDW\_FPS}{WDW\_FPS}}
+{\footnotesize\ttfamily final int game.\+Const.\+WDW\+\_\+\+FPS = 60\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_const_8java_source_l00013}{13}} of file \mbox{\hyperlink{_const_8java_source}{Const.\+java}}.
 
 \mbox{\Hypertarget{classgame_1_1_const_aff58926bfb5d6e3327d26c2f6c175e0b}\label{classgame_1_1_const_aff58926bfb5d6e3327d26c2f6c175e0b}} 
 \index{game.Const@{game.Const}!WDW\_height@{WDW\_height}}
@@ -83,7 +188,7 @@ Definition at line \mbox{\hyperlink{_const_8java_source_l00022}{22}} of file \mb
 
 
 
-Definition at line \mbox{\hyperlink{_const_8java_source_l00007}{7}} of file \mbox{\hyperlink{_const_8java_source}{Const.\+java}}.
+Definition at line \mbox{\hyperlink{_const_8java_source_l00012}{12}} of file \mbox{\hyperlink{_const_8java_source}{Const.\+java}}.
 
 \mbox{\Hypertarget{classgame_1_1_const_a7b89e8a9f4d03d66a340747ae93306bc}\label{classgame_1_1_const_a7b89e8a9f4d03d66a340747ae93306bc}} 
 \index{game.Const@{game.Const}!WDW\_width@{WDW\_width}}
@@ -93,7 +198,7 @@ Definition at line \mbox{\hyperlink{_const_8java_source_l00007}{7}} of file \mbo
 
 
 
-Definition at line \mbox{\hyperlink{_const_8java_source_l00006}{6}} of file \mbox{\hyperlink{_const_8java_source}{Const.\+java}}.
+Definition at line \mbox{\hyperlink{_const_8java_source_l00011}{11}} of file \mbox{\hyperlink{_const_8java_source}{Const.\+java}}.
 
 \mbox{\Hypertarget{classgame_1_1_const_aa0fc56892a36ffd4a1b39f8fd4fa7b1e}\label{classgame_1_1_const_aa0fc56892a36ffd4a1b39f8fd4fa7b1e}} 
 \index{game.Const@{game.Const}!WRLD\_entityScreenSize@{WRLD\_entityScreenSize}}
@@ -103,27 +208,27 @@ Definition at line \mbox{\hyperlink{_const_8java_source_l00006}{6}} of file \mbo
 
 
 
-Definition at line \mbox{\hyperlink{_const_8java_source_l00013}{13}} of file \mbox{\hyperlink{_const_8java_source}{Const.\+java}}.
+Definition at line \mbox{\hyperlink{_const_8java_source_l00019}{19}} of file \mbox{\hyperlink{_const_8java_source}{Const.\+java}}.
 
 \mbox{\Hypertarget{classgame_1_1_const_ae3d2e0b14ad9aba18cfab7a741caf100}\label{classgame_1_1_const_ae3d2e0b14ad9aba18cfab7a741caf100}} 
 \index{game.Const@{game.Const}!WRLD\_maxCol@{WRLD\_maxCol}}
 \index{WRLD\_maxCol@{WRLD\_maxCol}!game.Const@{game.Const}}
 \doxysubsubsection{\texorpdfstring{WRLD\_maxCol}{WRLD\_maxCol}}
-{\footnotesize\ttfamily final int game.\+Const.\+WRLD\+\_\+max\+Col = 27\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily final int game.\+Const.\+WRLD\+\_\+max\+Col = 64\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
-Definition at line \mbox{\hyperlink{_const_8java_source_l00015}{15}} of file \mbox{\hyperlink{_const_8java_source}{Const.\+java}}.
+Definition at line \mbox{\hyperlink{_const_8java_source_l00021}{21}} of file \mbox{\hyperlink{_const_8java_source}{Const.\+java}}.
 
 \mbox{\Hypertarget{classgame_1_1_const_ad6736460791865fdfae0e50112925d99}\label{classgame_1_1_const_ad6736460791865fdfae0e50112925d99}} 
 \index{game.Const@{game.Const}!WRLD\_maxRow@{WRLD\_maxRow}}
 \index{WRLD\_maxRow@{WRLD\_maxRow}!game.Const@{game.Const}}
 \doxysubsubsection{\texorpdfstring{WRLD\_maxRow}{WRLD\_maxRow}}
-{\footnotesize\ttfamily final int game.\+Const.\+WRLD\+\_\+max\+Row = 27\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily final int game.\+Const.\+WRLD\+\_\+max\+Row = 64\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
-Definition at line \mbox{\hyperlink{_const_8java_source_l00015}{15}} of file \mbox{\hyperlink{_const_8java_source}{Const.\+java}}.
+Definition at line \mbox{\hyperlink{_const_8java_source_l00021}{21}} of file \mbox{\hyperlink{_const_8java_source}{Const.\+java}}.
 
 \mbox{\Hypertarget{classgame_1_1_const_a20aad8876cf80d318864010559875790}\label{classgame_1_1_const_a20aad8876cf80d318864010559875790}} 
 \index{game.Const@{game.Const}!WRLD\_scale@{WRLD\_scale}}
@@ -133,7 +238,7 @@ Definition at line \mbox{\hyperlink{_const_8java_source_l00015}{15}} of file \mb
 
 
 
-Definition at line \mbox{\hyperlink{_const_8java_source_l00011}{11}} of file \mbox{\hyperlink{_const_8java_source}{Const.\+java}}.
+Definition at line \mbox{\hyperlink{_const_8java_source_l00017}{17}} of file \mbox{\hyperlink{_const_8java_source}{Const.\+java}}.
 
 \mbox{\Hypertarget{classgame_1_1_const_ace19bccb12a301c90c9d546cc19f5452}\label{classgame_1_1_const_ace19bccb12a301c90c9d546cc19f5452}} 
 \index{game.Const@{game.Const}!WRLD\_tileScreenSize@{WRLD\_tileScreenSize}}
@@ -143,7 +248,7 @@ Definition at line \mbox{\hyperlink{_const_8java_source_l00011}{11}} of file \mb
 
 
 
-Definition at line \mbox{\hyperlink{_const_8java_source_l00012}{12}} of file \mbox{\hyperlink{_const_8java_source}{Const.\+java}}.
+Definition at line \mbox{\hyperlink{_const_8java_source_l00018}{18}} of file \mbox{\hyperlink{_const_8java_source}{Const.\+java}}.
 
 \mbox{\Hypertarget{classgame_1_1_const_af178d40fff1ff252c503b73a3771f00c}\label{classgame_1_1_const_af178d40fff1ff252c503b73a3771f00c}} 
 \index{game.Const@{game.Const}!WRLD\_tileSize@{WRLD\_tileSize}}
@@ -153,7 +258,7 @@ Definition at line \mbox{\hyperlink{_const_8java_source_l00012}{12}} of file \mb
 
 
 
-Definition at line \mbox{\hyperlink{_const_8java_source_l00010}{10}} of file \mbox{\hyperlink{_const_8java_source}{Const.\+java}}.
+Definition at line \mbox{\hyperlink{_const_8java_source_l00016}{16}} of file \mbox{\hyperlink{_const_8java_source}{Const.\+java}}.
 
 
 

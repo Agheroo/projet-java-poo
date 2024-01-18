@@ -1,5 +1,5 @@
 <map id="game.Window" name="game.Window">
-<area shape="rect" id="node1" title="Represents the window that displays the game." alt="" coords="5,131,167,340"/>
+<area shape="rect" id="node1" title="Represents the window that displays the game." alt="" coords="5,131,167,296"/>
 <area shape="rect" id="node2" title=" " alt="" coords="7,5,69,83"/>
 <area shape="rect" id="node3" title=" " alt="" coords="93,5,175,83"/>
 </map>

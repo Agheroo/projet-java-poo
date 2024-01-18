@@ -29,33 +29,39 @@ Collaboration diagram for entity.\+props.\+Props\+:
 \begin{DoxyCompactItemize}
 \item 
 boolean \mbox{\hyperlink{classentity_1_1props_1_1_props_a8089810f8f67b92327a31a6858e0e85f}{get\+Collision}} ()
-\item 
-void \mbox{\hyperlink{classentity_1_1props_1_1_props_abe21ed292d32b599d5b042106e0cfb51}{draw}} (Graphics2D g2, \mbox{\hyperlink{classgame_1_1_world}{World}} world)
-\begin{DoxyCompactList}\small\item\em Draw the prop on the screen based on its position relative to the player\textquotesingle{}s position. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Getter for the collision of the prop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classentity_1_1props_1_1_props_a63deacfcaa9b826683111566c0b442c5}{block}} (\mbox{\hyperlink{classentity_1_1_player}{Player}} player)
+\begin{DoxyCompactList}\small\item\em Quick util functions to check if the current prop need to block the player and updates directly its worldW worldY coordinates. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classentity_1_1props_1_1_props_ab837cf0c685323fe8c2cc84d80f6315a}{destroy\+Self}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the current prop in the world (using the hashmap) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classentity_1_1props_1_1_props_abe21ed292d32b599d5b042106e0cfb51}{draw}} (Graphics2D g2, \mbox{\hyperlink{classgame_1_1_world}{World}} world)
+\begin{DoxyCompactList}\small\item\em Draw the prop on the screen based on its position relative to the player\textquotesingle{}s position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Buffered\+Image \mbox{\hyperlink{classentity_1_1props_1_1_props_a2c69a7ac84902c86a6dd74bfc9807018}{images}} \mbox{[}$\,$\mbox{]}
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classentity_1_1props_1_1_props_ad9057ae1a190d0f140f579820860b176}{load\+Textures}} (String \mbox{\hyperlink{classentity_1_1_entity_a19fc9a3b25d27f23c8ada7af8e746a17}{name}})
 \end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boolean \mbox{\hyperlink{classentity_1_1props_1_1_props_a606e89d3bbe76b48434258901f3af6b3}{open}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Package Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classentity_1_1props_1_1_props_ad691e3b1fba4f339b58e928321572bb6}{Props}} (int x, int y, String \mbox{\hyperlink{classentity_1_1_entity_a19fc9a3b25d27f23c8ada7af8e746a17}{name}}, int sprite\+Cnt\+Max, int sprite\+Speed, boolean \mbox{\hyperlink{classentity_1_1_entity_acd7f4b7c1acbdcd410ee9ad61a86b58e}{collision}})
-\end{DoxyCompactItemize}
-\doxysubsection*{Private Attributes}
-\begin{DoxyCompactItemize}
-\item 
-Buffered\+Image \mbox{\hyperlink{classentity_1_1props_1_1_props_a4c5f6481f26f897dc5467c91498ff77b}{image}}
-\end{DoxyCompactItemize}
-\doxysubsection*{Additional Inherited Members}
+\begin{DoxyCompactList}\small\item\em Constructor for props (keys/doors/chests...) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Represents in-\/game props with properties such as image, name, and position. 
 
-Definition at line \mbox{\hyperlink{_props_8java_source_l00024}{24}} of file \mbox{\hyperlink{_props_8java_source}{Props.\+java}}.
+Definition at line \mbox{\hyperlink{_props_8java_source_l00026}{26}} of file \mbox{\hyperlink{_props_8java_source}{Props.\+java}}.
 
 
 
@@ -68,22 +74,92 @@ Definition at line \mbox{\hyperlink{_props_8java_source_l00024}{24}} of file \mb
 
 
 
-Definition at line \mbox{\hyperlink{_props_8java_source_l00028}{28}} of file \mbox{\hyperlink{_props_8java_source}{Props.\+java}}.
+Constructor for props (keys/doors/chests...) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & WorldX of entity \\
+\hline
+{\em y} & worldY of entity \\
+\hline
+{\em name} & Name of entity \\
+\hline
+{\em sprite\+Cnt\+Max} & If animated, nb of sprites \\
+\hline
+{\em sprite\+Speed} & If animated, speed of animation of sprites \\
+\hline
+{\em collision} & Is the character blocked by the prop or not \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_props_8java_source_l00038}{38}} of file \mbox{\hyperlink{_props_8java_source}{Props.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00028                                                                                           \{}
-\DoxyCodeLine{00029         super(\mbox{\hyperlink{classentity_1_1_entity_a19fc9a3b25d27f23c8ada7af8e746a17}{name}},x,y,spriteCntMax,spriteSpeed,\mbox{\hyperlink{classentity_1_1_entity_acd7f4b7c1acbdcd410ee9ad61a86b58e}{collision}});}
-\DoxyCodeLine{00030         hitbox.width = 3*Const.WRLD\_tileScreenSize/4;  \textcolor{comment}{//Slightly smaller than a tile}}
-\DoxyCodeLine{00031         hitbox.height = 3*Const.WRLD\_tileScreenSize/4;}
-\DoxyCodeLine{00032         hitbox.x = \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.width/4;}
-\DoxyCodeLine{00033         hitbox.y = \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.height/4;}
-\DoxyCodeLine{00034     \}}
+\DoxyCodeLine{00038                                                                                           \{}
+\DoxyCodeLine{00039         super(\mbox{\hyperlink{classentity_1_1_entity_a19fc9a3b25d27f23c8ada7af8e746a17}{name}},x,y,spriteCntMax,spriteSpeed,\mbox{\hyperlink{classentity_1_1_entity_acd7f4b7c1acbdcd410ee9ad61a86b58e}{collision}});}
+\DoxyCodeLine{00040         this.images =  \textcolor{keyword}{new} BufferedImage[spriteCntMax];}
+\DoxyCodeLine{00041         hitbox.width = Const.WRLD\_tileScreenSize;}
+\DoxyCodeLine{00042         hitbox.height = Const.WRLD\_tileScreenSize;}
+\DoxyCodeLine{00043         hitbox.x = \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}};}
+\DoxyCodeLine{00044         hitbox.y = \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}};}
+\DoxyCodeLine{00045     \}}
 
 \end{DoxyCode}
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classentity_1_1props_1_1_props_a63deacfcaa9b826683111566c0b442c5}\label{classentity_1_1props_1_1_props_a63deacfcaa9b826683111566c0b442c5}} 
+\index{entity.props.Props@{entity.props.Props}!block@{block}}
+\index{block@{block}!entity.props.Props@{entity.props.Props}}
+\doxysubsubsection{\texorpdfstring{block()}{block()}}
+{\footnotesize\ttfamily void entity.\+props.\+Props.\+block (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classentity_1_1_player}{Player}}}]{player }\end{DoxyParamCaption})}
+
+
+
+Quick util functions to check if the current prop need to block the player and updates directly its worldW worldY coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & The player to check collisions with \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_props_8java_source_l00059}{59}} of file \mbox{\hyperlink{_props_8java_source}{Props.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00059                                     \{}
+\DoxyCodeLine{00060         \textcolor{keywordflow}{if}((player.hitbox.y > \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y \&\& player.hitbox.y < \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.height)}
+\DoxyCodeLine{00061         || (player.hitbox.y + player.hitbox.height > \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y \&\& player.hitbox.y + player.hitbox.height < \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.height))\{}
+\DoxyCodeLine{00062             \textcolor{keywordflow}{if}(player.hitbox.x + player.hitbox.width > \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x \&\& player.hitbox.x < \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.width)\{}
+\DoxyCodeLine{00063                 \textcolor{keywordflow}{if}(player.dirX == 1 \&\& player.hitbox.x < \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x)\{}
+\DoxyCodeLine{00064                     player.worldX = hitbox.x -\/ player.hitbox.width -\/player.hitbox.width/2;}
+\DoxyCodeLine{00065                 \}}
+\DoxyCodeLine{00066                 \textcolor{keywordflow}{if}(player.dirX == -\/1 \&\& player.hitbox.x + player.hitbox.width > \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.width)\{}
+\DoxyCodeLine{00067                     player.worldX = hitbox.x + hitbox.width -\/ player.hitbox.width/2;}
+\DoxyCodeLine{00068                 \}}
+\DoxyCodeLine{00069             \}}
+\DoxyCodeLine{00070         \}}
+\DoxyCodeLine{00071 }
+\DoxyCodeLine{00072         \textcolor{keywordflow}{if}((player.hitbox.x > \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x \&\& player.hitbox.x < \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.width)}
+\DoxyCodeLine{00073         || (player.hitbox.x + player.hitbox.width > \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x \&\& player.hitbox.x + player.hitbox.width < \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.width))\{}
+\DoxyCodeLine{00074             \textcolor{keywordflow}{if}(player.hitbox.y + player.hitbox.height > \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y \&\& player.hitbox.y < \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.height)\{}
+\DoxyCodeLine{00075                 \textcolor{keywordflow}{if}(player.dirY == 1 \&\& player.hitbox.y < \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y)\{}
+\DoxyCodeLine{00076                     player.worldY = hitbox.y -\/ player.hitbox.height -\/ player.hitbox.height;}
+\DoxyCodeLine{00077                 \}}
+\DoxyCodeLine{00078                 \textcolor{keywordflow}{if}(player.dirY == -\/1 \&\& player.hitbox.y + player.hitbox.height > \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.height)\{}
+\DoxyCodeLine{00079                     player.worldY = hitbox.y + hitbox.height -\/ player.hitbox.height;}
+\DoxyCodeLine{00080                 \}}
+\DoxyCodeLine{00081             \}}
+\DoxyCodeLine{00082         \}}
+\DoxyCodeLine{00083         }
+\DoxyCodeLine{00084 }
+\DoxyCodeLine{00085     \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{classentity_1_1props_1_1_props_ab837cf0c685323fe8c2cc84d80f6315a}\label{classentity_1_1props_1_1_props_ab837cf0c685323fe8c2cc84d80f6315a}} 
 \index{entity.props.Props@{entity.props.Props}!destroySelf@{destroySelf}}
 \index{destroySelf@{destroySelf}!entity.props.Props@{entity.props.Props}}
@@ -92,25 +168,20 @@ Definition at line \mbox{\hyperlink{_props_8java_source_l00028}{28}} of file \mb
 
 
 
-Definition at line \mbox{\hyperlink{_props_8java_source_l00077}{77}} of file \mbox{\hyperlink{_props_8java_source}{Props.\+java}}.
+Destroys the current prop in the world (using the hashmap) 
+
+
+
+Definition at line \mbox{\hyperlink{_props_8java_source_l00106}{106}} of file \mbox{\hyperlink{_props_8java_source}{Props.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00077                              \{}
-\DoxyCodeLine{00078         Point point=\textcolor{keyword}{new} Point(\mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}},\mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}});}
-\DoxyCodeLine{00079         World instance=World.getWorld();}
-\DoxyCodeLine{00080         instance.objMap.remove(point,\textcolor{keyword}{this});}
-\DoxyCodeLine{00081     \}}
+\DoxyCodeLine{00106                              \{}
+\DoxyCodeLine{00107         Point point=\textcolor{keyword}{new} Point(\mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}},\mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}});}
+\DoxyCodeLine{00108         World.objMap.remove(point,\textcolor{keyword}{this});}
+\DoxyCodeLine{00109     \}}
 
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classentity_1_1props_1_1_props_ab837cf0c685323fe8c2cc84d80f6315a_cgraph}
-\end{center}
-\end{figure}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
@@ -138,29 +209,36 @@ Draw the prop on the screen based on its position relative to the player\textquo
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_props_8java_source_l00057}{57}} of file \mbox{\hyperlink{_props_8java_source}{Props.\+java}}.
+Definition at line \mbox{\hyperlink{_props_8java_source_l00116}{116}} of file \mbox{\hyperlink{_props_8java_source}{Props.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00057                                                  \{}
-\DoxyCodeLine{00058         \textcolor{comment}{// Calculate the screen position of the player}}
-\DoxyCodeLine{00059         \textcolor{keywordtype}{int} playerScreenX = (Const.WDW\_width -\/ Const.WRLD\_entityScreenSize) / 2;}
-\DoxyCodeLine{00060         \textcolor{keywordtype}{int} playerScreenY = (Const.WDW\_height -\/ Const.WRLD\_entityScreenSize) / 2;}
-\DoxyCodeLine{00061 }
-\DoxyCodeLine{00062         \textcolor{comment}{// Calculate the screen position of the prop relative to the player's position}}
-\DoxyCodeLine{00063         \textcolor{keywordtype}{int} screenX = \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} -\/ world.player.worldX + playerScreenX;}
-\DoxyCodeLine{00064         \textcolor{keywordtype}{int} screenY = \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} -\/ world.player.worldY + playerScreenY;}
-\DoxyCodeLine{00065 }
-\DoxyCodeLine{00066         \textcolor{comment}{// Check if the prop is within the visible screen region around the player}}
-\DoxyCodeLine{00067         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} + Const.WRLD\_tileScreenSize > world.player.worldX -\/ playerScreenX}
-\DoxyCodeLine{00068                 \&\& \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} -\/ Const.WRLD\_tileScreenSize < world.player.worldX + playerScreenX}
-\DoxyCodeLine{00069                 \&\& \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} + Const.WRLD\_tileScreenSize > world.player.worldY -\/ playerScreenY}
-\DoxyCodeLine{00070                 \&\& \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} -\/ Const.WRLD\_tileScreenSize < world.player.worldY + playerScreenY) \{}
-\DoxyCodeLine{00071             \textcolor{comment}{// Draw the prop on the screen}}
-\DoxyCodeLine{00072             g2.drawImage(\mbox{\hyperlink{classentity_1_1props_1_1_props_a4c5f6481f26f897dc5467c91498ff77b}{image}}, screenX, screenY, Const.WRLD\_entityScreenSize, Const.WRLD\_entityScreenSize, \textcolor{keyword}{null});}
-\DoxyCodeLine{00073             g2.drawRect(screenX + Const.WRLD\_entityScreenSize/8, screenY + Const.WRLD\_entityScreenSize/8, \textcolor{keyword}{this}.hitbox.width, \textcolor{keyword}{this}.hitbox.height);}
-\DoxyCodeLine{00074         \}}
-\DoxyCodeLine{00075     \}}
+\DoxyCodeLine{00116                                                  \{}
+\DoxyCodeLine{00117         \textcolor{comment}{// Calculate the screen position of the player}}
+\DoxyCodeLine{00118         \textcolor{keywordtype}{int} playerScreenX = (Const.WDW\_width -\/ Const.WRLD\_entityScreenSize) / 2;}
+\DoxyCodeLine{00119         \textcolor{keywordtype}{int} playerScreenY = (Const.WDW\_height -\/ Const.WRLD\_entityScreenSize) / 2;}
+\DoxyCodeLine{00120 }
+\DoxyCodeLine{00121         \textcolor{comment}{// Calculate the screen position of the prop relative to the player's position}}
+\DoxyCodeLine{00122         \textcolor{keywordtype}{int} screenX = \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} -\/ world.player.worldX + playerScreenX;}
+\DoxyCodeLine{00123         \textcolor{keywordtype}{int} screenY = \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} -\/ world.player.worldY + playerScreenY;}
+\DoxyCodeLine{00124 }
+\DoxyCodeLine{00125         \textcolor{comment}{// Check if the prop is within the visible screen region around the player}}
+\DoxyCodeLine{00126         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} + Const.WRLD\_tileScreenSize > world.player.worldX -\/ playerScreenX}
+\DoxyCodeLine{00127         \&\& \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} -\/ Const.WRLD\_tileScreenSize < world.player.worldX + playerScreenX}
+\DoxyCodeLine{00128         \&\& \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} + Const.WRLD\_tileScreenSize > world.player.worldY -\/ playerScreenY}
+\DoxyCodeLine{00129         \&\& \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} -\/ Const.WRLD\_tileScreenSize < world.player.worldY + playerScreenY) \{}
+\DoxyCodeLine{00130             }
+\DoxyCodeLine{00131             \textcolor{comment}{// Draw the prop on the screen}}
+\DoxyCodeLine{00132             \textcolor{keywordflow}{if}(\mbox{\hyperlink{classentity_1_1props_1_1_props_a606e89d3bbe76b48434258901f3af6b3}{open}})\{ \textcolor{comment}{//For some props like chests or doors the images[1] is the "{}open"{} one}}
+\DoxyCodeLine{00133                 g2.drawImage(\mbox{\hyperlink{classentity_1_1props_1_1_props_a2c69a7ac84902c86a6dd74bfc9807018}{images}}[1], screenX, screenY, Const.WRLD\_entityScreenSize, Const.WRLD\_entityScreenSize, \textcolor{keyword}{null}); }
+\DoxyCodeLine{00134             \}}
+\DoxyCodeLine{00135             \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00136                 g2.drawImage(\mbox{\hyperlink{classentity_1_1props_1_1_props_a2c69a7ac84902c86a6dd74bfc9807018}{images}}[0], screenX, screenY, Const.WRLD\_entityScreenSize, Const.WRLD\_entityScreenSize, \textcolor{keyword}{null});}
+\DoxyCodeLine{00137             \}}
+\DoxyCodeLine{00138             }
+\DoxyCodeLine{00139             \textcolor{comment}{//g2.drawRect(screenX, screenY, this.hitbox.width, this.hitbox.height);  //hitbox debuig purposes}}
+\DoxyCodeLine{00140         \}}
+\DoxyCodeLine{00141     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classentity_1_1props_1_1_props_a8089810f8f67b92327a31a6858e0e85f}\label{classentity_1_1props_1_1_props_a8089810f8f67b92327a31a6858e0e85f}} 
@@ -171,13 +249,20 @@ Definition at line \mbox{\hyperlink{_props_8java_source_l00057}{57}} of file \mb
 
 
 
-Definition at line \mbox{\hyperlink{_props_8java_source_l00036}{36}} of file \mbox{\hyperlink{_props_8java_source}{Props.\+java}}.
+Getter for the collision of the prop. 
+
+\begin{DoxyReturn}{Returns}
+collision of the prop 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_props_8java_source_l00051}{51}} of file \mbox{\hyperlink{_props_8java_source}{Props.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00036                                  \{}
-\DoxyCodeLine{00037         \textcolor{keywordflow}{return} \mbox{\hyperlink{classentity_1_1_entity_acd7f4b7c1acbdcd410ee9ad61a86b58e}{collision}};}
-\DoxyCodeLine{00038     \}}
+\DoxyCodeLine{00051                                  \{}
+\DoxyCodeLine{00052         \textcolor{keywordflow}{return} \mbox{\hyperlink{classentity_1_1_entity_acd7f4b7c1acbdcd410ee9ad61a86b58e}{collision}};}
+\DoxyCodeLine{00053     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classentity_1_1props_1_1_props_ad9057ae1a190d0f140f579820860b176}\label{classentity_1_1props_1_1_props_ad9057ae1a190d0f140f579820860b176}} 
@@ -187,34 +272,58 @@ Definition at line \mbox{\hyperlink{_props_8java_source_l00036}{36}} of file \mb
 {\footnotesize\ttfamily void entity.\+props.\+Props.\+load\+Textures (\begin{DoxyParamCaption}\item[{String}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
 
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+\end{DoxyParams}
 
-Definition at line \mbox{\hyperlink{_props_8java_source_l00040}{40}} of file \mbox{\hyperlink{_props_8java_source}{Props.\+java}}.
+
+Definition at line \mbox{\hyperlink{_props_8java_source_l00091}{91}} of file \mbox{\hyperlink{_props_8java_source}{Props.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00040                                             \{}
-\DoxyCodeLine{00041         \textcolor{keywordflow}{try} \{}
-\DoxyCodeLine{00042             \textcolor{comment}{// Load the image of the key from the specified file path}}
-\DoxyCodeLine{00043             \mbox{\hyperlink{classentity_1_1props_1_1_props_a4c5f6481f26f897dc5467c91498ff77b}{image}} = ImageIO.read(\textcolor{keyword}{new} FileInputStream(\textcolor{stringliteral}{"{}res/object/"{}}+\mbox{\hyperlink{classentity_1_1_entity_a19fc9a3b25d27f23c8ada7af8e746a17}{name}}+\textcolor{stringliteral}{"{}.png"{}}));}
-\DoxyCodeLine{00044         \} \textcolor{keywordflow}{catch} (IOException e) \{}
-\DoxyCodeLine{00045             \textcolor{comment}{// Print the stack trace in case of an IOException during image loading}}
-\DoxyCodeLine{00046             e.printStackTrace();}
-\DoxyCodeLine{00047         \}}
-\DoxyCodeLine{00048     \}}
+\DoxyCodeLine{00091                                             \{}
+\DoxyCodeLine{00092         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{00093             \textcolor{comment}{// Load the image of the key from the specified file path}}
+\DoxyCodeLine{00094             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\mbox{\hyperlink{classentity_1_1_entity_af6b442584a7caf6e84e73872f9f8e080}{\_spriteCntMax}};i++)\{}
+\DoxyCodeLine{00095                 \mbox{\hyperlink{classentity_1_1props_1_1_props_a2c69a7ac84902c86a6dd74bfc9807018}{images}}[i] = ImageIO.read(\textcolor{keyword}{new} FileInputStream(\textcolor{stringliteral}{"{}res/object/"{}}+\mbox{\hyperlink{classentity_1_1_entity_a19fc9a3b25d27f23c8ada7af8e746a17}{name}}+i+\textcolor{stringliteral}{"{}.png"{}}));}
+\DoxyCodeLine{00096             \}}
+\DoxyCodeLine{00097         \} \textcolor{keywordflow}{catch} (IOException e) \{}
+\DoxyCodeLine{00098             \textcolor{comment}{// Print the stack trace in case of an IOException during image loading}}
+\DoxyCodeLine{00099             e.printStackTrace();}
+\DoxyCodeLine{00100         \}}
+\DoxyCodeLine{00101     \}}
 
 \end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classentity_1_1props_1_1_props_ad9057ae1a190d0f140f579820860b176_icgraph}
+\end{center}
+\end{figure}
 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{classentity_1_1props_1_1_props_a4c5f6481f26f897dc5467c91498ff77b}\label{classentity_1_1props_1_1_props_a4c5f6481f26f897dc5467c91498ff77b}} 
-\index{entity.props.Props@{entity.props.Props}!image@{image}}
-\index{image@{image}!entity.props.Props@{entity.props.Props}}
-\doxysubsubsection{\texorpdfstring{image}{image}}
-{\footnotesize\ttfamily Buffered\+Image entity.\+props.\+Props.\+image\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{classentity_1_1props_1_1_props_a2c69a7ac84902c86a6dd74bfc9807018}\label{classentity_1_1props_1_1_props_a2c69a7ac84902c86a6dd74bfc9807018}} 
+\index{entity.props.Props@{entity.props.Props}!images@{images}}
+\index{images@{images}!entity.props.Props@{entity.props.Props}}
+\doxysubsubsection{\texorpdfstring{images}{images}}
+{\footnotesize\ttfamily Buffered\+Image entity.\+props.\+Props.\+images\mbox{[}$\,$\mbox{]}}
 
 
 
-Definition at line \mbox{\hyperlink{_props_8java_source_l00025}{25}} of file \mbox{\hyperlink{_props_8java_source}{Props.\+java}}.
+Definition at line \mbox{\hyperlink{_props_8java_source_l00027}{27}} of file \mbox{\hyperlink{_props_8java_source}{Props.\+java}}.
+
+\mbox{\Hypertarget{classentity_1_1props_1_1_props_a606e89d3bbe76b48434258901f3af6b3}\label{classentity_1_1props_1_1_props_a606e89d3bbe76b48434258901f3af6b3}} 
+\index{entity.props.Props@{entity.props.Props}!open@{open}}
+\index{open@{open}!entity.props.Props@{entity.props.Props}}
+\doxysubsubsection{\texorpdfstring{open}{open}}
+{\footnotesize\ttfamily boolean entity.\+props.\+Props.\+open\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_props_8java_source_l00028}{28}} of file \mbox{\hyperlink{_props_8java_source}{Props.\+java}}.
 
 
 

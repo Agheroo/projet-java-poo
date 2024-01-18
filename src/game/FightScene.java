@@ -59,8 +59,8 @@ public class FightScene {
         player.updateFrames();
         enemy.updateFrames();
 
-        switch(menu.selection){
-            case Const.Selection.ATTACK:
+        switch(menu.selection.toString()){
+            case "ATTACK":
                 if(menu.confirm){
                     //Implement combat game mechanics here
                     menu.page = 1;
@@ -69,7 +69,7 @@ public class FightScene {
                 }
                 break;
             
-            case Const.Selection.POTION:
+            case "POTION":
                 if(menu.confirm){
                     menu.page = 2;
                     menu.choice = 0;
@@ -77,7 +77,7 @@ public class FightScene {
                 }
                 break;
             
-            case Const.Selection.BACK:
+            case "BACK":
                 if(menu.confirm){
                     menu.selection = Const.Selection.ATTACK;
                     //menu.changeSelectionColor(0, Color.blue, Color.red);
@@ -86,7 +86,7 @@ public class FightScene {
                 }
                 break;
             
-            case Const.Selection.NONE:
+            case "NONE":
                 if(menu.confirm){
                     if(menu.choice != -1){
                         switch(menu.page){
@@ -203,8 +203,6 @@ public class FightScene {
     /**
      * @brief Draws the fight scene.
      * @param g2 The Graphics2D object for drawing.
-     * @param screenWidth The width of the screen.
-     * @param screenHeight The height of the screen.
      */
     public void draw(Graphics2D g2) {
         //Draw background

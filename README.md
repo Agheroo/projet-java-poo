@@ -37,9 +37,6 @@ All commits are available [here](https://github.com/Agheroo/projet-java-poo/comm
 
 ## 🎮 The game 🎮
 
-<div align="center">
-    <img src="src/main/resources/logo.png" width="256px">
-</div>
 
 The game is called **A compléter** and the goal is to defeat the dungeon.
 

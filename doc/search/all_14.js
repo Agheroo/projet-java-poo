@@ -1,24 +1,11 @@
 var searchData=
 [
-  ['wdw_5fheight_0',['WDW_height',['../classgame_1_1_const.html#aff58926bfb5d6e3327d26c2f6c175e0b',1,'game::Const']]],
-  ['wdw_5fwidth_1',['WDW_width',['../classgame_1_1_const.html#a7b89e8a9f4d03d66a340747ae93306bc',1,'game::Const']]],
-  ['weapon_2',['Weapon',['../classitem_1_1weapon_1_1_weapon.html',1,'item::weapon']]],
-  ['weapon_2ejava_3',['Weapon.java',['../_weapon_8java.html',1,'']]],
-  ['welcome_4',['WELCOME',['../enum_u_i_1_1_h_u_d_1_1_menu_type.html#a8be837f97336fba26c2ca7e48c45ac37',1,'UI::HUD::MenuType']]],
-  ['width_5',['width',['../class_u_i_1_1_choice_button.html#a1e99b395d0551ce2a7e867a40f7ccdeb',1,'UI::ChoiceButton']]],
-  ['window_6',['Window',['../class_creation_combat_scene_1_1game_1_1_window.html',1,'CreationCombatScene.game.Window'],['../classgame_1_1_window.html',1,'game.Window'],['../class_creation_combat_scene_1_1game_1_1_window.html#a074bfecf28fb056c878c37c019e04cb3',1,'CreationCombatScene.game.Window.Window()'],['../classgame_1_1_window.html#a98e156c2148852f07cf8eef903d4b175',1,'game.Window.Window()']]],
-  ['window_2ejava_7',['Window.java',['../test_2_creation_combat_scene_2game_2_window_8java.html',1,'(Global Namespace)'],['../src_2game_2_window_8java.html',1,'(Global Namespace)']]],
-  ['won_8',['WON',['../enumgame_1_1_fight_scene_1_1_fight_state.html#a1c4e5cd4ba0f5374190e0be6dc2c8617',1,'game::FightScene::FightState']]],
-  ['world_9',['World',['../classgame_1_1_world.html',1,'game']]],
-  ['world_10',['world',['../classentity_1_1_entity_setter.html#a434dda9cfe7a6b4a00d4a8d2b186114b',1,'entity.EntitySetter.world()'],['../classgame_1_1_window.html#abd35f90a80ca8a81cc436752ccfdf4c6',1,'game.Window.world()']]],
-  ['world_11',['WORLD',['../enumgame_1_1_scene_1_1_state.html#aed7f5813d309282d14a426b8e65a408b',1,'game::Scene::State']]],
-  ['world_2ejava_12',['World.java',['../_world_8java.html',1,'']]],
-  ['worldx_13',['worldX',['../classentity_1_1_entity.html#a1e32a2c118ea8db4ad607cfc1a8beabe',1,'entity::Entity']]],
-  ['worldy_14',['worldY',['../classentity_1_1_entity.html#a7bde61b88f69e437b0d21df86698a7a0',1,'entity::Entity']]],
-  ['wrld_5fentityscreensize_15',['WRLD_entityScreenSize',['../classgame_1_1_const.html#aa0fc56892a36ffd4a1b39f8fd4fa7b1e',1,'game::Const']]],
-  ['wrld_5fmaxcol_16',['WRLD_maxCol',['../classgame_1_1_const.html#ae3d2e0b14ad9aba18cfab7a741caf100',1,'game::Const']]],
-  ['wrld_5fmaxrow_17',['WRLD_maxRow',['../classgame_1_1_const.html#ad6736460791865fdfae0e50112925d99',1,'game::Const']]],
-  ['wrld_5fscale_18',['WRLD_scale',['../classgame_1_1_const.html#a20aad8876cf80d318864010559875790',1,'game::Const']]],
-  ['wrld_5ftilescreensize_19',['WRLD_tileScreenSize',['../classgame_1_1_const.html#ace19bccb12a301c90c9d546cc19f5452',1,'game::Const']]],
-  ['wrld_5ftilesize_20',['WRLD_tileSize',['../classgame_1_1_const.html#af178d40fff1ff252c503b73a3771f00c',1,'game::Const']]]
+  ['ui_0',['UI',['../namespace_u_i.html',1,'']]],
+  ['unlocked_1',['unlocked',['../classgame_1_1_attack.html#a8853f742946af18d58a3b33e1176f5aa',1,'game::Attack']]],
+  ['unlocklvl_2',['unlockLvl',['../classgame_1_1_attack.html#af2e6657a251b923cc9a17066bf843bc0',1,'game::Attack']]],
+  ['update_3',['update',['../class_u_i_1_1_h_u_d___welcome.html#ae8e93f747d3a375eae9ec820501b926c',1,'UI.HUD_Welcome.update()'],['../class_u_i_1_1_h_u_d___world.html#af61b9be0ebdafc7487eacb0afb6d4fcd',1,'UI.HUD_World.update()'],['../class_u_i_1_1_h_u_d___pause.html#aec196ac720b763075dbea8841507d686',1,'UI.HUD_Pause.update()'],['../class_u_i_1_1_h_u_d___fight.html#adf261e5266f353eba13c384f69ae723e',1,'UI.HUD_Fight.update()'],['../class_u_i_1_1_h_u_d.html#ad0c1abd2a8e1c763e8c508b4535cbe68',1,'UI.HUD.update()'],['../classtiles_1_1_tile_manager.html#aa105a51c3008f7cae9e241e671be2278',1,'tiles.TileManager.update()'],['../classgame_1_1_window.html#a41cef38f9afc72fa1b4a1dfdc2bf9b92',1,'game.Window.update()'],['../classgame_1_1_scene.html#a23b3275854d4de945e1f8eba10f382a3',1,'game.Scene.update()'],['../classgame_1_1_fight_scene.html#a6f8060e45bcb70f13265bd6d3b2a52d5',1,'game.FightScene.update()'],['../classentity_1_1_player.html#ae9f8bc01c80f5ed6ffc7fb656f7895c1',1,'entity.Player.update()'],['../classentity_1_1_enemy.html#a9d6df16ce4a30385b8876a785e13c5f8',1,'entity.Enemy.update()'],['../classentity_1_1_character.html#a0beaf70a50b785c4c4c38b9566593206',1,'entity.Character.update()'],['../classgame_1_1_world.html#a05a7f2e7a65c2a3449efdaa0a87c49f5',1,'game.World.update()']]],
+  ['updateframes_4',['updateFrames',['../classentity_1_1_entity.html#a41e81bb1c3a3e86f3f43aa39d8fbb748',1,'entity.Entity.updateFrames()'],['../classtiles_1_1_tile.html#aba5dbd821ef786c025e887b5c2e801f5',1,'tiles.Tile.updateFrames()']]],
+  ['uppressed_5',['upPressed',['../classmain_1_1_key_handler.html#ac3d3d01a55a35bd42ab2de4fbfe60889',1,'main::KeyHandler']]],
+  ['useitem_6',['useItem',['../classitem_1_1armor_1_1_armor.html#ae737d6ad09f7e5c4bc84943bcc6e75f5',1,'item.armor.Armor.useItem()'],['../classitem_1_1_item.html#a7dead6967f8a62529ce222ea8bcec30d',1,'item.Item.useItem()'],['../classitem_1_1potion_1_1_potion.html#a7ae98d037be28493531c62890e797f6c',1,'item.potion.Potion.useItem()'],['../classitem_1_1weapon_1_1_bow.html#acf3792d08f982ea0583204984e7b1a0c',1,'item.weapon.Bow.useItem()'],['../classitem_1_1weapon_1_1_weapon.html#abdf2a7e5af135ec4a1e470b3486ea5ad',1,'item.weapon.Weapon.useItem()']]],
+  ['usepotion_7',['usePotion',['../classitem_1_1potion_1_1_health_potion.html#aaf3814cb9b16c9d2f38646ce17737233',1,'item.potion.HealthPotion.usePotion()'],['../classitem_1_1potion_1_1_mana_potion.html#abfe30436c28c844cab0e27b4c8cf90e9',1,'item.potion.ManaPotion.usePotion()'],['../classitem_1_1potion_1_1_potion.html#a139e17c2c16b37e14f555ad85164a98c',1,'item.potion.Potion.usePotion()'],['../classitem_1_1potion_1_1_speed_potion.html#a53ca73660bf0cfe5ceedf029494974d2',1,'item.potion.SpeedPotion.usePotion()']]]
 ];

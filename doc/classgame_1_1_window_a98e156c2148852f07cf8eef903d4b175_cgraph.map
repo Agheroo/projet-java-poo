@@ -4,7 +4,8 @@
 <area shape="rect" id="node4" href="$classgame_1_1_world.html#acb4aa37dbc10eab1bd90d5c9c24e44db" title="Set up the initial state of the game." alt="" coords="224,56,403,83"/>
 <area shape="rect" id="node3" href="$class_u_i_1_1_textbox.html#ac3a40742547f48f95f29ce1649ac88a0" title=" " alt="" coords="485,5,635,32"/>
 <area shape="rect" id="node5" href="$classentity_1_1_entity_setter.html#a102773a9c4c8ff3b86f7028c568f9746" title=" " alt="" coords="451,56,669,83"/>
-<area shape="rect" id="node7" href="$classentity_1_1_entity_setter.html#ac8c3fa3789803b2286d5f5df7a89594e" title="Method to set up objects in the game world, such as keys, doors, and chests." alt="" coords="458,107,662,133"/>
-<area shape="rect" id="node6" href="$classgame_1_1_world.html#accb9e77e21056039771d52bc5b1cfd31" title=" " alt="" coords="717,56,891,83"/>
-<area shape="rect" id="node8" href="$classgame_1_1_world.html#a65d2a74c48359e2f77648d1433f84104" title="Adds an object to the HashMap with the specified coordinates." alt="" coords="719,107,889,133"/>
+<area shape="rect" id="node8" href="$classentity_1_1_entity_setter.html#ac8c3fa3789803b2286d5f5df7a89594e" title="Method to set up objects in the game world, such as keys, doors, and chests." alt="" coords="458,107,662,133"/>
+<area shape="rect" id="node6" href="$classgame_1_1_world.html#accb9e77e21056039771d52bc5b1cfd31" title="Adds an enemy to the HashMap with the specified coordinates." alt="" coords="717,5,891,32"/>
+<area shape="rect" id="node7" href="$classentity_1_1_enemy.html#ac5f10be7699c7e275eb4a67370b930d0" title="Setter for enemy creation to initialize thei stats." alt="" coords="723,56,885,83"/>
+<area shape="rect" id="node9" href="$classgame_1_1_world.html#a65d2a74c48359e2f77648d1433f84104" title="Adds an object to the HashMap with the specified coordinates." alt="" coords="719,107,889,133"/>
 </map>

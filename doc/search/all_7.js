@@ -1,7 +1,7 @@
 var searchData=
 [
   ['game_0',['game',['../namespacegame.html',1,'']]],
-  ['gamethread_1',['gameThread',['../classgame_1_1_window.html#a7e14c4c91df812b2efff8668ec7e0ba2',1,'game.Window.gameThread()'],['../class_creation_combat_scene_1_1game_1_1_window.html#a0578612384f8406b88e5858b467dbe46',1,'CreationCombatScene.game.Window.gameThread()']]],
+  ['gamethread_1',['gameThread',['../classgame_1_1_window.html#a7e14c4c91df812b2efff8668ec7e0ba2',1,'game::Window']]],
   ['generatearmor_2',['generateArmor',['../classitem_1_1_generator.html#a851f02e244a9b63f0bb0e508a9a4d40d',1,'item::Generator']]],
   ['generateitem_3',['generateItem',['../classitem_1_1_generator.html#ac17e98c64dc79f381c465bf21b5409a0',1,'item::Generator']]],
   ['generatepotion_4',['generatePotion',['../classitem_1_1_generator.html#a6dfd2f13dbf175b05ba5a999650a1003',1,'item::Generator']]],

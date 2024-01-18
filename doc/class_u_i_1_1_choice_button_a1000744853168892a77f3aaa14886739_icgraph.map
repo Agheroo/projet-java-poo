@@ -1,7 +1,7 @@
 <map id="UI.ChoiceButton.draw" name="UI.ChoiceButton.draw">
-<area shape="rect" id="node1" title=" " alt="" coords="619,31,781,57"/>
-<area shape="rect" id="node2" href="$class_u_i_1_1_h_u_d.html#a290720935a1960ce8159eae9e7a535fa" title=" " alt="" coords="464,31,571,57"/>
-<area shape="rect" id="node3" href="$classgame_1_1_fight_scene.html#a9525cb3d263680e8d808b3abde00e8d8" title="Draws the fight scene." alt="" coords="217,5,388,32"/>
-<area shape="rect" id="node5" href="$classgame_1_1_window.html#a5096ae95c1e62bac2005e73621cdb41c" title="Paints the components of the game window." alt="" coords="189,56,416,83"/>
+<area shape="rect" id="node1" title="Draws a button (rectangle) on the screen at x,y coords (top left)" alt="" coords="607,31,769,57"/>
+<area shape="rect" id="node2" href="$class_u_i_1_1_h_u_d___fight.html#a444cd5e7f43dd55149762e5738ba2cf7" title=" " alt="" coords="411,5,556,32"/>
+<area shape="rect" id="node5" href="$class_u_i_1_1_h_u_d___pause.html#acb7e2c68e46c0188dac220ee1969e387" title=" " alt="" coords="408,56,559,83"/>
+<area shape="rect" id="node3" href="$classgame_1_1_fight_scene.html#a9525cb3d263680e8d808b3abde00e8d8" title="Draws the fight scene." alt="" coords="189,5,360,32"/>
 <area shape="rect" id="node4" href="$classgame_1_1_world.html#ac405787ac7b11c4ed39a5cd9250e398f" title="Draws the game world and its entities." alt="" coords="5,5,141,32"/>
 </map>

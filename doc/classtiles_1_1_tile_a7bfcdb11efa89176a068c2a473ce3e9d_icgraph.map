@@ -3,7 +3,7 @@
 <area shape="rect" id="node2" href="$classentity_1_1_character.html#aeee6d959ceb691d58104656642f828fc" title="Checks for collision with nearby tiles using the character&#39;s hitbox." alt="" coords="227,5,417,47"/>
 <area shape="rect" id="node4" href="$classtiles_1_1_tile_manager.html#a3225a1e7f736b5eb311b0efd9f34613b" title="Draws the tiles in the game world." alt="" coords="237,71,407,98"/>
 <area shape="rect" id="node6" href="$classtiles_1_1_tile_manager.html#aa105a51c3008f7cae9e241e671be2278" title="Updates the tile frames based on the player&#39;s position." alt="" coords="231,122,413,149"/>
-<area shape="rect" id="node3" href="$classentity_1_1_character.html#a2d5d7da3d6f49c2b0b040850d741f8f7" title="Updates the character entity based on the current scene and time elapsed." alt="" coords="5,13,179,39"/>
+<area shape="rect" id="node3" href="$classentity_1_1_character.html#a0beaf70a50b785c4c4c38b9566593206" title="Updates the character entity based on the current scene and time elapsed." alt="" coords="5,13,179,39"/>
 <area shape="rect" id="node5" href="$classgame_1_1_world.html#ac405787ac7b11c4ed39a5cd9250e398f" title="Draws the game world and its entities." alt="" coords="24,71,160,98"/>
 <area shape="rect" id="node7" href="$classgame_1_1_world.html#a05a7f2e7a65c2a3449efdaa0a87c49f5" title="Updates the game world based on the scene state." alt="" coords="17,122,167,149"/>
 </map>

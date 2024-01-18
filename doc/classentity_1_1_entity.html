@@ -69,9 +69,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="classentity_1_1_entity-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">entity.Entity Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
@@ -84,15 +82,16 @@ Inheritance diagram for entity.Entity:</div>
 <div class="dyncontent">
 <div class="center"><img src="classentity_1_1_entity__inherit__graph.png" border="0" usemap="#aentity_8_entity_inherit__map" alt="Inheritance graph"/></div>
 <map name="aentity_8_entity_inherit__map" id="aentity_8_entity_inherit__map">
-<area shape="rect" title="Represents an abstract entity with position, hitbox, and animations." alt="" coords="267,5,429,273"/>
-<area shape="rect" href="classentity_1_1_character.html" title="Represents an abstract character entity with position, hitbox, stats, and animations." alt="" coords="179,321,341,795"/>
-<area shape="rect" href="classentity_1_1props_1_1_props.html" title="Represents in&#45;game props with properties such as image, name, and position." alt="" coords="461,490,600,626"/>
-<area shape="rect" href="classentity_1_1_enemy.html" title="Represents an enemy entity in the game." alt="" coords="5,843,168,979"/>
-<area shape="rect" href="classentity_1_1_player.html" title="Represents the player entity in the game." alt="" coords="193,843,327,979"/>
-<area shape="rect" href="class_creation_combat_scene_1_1entity_1_1_player_test.html" title=" " alt="" coords="155,1027,365,1133"/>
-<area shape="rect" href="classentity_1_1props_1_1_o_b_j___chest.html" title="Represents a chest object." alt="" coords="351,865,521,957"/>
-<area shape="rect" href="classentity_1_1props_1_1_o_b_j___door.html" title="Represents a door object in the game." alt="" coords="545,865,708,957"/>
-<area shape="rect" href="classentity_1_1props_1_1_o_b_j___key.html" title="Represents a key object in the game." alt="" coords="732,865,895,957"/>
+<area shape="rect" title="Represents an abstract entity with position, hitbox, and animations." alt="" coords="287,5,449,244"/>
+<area shape="rect" href="classentity_1_1_character.html" title="Represents an abstract character entity with position, hitbox, stats, and animations." alt="" coords="194,292,353,751"/>
+<area shape="rect" href="classentity_1_1props_1_1_props.html" title="Represents in&#45;game props with properties such as image, name, and position." alt="" coords="489,439,628,604"/>
+<area shape="rect" href="classentity_1_1_enemy.html" title="Represents an enemy entity in the game." alt="" coords="5,850,168,1015"/>
+<area shape="rect" href="classentity_1_1_player.html" title="Represents the player entity in the game." alt="" coords="192,799,355,1067"/>
+<area shape="rect" href="classentity_1_1_mage.html" title=" " alt="" coords="160,1115,259,1192"/>
+<area shape="rect" href="classentity_1_1_warrior.html" title=" " alt="" coords="283,1115,392,1192"/>
+<area shape="rect" href="classentity_1_1props_1_1_o_b_j___chest.html" title="Represents a chest object." alt="" coords="379,887,549,979"/>
+<area shape="rect" href="classentity_1_1props_1_1_o_b_j___door.html" title="Represents a door object in the game." alt="" coords="573,887,736,979"/>
+<area shape="rect" href="classentity_1_1props_1_1_o_b_j___key.html" title="Represents a key object in the game." alt="" coords="760,887,923,979"/>
 </map>
 </div>
 <div class="dynheader">
@@ -100,7 +99,7 @@ Collaboration diagram for entity.Entity:</div>
 <div class="dyncontent">
 <div class="center"><img src="classentity_1_1_entity__coll__graph.png" border="0" usemap="#aentity_8_entity_coll__map" alt="Collaboration graph"/></div>
 <map name="aentity_8_entity_coll__map" id="aentity_8_entity_coll__map">
-<area shape="rect" title="Represents an abstract entity with position, hitbox, and animations." alt="" coords="5,145,168,399"/>
+<area shape="rect" title="Represents an abstract entity with position, hitbox, and animations." alt="" coords="5,145,168,369"/>
 <area shape="rect" title=" " alt="" coords="43,5,130,83"/>
 </map>
 </div>
@@ -113,9 +112,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a64161739076def0816eab3956d5b6346"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classentity_1_1_entity.html#a64161739076def0816eab3956d5b6346">Entity</a> (String entityName, int x, int y, int <a class="el" href="classentity_1_1_entity.html#af6b442584a7caf6e84e73872f9f8e080">_spriteCntMax</a>, int spriteSpeed, boolean <a class="el" href="classentity_1_1_entity.html#acd7f4b7c1acbdcd410ee9ad61a86b58e">collision</a>)</td></tr>
 <tr class="memdesc:a64161739076def0816eab3956d5b6346"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the <a class="el" href="classentity_1_1_entity.html" title="Represents an abstract entity with position, hitbox, and animations.">Entity</a> class with specified initial position and animation parameters.  <a href="classentity_1_1_entity.html#a64161739076def0816eab3956d5b6346">More...</a><br /></td></tr>
 <tr class="separator:a64161739076def0816eab3956d5b6346"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a127423f72cd9e8ec189509dad498b21b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classentity_1_1_entity.html#a127423f72cd9e8ec189509dad498b21b">update</a> (<a class="el" href="classgame_1_1_scene.html">Scene</a> scene, double dt)</td></tr>
-<tr class="memdesc:a127423f72cd9e8ec189509dad498b21b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the entity's position based on the current scene and time elapsed.  <a href="classentity_1_1_entity.html#a127423f72cd9e8ec189509dad498b21b">More...</a><br /></td></tr>
-<tr class="separator:a127423f72cd9e8ec189509dad498b21b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41e81bb1c3a3e86f3f43aa39d8fbb748"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classentity_1_1_entity.html#a41e81bb1c3a3e86f3f43aa39d8fbb748">updateFrames</a> ()</td></tr>
+<tr class="memdesc:a41e81bb1c3a3e86f3f43aa39d8fbb748"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the frames of the entity's animation.  <a href="classentity_1_1_entity.html#a41e81bb1c3a3e86f3f43aa39d8fbb748">More...</a><br /></td></tr>
+<tr class="separator:a41e81bb1c3a3e86f3f43aa39d8fbb748"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae874ae13e301bb9f227535534869f64e"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classentity_1_1_entity.html#ae874ae13e301bb9f227535534869f64e">playerInterraction</a> (<a class="el" href="classentity_1_1_player.html">Player</a> player)</td></tr>
+<tr class="separator:ae874ae13e301bb9f227535534869f64e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -127,14 +128,6 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a5b026458182ab12ddcacb2858eca0a41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19fc9a3b25d27f23c8ada7af8e746a17"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classentity_1_1_entity.html#a19fc9a3b25d27f23c8ada7af8e746a17">name</a></td></tr>
 <tr class="separator:a19fc9a3b25d27f23c8ada7af8e746a17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:a41e81bb1c3a3e86f3f43aa39d8fbb748"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classentity_1_1_entity.html#a41e81bb1c3a3e86f3f43aa39d8fbb748">updateFrames</a> ()</td></tr>
-<tr class="memdesc:a41e81bb1c3a3e86f3f43aa39d8fbb748"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the frames of the entity's animation.  <a href="classentity_1_1_entity.html#a41e81bb1c3a3e86f3f43aa39d8fbb748">More...</a><br /></td></tr>
-<tr class="separator:a41e81bb1c3a3e86f3f43aa39d8fbb748"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae874ae13e301bb9f227535534869f64e"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classentity_1_1_entity.html#ae874ae13e301bb9f227535534869f64e">playerInterraction</a> (<a class="el" href="classentity_1_1_player.html">Player</a> player)</td></tr>
-<tr class="separator:ae874ae13e301bb9f227535534869f64e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -148,12 +141,6 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a61ba22624c5da7387312d9aa6d8e2526"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6b442584a7caf6e84e73872f9f8e080"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classentity_1_1_entity.html#af6b442584a7caf6e84e73872f9f8e080">_spriteCntMax</a></td></tr>
 <tr class="separator:af6b442584a7caf6e84e73872f9f8e080"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a9060501233d22f6130e204799a1f01c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classentity_1_1_entity.html#a9060501233d22f6130e204799a1f01c5">loadTextures</a> ()</td></tr>
-<tr class="memdesc:a9060501233d22f6130e204799a1f01c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads textures for the entity based on its name.  <a href="classentity_1_1_entity.html#a9060501233d22f6130e204799a1f01c5">More...</a><br /></td></tr>
-<tr class="separator:a9060501233d22f6130e204799a1f01c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Represents an abstract entity with position, hitbox, and animations. </p>
@@ -245,17 +232,17 @@ Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_entity_8java_source.html#l00044">44</a> of file <a class="el" href="_entity_8java_source.html">Entity.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span>                                                                                                          {</div>
-<div class="line"><span class="lineno">   45</span>        this.collision = <a class="code hl_variable" href="classentity_1_1_entity.html#acd7f4b7c1acbdcd410ee9ad61a86b58e">collision</a>;</div>
-<div class="line"><span class="lineno">   46</span>        this.worldX = x;</div>
-<div class="line"><span class="lineno">   47</span>        this.worldY = y;</div>
-<div class="line"><span class="lineno">   48</span>        this.hitbox.x = <a class="code hl_variable" href="classentity_1_1_entity.html#a1e32a2c118ea8db4ad607cfc1a8beabe">worldX</a>;</div>
-<div class="line"><span class="lineno">   49</span>        this.hitbox.y = <a class="code hl_variable" href="classentity_1_1_entity.html#a7bde61b88f69e437b0d21df86698a7a0">worldY</a>;</div>
-<div class="line"><span class="lineno">   50</span>        this._spriteCntMax = <a class="code hl_variable" href="classentity_1_1_entity.html#af6b442584a7caf6e84e73872f9f8e080">_spriteCntMax</a>;</div>
-<div class="line"><span class="lineno">   51</span>        this._spriteSpeed = spriteSpeed;</div>
-<div class="line"><span class="lineno">   52</span>        this.name = entityName;</div>
-<div class="line"><span class="lineno">   53</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_entity_8java_source.html#l00046">46</a> of file <a class="el" href="_entity_8java_source.html">Entity.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   46</span>                                                                                                          {</div>
+<div class="line"><span class="lineno">   47</span>        this.collision = <a class="code hl_variable" href="classentity_1_1_entity.html#acd7f4b7c1acbdcd410ee9ad61a86b58e">collision</a>;</div>
+<div class="line"><span class="lineno">   48</span>        this.worldX = x;</div>
+<div class="line"><span class="lineno">   49</span>        this.worldY = y;</div>
+<div class="line"><span class="lineno">   50</span>        this.hitbox.x = <a class="code hl_variable" href="classentity_1_1_entity.html#a1e32a2c118ea8db4ad607cfc1a8beabe">worldX</a>;</div>
+<div class="line"><span class="lineno">   51</span>        this.hitbox.y = <a class="code hl_variable" href="classentity_1_1_entity.html#a7bde61b88f69e437b0d21df86698a7a0">worldY</a>;</div>
+<div class="line"><span class="lineno">   52</span>        this._spriteCntMax = <a class="code hl_variable" href="classentity_1_1_entity.html#af6b442584a7caf6e84e73872f9f8e080">_spriteCntMax</a>;</div>
+<div class="line"><span class="lineno">   53</span>        this._spriteSpeed = spriteSpeed;</div>
+<div class="line"><span class="lineno">   54</span>        this.name = entityName;</div>
+<div class="line"><span class="lineno">   55</span>    }</div>
 <div class="ttc" id="aclassentity_1_1_entity_html_a1e32a2c118ea8db4ad607cfc1a8beabe"><div class="ttname"><a href="classentity_1_1_entity.html#a1e32a2c118ea8db4ad607cfc1a8beabe">entity.Entity.worldX</a></div><div class="ttdeci">int worldX</div><div class="ttdef"><b>Definition:</b> <a href="_entity_8java_source.html#l00017">Entity.java:17</a></div></div>
 <div class="ttc" id="aclassentity_1_1_entity_html_a7bde61b88f69e437b0d21df86698a7a0"><div class="ttname"><a href="classentity_1_1_entity.html#a7bde61b88f69e437b0d21df86698a7a0">entity.Entity.worldY</a></div><div class="ttdeci">int worldY</div><div class="ttdef"><b>Definition:</b> <a href="_entity_8java_source.html#l00017">Entity.java:17</a></div></div>
 <div class="ttc" id="aclassentity_1_1_entity_html_acd7f4b7c1acbdcd410ee9ad61a86b58e"><div class="ttname"><a href="classentity_1_1_entity.html#acd7f4b7c1acbdcd410ee9ad61a86b58e">entity.Entity.collision</a></div><div class="ttdeci">boolean collision</div><div class="ttdef"><b>Definition:</b> <a href="_entity_8java_source.html#l00018">Entity.java:18</a></div></div>
@@ -264,56 +251,6 @@ Private Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a9060501233d22f6130e204799a1f01c5" name="a9060501233d22f6130e204799a1f01c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9060501233d22f6130e204799a1f01c5">&#9670;&nbsp;</a></span>loadTextures()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void entity.Entity.loadTextures </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Loads textures for the entity based on its name. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">name</td><td>The name used to determine the textures to load. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="_entity_8java_source.html#l00070">70</a> of file <a class="el" href="_entity_8java_source.html">Entity.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   70</span>                                {</div>
-<div class="line"><span class="lineno">   71</span>        <span class="comment">// TODO: Different texture loading from characters</span></div>
-<div class="line"><span class="lineno">   72</span>    }</div>
-</div><!-- fragment --><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classentity_1_1_entity_a9060501233d22f6130e204799a1f01c5_icgraph.png" border="0" usemap="#aclassentity_1_1_entity_a9060501233d22f6130e204799a1f01c5_icgraph" alt=""/></div>
-<map name="aclassentity_1_1_entity_a9060501233d22f6130e204799a1f01c5_icgraph" id="aclassentity_1_1_entity_a9060501233d22f6130e204799a1f01c5_icgraph">
-<area shape="rect" title="Loads textures for the entity based on its name." alt="" coords="280,93,465,120"/>
-<area shape="rect" href="classentity_1_1_character.html#aa40a6947a230fa0e48701a1da7a507e4" title="Constructor for the Character class." alt="" coords="23,5,214,32"/>
-<area shape="rect" href="classentity_1_1props_1_1_o_b_j___chest.html#a791b6f22d201a11338c82f65b5b65bc5" title="Constructor for the OBJ_Chest class." alt="" coords="21,57,217,98"/>
-<area shape="rect" href="classentity_1_1props_1_1_o_b_j___door.html#ad1cdabdc34de0662d6d6d568ba31e8ad" title="Constructor for the OBJ_Door class." alt="" coords="5,123,232,149"/>
-<area shape="rect" href="classentity_1_1props_1_1_o_b_j___key.html#ac30d918f2fedaf3ebe653a6e00a5fc25" title="Constructor for the OBJ_Key class." alt="" coords="13,173,225,200"/>
-</map>
-</div>
-
-</div>
-</div>
 <a id="ae874ae13e301bb9f227535534869f64e" name="ae874ae13e301bb9f227535534869f64e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae874ae13e301bb9f227535534869f64e">&#9670;&nbsp;</a></span>playerInterraction()</h2>
 
@@ -333,57 +270,13 @@ Here is the caller graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">abstract</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">abstract</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classentity_1_1props_1_1_o_b_j___chest.html#a3fd47570a31ae5fa8d3009776eb876bd">entity.props.OBJ_Chest</a>, <a class="el" href="classentity_1_1props_1_1_o_b_j___door.html#a9839aec16dffa3eadd3085215c3659be">entity.props.OBJ_Door</a>, <a class="el" href="classentity_1_1props_1_1_o_b_j___key.html#a0c36447224c2d7c67b9b015cd40e0f35">entity.props.OBJ_Key</a>, <a class="el" href="classentity_1_1_character.html#af7bcb14c587e5ae5e9fef046b28072a0">entity.Character</a>, and <a class="el" href="classentity_1_1_enemy.html#a429f4fa6c8b461d4c18802d35d9b5092">entity.Enemy</a>.</p>
+<p>Reimplemented in <a class="el" href="classentity_1_1props_1_1_o_b_j___key.html#a0c36447224c2d7c67b9b015cd40e0f35">entity.props.OBJ_Key</a>, <a class="el" href="classentity_1_1_enemy.html#a429f4fa6c8b461d4c18802d35d9b5092">entity.Enemy</a>, <a class="el" href="classentity_1_1_player.html#a95285f428f77399f48065c1e03c9bcfc">entity.Player</a>, <a class="el" href="classentity_1_1props_1_1_o_b_j___chest.html#adca5888ccf1317edc6302fd38b74a0aa">entity.props.OBJ_Chest</a>, and <a class="el" href="classentity_1_1props_1_1_o_b_j___door.html#ab5d21b32a7d840c3385c63cdc166dbe3">entity.props.OBJ_Door</a>.</p>
 
-</div>
-</div>
-<a id="a127423f72cd9e8ec189509dad498b21b" name="a127423f72cd9e8ec189509dad498b21b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a127423f72cd9e8ec189509dad498b21b">&#9670;&nbsp;</a></span>update()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void entity.Entity.update </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classgame_1_1_scene.html">Scene</a>&#160;</td>
-          <td class="paramname"><em>scene</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>dt</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Updates the entity's position based on the current scene and time elapsed. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">scene</td><td>The current game scene. </td></tr>
-    <tr><td class="paramname">dt</td><td>The time elapsed since the last update. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Reimplemented in <a class="el" href="classentity_1_1_character.html#a2d5d7da3d6f49c2b0b040850d741f8f7">entity.Character</a>, <a class="el" href="classentity_1_1_enemy.html#ab115ccb1365609753aa1dddbc9df0580">entity.Enemy</a>, and <a class="el" href="classentity_1_1_player.html#ae48f1e24c9ff0b7bd4f55b470bf66e7e">entity.Player</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_entity_8java_source.html#l00060">60</a> of file <a class="el" href="_entity_8java_source.html">Entity.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   60</span>                                               {</div>
-<div class="line"><span class="lineno">   61</span>        <span class="comment">// Updating entity position accurately (at any point in time either pressing keys or not)</span></div>
-<div class="line"><span class="lineno">   62</span>    }</div>
-</div><!-- fragment -->
 </div>
 </div>
 <a id="a41e81bb1c3a3e86f3f43aa39d8fbb748" name="a41e81bb1c3a3e86f3f43aa39d8fbb748"></a>
@@ -391,9 +284,6 @@ Here is the caller graph for this function:</div>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void entity.Entity.updateFrames </td>
@@ -402,26 +292,21 @@ Here is the caller graph for this function:</div>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Updates the frames of the entity's animation. </p>
 
-<p class="definition">Definition at line <a class="el" href="_entity_8java_source.html#l00077">77</a> of file <a class="el" href="_entity_8java_source.html">Entity.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   77</span>                                  {</div>
-<div class="line"><span class="lineno">   78</span>        <a class="code hl_variable" href="classentity_1_1_entity.html#a2ab792cccf8b5931642f7fa8432186af">_spriteUpdater</a>++;</div>
-<div class="line"><span class="lineno">   79</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classentity_1_1_entity.html#a2ab792cccf8b5931642f7fa8432186af">_spriteUpdater</a> &gt; <a class="code hl_variable" href="classentity_1_1_entity.html#a61ba22624c5da7387312d9aa6d8e2526">_spriteSpeed</a>) {</div>
-<div class="line"><span class="lineno">   80</span>            <a class="code hl_variable" href="classentity_1_1_entity.html#ac2155957d9e77504c3c6078183d19c63">_spriteCnt</a>++;</div>
-<div class="line"><span class="lineno">   81</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classentity_1_1_entity.html#ac2155957d9e77504c3c6078183d19c63">_spriteCnt</a> == <a class="code hl_variable" href="classentity_1_1_entity.html#af6b442584a7caf6e84e73872f9f8e080">_spriteCntMax</a>) {</div>
-<div class="line"><span class="lineno">   82</span>                <a class="code hl_variable" href="classentity_1_1_entity.html#ac2155957d9e77504c3c6078183d19c63">_spriteCnt</a> = 0;</div>
-<div class="line"><span class="lineno">   83</span>            }</div>
-<div class="line"><span class="lineno">   84</span>            <a class="code hl_variable" href="classentity_1_1_entity.html#a2ab792cccf8b5931642f7fa8432186af">_spriteUpdater</a> = 0;</div>
-<div class="line"><span class="lineno">   85</span>        }</div>
-<div class="line"><span class="lineno">   86</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_entity_8java_source.html#l00061">61</a> of file <a class="el" href="_entity_8java_source.html">Entity.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   61</span>                               {</div>
+<div class="line"><span class="lineno">   62</span>        <a class="code hl_variable" href="classentity_1_1_entity.html#a2ab792cccf8b5931642f7fa8432186af">_spriteUpdater</a>++;</div>
+<div class="line"><span class="lineno">   63</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classentity_1_1_entity.html#a2ab792cccf8b5931642f7fa8432186af">_spriteUpdater</a> &gt; <a class="code hl_variable" href="classentity_1_1_entity.html#a61ba22624c5da7387312d9aa6d8e2526">_spriteSpeed</a>) {</div>
+<div class="line"><span class="lineno">   64</span>            <a class="code hl_variable" href="classentity_1_1_entity.html#ac2155957d9e77504c3c6078183d19c63">_spriteCnt</a>++;</div>
+<div class="line"><span class="lineno">   65</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classentity_1_1_entity.html#ac2155957d9e77504c3c6078183d19c63">_spriteCnt</a> == <a class="code hl_variable" href="classentity_1_1_entity.html#af6b442584a7caf6e84e73872f9f8e080">_spriteCntMax</a>) {</div>
+<div class="line"><span class="lineno">   66</span>                <a class="code hl_variable" href="classentity_1_1_entity.html#ac2155957d9e77504c3c6078183d19c63">_spriteCnt</a> = 0;</div>
+<div class="line"><span class="lineno">   67</span>            }</div>
+<div class="line"><span class="lineno">   68</span>            <a class="code hl_variable" href="classentity_1_1_entity.html#a2ab792cccf8b5931642f7fa8432186af">_spriteUpdater</a> = 0;</div>
+<div class="line"><span class="lineno">   69</span>        }</div>
+<div class="line"><span class="lineno">   70</span>    }</div>
 <div class="ttc" id="aclassentity_1_1_entity_html_a2ab792cccf8b5931642f7fa8432186af"><div class="ttname"><a href="classentity_1_1_entity.html#a2ab792cccf8b5931642f7fa8432186af">entity.Entity._spriteUpdater</a></div><div class="ttdeci">int _spriteUpdater</div><div class="ttdef"><b>Definition:</b> <a href="_entity_8java_source.html#l00024">Entity.java:24</a></div></div>
 <div class="ttc" id="aclassentity_1_1_entity_html_a61ba22624c5da7387312d9aa6d8e2526"><div class="ttname"><a href="classentity_1_1_entity.html#a61ba22624c5da7387312d9aa6d8e2526">entity.Entity._spriteSpeed</a></div><div class="ttdeci">int _spriteSpeed</div><div class="ttdef"><b>Definition:</b> <a href="_entity_8java_source.html#l00025">Entity.java:25</a></div></div>
 <div class="ttc" id="aclassentity_1_1_entity_html_ac2155957d9e77504c3c6078183d19c63"><div class="ttname"><a href="classentity_1_1_entity.html#ac2155957d9e77504c3c6078183d19c63">entity.Entity._spriteCnt</a></div><div class="ttdeci">int _spriteCnt</div><div class="ttdef"><b>Definition:</b> <a href="_entity_8java_source.html#l00023">Entity.java:23</a></div></div>
@@ -430,8 +315,10 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classentity_1_1_entity_a41e81bb1c3a3e86f3f43aa39d8fbb748_icgraph.png" border="0" usemap="#aclassentity_1_1_entity_a41e81bb1c3a3e86f3f43aa39d8fbb748_icgraph" alt=""/></div>
 <map name="aclassentity_1_1_entity_a41e81bb1c3a3e86f3f43aa39d8fbb748_icgraph" id="aclassentity_1_1_entity_a41e81bb1c3a3e86f3f43aa39d8fbb748_icgraph">
-<area shape="rect" title="Updates the frames of the entity&#39;s animation." alt="" coords="227,5,421,32"/>
-<area shape="rect" href="classentity_1_1_character.html#a2d5d7da3d6f49c2b0b040850d741f8f7" title="Updates the character entity based on the current scene and time elapsed." alt="" coords="5,5,179,32"/>
+<area shape="rect" title="Updates the frames of the entity&#39;s animation." alt="" coords="433,31,628,57"/>
+<area shape="rect" href="classentity_1_1_character.html#a0beaf70a50b785c4c4c38b9566593206" title="Updates the character entity based on the current scene and time elapsed." alt="" coords="207,5,381,32"/>
+<area shape="rect" href="classgame_1_1_fight_scene.html#a6f8060e45bcb70f13265bd6d3b2a52d5" title="Updates the fight scene." alt="" coords="203,56,385,83"/>
+<area shape="rect" href="classgame_1_1_world.html#a05a7f2e7a65c2a3449efdaa0a87c49f5" title="Updates the game world based on the scene state." alt="" coords="5,56,155,83"/>
 </map>
 </div>
 

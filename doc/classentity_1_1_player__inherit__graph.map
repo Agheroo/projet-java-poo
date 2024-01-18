@@ -1,6 +1,7 @@
 <map id="entity.Player" name="entity.Player">
-<area shape="rect" id="node1" title="Represents the player entity in the game." alt="" coords="43,843,178,979"/>
-<area shape="rect" id="node4" href="$class_creation_combat_scene_1_1entity_1_1_player_test.html" title=" " alt="" coords="5,1027,216,1133"/>
-<area shape="rect" id="node2" href="$classentity_1_1_character.html" title="Represents an abstract character entity with position, hitbox, stats, and animations." alt="" coords="29,321,192,795"/>
-<area shape="rect" id="node3" href="$classentity_1_1_entity.html" title="Represents an abstract entity with position, hitbox, and animations." alt="" coords="29,5,192,273"/>
+<area shape="rect" id="node1" title="Represents the player entity in the game." alt="" coords="37,799,200,1067"/>
+<area shape="rect" id="node4" href="$classentity_1_1_mage.html" title=" " alt="" coords="5,1115,104,1192"/>
+<area shape="rect" id="node5" href="$classentity_1_1_warrior.html" title=" " alt="" coords="128,1115,237,1192"/>
+<area shape="rect" id="node2" href="$classentity_1_1_character.html" title="Represents an abstract character entity with position, hitbox, stats, and animations." alt="" coords="39,292,198,751"/>
+<area shape="rect" id="node3" href="$classentity_1_1_entity.html" title="Represents an abstract entity with position, hitbox, and animations." alt="" coords="37,5,200,244"/>
 </map>

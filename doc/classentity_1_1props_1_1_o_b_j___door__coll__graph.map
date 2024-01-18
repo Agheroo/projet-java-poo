@@ -1,7 +1,7 @@
 <map id="entity.props.OBJ_Door" name="entity.props.OBJ_Door">
-<area shape="rect" id="node1" title="Represents a door object in the game." alt="" coords="88,647,251,739"/>
-<area shape="rect" id="node2" href="$classentity_1_1props_1_1_props.html" title="Represents in&#45;game props with properties such as image, name, and position." alt="" coords="100,461,239,597"/>
-<area shape="rect" id="node3" href="$classentity_1_1_entity.html" title="Represents an abstract entity with position, hitbox, and animations." alt="" coords="5,145,168,399"/>
+<area shape="rect" id="node1" title="Represents a door object in the game." alt="" coords="88,632,251,724"/>
+<area shape="rect" id="node2" href="$classentity_1_1props_1_1_props.html" title="Represents in&#45;game props with properties such as image, name, and position." alt="" coords="100,432,239,583"/>
+<area shape="rect" id="node3" href="$classentity_1_1_entity.html" title="Represents an abstract entity with position, hitbox, and animations." alt="" coords="5,145,168,369"/>
 <area shape="rect" id="node4" title=" " alt="" coords="43,5,130,83"/>
-<area shape="rect" id="node5" title=" " alt="" coords="193,233,311,311"/>
+<area shape="rect" id="node5" title=" " alt="" coords="193,219,311,296"/>
 </map>

@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['defense_0',['defense',['../classentity_1_1_character.html#ad97a3b4055ba1daa2abfbb1150f34049',1,'entity::Character']]],
-  ['dirx_1',['dirX',['../classentity_1_1_character.html#a71d9fd51a7255f0acfcbe9a3dfe3f30c',1,'entity::Character']]],
-  ['diry_2',['dirY',['../classentity_1_1_character.html#a53d3f8e3cc8c7297d94092dada79588c',1,'entity::Character']]],
-  ['downpressed_3',['downPressed',['../classmain_1_1_key_handler.html#a0bc680db42254a7fdf434b26894da9ea',1,'main::KeyHandler']]],
-  ['dt_4',['dt',['../classgame_1_1_scene.html#ae2b7be4c9099875e858f88458b7d4a1d',1,'game::Scene']]]
+  ['choice_0',['choice',['../class_u_i_1_1_h_u_d___fight.html#a717695ee7b67d20bc78730ed15e41659',1,'UI::HUD_Fight']]],
+  ['collision_1',['collision',['../classentity_1_1_entity.html#acd7f4b7c1acbdcd410ee9ad61a86b58e',1,'entity::Entity']]],
+  ['confirm_2',['confirm',['../class_u_i_1_1_h_u_d.html#a1e5874ed325ff773543bfc51db70f5af',1,'UI::HUD']]],
+  ['continue_3',['CONTINUE',['../enumgame_1_1_const_1_1_selection.html#a8e73ccc9ff787d59189d4351b238e24e',1,'game::Const::Selection']]],
+  ['cost_4',['cost',['../classgame_1_1_attack.html#a8bc6ddb6e33f6b049a101e4167f91b6e',1,'game::Attack']]],
+  ['currfight_5',['currfight',['../classgame_1_1_world.html#a7ac6f41bbf956b2f14152562cccbd360',1,'game::World']]]
 ];

@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['name_0',['name',['../classentity_1_1_enemy.html#a175fabae6e9cb47ec24f230e048afa91',1,'entity.Enemy.name()'],['../classentity_1_1_entity.html#a19fc9a3b25d27f23c8ada7af8e746a17',1,'entity.Entity.name()']]],
-  ['nbfloortextures_1',['nbFloorTextures',['../classgame_1_1_const.html#aa5e5c2779132accee5674e9a0aa1cf61',1,'game::Const']]],
-  ['nbtoptextures_2',['nbTopTextures',['../classgame_1_1_const.html#a52997e55fa9941c0d9ec8af3dd9a3a94',1,'game::Const']]]
+  ['mana_0',['mana',['../classentity_1_1_character.html#a739de76015650bfb302e42a0b2069771',1,'entity::Character']]],
+  ['maxhealth_1',['maxHealth',['../classentity_1_1_character.html#a4cc8e2762357c449d0a11ea8db92548f',1,'entity::Character']]],
+  ['maxmana_2',['maxMana',['../classentity_1_1_character.html#ad7c33a185f44895cbcf40f6180513884',1,'entity::Character']]],
+  ['menu_3',['menu',['../classgame_1_1_fight_scene.html#a762ebe74cf4426eac4bb42f88bfc09c4',1,'game.FightScene.menu()'],['../classgame_1_1_scene.html#abfeaf3d13d7ff744014bcad7f4790501',1,'game.Scene.menu()']]]
 ];

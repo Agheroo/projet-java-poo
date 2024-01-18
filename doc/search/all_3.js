@@ -1,17 +1,20 @@
 var searchData=
 [
-  ['changescene_0',['changeScene',['../classgame_1_1_scene.html#a1133bbe7f1bf2b14f648c9a8e70d5886',1,'game::Scene']]],
+  ['changeselectioncolor_0',['changeSelectionColor',['../class_u_i_1_1_h_u_d.html#a5039f6b8d54a62926eabd210aeb1fea4',1,'UI::HUD']]],
   ['character_1',['Character',['../classentity_1_1_character.html#aa40a6947a230fa0e48701a1da7a507e4',1,'entity.Character.Character()'],['../classentity_1_1_character.html',1,'entity.Character']]],
   ['character_2ejava_2',['Character.java',['../_character_8java.html',1,'']]],
-  ['checkobject_3',['checkObject',['../classentity_1_1_player.html#ac01d8a2c0231c9b74b44dbb4e79802e8',1,'entity::Player']]],
-  ['checkpausescene_4',['checkPauseScene',['../classgame_1_1_scene.html#a8836ac66378d274d9935a950e0b83d7a',1,'game::Scene']]],
-  ['checktilecollision_5',['checkTileCollision',['../classentity_1_1_character.html#aeee6d959ceb691d58104656642f828fc',1,'entity::Character']]],
-  ['choicebutton_6',['ChoiceButton',['../class_u_i_1_1_choice_button.html#a294842049466c9c08efadc34133dfb92',1,'UI.ChoiceButton.ChoiceButton()'],['../class_u_i_1_1_choice_button.html',1,'UI.ChoiceButton']]],
-  ['choicebutton_2ejava_7',['ChoiceButton.java',['../_choice_button_8java.html',1,'']]],
-  ['collision_8',['collision',['../classentity_1_1_entity.html#acd7f4b7c1acbdcd410ee9ad61a86b58e',1,'entity::Entity']]],
-  ['const_9',['Const',['../classgame_1_1_const.html',1,'game']]],
-  ['const_2ejava_10',['Const.java',['../_const_8java.html',1,'']]],
-  ['creationcombatscene_11',['CreationCombatScene',['../namespace_creation_combat_scene.html',1,'']]],
-  ['entity_12',['entity',['../namespace_creation_combat_scene_1_1entity.html',1,'CreationCombatScene']]],
-  ['game_13',['game',['../namespace_creation_combat_scene_1_1game.html',1,'CreationCombatScene']]]
+  ['checkenemy_3',['checkEnemy',['../classentity_1_1_player.html#afd8ccd449d009e222e579aa68eeb8a50',1,'entity::Player']]],
+  ['checkobject_4',['checkObject',['../classentity_1_1_player.html#adb890f89741a84069bb1288c7093508f',1,'entity::Player']]],
+  ['checkpausescene_5',['checkPauseScene',['../classgame_1_1_scene.html#a8836ac66378d274d9935a950e0b83d7a',1,'game::Scene']]],
+  ['checktilecollision_6',['checkTileCollision',['../classentity_1_1_character.html#aeee6d959ceb691d58104656642f828fc',1,'entity::Character']]],
+  ['choice_7',['choice',['../class_u_i_1_1_h_u_d___fight.html#a717695ee7b67d20bc78730ed15e41659',1,'UI::HUD_Fight']]],
+  ['choicebutton_8',['ChoiceButton',['../class_u_i_1_1_choice_button.html#a294842049466c9c08efadc34133dfb92',1,'UI.ChoiceButton.ChoiceButton()'],['../class_u_i_1_1_choice_button.html',1,'UI.ChoiceButton']]],
+  ['choicebutton_2ejava_9',['ChoiceButton.java',['../_choice_button_8java.html',1,'']]],
+  ['collision_10',['collision',['../classentity_1_1_entity.html#acd7f4b7c1acbdcd410ee9ad61a86b58e',1,'entity::Entity']]],
+  ['confirm_11',['confirm',['../class_u_i_1_1_h_u_d.html#a1e5874ed325ff773543bfc51db70f5af',1,'UI::HUD']]],
+  ['const_12',['Const',['../classgame_1_1_const.html',1,'game']]],
+  ['const_2ejava_13',['Const.java',['../_const_8java.html',1,'']]],
+  ['continue_14',['CONTINUE',['../enumgame_1_1_const_1_1_selection.html#a8e73ccc9ff787d59189d4351b238e24e',1,'game::Const::Selection']]],
+  ['cost_15',['cost',['../classgame_1_1_attack.html#a8bc6ddb6e33f6b049a101e4167f91b6e',1,'game::Attack']]],
+  ['currfight_16',['currfight',['../classgame_1_1_world.html#a7ac6f41bbf956b2f14152562cccbd360',1,'game::World']]]
 ];

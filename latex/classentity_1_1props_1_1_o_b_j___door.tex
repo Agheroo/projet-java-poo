@@ -30,7 +30,7 @@ Collaboration diagram for entity.\+props.\+OBJ\+\_\+\+Door\+:
 \item 
 \mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___door_ad1cdabdc34de0662d6d6d568ba31e8ad}{OBJ\+\_\+\+Door}} (int \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}}, int \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}})
 \begin{DoxyCompactList}\small\item\em Constructor for the \mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___door}{OBJ\+\_\+\+Door}} class. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___door_a9839aec16dffa3eadd3085215c3659be}{player\+Interraction}} (\mbox{\hyperlink{classentity_1_1_player}{Player}} p)
+void \mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___door_ab5d21b32a7d840c3385c63cdc166dbe3}{player\+Interraction}} (\mbox{\hyperlink{classentity_1_1_player}{Player}} player)
 \end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
@@ -60,10 +60,10 @@ Definition at line \mbox{\hyperlink{_o_b_j___door_8java_source_l00022}{22}} of f
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00022                                             \{}
-\DoxyCodeLine{00023         super(\mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}}, \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}},\textcolor{stringliteral}{"{}door"{}},1,0, \textcolor{keyword}{true});}
+\DoxyCodeLine{00023         super(\mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}}, \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}},\textcolor{stringliteral}{"{}door"{}},2,0, \textcolor{keyword}{true});}
 \DoxyCodeLine{00024 }
-\DoxyCodeLine{00025         \mbox{\hyperlink{classentity_1_1_entity_a9060501233d22f6130e204799a1f01c5}{loadTextures}}(\textcolor{stringliteral}{"{}door"{}});}
-\DoxyCodeLine{00026         \mbox{\hyperlink{classentity_1_1_entity_acd7f4b7c1acbdcd410ee9ad61a86b58e}{collision}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{00025         \mbox{\hyperlink{classentity_1_1props_1_1_props_a606e89d3bbe76b48434258901f3af6b3}{open}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{00026         \mbox{\hyperlink{classentity_1_1props_1_1_props_ad9057ae1a190d0f140f579820860b176}{loadTextures}}(\textcolor{stringliteral}{"{}door"{}});}
 \DoxyCodeLine{00027     \}}
 
 \end{DoxyCode}
@@ -78,11 +78,11 @@ Here is the call graph for this function\+:
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classentity_1_1props_1_1_o_b_j___door_a9839aec16dffa3eadd3085215c3659be}\label{classentity_1_1props_1_1_o_b_j___door_a9839aec16dffa3eadd3085215c3659be}} 
+\mbox{\Hypertarget{classentity_1_1props_1_1_o_b_j___door_ab5d21b32a7d840c3385c63cdc166dbe3}\label{classentity_1_1props_1_1_o_b_j___door_ab5d21b32a7d840c3385c63cdc166dbe3}} 
 \index{entity.props.OBJ\_Door@{entity.props.OBJ\_Door}!playerInterraction@{playerInterraction}}
 \index{playerInterraction@{playerInterraction}!entity.props.OBJ\_Door@{entity.props.OBJ\_Door}}
 \doxysubsubsection{\texorpdfstring{playerInterraction()}{playerInterraction()}}
-{\footnotesize\ttfamily void entity.\+props.\+OBJ\+\_\+\+Door.\+player\+Interraction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classentity_1_1_player}{Player}}}]{p }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void entity.\+props.\+OBJ\+\_\+\+Door.\+player\+Interraction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classentity_1_1_player}{Player}}}]{player }\end{DoxyParamCaption})}
 
 
 
@@ -94,30 +94,19 @@ Definition at line \mbox{\hyperlink{_o_b_j___door_8java_source_l00028}{28}} of f
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00028                                              \{}
-\DoxyCodeLine{00029         \textcolor{keywordflow}{if}(p.hasKey > 0 ) \{}
-\DoxyCodeLine{00030             \textcolor{comment}{// TODO : Change door collision; it's still here but with different textures and properties}}
-\DoxyCodeLine{00031             p.hasKey-\/-\/;}
-\DoxyCodeLine{00032 }
-\DoxyCodeLine{00033             \mbox{\hyperlink{classentity_1_1props_1_1_props_ab837cf0c685323fe8c2cc84d80f6315a}{destroySelf}}();}
+\DoxyCodeLine{00028                                                   \{}
+\DoxyCodeLine{00029         \textcolor{keywordflow}{if}(player.hasKey > 0 \&\& \mbox{\hyperlink{classentity_1_1_entity_acd7f4b7c1acbdcd410ee9ad61a86b58e}{collision}} == \textcolor{keyword}{true})\{}
+\DoxyCodeLine{00030             }
+\DoxyCodeLine{00031             player.hasKey-\/-\/;}
+\DoxyCodeLine{00032             \mbox{\hyperlink{classentity_1_1_entity_acd7f4b7c1acbdcd410ee9ad61a86b58e}{collision}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{00033             \mbox{\hyperlink{classentity_1_1props_1_1_props_a606e89d3bbe76b48434258901f3af6b3}{open}} = \textcolor{keyword}{true};}
 \DoxyCodeLine{00034         \}}
-\DoxyCodeLine{00035 }
-\DoxyCodeLine{00036         System.out.println(\textcolor{stringliteral}{"{}Key:"{}}+p.hasKey);}
-\DoxyCodeLine{00037 }
-\DoxyCodeLine{00038 }
-\DoxyCodeLine{00039 }
-\DoxyCodeLine{00040 }
-\DoxyCodeLine{00041     \}}
+\DoxyCodeLine{00035         \textcolor{keywordflow}{if}(player.hasKey == 0 \&\& \mbox{\hyperlink{classentity_1_1_entity_acd7f4b7c1acbdcd410ee9ad61a86b58e}{collision}} == \textcolor{keyword}{true})\{}
+\DoxyCodeLine{00036             System.out.println(\textcolor{stringliteral}{"{}Key missing !"{}});}
+\DoxyCodeLine{00037         \}}
+\DoxyCodeLine{00038     \}}
 
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classentity_1_1props_1_1_o_b_j___door_a9839aec16dffa3eadd3085215c3659be_cgraph}
-\end{center}
-\end{figure}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

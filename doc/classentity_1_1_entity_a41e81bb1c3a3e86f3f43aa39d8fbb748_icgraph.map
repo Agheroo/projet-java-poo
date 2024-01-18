@@ -1,4 +1,6 @@
 <map id="entity.Entity.updateFrames" name="entity.Entity.updateFrames">
-<area shape="rect" id="node1" title="Updates the frames of the entity&#39;s animation." alt="" coords="227,5,421,32"/>
-<area shape="rect" id="node2" href="$classentity_1_1_character.html#a2d5d7da3d6f49c2b0b040850d741f8f7" title="Updates the character entity based on the current scene and time elapsed." alt="" coords="5,5,179,32"/>
+<area shape="rect" id="node1" title="Updates the frames of the entity&#39;s animation." alt="" coords="433,31,628,57"/>
+<area shape="rect" id="node2" href="$classentity_1_1_character.html#a0beaf70a50b785c4c4c38b9566593206" title="Updates the character entity based on the current scene and time elapsed." alt="" coords="207,5,381,32"/>
+<area shape="rect" id="node3" href="$classgame_1_1_fight_scene.html#a6f8060e45bcb70f13265bd6d3b2a52d5" title="Updates the fight scene." alt="" coords="203,56,385,83"/>
+<area shape="rect" id="node4" href="$classgame_1_1_world.html#a05a7f2e7a65c2a3449efdaa0a87c49f5" title="Updates the game world based on the scene state." alt="" coords="5,56,155,83"/>
 </map>
