@@ -119,14 +119,14 @@ public abstract class Props extends Entity {
         int playerScreenY = (Const.WDW_height - Const.WRLD_entityScreenSize) / 2;
 
         // Calculate the screen position of the prop relative to the player's position
-        int screenX = worldX - world.player.worldX + playerScreenX;
-        int screenY = worldY - world.player.worldY + playerScreenY;
+        int screenX = worldX - World.player.worldX + playerScreenX;
+        int screenY = worldY - World.player.worldY + playerScreenY;
 
         // Check if the prop is within the visible screen region around the player
-        if (worldX + Const.WRLD_tileScreenSize > world.player.worldX - playerScreenX
-        && worldX - Const.WRLD_tileScreenSize < world.player.worldX + playerScreenX
-        && worldY + Const.WRLD_tileScreenSize > world.player.worldY - playerScreenY
-        && worldY - Const.WRLD_tileScreenSize < world.player.worldY + playerScreenY) {
+        if (worldX + Const.WRLD_tileScreenSize > World.player.worldX - playerScreenX
+        && worldX - Const.WRLD_tileScreenSize < World.player.worldX + playerScreenX
+        && worldY + Const.WRLD_tileScreenSize > World.player.worldY - playerScreenY
+        && worldY - Const.WRLD_tileScreenSize < World.player.worldY + playerScreenY) {
             
             // Draw the prop on the screen
             if(open){ //For some props like chests or doors the images[1] is the "open" one

@@ -157,10 +157,10 @@ public class TileManager {
                 int worldY = _floorMap[i][j].getPos()[1];
 
                 // Checks if the player is close enough to the tile to render it to optimize memory and CPU usage
-                if (worldX + Const.WRLD_tileScreenSize > world.player.worldX - playerScreenX
-                        && worldX - Const.WRLD_tileScreenSize < world.player.worldX + playerScreenX
-                        && worldY + Const.WRLD_tileScreenSize > world.player.worldY - playerScreenY
-                        && worldY - Const.WRLD_tileScreenSize < world.player.worldY + playerScreenY) {
+                if (worldX + Const.WRLD_tileScreenSize > World.player.worldX - playerScreenX
+                        && worldX - Const.WRLD_tileScreenSize < World.player.worldX + playerScreenX
+                        && worldY + Const.WRLD_tileScreenSize > World.player.worldY - playerScreenY
+                        && worldY - Const.WRLD_tileScreenSize < World.player.worldY + playerScreenY) {
                     _floorMap[i][j].updateFrames();
                     _topMap[i][j].updateFrames();
                 }
@@ -185,12 +185,12 @@ public class TileManager {
                 int worldY = _floorMap[i][j].getPos()[1];
 
                 // Checks if the player is close enough to the tile to render it to optimize memory and CPU usage
-                if (worldX + Const.WRLD_tileScreenSize > world.player.worldX - playerScreenX
-                        && worldX - Const.WRLD_tileScreenSize < world.player.worldX + playerScreenX
-                        && worldY + Const.WRLD_tileScreenSize > world.player.worldY - playerScreenY
-                        && worldY - Const.WRLD_tileScreenSize < world.player.worldY + playerScreenY) {
-                    int screenX = worldX - world.player.worldX + playerScreenX;
-                    int screenY = worldY - world.player.worldY + playerScreenY;
+                if (worldX + Const.WRLD_tileScreenSize > World.player.worldX - playerScreenX
+                        && worldX - Const.WRLD_tileScreenSize < World.player.worldX + playerScreenX
+                        && worldY + Const.WRLD_tileScreenSize > World.player.worldY - playerScreenY
+                        && worldY - Const.WRLD_tileScreenSize < World.player.worldY + playerScreenY) {
+                    int screenX = worldX - World.player.worldX + playerScreenX;
+                    int screenY = worldY - World.player.worldY + playerScreenY;
                     _floorMap[i][j].draw(g2, screenX, screenY);
                     _topMap[i][j].draw(g2, screenX, screenY);
                 }
