@@ -43,7 +43,7 @@ public class HUD_World {
         xp = new Textbox(String.valueOf(World.player.xp) + "/" + String.valueOf(World.player.xpMax), Const.fontName, 100, 20, Color.black);
         level = new Textbox("Level "+String.valueOf(World.player.level), Const.fontName, 100, 30, Color.black);
         key = new Textbox("Keys:" +String.valueOf(World.player.hasKey), Const.fontName, 80, 20, Color.black);
-        instructions = new Textbox("Movements : ZQSD  |  Interact/Confirm : SPACE  |  Pause : ESCAPE", Const.fontName, 400, 30, new Color(10,0,176));
+        instructions = new Textbox("Movements : ZQSD  |  Interact/Confirm : SPACE  |  Pause : ESCAPE", Const.fontName, 400, 30, Const.COLOR_WORLD_blue);
     }
 
     /**
@@ -63,9 +63,9 @@ public class HUD_World {
         // Draw the XP bar
         g2.setColor(Color.black);
         g2.drawRect(9, 39, 151, 31);
-        g2.setColor(new Color(180, 180, 180, 180));
+        g2.setColor(Const.COLOR_WORLD_grey_transparent);
         g2.fillRect(10, 40, 150, 30);
-        g2.setColor(new Color(10, 150, 190));
+        g2.setColor(Const.COLOR_WORLD_XP_color);
         g2.fillRect(10, 40, World.player.xp * 150 / World.player.xpMax, 30);
         xp.draw(g2, 10, 40);
     }

@@ -35,8 +35,8 @@ public class HUD_Fight extends HUD {
 
 
         playerStats = new Textbox[2];
-        playerStats[0] = new Textbox(String.valueOf(player.health) + "/" + String.valueOf(player.maxHealth),Const.fontName,100,30,new Color(0x0D9B44));
-        playerStats[1] = new Textbox(String.valueOf(player.mana) + "/" + String.valueOf(player.maxMana),Const.fontName,100,30,new Color(0x2367C3));
+        playerStats[0] = new Textbox(String.valueOf(player.health) + "/" + String.valueOf(player.maxHealth),Const.fontName,100,30,Const.COLOR_WELCOME_green);
+        playerStats[1] = new Textbox(String.valueOf(player.mana) + "/" + String.valueOf(player.maxMana),Const.fontName,100,30, Const.COLOR_WELCOME_blue);
 
         for(int i=0;i<player.attacks.length;i++){
             _texts[i] = new Textbox(player.attacks[i].name,Const.fontName,200,30,Color.black);
@@ -44,10 +44,10 @@ public class HUD_Fight extends HUD {
         for(int i=player.attacks.length;i<player.attacks.length + player.potions.size();i++){
             _texts[i] = new Textbox(player.potions.get(i-player.attacks.length).name,Const.fontName,100,50,Color.black);
         }
-        _buttons[0] = new ChoiceButton(220, 80, "ATTAQUER", Const.fontName, new Color(0x784F30));
-        _buttons[1] = new ChoiceButton(220, 80, "POTION", Const.fontName, new Color(0x784F30));
-        _buttons[2] = new ChoiceButton(160, 50, "RETOUR", Const.fontName, new Color(0x784F30));
-        changeSelectionColor(0, new Color(0x784F30), new Color(0x594E3B),new Color(0xA38168), new Color(0xAB9672));
+        _buttons[0] = new ChoiceButton(220, 80, "ATTAQUER", Const.fontName, Const.COLOR_BUTTON_text);
+        _buttons[1] = new ChoiceButton(220, 80, "POTION", Const.fontName, Const.COLOR_BUTTON_text);
+        _buttons[2] = new ChoiceButton(160, 50, "RETOUR", Const.fontName, Const.COLOR_BUTTON_text);
+        changeSelectionColor(0, Const.COLOR_BUTTON_text, Const.COLOR_BUTTON_text_highlight, Const.COLOR_BUTTON_bg, Const.COLOR_BUTTON_bg_highlight);
     }
 
 
@@ -139,16 +139,16 @@ public class HUD_Fight extends HUD {
         //Simply updating colors
         switch(selection.toString()){
             case "ATTACK":
-                changeSelectionColor(0, new Color(0x784F30),  new Color(0x452A26),new Color(0xAE8E65), new Color(0x926E4F)); break;
+                changeSelectionColor(0, Const.COLOR_BUTTON_text, Const.COLOR_BUTTON_text_highlight, Const.COLOR_BUTTON_bg, Const.COLOR_BUTTON_bg_highlight); break;
                 
             case "POTION":
-                changeSelectionColor(1, new Color(0x784F30),  new Color(0x452A26),new Color(0xAE8E65), new Color(0x926E4F)); break;
+                changeSelectionColor(1, Const.COLOR_BUTTON_text, Const.COLOR_BUTTON_text_highlight, Const.COLOR_BUTTON_bg, Const.COLOR_BUTTON_bg_highlight); break;
             
             case "BACK":
-                changeSelectionColor(2, new Color(0x784F30),  new Color(0x452A26),new Color(0xAE8E65), new Color(0x926E4F)); break;
+                changeSelectionColor(2, Const.COLOR_BUTTON_text, Const.COLOR_BUTTON_text_highlight, Const.COLOR_BUTTON_bg, Const.COLOR_BUTTON_bg_highlight); break;
 
             default: 
-                changeSelectionColor(0, new Color(0x784F30),  new Color(0x452A26),new Color(0xAE8E65), new Color(0x926E4F)); break;   
+                changeSelectionColor(0, Const.COLOR_BUTTON_text, Const.COLOR_BUTTON_text_highlight, Const.COLOR_BUTTON_bg, Const.COLOR_BUTTON_bg_highlight); break;   
         }
 
         Scene.keyH.rightPressed = false; Scene.keyH.upPressed = false;
@@ -161,9 +161,9 @@ public class HUD_Fight extends HUD {
         if(FightScene.state == Const.FightState.FIGHTING){
             //Background of the HUD
             int margin = (Const.WDW_width - Const.HUD_fightWidth)/2;
-            g2.setColor(new Color(0x5A2D16));
+            g2.setColor(Const.COLOR_BUTTON_bg_highlight);
             g2.fillRect(margin-2, Const.WDW_height - Const.HUD_fightHeight - margin-2, Const.HUD_fightWidth+4, Const.HUD_fightHeight+4);
-            g2.setColor(new Color(0xC4A187));
+            g2.setColor(Const.COLOR_FIGHT_bg);
             g2.fillRect(margin, Const.WDW_height - Const.HUD_fightHeight - margin, Const.HUD_fightWidth, Const.HUD_fightHeight);
 
             //Small seperation
@@ -186,49 +186,49 @@ public class HUD_Fight extends HUD {
                 case 1: //Drawing all attacks available
                     for(int i=0;i<player.attacks.length;i++){
                         if(player.attacks[i].unlocked){
-                            _texts[i].setColor(new Color(0x4669A0));
+                            _texts[i].setColor(Const.COLOR_unlocked_ability);
                         }
                         else{
-                            _texts[i].setColor(new Color(0x5A5C6C));
+                            _texts[i].setColor(Const.COLOR_locked_ability);
                         }
                     }
 
                     //Small rectangle to underline the selection
                     if(choice != -1 && player.attacks[choice].unlocked){
-                        _texts[choice].setColor(new Color(0x1B1E5B));
+                        _texts[choice].setColor(Const.COLOR_unlocked_ability_highlight);
                     }
                     else if(choice != -1 && player.attacks[choice].unlocked == false){
-                        _texts[choice].setColor(new Color(0xCDCED5));
+                        _texts[choice].setColor(Const.COLOR_locked_ability_highlight);
                     }
 
                     
                     if(choice < 2 && choice != -1){
                         if(player.attacks[choice].unlocked){
-                            Textbox dmgInfo = new Textbox("dmg:"+player.attacks[choice].damage,Const.fontName,20,20,new Color(0xB90E30));
-                            Textbox manaInfo = new Textbox("cost"+player.attacks[choice].cost,Const.fontName,20,20,new Color(0x2367C3));
+                            Textbox dmgInfo = new Textbox("dmg:"+player.attacks[choice].damage,Const.fontName,20,20, Const.COLOR_WELCOME_red);
+                            Textbox manaInfo = new Textbox("cost:"+player.attacks[choice].cost,Const.fontName,20,20, Const.COLOR_WORLD_blue);
                             dmgInfo.draw(g2, _texts[choice].width + margin*(1+13*choice), Const.WDW_height - Const.HUD_fightHeight + margin/2 - manaInfo.height/2);
                             manaInfo.draw(g2, _texts[choice].width + margin*(1+13*choice), Const.WDW_height - Const.HUD_fightHeight + margin/2 + manaInfo.height/2);
                         }
                         else{
-                            Textbox unlock = new Textbox("lvl"+player.attacks[choice].unlockLvl,Const.fontName,20,20,new Color(0x5A5C6C));
+                            Textbox unlock = new Textbox("lvl"+player.attacks[choice].unlockLvl,Const.fontName,20,20, Const.COLOR_unlockLvl);
                             unlock.draw(g2,_texts[choice].width + margin*(2+13*choice), Const.WDW_height - Const.HUD_fightHeight + margin);
                         }
                         
-                        g2.setColor(new Color(0x1B1E5B));
+                        g2.setColor(Const.COLOR_FIGHT_underline);
                         g2.fillRect(margin*(2+13*choice),Const.WDW_height - Const.HUD_fightHeight + margin/2 + _texts[choice].height,_texts[choice].width - margin,3);
                     }
                     else if(choice >= 2){
                         if(player.attacks[choice].unlocked){
-                            Textbox dmgInfo = new Textbox("dmg:"+player.attacks[choice].damage,Const.fontName,20,20,new Color(0xB90E30));
-                            Textbox manaInfo = new Textbox("cost"+player.attacks[choice].cost,Const.fontName,20,20,new Color(0x2367C3));
+                            Textbox dmgInfo = new Textbox("dmg:"+player.attacks[choice].damage,Const.fontName,20,20, Const.COLOR_WELCOME_red);
+                            Textbox manaInfo = new Textbox("cost"+player.attacks[choice].cost,Const.fontName,20,20, Const.COLOR_WORLD_blue);
                             dmgInfo.draw(g2, _texts[choice].width + margin*(1+13*(choice-2)), Const.WDW_height - Const.HUD_fightHeight + 4*margin - manaInfo.height );
                             manaInfo.draw(g2, _texts[choice].width + margin*(1+13*(choice-2)), Const.WDW_height - Const.HUD_fightHeight + 4*margin);
                         }
                         else{
-                            Textbox unlock = new Textbox("lvl"+player.attacks[choice].unlockLvl,Const.fontName,20,20,new Color(0x5A5C6C));
+                            Textbox unlock = new Textbox("lvl"+player.attacks[choice].unlockLvl,Const.fontName,20,20,Const.COLOR_unlockLvl);
                             unlock.draw(g2,_texts[choice].width + margin*(2+13*(choice-2)), Const.WDW_height - Const.HUD_fightHeight + 3*margin + 10);
                         }
-                        g2.setColor(new Color(0x1B1E5B));
+                        g2.setColor(Const.COLOR_FIGHT_underline);
                         g2.fillRect(margin*(2+13*(choice-2)),Const.WDW_height - Const.HUD_fightHeight + 4*margin + _texts[choice].height - 10, _texts[choice].width - margin,3);
                     }
                     
@@ -248,7 +248,7 @@ public class HUD_Fight extends HUD {
                         }
                     }
                     else{
-                        Textbox alert = new Textbox("Vous n'avez pas de potion !", Const.fontName, Const.HUD_fightWidth-margin,40, new Color(0xCF1C3F));
+                        Textbox alert = new Textbox("Vous n'avez pas de potion !", Const.fontName, Const.HUD_fightWidth-margin,40, Const.COLOR_WELCOME_red);
                         alert.draw(g2,3*margin,Const.WDW_height - Const.HUD_fightHeight + (3/2)*margin);
                         choice = -1;
                         selection = Const.Selection.BACK;

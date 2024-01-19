@@ -54,33 +54,33 @@ public class HUD_Welcome extends HUD {
         _buttons[0] = new ChoiceButton(400, 80, "JOUER", Const.fontName, Color.blue);
         _buttons[1] = new ChoiceButton(400, 80, "QUITTER", Const.fontName, Color.blue);
         _buttons[2] = new ChoiceButton(200, 60, "RETOUR", Const.fontName, Color.blue);
-        changeSelectionColor(0, new Color(0x784F30), new Color(0x594E3B), new Color(0xA38168), new Color(0x996348));
+        changeSelectionColor(0, Const.COLOR_BUTTON_text, Const.COLOR_BUTTON_text_highlight, Const.COLOR_BUTTON_bg, Const.COLOR_BUTTON_bg_highlight);
 
         _texts = new Textbox[15];
 
         //Warrior class
-        _texts[0] = new Textbox("Guerrier", Const.fontName, 100, 30, new Color(0x6676F0));
-        _texts[1] = new Textbox("+ Attaque\n", Const.fontName, 80, 30, new Color(0xCF1C3F));
-        _texts[2] = new Textbox("+ Défense",Const.fontName, 80, 30, new Color(0xCF1C3F));
-        _texts[3] = new Textbox("- Vitesse",Const.fontName, 80, 30, new Color(0xCF1C3F));
+        _texts[0] = new Textbox("Guerrier", Const.fontName, 100, 30, Const.COLOR_WELCOME_blue);
+        _texts[1] = new Textbox("+ Attaque\n", Const.fontName, 80, 30, Const.COLOR_WELCOME_red);
+        _texts[2] = new Textbox("+ Défense",Const.fontName, 80, 30, Const.COLOR_WELCOME_red);
+        _texts[3] = new Textbox("- Vitesse",Const.fontName, 80, 30, Const.COLOR_WELCOME_red);
 
         //Mage class
-        _texts[4] = new Textbox("Sorcier", Const.fontName, 100, 30, new Color(0x6676F0));
-        _texts[5] = new Textbox("+ Attaque", Const.fontName, 80, 30, new Color(0xCF1C3F));
-        _texts[6] = new Textbox("- Défense", Const.fontName, 80, 30, new Color(0xCF1C3F));
-        _texts[7] = new Textbox("+ Initiative", Const.fontName, 80, 30, new Color(0xCF1C3F));
+        _texts[4] = new Textbox("Sorcier", Const.fontName, 100, 30, Const.COLOR_WELCOME_blue);
+        _texts[5] = new Textbox("+ Attaque", Const.fontName, 80, 30, Const.COLOR_WELCOME_red);
+        _texts[6] = new Textbox("- Défense", Const.fontName, 80, 30, Const.COLOR_WELCOME_red);
+        _texts[7] = new Textbox("+ Initiative", Const.fontName, 80, 30, Const.COLOR_WELCOME_red);
 
         //Rogue class
-        _texts[8] = new Textbox("Assassin", Const.fontName, 100, 30, new Color(0x6676F0));
-        _texts[9] = new Textbox("++ Attaque", Const.fontName, 100, 30, new Color(0xCF1C3F));
-        _texts[10] = new Textbox("-- Défense", Const.fontName, 100, 30, new Color(0xCF1C3F));
-        _texts[11] = new Textbox("+ Agilité", Const.fontName, 100, 30, new Color(0xCF1C3F));
+        _texts[8] = new Textbox("Assassin", Const.fontName, 100, 30, Const.COLOR_WELCOME_blue);
+        _texts[9] = new Textbox("++ Attaque", Const.fontName, 100, 30, Const.COLOR_WELCOME_red);
+        _texts[10] = new Textbox("-- Défense", Const.fontName, 100, 30, Const.COLOR_WELCOME_red);
+        _texts[11] = new Textbox("+ Agilité", Const.fontName, 100, 30, Const.COLOR_WELCOME_red);
 
 
         //End game title screen
-        _texts[12] = new Textbox("Vous avez perdu !", Const.fontName, 400, 90, new Color(0xCF1C3F)); //Game lost !
-        _texts[13] = new Textbox("Vous avez gagné !", Const.fontName, 400, 90, new Color(0x27CD74)); //Game won !
-        _texts[14] = new Textbox("Merci d'avoir joué !", Const.fontName, 350, 90, new Color(0xDDDDDD));//Thanks for playing
+        _texts[12] = new Textbox("Vous avez perdu !", Const.fontName, 400, 90, Const.COLOR_WELCOME_red); //Game lost !
+        _texts[13] = new Textbox("Vous avez gagné !", Const.fontName, 400, 90, Const.COLOR_WON_green); //Game won !
+        _texts[14] = new Textbox("Merci d'avoir joué !", Const.fontName, 350, 90, Const.COLOR_WELCOME_white);//Thanks for playing
     }
 
     /**
@@ -107,11 +107,11 @@ public class HUD_Welcome extends HUD {
         if(Scene.keyH.downPressed || Scene.keyH.upPressed){
             if(page == 0){
                 if(selection == Const.Selection.PLAY){
-                    changeSelectionColor(1, new Color(0x784F30), new Color(0x594E3B), new Color(0xA38168), new Color(0x996348));
+                    changeSelectionColor(1, Const.COLOR_BUTTON_text, Const.COLOR_BUTTON_text_highlight, Const.COLOR_BUTTON_bg, Const.COLOR_BUTTON_bg_highlight);
                     selection = Const.Selection.QUIT;
                 }
                 else if(selection == Const.Selection.QUIT){
-                    changeSelectionColor(0, new Color(0x784F30), new Color(0x594E3B), new Color(0xA38168), new Color(0x996348));
+                    changeSelectionColor(0, Const.COLOR_BUTTON_text, Const.COLOR_BUTTON_text_highlight, Const.COLOR_BUTTON_bg, Const.COLOR_BUTTON_bg_highlight);
                     selection = Const.Selection.PLAY;
                 }
             }
@@ -119,12 +119,12 @@ public class HUD_Welcome extends HUD {
                 if(Scene.keyH.downPressed && selection == Const.Selection.NONE){
                     selection = Const.Selection.BACK;
                     choiceClass=-1;
-                    changeSelectionColor(2, new Color(0x784F30), new Color(0x594E3B), new Color(0xA38168), new Color(0x996348));
+                    changeSelectionColor(2, Const.COLOR_BUTTON_text, Const.COLOR_BUTTON_text_highlight, Const.COLOR_BUTTON_bg, Const.COLOR_BUTTON_bg_highlight);
                 }
                 else if(Scene.keyH.upPressed && selection == Const.Selection.BACK){
                     choiceClass = 1;
                     selection = Const.Selection.NONE;
-                    changeSelectionColor(0, new Color(0x784F30), new Color(0x594E3B), new Color(0xA38168), new Color(0x996348));
+                    changeSelectionColor(0, Const.COLOR_BUTTON_text, Const.COLOR_BUTTON_text_highlight, Const.COLOR_BUTTON_bg, Const.COLOR_BUTTON_bg_highlight);
                 }
             }
             Scene.keyH.downPressed = false;
@@ -166,7 +166,7 @@ public class HUD_Welcome extends HUD {
                     page = 0;
                     choiceClass = -1;
                     selection = Const.Selection.PLAY;
-                    changeSelectionColor(0, new Color(0x784F30), new Color(0x594E3B), new Color(0xA38168), new Color(0x996348));
+                    changeSelectionColor(0, Const.COLOR_BUTTON_text, Const.COLOR_BUTTON_text_highlight, Const.COLOR_BUTTON_bg, Const.COLOR_BUTTON_bg_highlight);
                     break;
                 case "NONE":  //Chose the character class and create the game
                     selectClass();
@@ -210,18 +210,18 @@ public class HUD_Welcome extends HUD {
                         if(choiceClass == i){   //If the caracter is selected, update his animations
                             
                             //Change text colors for more visibility
-                            _texts[4*i].setColor(new Color(0x7D8DED));
+                            _texts[4*i].setColor(Const.COLOR_WELCOME_blue);
                             for(int j=1;j<4;j++){
-                                _texts[4*i+j].setColor(new Color(0x1FD670));
+                                _texts[4*i+j].setColor(Const.COLOR_WELCOME_green);
                             }
                             
                             
                             //Little design for selection
-                            g2.setColor(new Color(0x000000));
+                            g2.setColor(Color.black);
                             g2.fillRect(125*(1+i)+i*Const.FGHT_entityScreenSize - 25 - 10,(Const.WDW_height-Const.FGHT_entityScreenSize)/2-80 +10,Const.FGHT_entityScreenSize + 50 +4, Const.FGHT_entityScreenSize + 100 +4);
                             
                             //Draw a little background for each character
-                            g2.setColor(new Color(0x996348));
+                            g2.setColor(Const.COLOR_BUTTON_bg_highlight);
                             g2.drawRect(125*(1+i)+i*Const.FGHT_entityScreenSize - 25 - 2,(Const.WDW_height-Const.FGHT_entityScreenSize)/2-80 - 2,Const.FGHT_entityScreenSize + 50 +4, Const.FGHT_entityScreenSize + 100 +4);
                             g2.fillRect(125*(1+i)+i*Const.FGHT_entityScreenSize - 25,(Const.WDW_height-Const.FGHT_entityScreenSize)/2-80,Const.FGHT_entityScreenSize + 50, Const.FGHT_entityScreenSize + 100);
                             for(int j=0;j<Const.nbSpriteCharacterAnim;j++){
@@ -232,13 +232,13 @@ public class HUD_Welcome extends HUD {
                         }
                         else{
                             //Change text colors for more visibility
-                            _texts[4*i].setColor(new Color(0x4443EF));
+                            _texts[4*i].setColor(Const.COLOR_WELCOME_blue_highlight);
 
                             for(int j=1;j<4;j++){
-                                _texts[4*i+j].setColor(new Color(0xB21A4E));
+                                _texts[4*i+j].setColor(Const.COLOR_WELCOME_red);
                             }
                             //Draw a little background for each character
-                            g2.setColor(new Color(0xA38168));
+                            g2.setColor(Const.COLOR_BUTTON_bg);
                             g2.drawRect(125*(1+i)+i*Const.FGHT_entityScreenSize - 25 -2,(Const.WDW_height-Const.FGHT_entityScreenSize)/2-80 -2,Const.FGHT_entityScreenSize + 50 +4, Const.FGHT_entityScreenSize + 100 +4);
                             g2.fillRect(125*(1+i)+i*Const.FGHT_entityScreenSize - 25,(Const.WDW_height-Const.FGHT_entityScreenSize)/2-80,Const.FGHT_entityScreenSize + 50, Const.FGHT_entityScreenSize + 100);
                             
@@ -272,7 +272,7 @@ public class HUD_Welcome extends HUD {
             _texts[14].draw(g2, -20, 280);
 
             // Draw a separator line
-            g2.setColor(new Color(0xDDDDDD));
+            g2.setColor(Const.COLOR_WELCOME_white);
             g2.fillRect(50, 400, Const.WDW_width - 100, 4);
         }
 
@@ -283,7 +283,7 @@ public class HUD_Welcome extends HUD {
             _texts[14].draw(g2, -20, 280);
 
             // Draw a separator line
-            g2.setColor(new Color(0xDDDDDD));
+            g2.setColor(Const.COLOR_WELCOME_white);
             g2.fillRect(50, 400, Const.WDW_width - 100, 4);
         }
     }
