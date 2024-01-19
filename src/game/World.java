@@ -119,7 +119,6 @@ public class World extends Scene {
                     && enemy.worldY + 5*Const.WRLD_tileScreenSize > player.worldY - playerScreenY
                     && enemy.worldY - 5*Const.WRLD_tileScreenSize < player.worldY + playerScreenY) {  
                         enemy.update(dt);
-
                     }
                 }
                 break;
@@ -131,6 +130,9 @@ public class World extends Scene {
 
             case "FIGHT":
                 currfight.update(this); break;
+            
+            case "LOST":
+                menu.update(); break;
 
             default:
                 break;

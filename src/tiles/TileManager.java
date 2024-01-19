@@ -41,8 +41,8 @@ public class TileManager {
         _topMap = new Tile[Const.WRLD_maxRow][Const.WRLD_maxCol];
 
         loadTextures();
-        loadMap("res/maps/test_floor.csv", world, _floorMap, _floorMapTextures);
-        loadMap("res/maps/test_top.csv", world, _topMap, _topMapTextures);
+        loadMap("res/maps/map_floor.csv", world, _floorMap, _floorMapTextures);
+        loadMap("res/maps/map_top.csv", world, _topMap, _topMapTextures);
     }
 
     /**
@@ -88,18 +88,25 @@ public class TileManager {
         // Floor map textures
         storeTexture("void", _floorMapTextures, 0, 1, false, 1, 0, false);
         storeTexture("grass", _floorMapTextures, 1, 3, false, 1, 0, false);
+
         // Decoration textures (plants and tall grass)
         storeTexture("grass0", _floorMapTextures, 4, 1, true, 5, 20, false);
         storeTexture("grass1", _floorMapTextures, 5, 1, true, 5, 20, false);
         storeTexture("flower0", _floorMapTextures, 6, 1, true, 6, 20, false);
+        storeTexture("grass2",_floorMapTextures,7,1,true,6,20,false);
+        storeTexture("rock", _floorMapTextures, 8, 3, false, 1, 0, false);
+        storeTexture("berry", _floorMapTextures, 11, 2, false, 1, 0, false);
+        storeTexture("rock", _floorMapTextures, 13, 2, false, 1, 0, false);
+        storeTexture("path", _floorMapTextures, 15, 17, false, 1, 0, false);
 
         // Top map textures (trees & forest)
         storeTexture("void", _topMapTextures, 0, 1, false, 1, 0, false);
-
         storeTexture("forest", _topMapTextures, 1, 9, false, 1, 0, true);
         storeTexture("tree", _topMapTextures, 10, 9, false, 1, 0, true);
-
         storeTexture("fire", _topMapTextures, 19, 1, true, 7, 15, true);
+        storeTexture("unlit_fire", _topMapTextures, 20, 1, false, 1, 0, true);
+        storeTexture("rock_collide", _topMapTextures, 21, 2, false, 1, 0, true);
+        storeTexture("barrier", _topMapTextures, 23, 3, false, 1, 0, true);
     }
 
     /**
@@ -130,10 +137,7 @@ public class TileManager {
                     mapTile[i][j].setTexture(textures[num].image); // Set the current tile texture to what corresponds
                     // in the textures array
                     mapTile[i][j].setCollision(textures[num].getCollision()); // Set the collision factor to the tile
-
-                    // System.out.print(num + " ");
                 }
-                // System.out.println("");
             }
             br.close();
 

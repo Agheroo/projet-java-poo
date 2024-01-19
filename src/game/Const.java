@@ -2,7 +2,7 @@ package game;
 
 public final class Const {
     //Enums
-    public static enum State {WORLD, FIGHT, PAUSE, WELCOME, WON}
+    public static enum State {WORLD, FIGHT, PAUSE, WELCOME, WON, LOST}
     public static enum FightState {FIGHTING, WON , LOST}
     public static enum Selection {NONE, PLAY, RESUME, CONTINUE, QUIT, ATTACK, POTION, BACK}
 
@@ -17,8 +17,8 @@ public final class Const {
     public final static int WRLD_scale = 3;
     public final static int WRLD_tileScreenSize = WRLD_tileSize*WRLD_scale;
     public final static int WRLD_entityScreenSize = WRLD_tileSize*WRLD_scale;
-    public final static int WRLD_spawnX = 0;
-    public final static int WRLD_spawnY = 0;    //TODO : CHANGE THIS ACCORDING TO THE FINAL MAP
+    public final static int WRLD_spawnX = 27*WRLD_tileScreenSize;
+    public final static int WRLD_spawnY = 54*WRLD_tileScreenSize; 
 
     // World initialization settings
     public final static int WRLD_maxRow = 64, WRLD_maxCol = 64; //DONT FORGET TO MODIFY WHEN CHANGING THE MAP !!!
@@ -27,8 +27,8 @@ public final class Const {
     public final static int FGHT_entityScreenSize = 100;
 
     //TileManager
-    public final static int nbFloorTextures = 7;
-    public final static int nbTopTextures = 29;
+    public final static int nbFloorTextures = 34;
+    public final static int nbTopTextures = 27;
 
     //HUD
     public static String fontName = "rainyhearts";

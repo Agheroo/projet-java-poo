@@ -89,12 +89,19 @@ public class HUD_Welcome extends HUD {
      */
     public void update(){
         if(Scene.keyH.escPressed || (confirm && selection == Const.Selection.BACK)){
-            selection = Const.Selection.PLAY;
-            if(page != 0){
-                page--; //Go back to the previous page
-                choiceClass = -1;
-                Scene.keyH.escPressed = false;
-                confirm = false;
+            if(FightScene.state == Const.FightState.LOST){
+                System.exit(0);
+            }else if(Scene.state == Const.State.WON){
+                System.exit(0);
+            }
+            else{
+                selection = Const.Selection.PLAY;
+                if(page != 0){
+                    page--; //Go back to the previous page
+                    choiceClass = -1;
+                    Scene.keyH.escPressed = false;
+                    confirm = false;
+                }
             }
         }
         if(Scene.keyH.downPressed || Scene.keyH.upPressed){
@@ -147,21 +154,21 @@ public class HUD_Welcome extends HUD {
         
         //Checking what is confirmed
         if(confirm){
-            switch(selection){
-                case Const.Selection.PLAY:
+            switch(selection.toString()){
+                case "PLAY":
                     page=1;
                     choiceClass = 0;
                     selection = Const.Selection.NONE;
                     break;
-                case Const.Selection.QUIT:
+                case "QUIT":
                     System.exit(0); break;
-                case Const.Selection.BACK:
+                case "BACK":
                     page = 0;
                     choiceClass = -1;
                     selection = Const.Selection.PLAY;
                     changeSelectionColor(0, new Color(0x784F30), new Color(0x594E3B), new Color(0xA38168), new Color(0x996348));
                     break;
-                case Const.Selection.NONE:  //Chose the character class and create the game
+                case "NONE":  //Chose the character class and create the game
                     selectClass();
                     Scene.state = Const.State.WORLD;
                 default:break;
@@ -262,7 +269,7 @@ public class HUD_Welcome extends HUD {
         if(FightScene.state == Const.FightState.LOST){           
             // Draw the losing messages on the screen
             _texts[12].draw(g2, 0, 150);
-            _texts[13].draw(g2, -20, 280);
+            _texts[14].draw(g2, -20, 280);
 
             // Draw a separator line
             g2.setColor(new Color(0xDDDDDD));
@@ -272,8 +279,8 @@ public class HUD_Welcome extends HUD {
         // Check if the player has lost in the fight scene
         if(Scene.state == Const.State.WON){           
             // Draw the losing messages on the screen
-            _texts[14].draw(g2, 0, 150);
-            _texts[15].draw(g2, -20, 280);
+            _texts[13].draw(g2, 0, 150);
+            _texts[14].draw(g2, -20, 280);
 
             // Draw a separator line
             g2.setColor(new Color(0xDDDDDD));

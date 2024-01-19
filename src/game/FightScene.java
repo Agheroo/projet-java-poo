@@ -101,6 +101,7 @@ public class FightScene {
                                         enemy.attack.applyAttack(enemy, player);
                                         if(player.health <= 0){
                                             state = Const.FightState.LOST;
+                                            Scene.state = Const.State.LOST;
                                             break;
                                         }
                                     }
@@ -108,6 +109,7 @@ public class FightScene {
                                         enemy.attack.applyAttack(enemy, player);
                                         if(player.health <= 0){
                                             state = Const.FightState.LOST;
+                                            Scene.state = Const.State.LOST;
                                             break;
                                         }
                                         player.attacks[menu.choice].applyAttack(player, enemy);
