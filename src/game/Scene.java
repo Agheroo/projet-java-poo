@@ -71,8 +71,8 @@ public abstract class Scene {
                 menu = null;
             }
             else if(menu.confirm && menu.selection == Const.Selection.QUIT){        //Destroy window and close game if quit is selected
-                System.out.println("Détruire la fenêtre");
                 menu.confirm = false;
+                System.exit(0);
             }
             keyH.interactPressed = false;
         }        

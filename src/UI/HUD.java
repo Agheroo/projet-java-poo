@@ -82,4 +82,6 @@ public abstract class HUD {
      * @brief Abstract method to update the HUD.
      */
     public abstract void update();
+
+    public abstract void selectClass();
 }

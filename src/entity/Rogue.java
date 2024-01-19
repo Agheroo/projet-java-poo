@@ -2,8 +2,7 @@ package entity;
 
 import game.Attack;
 
-public class Mage extends Player{
-    
+public class Rogue extends Player{
     /**
      * @brief Different player class for another gameplay experience, only stats change from Player class
      * @param entityName    //Same as player
@@ -16,25 +15,25 @@ public class Mage extends Player{
      * @param spriteCntMax //Same as player
      * @param spriteSpeed //Same as player
      */
-    public Mage(String entityName, int worldX, int worldY, int dirX, int dirY, int speed, String facing,
+    public Rogue(String entityName, int worldX, int worldY, int dirX, int dirY, int speed, String facing,
             int spriteCntMax, int spriteSpeed) {
         super(entityName, worldX, worldY, dirX, dirY, speed, facing, spriteCntMax, spriteSpeed);
 
-        maxHealth = 100;
+        maxHealth = 80;
         health = maxHealth;
 
-        maxMana = 70;
+        maxMana = 12;
         mana = maxMana;
 
-        agility = 7;
-        strength = 20;
-        defense = 18;
-        initiative = 13;
-
+        agility = 15;
+        strength = 30;
+        defense = 10;
+        initiative = 12;
         
-        attacks[0] = new Attack("Coup de sceptre", 10, 0, true,1);
-        attacks[1] = new Attack("Boule de glace", 30, 10, true,1);
-        attacks[2] = new Attack("Flammes de la haine", 50, 27, false,2);
-        attacks[3] = new Attack("Die de gazo", 90, 60, false,4);
+        
+        attacks[0] = new Attack("Étrangler", 15, 0, true,1);
+        attacks[1] = new Attack("Couto", 27, 10, true,2);
+        attacks[2] = new Attack("Invisbib shlass", 40, 15, false,3);
+        attacks[3] = new Attack("Katarina", 100, 40, false,5);
     }
 }

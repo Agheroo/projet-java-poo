@@ -8,6 +8,7 @@ package game;
 import tiles.TileManager;
 import entity.Enemy;
 import entity.EntitySetter;
+import entity.Player;
 import entity.Warrior;
 import entity.props.Props;
 import java.awt.*;
@@ -39,7 +40,7 @@ public class World extends Scene {
     
   
     // Player settings
-    public Warrior player;
+    public static Player player;
     /**
      * @brief Gets the instance of the World.
      *
@@ -59,14 +60,15 @@ public class World extends Scene {
      * Set up the initial state of the game.
      */
     public void setupGame() {
+        menu = new HUD_Welcome();
         entitySetter.setObject();
         entitySetter.setEnemies();
 
-        player = new Warrior("player", 8 * Const.WRLD_tileScreenSize,
-            16 * Const.WRLD_tileScreenSize, 0, 0, 0, "down", 4, 20);
+        player = new Warrior("warrior", Const.WRLD_spawnX,
+            Const.WRLD_spawnY, 0, 0, 0, "down", 4, 20);
         
-        menu = new HUD_Welcome();
-        state = Const.State.WORLD;    //TODO : CHANGE THIS STATE TO WELCOME WHEN RELEASING THE GAME
+        
+        state = Const.State.WELCOME;
         HUD_world = new HUD_World();
     }
 
@@ -181,19 +183,16 @@ public class World extends Scene {
                     enemy.drawInWorld(g2, screenX, screenY);
                 }
                 HUD_world.draw(g2);
-                //Draw pause screen last but still draw the background game
-                
-            }
+                   
+            }//Draw pause screen last but still draw the background game 
             if(Scene.state == Const.State.PAUSE){
                 menu.draw(g2);
             }
 
+            //Display the welcome menu if new game
             else if(Scene.state == Const.State.WELCOME){
                 menu.draw(g2);
             }
-
-            
-            
         }  
 
     }

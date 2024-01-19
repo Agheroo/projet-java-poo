@@ -262,4 +262,6 @@ public class HUD_Fight extends HUD {
             }
         }
     }
+
+    public void selectClass(){}
 }

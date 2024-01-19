@@ -126,6 +126,6 @@ public class Textbox extends JLabel {
         // Find a way to better center text on the button
         g2.setFont(_font);
         g2.setColor(_color);
-        g2.drawString(_text, x + _fontSizeToUse, y + (height + _fontSizeToUse) / 2);
+        g2.drawString(_text, x + _fontSizeToUse, y + (height + _fontSizeToUse) / 2 - height/5);
     }
 }

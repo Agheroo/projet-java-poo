@@ -16,11 +16,6 @@ import game.World;
  */
 public class HUD_World {
     /**
-     * @brief Reference to the World object to track the player's progress.
-     */
-    World world = World.getWorld(); // Get track of the player's progress in the current world
-
-    /**
      * @brief Textbox representing the player's experience points.
      */
     private Textbox xp;
@@ -45,9 +40,9 @@ public class HUD_World {
      * Initializes Textbox objects for displaying player statistics and instructions.
      */
     public HUD_World(){
-        xp = new Textbox(String.valueOf(world.player.xp) + "/" + String.valueOf(world.player.xpMax), Const.fontName, 100, 20, Color.black);
-        level = new Textbox("Level "+String.valueOf(world.player.level), Const.fontName, 100, 30, Color.black);
-        key = new Textbox("Keys:" +String.valueOf(world.player.hasKey), Const.fontName, 80, 20, Color.black);
+        xp = new Textbox(String.valueOf(World.player.xp) + "/" + String.valueOf(World.player.xpMax), Const.fontName, 100, 20, Color.black);
+        level = new Textbox("Level "+String.valueOf(World.player.level), Const.fontName, 100, 30, Color.black);
+        key = new Textbox("Keys:" +String.valueOf(World.player.hasKey), Const.fontName, 80, 20, Color.black);
         instructions = new Textbox("Movements : ZQSD  |  Interact/Confirm : SPACE  |  Pause : ESCAPE", Const.fontName, 400, 30, new Color(10,0,176));
     }
 
@@ -71,7 +66,7 @@ public class HUD_World {
         g2.setColor(new Color(180, 180, 180, 180));
         g2.fillRect(10, 40, 150, 30);
         g2.setColor(new Color(10, 150, 190));
-        g2.fillRect(10, 40, world.player.xp * 150 / world.player.xpMax, 30);
+        g2.fillRect(10, 40, World.player.xp * 150 / World.player.xpMax, 30);
         xp.draw(g2, 10, 40);
     }
 
@@ -79,8 +74,8 @@ public class HUD_World {
      * @brief Updates the HUD by refreshing player statistics.
      */
     public void update(){
-        xp.setNewText(String.valueOf(world.player.xp) + "/" + String.valueOf(world.player.xpMax));
-        level.setNewText("Level "+String.valueOf(world.player.level));
-        key.setNewText("Keys:" +String.valueOf(world.player.hasKey));
+        xp.setNewText(String.valueOf(World.player.xp) + "/" + String.valueOf(World.player.xpMax));
+        level.setNewText("Level "+String.valueOf(World.player.level));
+        key.setNewText("Keys:" +String.valueOf(World.player.hasKey));
     }
 }

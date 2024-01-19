@@ -29,7 +29,7 @@ public class HUD_Pause extends HUD {
 
         _buttons[0] = new ChoiceButton(200, 50, "CONTINUER", Const.fontName, Color.blue);
         _buttons[1] = new ChoiceButton(200, 50, "QUITTER", Const.fontName, Color.blue);
-        changeSelectionColor(0, new Color(0x784F30), new Color(0x594E3B), new Color(0xA38168), new Color(0xAB9672));
+        changeSelectionColor(0, new Color(0x784F30), new Color(0x594E3B), new Color(0xA38168), new Color(0x996348));
     }
 
     /**
@@ -70,4 +70,6 @@ public class HUD_Pause extends HUD {
         _buttons[0].draw(g2, (Const.WDW_width - _buttons[0].width) / 2, 200);
         _buttons[1].draw(g2, (Const.WDW_width - _buttons[0].width) / 2, 400);
     }
+
+    public void selectClass(){}
 }
