@@ -19,7 +19,7 @@ public class Rogue extends Player{
             int spriteCntMax, int spriteSpeed) {
         super(entityName, worldX, worldY, dirX, dirY, speed, facing, spriteCntMax, spriteSpeed);
 
-        maxHealth = 80;
+        maxHealth = 200;
         health = maxHealth;
 
         maxMana = 12;

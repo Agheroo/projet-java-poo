@@ -19,7 +19,7 @@ public class Warrior extends Player{
             int spriteCntMax, int spriteSpeed) {
         super(entityName, worldX, worldY, dirX, dirY, speed, facing, spriteCntMax, spriteSpeed);
 
-        maxHealth = 130;
+        maxHealth = 300;
         health = maxHealth;
 
         maxMana = 20;

@@ -20,7 +20,7 @@ public class Wizard extends Player{
             int spriteCntMax, int spriteSpeed) {
         super(entityName, worldX, worldY, dirX, dirY, speed, facing, spriteCntMax, spriteSpeed);
 
-        maxHealth = 100;
+        maxHealth = 240;
         health = maxHealth;
 
         maxMana = 70;

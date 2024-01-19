@@ -166,12 +166,12 @@ public class FightScene {
                     player.xpMax = 55 + (int)1.3*player.xpMax;
     
                     player.maxHealth += 30;
-                    player.mana += 17;
+                    player.maxMana += 17;
                     player.agility += 2;
                     player.strength += 6;
                     player.defense += 6;
                     player.initiative += 3;
-    
+                    player.mana = player.maxMana;
                     //Check if any new attack is unlocked
                     for(int i=0;i<player.attacks.length;i++){
                         if(player.level >= player.attacks[i].unlockLvl){
@@ -184,6 +184,10 @@ public class FightScene {
 
             else{
                 player.xp += enemy.xpRate;
+                player.mana += 0.1*player.maxMana;
+                if(player.mana > player.maxMana){
+                    player.mana = player.maxMana;
+                }
                 if(player.health < player.maxHealth){
                     player.health += (int)0.2*player.maxHealth;//Regen a bit of the health
                     if(player.health > player.maxHealth)
@@ -191,7 +195,7 @@ public class FightScene {
                 }
             }
             
-            player.mana = player.maxMana;
+            
 
             //If the fight is won, theses lines are mendatory
             Scene.state = Const.State.WORLD;
