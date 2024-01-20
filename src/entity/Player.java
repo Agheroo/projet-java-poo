@@ -192,7 +192,10 @@ public class Player extends Character {
         }
         g2.drawImage(image,screenX,screenY,Const.FGHT_entityScreenSize,Const.FGHT_entityScreenSize,null);
     }
-
+    public void levelUp(){
+        level++;
+        xpMax = 55 + (int)1.3*xpMax;
+    }
     public void playerInterraction(Player player) {
         //Nothing
     }
