@@ -1,0 +1,550 @@
+\hypertarget{class_u_i_1_1_h_u_d___welcome}{}\doxysection{UI.\+HUD\+\_\+\+Welcome Class Reference}
+\label{class_u_i_1_1_h_u_d___welcome}\index{UI.HUD\_Welcome@{UI.HUD\_Welcome}}
+
+
+Represents the welcome screen \mbox{\hyperlink{class_u_i_1_1_h_u_d}{HUD}} class, extending the abstract \mbox{\hyperlink{class_u_i_1_1_h_u_d}{HUD}} class.  
+
+
+
+
+Inheritance diagram for UI.\+HUD\+\_\+\+Welcome\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{class_u_i_1_1_h_u_d___welcome__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UI.\+HUD\+\_\+\+Welcome\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_u_i_1_1_h_u_d___welcome__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_a105e327520a5d5c473b5fc889feb31c0}{HUD\+\_\+\+Welcome}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome}{HUD\+\_\+\+Welcome}} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_ae8e93f747d3a375eae9ec820501b926c}{update}} ()
+\begin{DoxyCompactList}\small\item\em Updates the welcome screen \mbox{\hyperlink{class_u_i_1_1_h_u_d}{HUD}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_af1953ece042c830a42fcb0a781d92094}{draw}} (Graphics2D g2)
+\begin{DoxyCompactList}\small\item\em Draws the welcome screen \mbox{\hyperlink{class_u_i_1_1_h_u_d}{HUD}} on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_a01d4879c34dd5903100fd49327fb4605}{select\+Class}} ()
+\begin{DoxyCompactList}\small\item\em Creates the relevant class according to the class selected. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_a880c1ac206b91a91a7053043ea164dfb}{load\+Images}} ()
+\begin{DoxyCompactList}\small\item\em Function used to load the images of the different characters\textquotesingle{} classes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_a7a80b325173c6acbd8fde32d130e7d1a}{choice\+Class}}
+\item 
+int \mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_adc724232180edb63081f4260ca9b8292}{page}}
+\item 
+Buffered\+Image \mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_a03686b9319d9fdc4fa49c235cbc7a38c}{bg}}
+\item 
+Buffered\+Image\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_ab210c7510c0076f2baba5215bc7c2846}{characters\+Displayed}}
+\item 
+int \mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_a39b586c42de8f149a6b8c265773fb2b7}{sprite\+Updater}} =0
+\item 
+int \mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_a6ac5c50c6a7db5f7eaf2c3bdc11e5a98}{sprite\+Cnt}} =0
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Represents the welcome screen \mbox{\hyperlink{class_u_i_1_1_h_u_d}{HUD}} class, extending the abstract \mbox{\hyperlink{class_u_i_1_1_h_u_d}{HUD}} class. 
+
+Definition at line \mbox{\hyperlink{_h_u_d___welcome_8java_source_l00028}{28}} of file \mbox{\hyperlink{_h_u_d___welcome_8java_source}{HUD\+\_\+\+Welcome.\+java}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_u_i_1_1_h_u_d___welcome_a105e327520a5d5c473b5fc889feb31c0}\label{class_u_i_1_1_h_u_d___welcome_a105e327520a5d5c473b5fc889feb31c0}} 
+\index{UI.HUD\_Welcome@{UI.HUD\_Welcome}!HUD\_Welcome@{HUD\_Welcome}}
+\index{HUD\_Welcome@{HUD\_Welcome}!UI.HUD\_Welcome@{UI.HUD\_Welcome}}
+\doxysubsubsection{\texorpdfstring{HUD\_Welcome()}{HUD\_Welcome()}}
+{\footnotesize\ttfamily UI.\+HUD\+\_\+\+Welcome.\+HUD\+\_\+\+Welcome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor for \mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome}{HUD\+\_\+\+Welcome}} class. 
+
+Initializes the welcome screen \mbox{\hyperlink{class_u_i_1_1_h_u_d}{HUD}}. 
+
+Definition at line \mbox{\hyperlink{_h_u_d___welcome_8java_source_l00042}{42}} of file \mbox{\hyperlink{_h_u_d___welcome_8java_source}{HUD\+\_\+\+Welcome.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00042                         \{}
+\DoxyCodeLine{00043         super();}
+\DoxyCodeLine{00044         \mbox{\hyperlink{class_u_i_1_1_h_u_d_a2b2c87a34b30ab4ab62d4e58390b1560}{\_nbButtons}} = 3;}
+\DoxyCodeLine{00045         \mbox{\hyperlink{class_u_i_1_1_h_u_d_a89e962c43a04bc0bc065a74e6cd52720}{\_buttons}} = \textcolor{keyword}{new} ChoiceButton[\mbox{\hyperlink{class_u_i_1_1_h_u_d_a2b2c87a34b30ab4ab62d4e58390b1560}{\_nbButtons}}];}
+\DoxyCodeLine{00046         \mbox{\hyperlink{class_u_i_1_1_h_u_d_aa088352b4906398c1b83fa6e8e4d143a}{selection}} = Const.Selection.\mbox{\hyperlink{enumgame_1_1_const_1_1_selection_a3b636012e44482ba60b3a3bbddd397b0}{PLAY}};}
+\DoxyCodeLine{00047         \mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_adc724232180edb63081f4260ca9b8292}{page}} = 0;}
+\DoxyCodeLine{00048         \mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_a7a80b325173c6acbd8fde32d130e7d1a}{choiceClass}} = -\/1;}
+\DoxyCodeLine{00049 }
+\DoxyCodeLine{00050         \mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_ab210c7510c0076f2baba5215bc7c2846}{charactersDisplayed}} = \textcolor{keyword}{new} BufferedImage[Const.nbOfCharacters][Const.nbSpriteCharacterAnim];}
+\DoxyCodeLine{00051         \mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_a880c1ac206b91a91a7053043ea164dfb}{loadImages}}();}
+\DoxyCodeLine{00052 }
+\DoxyCodeLine{00053 }
+\DoxyCodeLine{00054         \mbox{\hyperlink{class_u_i_1_1_h_u_d_a89e962c43a04bc0bc065a74e6cd52720}{\_buttons}}[0] = \textcolor{keyword}{new} ChoiceButton(400, 80, \textcolor{stringliteral}{"{}JOUER"{}}, Const.fontName, Color.blue);}
+\DoxyCodeLine{00055         \mbox{\hyperlink{class_u_i_1_1_h_u_d_a89e962c43a04bc0bc065a74e6cd52720}{\_buttons}}[1] = \textcolor{keyword}{new} ChoiceButton(400, 80, \textcolor{stringliteral}{"{}QUITTER"{}}, Const.fontName, Color.blue);}
+\DoxyCodeLine{00056         \mbox{\hyperlink{class_u_i_1_1_h_u_d_a89e962c43a04bc0bc065a74e6cd52720}{\_buttons}}[2] = \textcolor{keyword}{new} ChoiceButton(200, 60, \textcolor{stringliteral}{"{}RETOUR"{}}, Const.fontName, Color.blue);}
+\DoxyCodeLine{00057         \mbox{\hyperlink{class_u_i_1_1_h_u_d_af1a376f1d7a53f60ddc82737289a35d8}{changeSelectionColor}}(0, Const.COLOR\_BUTTON\_text, Const.COLOR\_BUTTON\_text\_highlight, Const.COLOR\_BUTTON\_bg, Const.COLOR\_BUTTON\_bg\_highlight);}
+\DoxyCodeLine{00058 }
+\DoxyCodeLine{00059         \mbox{\hyperlink{class_u_i_1_1_h_u_d_ab189c729fc726de0438399eb83e8cae2}{\_texts}} = \textcolor{keyword}{new} Textbox[15];}
+\DoxyCodeLine{00060 }
+\DoxyCodeLine{00061         \textcolor{comment}{//Warrior class}}
+\DoxyCodeLine{00062         \mbox{\hyperlink{class_u_i_1_1_h_u_d_ab189c729fc726de0438399eb83e8cae2}{\_texts}}[0] = \textcolor{keyword}{new} Textbox(\textcolor{stringliteral}{"{}Guerrier"{}}, Const.fontName, 100, 30, Const.COLOR\_WELCOME\_blue);}
+\DoxyCodeLine{00063         \mbox{\hyperlink{class_u_i_1_1_h_u_d_ab189c729fc726de0438399eb83e8cae2}{\_texts}}[1] = \textcolor{keyword}{new} Textbox(\textcolor{stringliteral}{"{}+ Attaque\(\backslash\)n"{}}, Const.fontName, 80, 30, Const.COLOR\_WELCOME\_red);}
+\DoxyCodeLine{00064         \mbox{\hyperlink{class_u_i_1_1_h_u_d_ab189c729fc726de0438399eb83e8cae2}{\_texts}}[2] = \textcolor{keyword}{new} Textbox(\textcolor{stringliteral}{"{}+ Défense"{}},Const.fontName, 80, 30, Const.COLOR\_WELCOME\_red);}
+\DoxyCodeLine{00065         \mbox{\hyperlink{class_u_i_1_1_h_u_d_ab189c729fc726de0438399eb83e8cae2}{\_texts}}[3] = \textcolor{keyword}{new} Textbox(\textcolor{stringliteral}{"{}-\/ Vitesse"{}},Const.fontName, 80, 30, Const.COLOR\_WELCOME\_red);}
+\DoxyCodeLine{00066 }
+\DoxyCodeLine{00067         \textcolor{comment}{//Mage class}}
+\DoxyCodeLine{00068         \mbox{\hyperlink{class_u_i_1_1_h_u_d_ab189c729fc726de0438399eb83e8cae2}{\_texts}}[4] = \textcolor{keyword}{new} Textbox(\textcolor{stringliteral}{"{}Sorcier"{}}, Const.fontName, 100, 30, Const.COLOR\_WELCOME\_blue);}
+\DoxyCodeLine{00069         \mbox{\hyperlink{class_u_i_1_1_h_u_d_ab189c729fc726de0438399eb83e8cae2}{\_texts}}[5] = \textcolor{keyword}{new} Textbox(\textcolor{stringliteral}{"{}+ Attaque"{}}, Const.fontName, 80, 30, Const.COLOR\_WELCOME\_red);}
+\DoxyCodeLine{00070         \mbox{\hyperlink{class_u_i_1_1_h_u_d_ab189c729fc726de0438399eb83e8cae2}{\_texts}}[6] = \textcolor{keyword}{new} Textbox(\textcolor{stringliteral}{"{}-\/ Défense"{}}, Const.fontName, 80, 30, Const.COLOR\_WELCOME\_red);}
+\DoxyCodeLine{00071         \mbox{\hyperlink{class_u_i_1_1_h_u_d_ab189c729fc726de0438399eb83e8cae2}{\_texts}}[7] = \textcolor{keyword}{new} Textbox(\textcolor{stringliteral}{"{}+ Initiative"{}}, Const.fontName, 80, 30, Const.COLOR\_WELCOME\_red);}
+\DoxyCodeLine{00072 }
+\DoxyCodeLine{00073         \textcolor{comment}{//Rogue class}}
+\DoxyCodeLine{00074         \mbox{\hyperlink{class_u_i_1_1_h_u_d_ab189c729fc726de0438399eb83e8cae2}{\_texts}}[8] = \textcolor{keyword}{new} Textbox(\textcolor{stringliteral}{"{}Assassin"{}}, Const.fontName, 100, 30, Const.COLOR\_WELCOME\_blue);}
+\DoxyCodeLine{00075         \mbox{\hyperlink{class_u_i_1_1_h_u_d_ab189c729fc726de0438399eb83e8cae2}{\_texts}}[9] = \textcolor{keyword}{new} Textbox(\textcolor{stringliteral}{"{}++ Attaque"{}}, Const.fontName, 100, 30, Const.COLOR\_WELCOME\_red);}
+\DoxyCodeLine{00076         \mbox{\hyperlink{class_u_i_1_1_h_u_d_ab189c729fc726de0438399eb83e8cae2}{\_texts}}[10] = \textcolor{keyword}{new} Textbox(\textcolor{stringliteral}{"{}-\/-\/ Défense"{}}, Const.fontName, 100, 30, Const.COLOR\_WELCOME\_red);}
+\DoxyCodeLine{00077         \mbox{\hyperlink{class_u_i_1_1_h_u_d_ab189c729fc726de0438399eb83e8cae2}{\_texts}}[11] = \textcolor{keyword}{new} Textbox(\textcolor{stringliteral}{"{}+ Agilité"{}}, Const.fontName, 100, 30, Const.COLOR\_WELCOME\_red);}
+\DoxyCodeLine{00078 }
+\DoxyCodeLine{00079 }
+\DoxyCodeLine{00080         \textcolor{comment}{//End game title screen}}
+\DoxyCodeLine{00081         \mbox{\hyperlink{class_u_i_1_1_h_u_d_ab189c729fc726de0438399eb83e8cae2}{\_texts}}[12] = \textcolor{keyword}{new} Textbox(\textcolor{stringliteral}{"{}Vous avez perdu !"{}}, Const.fontName, 400, 90, Const.COLOR\_WELCOME\_red); \textcolor{comment}{//Game lost !}}
+\DoxyCodeLine{00082         \mbox{\hyperlink{class_u_i_1_1_h_u_d_ab189c729fc726de0438399eb83e8cae2}{\_texts}}[13] = \textcolor{keyword}{new} Textbox(\textcolor{stringliteral}{"{}Vous avez gagné !"{}}, Const.fontName, 400, 90, Const.COLOR\_WON\_green); \textcolor{comment}{//Game won !}}
+\DoxyCodeLine{00083         \mbox{\hyperlink{class_u_i_1_1_h_u_d_ab189c729fc726de0438399eb83e8cae2}{\_texts}}[14] = \textcolor{keyword}{new} Textbox(\textcolor{stringliteral}{"{}Merci d'avoir joué !"{}}, Const.fontName, 350, 90, Const.COLOR\_WELCOME\_white);\textcolor{comment}{//Thanks for playing}}
+\DoxyCodeLine{00084     \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_1_1_h_u_d___welcome_a105e327520a5d5c473b5fc889feb31c0_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_i_1_1_h_u_d___welcome_af1953ece042c830a42fcb0a781d92094}\label{class_u_i_1_1_h_u_d___welcome_af1953ece042c830a42fcb0a781d92094}} 
+\index{UI.HUD\_Welcome@{UI.HUD\_Welcome}!draw@{draw}}
+\index{draw@{draw}!UI.HUD\_Welcome@{UI.HUD\_Welcome}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void UI.\+HUD\+\_\+\+Welcome.\+draw (\begin{DoxyParamCaption}\item[{Graphics2D}]{g2 }\end{DoxyParamCaption})}
+
+
+
+Draws the welcome screen \mbox{\hyperlink{class_u_i_1_1_h_u_d}{HUD}} on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g2} & Graphics2D object for drawing. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_u_i_1_1_h_u_d_acf73daced1b23ea24b73216f6a23f587}{UI.\+HUD}}.
+
+
+
+Definition at line \mbox{\hyperlink{_h_u_d___welcome_8java_source_l00194}{194}} of file \mbox{\hyperlink{_h_u_d___welcome_8java_source}{HUD\+\_\+\+Welcome.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00194                                    \{}
+\DoxyCodeLine{00195         \textcolor{comment}{//If new game, then display the welcome menu}}
+\DoxyCodeLine{00196         \textcolor{keywordflow}{if}(Scene.state == Const.State.WELCOME)\{}
+\DoxyCodeLine{00197             \textcolor{comment}{//Draw background}}
+\DoxyCodeLine{00198             g2.drawImage(\mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_a03686b9319d9fdc4fa49c235cbc7a38c}{bg}}, 0,0, \textcolor{keyword}{null});}
+\DoxyCodeLine{00199             }
+\DoxyCodeLine{00200             \textcolor{keywordflow}{switch}(\mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_adc724232180edb63081f4260ca9b8292}{page}})\{}
+\DoxyCodeLine{00201                 \textcolor{keywordflow}{case} 0:     \textcolor{comment}{//Real welcome main menu}}
+\DoxyCodeLine{00202                     \mbox{\hyperlink{class_u_i_1_1_h_u_d_a89e962c43a04bc0bc065a74e6cd52720}{\_buttons}}[0].\mbox{\hyperlink{class_u_i_1_1_choice_button_a1000744853168892a77f3aaa14886739}{draw}}(g2,200,160);}
+\DoxyCodeLine{00203                     \mbox{\hyperlink{class_u_i_1_1_h_u_d_a89e962c43a04bc0bc065a74e6cd52720}{\_buttons}}[1].\mbox{\hyperlink{class_u_i_1_1_choice_button_a1000744853168892a77f3aaa14886739}{draw}}(g2,200,320);}
+\DoxyCodeLine{00204                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00205 }
+\DoxyCodeLine{00206                 \textcolor{keywordflow}{case} 1:     \textcolor{comment}{//Choice between different classes}}
+\DoxyCodeLine{00207 }
+\DoxyCodeLine{00208                     \textcolor{comment}{//Drawing differents characters}}
+\DoxyCodeLine{00209                     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<Const.nbOfCharacters;i++)\{ }
+\DoxyCodeLine{00210                         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_a7a80b325173c6acbd8fde32d130e7d1a}{choiceClass}} == i)\{   \textcolor{comment}{//If the caracter is selected, update his animations}}
+\DoxyCodeLine{00211                             }
+\DoxyCodeLine{00212                             \textcolor{comment}{//Change text colors for more visibility}}
+\DoxyCodeLine{00213                             \mbox{\hyperlink{class_u_i_1_1_h_u_d_ab189c729fc726de0438399eb83e8cae2}{\_texts}}[4*i].\mbox{\hyperlink{class_u_i_1_1_textbox_a4725a8ec93796dcc1a2aa14ad16952f6}{setColor}}(Const.COLOR\_WELCOME\_blue);}
+\DoxyCodeLine{00214                             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=1;j<4;j++)\{}
+\DoxyCodeLine{00215                                 \mbox{\hyperlink{class_u_i_1_1_h_u_d_ab189c729fc726de0438399eb83e8cae2}{\_texts}}[4*i+j].\mbox{\hyperlink{class_u_i_1_1_textbox_a4725a8ec93796dcc1a2aa14ad16952f6}{setColor}}(Const.COLOR\_WELCOME\_green);}
+\DoxyCodeLine{00216                             \}}
+\DoxyCodeLine{00217                             }
+\DoxyCodeLine{00218                             }
+\DoxyCodeLine{00219                             \textcolor{comment}{//Little design for selection}}
+\DoxyCodeLine{00220                             g2.setColor(Color.black);}
+\DoxyCodeLine{00221                             g2.fillRect(125*(1+i)+i*Const.FGHT\_entityScreenSize -\/ 25 -\/ 10,(Const.WDW\_height-\/Const.FGHT\_entityScreenSize)/2-\/80 +10,Const.FGHT\_entityScreenSize + 50 +4, Const.FGHT\_entityScreenSize + 100 +4);}
+\DoxyCodeLine{00222                             }
+\DoxyCodeLine{00223                             \textcolor{comment}{//Draw a little background for each character}}
+\DoxyCodeLine{00224                             g2.setColor(Const.COLOR\_BUTTON\_bg\_highlight);}
+\DoxyCodeLine{00225                             g2.drawRect(125*(1+i)+i*Const.FGHT\_entityScreenSize -\/ 25 -\/ 2,(Const.WDW\_height-\/Const.FGHT\_entityScreenSize)/2-\/80 -\/ 2,Const.FGHT\_entityScreenSize + 50 +4, Const.FGHT\_entityScreenSize + 100 +4);}
+\DoxyCodeLine{00226                             g2.fillRect(125*(1+i)+i*Const.FGHT\_entityScreenSize -\/ 25,(Const.WDW\_height-\/Const.FGHT\_entityScreenSize)/2-\/80,Const.FGHT\_entityScreenSize + 50, Const.FGHT\_entityScreenSize + 100);}
+\DoxyCodeLine{00227                             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<Const.nbSpriteCharacterAnim;j++)\{}
+\DoxyCodeLine{00228                                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_a6ac5c50c6a7db5f7eaf2c3bdc11e5a98}{spriteCnt}} == j)}
+\DoxyCodeLine{00229                                     \textcolor{comment}{//Draw character}}
+\DoxyCodeLine{00230                                     g2.drawImage(\mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_ab210c7510c0076f2baba5215bc7c2846}{charactersDisplayed}}[\mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_a7a80b325173c6acbd8fde32d130e7d1a}{choiceClass}}][j], 125*(1+i)+i*Const.FGHT\_entityScreenSize,(Const.WDW\_height-\/Const.FGHT\_entityScreenSize)/2-\/50, Const.FGHT\_entityScreenSize,Const.FGHT\_entityScreenSize,\textcolor{keyword}{null});}
+\DoxyCodeLine{00231                             \}}
+\DoxyCodeLine{00232                         \}}
+\DoxyCodeLine{00233                         \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00234                             \textcolor{comment}{//Change text colors for more visibility}}
+\DoxyCodeLine{00235                             \mbox{\hyperlink{class_u_i_1_1_h_u_d_ab189c729fc726de0438399eb83e8cae2}{\_texts}}[4*i].\mbox{\hyperlink{class_u_i_1_1_textbox_a4725a8ec93796dcc1a2aa14ad16952f6}{setColor}}(Const.COLOR\_WELCOME\_blue\_highlight);}
+\DoxyCodeLine{00236 }
+\DoxyCodeLine{00237                             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=1;j<4;j++)\{}
+\DoxyCodeLine{00238                                 \mbox{\hyperlink{class_u_i_1_1_h_u_d_ab189c729fc726de0438399eb83e8cae2}{\_texts}}[4*i+j].\mbox{\hyperlink{class_u_i_1_1_textbox_a4725a8ec93796dcc1a2aa14ad16952f6}{setColor}}(Const.COLOR\_WELCOME\_red);}
+\DoxyCodeLine{00239                             \}}
+\DoxyCodeLine{00240                             \textcolor{comment}{//Draw a little background for each character}}
+\DoxyCodeLine{00241                             g2.setColor(Const.COLOR\_BUTTON\_bg);}
+\DoxyCodeLine{00242                             g2.drawRect(125*(1+i)+i*Const.FGHT\_entityScreenSize -\/ 25 -\/2,(Const.WDW\_height-\/Const.FGHT\_entityScreenSize)/2-\/80 -\/2,Const.FGHT\_entityScreenSize + 50 +4, Const.FGHT\_entityScreenSize + 100 +4);}
+\DoxyCodeLine{00243                             g2.fillRect(125*(1+i)+i*Const.FGHT\_entityScreenSize -\/ 25,(Const.WDW\_height-\/Const.FGHT\_entityScreenSize)/2-\/80,Const.FGHT\_entityScreenSize + 50, Const.FGHT\_entityScreenSize + 100);}
+\DoxyCodeLine{00244                             }
+\DoxyCodeLine{00245                             \textcolor{comment}{//Draw character}}
+\DoxyCodeLine{00246                             g2.drawImage(\mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_ab210c7510c0076f2baba5215bc7c2846}{charactersDisplayed}}[i][0], 125*(1+i)+i*Const.FGHT\_entityScreenSize,(Const.WDW\_height-\/Const.FGHT\_entityScreenSize)/2-\/50, Const.FGHT\_entityScreenSize,Const.FGHT\_entityScreenSize,\textcolor{keyword}{null});}
+\DoxyCodeLine{00247                         \}}
+\DoxyCodeLine{00248 }
+\DoxyCodeLine{00249                         \textcolor{comment}{//Name of the class}}
+\DoxyCodeLine{00250                         \mbox{\hyperlink{class_u_i_1_1_h_u_d_ab189c729fc726de0438399eb83e8cae2}{\_texts}}[4*i].\mbox{\hyperlink{class_u_i_1_1_textbox_aab675a99675e6ba3e03630cf973f2799}{draw}}(g2,125*(1+i)+i*Const.FGHT\_entityScreenSize -\/ 25,(Const.WDW\_height-\/Const.FGHT\_entityScreenSize)/2-\/80);}
+\DoxyCodeLine{00251                         \textcolor{comment}{//More stats informations about the character class:}}
+\DoxyCodeLine{00252                         \mbox{\hyperlink{class_u_i_1_1_h_u_d_ab189c729fc726de0438399eb83e8cae2}{\_texts}}[4*i+1].\mbox{\hyperlink{class_u_i_1_1_textbox_aab675a99675e6ba3e03630cf973f2799}{draw}}(g2,125*(1+i)+i*Const.FGHT\_entityScreenSize -\/ 40,(Const.WDW\_height-\/Const.FGHT\_entityScreenSize)/2+50);}
+\DoxyCodeLine{00253                         \mbox{\hyperlink{class_u_i_1_1_h_u_d_ab189c729fc726de0438399eb83e8cae2}{\_texts}}[4*i+2].\mbox{\hyperlink{class_u_i_1_1_textbox_aab675a99675e6ba3e03630cf973f2799}{draw}}(g2,125*(1+i)+i*Const.FGHT\_entityScreenSize -\/ 40,(Const.WDW\_height-\/Const.FGHT\_entityScreenSize)/2+70);}
+\DoxyCodeLine{00254                         \mbox{\hyperlink{class_u_i_1_1_h_u_d_ab189c729fc726de0438399eb83e8cae2}{\_texts}}[4*i+3].\mbox{\hyperlink{class_u_i_1_1_textbox_aab675a99675e6ba3e03630cf973f2799}{draw}}(g2,125*(1+i)+i*Const.FGHT\_entityScreenSize -\/ 40 ,(Const.WDW\_height-\/Const.FGHT\_entityScreenSize)/2+90);}
+\DoxyCodeLine{00255                     \}}
+\DoxyCodeLine{00256 }
+\DoxyCodeLine{00257                     \textcolor{comment}{//Drawing the go back button}}
+\DoxyCodeLine{00258                 \mbox{\hyperlink{class_u_i_1_1_h_u_d_a89e962c43a04bc0bc065a74e6cd52720}{\_buttons}}[2].\mbox{\hyperlink{class_u_i_1_1_choice_button_a1000744853168892a77f3aaa14886739}{draw}}(g2, (Const.WDW\_width -\/ \mbox{\hyperlink{class_u_i_1_1_h_u_d_a89e962c43a04bc0bc065a74e6cd52720}{\_buttons}}[2].\mbox{\hyperlink{class_u_i_1_1_choice_button_a1e99b395d0551ce2a7e867a40f7ccdeb}{width}})/2,500);}
+\DoxyCodeLine{00259                     }
+\DoxyCodeLine{00260                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00261                 }
+\DoxyCodeLine{00262                 \textcolor{keywordflow}{default}: \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00263             \}}
+\DoxyCodeLine{00264         \}}
+\DoxyCodeLine{00265 }
+\DoxyCodeLine{00266 }
+\DoxyCodeLine{00267 }
+\DoxyCodeLine{00268         \textcolor{comment}{// Check if the player has lost in the fight scene}}
+\DoxyCodeLine{00269         \textcolor{keywordflow}{if}(FightScene.state == Const.FightState.LOST)\{           }
+\DoxyCodeLine{00270             \textcolor{comment}{// Draw the losing messages on the screen}}
+\DoxyCodeLine{00271             \mbox{\hyperlink{class_u_i_1_1_h_u_d_ab189c729fc726de0438399eb83e8cae2}{\_texts}}[12].\mbox{\hyperlink{class_u_i_1_1_textbox_aab675a99675e6ba3e03630cf973f2799}{draw}}(g2, 0, 150);}
+\DoxyCodeLine{00272             \mbox{\hyperlink{class_u_i_1_1_h_u_d_ab189c729fc726de0438399eb83e8cae2}{\_texts}}[14].\mbox{\hyperlink{class_u_i_1_1_textbox_aab675a99675e6ba3e03630cf973f2799}{draw}}(g2, -\/20, 280);}
+\DoxyCodeLine{00273 }
+\DoxyCodeLine{00274             \textcolor{comment}{// Draw a separator line}}
+\DoxyCodeLine{00275             g2.setColor(Const.COLOR\_WELCOME\_white);}
+\DoxyCodeLine{00276             g2.fillRect(50, 400, Const.WDW\_width -\/ 100, 4);}
+\DoxyCodeLine{00277         \}}
+\DoxyCodeLine{00278 }
+\DoxyCodeLine{00279         \textcolor{comment}{// Check if the player has lost in the fight scene}}
+\DoxyCodeLine{00280         \textcolor{keywordflow}{if}(Scene.state == Const.State.WON)\{           }
+\DoxyCodeLine{00281             \textcolor{comment}{// Draw the losing messages on the screen}}
+\DoxyCodeLine{00282             \mbox{\hyperlink{class_u_i_1_1_h_u_d_ab189c729fc726de0438399eb83e8cae2}{\_texts}}[13].\mbox{\hyperlink{class_u_i_1_1_textbox_aab675a99675e6ba3e03630cf973f2799}{draw}}(g2, 0, 150);}
+\DoxyCodeLine{00283             \mbox{\hyperlink{class_u_i_1_1_h_u_d_ab189c729fc726de0438399eb83e8cae2}{\_texts}}[14].\mbox{\hyperlink{class_u_i_1_1_textbox_aab675a99675e6ba3e03630cf973f2799}{draw}}(g2, -\/20, 280);}
+\DoxyCodeLine{00284 }
+\DoxyCodeLine{00285             \textcolor{comment}{// Draw a separator line}}
+\DoxyCodeLine{00286             g2.setColor(Const.COLOR\_WELCOME\_white);}
+\DoxyCodeLine{00287             g2.fillRect(50, 400, Const.WDW\_width -\/ 100, 4);}
+\DoxyCodeLine{00288         \}}
+\DoxyCodeLine{00289     \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_1_1_h_u_d___welcome_af1953ece042c830a42fcb0a781d92094_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_i_1_1_h_u_d___welcome_a880c1ac206b91a91a7053043ea164dfb}\label{class_u_i_1_1_h_u_d___welcome_a880c1ac206b91a91a7053043ea164dfb}} 
+\index{UI.HUD\_Welcome@{UI.HUD\_Welcome}!loadImages@{loadImages}}
+\index{loadImages@{loadImages}!UI.HUD\_Welcome@{UI.HUD\_Welcome}}
+\doxysubsubsection{\texorpdfstring{loadImages()}{loadImages()}}
+{\footnotesize\ttfamily void UI.\+HUD\+\_\+\+Welcome.\+load\+Images (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Function used to load the images of the different characters\textquotesingle{} classes. 
+
+
+
+Definition at line \mbox{\hyperlink{_h_u_d___welcome_8java_source_l00311}{311}} of file \mbox{\hyperlink{_h_u_d___welcome_8java_source}{HUD\+\_\+\+Welcome.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00311                              \{}
+\DoxyCodeLine{00312         \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{00313             \mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_a03686b9319d9fdc4fa49c235cbc7a38c}{bg}} = ImageIO.read(\textcolor{keyword}{new} FileInputStream(\textcolor{stringliteral}{"{}res/hud/welcome.png"{}}));}
+\DoxyCodeLine{00314             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<Const.nbSpriteCharacterAnim;i++)\{}
+\DoxyCodeLine{00315                 \mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_ab210c7510c0076f2baba5215bc7c2846}{charactersDisplayed}}[0][i] = ImageIO.read(\textcolor{keyword}{new} FileInputStream(\textcolor{stringliteral}{"{}res/entity/character/idle/warrior/down"{}}+(i+1)+\textcolor{stringliteral}{"{}.png"{}}));}
+\DoxyCodeLine{00316                 \mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_ab210c7510c0076f2baba5215bc7c2846}{charactersDisplayed}}[1][i] = ImageIO.read(\textcolor{keyword}{new} FileInputStream(\textcolor{stringliteral}{"{}res/entity/character/idle/mage/down"{}}+(i+1)+\textcolor{stringliteral}{"{}.png"{}}));}
+\DoxyCodeLine{00317                 \mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_ab210c7510c0076f2baba5215bc7c2846}{charactersDisplayed}}[2][i] = ImageIO.read(\textcolor{keyword}{new} FileInputStream(\textcolor{stringliteral}{"{}res/entity/character/idle/rogue/down"{}}+(i+1)+\textcolor{stringliteral}{"{}.png"{}}));}
+\DoxyCodeLine{00318             \}}
+\DoxyCodeLine{00319         \} \textcolor{keywordflow}{catch} (IOException e) \{}
+\DoxyCodeLine{00320             e.printStackTrace();}
+\DoxyCodeLine{00321         \}}
+\DoxyCodeLine{00322     \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_1_1_h_u_d___welcome_a880c1ac206b91a91a7053043ea164dfb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_i_1_1_h_u_d___welcome_a01d4879c34dd5903100fd49327fb4605}\label{class_u_i_1_1_h_u_d___welcome_a01d4879c34dd5903100fd49327fb4605}} 
+\index{UI.HUD\_Welcome@{UI.HUD\_Welcome}!selectClass@{selectClass}}
+\index{selectClass@{selectClass}!UI.HUD\_Welcome@{UI.HUD\_Welcome}}
+\doxysubsubsection{\texorpdfstring{selectClass()}{selectClass()}}
+{\footnotesize\ttfamily void UI.\+HUD\+\_\+\+Welcome.\+select\+Class (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates the relevant class according to the class selected. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_u_i_1_1_h_u_d_ac1eebe40213bbdea3640023dcf98472d}{UI.\+HUD}}.
+
+
+
+Definition at line \mbox{\hyperlink{_h_u_d___welcome_8java_source_l00294}{294}} of file \mbox{\hyperlink{_h_u_d___welcome_8java_source}{HUD\+\_\+\+Welcome.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00294                              \{}
+\DoxyCodeLine{00295         \textcolor{keywordflow}{switch}(\mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_a7a80b325173c6acbd8fde32d130e7d1a}{choiceClass}})\{}
+\DoxyCodeLine{00296             \textcolor{keywordflow}{case} 0:}
+\DoxyCodeLine{00297                 World.player = \textcolor{keyword}{new} Warrior(\textcolor{stringliteral}{"{}warrior"{}},Const.WRLD\_spawnX,Const.WRLD\_spawnY,0,0,0,\textcolor{stringliteral}{"{}down"{}},4,20); \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00298             \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{00299                 World.player = \textcolor{keyword}{new} Wizard(\textcolor{stringliteral}{"{}mage"{}},Const.WRLD\_spawnX,Const.WRLD\_spawnY,0,0,0,\textcolor{stringliteral}{"{}down"{}},4,20); \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00300             \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{00301                 World.player = \textcolor{keyword}{new} Rogue(\textcolor{stringliteral}{"{}rogue"{}},Const.WRLD\_spawnX,Const.WRLD\_spawnY,0,0,0,\textcolor{stringliteral}{"{}down"{}},4,20); \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00302             \textcolor{keywordflow}{default}: }
+\DoxyCodeLine{00303                 System.out.println(\textcolor{stringliteral}{"{}ERROR selecting the class"{}});}
+\DoxyCodeLine{00304         \}}
+\DoxyCodeLine{00305 }
+\DoxyCodeLine{00306     \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_1_1_h_u_d___welcome_a01d4879c34dd5903100fd49327fb4605_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_i_1_1_h_u_d___welcome_ae8e93f747d3a375eae9ec820501b926c}\label{class_u_i_1_1_h_u_d___welcome_ae8e93f747d3a375eae9ec820501b926c}} 
+\index{UI.HUD\_Welcome@{UI.HUD\_Welcome}!update@{update}}
+\index{update@{update}!UI.HUD\_Welcome@{UI.HUD\_Welcome}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void UI.\+HUD\+\_\+\+Welcome.\+update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the welcome screen \mbox{\hyperlink{class_u_i_1_1_h_u_d}{HUD}}. 
+
+Currently, this method has no implementation. 
+
+Reimplemented from \mbox{\hyperlink{class_u_i_1_1_h_u_d_ad0c1abd2a8e1c763e8c508b4535cbe68}{UI.\+HUD}}.
+
+
+
+Definition at line \mbox{\hyperlink{_h_u_d___welcome_8java_source_l00090}{90}} of file \mbox{\hyperlink{_h_u_d___welcome_8java_source}{HUD\+\_\+\+Welcome.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00090                         \{}
+\DoxyCodeLine{00091         \textcolor{keywordflow}{if}(Scene.keyH.escPressed || (\mbox{\hyperlink{class_u_i_1_1_h_u_d_a1e5874ed325ff773543bfc51db70f5af}{confirm}} \&\& \mbox{\hyperlink{class_u_i_1_1_h_u_d_aa088352b4906398c1b83fa6e8e4d143a}{selection}} == Const.Selection.\mbox{\hyperlink{enumgame_1_1_const_1_1_selection_add3a8169fcff2520e65771c6ec6d05ab}{BACK}}))\{}
+\DoxyCodeLine{00092             \textcolor{keywordflow}{if}(FightScene.state == Const.FightState.LOST)\{}
+\DoxyCodeLine{00093                 System.exit(0);}
+\DoxyCodeLine{00094             \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(Scene.state == Const.State.WON)\{}
+\DoxyCodeLine{00095                 System.exit(0);}
+\DoxyCodeLine{00096             \}}
+\DoxyCodeLine{00097             \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00098                 \mbox{\hyperlink{class_u_i_1_1_h_u_d_aa088352b4906398c1b83fa6e8e4d143a}{selection}} = Const.Selection.\mbox{\hyperlink{enumgame_1_1_const_1_1_selection_a3b636012e44482ba60b3a3bbddd397b0}{PLAY}};}
+\DoxyCodeLine{00099                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_adc724232180edb63081f4260ca9b8292}{page}} != 0)\{}
+\DoxyCodeLine{00100                     \mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_adc724232180edb63081f4260ca9b8292}{page}}-\/-\/; \textcolor{comment}{//Go back to the previous page}}
+\DoxyCodeLine{00101                     \mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_a7a80b325173c6acbd8fde32d130e7d1a}{choiceClass}} = -\/1;}
+\DoxyCodeLine{00102                     Scene.keyH.escPressed = \textcolor{keyword}{false};}
+\DoxyCodeLine{00103                     \mbox{\hyperlink{class_u_i_1_1_h_u_d_a1e5874ed325ff773543bfc51db70f5af}{confirm}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{00104                 \}}
+\DoxyCodeLine{00105             \}}
+\DoxyCodeLine{00106         \}}
+\DoxyCodeLine{00107         \textcolor{keywordflow}{if}(Scene.keyH.downPressed || Scene.keyH.upPressed)\{}
+\DoxyCodeLine{00108             \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_adc724232180edb63081f4260ca9b8292}{page}} == 0)\{}
+\DoxyCodeLine{00109                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_u_i_1_1_h_u_d_aa088352b4906398c1b83fa6e8e4d143a}{selection}} == Const.Selection.\mbox{\hyperlink{enumgame_1_1_const_1_1_selection_a3b636012e44482ba60b3a3bbddd397b0}{PLAY}})\{}
+\DoxyCodeLine{00110                     \mbox{\hyperlink{class_u_i_1_1_h_u_d_af1a376f1d7a53f60ddc82737289a35d8}{changeSelectionColor}}(1, Const.COLOR\_BUTTON\_text, Const.COLOR\_BUTTON\_text\_highlight, Const.COLOR\_BUTTON\_bg, Const.COLOR\_BUTTON\_bg\_highlight);}
+\DoxyCodeLine{00111                     \mbox{\hyperlink{class_u_i_1_1_h_u_d_aa088352b4906398c1b83fa6e8e4d143a}{selection}} = Const.Selection.\mbox{\hyperlink{enumgame_1_1_const_1_1_selection_a53966c015bfb66719308f4ad9c817e2f}{QUIT}};}
+\DoxyCodeLine{00112                 \}}
+\DoxyCodeLine{00113                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_u_i_1_1_h_u_d_aa088352b4906398c1b83fa6e8e4d143a}{selection}} == Const.Selection.\mbox{\hyperlink{enumgame_1_1_const_1_1_selection_a53966c015bfb66719308f4ad9c817e2f}{QUIT}})\{}
+\DoxyCodeLine{00114                     \mbox{\hyperlink{class_u_i_1_1_h_u_d_af1a376f1d7a53f60ddc82737289a35d8}{changeSelectionColor}}(0, Const.COLOR\_BUTTON\_text, Const.COLOR\_BUTTON\_text\_highlight, Const.COLOR\_BUTTON\_bg, Const.COLOR\_BUTTON\_bg\_highlight);}
+\DoxyCodeLine{00115                     \mbox{\hyperlink{class_u_i_1_1_h_u_d_aa088352b4906398c1b83fa6e8e4d143a}{selection}} = Const.Selection.\mbox{\hyperlink{enumgame_1_1_const_1_1_selection_a3b636012e44482ba60b3a3bbddd397b0}{PLAY}};}
+\DoxyCodeLine{00116                 \}}
+\DoxyCodeLine{00117             \}}
+\DoxyCodeLine{00118             \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00119                 \textcolor{keywordflow}{if}(Scene.keyH.downPressed \&\& \mbox{\hyperlink{class_u_i_1_1_h_u_d_aa088352b4906398c1b83fa6e8e4d143a}{selection}} == Const.Selection.\mbox{\hyperlink{enumgame_1_1_const_1_1_selection_a45d0599101a2c6ad3b5aa6a78b099b3a}{NONE}})\{}
+\DoxyCodeLine{00120                     \mbox{\hyperlink{class_u_i_1_1_h_u_d_aa088352b4906398c1b83fa6e8e4d143a}{selection}} = Const.Selection.\mbox{\hyperlink{enumgame_1_1_const_1_1_selection_add3a8169fcff2520e65771c6ec6d05ab}{BACK}};}
+\DoxyCodeLine{00121                     \mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_a7a80b325173c6acbd8fde32d130e7d1a}{choiceClass}}=-\/1;}
+\DoxyCodeLine{00122                     \mbox{\hyperlink{class_u_i_1_1_h_u_d_af1a376f1d7a53f60ddc82737289a35d8}{changeSelectionColor}}(2, Const.COLOR\_BUTTON\_text, Const.COLOR\_BUTTON\_text\_highlight, Const.COLOR\_BUTTON\_bg, Const.COLOR\_BUTTON\_bg\_highlight);}
+\DoxyCodeLine{00123                 \}}
+\DoxyCodeLine{00124                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(Scene.keyH.upPressed \&\& \mbox{\hyperlink{class_u_i_1_1_h_u_d_aa088352b4906398c1b83fa6e8e4d143a}{selection}} == Const.Selection.\mbox{\hyperlink{enumgame_1_1_const_1_1_selection_add3a8169fcff2520e65771c6ec6d05ab}{BACK}})\{}
+\DoxyCodeLine{00125                     \mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_a7a80b325173c6acbd8fde32d130e7d1a}{choiceClass}} = 1;}
+\DoxyCodeLine{00126                     \mbox{\hyperlink{class_u_i_1_1_h_u_d_aa088352b4906398c1b83fa6e8e4d143a}{selection}} = Const.Selection.\mbox{\hyperlink{enumgame_1_1_const_1_1_selection_a45d0599101a2c6ad3b5aa6a78b099b3a}{NONE}};}
+\DoxyCodeLine{00127                     \mbox{\hyperlink{class_u_i_1_1_h_u_d_af1a376f1d7a53f60ddc82737289a35d8}{changeSelectionColor}}(0, Const.COLOR\_BUTTON\_text, Const.COLOR\_BUTTON\_text\_highlight, Const.COLOR\_BUTTON\_bg, Const.COLOR\_BUTTON\_bg\_highlight);}
+\DoxyCodeLine{00128                 \}}
+\DoxyCodeLine{00129             \}}
+\DoxyCodeLine{00130             Scene.keyH.downPressed = \textcolor{keyword}{false};}
+\DoxyCodeLine{00131             Scene.keyH.upPressed = \textcolor{keyword}{false};}
+\DoxyCodeLine{00132         \}}
+\DoxyCodeLine{00133         \textcolor{keywordflow}{if}(Scene.keyH.rightPressed)\{        \textcolor{comment}{//Chose between different character classes}}
+\DoxyCodeLine{00134             \mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_a7a80b325173c6acbd8fde32d130e7d1a}{choiceClass}}++;}
+\DoxyCodeLine{00135             \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_a7a80b325173c6acbd8fde32d130e7d1a}{choiceClass}} >= Const.nbOfCharacters)}
+\DoxyCodeLine{00136                 \mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_a7a80b325173c6acbd8fde32d130e7d1a}{choiceClass}} = 0;}
+\DoxyCodeLine{00137             Scene.keyH.rightPressed = \textcolor{keyword}{false};}
+\DoxyCodeLine{00138         \}}
+\DoxyCodeLine{00139         \textcolor{keywordflow}{if}(Scene.keyH.leftPressed)\{         \textcolor{comment}{//Chose between different character classes}}
+\DoxyCodeLine{00140             \mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_a7a80b325173c6acbd8fde32d130e7d1a}{choiceClass}}-\/-\/;}
+\DoxyCodeLine{00141             \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_a7a80b325173c6acbd8fde32d130e7d1a}{choiceClass}} < 0)}
+\DoxyCodeLine{00142                 \mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_a7a80b325173c6acbd8fde32d130e7d1a}{choiceClass}} = Const.nbOfCharacters -\/1;}
+\DoxyCodeLine{00143             Scene.keyH.leftPressed = \textcolor{keyword}{false};}
+\DoxyCodeLine{00144         \}}
+\DoxyCodeLine{00145 }
+\DoxyCodeLine{00146 }
+\DoxyCodeLine{00147 }
+\DoxyCodeLine{00148 }
+\DoxyCodeLine{00149         \textcolor{comment}{//Confirming}}
+\DoxyCodeLine{00150         \textcolor{keywordflow}{if}(Scene.keyH.interactPressed)\{}
+\DoxyCodeLine{00151             \mbox{\hyperlink{class_u_i_1_1_h_u_d_a1e5874ed325ff773543bfc51db70f5af}{confirm}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{00152             Scene.keyH.interactPressed = \textcolor{keyword}{false};}
+\DoxyCodeLine{00153         \}}
+\DoxyCodeLine{00154         }
+\DoxyCodeLine{00155         \textcolor{comment}{//Checking what is confirmed}}
+\DoxyCodeLine{00156         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_u_i_1_1_h_u_d_a1e5874ed325ff773543bfc51db70f5af}{confirm}})\{}
+\DoxyCodeLine{00157             \textcolor{keywordflow}{switch}(\mbox{\hyperlink{class_u_i_1_1_h_u_d_aa088352b4906398c1b83fa6e8e4d143a}{selection}}.toString())\{}
+\DoxyCodeLine{00158                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}PLAY"{}}:}
+\DoxyCodeLine{00159                     \mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_adc724232180edb63081f4260ca9b8292}{page}}=1;}
+\DoxyCodeLine{00160                     \mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_a7a80b325173c6acbd8fde32d130e7d1a}{choiceClass}} = 0;}
+\DoxyCodeLine{00161                     \mbox{\hyperlink{class_u_i_1_1_h_u_d_aa088352b4906398c1b83fa6e8e4d143a}{selection}} = Const.Selection.\mbox{\hyperlink{enumgame_1_1_const_1_1_selection_a45d0599101a2c6ad3b5aa6a78b099b3a}{NONE}};}
+\DoxyCodeLine{00162                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00163                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}QUIT"{}}:}
+\DoxyCodeLine{00164                     System.exit(0); \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00165                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}BACK"{}}:}
+\DoxyCodeLine{00166                     \mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_adc724232180edb63081f4260ca9b8292}{page}} = 0;}
+\DoxyCodeLine{00167                     \mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_a7a80b325173c6acbd8fde32d130e7d1a}{choiceClass}} = -\/1;}
+\DoxyCodeLine{00168                     \mbox{\hyperlink{class_u_i_1_1_h_u_d_aa088352b4906398c1b83fa6e8e4d143a}{selection}} = Const.Selection.\mbox{\hyperlink{enumgame_1_1_const_1_1_selection_a3b636012e44482ba60b3a3bbddd397b0}{PLAY}};}
+\DoxyCodeLine{00169                     \mbox{\hyperlink{class_u_i_1_1_h_u_d_af1a376f1d7a53f60ddc82737289a35d8}{changeSelectionColor}}(0, Const.COLOR\_BUTTON\_text, Const.COLOR\_BUTTON\_text\_highlight, Const.COLOR\_BUTTON\_bg, Const.COLOR\_BUTTON\_bg\_highlight);}
+\DoxyCodeLine{00170                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00171                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}NONE"{}}:  \textcolor{comment}{//Chose the character class and create the game}}
+\DoxyCodeLine{00172                     \mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_a01d4879c34dd5903100fd49327fb4605}{selectClass}}();}
+\DoxyCodeLine{00173                     Scene.state = Const.State.WORLD;}
+\DoxyCodeLine{00174                 \textcolor{keywordflow}{default}:\textcolor{keywordflow}{break};}
+\DoxyCodeLine{00175             \}}
+\DoxyCodeLine{00176 }
+\DoxyCodeLine{00177             \mbox{\hyperlink{class_u_i_1_1_h_u_d_a1e5874ed325ff773543bfc51db70f5af}{confirm}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{00178         \}}
+\DoxyCodeLine{00179 }
+\DoxyCodeLine{00180         \mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_a39b586c42de8f149a6b8c265773fb2b7}{spriteUpdater}}++;}
+\DoxyCodeLine{00181         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_a39b586c42de8f149a6b8c265773fb2b7}{spriteUpdater}} > 20) \{}
+\DoxyCodeLine{00182             \mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_a6ac5c50c6a7db5f7eaf2c3bdc11e5a98}{spriteCnt}}++;}
+\DoxyCodeLine{00183             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_a6ac5c50c6a7db5f7eaf2c3bdc11e5a98}{spriteCnt}} == Const.nbSpriteCharacterAnim) \{}
+\DoxyCodeLine{00184                 \mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_a6ac5c50c6a7db5f7eaf2c3bdc11e5a98}{spriteCnt}} = 0;}
+\DoxyCodeLine{00185             \}}
+\DoxyCodeLine{00186             \mbox{\hyperlink{class_u_i_1_1_h_u_d___welcome_a39b586c42de8f149a6b8c265773fb2b7}{spriteUpdater}} = 0;}
+\DoxyCodeLine{00187         \}}
+\DoxyCodeLine{00188     \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_1_1_h_u_d___welcome_ae8e93f747d3a375eae9ec820501b926c_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_u_i_1_1_h_u_d___welcome_a03686b9319d9fdc4fa49c235cbc7a38c}\label{class_u_i_1_1_h_u_d___welcome_a03686b9319d9fdc4fa49c235cbc7a38c}} 
+\index{UI.HUD\_Welcome@{UI.HUD\_Welcome}!bg@{bg}}
+\index{bg@{bg}!UI.HUD\_Welcome@{UI.HUD\_Welcome}}
+\doxysubsubsection{\texorpdfstring{bg}{bg}}
+{\footnotesize\ttfamily Buffered\+Image UI.\+HUD\+\_\+\+Welcome.\+bg\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_h_u_d___welcome_8java_source_l00031}{31}} of file \mbox{\hyperlink{_h_u_d___welcome_8java_source}{HUD\+\_\+\+Welcome.\+java}}.
+
+\mbox{\Hypertarget{class_u_i_1_1_h_u_d___welcome_ab210c7510c0076f2baba5215bc7c2846}\label{class_u_i_1_1_h_u_d___welcome_ab210c7510c0076f2baba5215bc7c2846}} 
+\index{UI.HUD\_Welcome@{UI.HUD\_Welcome}!charactersDisplayed@{charactersDisplayed}}
+\index{charactersDisplayed@{charactersDisplayed}!UI.HUD\_Welcome@{UI.HUD\_Welcome}}
+\doxysubsubsection{\texorpdfstring{charactersDisplayed}{charactersDisplayed}}
+{\footnotesize\ttfamily Buffered\+Image \mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} UI.\+HUD\+\_\+\+Welcome.\+characters\+Displayed\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_h_u_d___welcome_8java_source_l00033}{33}} of file \mbox{\hyperlink{_h_u_d___welcome_8java_source}{HUD\+\_\+\+Welcome.\+java}}.
+
+\mbox{\Hypertarget{class_u_i_1_1_h_u_d___welcome_a7a80b325173c6acbd8fde32d130e7d1a}\label{class_u_i_1_1_h_u_d___welcome_a7a80b325173c6acbd8fde32d130e7d1a}} 
+\index{UI.HUD\_Welcome@{UI.HUD\_Welcome}!choiceClass@{choiceClass}}
+\index{choiceClass@{choiceClass}!UI.HUD\_Welcome@{UI.HUD\_Welcome}}
+\doxysubsubsection{\texorpdfstring{choiceClass}{choiceClass}}
+{\footnotesize\ttfamily int UI.\+HUD\+\_\+\+Welcome.\+choice\+Class\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_h_u_d___welcome_8java_source_l00029}{29}} of file \mbox{\hyperlink{_h_u_d___welcome_8java_source}{HUD\+\_\+\+Welcome.\+java}}.
+
+\mbox{\Hypertarget{class_u_i_1_1_h_u_d___welcome_adc724232180edb63081f4260ca9b8292}\label{class_u_i_1_1_h_u_d___welcome_adc724232180edb63081f4260ca9b8292}} 
+\index{UI.HUD\_Welcome@{UI.HUD\_Welcome}!page@{page}}
+\index{page@{page}!UI.HUD\_Welcome@{UI.HUD\_Welcome}}
+\doxysubsubsection{\texorpdfstring{page}{page}}
+{\footnotesize\ttfamily int UI.\+HUD\+\_\+\+Welcome.\+page\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_h_u_d___welcome_8java_source_l00030}{30}} of file \mbox{\hyperlink{_h_u_d___welcome_8java_source}{HUD\+\_\+\+Welcome.\+java}}.
+
+\mbox{\Hypertarget{class_u_i_1_1_h_u_d___welcome_a6ac5c50c6a7db5f7eaf2c3bdc11e5a98}\label{class_u_i_1_1_h_u_d___welcome_a6ac5c50c6a7db5f7eaf2c3bdc11e5a98}} 
+\index{UI.HUD\_Welcome@{UI.HUD\_Welcome}!spriteCnt@{spriteCnt}}
+\index{spriteCnt@{spriteCnt}!UI.HUD\_Welcome@{UI.HUD\_Welcome}}
+\doxysubsubsection{\texorpdfstring{spriteCnt}{spriteCnt}}
+{\footnotesize\ttfamily int UI.\+HUD\+\_\+\+Welcome.\+sprite\+Cnt =0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_h_u_d___welcome_8java_source_l00035}{35}} of file \mbox{\hyperlink{_h_u_d___welcome_8java_source}{HUD\+\_\+\+Welcome.\+java}}.
+
+\mbox{\Hypertarget{class_u_i_1_1_h_u_d___welcome_a39b586c42de8f149a6b8c265773fb2b7}\label{class_u_i_1_1_h_u_d___welcome_a39b586c42de8f149a6b8c265773fb2b7}} 
+\index{UI.HUD\_Welcome@{UI.HUD\_Welcome}!spriteUpdater@{spriteUpdater}}
+\index{spriteUpdater@{spriteUpdater}!UI.HUD\_Welcome@{UI.HUD\_Welcome}}
+\doxysubsubsection{\texorpdfstring{spriteUpdater}{spriteUpdater}}
+{\footnotesize\ttfamily int UI.\+HUD\+\_\+\+Welcome.\+sprite\+Updater =0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_h_u_d___welcome_8java_source_l00034}{34}} of file \mbox{\hyperlink{_h_u_d___welcome_8java_source}{HUD\+\_\+\+Welcome.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+UI/\mbox{\hyperlink{_h_u_d___welcome_8java}{HUD\+\_\+\+Welcome.\+java}}\end{DoxyCompactItemize}

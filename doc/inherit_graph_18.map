@@ -1,6 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_u_i_1_1_h_u_d.html" title=" " alt="" coords="5,56,76,83"/>
+<area shape="rect" id="node1" href="$class_u_i_1_1_h_u_d.html" title="Represents the abstract base class for Heads&#45;Up Display in the game&#39;s user interfaces." alt="" coords="5,56,76,83"/>
 <area shape="rect" id="node2" href="$class_u_i_1_1_h_u_d___fight.html" title=" " alt="" coords="138,5,247,32"/>
-<area shape="rect" id="node3" href="$class_u_i_1_1_h_u_d___pause.html" title=" " alt="" coords="135,56,250,83"/>
-<area shape="rect" id="node4" href="$class_u_i_1_1_h_u_d___welcome.html" title=" " alt="" coords="124,107,261,133"/>
+<area shape="rect" id="node3" href="$class_u_i_1_1_h_u_d___pause.html" title="Represents the pause menu HUD class, extending the abstract HUD class." alt="" coords="135,56,250,83"/>
+<area shape="rect" id="node4" href="$class_u_i_1_1_h_u_d___welcome.html" title="Represents the welcome screen HUD class, extending the abstract HUD class." alt="" coords="124,107,261,133"/>
 </map>

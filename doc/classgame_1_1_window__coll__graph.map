@@ -1,35 +1,34 @@
 <map id="game.Window" name="game.Window">
-<area shape="rect" id="node1" title="Represents the window that displays the game." alt="" coords="1638,2181,1799,2317"/>
-<area shape="rect" id="node2" title=" " alt="" coords="1844,2005,1905,2082"/>
-<area shape="rect" id="node3" title=" " alt="" coords="1737,2005,1820,2082"/>
-<area shape="rect" id="node4" href="$classgame_1_1_scene.html" title="Represents an abstract scene in the game." alt="" coords="1244,1784,1407,1905"/>
-<area shape="rect" id="node15" href="$classgame_1_1_world.html" title="Represents the game world and manages its entities." alt="" coords="973,1968,1096,2119"/>
-<area shape="rect" id="node5" href="$enumgame_1_1_const_1_1_state.html" title=" " alt="" coords="1155,1486,1293,1607"/>
-<area shape="rect" id="node6" href="$classmain_1_1_key_handler.html" title="Handles keyboard input using the singleton pattern." alt="" coords="1317,1442,1456,1651"/>
-<area shape="rect" id="node7" title=" " alt="" coords="1337,1063,1436,1141"/>
-<area shape="rect" id="node8" href="$class_u_i_1_1_h_u_d.html" title=" " alt="" coords="1005,1034,1193,1170"/>
-<area shape="rect" id="node27" href="$class_u_i_1_1_h_u_d___fight.html" title=" " alt="" coords="788,1479,927,1615"/>
-<area shape="rect" id="node9" href="$enumgame_1_1_const_1_1_selection.html" title=" " alt="" coords="1017,615,1181,795"/>
-<area shape="rect" id="node10" href="$class_u_i_1_1_choice_button.html" title=" " alt="" coords="1205,637,1339,773"/>
-<area shape="rect" id="node11" href="$class_u_i_1_1_textbox.html" title=" " alt="" coords="1277,167,1408,347"/>
-<area shape="rect" id="node16" href="$class_u_i_1_1_h_u_d___world.html" title=" " alt="" coords="1170,2196,1291,2303"/>
-<area shape="rect" id="node12" title=" " alt="" coords="1229,5,1291,83"/>
-<area shape="rect" id="node13" title=" " alt="" coords="1315,5,1371,83"/>
-<area shape="rect" id="node14" title=" " alt="" coords="1397,5,1448,83"/>
-<area shape="rect" id="node30" href="$classentity_1_1_entity_setter.html" title="Responsible for initializing and setting up objects (entities) in the game world." alt="" coords="904,2196,1043,2303"/>
-<area shape="rect" id="node17" href="$classgame_1_1_fight_scene.html" title="Represents the scene during a fight between a player and an enemy." alt="" coords="498,1791,633,1898"/>
-<area shape="rect" id="node18" href="$classentity_1_1_player.html" title="Represents the player entity in the game." alt="" coords="324,983,487,1221"/>
-<area shape="rect" id="node33" href="$classentity_1_1_warrior.html" title=" " alt="" coords="201,1683,311,1760"/>
-<area shape="rect" id="node19" href="$classentity_1_1_character.html" title="Represents an abstract character entity with position, hitbox, stats, and animations." alt="" coords="7,535,166,876"/>
-<area shape="rect" id="node25" href="$classentity_1_1_enemy.html" title="Represents an enemy entity in the game." alt="" coords="137,1027,300,1177"/>
-<area shape="rect" id="node20" href="$classentity_1_1_entity.html" title="Represents an abstract entity with position, hitbox, and animations." alt="" coords="5,145,168,369"/>
-<area shape="rect" id="node21" title=" " alt="" coords="43,5,130,83"/>
-<area shape="rect" id="node22" title=" " alt="" coords="475,219,594,296"/>
-<area shape="rect" id="node29" href="$classtiles_1_1_tile.html" title="Represents a tile in the game world." alt="" coords="784,535,992,876"/>
-<area shape="rect" id="node23" href="$classgame_1_1_attack.html" title=" " alt="" coords="191,630,316,781"/>
-<area shape="rect" id="node24" title=" " alt="" coords="340,667,497,744"/>
-<area shape="rect" id="node26" href="$classgame_1_1_const.html" title=" " alt="" coords="572,1435,764,1659"/>
-<area shape="rect" id="node28" href="$classtiles_1_1_tile_manager.html" title="Manages tiles in the game world." alt="" coords="887,1245,1022,1411"/>
-<area shape="rect" id="node31" title=" " alt="" coords="1001,1799,1220,1891"/>
-<area shape="rect" id="node32" title=" " alt="" coords="687,1806,926,1883"/>
+<area shape="rect" id="node1" title="Represents the window that displays the game." alt="" coords="898,2420,1059,2556"/>
+<area shape="rect" id="node2" title=" " alt="" coords="900,2243,961,2321"/>
+<area shape="rect" id="node3" title=" " alt="" coords="985,2243,1068,2321"/>
+<area shape="rect" id="node4" href="$classgame_1_1_scene.html" title="Represents an abstract scene in the game." alt="" coords="1117,2023,1280,2144"/>
+<area shape="rect" id="node15" href="$classgame_1_1_world.html" title="Represents the game world and manages its entities." alt="" coords="524,2207,647,2357"/>
+<area shape="rect" id="node5" href="$enumgame_1_1_const_1_1_state.html" title=" " alt="" coords="1008,1765,1147,1916"/>
+<area shape="rect" id="node6" href="$classmain_1_1_key_handler.html" title="Handles keyboard input using the singleton pattern." alt="" coords="1272,1736,1411,1945"/>
+<area shape="rect" id="node7" title=" " alt="" coords="1292,1365,1391,1442"/>
+<area shape="rect" id="node8" href="$class_u_i_1_1_h_u_d.html" title="Represents the abstract base class for Heads&#45;Up Display in the game&#39;s user interfaces." alt="" coords="1077,1328,1265,1479"/>
+<area shape="rect" id="node27" href="$class_u_i_1_1_h_u_d___fight.html" title=" " alt="" coords="763,1765,901,1916"/>
+<area shape="rect" id="node9" href="$enumgame_1_1_const_1_1_selection.html" title=" " alt="" coords="1089,869,1253,1049"/>
+<area shape="rect" id="node10" href="$class_u_i_1_1_choice_button.html" title="Represents a clickable button with associated text and appearance settings." alt="" coords="1277,883,1411,1034"/>
+<area shape="rect" id="node11" href="$class_u_i_1_1_textbox.html" title="Represents a text box for displaying text on the screen, used for buttons or dialogues." alt="" coords="909,314,1040,494"/>
+<area shape="rect" id="node16" href="$class_u_i_1_1_h_u_d___world.html" title="Represents the in&#45;game HUD for displaying player statistics and instructions." alt="" coords="238,1153,359,1260"/>
+<area shape="rect" id="node12" title=" " alt="" coords="864,5,925,83"/>
+<area shape="rect" id="node13" title=" " alt="" coords="1100,5,1156,83"/>
+<area shape="rect" id="node26" href="$classgame_1_1_const.html" title=" " alt="" coords="1127,540,1319,764"/>
+<area shape="rect" id="node14" title=" " alt="" coords="949,5,1000,83"/>
+<area shape="rect" id="node30" href="$classentity_1_1_entity_setter.html" title="Responsible for initializing and setting up objects (entities) in the game world." alt="" coords="516,2435,655,2541"/>
+<area shape="rect" id="node17" href="$classgame_1_1_fight_scene.html" title="Represents the scene during a fight between a player and an enemy." alt="" coords="451,2030,586,2137"/>
+<area shape="rect" id="node18" href="$classentity_1_1_player.html" title="Represents the player entity in the game." alt="" coords="444,1284,607,1523"/>
+<area shape="rect" id="node19" href="$classentity_1_1_character.html" title="Represents an abstract character entity with position, hitbox, stats, and animations." alt="" coords="521,788,679,1129"/>
+<area shape="rect" id="node25" href="$classentity_1_1_enemy.html" title="Represents an enemy entity in the game." alt="" coords="631,1328,793,1479"/>
+<area shape="rect" id="node20" href="$classentity_1_1_entity.html" title="Represents an abstract entity with position, hitbox, and animations." alt="" coords="519,292,681,516"/>
+<area shape="rect" id="node21" title=" " alt="" coords="557,5,643,83"/>
+<area shape="rect" id="node22" title=" " alt="" coords="191,365,310,443"/>
+<area shape="rect" id="node29" href="$classtiles_1_1_tile.html" title="Represents a tile in the game world." alt="" coords="5,788,213,1129"/>
+<area shape="rect" id="node23" href="$classgame_1_1_attack.html" title=" " alt="" coords="704,883,829,1034"/>
+<area shape="rect" id="node24" title=" " alt="" coords="339,920,496,997"/>
+<area shape="rect" id="node28" href="$classtiles_1_1_tile_manager.html" title="Manages tiles in the game world." alt="" coords="57,1547,191,1712"/>
+<area shape="rect" id="node31" title=" " alt="" coords="611,2037,829,2129"/>
+<area shape="rect" id="node32" title=" " alt="" coords="854,2045,1093,2122"/>
 </map>

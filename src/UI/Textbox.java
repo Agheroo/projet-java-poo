@@ -106,7 +106,7 @@ public class Textbox extends JLabel {
     public static void loadFont(String fontName){
         try {
             GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
-            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File("res/hud/font/rainyhearts.ttf")));
+            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File("/home/romu/IdeaProjects/projet-java-poo/res/hud/font/rainyhearts.ttf")));
         }
         catch (FontFormatException e) {
             e.printStackTrace();

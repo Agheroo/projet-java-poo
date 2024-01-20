@@ -1,0 +1,4 @@
+<map id="UI.HUD_Pause" name="UI.HUD_Pause">
+<area shape="rect" id="node1" title="Represents the pause menu HUD class, extending the abstract HUD class." alt="" coords="38,248,161,369"/>
+<area shape="rect" id="node2" href="$class_u_i_1_1_h_u_d.html" title="Represents the abstract base class for Heads&#45;Up Display in the game&#39;s user interfaces." alt="" coords="5,5,193,200"/>
+</map>

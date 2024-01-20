@@ -1,0 +1,5 @@
+<map id="UI.Textbox.setNewText" name="UI.Textbox.setNewText">
+<area shape="rect" id="node1" title="Setter function for a new text content of the text box." alt="" coords="413,5,584,32"/>
+<area shape="rect" id="node2" href="$class_u_i_1_1_h_u_d___world.html#af61b9be0ebdafc7487eacb0afb6d4fcd" title="Updates the HUD by refreshing player statistics." alt="" coords="203,5,365,32"/>
+<area shape="rect" id="node3" href="$classgame_1_1_world.html#a05a7f2e7a65c2a3449efdaa0a87c49f5" title="Updates the game world based on the scene state." alt="" coords="5,5,155,32"/>
+</map>

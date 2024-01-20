@@ -1,0 +1,17 @@
+<map id="UI.HUD_Fight" name="UI.HUD_Fight">
+<area shape="rect" id="node1" title=" " alt="" coords="191,1240,329,1391"/>
+<area shape="rect" id="node2" href="$class_u_i_1_1_h_u_d.html" title="Represents the abstract base class for Heads&#45;Up Display in the game&#39;s user interfaces." alt="" coords="166,983,354,1133"/>
+<area shape="rect" id="node3" href="$enumgame_1_1_const_1_1_selection.html" title=" " alt="" coords="351,615,515,795"/>
+<area shape="rect" id="node4" href="$class_u_i_1_1_choice_button.html" title="Represents a clickable button with associated text and appearance settings." alt="" coords="193,630,327,781"/>
+<area shape="rect" id="node5" href="$class_u_i_1_1_textbox.html" title="Represents a text box for displaying text on the screen, used for buttons or dialogues." alt="" coords="49,167,180,347"/>
+<area shape="rect" id="node6" title=" " alt="" coords="5,5,67,83"/>
+<area shape="rect" id="node7" title=" " alt="" coords="199,5,255,83"/>
+<area shape="rect" id="node8" title=" " alt="" coords="91,5,141,83"/>
+<area shape="rect" id="node9" href="$classentity_1_1_player.html" title="Represents the player entity in the game." alt="" coords="604,939,767,1177"/>
+<area shape="rect" id="node10" href="$classentity_1_1_character.html" title="Represents an abstract character entity with position, hitbox, stats, and animations." alt="" coords="871,535,1030,876"/>
+<area shape="rect" id="node11" href="$classentity_1_1_entity.html" title="Represents an abstract entity with position, hitbox, and animations." alt="" coords="756,145,919,369"/>
+<area shape="rect" id="node12" title=" " alt="" coords="794,5,881,83"/>
+<area shape="rect" id="node13" title=" " alt="" coords="943,219,1062,296"/>
+<area shape="rect" id="node14" href="$classgame_1_1_attack.html" title=" " alt="" coords="540,630,665,781"/>
+<area shape="rect" id="node15" title=" " alt="" coords="689,667,847,744"/>
+</map>
