@@ -24,10 +24,19 @@ public class Attack {
     public void applyAttack(Character emitter, Character reciever){
         //Find a nice equation to balance a bit the game and add a dodge chance with agility
         //Also find a interval "crit chance" maybe to make it more interesting
-        if(emitter.mana >= cost){
-            int dmg = (int)(damage + 0.4*emitter.strength*damage - 1.3*reciever.defense);
+        
+        double dodgeChange = 1 - Math.exp(-0.01*reciever.agility);  //Equation for dodge chance of the attack (40 agility = 0.33 dodge chance)
+        
 
-            reciever.health -= dmg;
+        if(emitter.mana >= cost){
+            if(Math.random() > dodgeChange){
+                int dmgDealt = (int)(damage*(1+(emitter.strength*damage*0.6)/(reciever.defense*2.4)));
+
+                reciever.health -= dmgDealt;
+            }
+            else{
+                System.out.println(reciever.name + " a esquivé " + emitter.name);
+            }
             emitter.mana -= cost;
         }
         else{
