@@ -1,8 +1,0 @@
-<map id="UI.HUD_Welcome.HUD_Welcome" name="UI.HUD_Welcome.HUD_Welcome">
-<area shape="rect" id="node1" title="Constructor for HUD_Welcome class." alt="" coords="5,49,176,90"/>
-<area shape="rect" id="node2" href="$class_u_i_1_1_h_u_d.html#af1a376f1d7a53f60ddc82737289a35d8" title="Changes the color of the selected button in the HUD." alt="" coords="225,31,440,57"/>
-<area shape="rect" id="node6" href="$class_u_i_1_1_h_u_d___welcome.html#a880c1ac206b91a91a7053043ea164dfb" title="Function used to load the images of the different characters&#39; classes." alt="" coords="224,81,441,108"/>
-<area shape="rect" id="node3" href="$class_u_i_1_1_choice_button.html#a6cd72943d413641b20c66d680e6af03e" title="Setter function to change the button&#39;s background color." alt="" coords="494,5,697,32"/>
-<area shape="rect" id="node4" href="$class_u_i_1_1_choice_button.html#a72e2bde42a5a426ffa1686e4b724afa1" title="Setter function to change the button&#39;s text color." alt="" coords="489,56,701,83"/>
-<area shape="rect" id="node5" href="$class_u_i_1_1_textbox.html#a4725a8ec93796dcc1a2aa14ad16952f6" title="Setter function for a new font color of the current text." alt="" coords="749,56,899,83"/>
-</map>

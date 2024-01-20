@@ -1,4 +1,0 @@
-<map id="entity.Character.loadTextures" name="entity.Character.loadTextures">
-<area shape="rect" id="node1" title="Loads character textures based on the specified name." alt="" coords="244,5,455,32"/>
-<area shape="rect" id="node2" href="$classentity_1_1_character.html#aa40a6947a230fa0e48701a1da7a507e4" title="Constructor for the Character class." alt="" coords="5,5,196,32"/>
-</map>

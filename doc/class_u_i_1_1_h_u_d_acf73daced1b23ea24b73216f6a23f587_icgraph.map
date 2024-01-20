@@ -1,4 +1,0 @@
-<map id="UI.HUD.draw" name="UI.HUD.draw">
-<area shape="rect" id="node1" title="Abstract method to draw the HUD on the screen." alt="" coords="189,5,296,32"/>
-<area shape="rect" id="node2" href="$classgame_1_1_world.html#ac405787ac7b11c4ed39a5cd9250e398f" title="Draws the game world and its entities." alt="" coords="5,5,141,32"/>
-</map>

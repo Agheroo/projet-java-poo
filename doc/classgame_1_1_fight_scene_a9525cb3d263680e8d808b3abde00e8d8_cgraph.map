@@ -1,9 +1,11 @@
 <map id="game.FightScene.draw" name="game.FightScene.draw">
-<area shape="rect" id="node1" title="Draws the fight scene." alt="" coords="5,107,176,133"/>
-<area shape="rect" id="node2" href="$class_u_i_1_1_h_u_d___fight.html#a444cd5e7f43dd55149762e5738ba2cf7" title="Abstract method to draw the HUD on the screen." alt="" coords="244,56,389,83"/>
-<area shape="rect" id="node6" href="$classentity_1_1_enemy.html#ab5508f7c6805a45aec6d0b901aa091b2" title="Draws the character in the fight scene." alt="" coords="224,107,409,133"/>
-<area shape="rect" id="node7" href="$classentity_1_1_player.html#a724d0cb885da2e80adfe13ca1901a12b" title="Draws the character in the fight scene." alt="" coords="225,157,408,184"/>
-<area shape="rect" id="node3" href="$class_u_i_1_1_choice_button.html#a1000744853168892a77f3aaa14886739" title="Draws a button (rectangle) on the screen at specified coordinates (top left)." alt="" coords="457,5,620,32"/>
-<area shape="rect" id="node4" href="$class_u_i_1_1_textbox.html#aab675a99675e6ba3e03630cf973f2799" title="Draws the text box on the screen." alt="" coords="668,31,795,57"/>
-<area shape="rect" id="node5" href="$class_u_i_1_1_textbox.html#a4725a8ec93796dcc1a2aa14ad16952f6" title="Setter function for a new font color of the current text." alt="" coords="464,107,613,133"/>
+<area shape="rect" id="node1" title="Draws the fight scene." alt="" coords="5,132,176,159"/>
+<area shape="rect" id="node2" href="$class_u_i_1_1_h_u_d___fight.html#a444cd5e7f43dd55149762e5738ba2cf7" title=" " alt="" coords="244,81,389,108"/>
+<area shape="rect" id="node8" href="$classentity_1_1_enemy.html#ab5508f7c6805a45aec6d0b901aa091b2" title="Draws the character in the fight scene." alt="" coords="224,132,409,159"/>
+<area shape="rect" id="node9" href="$classentity_1_1_player.html#a724d0cb885da2e80adfe13ca1901a12b" title="Draws the character in the fight scene." alt="" coords="225,183,408,209"/>
+<area shape="rect" id="node3" href="$class_u_i_1_1_h_u_d.html#a5039f6b8d54a62926eabd210aeb1fea4" title=" " alt="" coords="457,5,672,32"/>
+<area shape="rect" id="node5" href="$class_u_i_1_1_textbox.html#a4725a8ec93796dcc1a2aa14ad16952f6" title="Setter func for a new font color of the current text." alt="" coords="980,31,1129,57"/>
+<area shape="rect" id="node6" href="$class_u_i_1_1_choice_button.html#a1000744853168892a77f3aaa14886739" title="Draws a button (rectangle) on the screen at x,y coords (top left)" alt="" coords="483,107,646,133"/>
+<area shape="rect" id="node7" href="$class_u_i_1_1_textbox.html#aab675a99675e6ba3e03630cf973f2799" title=" " alt="" coords="763,132,889,159"/>
+<area shape="rect" id="node4" href="$class_u_i_1_1_choice_button.html#a72e2bde42a5a426ffa1686e4b724afa1" title="Setter func to change a button&#39;s text color." alt="" coords="720,5,932,32"/>
 </map>

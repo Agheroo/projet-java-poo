@@ -1,13 +1,13 @@
 <map id="game.Scene" name="game.Scene">
 <area shape="rect" id="node1" title="Represents an abstract scene in the game." alt="" coords="156,917,319,1039"/>
-<area shape="rect" id="node2" href="$enumgame_1_1_const_1_1_state.html" title=" " alt="" coords="5,660,144,811"/>
+<area shape="rect" id="node2" href="$enumgame_1_1_const_1_1_state.html" title=" " alt="" coords="5,675,144,796"/>
 <area shape="rect" id="node3" href="$classmain_1_1_key_handler.html" title="Handles keyboard input using the singleton pattern." alt="" coords="168,631,307,840"/>
-<area shape="rect" id="node4" title=" " alt="" coords="188,439,287,517"/>
-<area shape="rect" id="node5" href="$class_u_i_1_1_h_u_d.html" title="Represents the abstract base class for Heads&#45;Up Display in the game&#39;s user interfaces." alt="" coords="426,660,614,811"/>
-<area shape="rect" id="node6" href="$enumgame_1_1_const_1_1_selection.html" title=" " alt="" coords="611,388,775,568"/>
-<area shape="rect" id="node7" href="$class_u_i_1_1_choice_button.html" title="Represents a clickable button with associated text and appearance settings." alt="" coords="453,403,587,553"/>
-<area shape="rect" id="node8" href="$class_u_i_1_1_textbox.html" title="Represents a text box for displaying text on the screen, used for buttons or dialogues." alt="" coords="312,145,443,325"/>
-<area shape="rect" id="node9" title=" " alt="" coords="267,5,328,83"/>
-<area shape="rect" id="node10" title=" " alt="" coords="459,5,515,83"/>
-<area shape="rect" id="node11" title=" " alt="" coords="352,5,403,83"/>
+<area shape="rect" id="node4" title=" " alt="" coords="187,439,285,517"/>
+<area shape="rect" id="node5" href="$class_u_i_1_1_h_u_d.html" title=" " alt="" coords="427,667,615,803"/>
+<area shape="rect" id="node6" href="$enumgame_1_1_const_1_1_selection.html" title=" " alt="" coords="310,388,474,568"/>
+<area shape="rect" id="node7" href="$class_u_i_1_1_choice_button.html" title=" " alt="" coords="603,410,738,546"/>
+<area shape="rect" id="node8" href="$class_u_i_1_1_textbox.html" title=" " alt="" coords="479,145,609,325"/>
+<area shape="rect" id="node9" title=" " alt="" coords="431,5,492,83"/>
+<area shape="rect" id="node10" title=" " alt="" coords="516,5,572,83"/>
+<area shape="rect" id="node11" title=" " alt="" coords="599,5,649,83"/>
 </map>

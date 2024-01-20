@@ -1,4 +1,0 @@
-<map id="UI.HUD_World.draw" name="UI.HUD_World.draw">
-<area shape="rect" id="node1" title="Draws the HUD on the screen, displaying player statistics and instructions." alt="" coords="5,5,156,32"/>
-<area shape="rect" id="node2" href="$class_u_i_1_1_textbox.html#aab675a99675e6ba3e03630cf973f2799" title="Draws the text box on the screen." alt="" coords="204,5,331,32"/>
-</map>
