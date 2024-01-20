@@ -1,0 +1,207 @@
+\hypertarget{class_u_i_1_1_h_u_d___pause}{}\doxysection{UI.\+HUD\+\_\+\+Pause Class Reference}
+\label{class_u_i_1_1_h_u_d___pause}\index{UI.HUD\_Pause@{UI.HUD\_Pause}}
+
+
+Represents the pause menu \mbox{\hyperlink{class_u_i_1_1_h_u_d}{HUD}} class, extending the abstract \mbox{\hyperlink{class_u_i_1_1_h_u_d}{HUD}} class.  
+
+
+
+
+Inheritance diagram for UI.\+HUD\+\_\+\+Pause\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{class_u_i_1_1_h_u_d___pause__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UI.\+HUD\+\_\+\+Pause\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_u_i_1_1_h_u_d___pause__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_i_1_1_h_u_d___pause_a1b2f7ebb698ec273744fd7404321305b}{HUD\+\_\+\+Pause}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{class_u_i_1_1_h_u_d___pause}{HUD\+\_\+\+Pause}} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_h_u_d___pause_aec196ac720b763075dbea8841507d686}{update}} ()
+\begin{DoxyCompactList}\small\item\em Updates the pause menu based on user input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_h_u_d___pause_acb7e2c68e46c0188dac220ee1969e387}{draw}} (Graphics2D g2)
+\begin{DoxyCompactList}\small\item\em Draws the pause menu on the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_h_u_d___pause_a451c5d00adb97669cbf56e65100363be}{select\+Class}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Represents the pause menu \mbox{\hyperlink{class_u_i_1_1_h_u_d}{HUD}} class, extending the abstract \mbox{\hyperlink{class_u_i_1_1_h_u_d}{HUD}} class. 
+
+Definition at line \mbox{\hyperlink{_h_u_d___pause_8java_source_l00018}{18}} of file \mbox{\hyperlink{_h_u_d___pause_8java_source}{HUD\+\_\+\+Pause.\+java}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_u_i_1_1_h_u_d___pause_a1b2f7ebb698ec273744fd7404321305b}\label{class_u_i_1_1_h_u_d___pause_a1b2f7ebb698ec273744fd7404321305b}} 
+\index{UI.HUD\_Pause@{UI.HUD\_Pause}!HUD\_Pause@{HUD\_Pause}}
+\index{HUD\_Pause@{HUD\_Pause}!UI.HUD\_Pause@{UI.HUD\_Pause}}
+\doxysubsubsection{\texorpdfstring{HUD\_Pause()}{HUD\_Pause()}}
+{\footnotesize\ttfamily UI.\+HUD\+\_\+\+Pause.\+HUD\+\_\+\+Pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor for \mbox{\hyperlink{class_u_i_1_1_h_u_d___pause}{HUD\+\_\+\+Pause}} class. 
+
+Initializes the pause menu with two buttons\+: CONTINUER and QUITTER. 
+
+Definition at line \mbox{\hyperlink{_h_u_d___pause_8java_source_l00024}{24}} of file \mbox{\hyperlink{_h_u_d___pause_8java_source}{HUD\+\_\+\+Pause.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024                       \{}
+\DoxyCodeLine{00025         super();}
+\DoxyCodeLine{00026         \mbox{\hyperlink{class_u_i_1_1_h_u_d_aa088352b4906398c1b83fa6e8e4d143a}{selection}} = Selection.\mbox{\hyperlink{enumgame_1_1_const_1_1_selection_a8e73ccc9ff787d59189d4351b238e24e}{CONTINUE}};}
+\DoxyCodeLine{00027         \mbox{\hyperlink{class_u_i_1_1_h_u_d_a2b2c87a34b30ab4ab62d4e58390b1560}{\_nbButtons}} = 2;}
+\DoxyCodeLine{00028         \mbox{\hyperlink{class_u_i_1_1_h_u_d_a89e962c43a04bc0bc065a74e6cd52720}{\_buttons}} = \textcolor{keyword}{new} ChoiceButton[\mbox{\hyperlink{class_u_i_1_1_h_u_d_a2b2c87a34b30ab4ab62d4e58390b1560}{\_nbButtons}}];}
+\DoxyCodeLine{00029 }
+\DoxyCodeLine{00030         \mbox{\hyperlink{class_u_i_1_1_h_u_d_a89e962c43a04bc0bc065a74e6cd52720}{\_buttons}}[0] = \textcolor{keyword}{new} ChoiceButton(200, 50, \textcolor{stringliteral}{"{}CONTINUER"{}}, Const.fontName, Color.blue);}
+\DoxyCodeLine{00031         \mbox{\hyperlink{class_u_i_1_1_h_u_d_a89e962c43a04bc0bc065a74e6cd52720}{\_buttons}}[1] = \textcolor{keyword}{new} ChoiceButton(200, 50, \textcolor{stringliteral}{"{}QUITTER"{}}, Const.fontName, Color.blue);}
+\DoxyCodeLine{00032         \mbox{\hyperlink{class_u_i_1_1_h_u_d_af1a376f1d7a53f60ddc82737289a35d8}{changeSelectionColor}}(0, Const.COLOR\_BUTTON\_text, Const.COLOR\_BUTTON\_text\_highlight, Const.COLOR\_BUTTON\_bg, Const.COLOR\_BUTTON\_bg\_highlight);}
+\DoxyCodeLine{00033     \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_1_1_h_u_d___pause_a1b2f7ebb698ec273744fd7404321305b_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_i_1_1_h_u_d___pause_acb7e2c68e46c0188dac220ee1969e387}\label{class_u_i_1_1_h_u_d___pause_acb7e2c68e46c0188dac220ee1969e387}} 
+\index{UI.HUD\_Pause@{UI.HUD\_Pause}!draw@{draw}}
+\index{draw@{draw}!UI.HUD\_Pause@{UI.HUD\_Pause}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void UI.\+HUD\+\_\+\+Pause.\+draw (\begin{DoxyParamCaption}\item[{Graphics2D}]{g2 }\end{DoxyParamCaption})}
+
+
+
+Draws the pause menu on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g2} & Graphics2D object for drawing. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_u_i_1_1_h_u_d_acf73daced1b23ea24b73216f6a23f587}{UI.\+HUD}}.
+
+
+
+Definition at line \mbox{\hyperlink{_h_u_d___pause_8java_source_l00064}{64}} of file \mbox{\hyperlink{_h_u_d___pause_8java_source}{HUD\+\_\+\+Pause.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00064                                    \{}
+\DoxyCodeLine{00065         \textcolor{comment}{// Darkened background}}
+\DoxyCodeLine{00066         g2.setColor(\textcolor{keyword}{new} Color(0, 0, 0, 180));}
+\DoxyCodeLine{00067         g2.fillRect(0, 0, Const.WDW\_width, Const.WDW\_height);}
+\DoxyCodeLine{00068 }
+\DoxyCodeLine{00069         \textcolor{comment}{// Actual buttons to draw}}
+\DoxyCodeLine{00070         \mbox{\hyperlink{class_u_i_1_1_h_u_d_a89e962c43a04bc0bc065a74e6cd52720}{\_buttons}}[0].\mbox{\hyperlink{class_u_i_1_1_choice_button_a1000744853168892a77f3aaa14886739}{draw}}(g2, (Const.WDW\_width -\/ \mbox{\hyperlink{class_u_i_1_1_h_u_d_a89e962c43a04bc0bc065a74e6cd52720}{\_buttons}}[0].\mbox{\hyperlink{class_u_i_1_1_choice_button_a1e99b395d0551ce2a7e867a40f7ccdeb}{width}}) / 2, 200);}
+\DoxyCodeLine{00071         \mbox{\hyperlink{class_u_i_1_1_h_u_d_a89e962c43a04bc0bc065a74e6cd52720}{\_buttons}}[1].\mbox{\hyperlink{class_u_i_1_1_choice_button_a1000744853168892a77f3aaa14886739}{draw}}(g2, (Const.WDW\_width -\/ \mbox{\hyperlink{class_u_i_1_1_h_u_d_a89e962c43a04bc0bc065a74e6cd52720}{\_buttons}}[0].\mbox{\hyperlink{class_u_i_1_1_choice_button_a1e99b395d0551ce2a7e867a40f7ccdeb}{width}}) / 2, 400);}
+\DoxyCodeLine{00072     \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_1_1_h_u_d___pause_acb7e2c68e46c0188dac220ee1969e387_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_i_1_1_h_u_d___pause_a451c5d00adb97669cbf56e65100363be}\label{class_u_i_1_1_h_u_d___pause_a451c5d00adb97669cbf56e65100363be}} 
+\index{UI.HUD\_Pause@{UI.HUD\_Pause}!selectClass@{selectClass}}
+\index{selectClass@{selectClass}!UI.HUD\_Pause@{UI.HUD\_Pause}}
+\doxysubsubsection{\texorpdfstring{selectClass()}{selectClass()}}
+{\footnotesize\ttfamily void UI.\+HUD\+\_\+\+Pause.\+select\+Class (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_u_i_1_1_h_u_d_ac1eebe40213bbdea3640023dcf98472d}{UI.\+HUD}}.
+
+
+
+Definition at line \mbox{\hyperlink{_h_u_d___pause_8java_source_l00074}{74}} of file \mbox{\hyperlink{_h_u_d___pause_8java_source}{HUD\+\_\+\+Pause.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00074 \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_u_i_1_1_h_u_d___pause_aec196ac720b763075dbea8841507d686}\label{class_u_i_1_1_h_u_d___pause_aec196ac720b763075dbea8841507d686}} 
+\index{UI.HUD\_Pause@{UI.HUD\_Pause}!update@{update}}
+\index{update@{update}!UI.HUD\_Pause@{UI.HUD\_Pause}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void UI.\+HUD\+\_\+\+Pause.\+update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the pause menu based on user input. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_u_i_1_1_h_u_d_ad0c1abd2a8e1c763e8c508b4535cbe68}{UI.\+HUD}}.
+
+
+
+Definition at line \mbox{\hyperlink{_h_u_d___pause_8java_source_l00038}{38}} of file \mbox{\hyperlink{_h_u_d___pause_8java_source}{HUD\+\_\+\+Pause.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038                         \{}
+\DoxyCodeLine{00039         \textcolor{keywordflow}{if}(Scene.keyH.interactPressed)\{}
+\DoxyCodeLine{00040             \mbox{\hyperlink{class_u_i_1_1_h_u_d_a1e5874ed325ff773543bfc51db70f5af}{confirm}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{00041             Scene.keyH.interactPressed = \textcolor{keyword}{false};}
+\DoxyCodeLine{00042         \}}
+\DoxyCodeLine{00043         \textcolor{keywordflow}{if}(Scene.keyH.upPressed || Scene.keyH.downPressed)\{}
+\DoxyCodeLine{00044             \textcolor{keywordflow}{switch}(\mbox{\hyperlink{class_u_i_1_1_h_u_d_aa088352b4906398c1b83fa6e8e4d143a}{selection}}.toString())\{}
+\DoxyCodeLine{00045                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}CONTINUE"{}}:}
+\DoxyCodeLine{00046                     \mbox{\hyperlink{class_u_i_1_1_h_u_d_aa088352b4906398c1b83fa6e8e4d143a}{selection}} = Const.Selection.\mbox{\hyperlink{enumgame_1_1_const_1_1_selection_a53966c015bfb66719308f4ad9c817e2f}{QUIT}};}
+\DoxyCodeLine{00047                     \mbox{\hyperlink{class_u_i_1_1_h_u_d_af1a376f1d7a53f60ddc82737289a35d8}{changeSelectionColor}}(1, Const.COLOR\_BUTTON\_text, Const.COLOR\_BUTTON\_text\_highlight, Const.COLOR\_BUTTON\_bg, Const.COLOR\_BUTTON\_bg\_highlight);}
+\DoxyCodeLine{00048                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00049                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}QUIT"{}}:}
+\DoxyCodeLine{00050                     \mbox{\hyperlink{class_u_i_1_1_h_u_d_aa088352b4906398c1b83fa6e8e4d143a}{selection}} = Const.Selection.\mbox{\hyperlink{enumgame_1_1_const_1_1_selection_a8e73ccc9ff787d59189d4351b238e24e}{CONTINUE}};}
+\DoxyCodeLine{00051                     \mbox{\hyperlink{class_u_i_1_1_h_u_d_af1a376f1d7a53f60ddc82737289a35d8}{changeSelectionColor}}(0, Const.COLOR\_BUTTON\_text, Const.COLOR\_BUTTON\_text\_highlight, Const.COLOR\_BUTTON\_bg, Const.COLOR\_BUTTON\_bg\_highlight);}
+\DoxyCodeLine{00052                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00053                 \textcolor{keywordflow}{default}: \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00054             \}}
+\DoxyCodeLine{00055             Scene.keyH.upPressed = \textcolor{keyword}{false};}
+\DoxyCodeLine{00056             Scene.keyH.downPressed = \textcolor{keyword}{false};}
+\DoxyCodeLine{00057         \}}
+\DoxyCodeLine{00058     \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_1_1_h_u_d___pause_aec196ac720b763075dbea8841507d686_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+UI/\mbox{\hyperlink{_h_u_d___pause_8java}{HUD\+\_\+\+Pause.\+java}}\end{DoxyCompactItemize}

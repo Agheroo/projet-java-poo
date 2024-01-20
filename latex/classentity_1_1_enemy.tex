@@ -7,8 +7,7 @@ Represents an enemy entity in the game.
 
 
 
-Inheritance diagram for entity.\+Enemy\+:
-\nopagebreak
+Inheritance diagram for entity.\+Enemy\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -17,8 +16,7 @@ Inheritance diagram for entity.\+Enemy\+:
 \end{figure}
 
 
-Collaboration diagram for entity.\+Enemy\+:
-\nopagebreak
+Collaboration diagram for entity.\+Enemy\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -122,23 +120,22 @@ Draws the character in the fight scene.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_enemy_8java_source_l00099}{99}} of file \mbox{\hyperlink{_enemy_8java_source}{Enemy.\+java}}.
+Definition at line \mbox{\hyperlink{_enemy_8java_source_l00098}{98}} of file \mbox{\hyperlink{_enemy_8java_source}{Enemy.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00099                                                                     \{}
-\DoxyCodeLine{00100         BufferedImage image = \textcolor{keyword}{null};}
-\DoxyCodeLine{00101         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classentity_1_1_entity_af6b442584a7caf6e84e73872f9f8e080}{\_spriteCntMax}}; i++) \{}
-\DoxyCodeLine{00102             \textcolor{keywordflow}{if}(\mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}} == i)\{}
-\DoxyCodeLine{00103                 image = \mbox{\hyperlink{classentity_1_1_character_a147002d1dbc06ed223ee52d4ea16accb}{\_idle\_left}}[i];}
-\DoxyCodeLine{00104             \}}
-\DoxyCodeLine{00105         \}}
-\DoxyCodeLine{00106         g2.drawImage(image,screenX,screenY,Const.FGHT\_entityScreenSize,Const.FGHT\_entityScreenSize,\textcolor{keyword}{null});}
-\DoxyCodeLine{00107     \}}
+\DoxyCodeLine{00098                                                                     \{}
+\DoxyCodeLine{00099         BufferedImage image = \textcolor{keyword}{null};}
+\DoxyCodeLine{00100         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classentity_1_1_entity_af6b442584a7caf6e84e73872f9f8e080}{\_spriteCntMax}}; i++) \{}
+\DoxyCodeLine{00101             \textcolor{keywordflow}{if}(\mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}} == i)\{}
+\DoxyCodeLine{00102                 image = \mbox{\hyperlink{classentity_1_1_character_a147002d1dbc06ed223ee52d4ea16accb}{\_idle\_left}}[i];}
+\DoxyCodeLine{00103             \}}
+\DoxyCodeLine{00104         \}}
+\DoxyCodeLine{00105         g2.drawImage(image,screenX,screenY,Const.FGHT\_entityScreenSize,Const.FGHT\_entityScreenSize,\textcolor{keyword}{null});}
+\DoxyCodeLine{00106     \}}
 
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -157,18 +154,17 @@ Reimplemented from \mbox{\hyperlink{classentity_1_1_entity_ae874ae13e301bb9f2275
 
 
 
-Definition at line \mbox{\hyperlink{_enemy_8java_source_l00088}{88}} of file \mbox{\hyperlink{_enemy_8java_source}{Enemy.\+java}}.
+Definition at line \mbox{\hyperlink{_enemy_8java_source_l00087}{87}} of file \mbox{\hyperlink{_enemy_8java_source}{Enemy.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00088                                                  \{}
-\DoxyCodeLine{00089         World.currfight = \textcolor{keyword}{new} FightScene(player,\textcolor{keyword}{this});}
-\DoxyCodeLine{00090         World.state = Const.State.FIGHT;}
-\DoxyCodeLine{00091     \}}
+\DoxyCodeLine{00087                                                  \{}
+\DoxyCodeLine{00088         World.currfight = \textcolor{keyword}{new} FightScene(player,\textcolor{keyword}{this});}
+\DoxyCodeLine{00089         World.state = Const.State.FIGHT;}
+\DoxyCodeLine{00090     \}}
 
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -224,8 +220,7 @@ Definition at line \mbox{\hyperlink{_enemy_8java_source_l00063}{63}} of file \mb
 \DoxyCodeLine{00074     \}}
 
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -274,8 +269,6 @@ Updates the enemy entity based on the current scene and time elapsed.
 
 
 \begin{DoxyParams}{Parameters}
-{\em scene} & The current game scene. \\
-\hline
 {\em dt} & The time elapsed since the last update. \\
 \hline
 \end{DoxyParams}
@@ -285,14 +278,14 @@ Reimplemented from \mbox{\hyperlink{classentity_1_1_character_a0beaf70a50b785c4c
 
 
 
-Definition at line \mbox{\hyperlink{_enemy_8java_source_l00082}{82}} of file \mbox{\hyperlink{_enemy_8java_source}{Enemy.\+java}}.
+Definition at line \mbox{\hyperlink{_enemy_8java_source_l00081}{81}} of file \mbox{\hyperlink{_enemy_8java_source}{Enemy.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00082                                   \{}
-\DoxyCodeLine{00083         super.update(dt); \textcolor{comment}{// Calls the parent class update method}}
-\DoxyCodeLine{00084         \textcolor{comment}{// find a method to make the enemy move in predictive patterns}}
-\DoxyCodeLine{00085     \}}
+\DoxyCodeLine{00081                                   \{}
+\DoxyCodeLine{00082         super.update(dt); \textcolor{comment}{// Calls the parent class update method}}
+\DoxyCodeLine{00083         \textcolor{comment}{// find a method to make the enemy move in predictive patterns}}
+\DoxyCodeLine{00084     \}}
 
 \end{DoxyCode}
 

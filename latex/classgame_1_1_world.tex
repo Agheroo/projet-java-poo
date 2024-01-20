@@ -49,8 +49,6 @@ static \mbox{\hyperlink{classgame_1_1_world}{World}} \mbox{\hyperlink{classgame_
 \mbox{\hyperlink{classtiles_1_1_tile_manager}{Tile\+Manager}} \mbox{\hyperlink{classgame_1_1_world_a197de437b2b9ead90aaa99790bc4fb56}{tile\+Manager}} = new \mbox{\hyperlink{classtiles_1_1_tile_manager}{Tile\+Manager}}(this)
 \item 
 \mbox{\hyperlink{classentity_1_1_entity_setter}{Entity\+Setter}} \mbox{\hyperlink{classgame_1_1_world_a8d8a2c5dda788bab03181b14b661e8dd}{entity\+Setter}} = new \mbox{\hyperlink{classentity_1_1_entity_setter}{Entity\+Setter}}(this)
-\item 
-\mbox{\hyperlink{classentity_1_1_warrior}{Warrior}} \mbox{\hyperlink{classgame_1_1_world_abbe08636c12c7d32a756e038a8ec5ae8}{player}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
@@ -60,6 +58,8 @@ static \mbox{\hyperlink{classgame_1_1_fight_scene}{Fight\+Scene}} \mbox{\hyperli
 static Hash\+Map$<$ Point, \mbox{\hyperlink{classentity_1_1props_1_1_props}{Props}} $>$ \mbox{\hyperlink{classgame_1_1_world_a287fcd8121546f4cffd9685453a4f635}{obj\+Map}} = new Hash\+Map$<$$>$()
 \item 
 static Hash\+Map$<$ Point, \mbox{\hyperlink{classentity_1_1_enemy}{Enemy}} $>$ \mbox{\hyperlink{classgame_1_1_world_a8f7650232d674854c7be0df78b0b736d}{enemies}} = new Hash\+Map$<$$>$()
+\item 
+static \mbox{\hyperlink{classentity_1_1_player}{Player}} \mbox{\hyperlink{classgame_1_1_world_a19fe62be0968869f85d52bebde6f8115}{player}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -77,7 +77,7 @@ static \mbox{\hyperlink{classgame_1_1_world}{World}} \mbox{\hyperlink{classgame_
 \doxysubsection{Detailed Description}
 Represents the game world and manages its entities. 
 
-Definition at line \mbox{\hyperlink{_world_8java_source_l00026}{26}} of file \mbox{\hyperlink{_world_8java_source}{World.\+java}}.
+Definition at line \mbox{\hyperlink{_world_8java_source_l00027}{27}} of file \mbox{\hyperlink{_world_8java_source}{World.\+java}}.
 
 
 
@@ -96,22 +96,21 @@ Adds an enemy to the Hash\+Map with the specified coordinates.
 \begin{DoxyParams}{Parameters}
 {\em coordinates} & The coordinates of the object. \\
 \hline
-{\em object} & The object to be added. \\
+{\em enemy} & The object to be added. \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_world_8java_source_l00091}{91}} of file \mbox{\hyperlink{_world_8java_source}{World.\+java}}.
+Definition at line \mbox{\hyperlink{_world_8java_source_l00093}{93}} of file \mbox{\hyperlink{_world_8java_source}{World.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00091                                                         \{}
-\DoxyCodeLine{00092         \mbox{\hyperlink{classgame_1_1_world_a8f7650232d674854c7be0df78b0b736d}{enemies}}.put(coordinates,enemy);}
-\DoxyCodeLine{00093     \}}
+\DoxyCodeLine{00093                                                         \{}
+\DoxyCodeLine{00094         \mbox{\hyperlink{classgame_1_1_world_a8f7650232d674854c7be0df78b0b736d}{enemies}}.put(coordinates,enemy);}
+\DoxyCodeLine{00095     \}}
 
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -137,13 +136,13 @@ Adds an object to the Hash\+Map with the specified coordinates.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_world_8java_source_l00081}{81}} of file \mbox{\hyperlink{_world_8java_source}{World.\+java}}.
+Definition at line \mbox{\hyperlink{_world_8java_source_l00083}{83}} of file \mbox{\hyperlink{_world_8java_source}{World.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00081                                                            \{}
-\DoxyCodeLine{00082         \mbox{\hyperlink{classgame_1_1_world_a287fcd8121546f4cffd9685453a4f635}{objMap}}.put(coordinates, \textcolor{keywordtype}{object});}
-\DoxyCodeLine{00083     \}}
+\DoxyCodeLine{00083                                                            \{}
+\DoxyCodeLine{00084         \mbox{\hyperlink{classgame_1_1_world_a287fcd8121546f4cffd9685453a4f635}{objMap}}.put(coordinates, \textcolor{keywordtype}{object});}
+\DoxyCodeLine{00085     \}}
 
 \end{DoxyCode}
 Here is the caller graph for this function\+:\nopagebreak
@@ -178,63 +177,61 @@ Reimplemented from \mbox{\hyperlink{classgame_1_1_scene_aef53d2ecf085388a1602003
 
 
 
-Definition at line \mbox{\hyperlink{_world_8java_source_l00146}{146}} of file \mbox{\hyperlink{_world_8java_source}{World.\+java}}.
+Definition at line \mbox{\hyperlink{_world_8java_source_l00150}{150}} of file \mbox{\hyperlink{_world_8java_source}{World.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00146                                                                        \{}
-\DoxyCodeLine{00147         }
-\DoxyCodeLine{00148         \textcolor{comment}{//If there is a fight, draw the fight instead of the game world}}
-\DoxyCodeLine{00149         \textcolor{keywordflow}{if}(\mbox{\hyperlink{classgame_1_1_world_a7ac6f41bbf956b2f14152562cccbd360}{currfight}} != \textcolor{keyword}{null})\{}
-\DoxyCodeLine{00150             \textcolor{keywordflow}{switch}(\mbox{\hyperlink{classgame_1_1_world_a7ac6f41bbf956b2f14152562cccbd360}{currfight}}.\mbox{\hyperlink{classgame_1_1_fight_scene_a22d8a71d7e3938c5b1e7773bbcef51bd}{state}})\{}
-\DoxyCodeLine{00151                 \textcolor{keywordflow}{case} Const.FightState.FIGHTING:}
-\DoxyCodeLine{00152                     \mbox{\hyperlink{classgame_1_1_world_a7ac6f41bbf956b2f14152562cccbd360}{currfight}}.\mbox{\hyperlink{classgame_1_1_fight_scene_a9525cb3d263680e8d808b3abde00e8d8}{draw}}(g2); \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00153                 \textcolor{keywordflow}{case} Const.FightState.WON:}
-\DoxyCodeLine{00154                     \mbox{\hyperlink{classgame_1_1_world_a7ac6f41bbf956b2f14152562cccbd360}{currfight}} = \textcolor{keyword}{null}; \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00155                 \textcolor{keywordflow}{case} Const.FightState.LOST:}
-\DoxyCodeLine{00156                     System.out.println(\textcolor{stringliteral}{"{}Merci d'avoir joué !"{}}); \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00157                 \textcolor{keywordflow}{default}: \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00158             \}}
-\DoxyCodeLine{00159         \}}
-\DoxyCodeLine{00160         }
-\DoxyCodeLine{00161         \textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{00162             \textcolor{keywordflow}{if}(\mbox{\hyperlink{classgame_1_1_scene_afa46982ec00ac703190b0642d8a3c4be}{state}} == Const.State.\mbox{\hyperlink{enumgame_1_1_const_1_1_state_ad7237c8ca0d5611c5ab2538232b207cd}{WORLD}})\{}
-\DoxyCodeLine{00163                 \textcolor{comment}{// TILE}}
-\DoxyCodeLine{00164                 \mbox{\hyperlink{classgame_1_1_world_a197de437b2b9ead90aaa99790bc4fb56}{tileManager}}.\mbox{\hyperlink{classtiles_1_1_tile_manager_a3225a1e7f736b5eb311b0efd9f34613b}{draw}}(g2, \textcolor{keyword}{this});}
-\DoxyCodeLine{00165                 \textcolor{comment}{// OBJECT}}
-\DoxyCodeLine{00166                 \textcolor{keywordflow}{for} (Props props : \mbox{\hyperlink{classgame_1_1_world_a287fcd8121546f4cffd9685453a4f635}{objMap}}.values()) \{}
-\DoxyCodeLine{00167                     props.draw(g2, \textcolor{keyword}{this});}
-\DoxyCodeLine{00168                 \}}
-\DoxyCodeLine{00169                 \textcolor{comment}{// PLAYER}}
-\DoxyCodeLine{00170                 \mbox{\hyperlink{classgame_1_1_world_abbe08636c12c7d32a756e038a8ec5ae8}{player}}.\mbox{\hyperlink{classentity_1_1_character_a2e5b1455cc08b1a213cf51ecf102b6bb}{drawInWorld}}(g2, (screenWidth-\/Const.WRLD\_entityScreenSize)/2,}
-\DoxyCodeLine{00171                                         (screenHeight-\/Const.WRLD\_entityScreenSize)/2); \textcolor{comment}{// Player is always centered to screen}}
-\DoxyCodeLine{00172 }
-\DoxyCodeLine{00173                 }
-\DoxyCodeLine{00174 }
-\DoxyCodeLine{00175                 \textcolor{comment}{//ENEMIES}}
-\DoxyCodeLine{00176                 \textcolor{keywordflow}{for}(Enemy enemy : \mbox{\hyperlink{classgame_1_1_world_a8f7650232d674854c7be0df78b0b736d}{enemies}}.values())\{}
-\DoxyCodeLine{00177                     \textcolor{comment}{// Calculate the screen position of the character relative to the player's position}}
-\DoxyCodeLine{00178                     \textcolor{keywordtype}{int} screenX = enemy.worldX -\/ player.worldX + (Const.WDW\_width -\/ Const.WRLD\_entityScreenSize)/2;}
-\DoxyCodeLine{00179                     \textcolor{keywordtype}{int} screenY = enemy.worldY -\/ player.worldY + (Const.WDW\_height -\/ Const.WRLD\_entityScreenSize)/2;}
-\DoxyCodeLine{00180 }
-\DoxyCodeLine{00181                     enemy.drawInWorld(g2, screenX, screenY);}
-\DoxyCodeLine{00182                 \}}
-\DoxyCodeLine{00183                 \mbox{\hyperlink{classgame_1_1_world_ab8cb50c0f3ae83693a2c776177ff854d}{HUD\_world}}.\mbox{\hyperlink{class_u_i_1_1_h_u_d___world_a3168ce83edffabbe6347f9478523936d}{draw}}(g2);}
-\DoxyCodeLine{00184                 }
-\DoxyCodeLine{00185             \}}
-\DoxyCodeLine{00186 }
-\DoxyCodeLine{00187             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{classgame_1_1_scene_afa46982ec00ac703190b0642d8a3c4be}{state}} == Const.State.\mbox{\hyperlink{enumgame_1_1_const_1_1_state_aa48fd9388a4011a721488324fa7c1852}{WELCOME}})\{}
-\DoxyCodeLine{00188                 \mbox{\hyperlink{classgame_1_1_scene_abfeaf3d13d7ff744014bcad7f4790501}{menu}}.\mbox{\hyperlink{class_u_i_1_1_h_u_d_acf73daced1b23ea24b73216f6a23f587}{draw}}(g2);}
-\DoxyCodeLine{00189             \}}
-\DoxyCodeLine{00190         \}  }
-\DoxyCodeLine{00191 }
-\DoxyCodeLine{00192 }
-\DoxyCodeLine{00193         \textcolor{comment}{//Draw pause screen last but still draw the background game}}
-\DoxyCodeLine{00194         \textcolor{keywordflow}{if}(Scene.state == Const.State.PAUSE)\{}
-\DoxyCodeLine{00195             \mbox{\hyperlink{classgame_1_1_scene_abfeaf3d13d7ff744014bcad7f4790501}{menu}}.\mbox{\hyperlink{class_u_i_1_1_h_u_d_acf73daced1b23ea24b73216f6a23f587}{draw}}(g2);}
-\DoxyCodeLine{00196         \}}
-\DoxyCodeLine{00197         }
-\DoxyCodeLine{00198     \}}
+\DoxyCodeLine{00150                                                                        \{}
+\DoxyCodeLine{00151         }
+\DoxyCodeLine{00152         \textcolor{comment}{//If there is a fight, draw the fight instead of the game world}}
+\DoxyCodeLine{00153         \textcolor{keywordflow}{if}(\mbox{\hyperlink{classgame_1_1_world_a7ac6f41bbf956b2f14152562cccbd360}{currfight}} != \textcolor{keyword}{null})\{}
+\DoxyCodeLine{00154             \textcolor{keywordflow}{switch}(FightScene.state.toString())\{}
+\DoxyCodeLine{00155                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}FIGHTING"{}}:}
+\DoxyCodeLine{00156                     \mbox{\hyperlink{classgame_1_1_world_a7ac6f41bbf956b2f14152562cccbd360}{currfight}}.\mbox{\hyperlink{classgame_1_1_fight_scene_a9525cb3d263680e8d808b3abde00e8d8}{draw}}(g2); \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00157                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}WON"{}}:}
+\DoxyCodeLine{00158                     \mbox{\hyperlink{classgame_1_1_world_a7ac6f41bbf956b2f14152562cccbd360}{currfight}} = \textcolor{keyword}{null}; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00159                 \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}LOST"{}}:}
+\DoxyCodeLine{00160                     \mbox{\hyperlink{classgame_1_1_scene_abfeaf3d13d7ff744014bcad7f4790501}{menu}}.\mbox{\hyperlink{class_u_i_1_1_h_u_d_acf73daced1b23ea24b73216f6a23f587}{draw}}(g2); \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00161                 \textcolor{keywordflow}{default}: \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00162             \}}
+\DoxyCodeLine{00163         \}}
+\DoxyCodeLine{00164         }
+\DoxyCodeLine{00165         \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00166             \textcolor{keywordflow}{if}(Scene.state == Const.State.WORLD || Scene.state == Const.State.PAUSE)\{}
+\DoxyCodeLine{00167                 \textcolor{comment}{// TILE}}
+\DoxyCodeLine{00168                 \mbox{\hyperlink{classgame_1_1_world_a197de437b2b9ead90aaa99790bc4fb56}{tileManager}}.\mbox{\hyperlink{classtiles_1_1_tile_manager_a3225a1e7f736b5eb311b0efd9f34613b}{draw}}(g2, \textcolor{keyword}{this});}
+\DoxyCodeLine{00169                 \textcolor{comment}{// OBJECT}}
+\DoxyCodeLine{00170                 \textcolor{keywordflow}{for} (Props props : \mbox{\hyperlink{classgame_1_1_world_a287fcd8121546f4cffd9685453a4f635}{objMap}}.values()) \{}
+\DoxyCodeLine{00171                     props.draw(g2, \textcolor{keyword}{this});}
+\DoxyCodeLine{00172                 \}}
+\DoxyCodeLine{00173                 \textcolor{comment}{// PLAYER}}
+\DoxyCodeLine{00174                 \mbox{\hyperlink{classgame_1_1_world_a19fe62be0968869f85d52bebde6f8115}{player}}.\mbox{\hyperlink{classentity_1_1_character_a2e5b1455cc08b1a213cf51ecf102b6bb}{drawInWorld}}(g2, (screenWidth-\/Const.WRLD\_entityScreenSize)/2,}
+\DoxyCodeLine{00175                                         (screenHeight-\/Const.WRLD\_entityScreenSize)/2); \textcolor{comment}{// Player is always centered to screen}}
+\DoxyCodeLine{00176 }
+\DoxyCodeLine{00177                 }
+\DoxyCodeLine{00178 }
+\DoxyCodeLine{00179                 \textcolor{comment}{//ENEMIES}}
+\DoxyCodeLine{00180                 \textcolor{keywordflow}{for}(Enemy enemy : \mbox{\hyperlink{classgame_1_1_world_a8f7650232d674854c7be0df78b0b736d}{enemies}}.values())\{}
+\DoxyCodeLine{00181                     \textcolor{comment}{// Calculate the screen position of the character relative to the player's position}}
+\DoxyCodeLine{00182                     \textcolor{keywordtype}{int} screenX = enemy.worldX -\/ player.worldX + (Const.WDW\_width -\/ Const.WRLD\_entityScreenSize)/2;}
+\DoxyCodeLine{00183                     \textcolor{keywordtype}{int} screenY = enemy.worldY -\/ player.worldY + (Const.WDW\_height -\/ Const.WRLD\_entityScreenSize)/2;}
+\DoxyCodeLine{00184 }
+\DoxyCodeLine{00185                     enemy.drawInWorld(g2, screenX, screenY);}
+\DoxyCodeLine{00186                 \}}
+\DoxyCodeLine{00187                 \mbox{\hyperlink{classgame_1_1_world_ab8cb50c0f3ae83693a2c776177ff854d}{HUD\_world}}.\mbox{\hyperlink{class_u_i_1_1_h_u_d___world_a3168ce83edffabbe6347f9478523936d}{draw}}(g2);}
+\DoxyCodeLine{00188                    }
+\DoxyCodeLine{00189             \}\textcolor{comment}{//Draw pause screen last but still draw the background game }}
+\DoxyCodeLine{00190             \textcolor{keywordflow}{if}(Scene.state == Const.State.PAUSE)\{}
+\DoxyCodeLine{00191                 \mbox{\hyperlink{classgame_1_1_scene_abfeaf3d13d7ff744014bcad7f4790501}{menu}}.\mbox{\hyperlink{class_u_i_1_1_h_u_d_acf73daced1b23ea24b73216f6a23f587}{draw}}(g2);}
+\DoxyCodeLine{00192             \}}
+\DoxyCodeLine{00193 }
+\DoxyCodeLine{00194             \textcolor{comment}{//Display the welcome menu if new game}}
+\DoxyCodeLine{00195             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(Scene.state == Const.State.WELCOME)\{}
+\DoxyCodeLine{00196                 \mbox{\hyperlink{classgame_1_1_scene_abfeaf3d13d7ff744014bcad7f4790501}{menu}}.\mbox{\hyperlink{class_u_i_1_1_h_u_d_acf73daced1b23ea24b73216f6a23f587}{draw}}(g2);}
+\DoxyCodeLine{00197             \}}
+\DoxyCodeLine{00198         \}  }
+\DoxyCodeLine{00199 }
+\DoxyCodeLine{00200     \}}
 
 \end{DoxyCode}
 Here is the call graph for this function\+:
@@ -260,29 +257,29 @@ The \mbox{\hyperlink{classgame_1_1_world}{World}} instance.
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_world_8java_source_l00048}{48}} of file \mbox{\hyperlink{_world_8java_source}{World.\+java}}.
+Definition at line \mbox{\hyperlink{_world_8java_source_l00049}{49}} of file \mbox{\hyperlink{_world_8java_source}{World.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00048                                    \{}
-\DoxyCodeLine{00049         Textbox.loadFont(Const.fontName);}
-\DoxyCodeLine{00050         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classgame_1_1_world_a12bf1b75af0919c4b288e0caee7af443}{\_instance}} == \textcolor{keyword}{null}) \{}
-\DoxyCodeLine{00051             \mbox{\hyperlink{classgame_1_1_world_a12bf1b75af0919c4b288e0caee7af443}{\_instance}} = \textcolor{keyword}{new} World();}
-\DoxyCodeLine{00052             \mbox{\hyperlink{classgame_1_1_scene_afa46982ec00ac703190b0642d8a3c4be}{state}} = Const.State.\mbox{\hyperlink{enumgame_1_1_const_1_1_state_ad7237c8ca0d5611c5ab2538232b207cd}{WORLD}};}
-\DoxyCodeLine{00053         \}}
-\DoxyCodeLine{00054         \textcolor{keywordflow}{return} \mbox{\hyperlink{classgame_1_1_world_a12bf1b75af0919c4b288e0caee7af443}{\_instance}};}
-\DoxyCodeLine{00055     \}}
+\DoxyCodeLine{00049                                    \{}
+\DoxyCodeLine{00050         Textbox.loadFont(Const.fontName);}
+\DoxyCodeLine{00051         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classgame_1_1_world_a12bf1b75af0919c4b288e0caee7af443}{\_instance}} == \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{00052             \mbox{\hyperlink{classgame_1_1_world_a12bf1b75af0919c4b288e0caee7af443}{\_instance}} = \textcolor{keyword}{new} World();}
+\DoxyCodeLine{00053             \mbox{\hyperlink{classgame_1_1_scene_afa46982ec00ac703190b0642d8a3c4be}{state}} = Const.State.\mbox{\hyperlink{enumgame_1_1_const_1_1_state_ad7237c8ca0d5611c5ab2538232b207cd}{WORLD}};}
+\DoxyCodeLine{00054         \}}
+\DoxyCodeLine{00055         \textcolor{keywordflow}{return} \mbox{\hyperlink{classgame_1_1_world_a12bf1b75af0919c4b288e0caee7af443}{\_instance}};}
+\DoxyCodeLine{00056     \}}
 
 \end{DoxyCode}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classgame_1_1_world_a0e40ca86573cf45d858cc8e529865649_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -301,25 +298,25 @@ Set up the initial state of the game.
 
 
 
-Definition at line \mbox{\hyperlink{_world_8java_source_l00061}{61}} of file \mbox{\hyperlink{_world_8java_source}{World.\+java}}.
+Definition at line \mbox{\hyperlink{_world_8java_source_l00062}{62}} of file \mbox{\hyperlink{_world_8java_source}{World.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00061                             \{}
-\DoxyCodeLine{00062         \mbox{\hyperlink{classgame_1_1_world_a8d8a2c5dda788bab03181b14b661e8dd}{entitySetter}}.\mbox{\hyperlink{classentity_1_1_entity_setter_ac8c3fa3789803b2286d5f5df7a89594e}{setObject}}();}
-\DoxyCodeLine{00063         \mbox{\hyperlink{classgame_1_1_world_a8d8a2c5dda788bab03181b14b661e8dd}{entitySetter}}.\mbox{\hyperlink{classentity_1_1_entity_setter_a102773a9c4c8ff3b86f7028c568f9746}{setEnemies}}();}
-\DoxyCodeLine{00064 }
-\DoxyCodeLine{00065         \mbox{\hyperlink{classgame_1_1_world_abbe08636c12c7d32a756e038a8ec5ae8}{player}} = \textcolor{keyword}{new} Warrior(\textcolor{stringliteral}{"{}player"{}}, 8 * Const.WRLD\_tileScreenSize,}
-\DoxyCodeLine{00066             16 * Const.WRLD\_tileScreenSize, 0, 0, 0, \textcolor{stringliteral}{"{}down"{}}, 4, 20);}
-\DoxyCodeLine{00067         }
-\DoxyCodeLine{00068         \mbox{\hyperlink{classgame_1_1_scene_abfeaf3d13d7ff744014bcad7f4790501}{menu}} = \textcolor{keyword}{new} HUD\_Welcome();}
-\DoxyCodeLine{00069         \mbox{\hyperlink{classgame_1_1_scene_afa46982ec00ac703190b0642d8a3c4be}{state}} = Const.State.\mbox{\hyperlink{enumgame_1_1_const_1_1_state_ad7237c8ca0d5611c5ab2538232b207cd}{WORLD}};    \textcolor{comment}{//TODO : CHANGE THIS STATE TO WELCOME WHEN RELEASING THE GAME}}
-\DoxyCodeLine{00070         \mbox{\hyperlink{classgame_1_1_world_ab8cb50c0f3ae83693a2c776177ff854d}{HUD\_world}} = \textcolor{keyword}{new} HUD\_World();}
-\DoxyCodeLine{00071     \}}
+\DoxyCodeLine{00062                             \{}
+\DoxyCodeLine{00063         \mbox{\hyperlink{classgame_1_1_scene_abfeaf3d13d7ff744014bcad7f4790501}{menu}} = \textcolor{keyword}{new} HUD\_Welcome();}
+\DoxyCodeLine{00064         \mbox{\hyperlink{classgame_1_1_world_a8d8a2c5dda788bab03181b14b661e8dd}{entitySetter}}.\mbox{\hyperlink{classentity_1_1_entity_setter_ac8c3fa3789803b2286d5f5df7a89594e}{setObject}}();}
+\DoxyCodeLine{00065         \mbox{\hyperlink{classgame_1_1_world_a8d8a2c5dda788bab03181b14b661e8dd}{entitySetter}}.\mbox{\hyperlink{classentity_1_1_entity_setter_a102773a9c4c8ff3b86f7028c568f9746}{setEnemies}}();}
+\DoxyCodeLine{00066 }
+\DoxyCodeLine{00067         \mbox{\hyperlink{classgame_1_1_world_a19fe62be0968869f85d52bebde6f8115}{player}} = \textcolor{keyword}{new} Warrior(\textcolor{stringliteral}{"{}warrior"{}}, Const.WRLD\_spawnX,}
+\DoxyCodeLine{00068             Const.WRLD\_spawnY, 0, 0, 0, \textcolor{stringliteral}{"{}down"{}}, 4, 20);}
+\DoxyCodeLine{00069         }
+\DoxyCodeLine{00070         }
+\DoxyCodeLine{00071         \mbox{\hyperlink{classgame_1_1_scene_afa46982ec00ac703190b0642d8a3c4be}{state}} = Const.State.\mbox{\hyperlink{enumgame_1_1_const_1_1_state_aa48fd9388a4011a721488324fa7c1852}{WELCOME}};}
+\DoxyCodeLine{00072         \mbox{\hyperlink{classgame_1_1_world_ab8cb50c0f3ae83693a2c776177ff854d}{HUD\_world}} = \textcolor{keyword}{new} HUD\_World();}
+\DoxyCodeLine{00073     \}}
 
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -349,50 +346,52 @@ Reimplemented from \mbox{\hyperlink{classgame_1_1_scene_a23b3275854d4de945e1f8eb
 
 
 
-Definition at line \mbox{\hyperlink{_world_8java_source_l00098}{98}} of file \mbox{\hyperlink{_world_8java_source}{World.\+java}}.
+Definition at line \mbox{\hyperlink{_world_8java_source_l00100}{100}} of file \mbox{\hyperlink{_world_8java_source}{World.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00098                          \{}
-\DoxyCodeLine{00099         \textcolor{keywordflow}{switch}(\mbox{\hyperlink{classgame_1_1_scene_afa46982ec00ac703190b0642d8a3c4be}{state}})\{}
-\DoxyCodeLine{00100             \textcolor{keywordflow}{case} Const.State.WELCOME:}
-\DoxyCodeLine{00101                 \mbox{\hyperlink{classgame_1_1_scene_abfeaf3d13d7ff744014bcad7f4790501}{menu}}.\mbox{\hyperlink{class_u_i_1_1_h_u_d_ad0c1abd2a8e1c763e8c508b4535cbe68}{update}}();}
-\DoxyCodeLine{00102                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00103             \textcolor{keywordflow}{case} Const.State.WORLD:}
-\DoxyCodeLine{00104                 \mbox{\hyperlink{classgame_1_1_scene_a8836ac66378d274d9935a950e0b83d7a}{checkPauseScene}}();}
-\DoxyCodeLine{00105                 \mbox{\hyperlink{classgame_1_1_world_ab8cb50c0f3ae83693a2c776177ff854d}{HUD\_world}}.\mbox{\hyperlink{class_u_i_1_1_h_u_d___world_af61b9be0ebdafc7487eacb0afb6d4fcd}{update}}();}
-\DoxyCodeLine{00106                 \mbox{\hyperlink{classgame_1_1_world_abbe08636c12c7d32a756e038a8ec5ae8}{player}}.\mbox{\hyperlink{classentity_1_1_player_ae9f8bc01c80f5ed6ffc7fb656f7895c1}{update}}(\mbox{\hyperlink{classgame_1_1_scene_ae2b7be4c9099875e858f88458b7d4a1d}{dt}});}
-\DoxyCodeLine{00107                 \mbox{\hyperlink{classgame_1_1_world_a197de437b2b9ead90aaa99790bc4fb56}{tileManager}}.\mbox{\hyperlink{classtiles_1_1_tile_manager_aa105a51c3008f7cae9e241e671be2278}{update}}(\textcolor{keyword}{this});}
-\DoxyCodeLine{00108 }
-\DoxyCodeLine{00109 }
-\DoxyCodeLine{00110                 \textcolor{comment}{//Update enemy if he's close enough otherwise useless to update (5 tile radius around the screen)}}
-\DoxyCodeLine{00111                 \textcolor{keywordflow}{for}(Enemy enemy : \mbox{\hyperlink{classgame_1_1_world_a8f7650232d674854c7be0df78b0b736d}{enemies}}.values())\{}
-\DoxyCodeLine{00112                     \textcolor{keywordtype}{int} playerScreenX = (Const.WDW\_width -\/ Const.WRLD\_entityScreenSize) / 2;}
-\DoxyCodeLine{00113                     \textcolor{keywordtype}{int} playerScreenY = (Const.WDW\_height -\/ Const.WRLD\_entityScreenSize) / 2;}
-\DoxyCodeLine{00114 }
-\DoxyCodeLine{00115                     \textcolor{keywordflow}{if}(enemy.worldX + 5*Const.WRLD\_tileScreenSize > \mbox{\hyperlink{classgame_1_1_world_abbe08636c12c7d32a756e038a8ec5ae8}{player}}.\mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} -\/ playerScreenX}
-\DoxyCodeLine{00116                     \&\& enemy.worldX -\/ 5*Const.WRLD\_tileScreenSize < \mbox{\hyperlink{classgame_1_1_world_abbe08636c12c7d32a756e038a8ec5ae8}{player}}.\mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} + playerScreenX}
-\DoxyCodeLine{00117                     \&\& enemy.worldY + 5*Const.WRLD\_tileScreenSize > \mbox{\hyperlink{classgame_1_1_world_abbe08636c12c7d32a756e038a8ec5ae8}{player}}.\mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} -\/ playerScreenY}
-\DoxyCodeLine{00118                     \&\& enemy.worldY -\/ 5*Const.WRLD\_tileScreenSize < \mbox{\hyperlink{classgame_1_1_world_abbe08636c12c7d32a756e038a8ec5ae8}{player}}.\mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} + playerScreenY) \{  }
-\DoxyCodeLine{00119                         enemy.update(\mbox{\hyperlink{classgame_1_1_scene_ae2b7be4c9099875e858f88458b7d4a1d}{dt}});}
-\DoxyCodeLine{00120 }
-\DoxyCodeLine{00121                     \}}
-\DoxyCodeLine{00122                 \}}
-\DoxyCodeLine{00123                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00124             }
-\DoxyCodeLine{00125             \textcolor{keywordflow}{case} Const.State.PAUSE:}
-\DoxyCodeLine{00126                 \mbox{\hyperlink{classgame_1_1_scene_abfeaf3d13d7ff744014bcad7f4790501}{menu}}.\mbox{\hyperlink{class_u_i_1_1_h_u_d_ad0c1abd2a8e1c763e8c508b4535cbe68}{update}}(); }
-\DoxyCodeLine{00127                 \mbox{\hyperlink{classgame_1_1_scene_a8836ac66378d274d9935a950e0b83d7a}{checkPauseScene}}();}
-\DoxyCodeLine{00128                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00129 }
-\DoxyCodeLine{00130             \textcolor{keywordflow}{case} Const.State.FIGHT:}
-\DoxyCodeLine{00131                 \mbox{\hyperlink{classgame_1_1_world_a7ac6f41bbf956b2f14152562cccbd360}{currfight}}.\mbox{\hyperlink{classgame_1_1_fight_scene_a6f8060e45bcb70f13265bd6d3b2a52d5}{update}}(\textcolor{keyword}{this}); \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00132 }
-\DoxyCodeLine{00133             \textcolor{keywordflow}{default}:}
-\DoxyCodeLine{00134                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00135         \}}
+\DoxyCodeLine{00100                          \{}
+\DoxyCodeLine{00101         \textcolor{keywordflow}{switch}(\mbox{\hyperlink{classgame_1_1_scene_afa46982ec00ac703190b0642d8a3c4be}{state}}.toString())\{}
+\DoxyCodeLine{00102             \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}WELCOME"{}}:}
+\DoxyCodeLine{00103                 \mbox{\hyperlink{classgame_1_1_scene_abfeaf3d13d7ff744014bcad7f4790501}{menu}}.\mbox{\hyperlink{class_u_i_1_1_h_u_d_ad0c1abd2a8e1c763e8c508b4535cbe68}{update}}();}
+\DoxyCodeLine{00104                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00105             \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}WORLD"{}}:}
+\DoxyCodeLine{00106                 \mbox{\hyperlink{classgame_1_1_scene_a8836ac66378d274d9935a950e0b83d7a}{checkPauseScene}}();}
+\DoxyCodeLine{00107                 \mbox{\hyperlink{classgame_1_1_world_ab8cb50c0f3ae83693a2c776177ff854d}{HUD\_world}}.\mbox{\hyperlink{class_u_i_1_1_h_u_d___world_af61b9be0ebdafc7487eacb0afb6d4fcd}{update}}();}
+\DoxyCodeLine{00108                 \mbox{\hyperlink{classgame_1_1_world_a19fe62be0968869f85d52bebde6f8115}{player}}.\mbox{\hyperlink{classentity_1_1_player_ae9f8bc01c80f5ed6ffc7fb656f7895c1}{update}}(\mbox{\hyperlink{classgame_1_1_scene_ae2b7be4c9099875e858f88458b7d4a1d}{dt}});}
+\DoxyCodeLine{00109                 \mbox{\hyperlink{classgame_1_1_world_a197de437b2b9ead90aaa99790bc4fb56}{tileManager}}.\mbox{\hyperlink{classtiles_1_1_tile_manager_aa105a51c3008f7cae9e241e671be2278}{update}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00110 }
+\DoxyCodeLine{00111 }
+\DoxyCodeLine{00112                 \textcolor{comment}{//Update enemy if he's close enough otherwise useless to update (5 tile radius around the screen)}}
+\DoxyCodeLine{00113                 \textcolor{keywordflow}{for}(Enemy enemy : \mbox{\hyperlink{classgame_1_1_world_a8f7650232d674854c7be0df78b0b736d}{enemies}}.values())\{}
+\DoxyCodeLine{00114                     \textcolor{keywordtype}{int} playerScreenX = (Const.WDW\_width -\/ Const.WRLD\_entityScreenSize) / 2;}
+\DoxyCodeLine{00115                     \textcolor{keywordtype}{int} playerScreenY = (Const.WDW\_height -\/ Const.WRLD\_entityScreenSize) / 2;}
+\DoxyCodeLine{00116 }
+\DoxyCodeLine{00117                     \textcolor{keywordflow}{if}(enemy.worldX + 5*Const.WRLD\_tileScreenSize > \mbox{\hyperlink{classgame_1_1_world_a19fe62be0968869f85d52bebde6f8115}{player}}.\mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} -\/ playerScreenX}
+\DoxyCodeLine{00118                     \&\& enemy.worldX -\/ 5*Const.WRLD\_tileScreenSize < \mbox{\hyperlink{classgame_1_1_world_a19fe62be0968869f85d52bebde6f8115}{player}}.\mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} + playerScreenX}
+\DoxyCodeLine{00119                     \&\& enemy.worldY + 5*Const.WRLD\_tileScreenSize > \mbox{\hyperlink{classgame_1_1_world_a19fe62be0968869f85d52bebde6f8115}{player}}.\mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} -\/ playerScreenY}
+\DoxyCodeLine{00120                     \&\& enemy.worldY -\/ 5*Const.WRLD\_tileScreenSize < \mbox{\hyperlink{classgame_1_1_world_a19fe62be0968869f85d52bebde6f8115}{player}}.\mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} + playerScreenY) \{  }
+\DoxyCodeLine{00121                         enemy.update(\mbox{\hyperlink{classgame_1_1_scene_ae2b7be4c9099875e858f88458b7d4a1d}{dt}});}
+\DoxyCodeLine{00122                     \}}
+\DoxyCodeLine{00123                 \}}
+\DoxyCodeLine{00124                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00125             }
+\DoxyCodeLine{00126             \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}PAUSE"{}}:}
+\DoxyCodeLine{00127                 \mbox{\hyperlink{classgame_1_1_scene_abfeaf3d13d7ff744014bcad7f4790501}{menu}}.\mbox{\hyperlink{class_u_i_1_1_h_u_d_ad0c1abd2a8e1c763e8c508b4535cbe68}{update}}(); }
+\DoxyCodeLine{00128                 \mbox{\hyperlink{classgame_1_1_scene_a8836ac66378d274d9935a950e0b83d7a}{checkPauseScene}}();}
+\DoxyCodeLine{00129                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00130 }
+\DoxyCodeLine{00131             \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}FIGHT"{}}:}
+\DoxyCodeLine{00132                 \mbox{\hyperlink{classgame_1_1_world_a7ac6f41bbf956b2f14152562cccbd360}{currfight}}.\mbox{\hyperlink{classgame_1_1_fight_scene_a6f8060e45bcb70f13265bd6d3b2a52d5}{update}}(\textcolor{keyword}{this}); \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00133             }
+\DoxyCodeLine{00134             \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}LOST"{}}:}
+\DoxyCodeLine{00135                 \mbox{\hyperlink{classgame_1_1_scene_abfeaf3d13d7ff744014bcad7f4790501}{menu}}.\mbox{\hyperlink{class_u_i_1_1_h_u_d_ad0c1abd2a8e1c763e8c508b4535cbe68}{update}}(); \textcolor{keywordflow}{break};}
 \DoxyCodeLine{00136 }
-\DoxyCodeLine{00137     \}}
+\DoxyCodeLine{00137             \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00138                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00139         \}}
+\DoxyCodeLine{00140 }
+\DoxyCodeLine{00141     \}}
 
 \end{DoxyCode}
 Here is the call graph for this function\+:
@@ -414,7 +413,7 @@ Here is the call graph for this function\+:
 
 
 
-Definition at line \mbox{\hyperlink{_world_8java_source_l00028}{28}} of file \mbox{\hyperlink{_world_8java_source}{World.\+java}}.
+Definition at line \mbox{\hyperlink{_world_8java_source_l00029}{29}} of file \mbox{\hyperlink{_world_8java_source}{World.\+java}}.
 
 \mbox{\Hypertarget{classgame_1_1_world_a7ac6f41bbf956b2f14152562cccbd360}\label{classgame_1_1_world_a7ac6f41bbf956b2f14152562cccbd360}} 
 \index{game.World@{game.World}!currfight@{currfight}}
@@ -424,7 +423,7 @@ Definition at line \mbox{\hyperlink{_world_8java_source_l00028}{28}} of file \mb
 
 
 
-Definition at line \mbox{\hyperlink{_world_8java_source_l00030}{30}} of file \mbox{\hyperlink{_world_8java_source}{World.\+java}}.
+Definition at line \mbox{\hyperlink{_world_8java_source_l00031}{31}} of file \mbox{\hyperlink{_world_8java_source}{World.\+java}}.
 
 \mbox{\Hypertarget{classgame_1_1_world_a8f7650232d674854c7be0df78b0b736d}\label{classgame_1_1_world_a8f7650232d674854c7be0df78b0b736d}} 
 \index{game.World@{game.World}!enemies@{enemies}}
@@ -434,7 +433,7 @@ Definition at line \mbox{\hyperlink{_world_8java_source_l00030}{30}} of file \mb
 
 
 
-Definition at line \mbox{\hyperlink{_world_8java_source_l00038}{38}} of file \mbox{\hyperlink{_world_8java_source}{World.\+java}}.
+Definition at line \mbox{\hyperlink{_world_8java_source_l00039}{39}} of file \mbox{\hyperlink{_world_8java_source}{World.\+java}}.
 
 \mbox{\Hypertarget{classgame_1_1_world_a8d8a2c5dda788bab03181b14b661e8dd}\label{classgame_1_1_world_a8d8a2c5dda788bab03181b14b661e8dd}} 
 \index{game.World@{game.World}!entitySetter@{entitySetter}}
@@ -444,7 +443,7 @@ Definition at line \mbox{\hyperlink{_world_8java_source_l00038}{38}} of file \mb
 
 
 
-Definition at line \mbox{\hyperlink{_world_8java_source_l00034}{34}} of file \mbox{\hyperlink{_world_8java_source}{World.\+java}}.
+Definition at line \mbox{\hyperlink{_world_8java_source_l00035}{35}} of file \mbox{\hyperlink{_world_8java_source}{World.\+java}}.
 
 \mbox{\Hypertarget{classgame_1_1_world_ab8cb50c0f3ae83693a2c776177ff854d}\label{classgame_1_1_world_ab8cb50c0f3ae83693a2c776177ff854d}} 
 \index{game.World@{game.World}!HUD\_world@{HUD\_world}}
@@ -454,7 +453,7 @@ Definition at line \mbox{\hyperlink{_world_8java_source_l00034}{34}} of file \mb
 
 
 
-Definition at line \mbox{\hyperlink{_world_8java_source_l00029}{29}} of file \mbox{\hyperlink{_world_8java_source}{World.\+java}}.
+Definition at line \mbox{\hyperlink{_world_8java_source_l00030}{30}} of file \mbox{\hyperlink{_world_8java_source}{World.\+java}}.
 
 \mbox{\Hypertarget{classgame_1_1_world_a287fcd8121546f4cffd9685453a4f635}\label{classgame_1_1_world_a287fcd8121546f4cffd9685453a4f635}} 
 \index{game.World@{game.World}!objMap@{objMap}}
@@ -464,17 +463,17 @@ Definition at line \mbox{\hyperlink{_world_8java_source_l00029}{29}} of file \mb
 
 
 
-Definition at line \mbox{\hyperlink{_world_8java_source_l00037}{37}} of file \mbox{\hyperlink{_world_8java_source}{World.\+java}}.
+Definition at line \mbox{\hyperlink{_world_8java_source_l00038}{38}} of file \mbox{\hyperlink{_world_8java_source}{World.\+java}}.
 
-\mbox{\Hypertarget{classgame_1_1_world_abbe08636c12c7d32a756e038a8ec5ae8}\label{classgame_1_1_world_abbe08636c12c7d32a756e038a8ec5ae8}} 
+\mbox{\Hypertarget{classgame_1_1_world_a19fe62be0968869f85d52bebde6f8115}\label{classgame_1_1_world_a19fe62be0968869f85d52bebde6f8115}} 
 \index{game.World@{game.World}!player@{player}}
 \index{player@{player}!game.World@{game.World}}
 \doxysubsubsection{\texorpdfstring{player}{player}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classentity_1_1_warrior}{Warrior}} game.\+World.\+player}
+{\footnotesize\ttfamily \mbox{\hyperlink{classentity_1_1_player}{Player}} game.\+World.\+player\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
-Definition at line \mbox{\hyperlink{_world_8java_source_l00042}{42}} of file \mbox{\hyperlink{_world_8java_source}{World.\+java}}.
+Definition at line \mbox{\hyperlink{_world_8java_source_l00043}{43}} of file \mbox{\hyperlink{_world_8java_source}{World.\+java}}.
 
 \mbox{\Hypertarget{classgame_1_1_world_a197de437b2b9ead90aaa99790bc4fb56}\label{classgame_1_1_world_a197de437b2b9ead90aaa99790bc4fb56}} 
 \index{game.World@{game.World}!tileManager@{tileManager}}
@@ -484,7 +483,7 @@ Definition at line \mbox{\hyperlink{_world_8java_source_l00042}{42}} of file \mb
 
 
 
-Definition at line \mbox{\hyperlink{_world_8java_source_l00031}{31}} of file \mbox{\hyperlink{_world_8java_source}{World.\+java}}.
+Definition at line \mbox{\hyperlink{_world_8java_source_l00032}{32}} of file \mbox{\hyperlink{_world_8java_source}{World.\+java}}.
 
 
 

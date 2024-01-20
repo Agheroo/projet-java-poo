@@ -1,0 +1,6 @@
+<map id="UI.HUD_Fight.draw" name="UI.HUD_Fight.draw">
+<area shape="rect" id="node1" title="Abstract method to draw the HUD on the screen." alt="" coords="5,56,151,83"/>
+<area shape="rect" id="node2" href="$class_u_i_1_1_choice_button.html#a1000744853168892a77f3aaa14886739" title="Draws a button (rectangle) on the screen at specified coordinates (top left)." alt="" coords="199,5,361,32"/>
+<area shape="rect" id="node3" href="$class_u_i_1_1_textbox.html#aab675a99675e6ba3e03630cf973f2799" title="Draws the text box on the screen." alt="" coords="409,31,536,57"/>
+<area shape="rect" id="node4" href="$class_u_i_1_1_textbox.html#a4725a8ec93796dcc1a2aa14ad16952f6" title="Setter function for a new font color of the current text." alt="" coords="205,107,355,133"/>
+</map>

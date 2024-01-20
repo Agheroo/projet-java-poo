@@ -38,7 +38,7 @@ public class FightScene {
      */
     public FightScene(Player player, Enemy enemy) {
         try{
-            bg = ImageIO.read(new FileInputStream("res/hud/fightscene.png"));
+            bg = ImageIO.read(new FileInputStream("/home/romu/IdeaProjects/projet-java-poo/res/hud/fightscene.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }

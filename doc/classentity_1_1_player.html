@@ -81,11 +81,12 @@ Inheritance diagram for entity.Player:</div>
 <div class="dyncontent">
 <div class="center"><img src="classentity_1_1_player__inherit__graph.png" border="0" usemap="#aentity_8_player_inherit__map" alt="Inheritance graph"/></div>
 <map name="aentity_8_player_inherit__map" id="aentity_8_player_inherit__map">
-<area shape="rect" title="Represents the player entity in the game." alt="" coords="37,799,200,1067"/>
-<area shape="rect" href="classentity_1_1_mage.html" title=" " alt="" coords="5,1115,104,1192"/>
-<area shape="rect" href="classentity_1_1_warrior.html" title=" " alt="" coords="128,1115,237,1192"/>
-<area shape="rect" href="classentity_1_1_character.html" title="Represents an abstract character entity with position, hitbox, stats, and animations." alt="" coords="39,292,198,751"/>
-<area shape="rect" href="classentity_1_1_entity.html" title="Represents an abstract entity with position, hitbox, and animations." alt="" coords="37,5,200,244"/>
+<area shape="rect" title="Represents the player entity in the game." alt="" coords="106,799,269,1067"/>
+<area shape="rect" href="classentity_1_1_rogue.html" title=" " alt="" coords="5,1115,108,1192"/>
+<area shape="rect" href="classentity_1_1_warrior.html" title=" " alt="" coords="133,1115,242,1192"/>
+<area shape="rect" href="classentity_1_1_wizard.html" title=" " alt="" coords="266,1115,373,1192"/>
+<area shape="rect" href="classentity_1_1_character.html" title="Represents an abstract character entity with position, hitbox, stats, and animations." alt="" coords="108,292,267,751"/>
+<area shape="rect" href="classentity_1_1_entity.html" title="Represents an abstract entity with position, hitbox, and animations." alt="" coords="106,5,269,244"/>
 </map>
 </div>
 <div class="dynheader">
@@ -365,15 +366,15 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_player_8java_source.html#l00172">172</a> of file <a class="el" href="_player_8java_source.html">Player.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  172</span>                               {</div>
-<div class="line"><span class="lineno">  173</span>        <span class="keywordflow">if</span>(i.type == <span class="stringliteral">&quot;potion&quot;</span>){</div>
-<div class="line"><span class="lineno">  174</span>            <a class="code hl_variable" href="classentity_1_1_player.html#a07e498bfb54f0666df41972f5a4674cc">potions</a>.add(i);</div>
-<div class="line"><span class="lineno">  175</span>        }</div>
-<div class="line"><span class="lineno">  176</span>        <span class="comment">//Change stats of player here directly if the item is not a potion</span></div>
-<div class="line"><span class="lineno">  177</span> </div>
-<div class="line"><span class="lineno">  178</span>        System.out.println(<span class="stringliteral">&quot;Nouvel objet : &quot;</span>+i.name);</div>
-<div class="line"><span class="lineno">  179</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_player_8java_source.html#l00171">171</a> of file <a class="el" href="_player_8java_source.html">Player.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  171</span>                               {</div>
+<div class="line"><span class="lineno">  172</span>        <span class="keywordflow">if</span>(i.type == <span class="stringliteral">&quot;potion&quot;</span>){</div>
+<div class="line"><span class="lineno">  173</span>            <a class="code hl_variable" href="classentity_1_1_player.html#a07e498bfb54f0666df41972f5a4674cc">potions</a>.add(i);</div>
+<div class="line"><span class="lineno">  174</span>        }</div>
+<div class="line"><span class="lineno">  175</span>        <span class="comment">//Change stats of player here directly if the item is not a potion</span></div>
+<div class="line"><span class="lineno">  176</span> </div>
+<div class="line"><span class="lineno">  177</span>        System.out.println(<span class="stringliteral">&quot;Nouvel objet : &quot;</span>+i.name);</div>
+<div class="line"><span class="lineno">  178</span>    }</div>
 <div class="ttc" id="aclassentity_1_1_player_html_a07e498bfb54f0666df41972f5a4674cc"><div class="ttname"><a href="classentity_1_1_player.html#a07e498bfb54f0666df41972f5a4674cc">entity.Player.potions</a></div><div class="ttdeci">Vector&lt; Item &gt; potions</div><div class="ttdef"><b>Definition:</b> <a href="_player_8java_source.html#l00029">Player.java:29</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -405,22 +406,22 @@ Here is the caller graph for this function:</div>
 <p>Checks for collision with nearby enemy using the player's hitbox. </p>
 <dl class="section return"><dt>Returns</dt><dd>The coordinates of the collided enemy or null if no collision. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_player_8java_source.html#l00130">130</a> of file <a class="el" href="_player_8java_source.html">Player.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  130</span>                             {</div>
-<div class="line"><span class="lineno">  131</span>        Point index = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  132</span> </div>
-<div class="line"><span class="lineno">  133</span>        <span class="keywordflow">for</span> (Enemy enemy : World.enemies.values()) {</div>
-<div class="line"><span class="lineno">  134</span>            <span class="keywordflow">if</span> (enemy != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  135</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classentity_1_1_entity.html#a5b026458182ab12ddcacb2858eca0a41">hitbox</a>.intersects(enemy.hitbox)) {</div>
-<div class="line"><span class="lineno">  136</span>                    </div>
-<div class="line"><span class="lineno">  137</span>                    index = <span class="keyword">new</span> Point((<span class="keywordtype">int</span>) enemy.worldX, (<span class="keywordtype">int</span>) enemy.worldY);</div>
-<div class="line"><span class="lineno">  138</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  139</span>                }</div>
-<div class="line"><span class="lineno">  140</span>            }</div>
-<div class="line"><span class="lineno">  141</span>        }</div>
-<div class="line"><span class="lineno">  142</span> </div>
-<div class="line"><span class="lineno">  143</span>        <span class="keywordflow">return</span> index;</div>
-<div class="line"><span class="lineno">  144</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_player_8java_source.html#l00129">129</a> of file <a class="el" href="_player_8java_source.html">Player.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  129</span>                             {</div>
+<div class="line"><span class="lineno">  130</span>        Point index = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  131</span> </div>
+<div class="line"><span class="lineno">  132</span>        <span class="keywordflow">for</span> (Enemy enemy : World.enemies.values()) {</div>
+<div class="line"><span class="lineno">  133</span>            <span class="keywordflow">if</span> (enemy != <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">  134</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classentity_1_1_entity.html#a5b026458182ab12ddcacb2858eca0a41">hitbox</a>.intersects(enemy.hitbox)) {</div>
+<div class="line"><span class="lineno">  135</span>                    </div>
+<div class="line"><span class="lineno">  136</span>                    index = <span class="keyword">new</span> Point((<span class="keywordtype">int</span>) enemy.worldX, (<span class="keywordtype">int</span>) enemy.worldY);</div>
+<div class="line"><span class="lineno">  137</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  138</span>                }</div>
+<div class="line"><span class="lineno">  139</span>            }</div>
+<div class="line"><span class="lineno">  140</span>        }</div>
+<div class="line"><span class="lineno">  141</span> </div>
+<div class="line"><span class="lineno">  142</span>        <span class="keywordflow">return</span> index;</div>
+<div class="line"><span class="lineno">  143</span>    }</div>
 <div class="ttc" id="aclassentity_1_1_entity_html_a5b026458182ab12ddcacb2858eca0a41"><div class="ttname"><a href="classentity_1_1_entity.html#a5b026458182ab12ddcacb2858eca0a41">entity.Entity.hitbox</a></div><div class="ttdeci">Rectangle hitbox</div><div class="ttdef"><b>Definition:</b> <a href="_entity_8java_source.html#l00020">Entity.java:20</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -453,25 +454,25 @@ Here is the caller graph for this function:</div>
 <p>Checks for collision with nearby objects using the player's hitbox. </p>
 <dl class="section return"><dt>Returns</dt><dd>The coordinates of the collided object or null if no collision. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_player_8java_source.html#l00106">106</a> of file <a class="el" href="_player_8java_source.html">Player.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  106</span>                               {</div>
-<div class="line"><span class="lineno">  107</span>        Point index = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  108</span> </div>
-<div class="line"><span class="lineno">  109</span>        <span class="keywordflow">for</span> (Props obj : World.objMap.values()) {</div>
-<div class="line"><span class="lineno">  110</span>            <span class="keywordflow">if</span> (obj != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  111</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classentity_1_1_entity.html#a5b026458182ab12ddcacb2858eca0a41">hitbox</a>.intersects(obj.hitbox)) {</div>
-<div class="line"><span class="lineno">  112</span>                    <span class="keywordflow">if</span>(obj.getCollision()){ <span class="comment">//If object has &quot;solid&quot; collision</span></div>
-<div class="line"><span class="lineno">  113</span>                        obj.block(<span class="keyword">this</span>);    <span class="comment">//Block the player</span></div>
-<div class="line"><span class="lineno">  114</span>                    }</div>
-<div class="line"><span class="lineno">  115</span> </div>
-<div class="line"><span class="lineno">  116</span>                    index = <span class="keyword">new</span> Point((<span class="keywordtype">int</span>) obj.worldX, (<span class="keywordtype">int</span>) obj.worldY);</div>
-<div class="line"><span class="lineno">  117</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  118</span>                }</div>
-<div class="line"><span class="lineno">  119</span>            }</div>
-<div class="line"><span class="lineno">  120</span>        }</div>
-<div class="line"><span class="lineno">  121</span> </div>
-<div class="line"><span class="lineno">  122</span>        <span class="keywordflow">return</span> index;</div>
-<div class="line"><span class="lineno">  123</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_player_8java_source.html#l00105">105</a> of file <a class="el" href="_player_8java_source.html">Player.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  105</span>                               {</div>
+<div class="line"><span class="lineno">  106</span>        Point index = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  107</span> </div>
+<div class="line"><span class="lineno">  108</span>        <span class="keywordflow">for</span> (Props obj : World.objMap.values()) {</div>
+<div class="line"><span class="lineno">  109</span>            <span class="keywordflow">if</span> (obj != <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">  110</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classentity_1_1_entity.html#a5b026458182ab12ddcacb2858eca0a41">hitbox</a>.intersects(obj.hitbox)) {</div>
+<div class="line"><span class="lineno">  111</span>                    <span class="keywordflow">if</span>(obj.getCollision()){ <span class="comment">//If object has &quot;solid&quot; collision</span></div>
+<div class="line"><span class="lineno">  112</span>                        obj.block(<span class="keyword">this</span>);    <span class="comment">//Block the player</span></div>
+<div class="line"><span class="lineno">  113</span>                    }</div>
+<div class="line"><span class="lineno">  114</span> </div>
+<div class="line"><span class="lineno">  115</span>                    index = <span class="keyword">new</span> Point((<span class="keywordtype">int</span>) obj.worldX, (<span class="keywordtype">int</span>) obj.worldY);</div>
+<div class="line"><span class="lineno">  116</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  117</span>                }</div>
+<div class="line"><span class="lineno">  118</span>            }</div>
+<div class="line"><span class="lineno">  119</span>        }</div>
+<div class="line"><span class="lineno">  120</span> </div>
+<div class="line"><span class="lineno">  121</span>        <span class="keywordflow">return</span> index;</div>
+<div class="line"><span class="lineno">  122</span>    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -527,16 +528,16 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_player_8java_source.html#l00187">187</a> of file <a class="el" href="_player_8java_source.html">Player.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  187</span>                                                                    {</div>
-<div class="line"><span class="lineno">  188</span>        BufferedImage image = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  189</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classentity_1_1_entity.html#af6b442584a7caf6e84e73872f9f8e080">_spriteCntMax</a>; i++) {</div>
-<div class="line"><span class="lineno">  190</span>            <span class="keywordflow">if</span>(<a class="code hl_variable" href="classentity_1_1_entity.html#ac2155957d9e77504c3c6078183d19c63">_spriteCnt</a> == i){</div>
-<div class="line"><span class="lineno">  191</span>                image = <a class="code hl_variable" href="classentity_1_1_character.html#af58d7b8dea3d200104e64eec7c174f48">_idle_right</a>[i];</div>
-<div class="line"><span class="lineno">  192</span>            }</div>
-<div class="line"><span class="lineno">  193</span>        }</div>
-<div class="line"><span class="lineno">  194</span>        g2.drawImage(image,screenX,screenY,Const.FGHT_entityScreenSize,Const.FGHT_entityScreenSize,<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  195</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_player_8java_source.html#l00186">186</a> of file <a class="el" href="_player_8java_source.html">Player.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  186</span>                                                                    {</div>
+<div class="line"><span class="lineno">  187</span>        BufferedImage image = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  188</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classentity_1_1_entity.html#af6b442584a7caf6e84e73872f9f8e080">_spriteCntMax</a>; i++) {</div>
+<div class="line"><span class="lineno">  189</span>            <span class="keywordflow">if</span>(<a class="code hl_variable" href="classentity_1_1_entity.html#ac2155957d9e77504c3c6078183d19c63">_spriteCnt</a> == i){</div>
+<div class="line"><span class="lineno">  190</span>                image = <a class="code hl_variable" href="classentity_1_1_character.html#af58d7b8dea3d200104e64eec7c174f48">_idle_right</a>[i];</div>
+<div class="line"><span class="lineno">  191</span>            }</div>
+<div class="line"><span class="lineno">  192</span>        }</div>
+<div class="line"><span class="lineno">  193</span>        g2.drawImage(image,screenX,screenY,Const.FGHT_entityScreenSize,Const.FGHT_entityScreenSize,<span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  194</span>    }</div>
 <div class="ttc" id="aclassentity_1_1_character_html_af58d7b8dea3d200104e64eec7c174f48"><div class="ttname"><a href="classentity_1_1_character.html#af58d7b8dea3d200104e64eec7c174f48">entity.Character._idle_right</a></div><div class="ttdeci">BufferedImage[] _idle_right</div><div class="ttdef"><b>Definition:</b> <a href="_character_8java_source.html#l00047">Character.java:47</a></div></div>
 <div class="ttc" id="aclassentity_1_1_entity_html_ac2155957d9e77504c3c6078183d19c63"><div class="ttname"><a href="classentity_1_1_entity.html#ac2155957d9e77504c3c6078183d19c63">entity.Entity._spriteCnt</a></div><div class="ttdeci">int _spriteCnt</div><div class="ttdef"><b>Definition:</b> <a href="_entity_8java_source.html#l00023">Entity.java:23</a></div></div>
 <div class="ttc" id="aclassentity_1_1_entity_html_af6b442584a7caf6e84e73872f9f8e080"><div class="ttname"><a href="classentity_1_1_entity.html#af6b442584a7caf6e84e73872f9f8e080">entity.Entity._spriteCntMax</a></div><div class="ttdeci">int _spriteCntMax</div><div class="ttdef"><b>Definition:</b> <a href="_entity_8java_source.html#l00026">Entity.java:26</a></div></div>
@@ -569,13 +570,13 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_player_8java_source.html#l00146">146</a> of file <a class="el" href="_player_8java_source.html">Player.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  146</span>                                     {</div>
-<div class="line"><span class="lineno">  147</span>        <span class="keywordflow">if</span>(ind != <span class="keyword">null</span>){</div>
-<div class="line"><span class="lineno">  148</span>            Enemy enemy = World.enemies.get(ind);</div>
-<div class="line"><span class="lineno">  149</span>            enemy.playerInterraction(<span class="keyword">this</span>); </div>
-<div class="line"><span class="lineno">  150</span>        }</div>
-<div class="line"><span class="lineno">  151</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_player_8java_source.html#l00145">145</a> of file <a class="el" href="_player_8java_source.html">Player.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  145</span>                                     {</div>
+<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">if</span>(ind != <span class="keyword">null</span>){</div>
+<div class="line"><span class="lineno">  147</span>            Enemy enemy = World.enemies.get(ind);</div>
+<div class="line"><span class="lineno">  148</span>            enemy.playerInterraction(<span class="keyword">this</span>); </div>
+<div class="line"><span class="lineno">  149</span>        }</div>
+<div class="line"><span class="lineno">  150</span>    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -622,17 +623,17 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_player_8java_source.html#l00157">157</a> of file <a class="el" href="_player_8java_source.html">Player.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  157</span>                                          {</div>
-<div class="line"><span class="lineno">  158</span>        <span class="keywordflow">if</span> (index != <span class="keyword">null</span>) {</div>
-<div class="line"><span class="lineno">  159</span>            <a class="code hl_function" href="classentity_1_1_entity.html#a5b732487cc1bdf1388db4e3f59409d52">Entity</a> <span class="keywordtype">object</span> = World.objMap.get(index);</div>
-<div class="line"><span class="lineno">  160</span>            <span class="keywordflow">if</span>(Scene.keyH.interactPressed){</div>
-<div class="line"><span class="lineno">  161</span>                <span class="keywordtype">object</span>.playerInterraction(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  162</span>                Scene.keyH.interactPressed = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  163</span>            }   </div>
-<div class="line"><span class="lineno">  164</span>            </div>
-<div class="line"><span class="lineno">  165</span>        }</div>
-<div class="line"><span class="lineno">  166</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_player_8java_source.html#l00156">156</a> of file <a class="el" href="_player_8java_source.html">Player.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  156</span>                                          {</div>
+<div class="line"><span class="lineno">  157</span>        <span class="keywordflow">if</span> (index != <span class="keyword">null</span>) {</div>
+<div class="line"><span class="lineno">  158</span>            <a class="code hl_function" href="classentity_1_1_entity.html#a5b732487cc1bdf1388db4e3f59409d52">Entity</a> <span class="keywordtype">object</span> = World.objMap.get(index);</div>
+<div class="line"><span class="lineno">  159</span>            <span class="keywordflow">if</span>(Scene.keyH.interactPressed){</div>
+<div class="line"><span class="lineno">  160</span>                <span class="keywordtype">object</span>.playerInterraction(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  161</span>                Scene.keyH.interactPressed = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  162</span>            }   </div>
+<div class="line"><span class="lineno">  163</span>            </div>
+<div class="line"><span class="lineno">  164</span>        }</div>
+<div class="line"><span class="lineno">  165</span>    }</div>
 <div class="ttc" id="aclassentity_1_1_entity_html_a5b732487cc1bdf1388db4e3f59409d52"><div class="ttname"><a href="classentity_1_1_entity.html#a5b732487cc1bdf1388db4e3f59409d52">entity.Entity.Entity</a></div><div class="ttdeci">Entity()</div><div class="ttdoc">Default constructor for the Entity class.</div><div class="ttdef"><b>Definition:</b> <a href="_entity_8java_source.html#l00033">Entity.java:33</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -665,10 +666,10 @@ Here is the caller graph for this function:</div>
 
 <p>Reimplemented from <a class="el" href="classentity_1_1_entity.html#ae874ae13e301bb9f227535534869f64e">entity.Entity</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_player_8java_source.html#l00197">197</a> of file <a class="el" href="_player_8java_source.html">Player.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  197</span>                                                  {</div>
-<div class="line"><span class="lineno">  198</span>        <span class="comment">//Nothing</span></div>
-<div class="line"><span class="lineno">  199</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_player_8java_source.html#l00196">196</a> of file <a class="el" href="_player_8java_source.html">Player.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  196</span>                                                  {</div>
+<div class="line"><span class="lineno">  197</span>        <span class="comment">//Nothing</span></div>
+<div class="line"><span class="lineno">  198</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -691,7 +692,6 @@ Here is the caller graph for this function:</div>
 <p>Updates the player entity based on the current scene and time elapsed. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">scene</td><td>The current game scene. </td></tr>
     <tr><td class="paramname">dt</td><td>The time elapsed since the last update. </td></tr>
   </table>
   </dd>
@@ -699,58 +699,58 @@ Here is the caller graph for this function:</div>
 
 <p>Reimplemented from <a class="el" href="classentity_1_1_character.html#a0beaf70a50b785c4c4c38b9566593206">entity.Character</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_player_8java_source.html#l00056">56</a> of file <a class="el" href="_player_8java_source.html">Player.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   56</span>                                  {</div>
-<div class="line"><span class="lineno">   57</span>        super.update(dt);  <span class="comment">// Calls the parent class update method</span></div>
-<div class="line"><span class="lineno">   58</span>        <span class="comment">// World updates</span></div>
-<div class="line"><span class="lineno">   59</span>        <span class="keywordflow">if</span> (Scene.state == Const.State.WORLD) {</div>
-<div class="line"><span class="lineno">   60</span>            <span class="keywordflow">if</span> (Scene.keyH.upPressed || Scene.keyH.downPressed || Scene.keyH.leftPressed || Scene.keyH.rightPressed) {</div>
-<div class="line"><span class="lineno">   61</span>                <a class="code hl_variable" href="classentity_1_1_character.html#a71d9fd51a7255f0acfcbe9a3dfe3f30c">dirX</a> = 0;</div>
-<div class="line"><span class="lineno">   62</span>                <a class="code hl_variable" href="classentity_1_1_character.html#a53d3f8e3cc8c7297d94092dada79588c">dirY</a> = 0;</div>
-<div class="line"><span class="lineno">   63</span>                <span class="keywordflow">if</span> (Scene.keyH.leftPressed) {</div>
-<div class="line"><span class="lineno">   64</span>                    <a class="code hl_variable" href="classentity_1_1_character.html#a71d9fd51a7255f0acfcbe9a3dfe3f30c">dirX</a> = -1;</div>
-<div class="line"><span class="lineno">   65</span>                    <a class="code hl_variable" href="classentity_1_1_character.html#a249d5d0b8f600f332b5715e93f83668d">facing</a> = <span class="stringliteral">&quot;left&quot;</span>;</div>
-<div class="line"><span class="lineno">   66</span>                }</div>
-<div class="line"><span class="lineno">   67</span>                <span class="keywordflow">if</span> (Scene.keyH.rightPressed) {</div>
-<div class="line"><span class="lineno">   68</span>                    <a class="code hl_variable" href="classentity_1_1_character.html#a71d9fd51a7255f0acfcbe9a3dfe3f30c">dirX</a> = 1;</div>
-<div class="line"><span class="lineno">   69</span>                    <a class="code hl_variable" href="classentity_1_1_character.html#a249d5d0b8f600f332b5715e93f83668d">facing</a> = <span class="stringliteral">&quot;right&quot;</span>;</div>
-<div class="line"><span class="lineno">   70</span>                }</div>
-<div class="line"><span class="lineno">   71</span>                <span class="keywordflow">if</span> (Scene.keyH.upPressed) {</div>
-<div class="line"><span class="lineno">   72</span>                    <a class="code hl_variable" href="classentity_1_1_character.html#a53d3f8e3cc8c7297d94092dada79588c">dirY</a> = -1;</div>
-<div class="line"><span class="lineno">   73</span>                    <a class="code hl_variable" href="classentity_1_1_character.html#a249d5d0b8f600f332b5715e93f83668d">facing</a> = <span class="stringliteral">&quot;up&quot;</span>;</div>
-<div class="line"><span class="lineno">   74</span>                }</div>
-<div class="line"><span class="lineno">   75</span>                <span class="keywordflow">if</span> (Scene.keyH.downPressed) {</div>
-<div class="line"><span class="lineno">   76</span>                    <a class="code hl_variable" href="classentity_1_1_character.html#a53d3f8e3cc8c7297d94092dada79588c">dirY</a> = 1;</div>
-<div class="line"><span class="lineno">   77</span>                    <a class="code hl_variable" href="classentity_1_1_character.html#a249d5d0b8f600f332b5715e93f83668d">facing</a> = <span class="stringliteral">&quot;down&quot;</span>;</div>
-<div class="line"><span class="lineno">   78</span>                }</div>
-<div class="line"><span class="lineno">   79</span>                <a class="code hl_function" href="classentity_1_1_character.html#a937e8e2ad1ddaccfdf7fbc52c9f532f6">accelerate</a>(30,20, dt);</div>
-<div class="line"><span class="lineno">   80</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   81</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classentity_1_1_character.html#a0da5fea00de1694fcfb0571bca60ebd7">speed</a> &gt; 0) {</div>
-<div class="line"><span class="lineno">   82</span>                    <a class="code hl_function" href="classentity_1_1_character.html#ab41258c00232def146bcb8f5fb17fa75">decelerate</a>(1,dt);</div>
-<div class="line"><span class="lineno">   83</span>                }</div>
-<div class="line"><span class="lineno">   84</span>            }</div>
-<div class="line"><span class="lineno">   85</span> </div>
-<div class="line"><span class="lineno">   86</span>            <span class="comment">// CHECK OBJECT COLLISION</span></div>
-<div class="line"><span class="lineno">   87</span>            Point objIndex = <a class="code hl_function" href="classentity_1_1_player.html#adb890f89741a84069bb1288c7093508f">checkObject</a>();</div>
-<div class="line"><span class="lineno">   88</span>            <a class="code hl_function" href="classentity_1_1_player.html#ada21c104a2dbe0b76b595df6b1cdeae0">pickUpObject</a>(objIndex);</div>
-<div class="line"><span class="lineno">   89</span> </div>
-<div class="line"><span class="lineno">   90</span>            Point enemyInd = <a class="code hl_function" href="classentity_1_1_player.html#afd8ccd449d009e222e579aa68eeb8a50">checkEnemy</a>();</div>
-<div class="line"><span class="lineno">   91</span>            <a class="code hl_function" href="classentity_1_1_player.html#aadffbed42af93cecf0e3590efe8e0db9">fightEnemy</a>(enemyInd);</div>
-<div class="line"><span class="lineno">   92</span>        }</div>
-<div class="line"><span class="lineno">   93</span> </div>
-<div class="line"><span class="lineno">   94</span>        <span class="comment">// Fightscene updates</span></div>
-<div class="line"><span class="lineno">   95</span>        <span class="keywordflow">if</span> (Scene.state == Const.State.FIGHT) {</div>
-<div class="line"><span class="lineno">   96</span>            <span class="comment">// To be implemented</span></div>
-<div class="line"><span class="lineno">   97</span>            </div>
-<div class="line"><span class="lineno">   98</span> </div>
-<div class="line"><span class="lineno">   99</span>        }</div>
-<div class="line"><span class="lineno">  100</span>    }</div>
-<div class="ttc" id="aclassentity_1_1_character_html_a937e8e2ad1ddaccfdf7fbc52c9f532f6"><div class="ttname"><a href="classentity_1_1_character.html#a937e8e2ad1ddaccfdf7fbc52c9f532f6">entity.Character.accelerate</a></div><div class="ttdeci">void accelerate(int maxSpeed, int factor, double dt)</div><div class="ttdoc">Accelerates the character's speed up to the specified maximum speed.</div><div class="ttdef"><b>Definition:</b> <a href="_character_8java_source.html#l00172">Character.java:172</a></div></div>
-<div class="ttc" id="aclassentity_1_1_character_html_ab41258c00232def146bcb8f5fb17fa75"><div class="ttname"><a href="classentity_1_1_character.html#ab41258c00232def146bcb8f5fb17fa75">entity.Character.decelerate</a></div><div class="ttdeci">void decelerate(int factor, double dt)</div><div class="ttdoc">Decelerates the character's speed.</div><div class="ttdef"><b>Definition:</b> <a href="_character_8java_source.html#l00185">Character.java:185</a></div></div>
-<div class="ttc" id="aclassentity_1_1_player_html_aadffbed42af93cecf0e3590efe8e0db9"><div class="ttname"><a href="classentity_1_1_player.html#aadffbed42af93cecf0e3590efe8e0db9">entity.Player.fightEnemy</a></div><div class="ttdeci">void fightEnemy(Point ind)</div><div class="ttdef"><b>Definition:</b> <a href="_player_8java_source.html#l00146">Player.java:146</a></div></div>
-<div class="ttc" id="aclassentity_1_1_player_html_ada21c104a2dbe0b76b595df6b1cdeae0"><div class="ttname"><a href="classentity_1_1_player.html#ada21c104a2dbe0b76b595df6b1cdeae0">entity.Player.pickUpObject</a></div><div class="ttdeci">void pickUpObject(Point index)</div><div class="ttdoc">Lets the player pick up the object near him if he presses the interract button (space)</div><div class="ttdef"><b>Definition:</b> <a href="_player_8java_source.html#l00157">Player.java:157</a></div></div>
-<div class="ttc" id="aclassentity_1_1_player_html_adb890f89741a84069bb1288c7093508f"><div class="ttname"><a href="classentity_1_1_player.html#adb890f89741a84069bb1288c7093508f">entity.Player.checkObject</a></div><div class="ttdeci">Point checkObject()</div><div class="ttdoc">Checks for collision with nearby objects using the player's hitbox.</div><div class="ttdef"><b>Definition:</b> <a href="_player_8java_source.html#l00106">Player.java:106</a></div></div>
-<div class="ttc" id="aclassentity_1_1_player_html_afd8ccd449d009e222e579aa68eeb8a50"><div class="ttname"><a href="classentity_1_1_player.html#afd8ccd449d009e222e579aa68eeb8a50">entity.Player.checkEnemy</a></div><div class="ttdeci">Point checkEnemy()</div><div class="ttdoc">Checks for collision with nearby enemy using the player's hitbox.</div><div class="ttdef"><b>Definition:</b> <a href="_player_8java_source.html#l00130">Player.java:130</a></div></div>
+<p class="definition">Definition at line <a class="el" href="_player_8java_source.html#l00055">55</a> of file <a class="el" href="_player_8java_source.html">Player.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   55</span>                                  {</div>
+<div class="line"><span class="lineno">   56</span>        super.update(dt);  <span class="comment">// Calls the parent class update method</span></div>
+<div class="line"><span class="lineno">   57</span>        <span class="comment">// World updates</span></div>
+<div class="line"><span class="lineno">   58</span>        <span class="keywordflow">if</span> (Scene.state == Const.State.WORLD) {</div>
+<div class="line"><span class="lineno">   59</span>            <span class="keywordflow">if</span> (Scene.keyH.upPressed || Scene.keyH.downPressed || Scene.keyH.leftPressed || Scene.keyH.rightPressed) {</div>
+<div class="line"><span class="lineno">   60</span>                <a class="code hl_variable" href="classentity_1_1_character.html#a71d9fd51a7255f0acfcbe9a3dfe3f30c">dirX</a> = 0;</div>
+<div class="line"><span class="lineno">   61</span>                <a class="code hl_variable" href="classentity_1_1_character.html#a53d3f8e3cc8c7297d94092dada79588c">dirY</a> = 0;</div>
+<div class="line"><span class="lineno">   62</span>                <span class="keywordflow">if</span> (Scene.keyH.leftPressed) {</div>
+<div class="line"><span class="lineno">   63</span>                    <a class="code hl_variable" href="classentity_1_1_character.html#a71d9fd51a7255f0acfcbe9a3dfe3f30c">dirX</a> = -1;</div>
+<div class="line"><span class="lineno">   64</span>                    <a class="code hl_variable" href="classentity_1_1_character.html#a249d5d0b8f600f332b5715e93f83668d">facing</a> = <span class="stringliteral">&quot;left&quot;</span>;</div>
+<div class="line"><span class="lineno">   65</span>                }</div>
+<div class="line"><span class="lineno">   66</span>                <span class="keywordflow">if</span> (Scene.keyH.rightPressed) {</div>
+<div class="line"><span class="lineno">   67</span>                    <a class="code hl_variable" href="classentity_1_1_character.html#a71d9fd51a7255f0acfcbe9a3dfe3f30c">dirX</a> = 1;</div>
+<div class="line"><span class="lineno">   68</span>                    <a class="code hl_variable" href="classentity_1_1_character.html#a249d5d0b8f600f332b5715e93f83668d">facing</a> = <span class="stringliteral">&quot;right&quot;</span>;</div>
+<div class="line"><span class="lineno">   69</span>                }</div>
+<div class="line"><span class="lineno">   70</span>                <span class="keywordflow">if</span> (Scene.keyH.upPressed) {</div>
+<div class="line"><span class="lineno">   71</span>                    <a class="code hl_variable" href="classentity_1_1_character.html#a53d3f8e3cc8c7297d94092dada79588c">dirY</a> = -1;</div>
+<div class="line"><span class="lineno">   72</span>                    <a class="code hl_variable" href="classentity_1_1_character.html#a249d5d0b8f600f332b5715e93f83668d">facing</a> = <span class="stringliteral">&quot;up&quot;</span>;</div>
+<div class="line"><span class="lineno">   73</span>                }</div>
+<div class="line"><span class="lineno">   74</span>                <span class="keywordflow">if</span> (Scene.keyH.downPressed) {</div>
+<div class="line"><span class="lineno">   75</span>                    <a class="code hl_variable" href="classentity_1_1_character.html#a53d3f8e3cc8c7297d94092dada79588c">dirY</a> = 1;</div>
+<div class="line"><span class="lineno">   76</span>                    <a class="code hl_variable" href="classentity_1_1_character.html#a249d5d0b8f600f332b5715e93f83668d">facing</a> = <span class="stringliteral">&quot;down&quot;</span>;</div>
+<div class="line"><span class="lineno">   77</span>                }</div>
+<div class="line"><span class="lineno">   78</span>                <a class="code hl_function" href="classentity_1_1_character.html#a937e8e2ad1ddaccfdf7fbc52c9f532f6">accelerate</a>(30,20, dt);</div>
+<div class="line"><span class="lineno">   79</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   80</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="classentity_1_1_character.html#a0da5fea00de1694fcfb0571bca60ebd7">speed</a> &gt; 0) {</div>
+<div class="line"><span class="lineno">   81</span>                    <a class="code hl_function" href="classentity_1_1_character.html#ab41258c00232def146bcb8f5fb17fa75">decelerate</a>(1,dt);</div>
+<div class="line"><span class="lineno">   82</span>                }</div>
+<div class="line"><span class="lineno">   83</span>            }</div>
+<div class="line"><span class="lineno">   84</span> </div>
+<div class="line"><span class="lineno">   85</span>            <span class="comment">// CHECK OBJECT COLLISION</span></div>
+<div class="line"><span class="lineno">   86</span>            Point objIndex = <a class="code hl_function" href="classentity_1_1_player.html#adb890f89741a84069bb1288c7093508f">checkObject</a>();</div>
+<div class="line"><span class="lineno">   87</span>            <a class="code hl_function" href="classentity_1_1_player.html#ada21c104a2dbe0b76b595df6b1cdeae0">pickUpObject</a>(objIndex);</div>
+<div class="line"><span class="lineno">   88</span> </div>
+<div class="line"><span class="lineno">   89</span>            Point enemyInd = <a class="code hl_function" href="classentity_1_1_player.html#afd8ccd449d009e222e579aa68eeb8a50">checkEnemy</a>();</div>
+<div class="line"><span class="lineno">   90</span>            <a class="code hl_function" href="classentity_1_1_player.html#aadffbed42af93cecf0e3590efe8e0db9">fightEnemy</a>(enemyInd);</div>
+<div class="line"><span class="lineno">   91</span>        }</div>
+<div class="line"><span class="lineno">   92</span> </div>
+<div class="line"><span class="lineno">   93</span>        <span class="comment">// Fightscene updates</span></div>
+<div class="line"><span class="lineno">   94</span>        <span class="keywordflow">if</span> (Scene.state == Const.State.FIGHT) {</div>
+<div class="line"><span class="lineno">   95</span>            <span class="comment">// To be implemented</span></div>
+<div class="line"><span class="lineno">   96</span>            </div>
+<div class="line"><span class="lineno">   97</span> </div>
+<div class="line"><span class="lineno">   98</span>        }</div>
+<div class="line"><span class="lineno">   99</span>    }</div>
+<div class="ttc" id="aclassentity_1_1_character_html_a937e8e2ad1ddaccfdf7fbc52c9f532f6"><div class="ttname"><a href="classentity_1_1_character.html#a937e8e2ad1ddaccfdf7fbc52c9f532f6">entity.Character.accelerate</a></div><div class="ttdeci">void accelerate(int maxSpeed, int factor, double dt)</div><div class="ttdoc">Accelerates the character's speed up to the specified maximum speed.</div><div class="ttdef"><b>Definition:</b> <a href="_character_8java_source.html#l00171">Character.java:171</a></div></div>
+<div class="ttc" id="aclassentity_1_1_character_html_ab41258c00232def146bcb8f5fb17fa75"><div class="ttname"><a href="classentity_1_1_character.html#ab41258c00232def146bcb8f5fb17fa75">entity.Character.decelerate</a></div><div class="ttdeci">void decelerate(int factor, double dt)</div><div class="ttdoc">Decelerates the character's speed.</div><div class="ttdef"><b>Definition:</b> <a href="_character_8java_source.html#l00184">Character.java:184</a></div></div>
+<div class="ttc" id="aclassentity_1_1_player_html_aadffbed42af93cecf0e3590efe8e0db9"><div class="ttname"><a href="classentity_1_1_player.html#aadffbed42af93cecf0e3590efe8e0db9">entity.Player.fightEnemy</a></div><div class="ttdeci">void fightEnemy(Point ind)</div><div class="ttdef"><b>Definition:</b> <a href="_player_8java_source.html#l00145">Player.java:145</a></div></div>
+<div class="ttc" id="aclassentity_1_1_player_html_ada21c104a2dbe0b76b595df6b1cdeae0"><div class="ttname"><a href="classentity_1_1_player.html#ada21c104a2dbe0b76b595df6b1cdeae0">entity.Player.pickUpObject</a></div><div class="ttdeci">void pickUpObject(Point index)</div><div class="ttdoc">Lets the player pick up the object near him if he presses the interract button (space)</div><div class="ttdef"><b>Definition:</b> <a href="_player_8java_source.html#l00156">Player.java:156</a></div></div>
+<div class="ttc" id="aclassentity_1_1_player_html_adb890f89741a84069bb1288c7093508f"><div class="ttname"><a href="classentity_1_1_player.html#adb890f89741a84069bb1288c7093508f">entity.Player.checkObject</a></div><div class="ttdeci">Point checkObject()</div><div class="ttdoc">Checks for collision with nearby objects using the player's hitbox.</div><div class="ttdef"><b>Definition:</b> <a href="_player_8java_source.html#l00105">Player.java:105</a></div></div>
+<div class="ttc" id="aclassentity_1_1_player_html_afd8ccd449d009e222e579aa68eeb8a50"><div class="ttname"><a href="classentity_1_1_player.html#afd8ccd449d009e222e579aa68eeb8a50">entity.Player.checkEnemy</a></div><div class="ttdeci">Point checkEnemy()</div><div class="ttdoc">Checks for collision with nearby enemy using the player's hitbox.</div><div class="ttdef"><b>Definition:</b> <a href="_player_8java_source.html#l00129">Player.java:129</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

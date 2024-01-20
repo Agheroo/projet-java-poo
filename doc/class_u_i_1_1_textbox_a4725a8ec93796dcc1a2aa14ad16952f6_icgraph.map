@@ -1,0 +1,17 @@
+<map id="UI.Textbox.setColor" name="UI.Textbox.setColor">
+<area shape="rect" id="node1" title="Setter function for a new font color of the current text." alt="" coords="1199,71,1348,97"/>
+<area shape="rect" id="node2" href="$class_u_i_1_1_h_u_d___fight.html#a444cd5e7f43dd55149762e5738ba2cf7" title="Abstract method to draw the HUD on the screen." alt="" coords="972,13,1117,40"/>
+<area shape="rect" id="node5" href="$class_u_i_1_1_h_u_d___welcome.html#af1953ece042c830a42fcb0a781d92094" title="Draws the welcome screen HUD on the screen." alt="" coords="958,71,1131,97"/>
+<area shape="rect" id="node6" href="$class_u_i_1_1_choice_button.html#a72e2bde42a5a426ffa1686e4b724afa1" title="Setter function to change the button&#39;s text color." alt="" coords="939,136,1151,163"/>
+<area shape="rect" id="node3" href="$classgame_1_1_fight_scene.html#a9525cb3d263680e8d808b3abde00e8d8" title="Draws the fight scene." alt="" coords="698,9,869,36"/>
+<area shape="rect" id="node4" href="$classgame_1_1_world.html#ac405787ac7b11c4ed39a5cd9250e398f" title="Draws the game world and its entities." alt="" coords="463,5,599,32"/>
+<area shape="rect" id="node7" href="$class_u_i_1_1_h_u_d.html#af1a376f1d7a53f60ddc82737289a35d8" title="Changes the color of the selected button in the HUD." alt="" coords="676,165,891,192"/>
+<area shape="rect" id="node8" href="$class_u_i_1_1_h_u_d___fight.html#ad430cdcd167a0f56c794138576a1130a" title=" " alt="" coords="439,56,622,83"/>
+<area shape="rect" id="node9" href="$class_u_i_1_1_h_u_d___pause.html#a1b2f7ebb698ec273744fd7404321305b" title="Constructor for HUD_Pause class." alt="" coords="433,107,628,133"/>
+<area shape="rect" id="node10" href="$class_u_i_1_1_h_u_d___welcome.html#a105e327520a5d5c473b5fc889feb31c0" title="Constructor for HUD_Welcome class." alt="" coords="445,158,616,199"/>
+<area shape="rect" id="node11" href="$class_u_i_1_1_h_u_d___fight.html#adf261e5266f353eba13c384f69ae723e" title="Update the HUD of the current fight the player is in." alt="" coords="451,224,610,251"/>
+<area shape="rect" id="node14" href="$class_u_i_1_1_h_u_d___pause.html#aec196ac720b763075dbea8841507d686" title="Updates the pause menu based on user input." alt="" coords="449,275,613,301"/>
+<area shape="rect" id="node15" href="$class_u_i_1_1_h_u_d___welcome.html#ae8e93f747d3a375eae9ec820501b926c" title="Updates the welcome screen HUD." alt="" coords="437,325,624,352"/>
+<area shape="rect" id="node12" href="$classgame_1_1_fight_scene.html#a6f8060e45bcb70f13265bd6d3b2a52d5" title="Updates the fight scene." alt="" coords="203,224,385,251"/>
+<area shape="rect" id="node13" href="$classgame_1_1_world.html#a05a7f2e7a65c2a3449efdaa0a87c49f5" title="Updates the game world based on the scene state." alt="" coords="5,224,155,251"/>
+</map>

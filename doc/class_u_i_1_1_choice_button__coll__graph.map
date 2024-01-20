@@ -1,7 +1,7 @@
 <map id="UI.ChoiceButton" name="UI.ChoiceButton">
-<area shape="rect" id="node1" title=" " alt="" coords="51,388,186,524"/>
-<area shape="rect" id="node2" href="$class_u_i_1_1_textbox.html" title=" " alt="" coords="53,145,184,325"/>
+<area shape="rect" id="node1" title="Represents a clickable button with associated text and appearance settings." alt="" coords="135,388,270,539"/>
+<area shape="rect" id="node2" href="$class_u_i_1_1_textbox.html" title="Represents a text box for displaying text on the screen, used for buttons or dialogues." alt="" coords="65,145,196,325"/>
 <area shape="rect" id="node3" title=" " alt="" coords="5,5,67,83"/>
-<area shape="rect" id="node4" title=" " alt="" coords="91,5,147,83"/>
-<area shape="rect" id="node5" title=" " alt="" coords="173,5,224,83"/>
+<area shape="rect" id="node4" title=" " alt="" coords="197,5,253,83"/>
+<area shape="rect" id="node5" title=" " alt="" coords="91,5,141,83"/>
 </map>

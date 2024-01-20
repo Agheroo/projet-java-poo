@@ -1,0 +1,10 @@
+<map id="entity.Player.update" name="entity.Player.update">
+<area shape="rect" id="node1" title="Updates the player entity based on the current scene and time elapsed." alt="" coords="5,132,156,159"/>
+<area shape="rect" id="node2" href="$classentity_1_1_character.html#a937e8e2ad1ddaccfdf7fbc52c9f532f6" title="Accelerates the character&#39;s speed up to the specified maximum speed." alt="" coords="205,5,401,32"/>
+<area shape="rect" id="node3" href="$classentity_1_1_player.html#afd8ccd449d009e222e579aa68eeb8a50" title="Checks for collision with nearby enemy using the player&#39;s hitbox." alt="" coords="208,56,397,83"/>
+<area shape="rect" id="node4" href="$classentity_1_1_player.html#adb890f89741a84069bb1288c7093508f" title="Checks for collision with nearby objects using the player&#39;s hitbox." alt="" coords="209,107,396,133"/>
+<area shape="rect" id="node5" href="$classentity_1_1_character.html#ab41258c00232def146bcb8f5fb17fa75" title="Decelerates the character&#39;s speed." alt="" coords="204,157,401,184"/>
+<area shape="rect" id="node6" href="$classentity_1_1_player.html#aadffbed42af93cecf0e3590efe8e0db9" title=" " alt="" coords="213,208,393,235"/>
+<area shape="rect" id="node8" href="$classentity_1_1_player.html#ada21c104a2dbe0b76b595df6b1cdeae0" title="Lets the player pick up the object near him if he presses the interract button (space)" alt="" coords="206,259,399,285"/>
+<area shape="rect" id="node7" href="$classentity_1_1_enemy.html#a429f4fa6c8b461d4c18802d35d9b5092" title=" " alt="" coords="449,208,675,235"/>
+</map>
