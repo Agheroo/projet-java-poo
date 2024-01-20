@@ -3,7 +3,6 @@
 <area shape="rect" id="node3" href="$classentity_1_1_enemy.html" title="Represents an enemy entity in the game." alt="" coords="5,850,168,1015"/>
 <area shape="rect" id="node4" href="$classentity_1_1_player.html" title="Represents the player entity in the game." alt="" coords="192,799,355,1067"/>
 <area shape="rect" id="node2" href="$classentity_1_1_entity.html" title="Represents an abstract entity with position, hitbox, and animations." alt="" coords="99,5,261,244"/>
-<area shape="rect" id="node5" href="$classentity_1_1_rogue.html" title=" " alt="" coords="91,1115,194,1192"/>
-<area shape="rect" id="node6" href="$classentity_1_1_warrior.html" title=" " alt="" coords="219,1115,328,1192"/>
-<area shape="rect" id="node7" href="$classentity_1_1_wizard.html" title=" " alt="" coords="352,1115,459,1192"/>
+<area shape="rect" id="node5" href="$classentity_1_1_mage.html" title=" " alt="" coords="160,1115,259,1192"/>
+<area shape="rect" id="node6" href="$classentity_1_1_warrior.html" title=" " alt="" coords="283,1115,392,1192"/>
 </map>

@@ -1,5 +1,0 @@
-<map id="UI.HUD.changeSelectionColor" name="UI.HUD.changeSelectionColor">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,220,32"/>
-<area shape="rect" id="node2" href="$class_u_i_1_1_choice_button.html#a72e2bde42a5a426ffa1686e4b724afa1" title="Setter func to change a button&#39;s text color." alt="" coords="268,5,480,32"/>
-<area shape="rect" id="node3" href="$class_u_i_1_1_textbox.html#a4725a8ec93796dcc1a2aa14ad16952f6" title="Setter func for a new font color of the current text." alt="" coords="528,5,677,32"/>
-</map>

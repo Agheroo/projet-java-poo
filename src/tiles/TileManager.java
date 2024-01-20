@@ -41,8 +41,8 @@ public class TileManager {
         _topMap = new Tile[Const.WRLD_maxRow][Const.WRLD_maxCol];
 
         loadTextures();
-        loadMap("/home/romu/IdeaProjects/projet-java-poo/res/maps/map_floor.csv", world, _floorMap, _floorMapTextures);
-        loadMap("/home/romu/IdeaProjects/projet-java-poo/res/maps/map_top.csv", world, _topMap, _topMapTextures);
+        loadMap("res/maps/map_floor.csv", world, _floorMap, _floorMapTextures);
+        loadMap("res/maps/map_top.csv", world, _topMap, _topMapTextures);
     }
 
     /**

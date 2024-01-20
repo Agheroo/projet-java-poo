@@ -1,4 +1,0 @@
-<map id="UI.HUD_Welcome.loadImages" name="UI.HUD_Welcome.loadImages">
-<area shape="rect" id="node1" title="Function used to load the images of the different characters&#39; classes." alt="" coords="224,13,441,39"/>
-<area shape="rect" id="node2" href="$class_u_i_1_1_h_u_d___welcome.html#a105e327520a5d5c473b5fc889feb31c0" title="Constructor for HUD_Welcome class." alt="" coords="5,5,176,47"/>
-</map>

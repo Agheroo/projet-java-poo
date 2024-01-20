@@ -1,32 +1,33 @@
 <map id="entity.EntitySetter" name="entity.EntitySetter">
-<area shape="rect" id="node1" title="Responsible for initializing and setting up objects (entities) in the game world." alt="" coords="1100,2332,1239,2439"/>
-<area shape="rect" id="node2" href="$classgame_1_1_world.html" title="Represents the game world and manages its entities." alt="" coords="1191,2119,1313,2269"/>
-<area shape="rect" id="node28" href="$classentity_1_1_entity_setter.html" title="Responsible for initializing and setting up objects (entities) in the game world." alt="" coords="1264,2332,1403,2439"/>
-<area shape="rect" id="node3" href="$classgame_1_1_scene.html" title="Represents an abstract scene in the game." alt="" coords="192,1751,355,1872"/>
-<area shape="rect" id="node4" href="$enumgame_1_1_const_1_1_state.html" title=" " alt="" coords="5,1328,144,1479"/>
-<area shape="rect" id="node5" href="$classmain_1_1_key_handler.html" title="Handles keyboard input using the singleton pattern." alt="" coords="168,1299,307,1508"/>
-<area shape="rect" id="node6" title=" " alt="" coords="99,920,197,997"/>
-<area shape="rect" id="node7" href="$class_u_i_1_1_h_u_d.html" title="Represents the abstract base class for Heads&#45;Up Display in the game&#39;s user interfaces." alt="" coords="477,1328,665,1479"/>
-<area shape="rect" id="node25" href="$class_u_i_1_1_h_u_d___fight.html" title=" " alt="" coords="707,1736,845,1887"/>
-<area shape="rect" id="node8" href="$enumgame_1_1_const_1_1_selection.html" title=" " alt="" coords="573,869,737,1049"/>
-<area shape="rect" id="node9" href="$class_u_i_1_1_choice_button.html" title="Represents a clickable button with associated text and appearance settings." alt="" coords="414,883,549,1034"/>
-<area shape="rect" id="node10" href="$class_u_i_1_1_textbox.html" title="Represents a text box for displaying text on the screen, used for buttons or dialogues." alt="" coords="416,314,547,494"/>
-<area shape="rect" id="node14" href="$class_u_i_1_1_h_u_d___world.html" title="Represents the in&#45;game HUD for displaying player statistics and instructions." alt="" coords="179,1153,301,1260"/>
-<area shape="rect" id="node11" title=" " alt="" coords="411,5,472,83"/>
-<area shape="rect" id="node12" title=" " alt="" coords="721,5,777,83"/>
-<area shape="rect" id="node24" href="$classgame_1_1_const.html" title=" " alt="" coords="769,540,961,764"/>
-<area shape="rect" id="node13" title=" " alt="" coords="496,5,547,83"/>
-<area shape="rect" id="node15" href="$classgame_1_1_fight_scene.html" title="Represents the scene during a fight between a player and an enemy." alt="" coords="945,1949,1079,2056"/>
-<area shape="rect" id="node16" href="$classentity_1_1_player.html" title="Represents the player entity in the game." alt="" coords="1217,1284,1380,1523"/>
-<area shape="rect" id="node17" href="$classentity_1_1_character.html" title="Represents an abstract character entity with position, hitbox, stats, and animations." alt="" coords="1169,788,1327,1129"/>
-<area shape="rect" id="node23" href="$classentity_1_1_enemy.html" title="Represents an enemy entity in the game." alt="" coords="1031,1328,1193,1479"/>
-<area shape="rect" id="node18" href="$classentity_1_1_entity.html" title="Represents an abstract entity with position, hitbox, and animations." alt="" coords="1267,292,1429,516"/>
-<area shape="rect" id="node19" title=" " alt="" coords="1305,5,1391,83"/>
-<area shape="rect" id="node20" title=" " alt="" coords="1089,365,1207,443"/>
-<area shape="rect" id="node27" href="$classtiles_1_1_tile.html" title="Represents a tile in the game world." alt="" coords="1533,788,1741,1129"/>
-<area shape="rect" id="node21" href="$classgame_1_1_attack.html" title=" " alt="" coords="1019,883,1144,1034"/>
-<area shape="rect" id="node22" title=" " alt="" coords="1352,920,1509,997"/>
-<area shape="rect" id="node26" href="$classtiles_1_1_tile_manager.html" title="Manages tiles in the game world." alt="" coords="1365,1547,1499,1712"/>
-<area shape="rect" id="node29" title=" " alt="" coords="1377,1957,1596,2049"/>
-<area shape="rect" id="node30" title=" " alt="" coords="1621,1964,1859,2041"/>
+<area shape="rect" id="node1" title="Responsible for initializing and setting up objects (entities) in the game world." alt="" coords="653,2167,792,2273"/>
+<area shape="rect" id="node2" href="$classgame_1_1_world.html" title="Represents the game world and manages its entities." alt="" coords="480,1953,603,2104"/>
+<area shape="rect" id="node14" href="$class_u_i_1_1_h_u_d___world.html" title=" " alt="" coords="259,2167,381,2273"/>
+<area shape="rect" id="node28" href="$classentity_1_1_entity_setter.html" title="Responsible for initializing and setting up objects (entities) in the game world." alt="" coords="469,2167,608,2273"/>
+<area shape="rect" id="node3" href="$classgame_1_1_scene.html" title="Represents an abstract scene in the game." alt="" coords="1128,1486,1291,1607"/>
+<area shape="rect" id="node4" href="$enumgame_1_1_const_1_1_state.html" title=" " alt="" coords="1159,1041,1297,1163"/>
+<area shape="rect" id="node5" href="$classmain_1_1_key_handler.html" title="Handles keyboard input using the singleton pattern." alt="" coords="1336,997,1475,1207"/>
+<area shape="rect" id="node6" title=" " alt="" coords="1369,667,1468,744"/>
+<area shape="rect" id="node7" href="$class_u_i_1_1_h_u_d.html" title=" " alt="" coords="946,1034,1134,1170"/>
+<area shape="rect" id="node25" href="$class_u_i_1_1_h_u_d___fight.html" title=" " alt="" coords="893,1479,1032,1615"/>
+<area shape="rect" id="node8" href="$enumgame_1_1_const_1_1_selection.html" title=" " alt="" coords="918,615,1082,795"/>
+<area shape="rect" id="node9" href="$class_u_i_1_1_choice_button.html" title=" " alt="" coords="1106,637,1241,773"/>
+<area shape="rect" id="node10" href="$class_u_i_1_1_textbox.html" title=" " alt="" coords="899,167,1029,347"/>
+<area shape="rect" id="node11" title=" " alt="" coords="1013,5,1075,83"/>
+<area shape="rect" id="node12" title=" " alt="" coords="856,5,912,83"/>
+<area shape="rect" id="node13" title=" " alt="" coords="939,5,989,83"/>
+<area shape="rect" id="node15" href="$classgame_1_1_fight_scene.html" title="Represents the scene during a fight between a player and an enemy." alt="" coords="474,1784,609,1891"/>
+<area shape="rect" id="node16" href="$classentity_1_1_player.html" title="Represents the player entity in the game." alt="" coords="355,983,517,1221"/>
+<area shape="rect" id="node31" href="$classentity_1_1_warrior.html" title=" " alt="" coords="307,1683,416,1760"/>
+<area shape="rect" id="node17" href="$classentity_1_1_character.html" title="Represents an abstract character entity with position, hitbox, stats, and animations." alt="" coords="471,535,630,876"/>
+<area shape="rect" id="node23" href="$classentity_1_1_enemy.html" title="Represents an enemy entity in the game." alt="" coords="541,1027,704,1177"/>
+<area shape="rect" id="node18" href="$classentity_1_1_entity.html" title="Represents an abstract entity with position, hitbox, and animations." alt="" coords="419,145,581,369"/>
+<area shape="rect" id="node19" title=" " alt="" coords="457,5,543,83"/>
+<area shape="rect" id="node20" title=" " alt="" coords="606,219,725,296"/>
+<area shape="rect" id="node27" href="$classtiles_1_1_tile.html" title="Represents a tile in the game world." alt="" coords="5,535,213,876"/>
+<area shape="rect" id="node21" href="$classgame_1_1_attack.html" title=" " alt="" coords="655,630,780,781"/>
+<area shape="rect" id="node22" title=" " alt="" coords="289,667,447,744"/>
+<area shape="rect" id="node24" href="$classgame_1_1_const.html" title=" " alt="" coords="627,1435,819,1659"/>
+<area shape="rect" id="node26" href="$classtiles_1_1_tile_manager.html" title="Manages tiles in the game world." alt="" coords="47,1245,182,1411"/>
+<area shape="rect" id="node29" title=" " alt="" coords="633,1791,852,1883"/>
+<area shape="rect" id="node30" title=" " alt="" coords="877,1799,1115,1876"/>
 </map>

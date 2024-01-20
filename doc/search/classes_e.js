@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['scene_0',['Scene',['../classgame_1_1_scene.html',1,'game']]],
-  ['selection_1',['Selection',['../enumgame_1_1_const_1_1_selection.html',1,'game::Const']]],
-  ['speedpotion_2',['SpeedPotion',['../classitem_1_1potion_1_1_speed_potion.html',1,'item::potion']]],
-  ['staff_3',['Staff',['../classitem_1_1weapon_1_1_staff.html',1,'item::weapon']]],
-  ['state_4',['State',['../enumgame_1_1_const_1_1_state.html',1,'game::Const']]],
-  ['sword_5',['Sword',['../classitem_1_1weapon_1_1_sword.html',1,'item::weapon']]]
+  ['textbox_0',['Textbox',['../class_u_i_1_1_textbox.html',1,'UI']]],
+  ['tile_1',['Tile',['../classtiles_1_1_tile.html',1,'tiles']]],
+  ['tilemanager_2',['TileManager',['../classtiles_1_1_tile_manager.html',1,'tiles']]]
 ];

@@ -1,4 +1,0 @@
-<map id="entity.Player.fightEnemy" name="entity.Player.fightEnemy">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,185,32"/>
-<area shape="rect" id="node2" href="$classentity_1_1_enemy.html#a429f4fa6c8b461d4c18802d35d9b5092" title=" " alt="" coords="233,5,459,32"/>
-</map>

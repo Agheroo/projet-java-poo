@@ -371,16 +371,16 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_enemy_8java_source.html#l00098">98</a> of file <a class="el" href="_enemy_8java_source.html">Enemy.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   98</span>                                                                    {</div>
-<div class="line"><span class="lineno">   99</span>        BufferedImage image = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classentity_1_1_entity.html#af6b442584a7caf6e84e73872f9f8e080">_spriteCntMax</a>; i++) {</div>
-<div class="line"><span class="lineno">  101</span>            <span class="keywordflow">if</span>(<a class="code hl_variable" href="classentity_1_1_entity.html#ac2155957d9e77504c3c6078183d19c63">_spriteCnt</a> == i){</div>
-<div class="line"><span class="lineno">  102</span>                image = <a class="code hl_variable" href="classentity_1_1_character.html#a147002d1dbc06ed223ee52d4ea16accb">_idle_left</a>[i];</div>
-<div class="line"><span class="lineno">  103</span>            }</div>
-<div class="line"><span class="lineno">  104</span>        }</div>
-<div class="line"><span class="lineno">  105</span>        g2.drawImage(image,screenX,screenY,Const.FGHT_entityScreenSize,Const.FGHT_entityScreenSize,<span class="keyword">null</span>);</div>
-<div class="line"><span class="lineno">  106</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_enemy_8java_source.html#l00099">99</a> of file <a class="el" href="_enemy_8java_source.html">Enemy.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   99</span>                                                                    {</div>
+<div class="line"><span class="lineno">  100</span>        BufferedImage image = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="classentity_1_1_entity.html#af6b442584a7caf6e84e73872f9f8e080">_spriteCntMax</a>; i++) {</div>
+<div class="line"><span class="lineno">  102</span>            <span class="keywordflow">if</span>(<a class="code hl_variable" href="classentity_1_1_entity.html#ac2155957d9e77504c3c6078183d19c63">_spriteCnt</a> == i){</div>
+<div class="line"><span class="lineno">  103</span>                image = <a class="code hl_variable" href="classentity_1_1_character.html#a147002d1dbc06ed223ee52d4ea16accb">_idle_left</a>[i];</div>
+<div class="line"><span class="lineno">  104</span>            }</div>
+<div class="line"><span class="lineno">  105</span>        }</div>
+<div class="line"><span class="lineno">  106</span>        g2.drawImage(image,screenX,screenY,Const.FGHT_entityScreenSize,Const.FGHT_entityScreenSize,<span class="keyword">null</span>);</div>
+<div class="line"><span class="lineno">  107</span>    }</div>
 <div class="ttc" id="aclassentity_1_1_character_html_a147002d1dbc06ed223ee52d4ea16accb"><div class="ttname"><a href="classentity_1_1_character.html#a147002d1dbc06ed223ee52d4ea16accb">entity.Character._idle_left</a></div><div class="ttdeci">BufferedImage[] _idle_left</div><div class="ttdef"><b>Definition:</b> <a href="_character_8java_source.html#l00048">Character.java:48</a></div></div>
 <div class="ttc" id="aclassentity_1_1_entity_html_ac2155957d9e77504c3c6078183d19c63"><div class="ttname"><a href="classentity_1_1_entity.html#ac2155957d9e77504c3c6078183d19c63">entity.Entity._spriteCnt</a></div><div class="ttdeci">int _spriteCnt</div><div class="ttdef"><b>Definition:</b> <a href="_entity_8java_source.html#l00023">Entity.java:23</a></div></div>
 <div class="ttc" id="aclassentity_1_1_entity_html_af6b442584a7caf6e84e73872f9f8e080"><div class="ttname"><a href="classentity_1_1_entity.html#af6b442584a7caf6e84e73872f9f8e080">entity.Entity._spriteCntMax</a></div><div class="ttdeci">int _spriteCntMax</div><div class="ttdef"><b>Definition:</b> <a href="_entity_8java_source.html#l00026">Entity.java:26</a></div></div>
@@ -415,11 +415,11 @@ Here is the caller graph for this function:</div>
 
 <p>Reimplemented from <a class="el" href="classentity_1_1_entity.html#ae874ae13e301bb9f227535534869f64e">entity.Entity</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_enemy_8java_source.html#l00087">87</a> of file <a class="el" href="_enemy_8java_source.html">Enemy.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   87</span>                                                 {</div>
-<div class="line"><span class="lineno">   88</span>        World.currfight = <span class="keyword">new</span> FightScene(player,<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   89</span>        World.state = Const.State.FIGHT;</div>
-<div class="line"><span class="lineno">   90</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_enemy_8java_source.html#l00088">88</a> of file <a class="el" href="_enemy_8java_source.html">Enemy.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   88</span>                                                 {</div>
+<div class="line"><span class="lineno">   89</span>        World.currfight = <span class="keyword">new</span> FightScene(player,<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   90</span>        World.state = Const.State.FIGHT;</div>
+<div class="line"><span class="lineno">   91</span>    }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -601,6 +601,7 @@ Here is the caller graph for this function:</div>
 <p>Updates the enemy entity based on the current scene and time elapsed. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">scene</td><td>The current game scene. </td></tr>
     <tr><td class="paramname">dt</td><td>The time elapsed since the last update. </td></tr>
   </table>
   </dd>
@@ -608,11 +609,11 @@ Here is the caller graph for this function:</div>
 
 <p>Reimplemented from <a class="el" href="classentity_1_1_character.html#a0beaf70a50b785c4c4c38b9566593206">entity.Character</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_enemy_8java_source.html#l00081">81</a> of file <a class="el" href="_enemy_8java_source.html">Enemy.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   81</span>                                  {</div>
-<div class="line"><span class="lineno">   82</span>        super.update(dt); <span class="comment">// Calls the parent class update method</span></div>
-<div class="line"><span class="lineno">   83</span>        <span class="comment">// find a method to make the enemy move in predictive patterns</span></div>
-<div class="line"><span class="lineno">   84</span>    }</div>
+<p class="definition">Definition at line <a class="el" href="_enemy_8java_source.html#l00082">82</a> of file <a class="el" href="_enemy_8java_source.html">Enemy.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   82</span>                                  {</div>
+<div class="line"><span class="lineno">   83</span>        super.update(dt); <span class="comment">// Calls the parent class update method</span></div>
+<div class="line"><span class="lineno">   84</span>        <span class="comment">// find a method to make the enemy move in predictive patterns</span></div>
+<div class="line"><span class="lineno">   85</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
