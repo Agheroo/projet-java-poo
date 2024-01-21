@@ -86,6 +86,11 @@ cd projet-java-poo/out/artifacts/projet_java_poo_jar
 java -jar projet-java-poo.jar
 ```
 
+### Accès à la documentation
+
+Pour accéder à la documentation, veuillez suivre les étapes suivantes : 
+1. Aller dans le répertoire projet-java-poo/doc
+2. Double cliquez sur le fichier index.html
 
 
 
