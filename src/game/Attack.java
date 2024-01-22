@@ -25,7 +25,7 @@ public class Attack {
         //Find a nice equation to balance a bit the game and add a dodge chance with agility
         //Also find a interval "crit chance" maybe to make it more interesting
         
-        double dodgeChange = 1 - Math.exp(-0.01*reciever.agility);  //Equation for dodge chance of the attack (40 agility = 0.33 dodge chance)
+        double dodgeChange = 1 - Math.exp(-0.005*reciever.agility);  //Equation for dodge chance of the attack (30 agility = 0.15 dodge chance)
         
 
         if(emitter.mana >= cost){

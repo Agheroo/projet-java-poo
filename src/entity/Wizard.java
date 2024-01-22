@@ -32,16 +32,18 @@ public class Wizard extends Player{
         initiative = 14;
 
         
-        attacks[0] = new Attack("Coup de sceptre", 4, 0, true,1);
+        attacks[0] = new Attack("Coup de sceptre", 7, 0, true,1);
         attacks[1] = new Attack("Katon sazuké", 30, 10, true,1);
-        attacks[2] = new Attack("FireFlouche", 43, 27, false,2);
-        attacks[3] = new Attack("Die de gazo", 75, 64, false,4);
+        attacks[2] = new Attack("FireFlouche", 43, 23, false,2);
+        attacks[3] = new Attack("Die de gazo", 68, 52, false,4);
     }
 
     public void levelUp(){
+        level++;
+        xpMax = 55 + (int)1.3*xpMax;
         maxHealth += 12;
-        maxMana += 13;
-        agility += 3;
+        maxMana += 18;
+        agility += 8;
         strength += 4;
         defense += 3;
         initiative += 2;

@@ -135,8 +135,8 @@ public class FightScene {
                                 break;
                             default: break;
                         }
-                        menu.playerStats[0] = new Textbox(String.valueOf(player.health) + "/" + String.valueOf(player.maxHealth),Const.fontName,100,30,new Color(0x0EC44C));
-                        menu.playerStats[1] = new Textbox(String.valueOf(player.mana) + "/" + String.valueOf(player.maxMana),Const.fontName,100,30,new Color(0x1D81CE));
+                        menu.playerStats[0] = new Textbox(String.valueOf(player.health) + "/" + String.valueOf(player.maxHealth),Const.fontName,100,30,Const.COLOR_WELCOME_green);
+                        menu.playerStats[1] = new Textbox(String.valueOf(player.mana) + "/" + String.valueOf(player.maxMana),Const.fontName,100,30,Const.COLOR_WELCOME_blue_highlight);
                     }
                     
                     menu.confirm = false;
@@ -155,7 +155,7 @@ public class FightScene {
 
         //Check if the fight is won to add xp and update the rest
         if(state == Const.FightState.WON){
-            
+            //If the player levels up
             //Update player's XP and eventually their stats
             if(player.xp + enemy.xpRate >= player.xpMax){
                 while(player.xp + enemy.xpRate >= player.xpMax){
@@ -175,18 +175,17 @@ public class FightScene {
                     player.health = player.maxHealth;
                 }
             }
-
+            //If the player hasn't leveled up
             else{
                 player.xp += enemy.xpRate;
-                player.mana += (int)0.2*player.maxMana;      //Regen a bit of the mana too
-                if(player.mana > player.maxMana){
+                player.mana += (int)(0.2*player.maxMana);      //Regen a bit of the mana too
+                if(player.mana > player.maxMana)
                     player.mana = player.maxMana;
-                }
-                if(player.health < player.maxHealth){
-                    player.health += (int)0.3*player.maxHealth;//Regen a bit of the health
-                    if(player.health > player.maxHealth)
-                        player.health = player.maxHealth;
-                }
+
+                
+                player.health += (int)(0.1*player.maxHealth);//Regen a bit of the health
+                if(player.health > player.maxHealth)
+                    player.health = player.maxHealth;
             }
             
             

@@ -157,6 +157,7 @@ public class World extends Scene {
                 case "WON":
                     currfight = null; break;
                 case "LOST":
+                    menu = new HUD_Welcome();
                     menu.draw(g2); break;
                 default: break;
             }

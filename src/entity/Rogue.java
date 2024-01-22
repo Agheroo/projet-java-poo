@@ -22,28 +22,30 @@ public class Rogue extends Player{
         maxHealth = 175;
         health = maxHealth;
 
-        maxMana = 12;
+        maxMana = 16;
         mana = maxMana;
 
-        agility = 20;
-        strength = 22;
+        agility = 30;
+        strength = 27;
         defense = 12;
         initiative = 10;
         
         
         attacks[0] = new Attack("Étrangler", 15, 0, true,1);
-        attacks[1] = new Attack("Koutal", 27, 10, true,2);
-        attacks[2] = new Attack("Poizong", 40, 15, false,3);
+        attacks[1] = new Attack("Koutal", 24, 8, true,2);
+        attacks[2] = new Attack("Poizong", 36, 15, false,3);
         attacks[3] = new Attack("KhaZix Youmuu", 61, 38, false,5);
     }
 
     public void levelUp(){
+        level++;
+        xpMax = 55 + (int)1.3*xpMax;
         maxHealth += 15;
-        maxMana += 8;
-        agility += 5;
-        strength += 6;
+        maxMana += 6;
+        agility += 22;
+        strength += 12;
         defense += 3;
-        initiative += 2;
+        initiative += 1;
         mana = maxMana;
     }
 }

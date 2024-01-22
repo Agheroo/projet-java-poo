@@ -36,7 +36,7 @@ public class HUD_Fight extends HUD {
 
         playerStats = new Textbox[2];
         playerStats[0] = new Textbox(String.valueOf(player.health) + "/" + String.valueOf(player.maxHealth),Const.fontName,100,30,Const.COLOR_WELCOME_green);
-        playerStats[1] = new Textbox(String.valueOf(player.mana) + "/" + String.valueOf(player.maxMana),Const.fontName,100,30, Const.COLOR_WELCOME_blue);
+        playerStats[1] = new Textbox(String.valueOf(player.mana) + "/" + String.valueOf(player.maxMana),Const.fontName,100,30, Const.COLOR_WELCOME_blue_highlight);
 
         for(int i=0;i<player.attacks.length;i++){
             _texts[i] = new Textbox(player.attacks[i].name,Const.fontName,200,30,Color.black);
