@@ -7,6 +7,7 @@ package entity.props;
 
 
 import entity.Player;
+import game.Scene;
 
 /**
  * @class OBJ_Door
@@ -26,14 +27,18 @@ public class OBJ_Door extends Props {
         loadTextures("door");
     }
     public void playerInterraction(Player player) {
-        if(player.hasKey > 0 && collision == true){
+        if(Scene.keyH.interactPressed){
+            Scene.keyH.interactPressed = false;
+
+            if(player.hasKey > 0 && collision == true){
             
-            player.hasKey--;
-            collision = false;
-            open = true;
-        }
-        if(player.hasKey == 0 && collision == true){
-            System.out.println("Key missing !");
-        }
+                player.hasKey--;
+                collision = false;
+                open = true;
+            }
+            if(player.hasKey == 0 && collision == true){
+                System.out.println("Key missing !");
+            }
+        }    
     }
 }
