@@ -1,9 +1,11 @@
 <map id="game.FightScene.update" name="game.FightScene.update">
 <area shape="rect" id="node1" title="Updates the fight scene." alt="" coords="5,81,188,108"/>
 <area shape="rect" id="node2" href="$classgame_1_1_attack.html#a82fc9edb6fb83a16aa0d73c03501841e" title="Applies the attack of a character on another one." alt="" coords="240,5,427,32"/>
-<area shape="rect" id="node3" href="$class_u_i_1_1_h_u_d.html#a5039f6b8d54a62926eabd210aeb1fea4" title=" " alt="" coords="479,81,693,108"/>
-<area shape="rect" id="node6" href="$class_u_i_1_1_h_u_d___fight.html#adf261e5266f353eba13c384f69ae723e" title="Update the HUD of the current fight the player is in." alt="" coords="254,107,413,133"/>
-<area shape="rect" id="node7" href="$classentity_1_1_entity.html#a41e81bb1c3a3e86f3f43aa39d8fbb748" title="Updates the frames of the entity&#39;s animation." alt="" coords="236,157,431,184"/>
-<area shape="rect" id="node4" href="$class_u_i_1_1_choice_button.html#a72e2bde42a5a426ffa1686e4b724afa1" title="Setter func to change a button&#39;s text color." alt="" coords="741,81,953,108"/>
-<area shape="rect" id="node5" href="$class_u_i_1_1_textbox.html#a4725a8ec93796dcc1a2aa14ad16952f6" title="Setter func for a new font color of the current text." alt="" coords="1001,81,1151,108"/>
+<area shape="rect" id="node3" href="$classentity_1_1_player.html#a295dffaa14bb9e9a24895d1fa9c300d1" title=" " alt="" coords="255,56,411,83"/>
+<area shape="rect" id="node4" href="$class_u_i_1_1_h_u_d___fight.html#adf261e5266f353eba13c384f69ae723e" title="Update the HUD of the current fight the player is in." alt="" coords="254,107,413,133"/>
+<area shape="rect" id="node9" href="$classentity_1_1_entity.html#a41e81bb1c3a3e86f3f43aa39d8fbb748" title="Updates the frames of the entity&#39;s animation." alt="" coords="236,157,431,184"/>
+<area shape="rect" id="node5" href="$class_u_i_1_1_h_u_d.html#af1a376f1d7a53f60ddc82737289a35d8" title="Changes the color of the selected button in the HUD." alt="" coords="479,107,693,133"/>
+<area shape="rect" id="node6" href="$class_u_i_1_1_choice_button.html#a6cd72943d413641b20c66d680e6af03e" title="Setter function to change the button&#39;s background color." alt="" coords="746,81,949,108"/>
+<area shape="rect" id="node7" href="$class_u_i_1_1_choice_button.html#a72e2bde42a5a426ffa1686e4b724afa1" title="Setter function to change the button&#39;s text color." alt="" coords="741,132,953,159"/>
+<area shape="rect" id="node8" href="$class_u_i_1_1_textbox.html#a4725a8ec93796dcc1a2aa14ad16952f6" title="Setter function for a new font color of the current text." alt="" coords="1001,132,1151,159"/>
 </map>

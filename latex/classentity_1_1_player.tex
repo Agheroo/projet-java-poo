@@ -7,8 +7,7 @@ Represents the player entity in the game.
 
 
 
-Inheritance diagram for entity.\+Player\+:
-\nopagebreak
+Inheritance diagram for entity.\+Player\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -17,8 +16,7 @@ Inheritance diagram for entity.\+Player\+:
 \end{figure}
 
 
-Collaboration diagram for entity.\+Player\+:
-\nopagebreak
+Collaboration diagram for entity.\+Player\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -44,6 +42,8 @@ void \mbox{\hyperlink{classentity_1_1_player_a91613b74f81278a4bd845bef223b0b5f}{
 \begin{DoxyCompactList}\small\item\em Adds item to the virtual inventory of the player, if it\textquotesingle{}s not a potion it will be directly converted to additionnal stats. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classentity_1_1_player_a724d0cb885da2e80adfe13ca1901a12b}{draw\+In\+Fight}} (Graphics2D g2, int screenX, int screenY)
 \begin{DoxyCompactList}\small\item\em Draws the character in the fight scene. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classentity_1_1_player_a295dffaa14bb9e9a24895d1fa9c300d1}{level\+Up}} ()
+\item 
 void \mbox{\hyperlink{classentity_1_1_player_a95285f428f77399f48065c1e03c9bcfc}{player\+Interraction}} (\mbox{\hyperlink{classentity_1_1_player}{Player}} player)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
@@ -114,22 +114,21 @@ Adds item to the virtual inventory of the player, if it\textquotesingle{}s not a
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_player_8java_source_l00172}{172}} of file \mbox{\hyperlink{_player_8java_source}{Player.\+java}}.
+Definition at line \mbox{\hyperlink{_player_8java_source_l00167}{167}} of file \mbox{\hyperlink{_player_8java_source}{Player.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00172                                \{}
-\DoxyCodeLine{00173         \textcolor{keywordflow}{if}(i.type == \textcolor{stringliteral}{"{}potion"{}})\{}
-\DoxyCodeLine{00174             \mbox{\hyperlink{classentity_1_1_player_a07e498bfb54f0666df41972f5a4674cc}{potions}}.add(i);}
-\DoxyCodeLine{00175         \}}
-\DoxyCodeLine{00176         \textcolor{comment}{//Change stats of player here directly if the item is not a potion}}
-\DoxyCodeLine{00177 }
-\DoxyCodeLine{00178         System.out.println(\textcolor{stringliteral}{"{}Nouvel objet : "{}}+i.name);}
-\DoxyCodeLine{00179     \}}
+\DoxyCodeLine{00167                                \{}
+\DoxyCodeLine{00168         \textcolor{keywordflow}{if}(i.type == \textcolor{stringliteral}{"{}potion"{}})\{}
+\DoxyCodeLine{00169             \mbox{\hyperlink{classentity_1_1_player_a07e498bfb54f0666df41972f5a4674cc}{potions}}.add(i);}
+\DoxyCodeLine{00170         \}}
+\DoxyCodeLine{00171         \textcolor{comment}{//Change stats of player here directly if the item is not a potion}}
+\DoxyCodeLine{00172 }
+\DoxyCodeLine{00173         System.out.println(\textcolor{stringliteral}{"{}Nouvel objet : "{}}+i.name);}
+\DoxyCodeLine{00174     \}}
 
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -151,29 +150,28 @@ The coordinates of the collided enemy or null if no collision.
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_player_8java_source_l00130}{130}} of file \mbox{\hyperlink{_player_8java_source}{Player.\+java}}.
+Definition at line \mbox{\hyperlink{_player_8java_source_l00129}{129}} of file \mbox{\hyperlink{_player_8java_source}{Player.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00130                              \{}
-\DoxyCodeLine{00131         Point index = \textcolor{keyword}{null};}
-\DoxyCodeLine{00132 }
-\DoxyCodeLine{00133         \textcolor{keywordflow}{for} (Enemy enemy : World.enemies.values()) \{}
-\DoxyCodeLine{00134             \textcolor{keywordflow}{if} (enemy != \textcolor{keyword}{null}) \{}
-\DoxyCodeLine{00135                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.intersects(enemy.hitbox)) \{}
-\DoxyCodeLine{00136                     }
-\DoxyCodeLine{00137                     index = \textcolor{keyword}{new} Point((\textcolor{keywordtype}{int}) enemy.worldX, (\textcolor{keywordtype}{int}) enemy.worldY);}
-\DoxyCodeLine{00138                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00139                 \}}
-\DoxyCodeLine{00140             \}}
-\DoxyCodeLine{00141         \}}
-\DoxyCodeLine{00142 }
-\DoxyCodeLine{00143         \textcolor{keywordflow}{return} index;}
-\DoxyCodeLine{00144     \}}
+\DoxyCodeLine{00129                              \{}
+\DoxyCodeLine{00130         Point index = \textcolor{keyword}{null};}
+\DoxyCodeLine{00131 }
+\DoxyCodeLine{00132         \textcolor{keywordflow}{for} (Enemy enemy : World.enemies.values()) \{}
+\DoxyCodeLine{00133             \textcolor{keywordflow}{if} (enemy != \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{00134                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.intersects(enemy.hitbox)) \{}
+\DoxyCodeLine{00135                     }
+\DoxyCodeLine{00136                     index = \textcolor{keyword}{new} Point((\textcolor{keywordtype}{int}) enemy.worldX, (\textcolor{keywordtype}{int}) enemy.worldY);}
+\DoxyCodeLine{00137                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00138                 \}}
+\DoxyCodeLine{00139             \}}
+\DoxyCodeLine{00140         \}}
+\DoxyCodeLine{00141 }
+\DoxyCodeLine{00142         \textcolor{keywordflow}{return} index;}
+\DoxyCodeLine{00143     \}}
 
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -195,32 +193,31 @@ The coordinates of the collided object or null if no collision.
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_player_8java_source_l00106}{106}} of file \mbox{\hyperlink{_player_8java_source}{Player.\+java}}.
+Definition at line \mbox{\hyperlink{_player_8java_source_l00105}{105}} of file \mbox{\hyperlink{_player_8java_source}{Player.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00106                                \{}
-\DoxyCodeLine{00107         Point index = \textcolor{keyword}{null};}
-\DoxyCodeLine{00108 }
-\DoxyCodeLine{00109         \textcolor{keywordflow}{for} (Props obj : World.objMap.values()) \{}
-\DoxyCodeLine{00110             \textcolor{keywordflow}{if} (obj != \textcolor{keyword}{null}) \{}
-\DoxyCodeLine{00111                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.intersects(obj.hitbox)) \{}
-\DoxyCodeLine{00112                     \textcolor{keywordflow}{if}(obj.getCollision())\{ \textcolor{comment}{//If object has "{}solid"{} collision}}
-\DoxyCodeLine{00113                         obj.block(\textcolor{keyword}{this});    \textcolor{comment}{//Block the player}}
-\DoxyCodeLine{00114                     \}}
-\DoxyCodeLine{00115 }
-\DoxyCodeLine{00116                     index = \textcolor{keyword}{new} Point((\textcolor{keywordtype}{int}) obj.worldX, (\textcolor{keywordtype}{int}) obj.worldY);}
-\DoxyCodeLine{00117                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00118                 \}}
-\DoxyCodeLine{00119             \}}
-\DoxyCodeLine{00120         \}}
-\DoxyCodeLine{00121 }
-\DoxyCodeLine{00122         \textcolor{keywordflow}{return} index;}
-\DoxyCodeLine{00123     \}}
+\DoxyCodeLine{00105                                \{}
+\DoxyCodeLine{00106         Point index = \textcolor{keyword}{null};}
+\DoxyCodeLine{00107 }
+\DoxyCodeLine{00108         \textcolor{keywordflow}{for} (Props obj : World.objMap.values()) \{}
+\DoxyCodeLine{00109             \textcolor{keywordflow}{if} (obj != \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{00110                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.intersects(obj.hitbox)) \{}
+\DoxyCodeLine{00111                     \textcolor{keywordflow}{if}(obj.getCollision())\{ \textcolor{comment}{//If object has "{}solid"{} collision}}
+\DoxyCodeLine{00112                         obj.block(\textcolor{keyword}{this});    \textcolor{comment}{//Block the player}}
+\DoxyCodeLine{00113                     \}}
+\DoxyCodeLine{00114 }
+\DoxyCodeLine{00115                     index = \textcolor{keyword}{new} Point((\textcolor{keywordtype}{int}) obj.worldX, (\textcolor{keywordtype}{int}) obj.worldY);}
+\DoxyCodeLine{00116                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00117                 \}}
+\DoxyCodeLine{00118             \}}
+\DoxyCodeLine{00119         \}}
+\DoxyCodeLine{00120 }
+\DoxyCodeLine{00121         \textcolor{keywordflow}{return} index;}
+\DoxyCodeLine{00122     \}}
 
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -248,23 +245,22 @@ Draws the character in the fight scene.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_player_8java_source_l00187}{187}} of file \mbox{\hyperlink{_player_8java_source}{Player.\+java}}.
+Definition at line \mbox{\hyperlink{_player_8java_source_l00182}{182}} of file \mbox{\hyperlink{_player_8java_source}{Player.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00187                                                                     \{}
-\DoxyCodeLine{00188         BufferedImage image = \textcolor{keyword}{null};}
-\DoxyCodeLine{00189         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classentity_1_1_entity_af6b442584a7caf6e84e73872f9f8e080}{\_spriteCntMax}}; i++) \{}
-\DoxyCodeLine{00190             \textcolor{keywordflow}{if}(\mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}} == i)\{}
-\DoxyCodeLine{00191                 image = \mbox{\hyperlink{classentity_1_1_character_af58d7b8dea3d200104e64eec7c174f48}{\_idle\_right}}[i];}
-\DoxyCodeLine{00192             \}}
-\DoxyCodeLine{00193         \}}
-\DoxyCodeLine{00194         g2.drawImage(image,screenX,screenY,Const.FGHT\_entityScreenSize,Const.FGHT\_entityScreenSize,\textcolor{keyword}{null});}
-\DoxyCodeLine{00195     \}}
+\DoxyCodeLine{00182                                                                     \{}
+\DoxyCodeLine{00183         BufferedImage image = \textcolor{keyword}{null};}
+\DoxyCodeLine{00184         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classentity_1_1_entity_af6b442584a7caf6e84e73872f9f8e080}{\_spriteCntMax}}; i++) \{}
+\DoxyCodeLine{00185             \textcolor{keywordflow}{if}(\mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}} == i)\{}
+\DoxyCodeLine{00186                 image = \mbox{\hyperlink{classentity_1_1_character_af58d7b8dea3d200104e64eec7c174f48}{\_idle\_right}}[i];}
+\DoxyCodeLine{00187             \}}
+\DoxyCodeLine{00188         \}}
+\DoxyCodeLine{00189         g2.drawImage(image,screenX,screenY,Const.FGHT\_entityScreenSize,Const.FGHT\_entityScreenSize,\textcolor{keyword}{null});}
+\DoxyCodeLine{00190     \}}
 
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -279,32 +275,58 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line \mbox{\hyperlink{_player_8java_source_l00146}{146}} of file \mbox{\hyperlink{_player_8java_source}{Player.\+java}}.
+Definition at line \mbox{\hyperlink{_player_8java_source_l00145}{145}} of file \mbox{\hyperlink{_player_8java_source}{Player.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00146                                      \{}
-\DoxyCodeLine{00147         \textcolor{keywordflow}{if}(ind != \textcolor{keyword}{null})\{}
-\DoxyCodeLine{00148             Enemy enemy = World.enemies.get(ind);}
-\DoxyCodeLine{00149             enemy.playerInterraction(\textcolor{keyword}{this}); }
-\DoxyCodeLine{00150         \}}
-\DoxyCodeLine{00151     \}}
+\DoxyCodeLine{00145                                      \{}
+\DoxyCodeLine{00146         \textcolor{keywordflow}{if}(ind != \textcolor{keyword}{null})\{}
+\DoxyCodeLine{00147             Enemy enemy = World.enemies.get(ind);}
+\DoxyCodeLine{00148             enemy.playerInterraction(\textcolor{keyword}{this}); }
+\DoxyCodeLine{00149         \}}
+\DoxyCodeLine{00150     \}}
 
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classentity_1_1_player_aadffbed42af93cecf0e3590efe8e0db9_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classentity_1_1_player_aadffbed42af93cecf0e3590efe8e0db9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classentity_1_1_player_a295dffaa14bb9e9a24895d1fa9c300d1}\label{classentity_1_1_player_a295dffaa14bb9e9a24895d1fa9c300d1}} 
+\index{entity.Player@{entity.Player}!levelUp@{levelUp}}
+\index{levelUp@{levelUp}!entity.Player@{entity.Player}}
+\doxysubsubsection{\texorpdfstring{levelUp()}{levelUp()}}
+{\footnotesize\ttfamily void entity.\+Player.\+level\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classentity_1_1_rogue_a413577f42bea183a52f263375ae5eee9}{entity.\+Rogue}}, \mbox{\hyperlink{classentity_1_1_warrior_a5e5e62399012e2a83f44bd584f87fce1}{entity.\+Warrior}}, and \mbox{\hyperlink{classentity_1_1_wizard_a4bf9993abca880f807b7804176bd02b4}{entity.\+Wizard}}.
+
+
+
+Definition at line \mbox{\hyperlink{_player_8java_source_l00191}{191}} of file \mbox{\hyperlink{_player_8java_source}{Player.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00191                          \{}
+\DoxyCodeLine{00192         \textcolor{comment}{//Nothing }}
+\DoxyCodeLine{00193     \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classentity_1_1_player_a295dffaa14bb9e9a24895d1fa9c300d1_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classentity_1_1_player_ada21c104a2dbe0b76b595df6b1cdeae0}\label{classentity_1_1_player_ada21c104a2dbe0b76b595df6b1cdeae0}} 
@@ -324,24 +346,19 @@ Lets the player pick up the object near him if he presses the interract button (
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_player_8java_source_l00157}{157}} of file \mbox{\hyperlink{_player_8java_source}{Player.\+java}}.
+Definition at line \mbox{\hyperlink{_player_8java_source_l00156}{156}} of file \mbox{\hyperlink{_player_8java_source}{Player.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00157                                           \{}
-\DoxyCodeLine{00158         \textcolor{keywordflow}{if} (index != \textcolor{keyword}{null}) \{}
-\DoxyCodeLine{00159             \mbox{\hyperlink{classentity_1_1_entity_a5b732487cc1bdf1388db4e3f59409d52}{Entity}} \textcolor{keywordtype}{object} = World.objMap.get(index);}
-\DoxyCodeLine{00160             \textcolor{keywordflow}{if}(Scene.keyH.interactPressed)\{}
-\DoxyCodeLine{00161                 \textcolor{keywordtype}{object}.playerInterraction(\textcolor{keyword}{this});}
-\DoxyCodeLine{00162                 Scene.keyH.interactPressed = \textcolor{keyword}{false};}
-\DoxyCodeLine{00163             \}   }
-\DoxyCodeLine{00164             }
-\DoxyCodeLine{00165         \}}
-\DoxyCodeLine{00166     \}}
+\DoxyCodeLine{00156                                           \{}
+\DoxyCodeLine{00157         \textcolor{keywordflow}{if} (index != \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{00158             \mbox{\hyperlink{classentity_1_1_entity_a5b732487cc1bdf1388db4e3f59409d52}{Entity}} \textcolor{keywordtype}{object} = World.objMap.get(index);}
+\DoxyCodeLine{00159             \textcolor{keywordtype}{object}.playerInterraction(\textcolor{keyword}{this});}
+\DoxyCodeLine{00160         \}}
+\DoxyCodeLine{00161     \}}
 
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -360,13 +377,13 @@ Reimplemented from \mbox{\hyperlink{classentity_1_1_entity_ae874ae13e301bb9f2275
 
 
 
-Definition at line \mbox{\hyperlink{_player_8java_source_l00197}{197}} of file \mbox{\hyperlink{_player_8java_source}{Player.\+java}}.
+Definition at line \mbox{\hyperlink{_player_8java_source_l00194}{194}} of file \mbox{\hyperlink{_player_8java_source}{Player.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00197                                                   \{}
-\DoxyCodeLine{00198         \textcolor{comment}{//Nothing}}
-\DoxyCodeLine{00199     \}}
+\DoxyCodeLine{00194                                                   \{}
+\DoxyCodeLine{00195         \textcolor{comment}{//Nothing}}
+\DoxyCodeLine{00196     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classentity_1_1_player_ae9f8bc01c80f5ed6ffc7fb656f7895c1}\label{classentity_1_1_player_ae9f8bc01c80f5ed6ffc7fb656f7895c1}} 
@@ -381,8 +398,6 @@ Updates the player entity based on the current scene and time elapsed.
 
 
 \begin{DoxyParams}{Parameters}
-{\em scene} & The current game scene. \\
-\hline
 {\em dt} & The time elapsed since the last update. \\
 \hline
 \end{DoxyParams}
@@ -392,67 +407,65 @@ Reimplemented from \mbox{\hyperlink{classentity_1_1_character_a0beaf70a50b785c4c
 
 
 
-Definition at line \mbox{\hyperlink{_player_8java_source_l00056}{56}} of file \mbox{\hyperlink{_player_8java_source}{Player.\+java}}.
+Definition at line \mbox{\hyperlink{_player_8java_source_l00055}{55}} of file \mbox{\hyperlink{_player_8java_source}{Player.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00056                                   \{}
-\DoxyCodeLine{00057         super.update(dt);  \textcolor{comment}{// Calls the parent class update method}}
-\DoxyCodeLine{00058         \textcolor{comment}{// World updates}}
-\DoxyCodeLine{00059         \textcolor{keywordflow}{if} (Scene.state == Const.State.WORLD) \{}
-\DoxyCodeLine{00060             \textcolor{keywordflow}{if} (Scene.keyH.upPressed || Scene.keyH.downPressed || Scene.keyH.leftPressed || Scene.keyH.rightPressed) \{}
-\DoxyCodeLine{00061                 \mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} = 0;}
-\DoxyCodeLine{00062                 \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}} = 0;}
-\DoxyCodeLine{00063                 \textcolor{keywordflow}{if} (Scene.keyH.leftPressed) \{}
-\DoxyCodeLine{00064                     \mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} = -\/1;}
-\DoxyCodeLine{00065                     \mbox{\hyperlink{classentity_1_1_character_a249d5d0b8f600f332b5715e93f83668d}{facing}} = \textcolor{stringliteral}{"{}left"{}};}
-\DoxyCodeLine{00066                 \}}
-\DoxyCodeLine{00067                 \textcolor{keywordflow}{if} (Scene.keyH.rightPressed) \{}
-\DoxyCodeLine{00068                     \mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} = 1;}
-\DoxyCodeLine{00069                     \mbox{\hyperlink{classentity_1_1_character_a249d5d0b8f600f332b5715e93f83668d}{facing}} = \textcolor{stringliteral}{"{}right"{}};}
-\DoxyCodeLine{00070                 \}}
-\DoxyCodeLine{00071                 \textcolor{keywordflow}{if} (Scene.keyH.upPressed) \{}
-\DoxyCodeLine{00072                     \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}} = -\/1;}
-\DoxyCodeLine{00073                     \mbox{\hyperlink{classentity_1_1_character_a249d5d0b8f600f332b5715e93f83668d}{facing}} = \textcolor{stringliteral}{"{}up"{}};}
-\DoxyCodeLine{00074                 \}}
-\DoxyCodeLine{00075                 \textcolor{keywordflow}{if} (Scene.keyH.downPressed) \{}
-\DoxyCodeLine{00076                     \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}} = 1;}
-\DoxyCodeLine{00077                     \mbox{\hyperlink{classentity_1_1_character_a249d5d0b8f600f332b5715e93f83668d}{facing}} = \textcolor{stringliteral}{"{}down"{}};}
-\DoxyCodeLine{00078                 \}}
-\DoxyCodeLine{00079                 \mbox{\hyperlink{classentity_1_1_character_a937e8e2ad1ddaccfdf7fbc52c9f532f6}{accelerate}}(30,20, dt);}
-\DoxyCodeLine{00080             \} \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{00081                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} > 0) \{}
-\DoxyCodeLine{00082                     \mbox{\hyperlink{classentity_1_1_character_ab41258c00232def146bcb8f5fb17fa75}{decelerate}}(1,dt);}
-\DoxyCodeLine{00083                 \}}
-\DoxyCodeLine{00084             \}}
-\DoxyCodeLine{00085 }
-\DoxyCodeLine{00086             \textcolor{comment}{// CHECK OBJECT COLLISION}}
-\DoxyCodeLine{00087             Point objIndex = \mbox{\hyperlink{classentity_1_1_player_adb890f89741a84069bb1288c7093508f}{checkObject}}();}
-\DoxyCodeLine{00088             \mbox{\hyperlink{classentity_1_1_player_ada21c104a2dbe0b76b595df6b1cdeae0}{pickUpObject}}(objIndex);}
-\DoxyCodeLine{00089 }
-\DoxyCodeLine{00090             Point enemyInd = \mbox{\hyperlink{classentity_1_1_player_afd8ccd449d009e222e579aa68eeb8a50}{checkEnemy}}();}
-\DoxyCodeLine{00091             \mbox{\hyperlink{classentity_1_1_player_aadffbed42af93cecf0e3590efe8e0db9}{fightEnemy}}(enemyInd);}
-\DoxyCodeLine{00092         \}}
-\DoxyCodeLine{00093 }
-\DoxyCodeLine{00094         \textcolor{comment}{// Fightscene updates}}
-\DoxyCodeLine{00095         \textcolor{keywordflow}{if} (Scene.state == Const.State.FIGHT) \{}
-\DoxyCodeLine{00096             \textcolor{comment}{// To be implemented}}
-\DoxyCodeLine{00097             }
-\DoxyCodeLine{00098 }
-\DoxyCodeLine{00099         \}}
-\DoxyCodeLine{00100     \}}
+\DoxyCodeLine{00055                                   \{}
+\DoxyCodeLine{00056         super.update(dt);  \textcolor{comment}{// Calls the parent class update method}}
+\DoxyCodeLine{00057         \textcolor{comment}{// World updates}}
+\DoxyCodeLine{00058         \textcolor{keywordflow}{if} (Scene.state == Const.State.WORLD) \{}
+\DoxyCodeLine{00059             \textcolor{keywordflow}{if} (Scene.keyH.upPressed || Scene.keyH.downPressed || Scene.keyH.leftPressed || Scene.keyH.rightPressed) \{}
+\DoxyCodeLine{00060                 \mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} = 0;}
+\DoxyCodeLine{00061                 \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}} = 0;}
+\DoxyCodeLine{00062                 \textcolor{keywordflow}{if} (Scene.keyH.leftPressed) \{}
+\DoxyCodeLine{00063                     \mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} = -\/1;}
+\DoxyCodeLine{00064                     \mbox{\hyperlink{classentity_1_1_character_a249d5d0b8f600f332b5715e93f83668d}{facing}} = \textcolor{stringliteral}{"{}left"{}};}
+\DoxyCodeLine{00065                 \}}
+\DoxyCodeLine{00066                 \textcolor{keywordflow}{if} (Scene.keyH.rightPressed) \{}
+\DoxyCodeLine{00067                     \mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} = 1;}
+\DoxyCodeLine{00068                     \mbox{\hyperlink{classentity_1_1_character_a249d5d0b8f600f332b5715e93f83668d}{facing}} = \textcolor{stringliteral}{"{}right"{}};}
+\DoxyCodeLine{00069                 \}}
+\DoxyCodeLine{00070                 \textcolor{keywordflow}{if} (Scene.keyH.upPressed) \{}
+\DoxyCodeLine{00071                     \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}} = -\/1;}
+\DoxyCodeLine{00072                     \mbox{\hyperlink{classentity_1_1_character_a249d5d0b8f600f332b5715e93f83668d}{facing}} = \textcolor{stringliteral}{"{}up"{}};}
+\DoxyCodeLine{00073                 \}}
+\DoxyCodeLine{00074                 \textcolor{keywordflow}{if} (Scene.keyH.downPressed) \{}
+\DoxyCodeLine{00075                     \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}} = 1;}
+\DoxyCodeLine{00076                     \mbox{\hyperlink{classentity_1_1_character_a249d5d0b8f600f332b5715e93f83668d}{facing}} = \textcolor{stringliteral}{"{}down"{}};}
+\DoxyCodeLine{00077                 \}}
+\DoxyCodeLine{00078                 \mbox{\hyperlink{classentity_1_1_character_a937e8e2ad1ddaccfdf7fbc52c9f532f6}{accelerate}}(30,20, dt);}
+\DoxyCodeLine{00079             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00080                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} > 0) \{}
+\DoxyCodeLine{00081                     \mbox{\hyperlink{classentity_1_1_character_ab41258c00232def146bcb8f5fb17fa75}{decelerate}}(1,dt);}
+\DoxyCodeLine{00082                 \}}
+\DoxyCodeLine{00083             \}}
+\DoxyCodeLine{00084 }
+\DoxyCodeLine{00085             \textcolor{comment}{// CHECK OBJECT COLLISION}}
+\DoxyCodeLine{00086             Point objIndex = \mbox{\hyperlink{classentity_1_1_player_adb890f89741a84069bb1288c7093508f}{checkObject}}();}
+\DoxyCodeLine{00087             \mbox{\hyperlink{classentity_1_1_player_ada21c104a2dbe0b76b595df6b1cdeae0}{pickUpObject}}(objIndex);}
+\DoxyCodeLine{00088 }
+\DoxyCodeLine{00089             Point enemyInd = \mbox{\hyperlink{classentity_1_1_player_afd8ccd449d009e222e579aa68eeb8a50}{checkEnemy}}();}
+\DoxyCodeLine{00090             \mbox{\hyperlink{classentity_1_1_player_aadffbed42af93cecf0e3590efe8e0db9}{fightEnemy}}(enemyInd);}
+\DoxyCodeLine{00091         \}}
+\DoxyCodeLine{00092 }
+\DoxyCodeLine{00093         \textcolor{comment}{// Fightscene updates}}
+\DoxyCodeLine{00094         \textcolor{keywordflow}{if} (Scene.state == Const.State.FIGHT) \{}
+\DoxyCodeLine{00095             \textcolor{comment}{// To be implemented}}
+\DoxyCodeLine{00096             }
+\DoxyCodeLine{00097 }
+\DoxyCodeLine{00098         \}}
+\DoxyCodeLine{00099     \}}
 
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classentity_1_1_player_ae9f8bc01c80f5ed6ffc7fb656f7895c1_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

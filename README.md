@@ -45,10 +45,10 @@ Le gameplay se concentre sur l'exploration, le combat stratégique et la progres
 ### Game screenshots
 
 <p align="center">
-    <img src="res/ImageReadMe/image1.png">
+    <img src="res/ImageReadMe/image1.png" alt="">
 </p>
 <p align="center">
-    <img src="res/ImageReadMe/image2.png">
+    <img src="res/ImageReadMe/image2.png" alt="">
 </p>
 
 

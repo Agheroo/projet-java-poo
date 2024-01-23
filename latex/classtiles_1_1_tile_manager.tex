@@ -86,8 +86,8 @@ Definition at line \mbox{\hyperlink{_tile_manager_8java_source_l00034}{34}} of f
 \DoxyCodeLine{00041         \mbox{\hyperlink{classtiles_1_1_tile_manager_a0b90d7572cf1da8b03b26db4fe13123c}{\_topMap}} = \textcolor{keyword}{new} Tile[Const.WRLD\_maxRow][Const.WRLD\_maxCol];}
 \DoxyCodeLine{00042 }
 \DoxyCodeLine{00043         \mbox{\hyperlink{classtiles_1_1_tile_manager_aa47a7104f759edbe81420c131cfdab45}{loadTextures}}();}
-\DoxyCodeLine{00044         \mbox{\hyperlink{classtiles_1_1_tile_manager_ae75bbeb22c0845db92a543677766e22c}{loadMap}}(\textcolor{stringliteral}{"{}res/maps/test\_floor.csv"{}}, world, \mbox{\hyperlink{classtiles_1_1_tile_manager_afaa0606d6298d73114e1fbc1965239cf}{\_floorMap}}, \mbox{\hyperlink{classtiles_1_1_tile_manager_a430ec221f5ccb0f1a0630780568a0d0d}{\_floorMapTextures}});}
-\DoxyCodeLine{00045         \mbox{\hyperlink{classtiles_1_1_tile_manager_ae75bbeb22c0845db92a543677766e22c}{loadMap}}(\textcolor{stringliteral}{"{}res/maps/test\_top.csv"{}}, world, \mbox{\hyperlink{classtiles_1_1_tile_manager_a0b90d7572cf1da8b03b26db4fe13123c}{\_topMap}}, \mbox{\hyperlink{classtiles_1_1_tile_manager_a229e8399ed8bc4ec18e9cc87f0f8317e}{\_topMapTextures}});}
+\DoxyCodeLine{00044         \mbox{\hyperlink{classtiles_1_1_tile_manager_ae75bbeb22c0845db92a543677766e22c}{loadMap}}(\textcolor{stringliteral}{"{}res/maps/map\_floor.csv"{}}, world, \mbox{\hyperlink{classtiles_1_1_tile_manager_afaa0606d6298d73114e1fbc1965239cf}{\_floorMap}}, \mbox{\hyperlink{classtiles_1_1_tile_manager_a430ec221f5ccb0f1a0630780568a0d0d}{\_floorMapTextures}});}
+\DoxyCodeLine{00045         \mbox{\hyperlink{classtiles_1_1_tile_manager_ae75bbeb22c0845db92a543677766e22c}{loadMap}}(\textcolor{stringliteral}{"{}res/maps/map\_top.csv"{}}, world, \mbox{\hyperlink{classtiles_1_1_tile_manager_a0b90d7572cf1da8b03b26db4fe13123c}{\_topMap}}, \mbox{\hyperlink{classtiles_1_1_tile_manager_a229e8399ed8bc4ec18e9cc87f0f8317e}{\_topMapTextures}});}
 \DoxyCodeLine{00046     \}}
 
 \end{DoxyCode}
@@ -117,40 +117,36 @@ Draws the tiles in the game world.
 \hline
 {\em world} & The world object. \\
 \hline
-{\em screen\+Width} & The screen width. \\
-\hline
-{\em screen\+Height} & The screen height. \\
-\hline
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_tile_manager_8java_source_l00181}{181}} of file \mbox{\hyperlink{_tile_manager_8java_source}{Tile\+Manager.\+java}}.
+Definition at line \mbox{\hyperlink{_tile_manager_8java_source_l00183}{183}} of file \mbox{\hyperlink{_tile_manager_8java_source}{Tile\+Manager.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00181                                                  \{}
-\DoxyCodeLine{00182         \textcolor{keywordtype}{int} playerScreenX = (Const.WDW\_width -\/ Const.WRLD\_entityScreenSize) / 2;}
-\DoxyCodeLine{00183         \textcolor{keywordtype}{int} playerScreenY = (Const.WDW\_height -\/ Const.WRLD\_entityScreenSize) / 2;}
-\DoxyCodeLine{00184 }
-\DoxyCodeLine{00185         \textcolor{comment}{// Check for every tile of the map if it needs to be drawn}}
-\DoxyCodeLine{00186         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < Const.WRLD\_maxRow; i++) \{}
-\DoxyCodeLine{00187             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < Const.WRLD\_maxCol; j++) \{}
-\DoxyCodeLine{00188                 \textcolor{keywordtype}{int} worldX = \mbox{\hyperlink{classtiles_1_1_tile_manager_afaa0606d6298d73114e1fbc1965239cf}{\_floorMap}}[i][j].\mbox{\hyperlink{classtiles_1_1_tile_a7bfcdb11efa89176a068c2a473ce3e9d}{getPos}}()[0];}
-\DoxyCodeLine{00189                 \textcolor{keywordtype}{int} worldY = \mbox{\hyperlink{classtiles_1_1_tile_manager_afaa0606d6298d73114e1fbc1965239cf}{\_floorMap}}[i][j].\mbox{\hyperlink{classtiles_1_1_tile_a7bfcdb11efa89176a068c2a473ce3e9d}{getPos}}()[1];}
-\DoxyCodeLine{00190 }
-\DoxyCodeLine{00191                 \textcolor{comment}{// Checks if the player is close enough to the tile to render it to optimize memory and CPU usage}}
-\DoxyCodeLine{00192                 \textcolor{keywordflow}{if} (worldX + Const.WRLD\_tileScreenSize > world.player.worldX -\/ playerScreenX}
-\DoxyCodeLine{00193                         \&\& worldX -\/ Const.WRLD\_tileScreenSize < world.player.worldX + playerScreenX}
-\DoxyCodeLine{00194                         \&\& worldY + Const.WRLD\_tileScreenSize > world.player.worldY -\/ playerScreenY}
-\DoxyCodeLine{00195                         \&\& worldY -\/ Const.WRLD\_tileScreenSize < world.player.worldY + playerScreenY) \{}
-\DoxyCodeLine{00196                     \textcolor{keywordtype}{int} screenX = worldX -\/ world.player.worldX + playerScreenX;}
-\DoxyCodeLine{00197                     \textcolor{keywordtype}{int} screenY = worldY -\/ world.player.worldY + playerScreenY;}
-\DoxyCodeLine{00198                     \mbox{\hyperlink{classtiles_1_1_tile_manager_afaa0606d6298d73114e1fbc1965239cf}{\_floorMap}}[i][j].\mbox{\hyperlink{classtiles_1_1_tile_a31c27631fa71574b1a9bd9cad296fcbe}{draw}}(g2, screenX, screenY);}
-\DoxyCodeLine{00199                     \mbox{\hyperlink{classtiles_1_1_tile_manager_a0b90d7572cf1da8b03b26db4fe13123c}{\_topMap}}[i][j].\mbox{\hyperlink{classtiles_1_1_tile_a31c27631fa71574b1a9bd9cad296fcbe}{draw}}(g2, screenX, screenY);}
-\DoxyCodeLine{00200                 \}}
-\DoxyCodeLine{00201             \}}
-\DoxyCodeLine{00202         \}}
-\DoxyCodeLine{00203     \}}
+\DoxyCodeLine{00183                                                  \{}
+\DoxyCodeLine{00184         \textcolor{keywordtype}{int} playerScreenX = (Const.WDW\_width -\/ Const.WRLD\_entityScreenSize) / 2;}
+\DoxyCodeLine{00185         \textcolor{keywordtype}{int} playerScreenY = (Const.WDW\_height -\/ Const.WRLD\_entityScreenSize) / 2;}
+\DoxyCodeLine{00186 }
+\DoxyCodeLine{00187         \textcolor{comment}{// Check for every tile of the map if it needs to be drawn}}
+\DoxyCodeLine{00188         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < Const.WRLD\_maxRow; i++) \{}
+\DoxyCodeLine{00189             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < Const.WRLD\_maxCol; j++) \{}
+\DoxyCodeLine{00190                 \textcolor{keywordtype}{int} worldX = \mbox{\hyperlink{classtiles_1_1_tile_manager_afaa0606d6298d73114e1fbc1965239cf}{\_floorMap}}[i][j].\mbox{\hyperlink{classtiles_1_1_tile_a7bfcdb11efa89176a068c2a473ce3e9d}{getPos}}()[0];}
+\DoxyCodeLine{00191                 \textcolor{keywordtype}{int} worldY = \mbox{\hyperlink{classtiles_1_1_tile_manager_afaa0606d6298d73114e1fbc1965239cf}{\_floorMap}}[i][j].\mbox{\hyperlink{classtiles_1_1_tile_a7bfcdb11efa89176a068c2a473ce3e9d}{getPos}}()[1];}
+\DoxyCodeLine{00192 }
+\DoxyCodeLine{00193                 \textcolor{comment}{// Checks if the player is close enough to the tile to render it to optimize memory and CPU usage}}
+\DoxyCodeLine{00194                 \textcolor{keywordflow}{if} (worldX + Const.WRLD\_tileScreenSize > World.player.worldX -\/ playerScreenX}
+\DoxyCodeLine{00195                         \&\& worldX -\/ Const.WRLD\_tileScreenSize < World.player.worldX + playerScreenX}
+\DoxyCodeLine{00196                         \&\& worldY + Const.WRLD\_tileScreenSize > World.player.worldY -\/ playerScreenY}
+\DoxyCodeLine{00197                         \&\& worldY -\/ Const.WRLD\_tileScreenSize < World.player.worldY + playerScreenY) \{}
+\DoxyCodeLine{00198                     \textcolor{keywordtype}{int} screenX = worldX -\/ World.player.worldX + playerScreenX;}
+\DoxyCodeLine{00199                     \textcolor{keywordtype}{int} screenY = worldY -\/ World.player.worldY + playerScreenY;}
+\DoxyCodeLine{00200                     \mbox{\hyperlink{classtiles_1_1_tile_manager_afaa0606d6298d73114e1fbc1965239cf}{\_floorMap}}[i][j].\mbox{\hyperlink{classtiles_1_1_tile_a31c27631fa71574b1a9bd9cad296fcbe}{draw}}(g2, screenX, screenY);}
+\DoxyCodeLine{00201                     \mbox{\hyperlink{classtiles_1_1_tile_manager_a0b90d7572cf1da8b03b26db4fe13123c}{\_topMap}}[i][j].\mbox{\hyperlink{classtiles_1_1_tile_a31c27631fa71574b1a9bd9cad296fcbe}{draw}}(g2, screenX, screenY);}
+\DoxyCodeLine{00202                 \}}
+\DoxyCodeLine{00203             \}}
+\DoxyCodeLine{00204         \}}
+\DoxyCodeLine{00205     \}}
 
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
@@ -202,8 +198,7 @@ Definition at line \mbox{\hyperlink{_tile_manager_8java_source_l00055}{55}} of f
 \DoxyCodeLine{00061     \}}
 
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -233,41 +228,40 @@ Reads the txt map file to store the tile\+Map accordingly.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_tile_manager_8java_source_l00113}{113}} of file \mbox{\hyperlink{_tile_manager_8java_source}{Tile\+Manager.\+java}}.
+Definition at line \mbox{\hyperlink{_tile_manager_8java_source_l00120}{120}} of file \mbox{\hyperlink{_tile_manager_8java_source}{Tile\+Manager.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00113                                                                                           \{}
-\DoxyCodeLine{00114         \textcolor{keywordflow}{try} \{}
-\DoxyCodeLine{00115             File file = \textcolor{keyword}{new} File(filePath);}
-\DoxyCodeLine{00116             FileReader fileReader = \textcolor{keyword}{new} FileReader(file);}
-\DoxyCodeLine{00117             BufferedReader br = \textcolor{keyword}{new} BufferedReader(fileReader);}
-\DoxyCodeLine{00118 }
-\DoxyCodeLine{00119             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < Const.WRLD\_maxRow; i++) \{}
-\DoxyCodeLine{00120                 String line = br.readLine();}
-\DoxyCodeLine{00121 }
-\DoxyCodeLine{00122                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < Const.WRLD\_maxCol; j++) \{}
-\DoxyCodeLine{00123                     String[] numbers = line.split(\textcolor{stringliteral}{"{},"{}});}
-\DoxyCodeLine{00124                     \textcolor{keywordtype}{int} num = 1 + Integer.parseInt(numbers[j]); \textcolor{comment}{// Reading the file itself and stocking int read}}
-\DoxyCodeLine{00125                     Tile tileCurrent = \textcolor{keyword}{new} Tile(textures[num].spriteCntMax, textures[num].spriteSpeed,}
-\DoxyCodeLine{00126                             textures[num].getCollision(), num); \textcolor{comment}{// Creating new tile to store with the according texture}}
-\DoxyCodeLine{00127                     tileCurrent.setPos(Const.WRLD\_tileScreenSize * j, Const.WRLD\_tileScreenSize * i);}
-\DoxyCodeLine{00128 }
-\DoxyCodeLine{00129                     mapTile[i][j] = tileCurrent; \textcolor{comment}{// Setting the tile to the actual map}}
-\DoxyCodeLine{00130                     mapTile[i][j].setTexture(textures[num].image); \textcolor{comment}{// Set the current tile texture to what corresponds}}
-\DoxyCodeLine{00131                     \textcolor{comment}{// in the textures array}}
-\DoxyCodeLine{00132                     mapTile[i][j].setCollision(textures[num].getCollision()); \textcolor{comment}{// Set the collision factor to the tile}}
-\DoxyCodeLine{00133 }
-\DoxyCodeLine{00134                     \textcolor{comment}{// System.out.print(num + "{} "{});}}
-\DoxyCodeLine{00135                 \}}
-\DoxyCodeLine{00136                 \textcolor{comment}{// System.out.println("{}"{});}}
-\DoxyCodeLine{00137             \}}
-\DoxyCodeLine{00138             br.close();}
-\DoxyCodeLine{00139 }
-\DoxyCodeLine{00140         \} \textcolor{keywordflow}{catch} (Exception e) \{}
-\DoxyCodeLine{00141             e.printStackTrace();}
-\DoxyCodeLine{00142         \}}
-\DoxyCodeLine{00143     \}}
+\DoxyCodeLine{00120                                                                                           \{}
+\DoxyCodeLine{00121         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{00122             File file = \textcolor{keyword}{new} File(filePath);}
+\DoxyCodeLine{00123             FileReader fileReader = \textcolor{keyword}{new} FileReader(file);}
+\DoxyCodeLine{00124             BufferedReader br = \textcolor{keyword}{new} BufferedReader(fileReader);}
+\DoxyCodeLine{00125 }
+\DoxyCodeLine{00126             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < Const.WRLD\_maxRow; i++) \{}
+\DoxyCodeLine{00127                 }
+\DoxyCodeLine{00128                 String line = br.readLine();}
+\DoxyCodeLine{00129 }
+\DoxyCodeLine{00130                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < Const.WRLD\_maxCol; j++) \{}
+\DoxyCodeLine{00131                     }
+\DoxyCodeLine{00132                     String[] numbers = line.split(\textcolor{stringliteral}{"{},"{}});}
+\DoxyCodeLine{00133                     \textcolor{keywordtype}{int} num = 1 + Integer.parseInt(numbers[j]); \textcolor{comment}{// Reading the file itself and stocking int read}}
+\DoxyCodeLine{00134                     Tile tileCurrent = \textcolor{keyword}{new} Tile(textures[num].spriteCntMax, textures[num].spriteSpeed,}
+\DoxyCodeLine{00135                             textures[num].getCollision(), num); \textcolor{comment}{// Creating new tile to store with the according texture}}
+\DoxyCodeLine{00136                     tileCurrent.setPos(Const.WRLD\_tileScreenSize * j, Const.WRLD\_tileScreenSize * i);}
+\DoxyCodeLine{00137 }
+\DoxyCodeLine{00138                     mapTile[i][j] = tileCurrent; \textcolor{comment}{// Setting the tile to the actual map}}
+\DoxyCodeLine{00139                     mapTile[i][j].setTexture(textures[num].image); \textcolor{comment}{// Set the current tile texture to what corresponds}}
+\DoxyCodeLine{00140                     \textcolor{comment}{// in the textures array}}
+\DoxyCodeLine{00141                     mapTile[i][j].setCollision(textures[num].getCollision()); \textcolor{comment}{// Set the collision factor to the tile}}
+\DoxyCodeLine{00142                 \}}
+\DoxyCodeLine{00143             \}}
+\DoxyCodeLine{00144             br.close();}
+\DoxyCodeLine{00145 }
+\DoxyCodeLine{00146         \} \textcolor{keywordflow}{catch} (Exception e) \{}
+\DoxyCodeLine{00147             e.printStackTrace();}
+\DoxyCodeLine{00148         \}}
+\DoxyCodeLine{00149     \}}
 
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
@@ -304,19 +298,26 @@ Definition at line \mbox{\hyperlink{_tile_manager_8java_source_l00087}{87}} of f
 \DoxyCodeLine{00088         \textcolor{comment}{// Floor map textures}}
 \DoxyCodeLine{00089         \mbox{\hyperlink{classtiles_1_1_tile_manager_ab21de0db126abd1652c47f993b4a8c06}{storeTexture}}(\textcolor{stringliteral}{"{}void"{}}, \mbox{\hyperlink{classtiles_1_1_tile_manager_a430ec221f5ccb0f1a0630780568a0d0d}{\_floorMapTextures}}, 0, 1, \textcolor{keyword}{false}, 1, 0, \textcolor{keyword}{false});}
 \DoxyCodeLine{00090         \mbox{\hyperlink{classtiles_1_1_tile_manager_ab21de0db126abd1652c47f993b4a8c06}{storeTexture}}(\textcolor{stringliteral}{"{}grass"{}}, \mbox{\hyperlink{classtiles_1_1_tile_manager_a430ec221f5ccb0f1a0630780568a0d0d}{\_floorMapTextures}}, 1, 3, \textcolor{keyword}{false}, 1, 0, \textcolor{keyword}{false});}
-\DoxyCodeLine{00091         \textcolor{comment}{// Decoration textures (plants and tall grass)}}
-\DoxyCodeLine{00092         \mbox{\hyperlink{classtiles_1_1_tile_manager_ab21de0db126abd1652c47f993b4a8c06}{storeTexture}}(\textcolor{stringliteral}{"{}grass0"{}}, \mbox{\hyperlink{classtiles_1_1_tile_manager_a430ec221f5ccb0f1a0630780568a0d0d}{\_floorMapTextures}}, 4, 1, \textcolor{keyword}{true}, 5, 20, \textcolor{keyword}{false});}
-\DoxyCodeLine{00093         \mbox{\hyperlink{classtiles_1_1_tile_manager_ab21de0db126abd1652c47f993b4a8c06}{storeTexture}}(\textcolor{stringliteral}{"{}grass1"{}}, \mbox{\hyperlink{classtiles_1_1_tile_manager_a430ec221f5ccb0f1a0630780568a0d0d}{\_floorMapTextures}}, 5, 1, \textcolor{keyword}{true}, 5, 20, \textcolor{keyword}{false});}
-\DoxyCodeLine{00094         \mbox{\hyperlink{classtiles_1_1_tile_manager_ab21de0db126abd1652c47f993b4a8c06}{storeTexture}}(\textcolor{stringliteral}{"{}flower0"{}}, \mbox{\hyperlink{classtiles_1_1_tile_manager_a430ec221f5ccb0f1a0630780568a0d0d}{\_floorMapTextures}}, 6, 1, \textcolor{keyword}{true}, 6, 20, \textcolor{keyword}{false});}
-\DoxyCodeLine{00095 }
-\DoxyCodeLine{00096         \textcolor{comment}{// Top map textures (trees \& forest)}}
-\DoxyCodeLine{00097         \mbox{\hyperlink{classtiles_1_1_tile_manager_ab21de0db126abd1652c47f993b4a8c06}{storeTexture}}(\textcolor{stringliteral}{"{}void"{}}, \mbox{\hyperlink{classtiles_1_1_tile_manager_a229e8399ed8bc4ec18e9cc87f0f8317e}{\_topMapTextures}}, 0, 1, \textcolor{keyword}{false}, 1, 0, \textcolor{keyword}{false});}
-\DoxyCodeLine{00098 }
-\DoxyCodeLine{00099         \mbox{\hyperlink{classtiles_1_1_tile_manager_ab21de0db126abd1652c47f993b4a8c06}{storeTexture}}(\textcolor{stringliteral}{"{}forest"{}}, \mbox{\hyperlink{classtiles_1_1_tile_manager_a229e8399ed8bc4ec18e9cc87f0f8317e}{\_topMapTextures}}, 1, 9, \textcolor{keyword}{false}, 1, 0, \textcolor{keyword}{true});}
-\DoxyCodeLine{00100         \mbox{\hyperlink{classtiles_1_1_tile_manager_ab21de0db126abd1652c47f993b4a8c06}{storeTexture}}(\textcolor{stringliteral}{"{}tree"{}}, \mbox{\hyperlink{classtiles_1_1_tile_manager_a229e8399ed8bc4ec18e9cc87f0f8317e}{\_topMapTextures}}, 10, 9, \textcolor{keyword}{false}, 1, 0, \textcolor{keyword}{true});}
+\DoxyCodeLine{00091 }
+\DoxyCodeLine{00092         \textcolor{comment}{// Decoration textures (plants and tall grass)}}
+\DoxyCodeLine{00093         \mbox{\hyperlink{classtiles_1_1_tile_manager_ab21de0db126abd1652c47f993b4a8c06}{storeTexture}}(\textcolor{stringliteral}{"{}grass0"{}}, \mbox{\hyperlink{classtiles_1_1_tile_manager_a430ec221f5ccb0f1a0630780568a0d0d}{\_floorMapTextures}}, 4, 1, \textcolor{keyword}{true}, 5, 20, \textcolor{keyword}{false});}
+\DoxyCodeLine{00094         \mbox{\hyperlink{classtiles_1_1_tile_manager_ab21de0db126abd1652c47f993b4a8c06}{storeTexture}}(\textcolor{stringliteral}{"{}grass1"{}}, \mbox{\hyperlink{classtiles_1_1_tile_manager_a430ec221f5ccb0f1a0630780568a0d0d}{\_floorMapTextures}}, 5, 1, \textcolor{keyword}{true}, 5, 20, \textcolor{keyword}{false});}
+\DoxyCodeLine{00095         \mbox{\hyperlink{classtiles_1_1_tile_manager_ab21de0db126abd1652c47f993b4a8c06}{storeTexture}}(\textcolor{stringliteral}{"{}flower0"{}}, \mbox{\hyperlink{classtiles_1_1_tile_manager_a430ec221f5ccb0f1a0630780568a0d0d}{\_floorMapTextures}}, 6, 1, \textcolor{keyword}{true}, 6, 20, \textcolor{keyword}{false});}
+\DoxyCodeLine{00096         \mbox{\hyperlink{classtiles_1_1_tile_manager_ab21de0db126abd1652c47f993b4a8c06}{storeTexture}}(\textcolor{stringliteral}{"{}grass2"{}},\mbox{\hyperlink{classtiles_1_1_tile_manager_a430ec221f5ccb0f1a0630780568a0d0d}{\_floorMapTextures}},7,1,\textcolor{keyword}{true},6,20,\textcolor{keyword}{false});}
+\DoxyCodeLine{00097         \mbox{\hyperlink{classtiles_1_1_tile_manager_ab21de0db126abd1652c47f993b4a8c06}{storeTexture}}(\textcolor{stringliteral}{"{}rock"{}}, \mbox{\hyperlink{classtiles_1_1_tile_manager_a430ec221f5ccb0f1a0630780568a0d0d}{\_floorMapTextures}}, 8, 3, \textcolor{keyword}{false}, 1, 0, \textcolor{keyword}{false});}
+\DoxyCodeLine{00098         \mbox{\hyperlink{classtiles_1_1_tile_manager_ab21de0db126abd1652c47f993b4a8c06}{storeTexture}}(\textcolor{stringliteral}{"{}berry"{}}, \mbox{\hyperlink{classtiles_1_1_tile_manager_a430ec221f5ccb0f1a0630780568a0d0d}{\_floorMapTextures}}, 11, 2, \textcolor{keyword}{false}, 1, 0, \textcolor{keyword}{false});}
+\DoxyCodeLine{00099         \mbox{\hyperlink{classtiles_1_1_tile_manager_ab21de0db126abd1652c47f993b4a8c06}{storeTexture}}(\textcolor{stringliteral}{"{}rock"{}}, \mbox{\hyperlink{classtiles_1_1_tile_manager_a430ec221f5ccb0f1a0630780568a0d0d}{\_floorMapTextures}}, 13, 2, \textcolor{keyword}{false}, 1, 0, \textcolor{keyword}{false});}
+\DoxyCodeLine{00100         \mbox{\hyperlink{classtiles_1_1_tile_manager_ab21de0db126abd1652c47f993b4a8c06}{storeTexture}}(\textcolor{stringliteral}{"{}path"{}}, \mbox{\hyperlink{classtiles_1_1_tile_manager_a430ec221f5ccb0f1a0630780568a0d0d}{\_floorMapTextures}}, 15, 17, \textcolor{keyword}{false}, 1, 0, \textcolor{keyword}{false});}
 \DoxyCodeLine{00101 }
-\DoxyCodeLine{00102         \mbox{\hyperlink{classtiles_1_1_tile_manager_ab21de0db126abd1652c47f993b4a8c06}{storeTexture}}(\textcolor{stringliteral}{"{}fire"{}}, \mbox{\hyperlink{classtiles_1_1_tile_manager_a229e8399ed8bc4ec18e9cc87f0f8317e}{\_topMapTextures}}, 19, 1, \textcolor{keyword}{true}, 7, 15, \textcolor{keyword}{true});}
-\DoxyCodeLine{00103     \}}
+\DoxyCodeLine{00102         \textcolor{comment}{// Top map textures (trees \& forest)}}
+\DoxyCodeLine{00103         \mbox{\hyperlink{classtiles_1_1_tile_manager_ab21de0db126abd1652c47f993b4a8c06}{storeTexture}}(\textcolor{stringliteral}{"{}void"{}}, \mbox{\hyperlink{classtiles_1_1_tile_manager_a229e8399ed8bc4ec18e9cc87f0f8317e}{\_topMapTextures}}, 0, 1, \textcolor{keyword}{false}, 1, 0, \textcolor{keyword}{false});}
+\DoxyCodeLine{00104         \mbox{\hyperlink{classtiles_1_1_tile_manager_ab21de0db126abd1652c47f993b4a8c06}{storeTexture}}(\textcolor{stringliteral}{"{}forest"{}}, \mbox{\hyperlink{classtiles_1_1_tile_manager_a229e8399ed8bc4ec18e9cc87f0f8317e}{\_topMapTextures}}, 1, 9, \textcolor{keyword}{false}, 1, 0, \textcolor{keyword}{true});}
+\DoxyCodeLine{00105         \mbox{\hyperlink{classtiles_1_1_tile_manager_ab21de0db126abd1652c47f993b4a8c06}{storeTexture}}(\textcolor{stringliteral}{"{}tree"{}}, \mbox{\hyperlink{classtiles_1_1_tile_manager_a229e8399ed8bc4ec18e9cc87f0f8317e}{\_topMapTextures}}, 10, 9, \textcolor{keyword}{false}, 1, 0, \textcolor{keyword}{true});}
+\DoxyCodeLine{00106         \mbox{\hyperlink{classtiles_1_1_tile_manager_ab21de0db126abd1652c47f993b4a8c06}{storeTexture}}(\textcolor{stringliteral}{"{}fire"{}}, \mbox{\hyperlink{classtiles_1_1_tile_manager_a229e8399ed8bc4ec18e9cc87f0f8317e}{\_topMapTextures}}, 19, 1, \textcolor{keyword}{true}, 7, 15, \textcolor{keyword}{true});}
+\DoxyCodeLine{00107         \mbox{\hyperlink{classtiles_1_1_tile_manager_ab21de0db126abd1652c47f993b4a8c06}{storeTexture}}(\textcolor{stringliteral}{"{}unlit\_fire"{}}, \mbox{\hyperlink{classtiles_1_1_tile_manager_a229e8399ed8bc4ec18e9cc87f0f8317e}{\_topMapTextures}}, 20, 1, \textcolor{keyword}{false}, 1, 0, \textcolor{keyword}{true});}
+\DoxyCodeLine{00108         \mbox{\hyperlink{classtiles_1_1_tile_manager_ab21de0db126abd1652c47f993b4a8c06}{storeTexture}}(\textcolor{stringliteral}{"{}rock\_collide"{}}, \mbox{\hyperlink{classtiles_1_1_tile_manager_a229e8399ed8bc4ec18e9cc87f0f8317e}{\_topMapTextures}}, 21, 2, \textcolor{keyword}{false}, 1, 0, \textcolor{keyword}{true});}
+\DoxyCodeLine{00109         \mbox{\hyperlink{classtiles_1_1_tile_manager_ab21de0db126abd1652c47f993b4a8c06}{storeTexture}}(\textcolor{stringliteral}{"{}barrier"{}}, \mbox{\hyperlink{classtiles_1_1_tile_manager_a229e8399ed8bc4ec18e9cc87f0f8317e}{\_topMapTextures}}, 23, 3, \textcolor{keyword}{false}, 1, 0, \textcolor{keyword}{true});}
+\DoxyCodeLine{00110     \}}
 
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
@@ -398,37 +399,33 @@ Updates the tile frames based on the player\textquotesingle{}s position.
 \begin{DoxyParams}{Parameters}
 {\em world} & The world object. \\
 \hline
-{\em screen\+Width} & The screen width. \\
-\hline
-{\em screen\+Height} & The screen height. \\
-\hline
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_tile_manager_8java_source_l00152}{152}} of file \mbox{\hyperlink{_tile_manager_8java_source}{Tile\+Manager.\+java}}.
+Definition at line \mbox{\hyperlink{_tile_manager_8java_source_l00156}{156}} of file \mbox{\hyperlink{_tile_manager_8java_source}{Tile\+Manager.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00152                                     \{}
-\DoxyCodeLine{00153         \textcolor{keywordtype}{int} playerScreenX = (Const.WDW\_width -\/ Const.WRLD\_entityScreenSize) / 2;}
-\DoxyCodeLine{00154         \textcolor{keywordtype}{int} playerScreenY = (Const.WDW\_height -\/ Const.WRLD\_entityScreenSize) / 2;}
-\DoxyCodeLine{00155 }
-\DoxyCodeLine{00156         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < Const.WRLD\_maxRow; i++) \{}
-\DoxyCodeLine{00157             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < Const.WRLD\_maxCol; j++) \{}
-\DoxyCodeLine{00158                 \textcolor{keywordtype}{int} worldX = \mbox{\hyperlink{classtiles_1_1_tile_manager_afaa0606d6298d73114e1fbc1965239cf}{\_floorMap}}[i][j].\mbox{\hyperlink{classtiles_1_1_tile_a7bfcdb11efa89176a068c2a473ce3e9d}{getPos}}()[0];}
-\DoxyCodeLine{00159                 \textcolor{keywordtype}{int} worldY = \mbox{\hyperlink{classtiles_1_1_tile_manager_afaa0606d6298d73114e1fbc1965239cf}{\_floorMap}}[i][j].\mbox{\hyperlink{classtiles_1_1_tile_a7bfcdb11efa89176a068c2a473ce3e9d}{getPos}}()[1];}
-\DoxyCodeLine{00160 }
-\DoxyCodeLine{00161                 \textcolor{comment}{// Checks if the player is close enough to the tile to render it to optimize memory and CPU usage}}
-\DoxyCodeLine{00162                 \textcolor{keywordflow}{if} (worldX + Const.WRLD\_tileScreenSize > world.player.worldX -\/ playerScreenX}
-\DoxyCodeLine{00163                         \&\& worldX -\/ Const.WRLD\_tileScreenSize < world.player.worldX + playerScreenX}
-\DoxyCodeLine{00164                         \&\& worldY + Const.WRLD\_tileScreenSize > world.player.worldY -\/ playerScreenY}
-\DoxyCodeLine{00165                         \&\& worldY -\/ Const.WRLD\_tileScreenSize < world.player.worldY + playerScreenY) \{}
-\DoxyCodeLine{00166                     \mbox{\hyperlink{classtiles_1_1_tile_manager_afaa0606d6298d73114e1fbc1965239cf}{\_floorMap}}[i][j].\mbox{\hyperlink{classtiles_1_1_tile_aba5dbd821ef786c025e887b5c2e801f5}{updateFrames}}();}
-\DoxyCodeLine{00167                     \mbox{\hyperlink{classtiles_1_1_tile_manager_a0b90d7572cf1da8b03b26db4fe13123c}{\_topMap}}[i][j].\mbox{\hyperlink{classtiles_1_1_tile_aba5dbd821ef786c025e887b5c2e801f5}{updateFrames}}();}
-\DoxyCodeLine{00168                 \}}
-\DoxyCodeLine{00169             \}}
-\DoxyCodeLine{00170         \}}
-\DoxyCodeLine{00171     \}}
+\DoxyCodeLine{00156                                     \{}
+\DoxyCodeLine{00157         \textcolor{keywordtype}{int} playerScreenX = (Const.WDW\_width -\/ Const.WRLD\_entityScreenSize) / 2;}
+\DoxyCodeLine{00158         \textcolor{keywordtype}{int} playerScreenY = (Const.WDW\_height -\/ Const.WRLD\_entityScreenSize) / 2;}
+\DoxyCodeLine{00159 }
+\DoxyCodeLine{00160         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < Const.WRLD\_maxRow; i++) \{}
+\DoxyCodeLine{00161             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < Const.WRLD\_maxCol; j++) \{}
+\DoxyCodeLine{00162                 \textcolor{keywordtype}{int} worldX = \mbox{\hyperlink{classtiles_1_1_tile_manager_afaa0606d6298d73114e1fbc1965239cf}{\_floorMap}}[i][j].\mbox{\hyperlink{classtiles_1_1_tile_a7bfcdb11efa89176a068c2a473ce3e9d}{getPos}}()[0];}
+\DoxyCodeLine{00163                 \textcolor{keywordtype}{int} worldY = \mbox{\hyperlink{classtiles_1_1_tile_manager_afaa0606d6298d73114e1fbc1965239cf}{\_floorMap}}[i][j].\mbox{\hyperlink{classtiles_1_1_tile_a7bfcdb11efa89176a068c2a473ce3e9d}{getPos}}()[1];}
+\DoxyCodeLine{00164 }
+\DoxyCodeLine{00165                 \textcolor{comment}{// Checks if the player is close enough to the tile to render it to optimize memory and CPU usage}}
+\DoxyCodeLine{00166                 \textcolor{keywordflow}{if} (worldX + Const.WRLD\_tileScreenSize > World.player.worldX -\/ playerScreenX}
+\DoxyCodeLine{00167                         \&\& worldX -\/ Const.WRLD\_tileScreenSize < World.player.worldX + playerScreenX}
+\DoxyCodeLine{00168                         \&\& worldY + Const.WRLD\_tileScreenSize > World.player.worldY -\/ playerScreenY}
+\DoxyCodeLine{00169                         \&\& worldY -\/ Const.WRLD\_tileScreenSize < World.player.worldY + playerScreenY) \{}
+\DoxyCodeLine{00170                     \mbox{\hyperlink{classtiles_1_1_tile_manager_afaa0606d6298d73114e1fbc1965239cf}{\_floorMap}}[i][j].\mbox{\hyperlink{classtiles_1_1_tile_aba5dbd821ef786c025e887b5c2e801f5}{updateFrames}}();}
+\DoxyCodeLine{00171                     \mbox{\hyperlink{classtiles_1_1_tile_manager_a0b90d7572cf1da8b03b26db4fe13123c}{\_topMap}}[i][j].\mbox{\hyperlink{classtiles_1_1_tile_aba5dbd821ef786c025e887b5c2e801f5}{updateFrames}}();}
+\DoxyCodeLine{00172                 \}}
+\DoxyCodeLine{00173             \}}
+\DoxyCodeLine{00174         \}}
+\DoxyCodeLine{00175     \}}
 
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak

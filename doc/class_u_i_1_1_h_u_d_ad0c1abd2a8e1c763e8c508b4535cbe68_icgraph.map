@@ -1,0 +1,7 @@
+<map id="UI.HUD.update" name="UI.HUD.update">
+<area shape="rect" id="node1" title="Abstract method to update the HUD." alt="" coords="601,31,720,57"/>
+<area shape="rect" id="node2" href="$classgame_1_1_scene.html#a23b3275854d4de945e1f8eba10f382a3" title="Updates the scene." alt="" coords="403,5,553,32"/>
+<area shape="rect" id="node5" href="$classgame_1_1_world.html#a05a7f2e7a65c2a3449efdaa0a87c49f5" title="Updates the game world based on the scene state." alt="" coords="403,56,553,83"/>
+<area shape="rect" id="node3" href="$classgame_1_1_window.html#a41cef38f9afc72fa1b4a1dfdc2bf9b92" title="Updates the game scene." alt="" coords="192,5,355,32"/>
+<area shape="rect" id="node4" href="$classgame_1_1_window.html#acb08b17fe8fb90e42db6e58164ed5421" title="Runs the game loop." alt="" coords="5,5,144,32"/>
+</map>

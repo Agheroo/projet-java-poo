@@ -1,4 +1,4 @@
 <map id="UI.ChoiceButton.draw" name="UI.ChoiceButton.draw">
-<area shape="rect" id="node1" title="Draws a button (rectangle) on the screen at x,y coords (top left)" alt="" coords="5,5,168,32"/>
-<area shape="rect" id="node2" href="$class_u_i_1_1_textbox.html#aab675a99675e6ba3e03630cf973f2799" title=" " alt="" coords="216,5,343,32"/>
+<area shape="rect" id="node1" title="Draws a button (rectangle) on the screen at specified coordinates (top left)." alt="" coords="5,5,168,32"/>
+<area shape="rect" id="node2" href="$class_u_i_1_1_textbox.html#aab675a99675e6ba3e03630cf973f2799" title="Draws the text box on the screen." alt="" coords="216,5,343,32"/>
 </map>

@@ -1,0 +1,4 @@
+<map id="UI.ChoiceButton.setTextColor" name="UI.ChoiceButton.setTextColor">
+<area shape="rect" id="node1" title="Setter function to change the button&#39;s text color." alt="" coords="5,5,217,32"/>
+<area shape="rect" id="node2" href="$class_u_i_1_1_textbox.html#a4725a8ec93796dcc1a2aa14ad16952f6" title="Setter function for a new font color of the current text." alt="" coords="265,5,415,32"/>
+</map>

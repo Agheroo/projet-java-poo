@@ -6,5 +6,6 @@ var searchData=
   ['keyhandler_2ejava_3',['KeyHandler.java',['../_key_handler_8java.html',1,'']]],
   ['keypressed_4',['keyPressed',['../classmain_1_1_key_handler.html#a1107b078f3813bd4bbbb2f13d7f43d0a',1,'main::KeyHandler']]],
   ['keyreleased_5',['keyReleased',['../classmain_1_1_key_handler.html#a7348a9c91fb271544600f06331952b29',1,'main::KeyHandler']]],
-  ['keytyped_6',['keyTyped',['../classmain_1_1_key_handler.html#a6087887b2e39bdeb1e80c89f31f8584e',1,'main::KeyHandler']]]
+  ['keys_6',['keys',['../classentity_1_1_entity_setter.html#a692f4a5817a292db993b55c6aee28f26',1,'entity::EntitySetter']]],
+  ['keytyped_7',['keyTyped',['../classmain_1_1_key_handler.html#a6087887b2e39bdeb1e80c89f31f8584e',1,'main::KeyHandler']]]
 ];

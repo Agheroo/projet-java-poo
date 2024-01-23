@@ -74,15 +74,18 @@ $(function() {
   <div class="headertitle"><div class="title">UI.HUD Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Represents the abstract base class for Heads-Up Display in the game's user interfaces.  
+ <a href="class_u_i_1_1_h_u_d.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for UI.HUD:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_u_i_1_1_h_u_d__inherit__graph.png" border="0" usemap="#a_u_i_8_h_u_d_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_u_i_8_h_u_d_inherit__map" id="a_u_i_8_h_u_d_inherit__map">
-<area shape="rect" title=" " alt="" coords="135,5,323,185"/>
-<area shape="rect" href="class_u_i_1_1_h_u_d___fight.html" title=" " alt="" coords="5,233,144,399"/>
-<area shape="rect" href="class_u_i_1_1_h_u_d___pause.html" title=" " alt="" coords="168,263,291,369"/>
-<area shape="rect" href="class_u_i_1_1_h_u_d___welcome.html" title=" " alt="" coords="315,263,459,369"/>
+<area shape="rect" title="Represents the abstract base class for Heads&#45;Up Display in the game&#39;s user interfaces." alt="" coords="135,5,323,200"/>
+<area shape="rect" href="class_u_i_1_1_h_u_d___fight.html" title=" " alt="" coords="5,263,144,443"/>
+<area shape="rect" href="class_u_i_1_1_h_u_d___pause.html" title="Represents the pause menu HUD class, extending the abstract HUD class." alt="" coords="168,292,291,413"/>
+<area shape="rect" href="class_u_i_1_1_h_u_d___welcome.html" title="Represents the welcome screen HUD class, extending the abstract HUD class." alt="" coords="315,248,479,457"/>
 </map>
 </div>
 <div class="dynheader">
@@ -90,46 +93,58 @@ Collaboration diagram for UI.HUD:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_u_i_1_1_h_u_d__coll__graph.png" border="0" usemap="#a_u_i_8_h_u_d_coll__map" alt="Collaboration graph"/></div>
 <map name="a_u_i_8_h_u_d_coll__map" id="a_u_i_8_h_u_d_coll__map">
-<area shape="rect" title=" " alt="" coords="124,631,312,767"/>
+<area shape="rect" title="Represents the abstract base class for Heads&#45;Up Display in the game&#39;s user interfaces." alt="" coords="124,631,312,781"/>
 <area shape="rect" href="enumgame_1_1_const_1_1_selection.html" title=" " alt="" coords="5,388,169,568"/>
-<area shape="rect" href="class_u_i_1_1_choice_button.html" title=" " alt="" coords="299,410,433,546"/>
-<area shape="rect" href="class_u_i_1_1_textbox.html" title=" " alt="" coords="174,145,305,325"/>
-<area shape="rect" title=" " alt="" coords="126,5,187,83"/>
-<area shape="rect" title=" " alt="" coords="211,5,267,83"/>
-<area shape="rect" title=" " alt="" coords="294,5,345,83"/>
+<area shape="rect" href="class_u_i_1_1_choice_button.html" title="Represents a clickable button with associated text and appearance settings." alt="" coords="299,403,433,553"/>
+<area shape="rect" href="class_u_i_1_1_textbox.html" title="Represents a text box for displaying text on the screen, used for buttons or dialogues." alt="" coords="158,145,289,325"/>
+<area shape="rect" title=" " alt="" coords="113,5,174,83"/>
+<area shape="rect" title=" " alt="" coords="305,5,361,83"/>
+<area shape="rect" title=" " alt="" coords="198,5,249,83"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a648f9903d8217872b2d082e1fb405925"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_1_1_h_u_d.html#a648f9903d8217872b2d082e1fb405925">HUD</a> ()</td></tr>
+<tr class="memdesc:a648f9903d8217872b2d082e1fb405925"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the <a class="el" href="class_u_i_1_1_h_u_d.html" title="Represents the abstract base class for Heads-Up Display in the game&#39;s user interfaces.">HUD</a> class.  <a href="class_u_i_1_1_h_u_d.html#a648f9903d8217872b2d082e1fb405925">More...</a><br /></td></tr>
 <tr class="separator:a648f9903d8217872b2d082e1fb405925"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5039f6b8d54a62926eabd210aeb1fea4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_1_1_h_u_d.html#a5039f6b8d54a62926eabd210aeb1fea4">changeSelectionColor</a> (int selectionIndex, Color baseColor, Color selectColor)</td></tr>
-<tr class="separator:a5039f6b8d54a62926eabd210aeb1fea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1a376f1d7a53f60ddc82737289a35d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_1_1_h_u_d.html#af1a376f1d7a53f60ddc82737289a35d8">changeSelectionColor</a> (int selectionIndex, Color baseText, Color newText, Color baseBg, Color newBg)</td></tr>
+<tr class="memdesc:af1a376f1d7a53f60ddc82737289a35d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the color of the selected button in the <a class="el" href="class_u_i_1_1_h_u_d.html" title="Represents the abstract base class for Heads-Up Display in the game&#39;s user interfaces.">HUD</a>.  <a href="class_u_i_1_1_h_u_d.html#af1a376f1d7a53f60ddc82737289a35d8">More...</a><br /></td></tr>
+<tr class="separator:af1a376f1d7a53f60ddc82737289a35d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf73daced1b23ea24b73216f6a23f587"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_1_1_h_u_d.html#acf73daced1b23ea24b73216f6a23f587">draw</a> (Graphics2D g2)</td></tr>
+<tr class="memdesc:acf73daced1b23ea24b73216f6a23f587"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract method to draw the <a class="el" href="class_u_i_1_1_h_u_d.html" title="Represents the abstract base class for Heads-Up Display in the game&#39;s user interfaces.">HUD</a> on the screen.  <a href="class_u_i_1_1_h_u_d.html#acf73daced1b23ea24b73216f6a23f587">More...</a><br /></td></tr>
 <tr class="separator:acf73daced1b23ea24b73216f6a23f587"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0c1abd2a8e1c763e8c508b4535cbe68"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_1_1_h_u_d.html#ad0c1abd2a8e1c763e8c508b4535cbe68">update</a> ()</td></tr>
+<tr class="memdesc:ad0c1abd2a8e1c763e8c508b4535cbe68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract method to update the <a class="el" href="class_u_i_1_1_h_u_d.html" title="Represents the abstract base class for Heads-Up Display in the game&#39;s user interfaces.">HUD</a>.  <a href="class_u_i_1_1_h_u_d.html#ad0c1abd2a8e1c763e8c508b4535cbe68">More...</a><br /></td></tr>
 <tr class="separator:ad0c1abd2a8e1c763e8c508b4535cbe68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1eebe40213bbdea3640023dcf98472d"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_1_1_h_u_d.html#ac1eebe40213bbdea3640023dcf98472d">selectClass</a> ()</td></tr>
+<tr class="separator:ac1eebe40213bbdea3640023dcf98472d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:aa088352b4906398c1b83fa6e8e4d143a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumgame_1_1_const_1_1_selection.html">Selection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_1_1_h_u_d.html#aa088352b4906398c1b83fa6e8e4d143a">selection</a></td></tr>
+<tr class="memdesc:aa088352b4906398c1b83fa6e8e4d143a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current selection in the <a class="el" href="class_u_i_1_1_h_u_d.html" title="Represents the abstract base class for Heads-Up Display in the game&#39;s user interfaces.">HUD</a>.  <a href="class_u_i_1_1_h_u_d.html#aa088352b4906398c1b83fa6e8e4d143a">More...</a><br /></td></tr>
 <tr class="separator:aa088352b4906398c1b83fa6e8e4d143a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e5874ed325ff773543bfc51db70f5af"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_1_1_h_u_d.html#a1e5874ed325ff773543bfc51db70f5af">confirm</a></td></tr>
+<tr class="memdesc:a1e5874ed325ff773543bfc51db70f5af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag indicating confirmation status in the <a class="el" href="class_u_i_1_1_h_u_d.html" title="Represents the abstract base class for Heads-Up Display in the game&#39;s user interfaces.">HUD</a>.  <a href="class_u_i_1_1_h_u_d.html#a1e5874ed325ff773543bfc51db70f5af">More...</a><br /></td></tr>
 <tr class="separator:a1e5874ed325ff773543bfc51db70f5af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a2b2c87a34b30ab4ab62d4e58390b1560"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_1_1_h_u_d.html#a2b2c87a34b30ab4ab62d4e58390b1560">_nbButtons</a></td></tr>
+<tr class="memdesc:a2b2c87a34b30ab4ab62d4e58390b1560"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of buttons in the <a class="el" href="class_u_i_1_1_h_u_d.html" title="Represents the abstract base class for Heads-Up Display in the game&#39;s user interfaces.">HUD</a>.  <a href="class_u_i_1_1_h_u_d.html#a2b2c87a34b30ab4ab62d4e58390b1560">More...</a><br /></td></tr>
 <tr class="separator:a2b2c87a34b30ab4ab62d4e58390b1560"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89e962c43a04bc0bc065a74e6cd52720"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_u_i_1_1_choice_button.html">ChoiceButton</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_1_1_h_u_d.html#a89e962c43a04bc0bc065a74e6cd52720">_buttons</a></td></tr>
+<tr class="memdesc:a89e962c43a04bc0bc065a74e6cd52720"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of <a class="el" href="class_u_i_1_1_choice_button.html" title="Represents a clickable button with associated text and appearance settings.">ChoiceButton</a> objects representing buttons in the <a class="el" href="class_u_i_1_1_h_u_d.html" title="Represents the abstract base class for Heads-Up Display in the game&#39;s user interfaces.">HUD</a>.  <a href="class_u_i_1_1_h_u_d.html#a89e962c43a04bc0bc065a74e6cd52720">More...</a><br /></td></tr>
 <tr class="separator:a89e962c43a04bc0bc065a74e6cd52720"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab189c729fc726de0438399eb83e8cae2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_u_i_1_1_textbox.html">Textbox</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_1_1_h_u_d.html#ab189c729fc726de0438399eb83e8cae2">_texts</a></td></tr>
+<tr class="memdesc:ab189c729fc726de0438399eb83e8cae2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of <a class="el" href="class_u_i_1_1_textbox.html" title="Represents a text box for displaying text on the screen, used for buttons or dialogues.">Textbox</a> objects representing text elements in the <a class="el" href="class_u_i_1_1_h_u_d.html" title="Represents the abstract base class for Heads-Up Display in the game&#39;s user interfaces.">HUD</a>.  <a href="class_u_i_1_1_h_u_d.html#ab189c729fc726de0438399eb83e8cae2">More...</a><br /></td></tr>
 <tr class="separator:ab189c729fc726de0438399eb83e8cae2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_h_u_d_8java_source.html#l00010">10</a> of file <a class="el" href="_h_u_d_8java_source.html">HUD.java</a>.</p>
+<div class="textblock"><p >Represents the abstract base class for Heads-Up Display in the game's user interfaces. </p>
+
+<p class="definition">Definition at line <a class="el" href="_h_u_d_8java_source.html#l00017">17</a> of file <a class="el" href="_h_u_d_8java_source.html">HUD.java</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a648f9903d8217872b2d082e1fb405925" name="a648f9903d8217872b2d082e1fb405925"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a648f9903d8217872b2d082e1fb405925">&#9670;&nbsp;</a></span>HUD()</h2>
@@ -146,23 +161,25 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_h_u_d_8java_source.html#l00020">20</a> of file <a class="el" href="_h_u_d_8java_source.html">HUD.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   20</span>                {</div>
-<div class="line"><span class="lineno">   21</span>        <a class="code hl_variable" href="class_u_i_1_1_h_u_d.html#a1e5874ed325ff773543bfc51db70f5af">confirm</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   22</span> </div>
-<div class="line"><span class="lineno">   23</span>        Scene.keyH.interactPressed = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   24</span>        Scene.keyH.downPressed = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   25</span>        Scene.keyH.upPressed = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   26</span>        Scene.keyH.leftPressed = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   27</span>        Scene.keyH.rightPressed = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   28</span>    }</div>
-<div class="ttc" id="aclass_u_i_1_1_h_u_d_html_a1e5874ed325ff773543bfc51db70f5af"><div class="ttname"><a href="class_u_i_1_1_h_u_d.html#a1e5874ed325ff773543bfc51db70f5af">UI.HUD.confirm</a></div><div class="ttdeci">boolean confirm</div><div class="ttdef"><b>Definition:</b> <a href="_h_u_d_8java_source.html#l00012">HUD.java:12</a></div></div>
+<p>Constructor for the <a class="el" href="class_u_i_1_1_h_u_d.html" title="Represents the abstract base class for Heads-Up Display in the game&#39;s user interfaces.">HUD</a> class. </p>
+
+<p class="definition">Definition at line <a class="el" href="_h_u_d_8java_source.html#l00046">46</a> of file <a class="el" href="_h_u_d_8java_source.html">HUD.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   46</span>                {</div>
+<div class="line"><span class="lineno">   47</span>        <span class="comment">// Initialize confirmation status and reset key press flags.</span></div>
+<div class="line"><span class="lineno">   48</span>        <a class="code hl_variable" href="class_u_i_1_1_h_u_d.html#a1e5874ed325ff773543bfc51db70f5af">confirm</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   49</span>        Scene.keyH.interactPressed = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   50</span>        Scene.keyH.downPressed = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   51</span>        Scene.keyH.upPressed = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   52</span>        Scene.keyH.leftPressed = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   53</span>        Scene.keyH.rightPressed = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   54</span>    }</div>
+<div class="ttc" id="aclass_u_i_1_1_h_u_d_html_a1e5874ed325ff773543bfc51db70f5af"><div class="ttname"><a href="class_u_i_1_1_h_u_d.html#a1e5874ed325ff773543bfc51db70f5af">UI.HUD.confirm</a></div><div class="ttdeci">boolean confirm</div><div class="ttdoc">Flag indicating confirmation status in the HUD.</div><div class="ttdef"><b>Definition:</b> <a href="_h_u_d_8java_source.html#l00026">HUD.java:26</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5039f6b8d54a62926eabd210aeb1fea4" name="a5039f6b8d54a62926eabd210aeb1fea4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5039f6b8d54a62926eabd210aeb1fea4">&#9670;&nbsp;</a></span>changeSelectionColor()</h2>
+<a id="af1a376f1d7a53f60ddc82737289a35d8" name="af1a376f1d7a53f60ddc82737289a35d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1a376f1d7a53f60ddc82737289a35d8">&#9670;&nbsp;</a></span>changeSelectionColor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -177,13 +194,25 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">Color&#160;</td>
-          <td class="paramname"><em>baseColor</em>, </td>
+          <td class="paramname"><em>baseText</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">Color&#160;</td>
-          <td class="paramname"><em>selectColor</em>&#160;</td>
+          <td class="paramname"><em>newText</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Color&#160;</td>
+          <td class="paramname"><em>baseBg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Color&#160;</td>
+          <td class="paramname"><em>newBg</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -193,44 +222,59 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_h_u_d_8java_source.html#l00031">31</a> of file <a class="el" href="_h_u_d_8java_source.html">HUD.java</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   31</span>                                                                                            {</div>
-<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i =0; i&lt; <a class="code hl_variable" href="class_u_i_1_1_h_u_d.html#a2b2c87a34b30ab4ab62d4e58390b1560">_nbButtons</a>; i++){</div>
-<div class="line"><span class="lineno">   33</span>            <a class="code hl_variable" href="class_u_i_1_1_h_u_d.html#a89e962c43a04bc0bc065a74e6cd52720">_buttons</a>[i].<a class="code hl_function" href="class_u_i_1_1_choice_button.html#a72e2bde42a5a426ffa1686e4b724afa1">setTextColor</a>(baseColor);</div>
-<div class="line"><span class="lineno">   34</span>            <a class="code hl_variable" href="class_u_i_1_1_h_u_d.html#a89e962c43a04bc0bc065a74e6cd52720">_buttons</a>[i].<a class="code hl_variable" href="class_u_i_1_1_choice_button.html#a6a39521c631777e9d8063efcfaeae55c">highlighted</a> = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   35</span>        }</div>
-<div class="line"><span class="lineno">   36</span>        <a class="code hl_variable" href="class_u_i_1_1_h_u_d.html#a89e962c43a04bc0bc065a74e6cd52720">_buttons</a>[selectionIndex].<a class="code hl_function" href="class_u_i_1_1_choice_button.html#a72e2bde42a5a426ffa1686e4b724afa1">setTextColor</a>(selectColor);</div>
-<div class="line"><span class="lineno">   37</span>        <a class="code hl_variable" href="class_u_i_1_1_h_u_d.html#a89e962c43a04bc0bc065a74e6cd52720">_buttons</a>[selectionIndex].<a class="code hl_variable" href="class_u_i_1_1_choice_button.html#a6a39521c631777e9d8063efcfaeae55c">highlighted</a> = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">   38</span>    }</div>
-<div class="ttc" id="aclass_u_i_1_1_choice_button_html_a6a39521c631777e9d8063efcfaeae55c"><div class="ttname"><a href="class_u_i_1_1_choice_button.html#a6a39521c631777e9d8063efcfaeae55c">UI.ChoiceButton.highlighted</a></div><div class="ttdeci">boolean highlighted</div><div class="ttdef"><b>Definition:</b> <a href="_choice_button_8java_source.html#l00015">ChoiceButton.java:15</a></div></div>
-<div class="ttc" id="aclass_u_i_1_1_choice_button_html_a72e2bde42a5a426ffa1686e4b724afa1"><div class="ttname"><a href="class_u_i_1_1_choice_button.html#a72e2bde42a5a426ffa1686e4b724afa1">UI.ChoiceButton.setTextColor</a></div><div class="ttdeci">void setTextColor(Color newColor)</div><div class="ttdoc">Setter func to change a button's text color.</div><div class="ttdef"><b>Definition:</b> <a href="_choice_button_8java_source.html#l00029">ChoiceButton.java:29</a></div></div>
-<div class="ttc" id="aclass_u_i_1_1_h_u_d_html_a2b2c87a34b30ab4ab62d4e58390b1560"><div class="ttname"><a href="class_u_i_1_1_h_u_d.html#a2b2c87a34b30ab4ab62d4e58390b1560">UI.HUD._nbButtons</a></div><div class="ttdeci">int _nbButtons</div><div class="ttdef"><b>Definition:</b> <a href="_h_u_d_8java_source.html#l00014">HUD.java:14</a></div></div>
-<div class="ttc" id="aclass_u_i_1_1_h_u_d_html_a89e962c43a04bc0bc065a74e6cd52720"><div class="ttname"><a href="class_u_i_1_1_h_u_d.html#a89e962c43a04bc0bc065a74e6cd52720">UI.HUD._buttons</a></div><div class="ttdeci">ChoiceButton[] _buttons</div><div class="ttdef"><b>Definition:</b> <a href="_h_u_d_8java_source.html#l00015">HUD.java:15</a></div></div>
+<p>Changes the color of the selected button in the <a class="el" href="class_u_i_1_1_h_u_d.html" title="Represents the abstract base class for Heads-Up Display in the game&#39;s user interfaces.">HUD</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">selectionIndex</td><td>Index of the selected button. </td></tr>
+    <tr><td class="paramname">baseText</td><td>Base color for the text of unselected buttons. </td></tr>
+    <tr><td class="paramname">newText</td><td>New color for the text of the selected button. </td></tr>
+    <tr><td class="paramname">baseBg</td><td>Base color for the background of unselected buttons. </td></tr>
+    <tr><td class="paramname">newBg</td><td>New color for the background of the selected button. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_h_u_d_8java_source.html#l00064">64</a> of file <a class="el" href="_h_u_d_8java_source.html">HUD.java</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   64</span>                                                                                                                  {</div>
+<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="class_u_i_1_1_h_u_d.html#a2b2c87a34b30ab4ab62d4e58390b1560">_nbButtons</a>; i++){</div>
+<div class="line"><span class="lineno">   66</span>            <a class="code hl_variable" href="class_u_i_1_1_h_u_d.html#a89e962c43a04bc0bc065a74e6cd52720">_buttons</a>[i].<a class="code hl_function" href="class_u_i_1_1_choice_button.html#a72e2bde42a5a426ffa1686e4b724afa1">setTextColor</a>(baseText);</div>
+<div class="line"><span class="lineno">   67</span>            <a class="code hl_variable" href="class_u_i_1_1_h_u_d.html#a89e962c43a04bc0bc065a74e6cd52720">_buttons</a>[i].<a class="code hl_function" href="class_u_i_1_1_choice_button.html#a6cd72943d413641b20c66d680e6af03e">setBgColor</a>(baseBg);</div>
+<div class="line"><span class="lineno">   68</span>            <a class="code hl_variable" href="class_u_i_1_1_h_u_d.html#a89e962c43a04bc0bc065a74e6cd52720">_buttons</a>[i].<a class="code hl_variable" href="class_u_i_1_1_choice_button.html#a6a39521c631777e9d8063efcfaeae55c">highlighted</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   69</span>        }</div>
+<div class="line"><span class="lineno">   70</span>        <a class="code hl_variable" href="class_u_i_1_1_h_u_d.html#a89e962c43a04bc0bc065a74e6cd52720">_buttons</a>[selectionIndex].<a class="code hl_function" href="class_u_i_1_1_choice_button.html#a72e2bde42a5a426ffa1686e4b724afa1">setTextColor</a>(newText);</div>
+<div class="line"><span class="lineno">   71</span>        <a class="code hl_variable" href="class_u_i_1_1_h_u_d.html#a89e962c43a04bc0bc065a74e6cd52720">_buttons</a>[selectionIndex].<a class="code hl_function" href="class_u_i_1_1_choice_button.html#a6cd72943d413641b20c66d680e6af03e">setBgColor</a>(newBg);</div>
+<div class="line"><span class="lineno">   72</span>        <a class="code hl_variable" href="class_u_i_1_1_h_u_d.html#a89e962c43a04bc0bc065a74e6cd52720">_buttons</a>[selectionIndex].<a class="code hl_variable" href="class_u_i_1_1_choice_button.html#a6a39521c631777e9d8063efcfaeae55c">highlighted</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   73</span>    }</div>
+<div class="ttc" id="aclass_u_i_1_1_choice_button_html_a6a39521c631777e9d8063efcfaeae55c"><div class="ttname"><a href="class_u_i_1_1_choice_button.html#a6a39521c631777e9d8063efcfaeae55c">UI.ChoiceButton.highlighted</a></div><div class="ttdeci">boolean highlighted</div><div class="ttdoc">Flag indicating whether the button is highlighted.</div><div class="ttdef"><b>Definition:</b> <a href="_choice_button_8java_source.html#l00029">ChoiceButton.java:29</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_choice_button_html_a6cd72943d413641b20c66d680e6af03e"><div class="ttname"><a href="class_u_i_1_1_choice_button.html#a6cd72943d413641b20c66d680e6af03e">UI.ChoiceButton.setBgColor</a></div><div class="ttdeci">void setBgColor(Color newColor)</div><div class="ttdoc">Setter function to change the button's background color.</div><div class="ttdef"><b>Definition:</b> <a href="_choice_button_8java_source.html#l00073">ChoiceButton.java:73</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_choice_button_html_a72e2bde42a5a426ffa1686e4b724afa1"><div class="ttname"><a href="class_u_i_1_1_choice_button.html#a72e2bde42a5a426ffa1686e4b724afa1">UI.ChoiceButton.setTextColor</a></div><div class="ttdeci">void setTextColor(Color newColor)</div><div class="ttdoc">Setter function to change the button's text color.</div><div class="ttdef"><b>Definition:</b> <a href="_choice_button_8java_source.html#l00065">ChoiceButton.java:65</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_h_u_d_html_a2b2c87a34b30ab4ab62d4e58390b1560"><div class="ttname"><a href="class_u_i_1_1_h_u_d.html#a2b2c87a34b30ab4ab62d4e58390b1560">UI.HUD._nbButtons</a></div><div class="ttdeci">int _nbButtons</div><div class="ttdoc">Number of buttons in the HUD.</div><div class="ttdef"><b>Definition:</b> <a href="_h_u_d_8java_source.html#l00031">HUD.java:31</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_h_u_d_html_a89e962c43a04bc0bc065a74e6cd52720"><div class="ttname"><a href="class_u_i_1_1_h_u_d.html#a89e962c43a04bc0bc065a74e6cd52720">UI.HUD._buttons</a></div><div class="ttdeci">ChoiceButton[] _buttons</div><div class="ttdoc">Array of ChoiceButton objects representing buttons in the HUD.</div><div class="ttdef"><b>Definition:</b> <a href="_h_u_d_8java_source.html#l00036">HUD.java:36</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_u_i_1_1_h_u_d_a5039f6b8d54a62926eabd210aeb1fea4_cgraph.png" border="0" usemap="#aclass_u_i_1_1_h_u_d_a5039f6b8d54a62926eabd210aeb1fea4_cgraph" alt=""/></div>
-<map name="aclass_u_i_1_1_h_u_d_a5039f6b8d54a62926eabd210aeb1fea4_cgraph" id="aclass_u_i_1_1_h_u_d_a5039f6b8d54a62926eabd210aeb1fea4_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,220,32"/>
-<area shape="rect" href="class_u_i_1_1_choice_button.html#a72e2bde42a5a426ffa1686e4b724afa1" title="Setter func to change a button&#39;s text color." alt="" coords="268,5,480,32"/>
-<area shape="rect" href="class_u_i_1_1_textbox.html#a4725a8ec93796dcc1a2aa14ad16952f6" title="Setter func for a new font color of the current text." alt="" coords="528,5,677,32"/>
+<div class="center"><img src="class_u_i_1_1_h_u_d_af1a376f1d7a53f60ddc82737289a35d8_cgraph.png" border="0" usemap="#aclass_u_i_1_1_h_u_d_af1a376f1d7a53f60ddc82737289a35d8_cgraph" alt=""/></div>
+<map name="aclass_u_i_1_1_h_u_d_af1a376f1d7a53f60ddc82737289a35d8_cgraph" id="aclass_u_i_1_1_h_u_d_af1a376f1d7a53f60ddc82737289a35d8_cgraph">
+<area shape="rect" title="Changes the color of the selected button in the HUD." alt="" coords="5,31,220,57"/>
+<area shape="rect" href="class_u_i_1_1_choice_button.html#a6cd72943d413641b20c66d680e6af03e" title="Setter function to change the button&#39;s background color." alt="" coords="273,5,475,32"/>
+<area shape="rect" href="class_u_i_1_1_choice_button.html#a72e2bde42a5a426ffa1686e4b724afa1" title="Setter function to change the button&#39;s text color." alt="" coords="268,56,480,83"/>
+<area shape="rect" href="class_u_i_1_1_textbox.html#a4725a8ec93796dcc1a2aa14ad16952f6" title="Setter function for a new font color of the current text." alt="" coords="528,56,677,83"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_u_i_1_1_h_u_d_a5039f6b8d54a62926eabd210aeb1fea4_icgraph.png" border="0" usemap="#aclass_u_i_1_1_h_u_d_a5039f6b8d54a62926eabd210aeb1fea4_icgraph" alt=""/></div>
-<map name="aclass_u_i_1_1_h_u_d_a5039f6b8d54a62926eabd210aeb1fea4_icgraph" id="aclass_u_i_1_1_h_u_d_a5039f6b8d54a62926eabd210aeb1fea4_icgraph">
-<area shape="rect" title=" " alt="" coords="676,132,891,159"/>
-<area shape="rect" href="class_u_i_1_1_h_u_d___fight.html#a444cd5e7f43dd55149762e5738ba2cf7" title=" " alt="" coords="458,5,603,32"/>
-<area shape="rect" href="class_u_i_1_1_h_u_d___fight.html#ad430cdcd167a0f56c794138576a1130a" title=" " alt="" coords="439,56,622,83"/>
-<area shape="rect" href="class_u_i_1_1_h_u_d___pause.html#a1b2f7ebb698ec273744fd7404321305b" title=" " alt="" coords="433,107,628,133"/>
-<area shape="rect" href="class_u_i_1_1_h_u_d___fight.html#adf261e5266f353eba13c384f69ae723e" title="Update the HUD of the current fight the player is in." alt="" coords="451,157,610,184"/>
-<area shape="rect" href="classgame_1_1_fight_scene.html#a6f8060e45bcb70f13265bd6d3b2a52d5" title="Updates the fight scene." alt="" coords="203,183,385,209"/>
-<area shape="rect" href="class_u_i_1_1_h_u_d___pause.html#aec196ac720b763075dbea8841507d686" title=" " alt="" coords="449,259,613,285"/>
-<area shape="rect" href="classgame_1_1_fight_scene.html#a9525cb3d263680e8d808b3abde00e8d8" title="Draws the fight scene." alt="" coords="209,5,379,32"/>
-<area shape="rect" href="classgame_1_1_world.html#ac405787ac7b11c4ed39a5cd9250e398f" title="Draws the game world and its entities." alt="" coords="12,5,148,32"/>
-<area shape="rect" href="classgame_1_1_world.html#a05a7f2e7a65c2a3449efdaa0a87c49f5" title="Updates the game world based on the scene state." alt="" coords="5,183,155,209"/>
+<div class="center"><img src="class_u_i_1_1_h_u_d_af1a376f1d7a53f60ddc82737289a35d8_icgraph.png" border="0" usemap="#aclass_u_i_1_1_h_u_d_af1a376f1d7a53f60ddc82737289a35d8_icgraph" alt=""/></div>
+<map name="aclass_u_i_1_1_h_u_d_af1a376f1d7a53f60ddc82737289a35d8_icgraph" id="aclass_u_i_1_1_h_u_d_af1a376f1d7a53f60ddc82737289a35d8_icgraph">
+<area shape="rect" title="Changes the color of the selected button in the HUD." alt="" coords="676,144,891,171"/>
+<area shape="rect" href="class_u_i_1_1_h_u_d___fight.html#ad430cdcd167a0f56c794138576a1130a" title=" " alt="" coords="439,5,622,32"/>
+<area shape="rect" href="class_u_i_1_1_h_u_d___pause.html#a1b2f7ebb698ec273744fd7404321305b" title="Constructor for HUD_Pause class." alt="" coords="433,56,628,83"/>
+<area shape="rect" href="class_u_i_1_1_h_u_d___welcome.html#a105e327520a5d5c473b5fc889feb31c0" title="Constructor for HUD_Welcome class." alt="" coords="445,107,616,149"/>
+<area shape="rect" href="class_u_i_1_1_h_u_d___fight.html#adf261e5266f353eba13c384f69ae723e" title="Update the HUD of the current fight the player is in." alt="" coords="451,173,610,200"/>
+<area shape="rect" href="class_u_i_1_1_h_u_d___pause.html#aec196ac720b763075dbea8841507d686" title="Updates the pause menu based on user input." alt="" coords="449,224,613,251"/>
+<area shape="rect" href="class_u_i_1_1_h_u_d___welcome.html#ae8e93f747d3a375eae9ec820501b926c" title="Updates the welcome screen HUD." alt="" coords="437,275,624,301"/>
+<area shape="rect" href="classgame_1_1_fight_scene.html#a6f8060e45bcb70f13265bd6d3b2a52d5" title="Updates the fight scene." alt="" coords="203,173,385,200"/>
+<area shape="rect" href="classgame_1_1_world.html#a05a7f2e7a65c2a3449efdaa0a87c49f5" title="Updates the game world based on the scene state." alt="" coords="5,173,155,200"/>
 </map>
 </div>
 
@@ -260,16 +304,51 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Abstract method to draw the <a class="el" href="class_u_i_1_1_h_u_d.html" title="Represents the abstract base class for Heads-Up Display in the game&#39;s user interfaces.">HUD</a> on the screen. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g2</td><td>Graphics2D object for drawing. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Reimplemented in <a class="el" href="class_u_i_1_1_h_u_d___fight.html#a444cd5e7f43dd55149762e5738ba2cf7">UI.HUD_Fight</a>, <a class="el" href="class_u_i_1_1_h_u_d___pause.html#acb7e2c68e46c0188dac220ee1969e387">UI.HUD_Pause</a>, and <a class="el" href="class_u_i_1_1_h_u_d___welcome.html#af1953ece042c830a42fcb0a781d92094">UI.HUD_Welcome</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_u_i_1_1_h_u_d_acf73daced1b23ea24b73216f6a23f587_icgraph.png" border="0" usemap="#aclass_u_i_1_1_h_u_d_acf73daced1b23ea24b73216f6a23f587_icgraph" alt=""/></div>
 <map name="aclass_u_i_1_1_h_u_d_acf73daced1b23ea24b73216f6a23f587_icgraph" id="aclass_u_i_1_1_h_u_d_acf73daced1b23ea24b73216f6a23f587_icgraph">
-<area shape="rect" title=" " alt="" coords="189,5,296,32"/>
+<area shape="rect" title="Abstract method to draw the HUD on the screen." alt="" coords="189,5,296,32"/>
 <area shape="rect" href="classgame_1_1_world.html#ac405787ac7b11c4ed39a5cd9250e398f" title="Draws the game world and its entities." alt="" coords="5,5,141,32"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="ac1eebe40213bbdea3640023dcf98472d" name="ac1eebe40213bbdea3640023dcf98472d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1eebe40213bbdea3640023dcf98472d">&#9670;&nbsp;</a></span>selectClass()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract void UI.HUD.selectClass </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">abstract</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="class_u_i_1_1_h_u_d___fight.html#ad6a672dc08d21e717e2a20e925c2baaa">UI.HUD_Fight</a>, <a class="el" href="class_u_i_1_1_h_u_d___pause.html#a451c5d00adb97669cbf56e65100363be">UI.HUD_Pause</a>, and <a class="el" href="class_u_i_1_1_h_u_d___welcome.html#a01d4879c34dd5903100fd49327fb4605">UI.HUD_Welcome</a>.</p>
 
 </div>
 </div>
@@ -296,13 +375,15 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Abstract method to update the <a class="el" href="class_u_i_1_1_h_u_d.html" title="Represents the abstract base class for Heads-Up Display in the game&#39;s user interfaces.">HUD</a>. </p>
+
 <p>Reimplemented in <a class="el" href="class_u_i_1_1_h_u_d___fight.html#adf261e5266f353eba13c384f69ae723e">UI.HUD_Fight</a>, <a class="el" href="class_u_i_1_1_h_u_d___pause.html#aec196ac720b763075dbea8841507d686">UI.HUD_Pause</a>, and <a class="el" href="class_u_i_1_1_h_u_d___welcome.html#ae8e93f747d3a375eae9ec820501b926c">UI.HUD_Welcome</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_u_i_1_1_h_u_d_ad0c1abd2a8e1c763e8c508b4535cbe68_icgraph.png" border="0" usemap="#aclass_u_i_1_1_h_u_d_ad0c1abd2a8e1c763e8c508b4535cbe68_icgraph" alt=""/></div>
 <map name="aclass_u_i_1_1_h_u_d_ad0c1abd2a8e1c763e8c508b4535cbe68_icgraph" id="aclass_u_i_1_1_h_u_d_ad0c1abd2a8e1c763e8c508b4535cbe68_icgraph">
-<area shape="rect" title=" " alt="" coords="601,31,720,57"/>
+<area shape="rect" title="Abstract method to update the HUD." alt="" coords="601,31,720,57"/>
 <area shape="rect" href="classgame_1_1_scene.html#a23b3275854d4de945e1f8eba10f382a3" title="Updates the scene." alt="" coords="403,5,553,32"/>
 <area shape="rect" href="classgame_1_1_world.html#a05a7f2e7a65c2a3449efdaa0a87c49f5" title="Updates the game world based on the scene state." alt="" coords="403,56,553,83"/>
 <area shape="rect" href="classgame_1_1_window.html#a41cef38f9afc72fa1b4a1dfdc2bf9b92" title="Updates the game scene." alt="" coords="192,5,355,32"/>
@@ -333,7 +414,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_h_u_d_8java_source.html#l00015">15</a> of file <a class="el" href="_h_u_d_8java_source.html">HUD.java</a>.</p>
+<p>Array of <a class="el" href="class_u_i_1_1_choice_button.html" title="Represents a clickable button with associated text and appearance settings.">ChoiceButton</a> objects representing buttons in the <a class="el" href="class_u_i_1_1_h_u_d.html" title="Represents the abstract base class for Heads-Up Display in the game&#39;s user interfaces.">HUD</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="_h_u_d_8java_source.html#l00036">36</a> of file <a class="el" href="_h_u_d_8java_source.html">HUD.java</a>.</p>
 
 </div>
 </div>
@@ -357,7 +440,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_h_u_d_8java_source.html#l00014">14</a> of file <a class="el" href="_h_u_d_8java_source.html">HUD.java</a>.</p>
+<p>Number of buttons in the <a class="el" href="class_u_i_1_1_h_u_d.html" title="Represents the abstract base class for Heads-Up Display in the game&#39;s user interfaces.">HUD</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="_h_u_d_8java_source.html#l00031">31</a> of file <a class="el" href="_h_u_d_8java_source.html">HUD.java</a>.</p>
 
 </div>
 </div>
@@ -381,7 +466,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_h_u_d_8java_source.html#l00016">16</a> of file <a class="el" href="_h_u_d_8java_source.html">HUD.java</a>.</p>
+<p>Array of <a class="el" href="class_u_i_1_1_textbox.html" title="Represents a text box for displaying text on the screen, used for buttons or dialogues.">Textbox</a> objects representing text elements in the <a class="el" href="class_u_i_1_1_h_u_d.html" title="Represents the abstract base class for Heads-Up Display in the game&#39;s user interfaces.">HUD</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="_h_u_d_8java_source.html#l00041">41</a> of file <a class="el" href="_h_u_d_8java_source.html">HUD.java</a>.</p>
 
 </div>
 </div>
@@ -397,7 +484,9 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_h_u_d_8java_source.html#l00012">12</a> of file <a class="el" href="_h_u_d_8java_source.html">HUD.java</a>.</p>
+<p>Flag indicating confirmation status in the <a class="el" href="class_u_i_1_1_h_u_d.html" title="Represents the abstract base class for Heads-Up Display in the game&#39;s user interfaces.">HUD</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="_h_u_d_8java_source.html#l00026">26</a> of file <a class="el" href="_h_u_d_8java_source.html">HUD.java</a>.</p>
 
 </div>
 </div>
@@ -413,7 +502,9 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_h_u_d_8java_source.html#l00011">11</a> of file <a class="el" href="_h_u_d_8java_source.html">HUD.java</a>.</p>
+<p>Current selection in the <a class="el" href="class_u_i_1_1_h_u_d.html" title="Represents the abstract base class for Heads-Up Display in the game&#39;s user interfaces.">HUD</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="_h_u_d_8java_source.html#l00021">21</a> of file <a class="el" href="_h_u_d_8java_source.html">HUD.java</a>.</p>
 
 </div>
 </div>

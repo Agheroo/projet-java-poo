@@ -1,0 +1,8 @@
+<map id="entity.props.OBJ_Chest.playerInterraction" name="entity.props.OBJ_Chest.playerInterraction">
+<area shape="rect" id="node1" title=" " alt="" coords="5,23,220,65"/>
+<area shape="rect" id="node2" href="$classentity_1_1_player.html#a91613b74f81278a4bd845bef223b0b5f" title="Adds item to the virtual inventory of the player, if it&#39;s not a potion it will be directly converted ..." alt="" coords="294,5,454,32"/>
+<area shape="rect" id="node3" href="$classitem_1_1_generator.html#ac17e98c64dc79f381c465bf21b5409a0" title=" " alt="" coords="268,56,480,83"/>
+<area shape="rect" id="node4" href="$classitem_1_1_generator.html#a851f02e244a9b63f0bb0e508a9a4d40d" title=" " alt="" coords="534,5,757,32"/>
+<area shape="rect" id="node5" href="$classitem_1_1_generator.html#a6dfd2f13dbf175b05ba5a999650a1003" title=" " alt="" coords="534,56,757,83"/>
+<area shape="rect" id="node6" href="$classitem_1_1_generator.html#a997be8c512cda143c1b157628213ea91" title=" " alt="" coords="528,107,763,133"/>
+</map>

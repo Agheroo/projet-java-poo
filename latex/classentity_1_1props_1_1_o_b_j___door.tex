@@ -7,8 +7,7 @@ Represents a door object in the game.
 
 
 
-Inheritance diagram for entity.\+props.\+OBJ\+\_\+\+Door\+:
-\nopagebreak
+Inheritance diagram for entity.\+props.\+OBJ\+\_\+\+Door\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -17,8 +16,7 @@ Inheritance diagram for entity.\+props.\+OBJ\+\_\+\+Door\+:
 \end{figure}
 
 
-Collaboration diagram for entity.\+props.\+OBJ\+\_\+\+Door\+:
-\nopagebreak
+Collaboration diagram for entity.\+props.\+OBJ\+\_\+\+Door\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -38,7 +36,7 @@ void \mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___door_ab5d21b32a7d840c3385
 \doxysubsection{Detailed Description}
 Represents a door object in the game. 
 
-Definition at line \mbox{\hyperlink{_o_b_j___door_8java_source_l00016}{16}} of file \mbox{\hyperlink{_o_b_j___door_8java_source}{OBJ\+\_\+\+Door.\+java}}.
+Definition at line \mbox{\hyperlink{_o_b_j___door_8java_source_l00017}{17}} of file \mbox{\hyperlink{_o_b_j___door_8java_source}{OBJ\+\_\+\+Door.\+java}}.
 
 
 
@@ -55,20 +53,19 @@ Constructor for the \mbox{\hyperlink{classentity_1_1props_1_1_o_b_j___door}{OBJ\
 
 Initializes the name of the door and loads its image from a resource file. 
 
-Definition at line \mbox{\hyperlink{_o_b_j___door_8java_source_l00022}{22}} of file \mbox{\hyperlink{_o_b_j___door_8java_source}{OBJ\+\_\+\+Door.\+java}}.
+Definition at line \mbox{\hyperlink{_o_b_j___door_8java_source_l00023}{23}} of file \mbox{\hyperlink{_o_b_j___door_8java_source}{OBJ\+\_\+\+Door.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00022                                             \{}
-\DoxyCodeLine{00023         super(\mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}}, \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}},\textcolor{stringliteral}{"{}door"{}},2,0, \textcolor{keyword}{true});}
-\DoxyCodeLine{00024 }
-\DoxyCodeLine{00025         \mbox{\hyperlink{classentity_1_1props_1_1_props_a606e89d3bbe76b48434258901f3af6b3}{open}} = \textcolor{keyword}{false};}
-\DoxyCodeLine{00026         \mbox{\hyperlink{classentity_1_1props_1_1_props_ad9057ae1a190d0f140f579820860b176}{loadTextures}}(\textcolor{stringliteral}{"{}door"{}});}
-\DoxyCodeLine{00027     \}}
+\DoxyCodeLine{00023                                             \{}
+\DoxyCodeLine{00024         super(\mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}}, \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}},\textcolor{stringliteral}{"{}door"{}},2,0, \textcolor{keyword}{true});}
+\DoxyCodeLine{00025 }
+\DoxyCodeLine{00026         \mbox{\hyperlink{classentity_1_1props_1_1_props_a606e89d3bbe76b48434258901f3af6b3}{open}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{00027         \mbox{\hyperlink{classentity_1_1props_1_1_props_ad9057ae1a190d0f140f579820860b176}{loadTextures}}(\textcolor{stringliteral}{"{}door"{}});}
+\DoxyCodeLine{00028     \}}
 
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -90,21 +87,25 @@ Reimplemented from \mbox{\hyperlink{classentity_1_1_entity_ae874ae13e301bb9f2275
 
 
 
-Definition at line \mbox{\hyperlink{_o_b_j___door_8java_source_l00028}{28}} of file \mbox{\hyperlink{_o_b_j___door_8java_source}{OBJ\+\_\+\+Door.\+java}}.
+Definition at line \mbox{\hyperlink{_o_b_j___door_8java_source_l00029}{29}} of file \mbox{\hyperlink{_o_b_j___door_8java_source}{OBJ\+\_\+\+Door.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00028                                                   \{}
-\DoxyCodeLine{00029         \textcolor{keywordflow}{if}(player.hasKey > 0 \&\& \mbox{\hyperlink{classentity_1_1_entity_acd7f4b7c1acbdcd410ee9ad61a86b58e}{collision}} == \textcolor{keyword}{true})\{}
-\DoxyCodeLine{00030             }
-\DoxyCodeLine{00031             player.hasKey-\/-\/;}
-\DoxyCodeLine{00032             \mbox{\hyperlink{classentity_1_1_entity_acd7f4b7c1acbdcd410ee9ad61a86b58e}{collision}} = \textcolor{keyword}{false};}
-\DoxyCodeLine{00033             \mbox{\hyperlink{classentity_1_1props_1_1_props_a606e89d3bbe76b48434258901f3af6b3}{open}} = \textcolor{keyword}{true};}
-\DoxyCodeLine{00034         \}}
-\DoxyCodeLine{00035         \textcolor{keywordflow}{if}(player.hasKey == 0 \&\& \mbox{\hyperlink{classentity_1_1_entity_acd7f4b7c1acbdcd410ee9ad61a86b58e}{collision}} == \textcolor{keyword}{true})\{}
-\DoxyCodeLine{00036             System.out.println(\textcolor{stringliteral}{"{}Key missing !"{}});}
-\DoxyCodeLine{00037         \}}
-\DoxyCodeLine{00038     \}}
+\DoxyCodeLine{00029                                                   \{}
+\DoxyCodeLine{00030         \textcolor{keywordflow}{if}(Scene.keyH.interactPressed)\{}
+\DoxyCodeLine{00031             Scene.keyH.interactPressed = \textcolor{keyword}{false};}
+\DoxyCodeLine{00032 }
+\DoxyCodeLine{00033             \textcolor{keywordflow}{if}(player.hasKey > 0 \&\& \mbox{\hyperlink{classentity_1_1_entity_acd7f4b7c1acbdcd410ee9ad61a86b58e}{collision}} == \textcolor{keyword}{true})\{}
+\DoxyCodeLine{00034             }
+\DoxyCodeLine{00035                 player.hasKey-\/-\/;}
+\DoxyCodeLine{00036                 \mbox{\hyperlink{classentity_1_1_entity_acd7f4b7c1acbdcd410ee9ad61a86b58e}{collision}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{00037                 \mbox{\hyperlink{classentity_1_1props_1_1_props_a606e89d3bbe76b48434258901f3af6b3}{open}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{00038             \}}
+\DoxyCodeLine{00039             \textcolor{keywordflow}{if}(player.hasKey == 0 \&\& \mbox{\hyperlink{classentity_1_1_entity_acd7f4b7c1acbdcd410ee9ad61a86b58e}{collision}} == \textcolor{keyword}{true})\{}
+\DoxyCodeLine{00040                 System.out.println(\textcolor{stringliteral}{"{}Key missing !"{}});}
+\DoxyCodeLine{00041             \}}
+\DoxyCodeLine{00042         \}    }
+\DoxyCodeLine{00043     \}}
 
 \end{DoxyCode}
 
