@@ -192,21 +192,29 @@ public abstract class Character extends Entity {
     protected void loadTextures(String name) {
         try {
             for (int i = 0; i < _spriteCntMax; i++) {
-                _idle_up[i] = ImageIO.read(new FileInputStream("res/entity/character/idle/" + name + "/up" + (i + 1) + ".png"));
-                _idle_down[i] = ImageIO.read(new FileInputStream("res/entity/character/idle/" + name + "/down" + (i + 1) + ".png"));
-                _idle_left[i] = ImageIO.read(new FileInputStream("res/entity/character/idle/" + name + "/left" + (i + 1) + ".png"));
-                _idle_right[i] = ImageIO.read(new FileInputStream("res/entity/character/idle/" + name + "/right" + (i + 1) + ".png"));
+                _idle_up[i] = ImageIO.read(getClass().getClassLoader()
+                        .getResourceAsStream("entity/character/idle/" + name + "/up" + (i + 1) + ".png"));
+                _idle_down[i] = ImageIO.read(getClass().getClassLoader()
+                        .getResourceAsStream("entity/character/idle/" + name + "/down" + (i + 1) + ".png"));
+                _idle_left[i] = ImageIO.read(getClass().getClassLoader()
+                        .getResourceAsStream("entity/character/idle/" + name + "/left" + (i + 1) + ".png"));
+                _idle_right[i] = ImageIO.read(getClass().getClassLoader()
+                        .getResourceAsStream("entity/character/idle/" + name + "/right" + (i + 1) + ".png"));
 
-                _walk_up[i] = ImageIO.read(new FileInputStream("res/entity/character/walk/" + name + "/up" + (i + 1) + ".png"));
-                _walk_down[i] = ImageIO.read(new FileInputStream("res/entity/character/walk/" + name + "/down" + (i + 1) + ".png"));
-                _walk_left[i] = ImageIO.read(new FileInputStream("res/entity/character/walk/" + name + "/left" + (i + 1) + ".png"));
-                _walk_right[i] = ImageIO.read(new FileInputStream("res/entity/character/walk/" + name + "/right" + (i + 1) + ".png"));
+                _walk_up[i] = ImageIO.read(getClass().getClassLoader()
+                        .getResourceAsStream("entity/character/walk/" + name + "/up" + (i + 1) + ".png"));
+                _walk_down[i] = ImageIO.read(getClass().getClassLoader()
+                        .getResourceAsStream("entity/character/walk/" + name + "/down" + (i + 1) + ".png"));
+                _walk_left[i] = ImageIO.read(getClass().getClassLoader()
+                        .getResourceAsStream("entity/character/walk/" + name + "/left" + (i + 1) + ".png"));
+                _walk_right[i] = ImageIO.read(getClass().getClassLoader()
+                        .getResourceAsStream("entity/character/walk/" + name + "/right" + (i + 1) + ".png"));
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
 
 
     /**
@@ -253,7 +261,7 @@ public abstract class Character extends Entity {
                 }
             }
         }
-        
+
 
         int playerScreenX = (Const.WDW_width - Const.WRLD_entityScreenSize) / 2;
         int playerScreenY = (Const.WDW_height - Const.WRLD_entityScreenSize) / 2;
@@ -263,7 +271,7 @@ public abstract class Character extends Entity {
         && worldX - Const.WRLD_tileScreenSize < worldX + playerScreenX
         && worldY + Const.WRLD_tileScreenSize > worldY - playerScreenY
         && worldY - Const.WRLD_tileScreenSize < worldY + playerScreenY) {
-                        
+
             g2.drawImage(image, screenX, screenY, Const.WRLD_entityScreenSize, Const.WRLD_entityScreenSize, null);
             //g2.drawRect(screenX + hitbox.width / 2, screenY + hitbox.height, hitbox.width, hitbox.height); //hitbox debug purposes
         }

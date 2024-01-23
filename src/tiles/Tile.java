@@ -120,15 +120,18 @@ public class Tile {
         try {
             if (animated) {
                 for (int j = 0; j < spriteCntMax; j++) {
-                    image[j] = ImageIO.read(new FileInputStream("res/tiles/animated/" + name + "/" + name + (j + 1) + ".png"));
+                    image[j] = ImageIO.read(getClass().getClassLoader()
+                            .getResourceAsStream("tiles/animated/" + name + "/" + name + (j + 1) + ".png"));
                 }
             } else {
-                image[0] = ImageIO.read(new FileInputStream("res/tiles/static/" + name + "/" + name + (i + 1) + ".png"));
+                image[0] = ImageIO.read(getClass().getClassLoader()
+                        .getResourceAsStream("tiles/static/" + name + "/" + name + (i + 1) + ".png"));
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
 
     /**
      * Update the sprite frames for the tile.

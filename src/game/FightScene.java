@@ -37,18 +37,20 @@ public class FightScene {
      * @param enemy The enemy entity in the fight.
      */
     public FightScene(Player player, Enemy enemy) {
-        try{
-            bg = ImageIO.read(new FileInputStream("res/hud/fightscene.png"));
+        try {
+            bg = ImageIO.read(getClass().getClassLoader().getResourceAsStream("hud/fightscene.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }
+
         this.player = player;
         this.enemy = enemy;
 
         state = Const.FightState.FIGHTING;
-        menu = new HUD_Fight(player,enemy);
+        menu = new HUD_Fight(player, enemy);
         menu.selection = Const.Selection.ATTACK;
     }
+
 
     /**
      * @brief Updates the fight scene.

@@ -308,16 +308,21 @@ public class HUD_Welcome extends HUD {
     /**
      * @brief Function used to load the images of the different characters' classes
      */
-    private void loadImages(){
-        try{
-            bg = ImageIO.read(new FileInputStream("res/hud/welcome.png"));
-            for(int i=0;i<Const.nbSpriteCharacterAnim;i++){
-                charactersDisplayed[0][i] = ImageIO.read(new FileInputStream("res/entity/character/idle/warrior/down"+(i+1)+".png"));
-                charactersDisplayed[1][i] = ImageIO.read(new FileInputStream("res/entity/character/idle/mage/down"+(i+1)+".png"));
-                charactersDisplayed[2][i] = ImageIO.read(new FileInputStream("res/entity/character/idle/rogue/down"+(i+1)+".png"));
+    private void loadImages() {
+        try {
+            bg = ImageIO.read(getClass().getClassLoader().getResourceAsStream("hud/welcome.png"));
+
+            for (int i = 0; i < Const.nbSpriteCharacterAnim; i++) {
+                charactersDisplayed[0][i] = ImageIO.read(getClass().getClassLoader()
+                        .getResourceAsStream("entity/character/idle/warrior/down" + (i + 1) + ".png"));
+                charactersDisplayed[1][i] = ImageIO.read(getClass().getClassLoader()
+                        .getResourceAsStream("entity/character/idle/mage/down" + (i + 1) + ".png"));
+                charactersDisplayed[2][i] = ImageIO.read(getClass().getClassLoader()
+                        .getResourceAsStream("entity/character/idle/rogue/down" + (i + 1) + ".png"));
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
 }
