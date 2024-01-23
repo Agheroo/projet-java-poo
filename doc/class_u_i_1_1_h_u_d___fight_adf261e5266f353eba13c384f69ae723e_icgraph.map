@@ -1,5 +1,0 @@
-<map id="UI.HUD_Fight.update" name="UI.HUD_Fight.update">
-<area shape="rect" id="node1" title="Update the HUD of the current fight the player is in." alt="" coords="433,5,592,32"/>
-<area shape="rect" id="node2" href="$classgame_1_1_fight_scene.html#a6f8060e45bcb70f13265bd6d3b2a52d5" title="Updates the fight scene." alt="" coords="203,5,385,32"/>
-<area shape="rect" id="node3" href="$classgame_1_1_world.html#a05a7f2e7a65c2a3449efdaa0a87c49f5" title="Updates the game world based on the scene state." alt="" coords="5,5,155,32"/>
-</map>

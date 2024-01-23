@@ -1,7 +1,0 @@
-<map id="UI.HUD_Fight.HUD_Fight" name="UI.HUD_Fight.HUD_Fight">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,188,57"/>
-<area shape="rect" id="node2" href="$class_u_i_1_1_h_u_d.html#af1a376f1d7a53f60ddc82737289a35d8" title="Changes the color of the selected button in the HUD." alt="" coords="236,31,451,57"/>
-<area shape="rect" id="node3" href="$class_u_i_1_1_choice_button.html#a6cd72943d413641b20c66d680e6af03e" title="Setter function to change the button&#39;s background color." alt="" coords="503,5,706,32"/>
-<area shape="rect" id="node4" href="$class_u_i_1_1_choice_button.html#a72e2bde42a5a426ffa1686e4b724afa1" title="Setter function to change the button&#39;s text color." alt="" coords="499,56,711,83"/>
-<area shape="rect" id="node5" href="$class_u_i_1_1_textbox.html#a4725a8ec93796dcc1a2aa14ad16952f6" title="Setter function for a new font color of the current text." alt="" coords="759,56,908,83"/>
-</map>

@@ -156,11 +156,7 @@ public class Player extends Character {
     public void pickUpObject(Point index) {
         if (index != null) {
             Entity object = World.objMap.get(index);
-            if(Scene.keyH.interactPressed){
-                object.playerInterraction(this);
-                Scene.keyH.interactPressed = false;
-            }   
-            
+            object.playerInterraction(this);
         }
     }
 
@@ -192,7 +188,9 @@ public class Player extends Character {
         }
         g2.drawImage(image,screenX,screenY,Const.FGHT_entityScreenSize,Const.FGHT_entityScreenSize,null);
     }
-
+    public void levelUp(){
+        //Nothing 
+    }
     public void playerInterraction(Player player) {
         //Nothing
     }

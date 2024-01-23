@@ -94,16 +94,16 @@ Collaboration diagram for game.Scene:</div>
 <div class="center"><img src="classgame_1_1_scene__coll__graph.png" border="0" usemap="#agame_8_scene_coll__map" alt="Collaboration graph"/></div>
 <map name="agame_8_scene_coll__map" id="agame_8_scene_coll__map">
 <area shape="rect" title="Represents an abstract scene in the game." alt="" coords="156,917,319,1039"/>
-<area shape="rect" href="enumgame_1_1_const_1_1_state.html" title=" " alt="" coords="5,660,144,811"/>
+<area shape="rect" href="enumgame_1_1_const_1_1_state.html" title=" " alt="" coords="5,675,144,796"/>
 <area shape="rect" href="classmain_1_1_key_handler.html" title="Handles keyboard input using the singleton pattern." alt="" coords="168,631,307,840"/>
-<area shape="rect" title=" " alt="" coords="188,439,287,517"/>
-<area shape="rect" href="class_u_i_1_1_h_u_d.html" title="Represents the abstract base class for Heads&#45;Up Display in the game&#39;s user interfaces." alt="" coords="426,660,614,811"/>
-<area shape="rect" href="enumgame_1_1_const_1_1_selection.html" title=" " alt="" coords="611,388,775,568"/>
-<area shape="rect" href="class_u_i_1_1_choice_button.html" title="Represents a clickable button with associated text and appearance settings." alt="" coords="453,403,587,553"/>
-<area shape="rect" href="class_u_i_1_1_textbox.html" title="Represents a text box for displaying text on the screen, used for buttons or dialogues." alt="" coords="312,145,443,325"/>
-<area shape="rect" title=" " alt="" coords="267,5,328,83"/>
-<area shape="rect" title=" " alt="" coords="459,5,515,83"/>
-<area shape="rect" title=" " alt="" coords="352,5,403,83"/>
+<area shape="rect" title=" " alt="" coords="187,439,285,517"/>
+<area shape="rect" href="class_u_i_1_1_h_u_d.html" title=" " alt="" coords="427,667,615,803"/>
+<area shape="rect" href="enumgame_1_1_const_1_1_selection.html" title=" " alt="" coords="310,388,474,568"/>
+<area shape="rect" href="class_u_i_1_1_choice_button.html" title=" " alt="" coords="603,410,738,546"/>
+<area shape="rect" href="class_u_i_1_1_textbox.html" title=" " alt="" coords="479,145,609,325"/>
+<area shape="rect" title=" " alt="" coords="431,5,492,83"/>
+<area shape="rect" title=" " alt="" coords="516,5,572,83"/>
+<area shape="rect" title=" " alt="" coords="599,5,649,83"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -186,22 +186,22 @@ Static Protected Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   71</span>                <a class="code hl_variable" href="classgame_1_1_scene.html#abfeaf3d13d7ff744014bcad7f4790501">menu</a> = <span class="keyword">null</span>;</div>
 <div class="line"><span class="lineno">   72</span>            }</div>
 <div class="line"><span class="lineno">   73</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_variable" href="classgame_1_1_scene.html#abfeaf3d13d7ff744014bcad7f4790501">menu</a>.<a class="code hl_variable" href="class_u_i_1_1_h_u_d.html#a1e5874ed325ff773543bfc51db70f5af">confirm</a> &amp;&amp; <a class="code hl_variable" href="classgame_1_1_scene.html#abfeaf3d13d7ff744014bcad7f4790501">menu</a>.<a class="code hl_variable" href="class_u_i_1_1_h_u_d.html#aa088352b4906398c1b83fa6e8e4d143a">selection</a> == Const.Selection.<a class="code hl_variable" href="enumgame_1_1_const_1_1_selection.html#a53966c015bfb66719308f4ad9c817e2f">QUIT</a>){        <span class="comment">//Destroy window and close game if quit is selected</span></div>
-<div class="line"><span class="lineno">   74</span>                menu.confirm = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   75</span>                System.exit(0);</div>
+<div class="line"><span class="lineno">   74</span>                System.out.println(<span class="stringliteral">&quot;Détruire la fenêtre&quot;</span>);</div>
+<div class="line"><span class="lineno">   75</span>                menu.confirm = <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">   76</span>            }</div>
 <div class="line"><span class="lineno">   77</span>            keyH.interactPressed = <span class="keyword">false</span>;</div>
 <div class="line"><span class="lineno">   78</span>        }        </div>
 <div class="line"><span class="lineno">   79</span>    }</div>
-<div class="ttc" id="aclass_u_i_1_1_h_u_d_html_a1e5874ed325ff773543bfc51db70f5af"><div class="ttname"><a href="class_u_i_1_1_h_u_d.html#a1e5874ed325ff773543bfc51db70f5af">UI.HUD.confirm</a></div><div class="ttdeci">boolean confirm</div><div class="ttdoc">Flag indicating confirmation status in the HUD.</div><div class="ttdef"><b>Definition:</b> <a href="_h_u_d_8java_source.html#l00026">HUD.java:26</a></div></div>
-<div class="ttc" id="aclass_u_i_1_1_h_u_d_html_aa088352b4906398c1b83fa6e8e4d143a"><div class="ttname"><a href="class_u_i_1_1_h_u_d.html#aa088352b4906398c1b83fa6e8e4d143a">UI.HUD.selection</a></div><div class="ttdeci">Selection selection</div><div class="ttdoc">Current selection in the HUD.</div><div class="ttdef"><b>Definition:</b> <a href="_h_u_d_8java_source.html#l00021">HUD.java:21</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_h_u_d_html_a1e5874ed325ff773543bfc51db70f5af"><div class="ttname"><a href="class_u_i_1_1_h_u_d.html#a1e5874ed325ff773543bfc51db70f5af">UI.HUD.confirm</a></div><div class="ttdeci">boolean confirm</div><div class="ttdef"><b>Definition:</b> <a href="_h_u_d_8java_source.html#l00012">HUD.java:12</a></div></div>
+<div class="ttc" id="aclass_u_i_1_1_h_u_d_html_aa088352b4906398c1b83fa6e8e4d143a"><div class="ttname"><a href="class_u_i_1_1_h_u_d.html#aa088352b4906398c1b83fa6e8e4d143a">UI.HUD.selection</a></div><div class="ttdeci">Selection selection</div><div class="ttdef"><b>Definition:</b> <a href="_h_u_d_8java_source.html#l00011">HUD.java:11</a></div></div>
 <div class="ttc" id="aclassgame_1_1_scene_html_a2bbc8cb5064aaa5cc1ed0ec8950f4a58"><div class="ttname"><a href="classgame_1_1_scene.html#a2bbc8cb5064aaa5cc1ed0ec8950f4a58">game.Scene.keyH</a></div><div class="ttdeci">static KeyHandler keyH</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8java_source.html#l00023">Scene.java:23</a></div></div>
 <div class="ttc" id="aclassgame_1_1_scene_html_a5a655ea3a2cb807d505ca4d144abc692"><div class="ttname"><a href="classgame_1_1_scene.html#a5a655ea3a2cb807d505ca4d144abc692">game.Scene.lastState</a></div><div class="ttdeci">static State lastState</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8java_source.html#l00021">Scene.java:21</a></div></div>
 <div class="ttc" id="aclassgame_1_1_scene_html_abfeaf3d13d7ff744014bcad7f4790501"><div class="ttname"><a href="classgame_1_1_scene.html#abfeaf3d13d7ff744014bcad7f4790501">game.Scene.menu</a></div><div class="ttdeci">HUD menu</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8java_source.html#l00026">Scene.java:26</a></div></div>
 <div class="ttc" id="aclassgame_1_1_scene_html_afa46982ec00ac703190b0642d8a3c4be"><div class="ttname"><a href="classgame_1_1_scene.html#afa46982ec00ac703190b0642d8a3c4be">game.Scene.state</a></div><div class="ttdeci">static State state</div><div class="ttdef"><b>Definition:</b> <a href="_scene_8java_source.html#l00025">Scene.java:25</a></div></div>
 <div class="ttc" id="aclassmain_1_1_key_handler_html_a8695999bf8fc25d2928ff04bfa228e48"><div class="ttname"><a href="classmain_1_1_key_handler.html#a8695999bf8fc25d2928ff04bfa228e48">main.KeyHandler.escPressed</a></div><div class="ttdeci">boolean escPressed</div><div class="ttdef"><b>Definition:</b> <a href="_key_handler_8java_source.html#l00020">KeyHandler.java:20</a></div></div>
-<div class="ttc" id="aenumgame_1_1_const_1_1_selection_html_a53966c015bfb66719308f4ad9c817e2f"><div class="ttname"><a href="enumgame_1_1_const_1_1_selection.html#a53966c015bfb66719308f4ad9c817e2f">game.Const.Selection.QUIT</a></div><div class="ttdeci">QUIT</div><div class="ttdef"><b>Definition:</b> <a href="_const_8java_source.html#l00008">Const.java:8</a></div></div>
-<div class="ttc" id="aenumgame_1_1_const_1_1_selection_html_a8e73ccc9ff787d59189d4351b238e24e"><div class="ttname"><a href="enumgame_1_1_const_1_1_selection.html#a8e73ccc9ff787d59189d4351b238e24e">game.Const.Selection.CONTINUE</a></div><div class="ttdeci">CONTINUE</div><div class="ttdef"><b>Definition:</b> <a href="_const_8java_source.html#l00008">Const.java:8</a></div></div>
-<div class="ttc" id="aenumgame_1_1_const_1_1_state_html_a886fb9817b5e29b31cc871645e17ddee"><div class="ttname"><a href="enumgame_1_1_const_1_1_state.html#a886fb9817b5e29b31cc871645e17ddee">game.Const.State.PAUSE</a></div><div class="ttdeci">PAUSE</div><div class="ttdef"><b>Definition:</b> <a href="_const_8java_source.html#l00006">Const.java:6</a></div></div>
+<div class="ttc" id="aenumgame_1_1_const_1_1_selection_html_a53966c015bfb66719308f4ad9c817e2f"><div class="ttname"><a href="enumgame_1_1_const_1_1_selection.html#a53966c015bfb66719308f4ad9c817e2f">game.Const.Selection.QUIT</a></div><div class="ttdeci">QUIT</div><div class="ttdef"><b>Definition:</b> <a href="_const_8java_source.html#l00007">Const.java:7</a></div></div>
+<div class="ttc" id="aenumgame_1_1_const_1_1_selection_html_a8e73ccc9ff787d59189d4351b238e24e"><div class="ttname"><a href="enumgame_1_1_const_1_1_selection.html#a8e73ccc9ff787d59189d4351b238e24e">game.Const.Selection.CONTINUE</a></div><div class="ttdeci">CONTINUE</div><div class="ttdef"><b>Definition:</b> <a href="_const_8java_source.html#l00007">Const.java:7</a></div></div>
+<div class="ttc" id="aenumgame_1_1_const_1_1_state_html_a886fb9817b5e29b31cc871645e17ddee"><div class="ttname"><a href="enumgame_1_1_const_1_1_state.html#a886fb9817b5e29b31cc871645e17ddee">game.Const.State.PAUSE</a></div><div class="ttdeci">PAUSE</div><div class="ttdef"><b>Definition:</b> <a href="_const_8java_source.html#l00005">Const.java:5</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -333,14 +333,14 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">   33</span>            <a class="code hl_variable" href="classgame_1_1_scene.html#abfeaf3d13d7ff744014bcad7f4790501">menu</a>.<a class="code hl_function" href="class_u_i_1_1_h_u_d.html#ad0c1abd2a8e1c763e8c508b4535cbe68">update</a>();</div>
 <div class="line"><span class="lineno">   34</span>        }</div>
 <div class="line"><span class="lineno">   35</span>    }</div>
-<div class="ttc" id="aclass_u_i_1_1_h_u_d_html_ad0c1abd2a8e1c763e8c508b4535cbe68"><div class="ttname"><a href="class_u_i_1_1_h_u_d.html#ad0c1abd2a8e1c763e8c508b4535cbe68">UI.HUD.update</a></div><div class="ttdeci">abstract void update()</div><div class="ttdoc">Abstract method to update the HUD.</div></div>
+<div class="ttc" id="aclass_u_i_1_1_h_u_d_html_ad0c1abd2a8e1c763e8c508b4535cbe68"><div class="ttname"><a href="class_u_i_1_1_h_u_d.html#ad0c1abd2a8e1c763e8c508b4535cbe68">UI.HUD.update</a></div><div class="ttdeci">abstract void update()</div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classgame_1_1_scene_a23b3275854d4de945e1f8eba10f382a3_cgraph.png" border="0" usemap="#aclassgame_1_1_scene_a23b3275854d4de945e1f8eba10f382a3_cgraph" alt=""/></div>
 <map name="aclassgame_1_1_scene_a23b3275854d4de945e1f8eba10f382a3_cgraph" id="aclassgame_1_1_scene_a23b3275854d4de945e1f8eba10f382a3_cgraph">
 <area shape="rect" title="Updates the scene." alt="" coords="5,5,156,32"/>
-<area shape="rect" href="class_u_i_1_1_h_u_d.html#ad0c1abd2a8e1c763e8c508b4535cbe68" title="Abstract method to update the HUD." alt="" coords="204,5,323,32"/>
+<area shape="rect" href="class_u_i_1_1_h_u_d.html#ad0c1abd2a8e1c763e8c508b4535cbe68" title=" " alt="" coords="204,5,323,32"/>
 </map>
 </div>
 <div class="dynheader">

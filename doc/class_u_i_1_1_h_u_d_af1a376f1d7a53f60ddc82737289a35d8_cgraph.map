@@ -1,6 +1,0 @@
-<map id="UI.HUD.changeSelectionColor" name="UI.HUD.changeSelectionColor">
-<area shape="rect" id="node1" title="Changes the color of the selected button in the HUD." alt="" coords="5,31,220,57"/>
-<area shape="rect" id="node2" href="$class_u_i_1_1_choice_button.html#a6cd72943d413641b20c66d680e6af03e" title="Setter function to change the button&#39;s background color." alt="" coords="273,5,475,32"/>
-<area shape="rect" id="node3" href="$class_u_i_1_1_choice_button.html#a72e2bde42a5a426ffa1686e4b724afa1" title="Setter function to change the button&#39;s text color." alt="" coords="268,56,480,83"/>
-<area shape="rect" id="node4" href="$class_u_i_1_1_textbox.html#a4725a8ec93796dcc1a2aa14ad16952f6" title="Setter function for a new font color of the current text." alt="" coords="528,56,677,83"/>
-</map>

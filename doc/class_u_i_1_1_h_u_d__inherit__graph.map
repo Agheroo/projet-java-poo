@@ -1,6 +1,0 @@
-<map id="UI.HUD" name="UI.HUD">
-<area shape="rect" id="node1" title="Represents the abstract base class for Heads&#45;Up Display in the game&#39;s user interfaces." alt="" coords="135,5,323,200"/>
-<area shape="rect" id="node2" href="$class_u_i_1_1_h_u_d___fight.html" title=" " alt="" coords="5,263,144,443"/>
-<area shape="rect" id="node3" href="$class_u_i_1_1_h_u_d___pause.html" title="Represents the pause menu HUD class, extending the abstract HUD class." alt="" coords="168,292,291,413"/>
-<area shape="rect" id="node4" href="$class_u_i_1_1_h_u_d___welcome.html" title="Represents the welcome screen HUD class, extending the abstract HUD class." alt="" coords="315,248,479,457"/>
-</map>

@@ -1,7 +1,6 @@
 <map id="UI.Textbox.loadFont" name="UI.Textbox.loadFont">
-<area shape="rect" id="node1" title="Static method to load a custom font." alt="" coords="437,56,588,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="437,31,588,57"/>
 <area shape="rect" id="node2" href="$classgame_1_1_world.html#a0e40ca86573cf45d858cc8e529865649" title="Gets the instance of the World." alt="" coords="227,31,389,57"/>
-<area shape="rect" id="node5" href="$class_u_i_1_1_textbox.html#a11acae0a6446e83c4bcff70bdba42a89" title="Constructor for Textbox class." alt="" coords="235,81,381,108"/>
 <area shape="rect" id="node3" href="$classentity_1_1_character.html#a0beaf70a50b785c4c4c38b9566593206" title="Updates the character entity based on the current scene and time elapsed." alt="" coords="5,5,179,32"/>
 <area shape="rect" id="node4" href="$classgame_1_1_window.html#a98e156c2148852f07cf8eef903d4b175" title="Constructor for the Window class." alt="" coords="7,56,177,83"/>
 </map>

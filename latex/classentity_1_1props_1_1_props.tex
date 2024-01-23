@@ -7,7 +7,8 @@ Represents in-\/game props with properties such as image, name, and position.
 
 
 
-Inheritance diagram for entity.\+props.\+Props\+:\nopagebreak
+Inheritance diagram for entity.\+props.\+Props\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,7 +17,8 @@ Inheritance diagram for entity.\+props.\+Props\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for entity.\+props.\+Props\+:\nopagebreak
+Collaboration diagram for entity.\+props.\+Props\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -180,7 +182,8 @@ Definition at line \mbox{\hyperlink{_props_8java_source_l00106}{106}} of file \m
 \DoxyCodeLine{00109     \}}
 
 \end{DoxyCode}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -216,14 +219,14 @@ Definition at line \mbox{\hyperlink{_props_8java_source_l00116}{116}} of file \m
 \DoxyCodeLine{00119         \textcolor{keywordtype}{int} playerScreenY = (Const.WDW\_height -\/ Const.WRLD\_entityScreenSize) / 2;}
 \DoxyCodeLine{00120 }
 \DoxyCodeLine{00121         \textcolor{comment}{// Calculate the screen position of the prop relative to the player's position}}
-\DoxyCodeLine{00122         \textcolor{keywordtype}{int} screenX = \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} -\/ World.player.worldX + playerScreenX;}
-\DoxyCodeLine{00123         \textcolor{keywordtype}{int} screenY = \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} -\/ World.player.worldY + playerScreenY;}
+\DoxyCodeLine{00122         \textcolor{keywordtype}{int} screenX = \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} -\/ world.player.worldX + playerScreenX;}
+\DoxyCodeLine{00123         \textcolor{keywordtype}{int} screenY = \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} -\/ world.player.worldY + playerScreenY;}
 \DoxyCodeLine{00124 }
 \DoxyCodeLine{00125         \textcolor{comment}{// Check if the prop is within the visible screen region around the player}}
-\DoxyCodeLine{00126         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} + Const.WRLD\_tileScreenSize > World.player.worldX -\/ playerScreenX}
-\DoxyCodeLine{00127         \&\& \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} -\/ Const.WRLD\_tileScreenSize < World.player.worldX + playerScreenX}
-\DoxyCodeLine{00128         \&\& \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} + Const.WRLD\_tileScreenSize > World.player.worldY -\/ playerScreenY}
-\DoxyCodeLine{00129         \&\& \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} -\/ Const.WRLD\_tileScreenSize < World.player.worldY + playerScreenY) \{}
+\DoxyCodeLine{00126         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} + Const.WRLD\_tileScreenSize > world.player.worldX -\/ playerScreenX}
+\DoxyCodeLine{00127         \&\& \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} -\/ Const.WRLD\_tileScreenSize < world.player.worldX + playerScreenX}
+\DoxyCodeLine{00128         \&\& \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} + Const.WRLD\_tileScreenSize > world.player.worldY -\/ playerScreenY}
+\DoxyCodeLine{00129         \&\& \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} -\/ Const.WRLD\_tileScreenSize < world.player.worldY + playerScreenY) \{}
 \DoxyCodeLine{00130             }
 \DoxyCodeLine{00131             \textcolor{comment}{// Draw the prop on the screen}}
 \DoxyCodeLine{00132             \textcolor{keywordflow}{if}(\mbox{\hyperlink{classentity_1_1props_1_1_props_a606e89d3bbe76b48434258901f3af6b3}{open}})\{ \textcolor{comment}{//For some props like chests or doors the images[1] is the "{}open"{} one}}

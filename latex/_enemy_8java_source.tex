@@ -43,26 +43,26 @@
 \DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00074}00074     \}}
 \DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00075}00075 }
 \DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00076}00076 }
-\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00081}\mbox{\hyperlink{classentity_1_1_enemy_a9d6df16ce4a30385b8876a785e13c5f8}{00081}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classentity_1_1_enemy_a9d6df16ce4a30385b8876a785e13c5f8}{update}}(\textcolor{keywordtype}{double} dt) \{}
-\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00082}00082         super.update(dt); \textcolor{comment}{// Calls the parent class update method}}
-\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00083}00083         \textcolor{comment}{// find a method to make the enemy move in predictive patterns}}
-\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00084}00084     \}}
-\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00085}00085     }
-\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00086}00086 }
-\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00087}\mbox{\hyperlink{classentity_1_1_enemy_a429f4fa6c8b461d4c18802d35d9b5092}{00087}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classentity_1_1_enemy_a429f4fa6c8b461d4c18802d35d9b5092}{playerInterraction}}(\mbox{\hyperlink{classentity_1_1_player}{Player}} player)\{}
-\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00088}00088         World.currfight = \textcolor{keyword}{new} \mbox{\hyperlink{classgame_1_1_fight_scene}{FightScene}}(player,\textcolor{keyword}{this});}
-\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00089}00089         World.state = \mbox{\hyperlink{classgame_1_1_const}{Const}}.\mbox{\hyperlink{enumgame_1_1_const_1_1_state}{State}}.\mbox{\hyperlink{enumgame_1_1_const_1_1_state_a2cdf14624160ddcbf20b61c0b839700e}{FIGHT}};}
-\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00090}00090     \}}
-\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00091}00091 }
-\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00098}\mbox{\hyperlink{classentity_1_1_enemy_ab5508f7c6805a45aec6d0b901aa091b2}{00098}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classentity_1_1_enemy_ab5508f7c6805a45aec6d0b901aa091b2}{drawInFight}}(Graphics2D g2, \textcolor{keywordtype}{int} screenX, \textcolor{keywordtype}{int} screenY)\{}
-\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00099}00099         BufferedImage image = \textcolor{keyword}{null};}
-\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00100}00100         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classentity_1_1_entity_af6b442584a7caf6e84e73872f9f8e080}{\_spriteCntMax}}; i++) \{}
-\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00101}00101             \textcolor{keywordflow}{if}(\mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}} == i)\{}
-\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00102}00102                 image = \mbox{\hyperlink{classentity_1_1_character_a147002d1dbc06ed223ee52d4ea16accb}{\_idle\_left}}[i];}
-\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00103}00103             \}}
-\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00104}00104         \}}
-\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00105}00105         g2.drawImage(image,screenX,screenY,\mbox{\hyperlink{classgame_1_1_const}{Const}}.\mbox{\hyperlink{classgame_1_1_const_a9c3ba38aa97e94c23467cb8837b4c782}{FGHT\_entityScreenSize}},\mbox{\hyperlink{classgame_1_1_const}{Const}}.\mbox{\hyperlink{classgame_1_1_const_a9c3ba38aa97e94c23467cb8837b4c782}{FGHT\_entityScreenSize}},\textcolor{keyword}{null});}
-\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00106}00106     \}}
-\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00107}00107 \}}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00082}\mbox{\hyperlink{classentity_1_1_enemy_a9d6df16ce4a30385b8876a785e13c5f8}{00082}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classentity_1_1_enemy_a9d6df16ce4a30385b8876a785e13c5f8}{update}}(\textcolor{keywordtype}{double} dt) \{}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00083}00083         super.update(dt); \textcolor{comment}{// Calls the parent class update method}}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00084}00084         \textcolor{comment}{// find a method to make the enemy move in predictive patterns}}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00085}00085     \}}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00086}00086     }
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00087}00087 }
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00088}\mbox{\hyperlink{classentity_1_1_enemy_a429f4fa6c8b461d4c18802d35d9b5092}{00088}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classentity_1_1_enemy_a429f4fa6c8b461d4c18802d35d9b5092}{playerInterraction}}(\mbox{\hyperlink{classentity_1_1_player}{Player}} player)\{}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00089}00089         World.currfight = \textcolor{keyword}{new} \mbox{\hyperlink{classgame_1_1_fight_scene}{FightScene}}(player,\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00090}00090         World.state = \mbox{\hyperlink{classgame_1_1_const}{Const}}.\mbox{\hyperlink{enumgame_1_1_const_1_1_state}{State}}.\mbox{\hyperlink{enumgame_1_1_const_1_1_state_a2cdf14624160ddcbf20b61c0b839700e}{FIGHT}};}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00091}00091     \}}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00092}00092 }
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00099}\mbox{\hyperlink{classentity_1_1_enemy_ab5508f7c6805a45aec6d0b901aa091b2}{00099}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classentity_1_1_enemy_ab5508f7c6805a45aec6d0b901aa091b2}{drawInFight}}(Graphics2D g2, \textcolor{keywordtype}{int} screenX, \textcolor{keywordtype}{int} screenY)\{}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00100}00100         BufferedImage image = \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00101}00101         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classentity_1_1_entity_af6b442584a7caf6e84e73872f9f8e080}{\_spriteCntMax}}; i++) \{}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00102}00102             \textcolor{keywordflow}{if}(\mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}} == i)\{}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00103}00103                 image = \mbox{\hyperlink{classentity_1_1_character_a147002d1dbc06ed223ee52d4ea16accb}{\_idle\_left}}[i];}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00104}00104             \}}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00105}00105         \}}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00106}00106         g2.drawImage(image,screenX,screenY,\mbox{\hyperlink{classgame_1_1_const}{Const}}.\mbox{\hyperlink{classgame_1_1_const_a9c3ba38aa97e94c23467cb8837b4c782}{FGHT\_entityScreenSize}},\mbox{\hyperlink{classgame_1_1_const}{Const}}.\mbox{\hyperlink{classgame_1_1_const_a9c3ba38aa97e94c23467cb8837b4c782}{FGHT\_entityScreenSize}},\textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00107}00107     \}}
+\DoxyCodeLine{\Hypertarget{_enemy_8java_source_l00108}00108 \}}
 
 \end{DoxyCode}

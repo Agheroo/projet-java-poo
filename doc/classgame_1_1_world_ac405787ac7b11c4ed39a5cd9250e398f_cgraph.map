@@ -1,16 +1,18 @@
 <map id="game.World.draw" name="game.World.draw">
-<area shape="rect" id="node1" title="Draws the game world and its entities." alt="" coords="5,195,141,221"/>
-<area shape="rect" id="node2" href="$classgame_1_1_fight_scene.html#a9525cb3d263680e8d808b3abde00e8d8" title="Draws the fight scene." alt="" coords="209,93,379,120"/>
-<area shape="rect" id="node9" href="$class_u_i_1_1_h_u_d.html#acf73daced1b23ea24b73216f6a23f587" title="Abstract method to draw the HUD on the screen." alt="" coords="241,144,347,171"/>
-<area shape="rect" id="node10" href="$class_u_i_1_1_h_u_d___world.html#a3168ce83edffabbe6347f9478523936d" title="Draws the HUD on the screen, displaying player statistics and instructions." alt="" coords="686,169,837,196"/>
-<area shape="rect" id="node11" href="$classtiles_1_1_tile_manager.html#a3225a1e7f736b5eb311b0efd9f34613b" title="Draws the tiles in the game world." alt="" coords="209,245,379,272"/>
-<area shape="rect" id="node14" href="$classentity_1_1_character.html#a2e5b1455cc08b1a213cf51ecf102b6bb" title="Draws the character in the world scene." alt="" coords="189,296,399,323"/>
-<area shape="rect" id="node3" href="$class_u_i_1_1_h_u_d___fight.html#a444cd5e7f43dd55149762e5738ba2cf7" title="Abstract method to draw the HUD on the screen." alt="" coords="467,43,612,69"/>
-<area shape="rect" id="node7" href="$classentity_1_1_enemy.html#ab5508f7c6805a45aec6d0b901aa091b2" title="Draws the character in the fight scene." alt="" coords="447,93,632,120"/>
-<area shape="rect" id="node8" href="$classentity_1_1_player.html#a724d0cb885da2e80adfe13ca1901a12b" title="Draws the character in the fight scene." alt="" coords="448,144,631,171"/>
-<area shape="rect" id="node4" href="$class_u_i_1_1_choice_button.html#a1000744853168892a77f3aaa14886739" title="Draws a button (rectangle) on the screen at specified coordinates (top left)." alt="" coords="680,5,843,32"/>
-<area shape="rect" id="node5" href="$class_u_i_1_1_textbox.html#aab675a99675e6ba3e03630cf973f2799" title="Draws the text box on the screen." alt="" coords="891,56,1017,83"/>
-<area shape="rect" id="node6" href="$class_u_i_1_1_textbox.html#a4725a8ec93796dcc1a2aa14ad16952f6" title="Setter function for a new font color of the current text." alt="" coords="687,107,836,133"/>
-<area shape="rect" id="node12" href="$classtiles_1_1_tile.html#a31c27631fa71574b1a9bd9cad296fcbe" title="Draw the tile on the screen." alt="" coords="482,245,597,272"/>
-<area shape="rect" id="node13" href="$classtiles_1_1_tile.html#a7bfcdb11efa89176a068c2a473ce3e9d" title="Get the position of the tile." alt="" coords="476,296,603,323"/>
+<area shape="rect" id="node1" title="Draws the game world and its entities." alt="" coords="5,208,141,235"/>
+<area shape="rect" id="node2" href="$classgame_1_1_fight_scene.html#a9525cb3d263680e8d808b3abde00e8d8" title="Draws the fight scene." alt="" coords="209,107,379,133"/>
+<area shape="rect" id="node11" href="$class_u_i_1_1_h_u_d.html#acf73daced1b23ea24b73216f6a23f587" title=" " alt="" coords="241,157,347,184"/>
+<area shape="rect" id="node12" href="$class_u_i_1_1_h_u_d___world.html#a3168ce83edffabbe6347f9478523936d" title=" " alt="" coords="712,208,863,235"/>
+<area shape="rect" id="node13" href="$classtiles_1_1_tile_manager.html#a3225a1e7f736b5eb311b0efd9f34613b" title="Draws the tiles in the game world." alt="" coords="209,259,379,285"/>
+<area shape="rect" id="node16" href="$classentity_1_1_character.html#a2e5b1455cc08b1a213cf51ecf102b6bb" title="Draws the character in the world scene." alt="" coords="189,309,399,336"/>
+<area shape="rect" id="node3" href="$class_u_i_1_1_h_u_d___fight.html#a444cd5e7f43dd55149762e5738ba2cf7" title=" " alt="" coords="467,56,612,83"/>
+<area shape="rect" id="node9" href="$classentity_1_1_enemy.html#ab5508f7c6805a45aec6d0b901aa091b2" title="Draws the character in the fight scene." alt="" coords="447,107,632,133"/>
+<area shape="rect" id="node10" href="$classentity_1_1_player.html#a724d0cb885da2e80adfe13ca1901a12b" title="Draws the character in the fight scene." alt="" coords="448,157,631,184"/>
+<area shape="rect" id="node4" href="$class_u_i_1_1_h_u_d.html#a5039f6b8d54a62926eabd210aeb1fea4" title=" " alt="" coords="680,5,895,32"/>
+<area shape="rect" id="node6" href="$class_u_i_1_1_textbox.html#a4725a8ec93796dcc1a2aa14ad16952f6" title="Setter func for a new font color of the current text." alt="" coords="1203,31,1352,57"/>
+<area shape="rect" id="node7" href="$class_u_i_1_1_choice_button.html#a1000744853168892a77f3aaa14886739" title="Draws a button (rectangle) on the screen at x,y coords (top left)" alt="" coords="706,107,869,133"/>
+<area shape="rect" id="node8" href="$class_u_i_1_1_textbox.html#aab675a99675e6ba3e03630cf973f2799" title=" " alt="" coords="985,157,1112,184"/>
+<area shape="rect" id="node5" href="$class_u_i_1_1_choice_button.html#a72e2bde42a5a426ffa1686e4b724afa1" title="Setter func to change a button&#39;s text color." alt="" coords="943,5,1155,32"/>
+<area shape="rect" id="node14" href="$classtiles_1_1_tile.html#a31c27631fa71574b1a9bd9cad296fcbe" title="Draw the tile on the screen." alt="" coords="482,259,597,285"/>
+<area shape="rect" id="node15" href="$classtiles_1_1_tile.html#a7bfcdb11efa89176a068c2a473ce3e9d" title="Get the position of the tile." alt="" coords="476,309,603,336"/>
 </map>

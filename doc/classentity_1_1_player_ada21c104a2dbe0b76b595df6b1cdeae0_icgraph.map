@@ -1,5 +1,0 @@
-<map id="entity.Player.pickUpObject" name="entity.Player.pickUpObject">
-<area shape="rect" id="node1" title="Lets the player pick up the object near him if he presses the interract button (space)" alt="" coords="401,5,595,32"/>
-<area shape="rect" id="node2" href="$classentity_1_1_player.html#ae9f8bc01c80f5ed6ffc7fb656f7895c1" title="Updates the player entity based on the current scene and time elapsed." alt="" coords="203,5,353,32"/>
-<area shape="rect" id="node3" href="$classgame_1_1_world.html#a05a7f2e7a65c2a3449efdaa0a87c49f5" title="Updates the game world based on the scene state." alt="" coords="5,5,155,32"/>
-</map>

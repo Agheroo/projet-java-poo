@@ -1,6 +1,0 @@
-<map id="entity.props.Props.loadTextures" name="entity.props.Props.loadTextures">
-<area shape="rect" id="node1" title=" " alt="" coords="280,71,505,98"/>
-<area shape="rect" id="node2" href="$classentity_1_1props_1_1_o_b_j___chest.html#a791b6f22d201a11338c82f65b5b65bc5" title="Constructor for the OBJ_Chest class." alt="" coords="21,5,217,47"/>
-<area shape="rect" id="node3" href="$classentity_1_1props_1_1_o_b_j___door.html#ad1cdabdc34de0662d6d6d568ba31e8ad" title="Constructor for the OBJ_Door class." alt="" coords="5,71,232,98"/>
-<area shape="rect" id="node4" href="$classentity_1_1props_1_1_o_b_j___key.html#ac30d918f2fedaf3ebe653a6e00a5fc25" title="Constructor for the OBJ_Key class." alt="" coords="13,122,225,149"/>
-</map>

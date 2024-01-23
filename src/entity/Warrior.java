@@ -26,15 +26,26 @@ public class Warrior extends Player{
         mana = maxMana;
 
         agility = 3;
-        strength = 24;
-        defense = 25;
+        strength = 17;
+        defense = 30;
         initiative = 8;
         
         
-        attacks[0] = new Attack("Coup d'épaule", 10, 0, true,1);
-        attacks[1] = new Attack("Tranchage", 27, 10, true,1);
-        attacks[2] = new Attack("Berserk", 40, 15, false,2);
-        attacks[3] = new Attack("Shlaz tah'maïr", 67, 20, false,3);
+        attacks[0] = new Attack("Coup d'épaule", 15, 0, true,1);
+        attacks[1] = new Attack("Tranchage", 22, 8, true,1);
+        attacks[2] = new Attack("Berserk", 40, 14, false,2);
+        attacks[3] = new Attack("Shlaz tah'maïr", 57, 22, false,3);
     }
 
+    public void levelUp(){
+        level++;
+        xpMax = 55 + (int)1.3*xpMax;
+        maxHealth += 20;
+        maxMana += 11;
+        agility += 5;
+        strength += 5;
+        defense += 10;
+        initiative += 1;
+        mana = maxMana;
+    }
 }

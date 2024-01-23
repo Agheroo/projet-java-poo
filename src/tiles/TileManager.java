@@ -41,8 +41,8 @@ public class TileManager {
         _topMap = new Tile[Const.WRLD_maxRow][Const.WRLD_maxCol];
 
         loadTextures();
-        loadMap("/home/romu/IdeaProjects/projet-java-poo/res/maps/map_floor.csv", world, _floorMap, _floorMapTextures);
-        loadMap("/home/romu/IdeaProjects/projet-java-poo/res/maps/map_top.csv", world, _topMap, _topMapTextures);
+        loadMap("res/maps/map_floor.csv", world, _floorMap, _floorMapTextures);
+        loadMap("res/maps/map_top.csv", world, _topMap, _topMapTextures);
     }
 
     /**
@@ -124,9 +124,11 @@ public class TileManager {
             BufferedReader br = new BufferedReader(fileReader);
 
             for (int i = 0; i < Const.WRLD_maxRow; i++) {
+                
                 String line = br.readLine();
 
                 for (int j = 0; j < Const.WRLD_maxCol; j++) {
+                    
                     String[] numbers = line.split(",");
                     int num = 1 + Integer.parseInt(numbers[j]); // Reading the file itself and stocking int read
                     Tile tileCurrent = new Tile(textures[num].spriteCntMax, textures[num].spriteSpeed,

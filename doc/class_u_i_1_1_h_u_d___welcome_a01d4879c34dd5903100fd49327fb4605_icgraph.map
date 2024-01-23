@@ -1,4 +1,0 @@
-<map id="UI.HUD_Welcome.selectClass" name="UI.HUD_Welcome.selectClass">
-<area shape="rect" id="node1" title="Creates the relevant class according to the class selected." alt="" coords="240,5,455,32"/>
-<area shape="rect" id="node2" href="$class_u_i_1_1_h_u_d___welcome.html#ae8e93f747d3a375eae9ec820501b926c" title="Updates the welcome screen HUD." alt="" coords="5,5,192,32"/>
-</map>

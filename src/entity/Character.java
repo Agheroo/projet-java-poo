@@ -192,15 +192,15 @@ public abstract class Character extends Entity {
     protected void loadTextures(String name) {
         try {
             for (int i = 0; i < _spriteCntMax; i++) {
-                _idle_up[i] = ImageIO.read(new FileInputStream("/home/romu/IdeaProjects/projet-java-poo/res/entity/character/idle/" + name + "/up" + (i + 1) + ".png"));
-                _idle_down[i] = ImageIO.read(new FileInputStream("/home/romu/IdeaProjects/projet-java-poo/res/entity/character/idle/" + name + "/down" + (i + 1) + ".png"));
-                _idle_left[i] = ImageIO.read(new FileInputStream("/home/romu/IdeaProjects/projet-java-poo/res/entity/character/idle/" + name + "/left" + (i + 1) + ".png"));
+                _idle_up[i] = ImageIO.read(new FileInputStream("res/entity/character/idle/" + name + "/up" + (i + 1) + ".png"));
+                _idle_down[i] = ImageIO.read(new FileInputStream("res/entity/character/idle/" + name + "/down" + (i + 1) + ".png"));
+                _idle_left[i] = ImageIO.read(new FileInputStream("res/entity/character/idle/" + name + "/left" + (i + 1) + ".png"));
                 _idle_right[i] = ImageIO.read(new FileInputStream("res/entity/character/idle/" + name + "/right" + (i + 1) + ".png"));
 
-                _walk_up[i] = ImageIO.read(new FileInputStream("/home/romu/IdeaProjects/projet-java-poo/res/entity/character/walk/" + name + "/up" + (i + 1) + ".png"));
-                _walk_down[i] = ImageIO.read(new FileInputStream("/home/romu/IdeaProjects/projet-java-poo/res/entity/character/walk/" + name + "/down" + (i + 1) + ".png"));
-                _walk_left[i] = ImageIO.read(new FileInputStream("/home/romu/IdeaProjects/projet-java-poo/res/entity/character/walk/" + name + "/left" + (i + 1) + ".png"));
-                _walk_right[i] = ImageIO.read(new FileInputStream("/home/romu/IdeaProjects/projet-java-poo/res/entity/character/walk/" + name + "/right" + (i + 1) + ".png"));
+                _walk_up[i] = ImageIO.read(new FileInputStream("res/entity/character/walk/" + name + "/up" + (i + 1) + ".png"));
+                _walk_down[i] = ImageIO.read(new FileInputStream("res/entity/character/walk/" + name + "/down" + (i + 1) + ".png"));
+                _walk_left[i] = ImageIO.read(new FileInputStream("res/entity/character/walk/" + name + "/left" + (i + 1) + ".png"));
+                _walk_right[i] = ImageIO.read(new FileInputStream("res/entity/character/walk/" + name + "/right" + (i + 1) + ".png"));
             }
 
         } catch (IOException e) {
