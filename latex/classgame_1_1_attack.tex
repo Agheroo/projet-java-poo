@@ -1,0 +1,178 @@
+\hypertarget{classgame_1_1_attack}{}\doxysection{game.\+Attack Class Reference}
+\label{classgame_1_1_attack}\index{game.Attack@{game.Attack}}
+
+
+Collaboration diagram for game.\+Attack\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{classgame_1_1_attack__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgame_1_1_attack_a7177fd8d2640b207e15f883931de675a}{Attack}} (String \mbox{\hyperlink{classgame_1_1_attack_a0cf4e772eb2640ad3c88dfba8f685929}{name}}, int \mbox{\hyperlink{classgame_1_1_attack_a644b567caf6a9274c0b4737866ae60db}{damage}}, int \mbox{\hyperlink{classgame_1_1_attack_a8bc6ddb6e33f6b049a101e4167f91b6e}{cost}}, boolean \mbox{\hyperlink{classgame_1_1_attack_a8853f742946af18d58a3b33e1176f5aa}{unlocked}}, int \mbox{\hyperlink{classgame_1_1_attack_af2e6657a251b923cc9a17066bf843bc0}{unlock\+Lvl}})
+\item 
+void \mbox{\hyperlink{classgame_1_1_attack_a82fc9edb6fb83a16aa0d73c03501841e}{apply\+Attack}} (\mbox{\hyperlink{classentity_1_1_character}{Character}} emitter, \mbox{\hyperlink{classentity_1_1_character}{Character}} reciever)
+\begin{DoxyCompactList}\small\item\em Applies the attack of a character on another one. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+final String \mbox{\hyperlink{classgame_1_1_attack_a0cf4e772eb2640ad3c88dfba8f685929}{name}}
+\item 
+final int \mbox{\hyperlink{classgame_1_1_attack_a644b567caf6a9274c0b4737866ae60db}{damage}}
+\item 
+final int \mbox{\hyperlink{classgame_1_1_attack_a8bc6ddb6e33f6b049a101e4167f91b6e}{cost}}
+\item 
+final int \mbox{\hyperlink{classgame_1_1_attack_af2e6657a251b923cc9a17066bf843bc0}{unlock\+Lvl}}
+\item 
+boolean \mbox{\hyperlink{classgame_1_1_attack_a8853f742946af18d58a3b33e1176f5aa}{unlocked}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_attack_8java_source_l00004}{4}} of file \mbox{\hyperlink{_attack_8java_source}{Attack.\+java}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classgame_1_1_attack_a7177fd8d2640b207e15f883931de675a}\label{classgame_1_1_attack_a7177fd8d2640b207e15f883931de675a}} 
+\index{game.Attack@{game.Attack}!Attack@{Attack}}
+\index{Attack@{Attack}!game.Attack@{game.Attack}}
+\doxysubsubsection{\texorpdfstring{Attack()}{Attack()}}
+{\footnotesize\ttfamily game.\+Attack.\+Attack (\begin{DoxyParamCaption}\item[{String}]{name,  }\item[{int}]{damage,  }\item[{int}]{cost,  }\item[{boolean}]{unlocked,  }\item[{int}]{unlock\+Lvl }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_attack_8java_source_l00011}{11}} of file \mbox{\hyperlink{_attack_8java_source}{Attack.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011                                                                                      \{}
+\DoxyCodeLine{00012         this.unlockLvl = \mbox{\hyperlink{classgame_1_1_attack_af2e6657a251b923cc9a17066bf843bc0}{unlockLvl}};}
+\DoxyCodeLine{00013         this.name = \mbox{\hyperlink{classgame_1_1_attack_a0cf4e772eb2640ad3c88dfba8f685929}{name}};}
+\DoxyCodeLine{00014         this.damage = \mbox{\hyperlink{classgame_1_1_attack_a644b567caf6a9274c0b4737866ae60db}{damage}};}
+\DoxyCodeLine{00015         this.cost = \mbox{\hyperlink{classgame_1_1_attack_a8bc6ddb6e33f6b049a101e4167f91b6e}{cost}};}
+\DoxyCodeLine{00016         this.unlocked = \mbox{\hyperlink{classgame_1_1_attack_a8853f742946af18d58a3b33e1176f5aa}{unlocked}};}
+\DoxyCodeLine{00017     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1_attack_a82fc9edb6fb83a16aa0d73c03501841e}\label{classgame_1_1_attack_a82fc9edb6fb83a16aa0d73c03501841e}} 
+\index{game.Attack@{game.Attack}!applyAttack@{applyAttack}}
+\index{applyAttack@{applyAttack}!game.Attack@{game.Attack}}
+\doxysubsubsection{\texorpdfstring{applyAttack()}{applyAttack()}}
+{\footnotesize\ttfamily void game.\+Attack.\+apply\+Attack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classentity_1_1_character}{Character}}}]{emitter,  }\item[{\mbox{\hyperlink{classentity_1_1_character}{Character}}}]{reciever }\end{DoxyParamCaption})}
+
+
+
+Applies the attack of a character on another one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em emitter} & The character that sends the attack \\
+\hline
+{\em reciever} & The character that \char`\"{}recieves\char`\"{} the attack \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_attack_8java_source_l00024}{24}} of file \mbox{\hyperlink{_attack_8java_source}{Attack.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024                                                                   \{}
+\DoxyCodeLine{00025         \textcolor{comment}{//Find a nice equation to balance a bit the game and add a dodge chance with agility}}
+\DoxyCodeLine{00026         \textcolor{comment}{//Also find a interval "{}crit chance"{} maybe to make it more interesting}}
+\DoxyCodeLine{00027         }
+\DoxyCodeLine{00028         \textcolor{keywordtype}{double} dodgeChange = 1 -\/ Math.exp(-\/0.005*reciever.agility);  \textcolor{comment}{//Equation for dodge chance of the attack (30 agility = 0.15 dodge chance)}}
+\DoxyCodeLine{00029         }
+\DoxyCodeLine{00030 }
+\DoxyCodeLine{00031         \textcolor{keywordflow}{if}(emitter.mana >= \mbox{\hyperlink{classgame_1_1_attack_a8bc6ddb6e33f6b049a101e4167f91b6e}{cost}})\{}
+\DoxyCodeLine{00032             \textcolor{keywordflow}{if}(Math.random() > dodgeChange)\{}
+\DoxyCodeLine{00033                 \textcolor{keywordtype}{int} dmgDealt = (int)(\mbox{\hyperlink{classgame_1_1_attack_a644b567caf6a9274c0b4737866ae60db}{damage}}*(1+(emitter.strength*\mbox{\hyperlink{classgame_1_1_attack_a644b567caf6a9274c0b4737866ae60db}{damage}}*0.6)/(reciever.defense*2.4)));}
+\DoxyCodeLine{00034 }
+\DoxyCodeLine{00035                 reciever.health -\/= dmgDealt;}
+\DoxyCodeLine{00036             \}}
+\DoxyCodeLine{00037             \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00038                 System.out.println(reciever.name + \textcolor{stringliteral}{"{} a esquivé "{}} + emitter.name);}
+\DoxyCodeLine{00039             \}}
+\DoxyCodeLine{00040             emitter.mana -\/= \mbox{\hyperlink{classgame_1_1_attack_a8bc6ddb6e33f6b049a101e4167f91b6e}{cost}};}
+\DoxyCodeLine{00041         \}}
+\DoxyCodeLine{00042         \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00043             emitter.mana = 0;}
+\DoxyCodeLine{00044             System.out.println(\textcolor{stringliteral}{"{}Vous avez tout donné... mais vous n'aviez pas assez de mana"{}});}
+\DoxyCodeLine{00045         \}}
+\DoxyCodeLine{00046     \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classgame_1_1_attack_a82fc9edb6fb83a16aa0d73c03501841e_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classgame_1_1_attack_a8bc6ddb6e33f6b049a101e4167f91b6e}\label{classgame_1_1_attack_a8bc6ddb6e33f6b049a101e4167f91b6e}} 
+\index{game.Attack@{game.Attack}!cost@{cost}}
+\index{cost@{cost}!game.Attack@{game.Attack}}
+\doxysubsubsection{\texorpdfstring{cost}{cost}}
+{\footnotesize\ttfamily final int game.\+Attack.\+cost}
+
+
+
+Definition at line \mbox{\hyperlink{_attack_8java_source_l00007}{7}} of file \mbox{\hyperlink{_attack_8java_source}{Attack.\+java}}.
+
+\mbox{\Hypertarget{classgame_1_1_attack_a644b567caf6a9274c0b4737866ae60db}\label{classgame_1_1_attack_a644b567caf6a9274c0b4737866ae60db}} 
+\index{game.Attack@{game.Attack}!damage@{damage}}
+\index{damage@{damage}!game.Attack@{game.Attack}}
+\doxysubsubsection{\texorpdfstring{damage}{damage}}
+{\footnotesize\ttfamily final int game.\+Attack.\+damage}
+
+
+
+Definition at line \mbox{\hyperlink{_attack_8java_source_l00006}{6}} of file \mbox{\hyperlink{_attack_8java_source}{Attack.\+java}}.
+
+\mbox{\Hypertarget{classgame_1_1_attack_a0cf4e772eb2640ad3c88dfba8f685929}\label{classgame_1_1_attack_a0cf4e772eb2640ad3c88dfba8f685929}} 
+\index{game.Attack@{game.Attack}!name@{name}}
+\index{name@{name}!game.Attack@{game.Attack}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily final String game.\+Attack.\+name}
+
+
+
+Definition at line \mbox{\hyperlink{_attack_8java_source_l00005}{5}} of file \mbox{\hyperlink{_attack_8java_source}{Attack.\+java}}.
+
+\mbox{\Hypertarget{classgame_1_1_attack_a8853f742946af18d58a3b33e1176f5aa}\label{classgame_1_1_attack_a8853f742946af18d58a3b33e1176f5aa}} 
+\index{game.Attack@{game.Attack}!unlocked@{unlocked}}
+\index{unlocked@{unlocked}!game.Attack@{game.Attack}}
+\doxysubsubsection{\texorpdfstring{unlocked}{unlocked}}
+{\footnotesize\ttfamily boolean game.\+Attack.\+unlocked}
+
+
+
+Definition at line \mbox{\hyperlink{_attack_8java_source_l00009}{9}} of file \mbox{\hyperlink{_attack_8java_source}{Attack.\+java}}.
+
+\mbox{\Hypertarget{classgame_1_1_attack_af2e6657a251b923cc9a17066bf843bc0}\label{classgame_1_1_attack_af2e6657a251b923cc9a17066bf843bc0}} 
+\index{game.Attack@{game.Attack}!unlockLvl@{unlockLvl}}
+\index{unlockLvl@{unlockLvl}!game.Attack@{game.Attack}}
+\doxysubsubsection{\texorpdfstring{unlockLvl}{unlockLvl}}
+{\footnotesize\ttfamily final int game.\+Attack.\+unlock\+Lvl}
+
+
+
+Definition at line \mbox{\hyperlink{_attack_8java_source_l00008}{8}} of file \mbox{\hyperlink{_attack_8java_source}{Attack.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/game/\mbox{\hyperlink{_attack_8java}{Attack.\+java}}\end{DoxyCompactItemize}

@@ -1,6 +1,6 @@
-# OOP Project
+# Projet Objet
 
-## ✨ Contributors ✨
+## ✨ Contributeurs ✨
 
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
@@ -35,54 +35,57 @@
 
 All commits are available [here](https://github.com/Agheroo/projet-java-poo/commits/main/).
 
-## 🎮 The game 🎮
+## 🎮 Le jeu 🎮
+
+Le jeu "Donjon et Dragon" est une application Java basée sur des classes orientées objet. 
+Il propose une expérience de jeu immersive dans laquelle les joueurs peuvent explorer des donjons, combattre des ennemis, interagir avec des éléments de l'environnement et progresser dans un monde fantastique. 
+Les choix du joueur vont être décisif dans son exploration, notamment de la classe qu'il va choisir.
+Le gameplay se concentre sur l'exploration, le combat stratégique et la progression du personnage à travers différents niveaux du donjon.
+
+### Game screenshots
+
+<p align="center">
+    <img src="res/ImageReadMe/image1.png" alt="">
+</p>
+<p align="center">
+    <img src="res/ImageReadMe/image2.png" alt="">
+</p>
 
 
-The game is called **A compléter** and the goal is to defeat the dungeon.
+### Controles
 
-### Controls
+|     Action     |  Touches   |
+|:--------------:|:----------:|
+| Aller en Haut  |   **Z**    |
+|  Aller en Bas  |   **S**    |
+| Aller à Gauche |   **Q**    |
+| Aller à Droite |   **D**    |
+|   Intéragir    | **Espace** |
+| Stopper le jeu | **Echap**  |
 
-|Action|Key|
-|:-:|:-:|
-|Move up|**Z**|
-|Move down|**S**|
-|Move left|**Q**|
-|Move right|**D**|
+## 💻 Compiler et lancer le projet 💻
 
-## 💻 Compiling and launching the game 💻
-
-> Note that this is for the developement version only.
-
-### Commands
-
-To get the last version of the game :
+Veuillez au préalable cloner le projet sur votre mahcine :
 ```shell
 git clone https://github.com/Agheroo/projet-java-poo
 cd projet-java-poo
 ```
 
-Then at ``{...}/projet-java-poo/`` :
+### Commandes
 
 **Windows users**
 
-```powershell
-TODO
-```
+ - Veuillez vous rendre dans le dossier projet-java-poo.
+ - Puis dans le dossier out/artifacts/projet_java_poo_jar
+ - Double cliquez sur projet-java-poo.jar pour lancer le jeu.
 
 **Unix users**
 
 ```shell
-TODO
+cd projet-java-poo/out/artifacts/projet_java_poo_jar
+java -jar projet-java-poo.jar
 ```
 
-### Compiling options
-
-|Option|Feature|
-|:-:|:-|
-|``--del-all``|Delete all ``.class`` files in ``bin`` directory before compiling.|
-|``--test``|Compile ``test`` directory.|
-
-**N.B.** : Both options can be used simultaneously.
 
 
 

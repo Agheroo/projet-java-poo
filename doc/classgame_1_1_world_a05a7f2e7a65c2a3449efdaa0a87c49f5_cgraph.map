@@ -1,12 +1,12 @@
 <map id="game.World.update" name="game.World.update">
 <area shape="rect" id="node1" title="Updates the game world based on the scene state." alt="" coords="5,183,155,209"/>
 <area shape="rect" id="node2" href="$classgame_1_1_scene.html#a8836ac66378d274d9935a950e0b83d7a" title="Checks for a change in the scene state based on user input." alt="" coords="203,56,424,83"/>
-<area shape="rect" id="node3" href="$class_u_i_1_1_h_u_d.html#ad0c1abd2a8e1c763e8c508b4535cbe68" title=" " alt="" coords="254,107,373,133"/>
-<area shape="rect" id="node4" href="$class_u_i_1_1_h_u_d___world.html#af61b9be0ebdafc7487eacb0afb6d4fcd" title=" " alt="" coords="232,157,395,184"/>
+<area shape="rect" id="node3" href="$class_u_i_1_1_h_u_d.html#ad0c1abd2a8e1c763e8c508b4535cbe68" title="Abstract method to update the HUD." alt="" coords="254,107,373,133"/>
+<area shape="rect" id="node4" href="$class_u_i_1_1_h_u_d___world.html#af61b9be0ebdafc7487eacb0afb6d4fcd" title="Updates the HUD by refreshing player statistics." alt="" coords="232,157,395,184"/>
 <area shape="rect" id="node6" href="$classentity_1_1_player.html#ae9f8bc01c80f5ed6ffc7fb656f7895c1" title="Updates the player entity based on the current scene and time elapsed." alt="" coords="238,208,389,235"/>
 <area shape="rect" id="node14" href="$classgame_1_1_fight_scene.html#a6f8060e45bcb70f13265bd6d3b2a52d5" title="Updates the fight scene." alt="" coords="222,411,405,437"/>
-<area shape="rect" id="node21" href="$classtiles_1_1_tile_manager.html#aa105a51c3008f7cae9e241e671be2278" title="Updates the tile frames based on the player&#39;s position." alt="" coords="222,563,405,589"/>
-<area shape="rect" id="node5" href="$class_u_i_1_1_textbox.html#a78802d3a8816c733a592e1d56710020b" title=" " alt="" coords="485,5,656,32"/>
+<area shape="rect" id="node23" href="$classtiles_1_1_tile_manager.html#aa105a51c3008f7cae9e241e671be2278" title="Updates the tile frames based on the player&#39;s position." alt="" coords="222,563,405,589"/>
+<area shape="rect" id="node5" href="$class_u_i_1_1_textbox.html#a78802d3a8816c733a592e1d56710020b" title="Setter function for a new text content of the text box." alt="" coords="485,5,656,32"/>
 <area shape="rect" id="node7" href="$classentity_1_1_character.html#a937e8e2ad1ddaccfdf7fbc52c9f532f6" title="Accelerates the character&#39;s speed up to the specified maximum speed." alt="" coords="473,56,669,83"/>
 <area shape="rect" id="node8" href="$classentity_1_1_player.html#afd8ccd449d009e222e579aa68eeb8a50" title="Checks for collision with nearby enemy using the player&#39;s hitbox." alt="" coords="476,107,665,133"/>
 <area shape="rect" id="node9" href="$classentity_1_1_player.html#adb890f89741a84069bb1288c7093508f" title="Checks for collision with nearby objects using the player&#39;s hitbox." alt="" coords="477,157,664,184"/>
@@ -15,11 +15,13 @@
 <area shape="rect" id="node13" href="$classentity_1_1_player.html#ada21c104a2dbe0b76b595df6b1cdeae0" title="Lets the player pick up the object near him if he presses the interract button (space)" alt="" coords="474,309,667,336"/>
 <area shape="rect" id="node12" href="$classentity_1_1_enemy.html#a429f4fa6c8b461d4c18802d35d9b5092" title=" " alt="" coords="717,259,943,285"/>
 <area shape="rect" id="node15" href="$classgame_1_1_attack.html#a82fc9edb6fb83a16aa0d73c03501841e" title="Applies the attack of a character on another one." alt="" coords="477,360,664,387"/>
-<area shape="rect" id="node16" href="$class_u_i_1_1_h_u_d.html#a5039f6b8d54a62926eabd210aeb1fea4" title=" " alt="" coords="723,436,937,463"/>
-<area shape="rect" id="node19" href="$class_u_i_1_1_h_u_d___fight.html#adf261e5266f353eba13c384f69ae723e" title="Update the HUD of the current fight the player is in." alt="" coords="491,461,650,488"/>
-<area shape="rect" id="node20" href="$classentity_1_1_entity.html#a41e81bb1c3a3e86f3f43aa39d8fbb748" title="Updates the frames of the entity&#39;s animation." alt="" coords="473,512,668,539"/>
-<area shape="rect" id="node17" href="$class_u_i_1_1_choice_button.html#a72e2bde42a5a426ffa1686e4b724afa1" title="Setter func to change a button&#39;s text color." alt="" coords="991,436,1203,463"/>
-<area shape="rect" id="node18" href="$class_u_i_1_1_textbox.html#a4725a8ec93796dcc1a2aa14ad16952f6" title="Setter func for a new font color of the current text." alt="" coords="1251,436,1400,463"/>
-<area shape="rect" id="node22" href="$classtiles_1_1_tile.html#a7bfcdb11efa89176a068c2a473ce3e9d" title="Get the position of the tile." alt="" coords="507,563,634,589"/>
-<area shape="rect" id="node23" href="$classtiles_1_1_tile.html#aba5dbd821ef786c025e887b5c2e801f5" title="Update the sprite frames for the tile." alt="" coords="483,613,658,640"/>
+<area shape="rect" id="node16" href="$classentity_1_1_player.html#a295dffaa14bb9e9a24895d1fa9c300d1" title=" " alt="" coords="493,411,649,437"/>
+<area shape="rect" id="node17" href="$class_u_i_1_1_h_u_d___fight.html#adf261e5266f353eba13c384f69ae723e" title="Update the HUD of the current fight the player is in." alt="" coords="491,461,650,488"/>
+<area shape="rect" id="node22" href="$classentity_1_1_entity.html#a41e81bb1c3a3e86f3f43aa39d8fbb748" title="Updates the frames of the entity&#39;s animation." alt="" coords="473,512,668,539"/>
+<area shape="rect" id="node18" href="$class_u_i_1_1_h_u_d.html#af1a376f1d7a53f60ddc82737289a35d8" title="Changes the color of the selected button in the HUD." alt="" coords="723,461,937,488"/>
+<area shape="rect" id="node19" href="$class_u_i_1_1_choice_button.html#a6cd72943d413641b20c66d680e6af03e" title="Setter function to change the button&#39;s background color." alt="" coords="995,436,1198,463"/>
+<area shape="rect" id="node20" href="$class_u_i_1_1_choice_button.html#a72e2bde42a5a426ffa1686e4b724afa1" title="Setter function to change the button&#39;s text color." alt="" coords="991,487,1203,513"/>
+<area shape="rect" id="node21" href="$class_u_i_1_1_textbox.html#a4725a8ec93796dcc1a2aa14ad16952f6" title="Setter function for a new font color of the current text." alt="" coords="1251,487,1400,513"/>
+<area shape="rect" id="node24" href="$classtiles_1_1_tile.html#a7bfcdb11efa89176a068c2a473ce3e9d" title="Get the position of the tile." alt="" coords="507,563,634,589"/>
+<area shape="rect" id="node25" href="$classtiles_1_1_tile.html#aba5dbd821ef786c025e887b5c2e801f5" title="Update the sprite frames for the tile." alt="" coords="483,613,658,640"/>
 </map>

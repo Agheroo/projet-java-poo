@@ -1,0 +1,4 @@
+<map id="game.Scene.update" name="game.Scene.update">
+<area shape="rect" id="node1" title="Updates the scene." alt="" coords="5,5,156,32"/>
+<area shape="rect" id="node2" href="$class_u_i_1_1_h_u_d.html#ad0c1abd2a8e1c763e8c508b4535cbe68" title="Abstract method to update the HUD." alt="" coords="204,5,323,32"/>
+</map>

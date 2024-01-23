@@ -7,8 +7,7 @@ Represents an abstract character entity with position, hitbox, stats, and animat
 
 
 
-Inheritance diagram for entity.\+Character\+:
-\nopagebreak
+Inheritance diagram for entity.\+Character\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -17,8 +16,7 @@ Inheritance diagram for entity.\+Character\+:
 \end{figure}
 
 
-Collaboration diagram for entity.\+Character\+:
-\nopagebreak
+Collaboration diagram for entity.\+Character\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -166,8 +164,7 @@ Definition at line \mbox{\hyperlink{_character_8java_source_l00065}{65}} of file
 \DoxyCodeLine{00087     \}}
 
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -196,22 +193,21 @@ Accelerates the character\textquotesingle{}s speed up to the specified maximum s
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_character_8java_source_l00172}{172}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
+Definition at line \mbox{\hyperlink{_character_8java_source_l00171}{171}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00172                                                                    \{}
-\DoxyCodeLine{00173         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} < maxSpeed) \{}
-\DoxyCodeLine{00174             \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} += factor*dt;}
-\DoxyCodeLine{00175         \}}
-\DoxyCodeLine{00176         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} > maxSpeed) \{}
-\DoxyCodeLine{00177             \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} = maxSpeed;}
-\DoxyCodeLine{00178         \}}
-\DoxyCodeLine{00179     \}}
+\DoxyCodeLine{00171                                                                    \{}
+\DoxyCodeLine{00172         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} < maxSpeed) \{}
+\DoxyCodeLine{00173             \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} += factor*dt;}
+\DoxyCodeLine{00174         \}}
+\DoxyCodeLine{00175         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} > maxSpeed) \{}
+\DoxyCodeLine{00176             \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} = maxSpeed;}
+\DoxyCodeLine{00177         \}}
+\DoxyCodeLine{00178     \}}
 
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -235,31 +231,31 @@ Checks for collision with nearby tiles using the character\textquotesingle{}s hi
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_character_8java_source_l00115}{115}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
+Definition at line \mbox{\hyperlink{_character_8java_source_l00114}{114}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00115                                                              \{}
-\DoxyCodeLine{00116         \textcolor{comment}{// Checking tiles with hitbox}}
+\DoxyCodeLine{00114                                                              \{}
+\DoxyCodeLine{00115         \textcolor{comment}{// Checking tiles with hitbox}}
+\DoxyCodeLine{00116         }
 \DoxyCodeLine{00117         }
-\DoxyCodeLine{00118         }
-\DoxyCodeLine{00119         \textcolor{keywordflow}{if}((tileManager.getTile(\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x, \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y -\/ 5).getCollision() \textcolor{comment}{//Checks collision with tile on top of the character}}
-\DoxyCodeLine{00120         || tileManager.getTile(\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.width , \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y -\/ 5).getCollision() )\&\&  \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}} == -\/1) \{}
-\DoxyCodeLine{00121             \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} = tileManager.getTile(\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x,\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y).getPos()[1] -\/ \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.height;    \textcolor{comment}{//Prevent moving if collidable terrain}}
-\DoxyCodeLine{00122         \}}
-\DoxyCodeLine{00123         \textcolor{keywordflow}{if}((tileManager.getTile(\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x, \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.height + 5).getCollision() \textcolor{comment}{//Checks collision with tile beneath of the character}}
-\DoxyCodeLine{00124         || tileManager.getTile(\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.width, \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.height + 5).getCollision()) \&\& \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}} == 1)\{}
-\DoxyCodeLine{00125             \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} = tileManager.getTile(\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x,\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y).getPos()[1] -\/1;        \textcolor{comment}{//Prevent moving if collidable terrain}}
-\DoxyCodeLine{00126         \}}
-\DoxyCodeLine{00127         \textcolor{keywordflow}{if}((tileManager.getTile(\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x -\/ 5, \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y).getCollision() \textcolor{comment}{//Checks collision with tile on the left of the character}}
-\DoxyCodeLine{00128         || tileManager.getTile(\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x -\/ 5, \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.height).getCollision()) \&\& \mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} == -\/1) \{}
-\DoxyCodeLine{00129             \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} = tileManager.getTile(\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x,\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y).getPos()[0] -\/ \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.width/2 ;    \textcolor{comment}{//Prevent moving if collidable terrain}}
-\DoxyCodeLine{00130         \}}
-\DoxyCodeLine{00131         \textcolor{keywordflow}{if}((tileManager.getTile(\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.width + 5, \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y).getCollision() \textcolor{comment}{//Checks collision with tile on the right of the character}}
-\DoxyCodeLine{00132         || tileManager.getTile(\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.width + 5, \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.height).getCollision()) \&\& \mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} == 1)\{}
-\DoxyCodeLine{00133             \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} = tileManager.getTile(\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x,\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y).getPos()[0] + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.width/2 -\/ 1;        \textcolor{comment}{//Prevent moving if collidable terrain}}
-\DoxyCodeLine{00134         \}}
-\DoxyCodeLine{00135     \}}
+\DoxyCodeLine{00118         \textcolor{keywordflow}{if}((tileManager.getTile(\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x, \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y -\/ 5).getCollision() \textcolor{comment}{//Checks collision with tile on top of the character}}
+\DoxyCodeLine{00119         || tileManager.getTile(\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.width , \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y -\/ 5).getCollision() )\&\&  \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}} == -\/1) \{}
+\DoxyCodeLine{00120             \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} = tileManager.getTile(\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x,\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y).getPos()[1] -\/ \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.height;    \textcolor{comment}{//Prevent moving if collidable terrain}}
+\DoxyCodeLine{00121         \}}
+\DoxyCodeLine{00122         \textcolor{keywordflow}{if}((tileManager.getTile(\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x, \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.height + 5).getCollision() \textcolor{comment}{//Checks collision with tile beneath of the character}}
+\DoxyCodeLine{00123         || tileManager.getTile(\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.width, \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.height + 5).getCollision()) \&\& \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}} == 1)\{}
+\DoxyCodeLine{00124             \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} = tileManager.getTile(\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x,\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y).getPos()[1] -\/1;        \textcolor{comment}{//Prevent moving if collidable terrain}}
+\DoxyCodeLine{00125         \}}
+\DoxyCodeLine{00126         \textcolor{keywordflow}{if}((tileManager.getTile(\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x -\/ 5, \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y).getCollision() \textcolor{comment}{//Checks collision with tile on the left of the character}}
+\DoxyCodeLine{00127         || tileManager.getTile(\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x -\/ 5, \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.height).getCollision()) \&\& \mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} == -\/1) \{}
+\DoxyCodeLine{00128             \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} = tileManager.getTile(\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x,\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y).getPos()[0] -\/ \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.width/2 ;    \textcolor{comment}{//Prevent moving if collidable terrain}}
+\DoxyCodeLine{00129         \}}
+\DoxyCodeLine{00130         \textcolor{keywordflow}{if}((tileManager.getTile(\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.width + 5, \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y).getCollision() \textcolor{comment}{//Checks collision with tile on the right of the character}}
+\DoxyCodeLine{00131         || tileManager.getTile(\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.width + 5, \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.height).getCollision()) \&\& \mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} == 1)\{}
+\DoxyCodeLine{00132             \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} = tileManager.getTile(\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.x,\mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.y).getPos()[0] + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.width/2 -\/ 1;        \textcolor{comment}{//Prevent moving if collidable terrain}}
+\DoxyCodeLine{00133         \}}
+\DoxyCodeLine{00134     \}}
 
 \end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
@@ -269,8 +265,7 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{classentity_1_1_character_aeee6d959ceb691d58104656642f828fc_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -294,17 +289,16 @@ Decelerates the character\textquotesingle{}s speed.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_character_8java_source_l00185}{185}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
+Definition at line \mbox{\hyperlink{_character_8java_source_l00184}{184}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00185                                                     \{}
-\DoxyCodeLine{00186         \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} -\/= factor*dt;}
-\DoxyCodeLine{00187     \}}
+\DoxyCodeLine{00184                                                     \{}
+\DoxyCodeLine{00185         \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} -\/= factor*dt;}
+\DoxyCodeLine{00186     \}}
 
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -332,63 +326,63 @@ Draws the character in the world scene.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_character_8java_source_l00219}{219}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
+Definition at line \mbox{\hyperlink{_character_8java_source_l00218}{218}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00219                                                                      \{}
-\DoxyCodeLine{00220         BufferedImage image = \textcolor{keyword}{null};}
-\DoxyCodeLine{00221         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} == 0) \{ \textcolor{comment}{// IDLE ANIMATIONS}}
-\DoxyCodeLine{00222             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classentity_1_1_entity_af6b442584a7caf6e84e73872f9f8e080}{\_spriteCntMax}}; i++) \{}
-\DoxyCodeLine{00223                 \textcolor{keywordflow}{switch} (\mbox{\hyperlink{classentity_1_1_character_a249d5d0b8f600f332b5715e93f83668d}{facing}}) \{}
-\DoxyCodeLine{00224                     \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}up"{}}:}
-\DoxyCodeLine{00225                         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}} == i) image = \mbox{\hyperlink{classentity_1_1_character_a17c079a2829f8df0b6905939695da06a}{\_idle\_up}}[i];}
-\DoxyCodeLine{00226                         \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00227                     \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}down"{}}:}
-\DoxyCodeLine{00228                         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}} == i) image = \mbox{\hyperlink{classentity_1_1_character_ad868c4663c2b2a03eabf7d079bc0290f}{\_idle\_down}}[i];}
-\DoxyCodeLine{00229                         \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00230                     \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}left"{}}:}
-\DoxyCodeLine{00231                         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}} == i) image = \mbox{\hyperlink{classentity_1_1_character_a147002d1dbc06ed223ee52d4ea16accb}{\_idle\_left}}[i];}
-\DoxyCodeLine{00232                         \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00233                     \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}right"{}}:}
-\DoxyCodeLine{00234                         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}} == i) image = \mbox{\hyperlink{classentity_1_1_character_af58d7b8dea3d200104e64eec7c174f48}{\_idle\_right}}[i];}
-\DoxyCodeLine{00235                         \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00236                 \}}
-\DoxyCodeLine{00237             \}}
-\DoxyCodeLine{00238         \}}
-\DoxyCodeLine{00239         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} > 0) \{ \textcolor{comment}{// WALKING ANIMATIONS}}
-\DoxyCodeLine{00240             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classentity_1_1_entity_af6b442584a7caf6e84e73872f9f8e080}{\_spriteCntMax}}; i++) \{}
-\DoxyCodeLine{00241                 \textcolor{keywordflow}{switch} (\mbox{\hyperlink{classentity_1_1_character_a249d5d0b8f600f332b5715e93f83668d}{facing}}) \{}
-\DoxyCodeLine{00242                     \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}up"{}}:}
-\DoxyCodeLine{00243                         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}} == i) image = \mbox{\hyperlink{classentity_1_1_character_a10a24e019ad08ce7236f5dab6edb668d}{\_walk\_up}}[i];}
-\DoxyCodeLine{00244                         \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00245                     \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}down"{}}:}
-\DoxyCodeLine{00246                         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}} == i) image = \mbox{\hyperlink{classentity_1_1_character_ae6680e0a3694b8321f074a206dd15b4c}{\_walk\_down}}[i];}
-\DoxyCodeLine{00247                         \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00248                     \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}left"{}}:}
-\DoxyCodeLine{00249                         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}} == i) image = \mbox{\hyperlink{classentity_1_1_character_ac548fc202ded76d7652997c57d1e4dcb}{\_walk\_left}}[i];}
-\DoxyCodeLine{00250                         \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00251                     \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}right"{}}:}
-\DoxyCodeLine{00252                         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}} == i) image = \mbox{\hyperlink{classentity_1_1_character_af0c4c9cfad4aa70ea8d45fb4d7ddded3}{\_walk\_right}}[i];}
-\DoxyCodeLine{00253                         \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00254                 \}}
-\DoxyCodeLine{00255             \}}
-\DoxyCodeLine{00256         \}}
-\DoxyCodeLine{00257         }
-\DoxyCodeLine{00258 }
-\DoxyCodeLine{00259         \textcolor{keywordtype}{int} playerScreenX = (Const.WDW\_width -\/ Const.WRLD\_entityScreenSize) / 2;}
-\DoxyCodeLine{00260         \textcolor{keywordtype}{int} playerScreenY = (Const.WDW\_height -\/ Const.WRLD\_entityScreenSize) / 2;}
-\DoxyCodeLine{00261 }
-\DoxyCodeLine{00262         \textcolor{comment}{//Checking if we need to draw enemy or not}}
-\DoxyCodeLine{00263         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} + Const.WRLD\_tileScreenSize > \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} -\/ playerScreenX}
-\DoxyCodeLine{00264         \&\& \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} -\/ Const.WRLD\_tileScreenSize < \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} + playerScreenX}
-\DoxyCodeLine{00265         \&\& \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} + Const.WRLD\_tileScreenSize > \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} -\/ playerScreenY}
-\DoxyCodeLine{00266         \&\& \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} -\/ Const.WRLD\_tileScreenSize < \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} + playerScreenY) \{}
-\DoxyCodeLine{00267                         }
-\DoxyCodeLine{00268             g2.drawImage(image, screenX, screenY, Const.WRLD\_entityScreenSize, Const.WRLD\_entityScreenSize, \textcolor{keyword}{null});}
-\DoxyCodeLine{00269             \textcolor{comment}{//g2.drawRect(screenX + hitbox.width / 2, screenY + hitbox.height, hitbox.width, hitbox.height); //hitbox debug purposes}}
-\DoxyCodeLine{00270         \}}
-\DoxyCodeLine{00271     \}}
+\DoxyCodeLine{00218                                                                      \{}
+\DoxyCodeLine{00219         BufferedImage image = \textcolor{keyword}{null};}
+\DoxyCodeLine{00220         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} == 0) \{ \textcolor{comment}{// IDLE ANIMATIONS}}
+\DoxyCodeLine{00221             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classentity_1_1_entity_af6b442584a7caf6e84e73872f9f8e080}{\_spriteCntMax}}; i++) \{}
+\DoxyCodeLine{00222                 \textcolor{keywordflow}{switch} (\mbox{\hyperlink{classentity_1_1_character_a249d5d0b8f600f332b5715e93f83668d}{facing}}) \{}
+\DoxyCodeLine{00223                     \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}up"{}}:}
+\DoxyCodeLine{00224                         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}} == i) image = \mbox{\hyperlink{classentity_1_1_character_a17c079a2829f8df0b6905939695da06a}{\_idle\_up}}[i];}
+\DoxyCodeLine{00225                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00226                     \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}down"{}}:}
+\DoxyCodeLine{00227                         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}} == i) image = \mbox{\hyperlink{classentity_1_1_character_ad868c4663c2b2a03eabf7d079bc0290f}{\_idle\_down}}[i];}
+\DoxyCodeLine{00228                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00229                     \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}left"{}}:}
+\DoxyCodeLine{00230                         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}} == i) image = \mbox{\hyperlink{classentity_1_1_character_a147002d1dbc06ed223ee52d4ea16accb}{\_idle\_left}}[i];}
+\DoxyCodeLine{00231                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00232                     \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}right"{}}:}
+\DoxyCodeLine{00233                         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}} == i) image = \mbox{\hyperlink{classentity_1_1_character_af58d7b8dea3d200104e64eec7c174f48}{\_idle\_right}}[i];}
+\DoxyCodeLine{00234                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00235                 \}}
+\DoxyCodeLine{00236             \}}
+\DoxyCodeLine{00237         \}}
+\DoxyCodeLine{00238         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} > 0) \{ \textcolor{comment}{// WALKING ANIMATIONS}}
+\DoxyCodeLine{00239             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classentity_1_1_entity_af6b442584a7caf6e84e73872f9f8e080}{\_spriteCntMax}}; i++) \{}
+\DoxyCodeLine{00240                 \textcolor{keywordflow}{switch} (\mbox{\hyperlink{classentity_1_1_character_a249d5d0b8f600f332b5715e93f83668d}{facing}}) \{}
+\DoxyCodeLine{00241                     \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}up"{}}:}
+\DoxyCodeLine{00242                         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}} == i) image = \mbox{\hyperlink{classentity_1_1_character_a10a24e019ad08ce7236f5dab6edb668d}{\_walk\_up}}[i];}
+\DoxyCodeLine{00243                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00244                     \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}down"{}}:}
+\DoxyCodeLine{00245                         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}} == i) image = \mbox{\hyperlink{classentity_1_1_character_ae6680e0a3694b8321f074a206dd15b4c}{\_walk\_down}}[i];}
+\DoxyCodeLine{00246                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00247                     \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}left"{}}:}
+\DoxyCodeLine{00248                         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}} == i) image = \mbox{\hyperlink{classentity_1_1_character_ac548fc202ded76d7652997c57d1e4dcb}{\_walk\_left}}[i];}
+\DoxyCodeLine{00249                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00250                     \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}right"{}}:}
+\DoxyCodeLine{00251                         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_ac2155957d9e77504c3c6078183d19c63}{\_spriteCnt}} == i) image = \mbox{\hyperlink{classentity_1_1_character_af0c4c9cfad4aa70ea8d45fb4d7ddded3}{\_walk\_right}}[i];}
+\DoxyCodeLine{00252                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00253                 \}}
+\DoxyCodeLine{00254             \}}
+\DoxyCodeLine{00255         \}}
+\DoxyCodeLine{00256         }
+\DoxyCodeLine{00257 }
+\DoxyCodeLine{00258         \textcolor{keywordtype}{int} playerScreenX = (Const.WDW\_width -\/ Const.WRLD\_entityScreenSize) / 2;}
+\DoxyCodeLine{00259         \textcolor{keywordtype}{int} playerScreenY = (Const.WDW\_height -\/ Const.WRLD\_entityScreenSize) / 2;}
+\DoxyCodeLine{00260 }
+\DoxyCodeLine{00261         \textcolor{comment}{//Checking if we need to draw enemy or not}}
+\DoxyCodeLine{00262         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} + Const.WRLD\_tileScreenSize > \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} -\/ playerScreenX}
+\DoxyCodeLine{00263         \&\& \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} -\/ Const.WRLD\_tileScreenSize < \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} + playerScreenX}
+\DoxyCodeLine{00264         \&\& \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} + Const.WRLD\_tileScreenSize > \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} -\/ playerScreenY}
+\DoxyCodeLine{00265         \&\& \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} -\/ Const.WRLD\_tileScreenSize < \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} + playerScreenY) \{}
+\DoxyCodeLine{00266                         }
+\DoxyCodeLine{00267             g2.drawImage(image, screenX, screenY, Const.WRLD\_entityScreenSize, Const.WRLD\_entityScreenSize, \textcolor{keyword}{null});}
+\DoxyCodeLine{00268             \textcolor{comment}{//g2.drawRect(screenX + hitbox.width / 2, screenY + hitbox.height, hitbox.width, hitbox.height); //hitbox debug purposes}}
+\DoxyCodeLine{00269         \}}
+\DoxyCodeLine{00270     \}}
 
 \end{DoxyCode}
 Here is the caller graph for this function\+:\nopagebreak
@@ -415,28 +409,28 @@ Loads character textures based on the specified name.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_character_8java_source_l00193}{193}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
+Definition at line \mbox{\hyperlink{_character_8java_source_l00192}{192}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00193                                              \{}
-\DoxyCodeLine{00194         \textcolor{keywordflow}{try} \{}
-\DoxyCodeLine{00195             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classentity_1_1_entity_af6b442584a7caf6e84e73872f9f8e080}{\_spriteCntMax}}; i++) \{}
-\DoxyCodeLine{00196                 \mbox{\hyperlink{classentity_1_1_character_a17c079a2829f8df0b6905939695da06a}{\_idle\_up}}[i] = ImageIO.read(\textcolor{keyword}{new} FileInputStream(\textcolor{stringliteral}{"{}res/entity/character/idle/"{}} + \mbox{\hyperlink{classentity_1_1_entity_a19fc9a3b25d27f23c8ada7af8e746a17}{name}} + \textcolor{stringliteral}{"{}/up"{}} + (i + 1) + \textcolor{stringliteral}{"{}.png"{}}));}
-\DoxyCodeLine{00197                 \mbox{\hyperlink{classentity_1_1_character_ad868c4663c2b2a03eabf7d079bc0290f}{\_idle\_down}}[i] = ImageIO.read(\textcolor{keyword}{new} FileInputStream(\textcolor{stringliteral}{"{}res/entity/character/idle/"{}} + \mbox{\hyperlink{classentity_1_1_entity_a19fc9a3b25d27f23c8ada7af8e746a17}{name}} + \textcolor{stringliteral}{"{}/down"{}} + (i + 1) + \textcolor{stringliteral}{"{}.png"{}}));}
-\DoxyCodeLine{00198                 \mbox{\hyperlink{classentity_1_1_character_a147002d1dbc06ed223ee52d4ea16accb}{\_idle\_left}}[i] = ImageIO.read(\textcolor{keyword}{new} FileInputStream(\textcolor{stringliteral}{"{}res/entity/character/idle/"{}} + \mbox{\hyperlink{classentity_1_1_entity_a19fc9a3b25d27f23c8ada7af8e746a17}{name}} + \textcolor{stringliteral}{"{}/left"{}} + (i + 1) + \textcolor{stringliteral}{"{}.png"{}}));}
-\DoxyCodeLine{00199                 \mbox{\hyperlink{classentity_1_1_character_af58d7b8dea3d200104e64eec7c174f48}{\_idle\_right}}[i] = ImageIO.read(\textcolor{keyword}{new} FileInputStream(\textcolor{stringliteral}{"{}res/entity/character/idle/"{}} + \mbox{\hyperlink{classentity_1_1_entity_a19fc9a3b25d27f23c8ada7af8e746a17}{name}} + \textcolor{stringliteral}{"{}/right"{}} + (i + 1) + \textcolor{stringliteral}{"{}.png"{}}));}
-\DoxyCodeLine{00200 }
-\DoxyCodeLine{00201                 \mbox{\hyperlink{classentity_1_1_character_a10a24e019ad08ce7236f5dab6edb668d}{\_walk\_up}}[i] = ImageIO.read(\textcolor{keyword}{new} FileInputStream(\textcolor{stringliteral}{"{}res/entity/character/walk/"{}} + \mbox{\hyperlink{classentity_1_1_entity_a19fc9a3b25d27f23c8ada7af8e746a17}{name}} + \textcolor{stringliteral}{"{}/up"{}} + (i + 1) + \textcolor{stringliteral}{"{}.png"{}}));}
-\DoxyCodeLine{00202                 \mbox{\hyperlink{classentity_1_1_character_ae6680e0a3694b8321f074a206dd15b4c}{\_walk\_down}}[i] = ImageIO.read(\textcolor{keyword}{new} FileInputStream(\textcolor{stringliteral}{"{}res/entity/character/walk/"{}} + \mbox{\hyperlink{classentity_1_1_entity_a19fc9a3b25d27f23c8ada7af8e746a17}{name}} + \textcolor{stringliteral}{"{}/down"{}} + (i + 1) + \textcolor{stringliteral}{"{}.png"{}}));}
-\DoxyCodeLine{00203                 \mbox{\hyperlink{classentity_1_1_character_ac548fc202ded76d7652997c57d1e4dcb}{\_walk\_left}}[i] = ImageIO.read(\textcolor{keyword}{new} FileInputStream(\textcolor{stringliteral}{"{}res/entity/character/walk/"{}} + \mbox{\hyperlink{classentity_1_1_entity_a19fc9a3b25d27f23c8ada7af8e746a17}{name}} + \textcolor{stringliteral}{"{}/left"{}} + (i + 1) + \textcolor{stringliteral}{"{}.png"{}}));}
-\DoxyCodeLine{00204                 \mbox{\hyperlink{classentity_1_1_character_af0c4c9cfad4aa70ea8d45fb4d7ddded3}{\_walk\_right}}[i] = ImageIO.read(\textcolor{keyword}{new} FileInputStream(\textcolor{stringliteral}{"{}res/entity/character/walk/"{}} + \mbox{\hyperlink{classentity_1_1_entity_a19fc9a3b25d27f23c8ada7af8e746a17}{name}} + \textcolor{stringliteral}{"{}/right"{}} + (i + 1) + \textcolor{stringliteral}{"{}.png"{}}));}
-\DoxyCodeLine{00205             \}}
-\DoxyCodeLine{00206 }
-\DoxyCodeLine{00207         \} \textcolor{keywordflow}{catch} (IOException e) \{}
-\DoxyCodeLine{00208             e.printStackTrace();}
-\DoxyCodeLine{00209         \}}
-\DoxyCodeLine{00210     \}}
+\DoxyCodeLine{00192                                              \{}
+\DoxyCodeLine{00193         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{00194             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classentity_1_1_entity_af6b442584a7caf6e84e73872f9f8e080}{\_spriteCntMax}}; i++) \{}
+\DoxyCodeLine{00195                 \mbox{\hyperlink{classentity_1_1_character_a17c079a2829f8df0b6905939695da06a}{\_idle\_up}}[i] = ImageIO.read(\textcolor{keyword}{new} FileInputStream(\textcolor{stringliteral}{"{}res/entity/character/idle/"{}} + \mbox{\hyperlink{classentity_1_1_entity_a19fc9a3b25d27f23c8ada7af8e746a17}{name}} + \textcolor{stringliteral}{"{}/up"{}} + (i + 1) + \textcolor{stringliteral}{"{}.png"{}}));}
+\DoxyCodeLine{00196                 \mbox{\hyperlink{classentity_1_1_character_ad868c4663c2b2a03eabf7d079bc0290f}{\_idle\_down}}[i] = ImageIO.read(\textcolor{keyword}{new} FileInputStream(\textcolor{stringliteral}{"{}res/entity/character/idle/"{}} + \mbox{\hyperlink{classentity_1_1_entity_a19fc9a3b25d27f23c8ada7af8e746a17}{name}} + \textcolor{stringliteral}{"{}/down"{}} + (i + 1) + \textcolor{stringliteral}{"{}.png"{}}));}
+\DoxyCodeLine{00197                 \mbox{\hyperlink{classentity_1_1_character_a147002d1dbc06ed223ee52d4ea16accb}{\_idle\_left}}[i] = ImageIO.read(\textcolor{keyword}{new} FileInputStream(\textcolor{stringliteral}{"{}res/entity/character/idle/"{}} + \mbox{\hyperlink{classentity_1_1_entity_a19fc9a3b25d27f23c8ada7af8e746a17}{name}} + \textcolor{stringliteral}{"{}/left"{}} + (i + 1) + \textcolor{stringliteral}{"{}.png"{}}));}
+\DoxyCodeLine{00198                 \mbox{\hyperlink{classentity_1_1_character_af58d7b8dea3d200104e64eec7c174f48}{\_idle\_right}}[i] = ImageIO.read(\textcolor{keyword}{new} FileInputStream(\textcolor{stringliteral}{"{}res/entity/character/idle/"{}} + \mbox{\hyperlink{classentity_1_1_entity_a19fc9a3b25d27f23c8ada7af8e746a17}{name}} + \textcolor{stringliteral}{"{}/right"{}} + (i + 1) + \textcolor{stringliteral}{"{}.png"{}}));}
+\DoxyCodeLine{00199 }
+\DoxyCodeLine{00200                 \mbox{\hyperlink{classentity_1_1_character_a10a24e019ad08ce7236f5dab6edb668d}{\_walk\_up}}[i] = ImageIO.read(\textcolor{keyword}{new} FileInputStream(\textcolor{stringliteral}{"{}res/entity/character/walk/"{}} + \mbox{\hyperlink{classentity_1_1_entity_a19fc9a3b25d27f23c8ada7af8e746a17}{name}} + \textcolor{stringliteral}{"{}/up"{}} + (i + 1) + \textcolor{stringliteral}{"{}.png"{}}));}
+\DoxyCodeLine{00201                 \mbox{\hyperlink{classentity_1_1_character_ae6680e0a3694b8321f074a206dd15b4c}{\_walk\_down}}[i] = ImageIO.read(\textcolor{keyword}{new} FileInputStream(\textcolor{stringliteral}{"{}res/entity/character/walk/"{}} + \mbox{\hyperlink{classentity_1_1_entity_a19fc9a3b25d27f23c8ada7af8e746a17}{name}} + \textcolor{stringliteral}{"{}/down"{}} + (i + 1) + \textcolor{stringliteral}{"{}.png"{}}));}
+\DoxyCodeLine{00202                 \mbox{\hyperlink{classentity_1_1_character_ac548fc202ded76d7652997c57d1e4dcb}{\_walk\_left}}[i] = ImageIO.read(\textcolor{keyword}{new} FileInputStream(\textcolor{stringliteral}{"{}res/entity/character/walk/"{}} + \mbox{\hyperlink{classentity_1_1_entity_a19fc9a3b25d27f23c8ada7af8e746a17}{name}} + \textcolor{stringliteral}{"{}/left"{}} + (i + 1) + \textcolor{stringliteral}{"{}.png"{}}));}
+\DoxyCodeLine{00203                 \mbox{\hyperlink{classentity_1_1_character_af0c4c9cfad4aa70ea8d45fb4d7ddded3}{\_walk\_right}}[i] = ImageIO.read(\textcolor{keyword}{new} FileInputStream(\textcolor{stringliteral}{"{}res/entity/character/walk/"{}} + \mbox{\hyperlink{classentity_1_1_entity_a19fc9a3b25d27f23c8ada7af8e746a17}{name}} + \textcolor{stringliteral}{"{}/right"{}} + (i + 1) + \textcolor{stringliteral}{"{}.png"{}}));}
+\DoxyCodeLine{00204             \}}
+\DoxyCodeLine{00205 }
+\DoxyCodeLine{00206         \} \textcolor{keywordflow}{catch} (IOException e) \{}
+\DoxyCodeLine{00207             e.printStackTrace();}
+\DoxyCodeLine{00208         \}}
+\DoxyCodeLine{00209     \}}
 
 \end{DoxyCode}
 Here is the caller graph for this function\+:\nopagebreak
@@ -467,35 +461,34 @@ Moves the character in the world based on its direction, speed, and the elapsed 
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_character_8java_source_l00145}{145}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
+Definition at line \mbox{\hyperlink{_character_8java_source_l00144}{144}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00145                                                            \{}
-\DoxyCodeLine{00146         \textcolor{keywordflow}{if} ((\mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} == 0 \&\& \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}} != 0) || (\mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}} == 0 \&\& \mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} != 0)) \{}
-\DoxyCodeLine{00147             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} == 1) \{}
-\DoxyCodeLine{00148                 \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} += \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} * dt;}
-\DoxyCodeLine{00149             \}}
-\DoxyCodeLine{00150             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} == -\/1) \{}
-\DoxyCodeLine{00151                 \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} -\/= \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} * dt;}
-\DoxyCodeLine{00152             \}}
-\DoxyCodeLine{00153             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}} == 1) \{}
-\DoxyCodeLine{00154                 \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} += \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} * dt;}
-\DoxyCodeLine{00155             \}}
-\DoxyCodeLine{00156             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}} == -\/1) \{}
-\DoxyCodeLine{00157                 \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} -\/= \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} * dt;}
-\DoxyCodeLine{00158             \}}
-\DoxyCodeLine{00159         \}}
-\DoxyCodeLine{00160         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} != 0 \&\& \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}} != 0) \{}
-\DoxyCodeLine{00161             \textcolor{keywordtype}{double} normSum = Math.sqrt(\mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} * \mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} + \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}} * \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}});      \textcolor{comment}{//Normalizing vector}}
-\DoxyCodeLine{00162             \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} += (\mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} / normSum) * \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} * dt;}
-\DoxyCodeLine{00163             \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} += (\mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}} / normSum) * \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} * dt;}
-\DoxyCodeLine{00164         \}}
-\DoxyCodeLine{00165     \}}
+\DoxyCodeLine{00144                                                            \{}
+\DoxyCodeLine{00145         \textcolor{keywordflow}{if} ((\mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} == 0 \&\& \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}} != 0) || (\mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}} == 0 \&\& \mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} != 0)) \{}
+\DoxyCodeLine{00146             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} == 1) \{}
+\DoxyCodeLine{00147                 \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} += \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} * dt;}
+\DoxyCodeLine{00148             \}}
+\DoxyCodeLine{00149             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} == -\/1) \{}
+\DoxyCodeLine{00150                 \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} -\/= \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} * dt;}
+\DoxyCodeLine{00151             \}}
+\DoxyCodeLine{00152             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}} == 1) \{}
+\DoxyCodeLine{00153                 \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} += \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} * dt;}
+\DoxyCodeLine{00154             \}}
+\DoxyCodeLine{00155             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}} == -\/1) \{}
+\DoxyCodeLine{00156                 \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} -\/= \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} * dt;}
+\DoxyCodeLine{00157             \}}
+\DoxyCodeLine{00158         \}}
+\DoxyCodeLine{00159         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} != 0 \&\& \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}} != 0) \{}
+\DoxyCodeLine{00160             \textcolor{keywordtype}{double} normSum = Math.sqrt(\mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} * \mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} + \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}} * \mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}});      \textcolor{comment}{//Normalizing vector}}
+\DoxyCodeLine{00161             \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} += (\mbox{\hyperlink{classentity_1_1_character_a71d9fd51a7255f0acfcbe9a3dfe3f30c}{dirX}} / normSum) * \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} * dt;}
+\DoxyCodeLine{00162             \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} += (\mbox{\hyperlink{classentity_1_1_character_a53d3f8e3cc8c7297d94092dada79588c}{dirY}} / normSum) * \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}} * dt;}
+\DoxyCodeLine{00163         \}}
+\DoxyCodeLine{00164     \}}
 
 \end{DoxyCode}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -514,8 +507,6 @@ Updates the character entity based on the current scene and time elapsed.
 
 
 \begin{DoxyParams}{Parameters}
-{\em scene} & The current game scene. \\
-\hline
 {\em dt} & The time elapsed since the last update. \\
 \hline
 \end{DoxyParams}
@@ -525,30 +516,29 @@ Reimplemented in \mbox{\hyperlink{classentity_1_1_enemy_a9d6df16ce4a30385b8876a7
 
 
 
-Definition at line \mbox{\hyperlink{_character_8java_source_l00094}{94}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
+Definition at line \mbox{\hyperlink{_character_8java_source_l00093}{93}} of file \mbox{\hyperlink{_character_8java_source}{Character.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00094                                   \{}
-\DoxyCodeLine{00095         \textcolor{keywordflow}{if} (Scene.state == Const.State.WORLD) \{}
-\DoxyCodeLine{00096             World currWorld = World.getWorld();}
-\DoxyCodeLine{00097 }
-\DoxyCodeLine{00098             hitbox.x = \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} + hitbox.width / 2;}
-\DoxyCodeLine{00099             hitbox.y = \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.height;}
-\DoxyCodeLine{00100 }
-\DoxyCodeLine{00101             \textcolor{comment}{// CHECK THE COLLISION}}
-\DoxyCodeLine{00102             \mbox{\hyperlink{classentity_1_1_character_a6d3e0c3ebf51d3728acd70c5a5654090}{move}}(World.getWorld(), \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}}, dt);}
-\DoxyCodeLine{00103             \mbox{\hyperlink{classentity_1_1_character_aeee6d959ceb691d58104656642f828fc}{checkTileCollision}}(currWorld.tileManager);}
+\DoxyCodeLine{00093                                   \{}
+\DoxyCodeLine{00094         \textcolor{keywordflow}{if} (Scene.state == Const.State.WORLD) \{}
+\DoxyCodeLine{00095             World currWorld = World.getWorld();}
+\DoxyCodeLine{00096 }
+\DoxyCodeLine{00097             hitbox.x = \mbox{\hyperlink{classentity_1_1_entity_a1e32a2c118ea8db4ad607cfc1a8beabe}{worldX}} + hitbox.width / 2;}
+\DoxyCodeLine{00098             hitbox.y = \mbox{\hyperlink{classentity_1_1_entity_a7bde61b88f69e437b0d21df86698a7a0}{worldY}} + \mbox{\hyperlink{classentity_1_1_entity_a5b026458182ab12ddcacb2858eca0a41}{hitbox}}.height;}
+\DoxyCodeLine{00099 }
+\DoxyCodeLine{00100             \textcolor{comment}{// CHECK THE COLLISION}}
+\DoxyCodeLine{00101             \mbox{\hyperlink{classentity_1_1_character_a6d3e0c3ebf51d3728acd70c5a5654090}{move}}(World.getWorld(), \mbox{\hyperlink{classentity_1_1_character_a0da5fea00de1694fcfb0571bca60ebd7}{speed}}, dt);}
+\DoxyCodeLine{00102             \mbox{\hyperlink{classentity_1_1_character_aeee6d959ceb691d58104656642f828fc}{checkTileCollision}}(currWorld.tileManager);}
+\DoxyCodeLine{00103             }
 \DoxyCodeLine{00104             }
-\DoxyCodeLine{00105             }
-\DoxyCodeLine{00106 }
-\DoxyCodeLine{00107             \mbox{\hyperlink{classentity_1_1_entity_a41e81bb1c3a3e86f3f43aa39d8fbb748}{updateFrames}}();}
-\DoxyCodeLine{00108         \}}
-\DoxyCodeLine{00109     \}}
+\DoxyCodeLine{00105 }
+\DoxyCodeLine{00106             \mbox{\hyperlink{classentity_1_1_entity_a41e81bb1c3a3e86f3f43aa39d8fbb748}{updateFrames}}();}
+\DoxyCodeLine{00107         \}}
+\DoxyCodeLine{00108     \}}
 
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

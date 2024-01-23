@@ -2,43 +2,51 @@
 \label{class_u_i_1_1_choice_button}\index{UI.ChoiceButton@{UI.ChoiceButton}}
 
 
-Collaboration diagram for UI.\+Choice\+Button\+:
-\nopagebreak
+Represents a clickable button with associated text and appearance settings.  
+
+
+
+
+Collaboration diagram for UI.\+Choice\+Button\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=244pt]{class_u_i_1_1_choice_button__coll__graph}
+\includegraphics[width=315pt]{class_u_i_1_1_choice_button__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_u_i_1_1_choice_button_a294842049466c9c08efadc34133dfb92}{Choice\+Button}} (int w, int h, String title, String font\+Name, Color font\+Color)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{class_u_i_1_1_choice_button}{Choice\+Button}} class. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_u_i_1_1_choice_button_a72e2bde42a5a426ffa1686e4b724afa1}{set\+Text\+Color}} (Color new\+Color)
-\begin{DoxyCompactList}\small\item\em Setter func to change a button\textquotesingle{}s text color. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Setter function to change the button\textquotesingle{}s text color. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_choice_button_a6cd72943d413641b20c66d680e6af03e}{set\+Bg\+Color}} (Color new\+Color)
+\begin{DoxyCompactList}\small\item\em Setter function to change the button\textquotesingle{}s background color. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_u_i_1_1_choice_button_a1000744853168892a77f3aaa14886739}{draw}} (Graphics2D g2, int x, int y)
-\begin{DoxyCompactList}\small\item\em Draws a button (rectangle) on the screen at x,y coords (top left) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Draws a button (rectangle) on the screen at specified coordinates (top left). \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{class_u_i_1_1_choice_button_a1e99b395d0551ce2a7e867a40f7ccdeb}{width}}
-\item 
+\begin{DoxyCompactList}\small\item\em Width of the button. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_u_i_1_1_choice_button_a63b5743b35bdb35e849f314efd401e54}{height}}
-\item 
+\begin{DoxyCompactList}\small\item\em Height of the button. \end{DoxyCompactList}\item 
 boolean \mbox{\hyperlink{class_u_i_1_1_choice_button_a6a39521c631777e9d8063efcfaeae55c}{highlighted}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Flag indicating whether the button is highlighted. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_u_i_1_1_textbox}{Textbox}} \mbox{\hyperlink{class_u_i_1_1_choice_button_aef1f2977be8b76a11ac2c5e78ccf54a4}{\+\_\+text\+Box}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_u_i_1_1_textbox}{Textbox}} associated with the button. \end{DoxyCompactList}\item 
+Color \mbox{\hyperlink{class_u_i_1_1_choice_button_a2810fb3ba962f7759ab7da4b17141546}{\+\_\+bg\+Color}}
+\begin{DoxyCompactList}\small\item\em Background color of the button. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+Represents a clickable button with associated text and appearance settings. 
 
-
-Definition at line \mbox{\hyperlink{_choice_button_8java_source_l00013}{13}} of file \mbox{\hyperlink{_choice_button_8java_source}{Choice\+Button.\+java}}.
+Definition at line \mbox{\hyperlink{_choice_button_8java_source_l00015}{15}} of file \mbox{\hyperlink{_choice_button_8java_source}{Choice\+Button.\+java}}.
 
 
 
@@ -51,16 +59,38 @@ Definition at line \mbox{\hyperlink{_choice_button_8java_source_l00013}{13}} of 
 
 
 
-Definition at line \mbox{\hyperlink{_choice_button_8java_source_l00018}{18}} of file \mbox{\hyperlink{_choice_button_8java_source}{Choice\+Button.\+java}}.
+Constructor for \mbox{\hyperlink{class_u_i_1_1_choice_button}{Choice\+Button}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & Width of the button. \\
+\hline
+{\em h} & Height of the button. \\
+\hline
+{\em title} & Text content of the button. \\
+\hline
+{\em font\+Name} & Font name for the text. \\
+\hline
+{\em font\+Color} & Font color for the text. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_choice_button_8java_source_l00049}{49}} of file \mbox{\hyperlink{_choice_button_8java_source}{Choice\+Button.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00018                                                                                     \{}
-\DoxyCodeLine{00019         this.width = w; this.height = h;}
-\DoxyCodeLine{00020         \mbox{\hyperlink{class_u_i_1_1_choice_button_a6a39521c631777e9d8063efcfaeae55c}{highlighted}} = \textcolor{keyword}{false};}
-\DoxyCodeLine{00021 }
-\DoxyCodeLine{00022         \mbox{\hyperlink{class_u_i_1_1_choice_button_aef1f2977be8b76a11ac2c5e78ccf54a4}{\_textBox}} = \textcolor{keyword}{new} Textbox(title,fontName,w,h,fontColor);}
-\DoxyCodeLine{00023     \}}
+\DoxyCodeLine{00049                                                                                      \{}
+\DoxyCodeLine{00050         this.width = w;}
+\DoxyCodeLine{00051         this.height = h;}
+\DoxyCodeLine{00052         \mbox{\hyperlink{class_u_i_1_1_choice_button_a6a39521c631777e9d8063efcfaeae55c}{highlighted}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{00053 }
+\DoxyCodeLine{00054         \textcolor{comment}{// Initialize the associated Textbox with specified parameters.}}
+\DoxyCodeLine{00055         \mbox{\hyperlink{class_u_i_1_1_choice_button_aef1f2977be8b76a11ac2c5e78ccf54a4}{\_textBox}} = \textcolor{keyword}{new} Textbox(title, fontName, w, h, fontColor);}
+\DoxyCodeLine{00056 }
+\DoxyCodeLine{00057         \textcolor{comment}{// Set default background color for the button.}}
+\DoxyCodeLine{00058         \mbox{\hyperlink{class_u_i_1_1_choice_button_a2810fb3ba962f7759ab7da4b17141546}{\_bgColor}} = \textcolor{keyword}{new} Color(0xA38168);}
+\DoxyCodeLine{00059     \}}
 
 \end{DoxyCode}
 
@@ -74,51 +104,84 @@ Definition at line \mbox{\hyperlink{_choice_button_8java_source_l00018}{18}} of 
 
 
 
-Draws a button (rectangle) on the screen at x,y coords (top left) 
+Draws a button (rectangle) on the screen at specified coordinates (top left). 
 
 
 \begin{DoxyParams}{Parameters}
-{\em g2} & //\+Graphics2D \\
+{\em g2} & Graphics2D object for drawing. \\
 \hline
-{\em x} & //x coord \\
+{\em x} & X-\/coordinate of the top-\/left corner of the button. \\
 \hline
-{\em y} & //y coord \\
+{\em y} & Y-\/coordinate of the top-\/left corner of the button. \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_choice_button_8java_source_l00039}{39}} of file \mbox{\hyperlink{_choice_button_8java_source}{Choice\+Button.\+java}}.
+Definition at line \mbox{\hyperlink{_choice_button_8java_source_l00083}{83}} of file \mbox{\hyperlink{_choice_button_8java_source}{Choice\+Button.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00039                                                  \{}
-\DoxyCodeLine{00040         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_u_i_1_1_choice_button_a6a39521c631777e9d8063efcfaeae55c}{highlighted}})\{}
-\DoxyCodeLine{00041             g2.setColor(Color.black);}
-\DoxyCodeLine{00042             g2.fillRect(x-\/2, y-\/2, \mbox{\hyperlink{class_u_i_1_1_choice_button_a1e99b395d0551ce2a7e867a40f7ccdeb}{width}} + 4, \mbox{\hyperlink{class_u_i_1_1_choice_button_a63b5743b35bdb35e849f314efd401e54}{height}} + 4);}
-\DoxyCodeLine{00043         \}}
-\DoxyCodeLine{00044         }
-\DoxyCodeLine{00045 }
-\DoxyCodeLine{00046         g2.setColor(\textcolor{keyword}{new} Color(0xA38168));}
-\DoxyCodeLine{00047         g2.fillRect(x,y,\mbox{\hyperlink{class_u_i_1_1_choice_button_a1e99b395d0551ce2a7e867a40f7ccdeb}{width}},\mbox{\hyperlink{class_u_i_1_1_choice_button_a63b5743b35bdb35e849f314efd401e54}{height}});}
-\DoxyCodeLine{00048 }
-\DoxyCodeLine{00049         \mbox{\hyperlink{class_u_i_1_1_choice_button_aef1f2977be8b76a11ac2c5e78ccf54a4}{\_textBox}}.\mbox{\hyperlink{class_u_i_1_1_textbox_aab675a99675e6ba3e03630cf973f2799}{draw}}(g2,x,y);}
-\DoxyCodeLine{00050     \}}
+\DoxyCodeLine{00083                                                  \{}
+\DoxyCodeLine{00084         \textcolor{comment}{// Draw a highlighted border if the button is highlighted.}}
+\DoxyCodeLine{00085         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_u_i_1_1_choice_button_a6a39521c631777e9d8063efcfaeae55c}{highlighted}})\{}
+\DoxyCodeLine{00086             g2.setColor(Color.black);}
+\DoxyCodeLine{00087             g2.fillRect(x-\/2, y-\/2, \mbox{\hyperlink{class_u_i_1_1_choice_button_a1e99b395d0551ce2a7e867a40f7ccdeb}{width}} + 4, \mbox{\hyperlink{class_u_i_1_1_choice_button_a63b5743b35bdb35e849f314efd401e54}{height}} + 4);}
+\DoxyCodeLine{00088         \}}
+\DoxyCodeLine{00089 }
+\DoxyCodeLine{00090         \textcolor{comment}{// Draw the button's background.}}
+\DoxyCodeLine{00091         g2.setColor(\mbox{\hyperlink{class_u_i_1_1_choice_button_a2810fb3ba962f7759ab7da4b17141546}{\_bgColor}});}
+\DoxyCodeLine{00092         g2.fillRect(x, y, \mbox{\hyperlink{class_u_i_1_1_choice_button_a1e99b395d0551ce2a7e867a40f7ccdeb}{width}}, \mbox{\hyperlink{class_u_i_1_1_choice_button_a63b5743b35bdb35e849f314efd401e54}{height}});}
+\DoxyCodeLine{00093 }
+\DoxyCodeLine{00094         \textcolor{comment}{// Draw the associated Textbox on the button.}}
+\DoxyCodeLine{00095         \mbox{\hyperlink{class_u_i_1_1_choice_button_aef1f2977be8b76a11ac2c5e78ccf54a4}{\_textBox}}.\mbox{\hyperlink{class_u_i_1_1_textbox_aab675a99675e6ba3e03630cf973f2799}{draw}}(g2, x, y);}
+\DoxyCodeLine{00096     \}}
 
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=333pt]{class_u_i_1_1_choice_button_a1000744853168892a77f3aaa14886739_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_u_i_1_1_choice_button_a1000744853168892a77f3aaa14886739_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_i_1_1_choice_button_a6cd72943d413641b20c66d680e6af03e}\label{class_u_i_1_1_choice_button_a6cd72943d413641b20c66d680e6af03e}} 
+\index{UI.ChoiceButton@{UI.ChoiceButton}!setBgColor@{setBgColor}}
+\index{setBgColor@{setBgColor}!UI.ChoiceButton@{UI.ChoiceButton}}
+\doxysubsubsection{\texorpdfstring{setBgColor()}{setBgColor()}}
+{\footnotesize\ttfamily void UI.\+Choice\+Button.\+set\+Bg\+Color (\begin{DoxyParamCaption}\item[{Color}]{new\+Color }\end{DoxyParamCaption})}
+
+
+
+Setter function to change the button\textquotesingle{}s background color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Color} & The new color to use for the background. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_choice_button_8java_source_l00073}{73}} of file \mbox{\hyperlink{_choice_button_8java_source}{Choice\+Button.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00073                                           \{}
+\DoxyCodeLine{00074         \mbox{\hyperlink{class_u_i_1_1_choice_button_a2810fb3ba962f7759ab7da4b17141546}{\_bgColor}} = newColor;}
+\DoxyCodeLine{00075     \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_1_1_choice_button_a6cd72943d413641b20c66d680e6af03e_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_u_i_1_1_choice_button_a72e2bde42a5a426ffa1686e4b724afa1}\label{class_u_i_1_1_choice_button_a72e2bde42a5a426ffa1686e4b724afa1}} 
@@ -129,34 +192,32 @@ Here is the caller graph for this function\+:
 
 
 
-Setter func to change a button\textquotesingle{}s text color. 
+Setter function to change the button\textquotesingle{}s text color. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em new\+Color} & The new color to use for the text \\
+{\em new\+Color} & The new color to use for the text. \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_choice_button_8java_source_l00029}{29}} of file \mbox{\hyperlink{_choice_button_8java_source}{Choice\+Button.\+java}}.
+Definition at line \mbox{\hyperlink{_choice_button_8java_source_l00065}{65}} of file \mbox{\hyperlink{_choice_button_8java_source}{Choice\+Button.\+java}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00029                                             \{}
-\DoxyCodeLine{00030         \mbox{\hyperlink{class_u_i_1_1_choice_button_aef1f2977be8b76a11ac2c5e78ccf54a4}{\_textBox}}.\mbox{\hyperlink{class_u_i_1_1_textbox_a4725a8ec93796dcc1a2aa14ad16952f6}{setColor}}(newColor);}
-\DoxyCodeLine{00031     \}}
+\DoxyCodeLine{00065                                             \{}
+\DoxyCodeLine{00066         \mbox{\hyperlink{class_u_i_1_1_choice_button_aef1f2977be8b76a11ac2c5e78ccf54a4}{\_textBox}}.\mbox{\hyperlink{class_u_i_1_1_textbox_a4725a8ec93796dcc1a2aa14ad16952f6}{setColor}}(newColor);}
+\DoxyCodeLine{00067     \}}
 
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_u_i_1_1_choice_button_a72e2bde42a5a426ffa1686e4b724afa1_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -166,6 +227,20 @@ Here is the caller graph for this function\+:
 
 
 \doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_u_i_1_1_choice_button_a2810fb3ba962f7759ab7da4b17141546}\label{class_u_i_1_1_choice_button_a2810fb3ba962f7759ab7da4b17141546}} 
+\index{UI.ChoiceButton@{UI.ChoiceButton}!\_bgColor@{\_bgColor}}
+\index{\_bgColor@{\_bgColor}!UI.ChoiceButton@{UI.ChoiceButton}}
+\doxysubsubsection{\texorpdfstring{\_bgColor}{\_bgColor}}
+{\footnotesize\ttfamily Color UI.\+Choice\+Button.\+\_\+bg\+Color\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Background color of the button. 
+
+
+
+Definition at line \mbox{\hyperlink{_choice_button_8java_source_l00039}{39}} of file \mbox{\hyperlink{_choice_button_8java_source}{Choice\+Button.\+java}}.
+
 \mbox{\Hypertarget{class_u_i_1_1_choice_button_aef1f2977be8b76a11ac2c5e78ccf54a4}\label{class_u_i_1_1_choice_button_aef1f2977be8b76a11ac2c5e78ccf54a4}} 
 \index{UI.ChoiceButton@{UI.ChoiceButton}!\_textBox@{\_textBox}}
 \index{\_textBox@{\_textBox}!UI.ChoiceButton@{UI.ChoiceButton}}
@@ -174,7 +249,11 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line \mbox{\hyperlink{_choice_button_8java_source_l00016}{16}} of file \mbox{\hyperlink{_choice_button_8java_source}{Choice\+Button.\+java}}.
+\mbox{\hyperlink{class_u_i_1_1_textbox}{Textbox}} associated with the button. 
+
+
+
+Definition at line \mbox{\hyperlink{_choice_button_8java_source_l00034}{34}} of file \mbox{\hyperlink{_choice_button_8java_source}{Choice\+Button.\+java}}.
 
 \mbox{\Hypertarget{class_u_i_1_1_choice_button_a63b5743b35bdb35e849f314efd401e54}\label{class_u_i_1_1_choice_button_a63b5743b35bdb35e849f314efd401e54}} 
 \index{UI.ChoiceButton@{UI.ChoiceButton}!height@{height}}
@@ -184,7 +263,11 @@ Definition at line \mbox{\hyperlink{_choice_button_8java_source_l00016}{16}} of 
 
 
 
-Definition at line \mbox{\hyperlink{_choice_button_8java_source_l00014}{14}} of file \mbox{\hyperlink{_choice_button_8java_source}{Choice\+Button.\+java}}.
+Height of the button. 
+
+
+
+Definition at line \mbox{\hyperlink{_choice_button_8java_source_l00024}{24}} of file \mbox{\hyperlink{_choice_button_8java_source}{Choice\+Button.\+java}}.
 
 \mbox{\Hypertarget{class_u_i_1_1_choice_button_a6a39521c631777e9d8063efcfaeae55c}\label{class_u_i_1_1_choice_button_a6a39521c631777e9d8063efcfaeae55c}} 
 \index{UI.ChoiceButton@{UI.ChoiceButton}!highlighted@{highlighted}}
@@ -194,7 +277,11 @@ Definition at line \mbox{\hyperlink{_choice_button_8java_source_l00014}{14}} of 
 
 
 
-Definition at line \mbox{\hyperlink{_choice_button_8java_source_l00015}{15}} of file \mbox{\hyperlink{_choice_button_8java_source}{Choice\+Button.\+java}}.
+Flag indicating whether the button is highlighted. 
+
+
+
+Definition at line \mbox{\hyperlink{_choice_button_8java_source_l00029}{29}} of file \mbox{\hyperlink{_choice_button_8java_source}{Choice\+Button.\+java}}.
 
 \mbox{\Hypertarget{class_u_i_1_1_choice_button_a1e99b395d0551ce2a7e867a40f7ccdeb}\label{class_u_i_1_1_choice_button_a1e99b395d0551ce2a7e867a40f7ccdeb}} 
 \index{UI.ChoiceButton@{UI.ChoiceButton}!width@{width}}
@@ -204,7 +291,11 @@ Definition at line \mbox{\hyperlink{_choice_button_8java_source_l00015}{15}} of 
 
 
 
-Definition at line \mbox{\hyperlink{_choice_button_8java_source_l00014}{14}} of file \mbox{\hyperlink{_choice_button_8java_source}{Choice\+Button.\+java}}.
+Width of the button. 
+
+
+
+Definition at line \mbox{\hyperlink{_choice_button_8java_source_l00019}{19}} of file \mbox{\hyperlink{_choice_button_8java_source}{Choice\+Button.\+java}}.
 
 
 

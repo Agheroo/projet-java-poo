@@ -1,0 +1,4 @@
+<map id="UI.HUD_World.update" name="UI.HUD_World.update">
+<area shape="rect" id="node1" title="Updates the HUD by refreshing player statistics." alt="" coords="5,5,168,32"/>
+<area shape="rect" id="node2" href="$class_u_i_1_1_textbox.html#a78802d3a8816c733a592e1d56710020b" title="Setter function for a new text content of the text box." alt="" coords="216,5,387,32"/>
+</map>
