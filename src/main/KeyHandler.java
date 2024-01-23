@@ -58,9 +58,13 @@ public final class KeyHandler implements KeyListener {
         if (code == KeyEvent.VK_SPACE) {
             interactPressed = true;
         }
+        if(code == KeyEvent.VK_ENTER){
+            interactPressed = true;
+        }
         if (code == KeyEvent.VK_ESCAPE) {
             escPressed = true;
         }
+        
     }
 
     @Override
@@ -82,8 +86,12 @@ public final class KeyHandler implements KeyListener {
         if (code == KeyEvent.VK_SPACE) {
             interactPressed = false;
         }
+        if(code == KeyEvent.VK_ENTER){
+            interactPressed = false;
+        }
         if (code == KeyEvent.VK_ESCAPE) {
             escPressed = false;
         }
+        
     }
 }
