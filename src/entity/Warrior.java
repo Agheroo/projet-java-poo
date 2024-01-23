@@ -32,9 +32,9 @@ public class Warrior extends Player{
         
         
         attacks[0] = new Attack("Coup d'épaule", 15, 0, true,1);
-        attacks[1] = new Attack("Tranchage", 17, 8, true,1);
-        attacks[2] = new Attack("Berserk", 31, 14, false,2);
-        attacks[3] = new Attack("Shlaz tah'maïr", 42, 22, false,3);
+        attacks[1] = new Attack("Tranchage", 22, 8, true,1);
+        attacks[2] = new Attack("Berserk", 40, 14, false,2);
+        attacks[3] = new Attack("Shlaz tah'maïr", 57, 22, false,3);
     }
 
     public void levelUp(){
