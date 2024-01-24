@@ -88,17 +88,19 @@ public abstract class Props extends Entity {
      * 
      * @param name
      */
-    protected void loadTextures(String name){
+    protected void loadTextures(String name) {
         try {
             // Load the image of the key from the specified file path
-            for(int i=0;i<_spriteCntMax;i++){
-                images[i] = ImageIO.read(new FileInputStream("res/object/"+name+i+".png"));
+            for (int i = 0; i < _spriteCntMax; i++) {
+                images[i] = ImageIO.read(getClass().getClassLoader()
+                        .getResourceAsStream("object/" + name + i + ".png"));
             }
         } catch (IOException e) {
             // Print the stack trace in case of an IOException during image loading
             e.printStackTrace();
         }
     }
+
 
     /**
      * @brief Destroys the current prop in the world (using the hashmap)

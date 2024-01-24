@@ -9,9 +9,7 @@ import game.Const;
 import game.World;
 
 import java.awt.Graphics2D;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
+import java.io.*;
 
 /**
  * @class TileManager
@@ -41,8 +39,8 @@ public class TileManager {
         _topMap = new Tile[Const.WRLD_maxRow][Const.WRLD_maxCol];
 
         loadTextures();
-        loadMap("res/maps/map_floor.csv", world, _floorMap, _floorMapTextures);
-        loadMap("res/maps/map_top.csv", world, _topMap, _topMapTextures);
+        loadMap("maps/map_floor.csv", world, _floorMap, _floorMapTextures);
+        loadMap("maps/map_top.csv", world, _topMap, _topMapTextures);
     }
 
     /**
@@ -119,29 +117,29 @@ public class TileManager {
      */
     private void loadMap(String filePath, World world, Tile[][] mapTile, Tile[] textures) {
         try {
-            File file = new File(filePath);
-            FileReader fileReader = new FileReader(file);
-            BufferedReader br = new BufferedReader(fileReader);
+            // Utiliser getResourceAsStream pour charger le fichier depuis le chemin relatif
+            InputStream inputStream = getClass().getClassLoader().getResourceAsStream(filePath);
+            InputStreamReader streamReader = new InputStreamReader(inputStream);
+            BufferedReader br = new BufferedReader(streamReader);
 
             for (int i = 0; i < Const.WRLD_maxRow; i++) {
-                
                 String line = br.readLine();
+                String[] numbers = line.split(",");
 
                 for (int j = 0; j < Const.WRLD_maxCol; j++) {
-                    
-                    String[] numbers = line.split(",");
-                    int num = 1 + Integer.parseInt(numbers[j]); // Reading the file itself and stocking int read
+                    int num = 1 + Integer.parseInt(numbers[j]);
                     Tile tileCurrent = new Tile(textures[num].spriteCntMax, textures[num].spriteSpeed,
-                            textures[num].getCollision(), num); // Creating new tile to store with the according texture
+                            textures[num].getCollision(), num);
                     tileCurrent.setPos(Const.WRLD_tileScreenSize * j, Const.WRLD_tileScreenSize * i);
 
-                    mapTile[i][j] = tileCurrent; // Setting the tile to the actual map
-                    mapTile[i][j].setTexture(textures[num].image); // Set the current tile texture to what corresponds
-                    // in the textures array
-                    mapTile[i][j].setCollision(textures[num].getCollision()); // Set the collision factor to the tile
+                    mapTile[i][j] = tileCurrent;
+                    mapTile[i][j].setTexture(textures[num].image);
+                    mapTile[i][j].setCollision(textures[num].getCollision());
                 }
             }
+
             br.close();
+            inputStream.close();
 
         } catch (Exception e) {
             e.printStackTrace();
