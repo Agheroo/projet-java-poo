@@ -112,7 +112,7 @@ public class EntitySetter {
 
         //Setting up enemies with increasing difficulty
         for(int i=0;i<nbEnemies;i++){
-            enemies[i].setStats(37+3*(int)Math.sqrt(i*56), 200+(int)(i*65*Math.log(6*(i+1))), 0, 7+(int)Math.sqrt(i*6), (8+(int)Math.sqrt(i*2)), (3+i), 3+(int)Math.log((i+1)*3), new Attack("Tabasse", 7+i*(int)Math.log((i+1)*3),0,true,1));
+            enemies[i].setStats(37+3*(int)Math.sqrt(i*69), 200+(int)(i*65*Math.log(6*(i+1))), 0, 7+(int)Math.sqrt(i*6), (8+(int)Math.sqrt(i*2)), (3+i), 3+(int)Math.log((i+1)*3), new Attack("Tabasse", 7+i*(int)Math.log((i+1)*3),0,true,1));
             world.addEnemy(new Point((int)enemies[i].worldX, (int)enemies[i].worldY), enemies[i]);
         }
 
