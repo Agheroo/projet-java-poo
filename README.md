@@ -75,10 +75,10 @@ cd projet-java-poo
 
 - Téléchargez le fichier __"Game.zip"__
 - Décompressez l'archive et gardez bien le fichier JAR avec le dossier "res" dans le même dossier source
-- 
+
 **Windows users**
   
- - Éxécutez le fichier __"Game.jar"__
+Éxécutez le fichier __"Game.jar"__
 
 **Unix users**
 
