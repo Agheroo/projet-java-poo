@@ -73,17 +73,18 @@ cd projet-java-poo
 
 ### Commandes
 
+- Téléchargez le fichier __"Game.zip"__
+- Décompressez l'archive et gardez bien le fichier JAR avec le dossier "res" dans le même dossier source
+- 
 **Windows users**
-
- - Veuillez avoir installé Java sur votre machine
- - Veuillez vous rendre sous le dossier projet-java-poo/out/artifacts/projet_java_poo_jar.
- - Double cliquez sur projet-java-poo.jar pour lancer le jeu.
+  
+ - Éxécutez le fichier __"Game.jar"__
 
 **Unix users**
 
 ```shell
 cd projet-java-poo/out/artifacts/projet_java_poo_jar
-java -jar projet-java-poo.jar
+java -jar Game.jar
 ```
 
 
