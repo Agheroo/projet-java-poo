@@ -39,8 +39,8 @@ public class TileManager {
         _topMap = new Tile[Const.WRLD_maxRow][Const.WRLD_maxCol];
 
         loadTextures();
-        loadMap("maps/map_floor.csv", world, _floorMap, _floorMapTextures);
-        loadMap("maps/map_top.csv", world, _topMap, _topMapTextures);
+        loadMap("res/maps/map_floor.csv", world, _floorMap, _floorMapTextures);
+        loadMap("res/maps/map_top.csv", world, _topMap, _topMapTextures);
     }
 
     /**
@@ -118,7 +118,7 @@ public class TileManager {
     private void loadMap(String filePath, World world, Tile[][] mapTile, Tile[] textures) {
         try {
             // Utiliser getResourceAsStream pour charger le fichier depuis le chemin relatif
-            InputStream inputStream = getClass().getClassLoader().getResourceAsStream(filePath);
+            InputStream inputStream = new FileInputStream(filePath);
             InputStreamReader streamReader = new InputStreamReader(inputStream);
             BufferedReader br = new BufferedReader(streamReader);
 

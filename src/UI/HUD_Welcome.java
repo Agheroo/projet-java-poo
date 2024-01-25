@@ -56,7 +56,7 @@ public class HUD_Welcome extends HUD {
         _buttons[2] = new ChoiceButton(200, 60, "RETOUR", Const.fontName, Color.blue);
         changeSelectionColor(0, Const.COLOR_BUTTON_text, Const.COLOR_BUTTON_text_highlight, Const.COLOR_BUTTON_bg, Const.COLOR_BUTTON_bg_highlight);
 
-        _texts = new Textbox[15];
+        _texts = new Textbox[16];
 
         //Warrior class
         _texts[0] = new Textbox("Guerrier", Const.fontName, 100, 30, Const.COLOR_WELCOME_blue);
@@ -81,6 +81,8 @@ public class HUD_Welcome extends HUD {
         _texts[12] = new Textbox("Vous avez perdu !", Const.fontName, 400, 90, Const.COLOR_WELCOME_red); //Game lost !
         _texts[13] = new Textbox("Vous avez gagné !", Const.fontName, 400, 90, Const.COLOR_WON_green); //Game won !
         _texts[14] = new Textbox("Merci d'avoir joué !", Const.fontName, 350, 90, Const.COLOR_WELCOME_white);//Thanks for playing
+
+        _texts[15] = new Textbox("Appuyez sur ENTRÉE pour commencer", Const.fontName, 350, 90, Const.COLOR_WELCOME_white);
     }
 
     /**
@@ -201,6 +203,7 @@ public class HUD_Welcome extends HUD {
                 case 0:     //Real welcome main menu
                     _buttons[0].draw(g2,200,160);
                     _buttons[1].draw(g2,200,320);
+                    _texts[15].draw(g2,200,20);
                     break;
 
                 case 1:     //Choice between different classes
@@ -310,15 +313,12 @@ public class HUD_Welcome extends HUD {
      */
     private void loadImages() {
         try {
-            bg = ImageIO.read(getClass().getClassLoader().getResourceAsStream("hud/welcome.png"));
+            bg = ImageIO.read(new FileInputStream("res/hud/welcome.png"));
 
             for (int i = 0; i < Const.nbSpriteCharacterAnim; i++) {
-                charactersDisplayed[0][i] = ImageIO.read(getClass().getClassLoader()
-                        .getResourceAsStream("entity/character/idle/warrior/down" + (i + 1) + ".png"));
-                charactersDisplayed[1][i] = ImageIO.read(getClass().getClassLoader()
-                        .getResourceAsStream("entity/character/idle/mage/down" + (i + 1) + ".png"));
-                charactersDisplayed[2][i] = ImageIO.read(getClass().getClassLoader()
-                        .getResourceAsStream("entity/character/idle/rogue/down" + (i + 1) + ".png"));
+                charactersDisplayed[0][i] = ImageIO.read(new FileInputStream("res/entity/character/idle/warrior/down"+(i+1)+".png"));
+                charactersDisplayed[1][i] = ImageIO.read(new FileInputStream("res/entity/character/idle/mage/down" + (i + 1) + ".png"));
+                charactersDisplayed[2][i] = ImageIO.read(new FileInputStream("res/entity/character/idle/rogue/down" + (i + 1) + ".png"));
             }
         } catch (IOException e) {
             e.printStackTrace();

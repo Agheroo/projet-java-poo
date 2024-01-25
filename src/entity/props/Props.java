@@ -92,8 +92,7 @@ public abstract class Props extends Entity {
         try {
             // Load the image of the key from the specified file path
             for (int i = 0; i < _spriteCntMax; i++) {
-                images[i] = ImageIO.read(getClass().getClassLoader()
-                        .getResourceAsStream("object/" + name + i + ".png"));
+                images[i] = ImageIO.read(new FileInputStream("res/object/" + name + i + ".png"));
             }
         } catch (IOException e) {
             // Print the stack trace in case of an IOException during image loading
