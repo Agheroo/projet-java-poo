@@ -12,7 +12,6 @@ import java.awt.Graphics2D;
 import java.awt.GraphicsEnvironment;
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 
 import javax.swing.JLabel;
 
@@ -107,13 +106,12 @@ public class Textbox extends JLabel {
     public static void loadFont(String fontName) {
         try {
             GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
-            InputStream fontInputStream = ClassLoader.getSystemResourceAsStream("hud/font/rainyhearts.ttf");
-
-            if (fontInputStream != null) {
-                Font customFont = Font.createFont(Font.TRUETYPE_FONT, fontInputStream);
-                ge.registerFont(customFont);
-            }
-        } catch (FontFormatException | IOException e) {
+            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, new File("res/hud/font/rainyhearts.ttf")));
+        }
+        catch (FontFormatException e) {
+            e.printStackTrace();
+        }
+        catch (IOException e) {
             e.printStackTrace();
         }
     }
