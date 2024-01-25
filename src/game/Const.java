@@ -3,7 +3,7 @@ import java.awt.Color;
 
 public final class Const {
     //Enums
-    public static enum State {WORLD, FIGHT, PAUSE, WELCOME, WON, LOST}
+    public static enum State {WORLD, FIGHT, PAUSE, WELCOME, GAMEWON, GAMELOST}
     public static enum FightState {FIGHTING, WON , LOST}
     public static enum Selection {NONE, PLAY, RESUME, CONTINUE, QUIT, ATTACK, POTION, BACK}
 

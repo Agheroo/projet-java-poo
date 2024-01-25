@@ -103,7 +103,7 @@ public class FightScene {
                                         enemy.attack.applyAttack(enemy, player);
                                         if(player.health <= 0){
                                             state = Const.FightState.LOST;
-                                            Scene.state = Const.State.LOST;
+                                            Scene.state = Const.State.GAMELOST;
                                             break;
                                         }
                                     }
@@ -111,7 +111,7 @@ public class FightScene {
                                         enemy.attack.applyAttack(enemy, player);
                                         if(player.health <= 0){
                                             state = Const.FightState.LOST;
-                                            Scene.state = Const.State.LOST;
+                                            Scene.state = Const.State.GAMELOST;
                                             break;
                                         }
                                         player.attacks[menu.choice].applyAttack(player, enemy);
@@ -196,6 +196,10 @@ public class FightScene {
             Scene.state = Const.State.WORLD;
             player.speed = 0;
             World.enemies.remove(new Point(enemy.worldX,enemy.worldY), enemy);
+
+            if(World.enemies.size() == 0){  //Checking at the end of a fight if the player has killed everyone
+                Scene.state = Const.State.GAMEWON;
+            }
         }
 
         menu.confirm = false;

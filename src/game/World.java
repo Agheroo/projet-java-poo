@@ -193,7 +193,7 @@ public class World extends Scene {
             }
 
             //Display the welcome menu if new game
-            else if(Scene.state == Const.State.WELCOME){
+            else if(Scene.state == Const.State.WELCOME || Scene.state == Const.State.GAMELOST || Scene.state == Const.State.GAMEWON){
                 menu.draw(g2);
             }
         }  

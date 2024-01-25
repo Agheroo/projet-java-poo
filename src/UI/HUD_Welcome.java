@@ -82,7 +82,7 @@ public class HUD_Welcome extends HUD {
         _texts[13] = new Textbox("Vous avez gagné !", Const.fontName, 400, 90, Const.COLOR_WON_green); //Game won !
         _texts[14] = new Textbox("Merci d'avoir joué !", Const.fontName, 350, 90, Const.COLOR_WELCOME_white);//Thanks for playing
 
-        _texts[15] = new Textbox("Appuyez sur ENTRÉE pour commencer", Const.fontName, 350, 90, Const.COLOR_WELCOME_white);
+        _texts[15] = new Textbox("Appuyez sur ENTRÉE pour commencer", Const.fontName, 350, 40, Const.COLOR_WELCOME_white);
     }
 
     /**
@@ -93,7 +93,7 @@ public class HUD_Welcome extends HUD {
         if(Scene.keyH.escPressed || (confirm && selection == Const.Selection.BACK)){
             if(FightScene.state == Const.FightState.LOST){
                 System.exit(0);
-            }else if(Scene.state == Const.State.WON){
+            }else if(Scene.state == Const.State.GAMEWON){
                 System.exit(0);
             }
             else{
@@ -203,7 +203,7 @@ public class HUD_Welcome extends HUD {
                 case 0:     //Real welcome main menu
                     _buttons[0].draw(g2,200,160);
                     _buttons[1].draw(g2,200,320);
-                    _texts[15].draw(g2,200,20);
+                    _texts[15].draw(g2,100,40);
                     break;
 
                 case 1:     //Choice between different classes
@@ -269,7 +269,7 @@ public class HUD_Welcome extends HUD {
 
 
         // Check if the player has lost in the fight scene
-        if(FightScene.state == Const.FightState.LOST){           
+        if(Scene.state == Const.State.GAMELOST){     
             // Draw the losing messages on the screen
             _texts[12].draw(g2, 0, 150);
             _texts[14].draw(g2, -20, 280);
@@ -280,7 +280,7 @@ public class HUD_Welcome extends HUD {
         }
 
         // Check if the player has lost in the fight scene
-        if(Scene.state == Const.State.WON){           
+        if(Scene.state == Const.State.GAMEWON){           
             // Draw the losing messages on the screen
             _texts[13].draw(g2, 0, 150);
             _texts[14].draw(g2, -20, 280);
