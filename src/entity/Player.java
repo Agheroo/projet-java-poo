@@ -11,6 +11,12 @@ import game.Const;
 import game.Scene;
 import game.World;
 import item.Item;
+import item.armor.Body;
+import item.armor.Foot;
+import item.armor.Head;
+import item.armor.Legs;
+import item.potion.Potion;
+import item.weapon.Weapon;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -25,8 +31,15 @@ public class Player extends Character {
     public int xp;  //xp of the player
     public int xpMax; //The amount of xp the player needs to level up
     public int hasKey = 0;
-    public Attack attacks[]; 
-    public Vector<Item> potions = new Vector<Item>();
+    public Attack attacks[];
+
+    public Vector<Potion> potions = new Vector<>();
+    public Weapon weapon;
+    public Head head;
+    public Body body;
+    public Legs legs;
+    public Foot foot;
+
 
     /*
      * @brief Constructor for the Player class.
@@ -46,6 +59,11 @@ public class Player extends Character {
         level = 1;
         xpMax = 100;
         xp = 0;
+
+        head= new Head(0);
+        body=new Body(0);
+        legs=new Legs(0);
+        foot=new Foot(0);
     }
 
     /**
@@ -161,16 +179,17 @@ public class Player extends Character {
     }
 
     /**
-     * @brief Adds item to the virtual inventory of the player, if it's not a potion it will be directly converted to additionnal stats
+     * @brief Adds item to the virtual inventory of the player.
      * @param i The item t add
      */
     public void addItem(Item i){
-        if(i.type == "potion"){
-            potions.add(i);
-        }
-        //Change stats of player here directly if the item is not a potion
 
-        System.out.println("Nouvel objet : "+i.name);
+        i.addItem(this);
+
+    }
+
+    public void addItem(Potion i){
+        potions.add(i);
     }
 
     /**
@@ -193,5 +212,14 @@ public class Player extends Character {
     }
     public void playerInterraction(Player player) {
         //Nothing
+    }
+
+
+    public int getStrength(){
+        return strength + weapon.buffStrenght;
+    }
+
+    public int getDefense(){
+        return defense + head.buffDefence + body.buffDefence + legs.buffDefence + foot.buffDefence;
     }
 }

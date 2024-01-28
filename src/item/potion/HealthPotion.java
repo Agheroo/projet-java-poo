@@ -5,7 +5,6 @@ import entity.Player;
 public class HealthPotion extends Potion{
 
     public HealthPotion(){
-        type = "potion";
         name = "Potion de Soin";
     }
 

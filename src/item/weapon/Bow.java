@@ -5,11 +5,12 @@ import entity.Player;
 public class Bow extends Weapon{
 
     public Bow(){
-        type = "weapon";
         name = "Arc supérieur";
+        buffStrenght= (int) (Math.random() * 7);
     }
 
-    public void useItem(Player player){
-        //
+    public Bow(int _buffStrenght){
+        name = "Arc";
+        buffStrenght= _buffStrenght;
     }
 }

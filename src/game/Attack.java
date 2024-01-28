@@ -30,7 +30,7 @@ public class Attack {
 
         if(emitter.mana >= cost){
             if(Math.random() > dodgeChange){
-                int dmgDealt = (int)(damage*(1+(emitter.strength*damage*0.6)/(reciever.defense*2.4)));
+                int dmgDealt = (int)(damage*(1+(emitter.getStrength()*damage*0.6)/(reciever.getDefense()*2.4)));
 
                 reciever.health -= dmgDealt;
             }

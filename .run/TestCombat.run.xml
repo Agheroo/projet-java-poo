@@ -1,9 +1,0 @@
-<component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="TestCombat" type="Application" factoryName="Application">
-    <option name="MAIN_CLASS_NAME" value="CreationCombatScene.Main" />
-    <module name="projet-java-poo" />
-    <method v="2">
-      <option name="Make" enabled="true" />
-    </method>
-  </configuration>
-</component>

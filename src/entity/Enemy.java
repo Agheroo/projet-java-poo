@@ -104,4 +104,12 @@ public class Enemy extends Character {
         }
         g2.drawImage(image,screenX,screenY,Const.FGHT_entityScreenSize,Const.FGHT_entityScreenSize,null);
     }
+
+    public int getStrength(){
+        return strength;
+    }
+
+    public int getDefense(){
+        return defense;
+    }
 }

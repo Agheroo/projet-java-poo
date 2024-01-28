@@ -1,5 +1,6 @@
 package entity;
 import game.Attack;
+import item.weapon.Sword;
 
 public class Warrior extends Player{
 
@@ -35,6 +36,8 @@ public class Warrior extends Player{
         attacks[1] = new Attack("Tranchage", 22, 8, true,1);
         attacks[2] = new Attack("Berserk", 40, 14, false,2);
         attacks[3] = new Attack("Shlaz tah'maïr", 57, 22, false,3);
+
+        weapon=new Sword(0);
     }
 
     public void levelUp(){

@@ -1,6 +1,7 @@
 package entity;
 
 import game.Attack;
+import item.weapon.Bow;
 
 public class Rogue extends Player{
     /**
@@ -35,6 +36,8 @@ public class Rogue extends Player{
         attacks[1] = new Attack("Koutal", 24, 8, true,2);
         attacks[2] = new Attack("Poizong", 36, 15, false,3);
         attacks[3] = new Attack("KhaZix Youmuu", 61, 38, false,5);
+
+        weapon=new Bow(0);
     }
 
     public void levelUp(){

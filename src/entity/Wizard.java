@@ -1,6 +1,7 @@
 package entity;
 
 import game.Attack;
+import item.weapon.Staff;
 
 public class Wizard extends Player{
     
@@ -36,6 +37,8 @@ public class Wizard extends Player{
         attacks[1] = new Attack("Katon sazuké", 30, 10, true,1);
         attacks[2] = new Attack("FireFlouche", 43, 23, false,2);
         attacks[3] = new Attack("Die de gazo", 68, 52, false,4);
+
+        weapon=new Staff(0);
     }
 
     public void levelUp(){

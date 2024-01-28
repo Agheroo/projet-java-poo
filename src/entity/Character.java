@@ -267,5 +267,19 @@ public abstract class Character extends Entity {
             g2.drawImage(image, screenX, screenY, Const.WRLD_entityScreenSize, Const.WRLD_entityScreenSize, null);
             //g2.drawRect(screenX + hitbox.width / 2, screenY + hitbox.height, hitbox.width, hitbox.height); //hitbox debug purposes
         }
+
+
     }
+
+    /**
+     * @brief Get the strength of a character
+     * @return The value of variable strength
+     */
+    public abstract int getStrength();
+
+    /**
+     * @brief Get the defence of a character
+     * @return The value of variable defence
+     */
+    public abstract int getDefense();
 }
