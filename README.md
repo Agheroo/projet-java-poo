@@ -59,7 +59,7 @@ Le gameplay se concentre sur l'exploration, le combat stratégique et la progres
 | Aller en Haut  |   **Z / ↑**            |
 |  Aller en Bas  |   **S / ↓**            |
 | Aller à Gauche |   **Q / ←**            |
-| Aller à Droite |   **→**                |
+| Aller à Droite |   **D / →**            |
 |   Intéragir    | **Espace / ENTRER**    |
 | Stopper le jeu | **Echap**              |
 
