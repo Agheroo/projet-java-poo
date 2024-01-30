@@ -54,14 +54,14 @@ Le gameplay se concentre sur l'exploration, le combat stratégique et la progres
 
 ### Controles
 
-|     Action     |  Touches   |
-|:--------------:|:----------:|
-| Aller en Haut  |   **Z**    |
-|  Aller en Bas  |   **S**    |
-| Aller à Gauche |   **Q**    |
-| Aller à Droite |   **D**    |
-|   Intéragir    | **Espace** |
-| Stopper le jeu | **Echap**  |
+|     Action     |  Touches               |
+|:--------------:|:--------------------:  |
+| Aller en Haut  |   **Z / ↑**            |
+|  Aller en Bas  |   **S / ↓**            |
+| Aller à Gauche |   **Q / ←**            |
+| Aller à Droite |   **→**                |
+|   Intéragir    | **Espace / ENTRER**    |
+| Stopper le jeu | **Echap**              |
 
 ## 💻 Compiler et lancer le projet 💻
 
